@@ -1,0 +1,692 @@
+# Table: TF_GENE_INTERACTION
+# Columns:
+# 1) REGULATORY_INTERACTION_ID
+# 2) CONFORMATION_ID
+# 3) OBJECT_ID
+# 4) SITE_ID
+# 5) RI_FUNCTION
+# 6) CENTER_POSITION
+# 7) RI_DIST_FIRST_GENE
+# 8) RI_FIRST_GENE_ID
+# 9) AFFINITY_EXP
+# 10) REGULATORY_INTERACTION_NOTE
+# 11) RI_INTERNAL_COMMENT
+# 12) KEY_ID_ORG
+# 13) RI_SEQUENCE
+# 14) RI_ORIENTATION
+# 15) RI_SEQUENCE_ORIENTATION
+# 16) OBJECT_TYPE
+ECK125257513	ECK125269274	ECK120027258	ECK125258273	activator							ECK12				
+ECK125257522	ECK125269234	ECK120027328	ECK125258279	repressor							ECK12				
+ECK125257527	ECK125269295	ECK120027612	ECK125258284	activator							ECK12				
+ECK125257534	ECK125269270	ECK120027559	ECK125258291	activator							ECK12				
+ECK125257536	ECK125269304	ECK120026934	ECK125258293	repressor							ECK12				
+ECK125257540	ECK125269304	ECK120026934	ECK125258296	repressor							ECK12				
+ECK125257545	ECK125269245	ECK125140832	ECK125258300	activator							ECK12				
+ECK125257559	ECK125269330	ECK120026775	ECK125258310	repressor							ECK12				
+ECK125257568	ECK125269304	ECK120026934	ECK125258319	repressor							ECK12				
+ECK125257572	ECK125269304	ECK120026934	ECK125258322	repressor							ECK12				
+ECK125257579	ECK125269343	ECK120009558	ECK125258328	activator					The site for the RbsR transcriptional regulator in the <i>udk-dcd</i> operon was identified based on genomic Selex analysis |CITS:[23651393]|.		ECK12				
+ECK125257580	ECK125269273	ECK120026542	ECK125258329	activator							ECK12				
+ECK125257584	ECK125269239	ECK120027559	ECK125258291	activator							ECK12				
+ECK125257592	ECK125269301	ECK120027789	ECK125258341	repressor							ECK12				
+ECK125257617	ECK125269330	ECK120021097	ECK125258310	activator							ECK12				
+ECK125257619	ECK125269274	ECK120030171	ECK125258363	activator							ECK12				
+ECK125257625	ECK125269265	ECK120016229	ECK125258369	activator							ECK12				
+ECK125257628	ECK125269270	ECK120026542	ECK125258329	activator							ECK12				
+ECK125257633	ECK125269322	ECK120021057	ECK125140734	repressor							ECK12				
+ECK125257656	ECK125269383	ECK120027373	ECK125258395	activator							ECK12				
+ECK125257662	ECK125269387	ECK120021057	ECK125140734	repressor							ECK12				
+ECK125257668	ECK125269245	ECK120027518	ECK125258405	activator							ECK12				
+ECK125257670	ECK125269389	ECK120026582	ECK125258407	repressor							ECK12				
+ECK125257677	ECK125269368	ECK120027322	ECK125258414	repressor							ECK12				
+ECK125257692	ECK125269239	ECK120026542	ECK125258329	activator							ECK12				
+ECK125257734	ECK125269239	ECK120027516	ECK125258460	activator							ECK12				
+ECK125257735	ECK125269296	ECK120020457	ECK125258461	activator							ECK12				
+ECK125257753	ECK125269378	ECK120021126	ECK125202687	repressor							ECK12				
+ECK125257760	ECK125269389	ECK120026581	ECK125258407	repressor							ECK12				
+ECK125257768	ECK125269274	ECK125145766	ECK125258485	activator							ECK12				
+ECK125257783	ECK125269409	ECK120027549	ECK125258496	activator							ECK12				
+ECK125257796	ECK125269273	ECK120027516	ECK125258460	activator							ECK12				
+ECK125257801	ECK125269296	ECK120026800	ECK125258512	activator							ECK12				
+ECK125257805	ECK125269411	ECK120016548	ECK125258516	activator							ECK12				
+ECK125257816	ECK125269415	ECK120020446	ECK125230707	activator							ECK12				
+ECK125257836	ECK125269260	ECK120016220	ECK125258541	activator					By making use of microarray analysis, it was concluded that FNR activates <i>sbm-argK-ygfGH</i> operon expression under anaerobiosis. A putative FNR-binding site, which was not described in this report, was identified upstream of this operon |CITS: [12754220]|.		ECK12				
+ECK125257874	ECK125269413	ECK120026758	ECK125258573	activator					<i>ybiJ</i> is induced by hydroquinone, and this induction was inhibited completely in a <i>yhaJ</i> mutant strain |CITS:[ 27713734]|.		ECK12				
+ECK125257875	ECK125269330	ECK120026775	ECK125258574	repressor							ECK12				
+ECK125257882	ECK125269237	ECK125135626	ECK125258581	repressor							ECK12				
+ECK125257897	ECK125269260	ECK120016330	ECK125258593	repressor					By making use of microarray analysis it was concluded that anaerobiosis does not affect expression of the <i>gapC</i> operon, although FNR appears to repress  it.  A putative FNR-binding site, which was not shown in the report, was identified upstream of this operon |CITS: [12754220]|.		ECK12				
+ECK125257915	ECK125269438	ECK120026972	ECK125258605	repressor							ECK12				
+ECK125257924	ECK125269237	ECK120026921	ECK125258613	repressor							ECK12				
+ECK125257926	ECK125269327	ECK120027269	ECK125258615	activator							ECK12				
+ECK125257948	ECK125269260	ECK120016548	ECK125258630	repressor					By making use of microarray analyses, Constantinidou et al. |CITS:[16377617]|<br>concluded that FNR represses ycaC gene expression. They also identified a putative FNR-binding site upstream of the gene, but the sequence was not reported.<br>		ECK12				
+ECK125257949	ECK125269330	ECK120021097	ECK125258574	activator							ECK12				
+ECK125257959	ECK125269445	ECK120026615	ECK125258637	repressor							ECK12				
+ECK125257970	ECK125269248	ECK120027827	ECK125258647	activator					The regulation of CpxR on the <i>yjfN</i> gene has been demonstrated via <i>lacZ</i> reporter gene expression experiments, quantitative PCR analysis of cDNA, and by the identification of a consensus DNA-binding site of CpxR in the regulatory region of <i>yjfN</i> |CITS:[ 23564175]|. The identification of this DNA-binding site was only mentioned in the paper of Raivio et al. (2013), but the DNA sequence was not shown |CITS:[ 23564175]|.		ECK12				
+ECK125257976	ECK125269413	ECK120021178	ECK125258651	activator					<i>ygiD</i> is induced by hydroquinone, and this induction was inhibited completely in a <i>yhaJ</i> mutant strain |CITS:[ 27713734]|.		ECK12				
+ECK125257984	ECK125269327	ECK125199586	ECK125258658	activator							ECK12				
+ECK125257997	ECK125269368	ECK120027322	ECK125258668	repressor							ECK12				
+ECK125258007	ECK125269260	ECK120027010	ECK125258675	activator							ECK12				
+ECK125258013	ECK125269413	ECK120027544	ECK125258680	activator							ECK12				
+ECK125258016	ECK125269296	ECK120027874	ECK125258681	activator							ECK12				
+ECK125258038	ECK125269366	ECK120027026	ECK125158274	activator					The complex of CnuK9E (a variant of Cnu) and HNS antagonizes DNA binding of DicA, causing temperature-dependent filamentous growth at 37<sup>o</sup>C |CITS:[23028867]|. DicA binds better at 25<sup>o</sup>C than at 37<sup>o</sup>C |CITS:[23028867]|.		ECK12				
+ECK125258054	ECK125269454	ECK120027133	ECK125258710	repressor							ECK12				
+ECK125258065	ECK125269456	ECK120027030	ECK125258719	repressor					Based on a reduced genome of <i>Escherichia coli</i> W3110red (MGF-01) and shift assay analysis, it was determined that YdfH is a transcriptional repressor of the <i>rspAB</i> operon |CITS:[22972332]|.		ECK12				
+ECK125258067	ECK125269267	ECK120030129	ECK125258721	activator							ECK12				
+ECK125258073	ECK125269245	ECK120015370	ECK125258726	activator							ECK12				
+ECK125258078	ECK125269413	ECK120027548	ECK125258729	activator					<i>yhaK</i> is induced by hydroquinone, and this induction is inhibited completely in a <i>yhaJ</i> mutant strain. Furthermore, the induction of <i>yhaK</i> by 2,4-DNT, hydroquinone, and catechol is enhanced in a <i>yhaK</i> mutant strain. This strain showed an accumulation of the 2,4-DNT inducer |CITS:[ 27713734]|.		ECK12				
+ECK125258080	ECK125269413	ECK120027613	ECK125258731	activator					<i>yhhW</i> is induced by hydroquinone, and this induction was inhibited completely in a <i>yhaJ</i> mutant strain |CITS:[ 27713734]|.		ECK12				
+ECK125258105	ECK125269289	ECK120027324	ECK125258751	unknown							ECK12				
+ECK125258116	ECK125269268	ECK120027570	ECK125258760	repressor							ECK12				
+ECK125258120	ECK125269296	ECK120027864	ECK125258763	repressor							ECK12				
+ECK125258132	ECK125269245	ECK120027702	ECK125258773	activator							ECK12				
+ECK125258172	ECK125269234	ECK120021057	ECK125258807	activator					CRP is required for <i>lgoR</i> and <i>lgoD</i> transcription in a sugar-independent manner, irrespective of whether the bacteria are grown with glucose or glucuronate as the main carbon source |CITS: [27129867]|, and this might be due to its cAMP-independent binding to a nonspecific site leading to only a secondary effect  |CITS: [8394684]|.		ECK12				
+ECK125258174	ECK125269273	ECK120027559	ECK125258291	activator							ECK12				
+ECK125258193	ECK125269296	ECK120027864	ECK125258824	repressor							ECK12				
+ECK125258205	ECK125269245	ECK125140831	ECK125258832	activator							ECK12				
+ECK125258208	ECK125269296	ECK120020457	ECK125258835	activator							ECK12				
+ECK125258212	ECK125269362	ECK120021113	ECK125258839	repressor							ECK12				
+ECK125258232	ECK125269270	ECK120027516	ECK125258460	activator							ECK12				
+ECK125272576	ECK125269395	ECK120027837	ECK125258676	repressor							ECK12				
+ECK12T2557  	ECK125269298	ECK120000024	ECK12T2556  	activator	8	184	ECK120000024		Peak start: , Peak end: , Peak center: 2411322		ECK12		forward		gene
+ECK12T2558  	ECK125269298	ECK120000024	ECK12T2556  	activator	8	184	ECK120000024		Peak start: , Peak end: , Peak center: 2411322		ECK12		forward		gene
+ECK12T2560  	ECK125269298	ECK120002884	ECK12T2559  	activator	8	60	ECK120002884		Peak start: , Peak end: , Peak center: 532179		ECK12		forward		gene
+ECK12T2562  	ECK125269298	ECK120001332	ECK12T2561  	repressor	8	307	ECK120001332		Peak start: , Peak end: , Peak center: 4393805		ECK12		forward		gene
+ECK12T2563  	ECK125269298	ECK120001332	ECK12T2561  	repressor	8	307	ECK120001332		Peak start: , Peak end: , Peak center: 4393805		ECK12		forward		gene
+ECK12T2565  	ECK125269298	ECK120000037	ECK12T2564  	repressor	8	61	ECK120000037		Peak start: , Peak end: , Peak center: 118719		ECK12		forward		gene
+ECK12T2567  	ECK125269298	ECK120003353	ECK12T2566  	repressor	8	291	ECK120003353		Peak start: , Peak end: , Peak center: 1523699		ECK12		reverse		gene
+ECK12T2568  	ECK125269298	ECK120001142	ECK125108673	activator	8	-83	ECK120001142		Peak start: , Peak end: , Peak center: 3066922		ECK12		reverse		gene
+ECK12T2570  	ECK125269298	ECK120002457	ECK12T2569  	activator	8	375	ECK120002457		Peak start: , Peak end: , Peak center: 563569		ECK12		forward		gene
+ECK12T2572  	ECK125269298	ECK120000072	ECK12T2571  	repressor	8	189	ECK120000072		Peak start: , Peak end: , Peak center: 1772529		ECK12		forward		gene
+ECK12T2574  	ECK125269298	ECK120002463	ECK12T2573  	repressor	8	500	ECK120002463		Peak start: , Peak end: , Peak center: 2042088		ECK12		forward		gene
+ECK12T2576  	ECK125269298	ECK120002465	ECK12T2575  	repressor	8	153	ECK120002465		Peak start: , Peak end: , Peak center: 2060104		ECK12		forward		gene
+ECK12T2578  	ECK125269298	ECK120000110	ECK12T2577  	repressor	8	499	ECK120000110		Peak start: , Peak end: , Peak center: 3901234		ECK12		reverse		gene
+ECK12T2580  	ECK125269298	ECK120000120	ECK12T2579  	activator	8	315	ECK120000120		Peak start: , Peak end: , Peak center: 3714109		ECK12		reverse		gene
+ECK12T2582  	ECK125269298	ECK120003153	ECK12T2581  	activator	8	-80	ECK120003153		Peak start: , Peak end: , Peak center: 1120373		ECK12		reverse		gene
+ECK12T2584  	ECK125269298	ECK120002210	ECK12T2583  	repressor	8	14	ECK120002210		Peak start: , Peak end: , Peak center: 182460		ECK12		forward		gene
+ECK12T2586  	ECK125269298	ECK120000142	ECK12T2585  	activator	8	27	ECK120000142		Peak start: , Peak end: , Peak center: 1973322		ECK12		reverse		gene
+ECK12T2587  	ECK125269298	ECK120001298	ECK120011745	repressor	8	104	ECK120001298		Peak start: , Peak end: , Peak center: 354012		ECK12		forward		gene
+ECK12T2589  	ECK125269298	ECK120003961	ECK12T2588  	repressor	8	119	ECK120003961		Peak start: , Peak end: , Peak center: 2786903		ECK12		forward		gene
+ECK12T2590  	ECK125269298	ECK120001385	ECK120030287	repressor	8	-9	ECK120001385		Peak start: , Peak end: , Peak center: 357921		ECK12		reverse		gene
+ECK12T2591  	ECK125269298	ECK120000171	ECK120030287	repressor	8	100	ECK120000171		Peak start: , Peak end: , Peak center: 357921		ECK12		forward		gene
+ECK12T2592  	ECK125269298	ECK120000171	ECK120030287	repressor	8	100	ECK120000171		Peak start: , Peak end: , Peak center: 357921		ECK12		forward		gene
+ECK12T2594  	ECK125269298	ECK120001373	ECK12T2593  	activator	8	98	ECK120001373		Peak start: , Peak end: , Peak center: 1236708		ECK12		forward		gene
+ECK12T2596  	ECK125269298	ECK120003223	ECK12T2595  	activator	8	126	ECK120003223		Peak start: , Peak end: , Peak center: 1250273		ECK12		forward		gene
+ECK12T2598  	ECK125269298	ECK120004124	ECK12T2597  	repressor	8	14	ECK120004124		Peak start: , Peak end: , Peak center: 3154651		ECK12		forward		gene
+ECK12T2599  	ECK125269298	ECK120004124	ECK12T2597  	repressor	8	14	ECK120004124		Peak start: , Peak end: , Peak center: 3154651		ECK12		forward		gene
+ECK12T2601  	ECK125269298	ECK120001270	ECK12T2600  	repressor	8	263	ECK120001270		Peak start: , Peak end: , Peak center: 4041198		ECK12		forward		gene
+ECK12T2602  	ECK125269298	ECK120001270	ECK12T2600  	repressor	8	263	ECK120001270		Peak start: , Peak end: , Peak center: 4041198		ECK12		forward		gene
+ECK12T2604  	ECK125269298	ECK120002651	ECK12T2603  	repressor	8	14	ECK120002651		Peak start: , Peak end: , Peak center: 4374493		ECK12		forward		gene
+ECK12T2605  	ECK125269298	ECK120002651	ECK12T2603  	repressor	8	14	ECK120002651		Peak start: , Peak end: , Peak center: 4374493		ECK12		forward		gene
+ECK12T2607  	ECK125269298	ECK120003808	ECK12T2606  	repressor	8	-18	ECK120003808		Peak start: , Peak end: , Peak center: 2481403		ECK12		reverse		gene
+ECK12T2609  	ECK125269298	ECK120001561	ECK12T2608  	repressor	8	217	ECK120001561		Peak start: , Peak end: , Peak center: 4333408		ECK12		reverse		gene
+ECK12T2610  	ECK125269298	ECK120001557	ECK12T2606  	repressor	8	398	ECK120001557		Peak start: , Peak end: , Peak center: 2481403		ECK12		forward		gene
+ECK12T2612  	ECK125269298	ECK120002376	ECK12T2611  	repressor	8	460	ECK120002376		Peak start: , Peak end: , Peak center: 3242757		ECK12		forward		gene
+ECK12T2614  	ECK125269298	ECK120001790	ECK12T2613  	repressor	8	-54	ECK120001790		Peak start: , Peak end: , Peak center: 4084102		ECK12		forward		gene
+ECK12T2616  	ECK125269298	ECK120004448	ECK12T2615  	repressor	8	14	ECK120004448		Peak start: , Peak end: , Peak center: 1445404		ECK12		forward		gene
+ECK12T2618  	ECK125269298	ECK120004360	ECK12T2617  	repressor	8	173	ECK120004360		Peak start: , Peak end: , Peak center: 4426848		ECK12		forward		gene
+ECK12T2620  	ECK125269298	ECK120000832	ECK12T2619  	repressor	8	92	ECK120000832		Peak start: , Peak end: , Peak center: 2001880		ECK12		forward		gene
+ECK12T2621  	ECK125269298	ECK120003619	ECK120029884	activator	8	189	ECK120003619		Peak start: , Peak end: , Peak center: 1984800		ECK12		forward		gene
+ECK12T2623  	ECK125269298	ECK120000342	ECK12T2622  	repressor	8	177	ECK120000342		Peak start: , Peak end: , Peak center: 2931554		ECK12		reverse		gene
+ECK12T2625  	ECK125269298	ECK120002274	ECK12T2624  	repressor	8	2	ECK120002274		Peak start: , Peak end: , Peak center: 2173086		ECK12		reverse		gene
+ECK12T2626  	ECK125269298	ECK120002274	ECK12T2624  	repressor	8	2	ECK120002274		Peak start: , Peak end: , Peak center: 2173086		ECK12		reverse		gene
+ECK12T2628  	ECK125269298	ECK120000398	ECK12T2627  	repressor	8	227	ECK120000398		Peak start: , Peak end: , Peak center: 4292324		ECK12		forward		gene
+ECK12T2630  	ECK125269298	ECK120004251	ECK12T2629  	repressor	8	14	ECK120004251		Peak start: , Peak end: , Peak center: 3459092		ECK12		forward		gene
+ECK12T2631  	ECK125269298	ECK120004252	ECK12T2629  	repressor	8	459	ECK120004252		Peak start: , Peak end: , Peak center: 3459092		ECK12		forward		gene
+ECK12T2633  	ECK125269298	ECK120000431	ECK12T2632  	repressor	8	17	ECK120000431		Peak start: , Peak end: , Peak center: 4398299		ECK12		forward		gene
+ECK12T2634  	ECK125269298	ECK120000431	ECK12T2632  	repressor	8	17	ECK120000431		Peak start: , Peak end: , Peak center: 4398299		ECK12		forward		gene
+ECK12T2635  	ECK125269298	ECK120000431	ECK12T2632  	repressor	8	17	ECK120000431		Peak start: , Peak end: , Peak center: 4398299		ECK12		forward		gene
+ECK12T2636  	ECK125269298	ECK120000431	ECK12T2632  	repressor	8	17	ECK120000431		Peak start: , Peak end: , Peak center: 4398299		ECK12		forward		gene
+ECK12T2637  	ECK125269298	ECK120000431	ECK12T2632  	repressor	8	17	ECK120000431		Peak start: , Peak end: , Peak center: 4398299		ECK12		forward		gene
+ECK12T2639  	ECK125269298	ECK120001732	ECK12T2638  	repressor	8	336	ECK120001732		Peak start: , Peak end: , Peak center: 115403		ECK12		reverse		gene
+ECK12T2641  	ECK125269298	ECK120001897	ECK12T2640  	repressor	8	-337	ECK120001897		Peak start: , Peak end: , Peak center: 155771		ECK12		reverse		gene
+ECK12T2642  	ECK125269298	ECK120001897	ECK12T2640  	repressor	8	-337	ECK120001897		Peak start: , Peak end: , Peak center: 155771		ECK12		reverse		gene
+ECK12T2644  	ECK125269298	ECK120000459	ECK12T2643  	activator	8	14	ECK120000459		Peak start: , Peak end: , Peak center: 4198309		ECK12		forward		gene
+ECK12T2646  	ECK125269298	ECK120000482	ECK12T2645  	activator	8	199	ECK120000482		Peak start: , Peak end: , Peak center: 1194145		ECK12		forward		gene
+ECK12T2648  	ECK125269298	ECK120003955	ECK12T2647  	activator	8	350	ECK120003955		Peak start: , Peak end: , Peak center: 2783527		ECK12		reverse		gene
+ECK12T2650  	ECK125269298	ECK120001244	ECK12T2649  	activator	8	63	ECK120001244		Peak start: , Peak end: , Peak center: 3948282		ECK12		forward		gene
+ECK12T2652  	ECK125269298	ECK120000500	ECK12T2651  	repressor	8	291	ECK120000500		Peak start: , Peak end: , Peak center: 564865		ECK12		reverse		gene
+ECK12T2654  	ECK125269298	ECK120003988	ECK12T2653  	repressor	8	186	ECK120003988		Peak start: , Peak end: , Peak center: 2870329		ECK12		reverse		gene
+ECK12T2656  	ECK125269298	ECK120002724	ECK12T2655  	activator	8	76	ECK120002724		Peak start: , Peak end: , Peak center: 240285		ECK12		forward		gene
+ECK12T2658  	ECK125269298	ECK120002381	ECK12T2657  	activator	8	17	ECK120002381		Peak start: , Peak end: , Peak center: 3281163		ECK12		forward		gene
+ECK12T2660  	ECK125269298	ECK120000505	ECK12T2659  	repressor	8	-34	ECK120000505		Peak start: , Peak end: , Peak center: 3790737		ECK12		reverse		gene
+ECK12T2662  	ECK125269298	ECK120004026	ECK12T2661  	repressor	8	-68	ECK120004026		Peak start: , Peak end: , Peak center: 2982213		ECK12		reverse		gene
+ECK12T2663  	ECK125269298	ECK120000524	ECK125258510	repressor	8	298	ECK120000524		Peak start: , Peak end: , Peak center: 84123		ECK12		forward		gene
+ECK12T2665  	ECK125269298	ECK120000540	ECK12T2664  	repressor	8	380	ECK120000540		Peak start: , Peak end: , Peak center: 931457		ECK12		forward		gene
+ECK12T2667  	ECK125269298	ECK120000542	ECK12T2666  	activator	8	-79	ECK120000542		Peak start: , Peak end: , Peak center: 2977001		ECK12		reverse		gene
+ECK12T2669  	ECK125269298	ECK120001308	ECK12T2668  	repressor	8	2	ECK120001308		Peak start: , Peak end: , Peak center: 2246567		ECK12		reverse		gene
+ECK12T2670  	ECK125269298	ECK120000544	ECK12T2666  	repressor	8	43	ECK120000544		Peak start: , Peak end: , Peak center: 2977001		ECK12		forward		gene
+ECK12T2672  	ECK125269298	ECK120003061	ECK12T2671  	repressor	8	14	ECK120003061		Peak start: , Peak end: , Peak center: 918441		ECK12		forward		gene
+ECK12T2674  	ECK125269298	ECK120000557	ECK12T2673  	repressor	8	14	ECK120000557		Peak start: , Peak end: , Peak center: 1698988		ECK12		forward		gene
+ECK12T2676  	ECK125269298	ECK120001314	ECK12T2675  	repressor	8	-35	ECK120001314		Peak start: , Peak end: , Peak center: 1114747		ECK12		reverse		gene
+ECK12T2678  	ECK125269298	ECK120002503	ECK12T2677  	repressor	8	499	ECK120002503		Peak start: , Peak end: , Peak center: 3315820		ECK12		reverse		gene
+ECK12T2679  	ECK125269298	ECK120002503	ECK12T2677  	repressor	8	499	ECK120002503		Peak start: , Peak end: , Peak center: 3315820		ECK12		reverse		gene
+ECK12T2680  	ECK125269298	ECK120002503	ECK12T2677  	repressor	8	499	ECK120002503		Peak start: , Peak end: , Peak center: 3315820		ECK12		reverse		gene
+ECK12T2682  	ECK125269298	ECK120000585	ECK12T2681  	repressor	8	498	ECK120000585		Peak start: , Peak end: , Peak center: 2236829		ECK12		reverse		gene
+ECK12T2683  	ECK125269298	ECK120000585	ECK12T2681  	repressor	8	498	ECK120000585		Peak start: , Peak end: , Peak center: 2236829		ECK12		reverse		gene
+ECK12T2685  	ECK125269298	ECK120002612	ECK12T2684  	activator	8	51	ECK120002612		Peak start: , Peak end: , Peak center: 1435067		ECK12		forward		gene
+ECK12T2686  	ECK125269298	ECK120001500	ECK12T2564  	repressor	8	-27	ECK120001500		Peak start: , Peak end: , Peak center: 118719		ECK12		reverse		gene
+ECK12T2688  	ECK125269298	ECK120000630	ECK12T2687  	repressor	8	-79	ECK120000630		Peak start: , Peak end: , Peak center: 3371698		ECK12		reverse		gene
+ECK12T2690  	ECK125269298	ECK120002038	ECK12T2689  	repressor	8	18	ECK120002038		Peak start: , Peak end: , Peak center: 215255		ECK12		forward		gene
+ECK12T2692  	ECK125269298	ECK120001877	ECK12T2691  	activator	8	80	ECK120001877		Peak start: , Peak end: , Peak center: 4291501		ECK12		forward		gene
+ECK12T2694  	ECK125269298	ECK120001645	ECK12T2693  	repressor	8	-48	ECK120001645		Peak start: , Peak end: , Peak center: 4194993		ECK12		forward		gene
+ECK12T2696  	ECK125269298	ECK120003542	ECK12T2695  	repressor	8	-26	ECK120003542		Peak start: , Peak end: , Peak center: 1839536		ECK12		forward		gene
+ECK12T2698  	ECK125269298	ECK120001896	ECK12T2697  	repressor	8	141	ECK120001896		Peak start: , Peak end: , Peak center: 2510922		ECK12		forward		gene
+ECK12T2700  	ECK125269298	ECK120000669	ECK12T2699  	repressor	8	189	ECK120000669		Peak start: , Peak end: , Peak center: 1301698		ECK12		forward		gene
+ECK12T2702  	ECK125269298	ECK120000672	ECK12T2701  	activator	8	-43	ECK120000672		Peak start: , Peak end: , Peak center: 1341497		ECK12		reverse		gene
+ECK12T2704  	ECK125269298	ECK120001449	ECK12T2703  	repressor	8	14	ECK120001449		Peak start: , Peak end: , Peak center: 1152528		ECK12		forward		gene
+ECK12T2706  	ECK125269298	ECK120000692	ECK12T2705  	activator	8	14	ECK120000692		Peak start: , Peak end: , Peak center: 1804386		ECK12		forward		gene
+ECK12T2708  	ECK125269298	ECK120000719	ECK12T2707  	repressor	8	108	ECK120000719		Peak start: , Peak end: , Peak center: 416261		ECK12		forward		gene
+ECK12T2710  	ECK125269298	ECK120001673	ECK12T2709  	repressor	8	439	ECK120001673		Peak start: , Peak end: , Peak center: 1083782		ECK12		forward		gene
+ECK12T2712  	ECK125269298	ECK120003408	ECK12T2711  	repressor	8	497	ECK120003408		Peak start: , Peak end: , Peak center: 1631207		ECK12		forward		gene
+ECK12T2714  	ECK125269298	ECK120000729	ECK12T2713  	repressor	8	89	ECK120000729		Peak start: , Peak end: , Peak center: 4002822		ECK12		forward		gene
+ECK12T2716  	ECK125269298	ECK120002018	ECK12T2715  	repressor	8	14	ECK120002018		Peak start: , Peak end: , Peak center: 4607430		ECK12		forward		gene
+ECK12T2718  	ECK125269298	ECK120002301	ECK12T2717  	repressor	8	456	ECK120002301		Peak start: , Peak end: , Peak center: 2446007		ECK12		reverse		gene
+ECK12T2720  	ECK125269298	ECK120000725	ECK12T2719  	repressor	8	-75	ECK120000725		Peak start: , Peak end: , Peak center: 3909600		ECK12		reverse		gene
+ECK12T2721  	ECK125269298	ECK120000725	ECK12T2719  	repressor	8	-75	ECK120000725		Peak start: , Peak end: , Peak center: 3909600		ECK12		reverse		gene
+ECK12T2722  	ECK125269298	ECK120000725	ECK12T2719  	repressor	8	-75	ECK120000725		Peak start: , Peak end: , Peak center: 3909600		ECK12		reverse		gene
+ECK12T2724  	ECK125269298	ECK120003996	ECK12T2723  	repressor	8	145	ECK120003996		Peak start: , Peak end: , Peak center: 2890031		ECK12		forward		gene
+ECK12T2726  	ECK125269298	ECK120000830	ECK12T2725  	activator	8	437	ECK120000830		Peak start: , Peak end: , Peak center: 4022424		ECK12		reverse		gene
+ECK12T2728  	ECK125269298	ECK120002273	ECK12T2727  	repressor	8	315	ECK120002273		Peak start: , Peak end: , Peak center: 2110788		ECK12		reverse		gene
+ECK12T2730  	ECK125269298	ECK120003016	ECK12T2729  	activator	8	156	ECK120003016		Peak start: , Peak end: , Peak center: 841396		ECK12		forward		gene
+ECK12T2731  	ECK125269298	ECK120003016	ECK12T2729  	activator	8	156	ECK120003016		Peak start: , Peak end: , Peak center: 841396		ECK12		forward		gene
+ECK12T2732  	ECK125269298	ECK120003177	ECK12T2645  	activator	8	27	ECK120003177		Peak start: , Peak end: , Peak center: 1194145		ECK12		reverse		gene
+ECK12T2734  	ECK125269298	ECK120003934	ECK12T2733  	repressor	8	-37	ECK120003934		Peak start: , Peak end: , Peak center: 2765044		ECK12		forward		gene
+ECK12T2735  	ECK125269298	ECK120003934	ECK12T2733  	repressor	8	-37	ECK120003934		Peak start: , Peak end: , Peak center: 2765044		ECK12		forward		gene
+ECK12T2737  	ECK125269298	ECK120000883	ECK12T2736  	activator	8	324	ECK120000883		Peak start: , Peak end: , Peak center: 3882052		ECK12		forward		gene
+ECK12T2739  	ECK125269298	ECK120003595	ECK12T2738  	repressor	8	335	ECK120003595		Peak start: , Peak end: , Peak center: 1917908		ECK12		forward		gene
+ECK12T2740  	ECK125269298	ECK120001082	ECK12T2707  	repressor	8	-82	ECK120001082		Peak start: , Peak end: , Peak center: 416261		ECK12		reverse		gene
+ECK12T2741  	ECK125269298	ECK120000922	ECK120013699	activator	8	442	ECK120000922		Peak start: , Peak end: , Peak center: 753984		ECK12		forward		gene
+ECK12T2743  	ECK125269298	ECK120002000	ECK12T2742  	repressor	8	32	ECK120002000		Peak start: , Peak end: , Peak center: 3320495		ECK12		reverse		gene
+ECK12T2744  	ECK125269298	ECK120002000	ECK12T2742  	repressor	8	32	ECK120002000		Peak start: , Peak end: , Peak center: 3320495		ECK12		reverse		gene
+ECK12T2745  	ECK125269298	ECK120000933	ECK120029430	repressor	8	-55	ECK120000933		Peak start: , Peak end: , Peak center: 3056505		ECK12		reverse		gene
+ECK12T2747  	ECK125269298	ECK120035076	ECK12T2746  	activator	8	429	ECK120035076		Peak start: , Peak end: , Peak center: 2697790		ECK12		reverse		gene
+ECK12T2749  	ECK125269298	ECK120030085	ECK12T2748  	repressor	8	113	ECK120030085		Peak start: , Peak end: , Peak center: 3193156		ECK12		reverse		gene
+ECK12T2751  	ECK125269298	ECK120002540	ECK12T2750  	repressor	8	83	ECK120002540		Peak start: , Peak end: , Peak center: 4047837		ECK12		forward		gene
+ECK12T2753  	ECK125269298	ECK120003409	ECK12T2752  	repressor	8	-17	ECK120003409		Peak start: , Peak end: , Peak center: 1632863		ECK12		reverse		gene
+ECK12T2754  	ECK125269298	ECK120003409	ECK12T2752  	repressor	8	-17	ECK120003409		Peak start: , Peak end: , Peak center: 1632863		ECK12		reverse		gene
+ECK12T2756  	ECK125269298	ECK120003291	ECK12T2755  	repressor	8	-32	ECK120003291		Peak start: , Peak end: , Peak center: 1430484		ECK12		forward		gene
+ECK12T2758  	ECK125269298	ECK120002846	ECK12T2757  	repressor	8	92	ECK120002846		Peak start: , Peak end: , Peak center: 434772		ECK12		forward		gene
+ECK12T2759  	ECK125269298	ECK120002846	ECK12T2757  	repressor	8	92	ECK120002846		Peak start: , Peak end: , Peak center: 434772		ECK12		forward		gene
+ECK12T2761  	ECK125269298	ECK120000990	ECK12T2760  	repressor	8	24	ECK120000990		Peak start: , Peak end: , Peak center: 1800583		ECK12		reverse		gene
+ECK12T2762  	ECK125269298	ECK120000990	ECK12T2760  	repressor	8	24	ECK120000990		Peak start: , Peak end: , Peak center: 1800583		ECK12		reverse		gene
+ECK12T2764  	ECK125269298	ECK120001747	ECK12T2763  	repressor	8	236	ECK120001747		Peak start: , Peak end: , Peak center: 1058250		ECK12		forward		gene
+ECK12T2766  	ECK125269298	ECK120001338	ECK12T2765  	repressor	8	14	ECK120001338		Peak start: , Peak end: , Peak center: 4251048		ECK12		forward		gene
+ECK12T2768  	ECK125269298	ECK120002941	ECK12T2767  	repressor	8	-32	ECK120002941		Peak start: , Peak end: , Peak center: 641070		ECK12		reverse		gene
+ECK12T2769  	ECK125269298	ECK120004451	ECK12T2611  	repressor	8	-23	ECK120004451		Peak start: , Peak end: , Peak center: 3242757		ECK12		reverse		gene
+ECK12T2771  	ECK125269298	ECK120002155	ECK12T2770  	activator	8	92	ECK120002155		Peak start: , Peak end: , Peak center: 3723820		ECK12		forward		gene
+ECK12T2773  	ECK125269298	ECK120001130	ECK12T2772  	repressor	8	-76	ECK120001130		Peak start: , Peak end: , Peak center: 2520582		ECK12		reverse		gene
+ECK12T2775  	ECK125269298	ECK120001621	ECK12T2774  	repressor	8	80	ECK120001621		Peak start: , Peak end: , Peak center: 151034		ECK12		reverse		gene
+ECK12T2776  	ECK125269298	ECK120001621	ECK12T2774  	repressor	8	80	ECK120001621		Peak start: , Peak end: , Peak center: 151034		ECK12		reverse		gene
+ECK12T2778  	ECK125269298	ECK120002039	ECK12T2777  	repressor	8	385	ECK120002039		Peak start: , Peak end: , Peak center: 216637		ECK12		reverse		gene
+ECK12T2780  	ECK125269298	ECK120001594	ECK12T2779  	activator	8	107	ECK120001594		Peak start: , Peak end: , Peak center: 231046		ECK12		forward		gene
+ECK12T2782  	ECK125269298	ECK120002736	ECK12T2781  	repressor	8	-244	ECK120002736		Peak start: , Peak end: , Peak center: 252250		ECK12		forward		gene
+ECK12T2783  	ECK125269298	ECK120002736	ECK12T2781  	repressor	8	-244	ECK120002736		Peak start: , Peak end: , Peak center: 252250		ECK12		forward		gene
+ECK12T2784  	ECK125269298	ECK120002737	ECK12T2781  	repressor	8	52	ECK120002737		Peak start: , Peak end: , Peak center: 252250		ECK12		forward		gene
+ECK12T2785  	ECK125269298	ECK120002737	ECK12T2781  	repressor	8	52	ECK120002737		Peak start: , Peak end: , Peak center: 252250		ECK12		forward		gene
+ECK12T2787  	ECK125269298	ECK120002778	ECK12T2786  	activator	8	143	ECK120002778		Peak start: , Peak end: , Peak center: 302112		ECK12		forward		gene
+ECK12T2789  	ECK125269298	ECK120001085	ECK12T2788  	repressor	8	-8	ECK120001085		Peak start: , Peak end: , Peak center: 429859		ECK12		forward		gene
+ECK12T2791  	ECK125269298	ECK120002847	ECK12T2790  	repressor	8	168	ECK120002847		Peak start: , Peak end: , Peak center: 437206		ECK12		reverse		gene
+ECK12T2792  	ECK125269298	ECK120002847	ECK12T2790  	repressor	8	168	ECK120002847		Peak start: , Peak end: , Peak center: 437206		ECK12		reverse		gene
+ECK12T2794  	ECK125269298	ECK120001705	ECK12T2793  	repressor	8	14	ECK120001705		Peak start: , Peak end: , Peak center: 526792		ECK12		forward		gene
+ECK12T2796  	ECK125269298	ECK120002888	ECK12T2795  	activator	8	-6	ECK120002888		Peak start: , Peak end: , Peak center: 536893		ECK12		forward		gene
+ECK12T2797  	ECK125269298	ECK120002942	ECK12T2767  	repressor	8	189	ECK120002942		Peak start: , Peak end: , Peak center: 641070		ECK12		forward		gene
+ECK12T2799  	ECK125269298	ECK120001477	ECK12T2798  	repressor	8	96	ECK120001477		Peak start: , Peak end: , Peak center: 734790		ECK12		forward		gene
+ECK12T2801  	ECK125269298	ECK120003000	ECK12T2800  	repressor	8	-3	ECK120003000		Peak start: , Peak end: , Peak center: 801131		ECK12		forward		gene
+ECK12T2803  	ECK125269298	ECK120003050	ECK12T2802  	activator	8	-12	ECK120003050		Peak start: , Peak end: , Peak center: 903693		ECK12		reverse		gene
+ECK12T2804  	ECK125269298	ECK120003051	ECK12T2802  	activator	8	114	ECK120003051		Peak start: , Peak end: , Peak center: 903693		ECK12		forward		gene
+ECK12T2806  	ECK125269298	ECK120003113	ECK12T2805  	repressor	8	156	ECK120003113		Peak start: , Peak end: , Peak center: 1052447		ECK12		reverse		gene
+ECK12T2808  	ECK125269298	ECK120003209	ECK12T2807  	repressor	8	14	ECK120003209		Peak start: , Peak end: , Peak center: 1225851		ECK12		forward		gene
+ECK12T2810  	ECK125269298	ECK120003196	ECK12T2809  	activator	8	166	ECK120003196		Peak start: , Peak end: , Peak center: 1212182		ECK12		reverse		gene
+ECK12T2812  	ECK125269298	ECK120003278	ECK12T2811  	activator	8	-37	ECK120003278		Peak start: , Peak end: , Peak center: 1419179		ECK12		forward		gene
+ECK12T2814  	ECK125269298	ECK120003327	ECK12T2813  	activator	8	359	ECK120003327		Peak start: , Peak end: , Peak center: 1492736		ECK12		reverse		gene
+ECK12T2816  	ECK125269298	ECK120003340	ECK12T2815  	activator	8	276	ECK120003340		Peak start: , Peak end: , Peak center: 1509484		ECK12		forward		gene
+ECK12T2817  	ECK125269298	ECK120003340	ECK12T2815  	activator	8	276	ECK120003340		Peak start: , Peak end: , Peak center: 1509484		ECK12		forward		gene
+ECK12T2819  	ECK125269298	ECK120003346	ECK12T2818  	repressor	8	-63	ECK120003346		Peak start: , Peak end: , Peak center: 1515724		ECK12		forward		gene
+ECK12T2821  	ECK125269298	ECK120003381	ECK12T2820  	repressor	8	204	ECK120003381		Peak start: , Peak end: , Peak center: 1585575		ECK12		reverse		gene
+ECK12T2822  	ECK125269298	ECK120003407	ECK12T2711  	repressor	8	-53	ECK120003407		Peak start: , Peak end: , Peak center: 1631207		ECK12		forward		gene
+ECK12T2824  	ECK125269298	ECK120003449	ECK12T2823  	repressor	8	221	ECK120003449		Peak start: , Peak end: , Peak center: 1676245		ECK12		forward		gene
+ECK12T2826  	ECK125269298	ECK120001212	ECK12T2825  	repressor	8	14	ECK120001212		Peak start: , Peak end: , Peak center: 1771794		ECK12		forward		gene
+ECK12T2828  	ECK125269298	ECK120003504	ECK12T2827  	repressor	8	262	ECK120003504		Peak start: , Peak end: , Peak center: 1768973		ECK12		forward		gene
+ECK12T2830  	ECK125269298	ECK120003506	ECK12T2829  	repressor	8	90	ECK120003506		Peak start: , Peak end: , Peak center: 1775121		ECK12		forward		gene
+ECK12T2832  	ECK125269298	ECK120003513	ECK12T2831  	activator	8	-56	ECK120003513		Peak start: , Peak end: , Peak center: 1790118		ECK12		reverse		gene
+ECK12T2834  	ECK125269298	ECK120003591	ECK12T2833  	repressor	8	14	ECK120003591		Peak start: , Peak end: , Peak center: 1908288		ECK12		forward		gene
+ECK12T2836  	ECK125269298	ECK120002246	ECK12T2835  	activator	8	200	ECK120002246		Peak start: , Peak end: , Peak center: 1949230		ECK12		forward		gene
+ECK12T2838  	ECK125269298	ECK120002407	ECK12T2837  	repressor	8	81	ECK120002407		Peak start: , Peak end: , Peak center: 1993480		ECK12		forward		gene
+ECK12T2840  	ECK125269298	ECK120003675	ECK12T2839  	repressor	8	-28	ECK120003675		Peak start: , Peak end: , Peak center: 2087207		ECK12		reverse		gene
+ECK12T2842  	ECK125269298	ECK120003694	ECK12T2841  	activator	8	364	ECK120003694		Peak start: , Peak end: , Peak center: 2135573		ECK12		forward		gene
+ECK12T2844  	ECK125269298	ECK120001916	ECK12T2843  	repressor	8	35	ECK120001916		Peak start: , Peak end: , Peak center: 2190798		ECK12		reverse		gene
+ECK12T2846  	ECK125269298	ECK120002010	ECK12T2845  	repressor	8	-15	ECK120002010		Peak start: , Peak end: , Peak center: 2247715		ECK12		reverse		gene
+ECK12T2847  	ECK125269298	ECK120001944	ECK12T2845  	activator	8	84	ECK120001944		Peak start: , Peak end: , Peak center: 2247715		ECK12		forward		gene
+ECK12T2849  	ECK125269298	ECK120003754	ECK12T2848  	activator	8	46	ECK120003754		Peak start: , Peak end: , Peak center: 2383854		ECK12		forward		gene
+ECK12T2851  	ECK125269298	ECK120003809	ECK12T2850  	repressor	8	53	ECK120003809		Peak start: , Peak end: , Peak center: 2487165		ECK12		reverse		gene
+ECK12T2853  	ECK125269298	ECK120003834	ECK12T2852  	activator	8	14	ECK120003834		Peak start: , Peak end: , Peak center: 2535364		ECK12		forward		gene
+ECK12T2854  	ECK125269298	ECK120003835	ECK12T2852  	repressor	8	421	ECK120003835		Peak start: , Peak end: , Peak center: 2535364		ECK12		forward		gene
+ECK12T2856  	ECK125269298	ECK120003887	ECK12T2855  	activator	8	122	ECK120003887		Peak start: , Peak end: , Peak center: 2627183		ECK12		forward		gene
+ECK12T2858  	ECK125269298	ECK120003888	ECK12T2857  	repressor	8	159	ECK120003888		Peak start: , Peak end: , Peak center: 2627705		ECK12		forward		gene
+ECK12T2860  	ECK125269298	ECK120003923	ECK12T2859  	repressor	8	378	ECK120003923		Peak start: , Peak end: , Peak center: 2739522		ECK12		forward		gene
+ECK12T2861  	ECK125269298	ECK120003923	ECK12T2859  	repressor	8	378	ECK120003923		Peak start: , Peak end: , Peak center: 2739522		ECK12		forward		gene
+ECK12T2863  	ECK125269298	ECK120003967	ECK12T2862  	repressor	8	58	ECK120003967		Peak start: , Peak end: , Peak center: 2798106		ECK12		forward		gene
+ECK12T2865  	ECK125269298	ECK120003965	ECK12T2864  	repressor	8	14	ECK120003965		Peak start: , Peak end: , Peak center: 2795554		ECK12		forward		gene
+ECK12T2867  	ECK125269298	ECK120003999	ECK12T2866  	repressor	8	14	ECK120003999		Peak start: , Peak end: , Peak center: 2892223		ECK12		forward		gene
+ECK12T2869  	ECK125269298	ECK120004002	ECK12T2868  	repressor	8	-23	ECK120004002		Peak start: , Peak end: , Peak center: 2895917		ECK12		reverse		gene
+ECK12T2871  	ECK125269298	ECK120001138	ECK12T2870  	repressor	8	277	ECK120001138		Peak start: , Peak end: , Peak center: 2960910		ECK12		reverse		gene
+ECK12T2873  	ECK125269298	ECK120004024	ECK12T2872  	repressor	8	28	ECK120004024		Peak start: , Peak end: , Peak center: 2969272		ECK12		forward		gene
+ECK12T2875  	ECK125269298	ECK120004081	ECK12T2874  	repressor	8	465	ECK120004081		Peak start: , Peak end: , Peak center: 3075011		ECK12		reverse		gene
+ECK12T2877  	ECK125269298	ECK120004099	ECK12T2876  	activator	8	345	ECK120004099		Peak start: , Peak end: , Peak center: 3111175		ECK12		reverse		gene
+ECK12T2879  	ECK125269298	ECK120002231	ECK12T2878  	activator	8	14	ECK120002231		Peak start: , Peak end: , Peak center: 3183243		ECK12		forward		gene
+ECK12T2881  	ECK125269298	ECK120002347	ECK12T2880  	repressor	8	159	ECK120002347		Peak start: , Peak end: , Peak center: 3171068		ECK12		forward		gene
+ECK12T2883  	ECK125269298	ECK120004171	ECK12T2882  	repressor	8	-17	ECK120004171		Peak start: , Peak end: , Peak center: 3250972		ECK12		forward		gene
+ECK12T2885  	ECK125269298	ECK120004202	ECK12T2884  	repressor	8	14	ECK120004202		Peak start: , Peak end: , Peak center: 3299408		ECK12		forward		gene
+ECK12T2887  	ECK125269298	ECK120001470	ECK12T2886  	repressor	8	176	ECK120001470		Peak start: , Peak end: , Peak center: 3359982		ECK12		forward		gene
+ECK12T2889  	ECK125269298	ECK120004217	ECK12T2888  	repressor	8	156	ECK120004217		Peak start: , Peak end: , Peak center: 3360693		ECK12		forward		gene
+ECK12T2891  	ECK125269298	ECK120004278	ECK12T2890  	repressor	8	354	ECK120004278		Peak start: , Peak end: , Peak center: 3510020		ECK12		reverse		gene
+ECK12T2893  	ECK125269298	ECK120002132	ECK12T2892  	activator	8	14	ECK120002132		Peak start: , Peak end: , Peak center: 3672811		ECK12		forward		gene
+ECK12T2894  	ECK125269298	ECK120002152	ECK12T2579  	repressor	8	468	ECK120002152		Peak start: , Peak end: , Peak center: 3714109		ECK12		forward		gene
+ECK12T2896  	ECK125269298	ECK120001655	ECK12T2895  	activator	8	4	ECK120001655		Peak start: , Peak end: , Peak center: 3865732		ECK12		forward		gene
+ECK12T2898  	ECK125269298	ECK120001661	ECK12T2897  	repressor	8	161	ECK120001661		Peak start: , Peak end: , Peak center: 3891747		ECK12		forward		gene
+ECK12T2900  	ECK125269298	ECK120001235	ECK12T2899  	repressor	8	254	ECK120001235		Peak start: , Peak end: , Peak center: 3947737		ECK12		reverse		gene
+ECK12T2901  	ECK125269298	ECK120001429	ECK12T2713  	activator	8	-76	ECK120001429		Peak start: , Peak end: , Peak center: 4002822		ECK12		reverse		gene
+ECK12T2903  	ECK125269298	ECK120001432	ECK12T2902  	activator	8	14	ECK120001432		Peak start: , Peak end: , Peak center: 4008228		ECK12		forward		gene
+ECK12T2905  	ECK125269298	ECK120001774	ECK12T2904  	repressor	8	118	ECK120001774		Peak start: , Peak end: , Peak center: 4067149		ECK12		reverse		gene
+ECK12T2906  	ECK125269298	ECK120001845	ECK12T2643  	activator	8	299	ECK120001845		Peak start: , Peak end: , Peak center: 4198309		ECK12		forward		gene
+ECK12T2908  	ECK125269298	ECK120001847	ECK12T2907  	repressor	8	154	ECK120001847		Peak start: , Peak end: , Peak center: 4225620		ECK12		forward		gene
+ECK12T2910  	ECK125269298	ECK120001865	ECK12T2909  	activator	8	371	ECK120001865		Peak start: , Peak end: , Peak center: 4272777		ECK12		reverse		gene
+ECK12T2912  	ECK125269298	ECK120004357	ECK12T2911  	repressor	8	262	ECK120004357		Peak start: , Peak end: , Peak center: 4425174		ECK12		reverse		gene
+ECK12T2914  	ECK125269298	ECK120002795	ECK12T2913  	repressor	8	268	ECK120002795		Peak start: , Peak end: , Peak center: 320659		ECK12		forward		gene
+ECK12T2916  	ECK125269298	ECK120003237	ECK12T2915  	repressor	8	-29	ECK120003237		Peak start: , Peak end: , Peak center: 1355745		ECK12		reverse		gene
+ECK12T2918  	ECK125269298	ECK120003435	ECK12T2917  	repressor	8	78	ECK120003435		Peak start: , Peak end: , Peak center: 1658507		ECK12		forward		gene
+ECK12T2920  	ECK125269298	ECK120003440	ECK12T2919  	repressor	8	207	ECK120003440		Peak start: , Peak end: , Peak center: 1665055		ECK12		reverse		gene
+ECK12T2921  	ECK125269298	ECK120003440	ECK12T2919  	repressor	8	207	ECK120003440		Peak start: , Peak end: , Peak center: 1665055		ECK12		reverse		gene
+ECK12T2923  	ECK125269298	ECK120003602	ECK12T2922  	repressor	8	110	ECK120003602		Peak start: , Peak end: , Peak center: 1923371		ECK12		forward		gene
+ECK12T2924  	ECK125269298	ECK120002629	ECK12T2839  	repressor	8	309	ECK120002629		Peak start: , Peak end: , Peak center: 2087207		ECK12		reverse		gene
+ECK12T2926  	ECK125269298	ECK120004057	ECK12T2925  	repressor	8	386	ECK120004057		Peak start: , Peak end: , Peak center: 3011892		ECK12		reverse		gene
+ECK12T2928  	ECK125269298	ECK120004031	ECK12T2927  	activator	8	-9	ECK120004031		Peak start: , Peak end: , Peak center: 2987333		ECK12		forward		gene
+ECK12T2929  	ECK125269298	ECK120004359	ECK12T2617  	activator	8	-45	ECK120004359		Peak start: , Peak end: , Peak center: 4426848		ECK12		reverse		gene
+ECK12T2931  	ECK125269298	ECK120004367	ECK12T2930  	repressor	8	205	ECK120004367		Peak start: , Peak end: , Peak center: 4437437		ECK12		forward		gene
+ECK12T3365  	ECK125269430	ECK120000047	ECK12T3364  	repressor	7	358	ECK120000047		Peak start: , Peak end: , Peak center: 490403		ECK12		forward		gene
+ECK12T3367  	ECK125269430	ECK120000080	ECK12T3366  	repressor	7	-353	ECK120000080		Peak start: , Peak end: , Peak center: 121906		ECK12		reverse		gene
+ECK12T3369  	ECK125269430	ECK120000129	ECK12T3368  	activator	7	167	ECK120000129		Peak start: , Peak end: , Peak center: 4360023		ECK12		reverse		gene
+ECK12T3371  	ECK125269430	ECK120000191	ECK12T3370  	repressor	7	55	ECK120000191		Peak start: , Peak end: , Peak center: 553885		ECK12		forward		gene
+ECK12T3373  	ECK125269430	ECK120000511	ECK12T3372  	activator	7	35	ECK120000511		Peak start: , Peak end: , Peak center: 1267235		ECK12		forward		gene
+ECK12T3374  	ECK125269430	ECK120000511	ECK12T3372  	activator	7	35	ECK120000511		Peak start: , Peak end: , Peak center: 1267235		ECK12		forward		gene
+ECK12T3376  	ECK125269430	ECK120000599	ECK12T3375  	repressor	7	290	ECK120000599		Peak start: , Peak end: , Peak center: 667202		ECK12		reverse		gene
+ECK12T3378  	ECK125269430	ECK120000650	ECK12T3377  	repressor	7	27	ECK120000650		Peak start: , Peak end: , Peak center: 3838287		ECK12		reverse		gene
+ECK12T3380  	ECK125269430	ECK120000684	ECK12T3379  	repressor	7	-123	ECK120000684		Peak start: , Peak end: , Peak center: 53540		ECK12		reverse		gene
+ECK12T3381  	ECK125269430	ECK120000684	ECK12T3379  	repressor	7	-123	ECK120000684		Peak start: , Peak end: , Peak center: 53540		ECK12		reverse		gene
+ECK12T3382  	ECK125269430	ECK120000684	ECK12T3379  	repressor	7	-123	ECK120000684		Peak start: , Peak end: , Peak center: 53540		ECK12		reverse		gene
+ECK12T3383  	ECK125269430	ECK120000684	ECK12T3379  	repressor	7	-123	ECK120000684		Peak start: , Peak end: , Peak center: 53540		ECK12		reverse		gene
+ECK12T3385  	ECK125269430	ECK120000896	ECK12T3384  	activator	7	428	ECK120000896		Peak start: , Peak end: , Peak center: 4422782		ECK12		forward		gene
+ECK12T3386  	ECK125269430	ECK120001076	ECK12T3366  	activator	7	188	ECK120001076		Peak start: , Peak end: , Peak center: 121906		ECK12		forward		gene
+ECK12T3388  	ECK125269430	ECK120001151	ECK12T3387  	repressor	7	-48	ECK120001151		Peak start: , Peak end: , Peak center: 3204662		ECK12		forward		gene
+ECK12T3390  	ECK125269430	ECK120001369	ECK12T3389  	repressor	7	154	ECK120001369		Peak start: , Peak end: , Peak center: 2623009		ECK12		forward		gene
+ECK12T3392  	ECK125269430	ECK120001427	ECK12T3391  	activator	7	-81	ECK120001427		Peak start: , Peak end: , Peak center: 4001262		ECK12		reverse		gene
+ECK12T3394  	ECK125269430	ECK120001469	ECK12T3393  	activator	7	242	ECK120001469		Peak start: , Peak end: , Peak center: 3358941		ECK12		forward		gene
+ECK12T3396  	ECK125269430	ECK120001553	ECK12T3395  	activator	7	125	ECK120001553		Peak start: , Peak end: , Peak center: 3430204		ECK12		reverse		gene
+ECK12T3398  	ECK125269430	ECK120001565	ECK12T3397  	repressor	7	35	ECK120001565		Peak start: , Peak end: , Peak center: 2160863		ECK12		forward		gene
+ECK12T3399  	ECK125269430	ECK120001565	ECK12T3397  	repressor	7	35	ECK120001565		Peak start: , Peak end: , Peak center: 2160863		ECK12		forward		gene
+ECK12T3401  	ECK125269430	ECK120001813	ECK12T3400  	repressor	7	142	ECK120001813		Peak start: , Peak end: , Peak center: 1498427		ECK12		forward		gene
+ECK12T3403  	ECK125269430	ECK120001916	ECK12T3402  	repressor	7	386	ECK120001916		Peak start: , Peak end: , Peak center: 2190601		ECK12		reverse		gene
+ECK12T3405  	ECK125269430	ECK120001924	ECK12T3404  	activator	7	17	ECK120001924		Peak start: , Peak end: , Peak center: 2210154		ECK12		reverse		gene
+ECK12T3407  	ECK125269430	ECK120002273	ECK12T3406  	activator	7	98	ECK120002273		Peak start: , Peak end: , Peak center: 2110925		ECK12		reverse		gene
+ECK12T3409  	ECK125269430	ECK120002295	ECK12T3408  	repressor	7	161	ECK120002295		Peak start: , Peak end: , Peak center: 2746638		ECK12		forward		gene
+ECK12T3410  	ECK125269430	ECK120004356	ECK12T3384  	repressor	7	101	ECK120004356		Peak start: , Peak end: , Peak center: 4422782		ECK12		reverse		gene
+ECK12T3412  	ECK125269430	ECK120004375	ECK12T3411  	activator	7	293	ECK120004375		Peak start: , Peak end: , Peak center: 4471822		ECK12		reverse		gene
+ECK12T3413  	ECK125269430	ECK120004377	ECK12T3411  	repressor	7	364	ECK120004377		Peak start: , Peak end: , Peak center: 4471822		ECK12		forward		gene
+ECK12T3415  	ECK125269430	ECK120004440	ECK12T3414  	repressor	7	224	ECK120004440		Peak start: , Peak end: , Peak center: 4601377		ECK12		forward		gene
+ECK12T3416  	ECK125269430	ECK120003554	ECK125095374	repressor	7	-86	ECK120003554		Peak start: , Peak end: , Peak center: 1863730		ECK12		reverse		gene
+ECK12T3418  	ECK125269430	ECK120003961	ECK12T3417  	repressor	7	78	ECK120003961		Peak start: , Peak end: , Peak center: 2786890		ECK12		forward		gene
+ECK12T3419  	ECK125269430	ECK120003330	ECK12T3400  	repressor	7	18	ECK120003330		Peak start: , Peak end: , Peak center: 1498427		ECK12		reverse		gene
+ECK12T3421  	ECK125269430	ECK120003378	ECK12T3420  	activator	7	189	ECK120003378		Peak start: , Peak end: , Peak center: 1581558		ECK12		reverse		gene
+ECK12T3422  	ECK125269430	ECK120003378	ECK12T3420  	activator	7	189	ECK120003378		Peak start: , Peak end: , Peak center: 1581558		ECK12		reverse		gene
+ECK12T3424  	ECK125269430	ECK120003395	ECK12T3423  	repressor	7	-22	ECK120003395		Peak start: , Peak end: , Peak center: 1605292		ECK12		forward		gene
+ECK12T3425  	ECK125269430	ECK120003395	ECK12T3423  	repressor	7	-22	ECK120003395		Peak start: , Peak end: , Peak center: 1605292		ECK12		forward		gene
+ECK12T3427  	ECK125269430	ECK120003407	ECK12T3426  	activator	7	397	ECK120003407		Peak start: , Peak end: , Peak center: 1630807		ECK12		forward		gene
+ECK12T3429  	ECK125269430	ECK120003210	ECK12T3428  	activator	7	389	ECK120003210		Peak start: , Peak end: , Peak center: 1226238		ECK12		reverse		gene
+ECK12T3431  	ECK125269430	ECK120003757	ECK12T3430  	activator	7	75	ECK120003757		Peak start: , Peak end: , Peak center: 2386855		ECK12		forward		gene
+ECK12T3433  	ECK125269430	ECK120003778	ECK12T3432  	repressor	7	281	ECK120003778		Peak start: , Peak end: , Peak center: 2447860		ECK12		reverse		gene
+ECK12T3435  	ECK125269430	ECK120002649	ECK12T3434  	repressor	7	394	ECK120002649		Peak start: , Peak end: , Peak center: 4311501		ECK12		forward		gene
+ECK12T3437  	ECK125269430	ECK120002670	ECK12T3436  	repressor	7	286	ECK120002670		Peak start: , Peak end: , Peak center: 3645540		ECK12		reverse		gene
+ECK12T3438  	ECK125269430	ECK120003379	ECK12T3420  	activator	7	461	ECK120003379		Peak start: , Peak end: , Peak center: 1581558		ECK12		reverse		gene
+ECK12T3440  	ECK120020629	ECK120000130	ECK120012654	repressor	19	49	ECK120000130		Peak start: , Peak end: , Peak center: 29603		ECK12		forward		gene
+ECK12T3441  	ECK120020629	ECK120000130	ECK120012654	repressor	19	49	ECK120000130		Peak start: , Peak end: , Peak center: 29603		ECK12		forward		gene
+ECK12T3442  	ECK120020629	ECK120000130	ECK120012654	repressor	19	49	ECK120000130		Peak start: , Peak end: , Peak center: 29627		ECK12		forward		gene
+ECK12T3443  	ECK120020629	ECK120000130	ECK120012654	repressor	19	49	ECK120000130		Peak start: , Peak end: , Peak center: 29627		ECK12		forward		gene
+ECK12T3444  	ECK120020629	ECK120000130	ECK120012654	repressor	19	49	ECK120000130		Peak start: , Peak end: , Peak center: 29641		ECK12		forward		gene
+ECK12T3445  	ECK120020629	ECK120000130	ECK120012654	repressor	19	49	ECK120000130		Peak start: , Peak end: , Peak center: 29641		ECK12		forward		gene
+ECK12T3447  	ECK120020629	ECK120001519	ECK12T3446  	activator	19	32	ECK120001519		Peak start: , Peak end: , Peak center: 45794		ECK12		forward		gene
+ECK12T3449  	ECK120020629	ECK120000341	ECK12T3448  	repressor	19	72	ECK120000341		Peak start: , Peak end: , Peak center: 105234		ECK12		forward		gene
+ECK12T3450  	ECK120020629	ECK120000341	ECK12T3448  	repressor	19	72	ECK120000341		Peak start: , Peak end: , Peak center: 105234		ECK12		forward		gene
+ECK12T3451  	ECK120020629	ECK120000341	ECK12T3448  	repressor	19	72	ECK120000341		Peak start: , Peak end: , Peak center: 105234		ECK12		forward		gene
+ECK12T3453  	ECK120020629	ECK120001080	ECK12T3452  	repressor	19	289	ECK120001080		Peak start: , Peak end: , Peak center: 257540		ECK12		forward		gene
+ECK12T3454  	ECK120020629	ECK120001080	ECK12T3452  	repressor	19	289	ECK120001080		Peak start: , Peak end: , Peak center: 257569		ECK12		forward		gene
+ECK12T3455  	ECK120020629	ECK120001080	ECK12T3452  	repressor	19	289	ECK120001080		Peak start: , Peak end: , Peak center: 257582		ECK12		forward		gene
+ECK12T3457  	ECK120020629	ECK120000197	ECK12T3456  	repressor	19	-42	ECK120000197		Peak start: , Peak end: , Peak center: 879987		ECK12		forward		gene
+ECK12T3459  	ECK120020629	ECK120001577	ECK12T3458  	repressor	19	86	ECK120001577		Peak start: , Peak end: , Peak center: 892920		ECK12		forward		gene
+ECK12T3460  	ECK120020629	ECK120001577	ECK12T3458  	repressor	19	86	ECK120001577		Peak start: , Peak end: , Peak center: 892920		ECK12		forward		gene
+ECK12T3461  	ECK120020629	ECK120001577	ECK12T3458  	repressor	19	86	ECK120001577		Peak start: , Peak end: , Peak center: 892937		ECK12		forward		gene
+ECK12T3462  	ECK120020629	ECK120001577	ECK12T3458  	repressor	19	86	ECK120001577		Peak start: , Peak end: , Peak center: 892937		ECK12		forward		gene
+ECK12T3463  	ECK120020629	ECK120001577	ECK12T3458  	repressor	19	86	ECK120001577		Peak start: , Peak end: , Peak center: 892958		ECK12		forward		gene
+ECK12T3464  	ECK120020629	ECK120001577	ECK12T3458  	repressor	19	86	ECK120001577		Peak start: , Peak end: , Peak center: 892958		ECK12		forward		gene
+ECK12T3465  	ECK120020629	ECK120000540	ECK120035020	repressor	19	241	ECK120000540		Peak start: , Peak end: , Peak center: 931576		ECK12		forward		gene
+ECK12T3466  	ECK120020629	ECK120000540	ECK120035020	repressor	19	241	ECK120000540		Peak start: , Peak end: , Peak center: 931595		ECK12		forward		gene
+ECK12T3467  	ECK120020629	ECK120000540	ECK120035020	repressor	19	241	ECK120000540		Peak start: , Peak end: , Peak center: 931617		ECK12		forward		gene
+ECK12T3469  	ECK120020629	ECK120001754	ECK12T3468  	activator	19	-14	ECK120001754		Peak start: , Peak end: , Peak center: 1362270		ECK12		forward		gene
+ECK12T3470  	ECK120020629	ECK120001754	ECK12T3468  	activator	19	-14	ECK120001754		Peak start: , Peak end: , Peak center: 1362290		ECK12		forward		gene
+ECK12T3471  	ECK120020629	ECK120001754	ECK12T3468  	activator	19	-14	ECK120001754		Peak start: , Peak end: , Peak center: 1362309		ECK12		forward		gene
+ECK12T3473  	ECK120020629	ECK120003450	ECK12T3472  	repressor	19	66	ECK120003450		Peak start: , Peak end: , Peak center: 1677532		ECK12		forward		gene
+ECK12T3474  	ECK120020629	ECK120003450	ECK12T3472  	repressor	19	66	ECK120003450		Peak start: , Peak end: , Peak center: 1677553		ECK12		forward		gene
+ECK12T3476  	ECK120020629	ECK120000692	ECK12T3475  	repressor	19	147	ECK120000692		Peak start: , Peak end: , Peak center: 1804266		ECK12		forward		gene
+ECK12T3477  	ECK120020629	ECK120000692	ECK12T3475  	repressor	19	147	ECK120000692		Peak start: , Peak end: , Peak center: 1804266		ECK12		forward		gene
+ECK12T3479  	ECK120020629	ECK120003641	ECK12T3478  	repressor	19	350	ECK120003641		Peak start: , Peak end: , Peak center: 2033531		ECK12		forward		gene
+ECK12T3480  	ECK120020629	ECK120003641	ECK12T3478  	repressor	19	350	ECK120003641		Peak start: , Peak end: , Peak center: 2033531		ECK12		forward		gene
+ECK12T3482  	ECK120020629	ECK120003641	ECK12T3481  	repressor	19	296	ECK120003641		Peak start: , Peak end: , Peak center: 2033561		ECK12		forward		gene
+ECK12T3483  	ECK120020629	ECK120003641	ECK12T3481  	repressor	19	296	ECK120003641		Peak start: , Peak end: , Peak center: 2033561		ECK12		forward		gene
+ECK12T3484  	ECK120020629	ECK120003641	ECK12T3481  	repressor	19	296	ECK120003641		Peak start: , Peak end: , Peak center: 2033583		ECK12		forward		gene
+ECK12T3485  	ECK120020629	ECK120003641	ECK12T3481  	repressor	19	296	ECK120003641		Peak start: , Peak end: , Peak center: 2033583		ECK12		forward		gene
+ECK12T3487  	ECK120020629	ECK120001243	ECK12T3486  	repressor	19	31	ECK120001243		Peak start: , Peak end: , Peak center: 2087992		ECK12		forward		gene
+ECK12T3488  	ECK120020629	ECK120001243	ECK12T3486  	repressor	19	31	ECK120001243		Peak start: , Peak end: , Peak center: 2087992		ECK12		forward		gene
+ECK12T3489  	ECK120020629	ECK120001243	ECK12T3486  	repressor	19	31	ECK120001243		Peak start: , Peak end: , Peak center: 2088013		ECK12		forward		gene
+ECK12T3490  	ECK120020629	ECK120001243	ECK12T3486  	repressor	19	31	ECK120001243		Peak start: , Peak end: , Peak center: 2088013		ECK12		forward		gene
+ECK12T3492  	ECK120020629	ECK120003765	ECK12T3491  	repressor	19	86	ECK120003765		Peak start: , Peak end: , Peak center: 2415057		ECK12		forward		gene
+ECK12T3494  	ECK120020629	ECK120001131	ECK12T3493  	activator	19	39	ECK120001131		Peak start: , Peak end: , Peak center: 2589246		ECK12		forward		gene
+ECK12T3495  	ECK120020629	ECK120000059	ECK120020768	repressor	19	49	ECK120000059		Peak start: , Peak end: , Peak center: 2947230		ECK12		forward		gene
+ECK12T3496  	ECK120020629	ECK120000059	ECK120020768	repressor	19	49	ECK120000059		Peak start: , Peak end: , Peak center: 2947252		ECK12		forward		gene
+ECK12T3498  	ECK120020629	ECK120000396	ECK12T3497  	repressor	19	183	ECK120000396		Peak start: , Peak end: , Peak center: 3352563		ECK12		forward		gene
+ECK12T3499  	ECK120020629	ECK120000396	ECK12T3497  	repressor	19	183	ECK120000396		Peak start: , Peak end: , Peak center: 3352580		ECK12		forward		gene
+ECK12T3500  	ECK120020629	ECK120000066	ECK120012622	repressor	19	62	ECK120000066		Peak start: , Peak end: , Peak center: 3382661		ECK12		forward		gene
+ECK12T3501  	ECK120020629	ECK120000066	ECK120012622	repressor	19	62	ECK120000066		Peak start: , Peak end: , Peak center: 3382661		ECK12		forward		gene
+ECK12T3502  	ECK120020629	ECK120000066	ECK120012622	repressor	19	62	ECK120000066		Peak start: , Peak end: , Peak center: 3382682		ECK12		forward		gene
+ECK12T3503  	ECK120020629	ECK120000066	ECK120012622	repressor	19	62	ECK120000066		Peak start: , Peak end: , Peak center: 3382682		ECK12		forward		gene
+ECK12T3505  	ECK120020629	ECK120000513	ECK12T3504  	repressor	19	145	ECK120000513		Peak start: , Peak end: , Peak center: 3806458		ECK12		forward		gene
+ECK12T3506  	ECK120020629	ECK120000513	ECK12T3504  	repressor	19	145	ECK120000513		Peak start: , Peak end: , Peak center: 3806458		ECK12		forward		gene
+ECK12T3507  	ECK120020629	ECK120000513	ECK12T3504  	repressor	19	145	ECK120000513		Peak start: , Peak end: , Peak center: 3806458		ECK12		forward		gene
+ECK12T3508  	ECK120020629	ECK120000061	ECK120012608	repressor	19	127	ECK120000061		Peak start: , Peak end: , Peak center: 4152897		ECK12		forward		gene
+ECK12T3509  	ECK120020629	ECK120000061	ECK120012608	repressor	19	127	ECK120000061		Peak start: , Peak end: , Peak center: 4152914		ECK12		forward		gene
+ECK12T3510  	ECK120020629	ECK120000061	ECK120012608	repressor	19	127	ECK120000061		Peak start: , Peak end: , Peak center: 4152935		ECK12		forward		gene
+ECK12T3512  	ECK120020629	ECK120000398	ECK12T3511  	activator	19	333	ECK120000398		Peak start: , Peak end: , Peak center: 4292191		ECK12		forward		gene
+ECK12T3513  	ECK120020629	ECK120000398	ECK12T2627  	activator	19	224	ECK120000398		Peak start: , Peak end: , Peak center: 4292276		ECK12		forward		gene
+ECK12T3515  	ECK120020629	ECK120000398	ECK12T3514  	activator	19	192	ECK120000398		Peak start: , Peak end: , Peak center: 4292313		ECK12		forward		gene
+ECK12T3518  	ECK120011580	ECK120000998	ECK12T3517  	activator	5	249	ECK120000998		Peak start: , Peak end: , Peak center: 3175950		ECK12		forward		gene
+ECK12T3520  	ECK120011580	ECK120000998	ECK12T3519  	activator	5	239	ECK120000998		Peak start: , Peak end: , Peak center: 3175950		ECK12		forward		gene
+ECK12T3521  	ECK120011580	ECK120000998	ECK12T3517  	activator	5	249	ECK120000998		Peak start: , Peak end: , Peak center: 3175950		ECK12		forward		gene
+ECK12T3522  	ECK120011580	ECK120000998	ECK12T3519  	activator	5	239	ECK120000998		Peak start: , Peak end: , Peak center: 3175950		ECK12		forward		gene
+ECK12T3523  	ECK120011580	ECK120000998	ECK12T3517  	activator	5	249	ECK120000998		Peak start: , Peak end: , Peak center: 3175950		ECK12		forward		gene
+ECK12T3524  	ECK120011580	ECK120000998	ECK12T3519  	activator	5	239	ECK120000998		Peak start: , Peak end: , Peak center: 3175950		ECK12		forward		gene
+ECK12T3525  	ECK120011580	ECK120000998	ECK12T3517  	activator	5	249	ECK120000998		Peak start: , Peak end: , Peak center: 3175950		ECK12		forward		gene
+ECK12T3526  	ECK120011580	ECK120000998	ECK12T3519  	activator	5	239	ECK120000998		Peak start: , Peak end: , Peak center: 3175950		ECK12		forward		gene
+ECK12T3528  	ECK120011580	ECK120002020	ECK12T3527  	activator	5	41	ECK120002020		Peak start: , Peak end: , Peak center: 484970		ECK12		forward		gene
+ECK12T3530  	ECK120011580	ECK120002020	ECK12T3529  	activator	5	31	ECK120002020		Peak start: , Peak end: , Peak center: 484970		ECK12		forward		gene
+ECK12T3532  	ECK120014581	ECK120000536	ECK120013640	repressor	7	229	ECK120000536		Peak start: , Peak end: , Peak center: 127739		ECK12		forward		gene
+ECK12T3533  	ECK120014581	ECK120000536	ECK120013638	repressor	7	218	ECK120000536		Peak start: , Peak end: , Peak center: 127739		ECK12		forward		gene
+ECK12T3534  	ECK120014581	ECK120002193	ECK120014134	repressor	7	216	ECK120002193		Peak start: , Peak end: , Peak center: 131293		ECK12		forward		gene
+ECK12T3535  	ECK120014581	ECK120002193	ECK120014128	repressor	7	151	ECK120002193		Peak start: , Peak end: , Peak center: 131293		ECK12		forward		gene
+ECK12T3536  	ECK120014581	ECK120002193	ECK120014134	repressor	7	216	ECK120002193		Peak start: , Peak end: , Peak center: 131293		ECK12		forward		gene
+ECK12T3537  	ECK120014581	ECK120002193	ECK120014128	repressor	7	151	ECK120002193		Peak start: , Peak end: , Peak center: 131293		ECK12		forward		gene
+ECK12T3539  	ECK120014581	ECK120002725	ECK12T3538  	repressor	7	-73	ECK120002725		Peak start: , Peak end: , Peak center: 243345		ECK12		reverse		gene
+ECK12T3540  	ECK120014581	ECK120002725	ECK120030291	repressor	7	-84	ECK120002725		Peak start: , Peak end: , Peak center: 243345		ECK12		reverse		gene
+ECK12T3541  	ECK120014581	ECK120001475	ECK120012760	activator	7	229	ECK120001475		Peak start: , Peak end: , Peak center: 728173		ECK12		forward		gene
+ECK12T3543  	ECK120014581	ECK120001475	ECK12T3542  	activator	7	196	ECK120001475		Peak start: , Peak end: , Peak center: 728173		ECK12		forward		gene
+ECK12T3545  	ECK120014581	ECK120001475	ECK12T3544  	activator	7	172	ECK120001475		Peak start: , Peak end: , Peak center: 728173		ECK12		forward		gene
+ECK12T3547  	ECK120014581	ECK120000688	ECK12T3546  	repressor	7	121	ECK120000688		Peak start: , Peak end: , Peak center: 989912		ECK12		forward		gene
+ECK12T3548  	ECK120014581	ECK120000793	ECK120013709	repressor	7	150	ECK120000793		Peak start: , Peak end: , Peak center: 1078244		ECK12		forward		gene
+ECK12T3549  	ECK120014581	ECK120000793	ECK120013709	repressor	7	150	ECK120000793		Peak start: , Peak end: , Peak center: 1078244		ECK12		forward		gene
+ECK12T3550  	ECK120014581	ECK120000793	ECK120013709	repressor	7	150	ECK120000793		Peak start: , Peak end: , Peak center: 1078244		ECK12		forward		gene
+ECK12T3551  	ECK120014581	ECK120000793	ECK120013709	repressor	7	150	ECK120000793		Peak start: , Peak end: , Peak center: 1078244		ECK12		forward		gene
+ECK12T3552  	ECK120014581	ECK120000793	ECK120013709	repressor	7	150	ECK120000793		Peak start: , Peak end: , Peak center: 1078244		ECK12		forward		gene
+ECK12T3554  	ECK120014581	ECK120001673	ECK12T3553  	repressor	7	108	ECK120001673		Peak start: , Peak end: , Peak center: 1084159		ECK12		forward		gene
+ECK12T3556  	ECK120014581	ECK120001673	ECK12T3555  	repressor	7	97	ECK120001673		Peak start: , Peak end: , Peak center: 1084159		ECK12		forward		gene
+ECK12T3557  	ECK120014581	ECK120001673	ECK12T3553  	repressor	7	108	ECK120001673		Peak start: , Peak end: , Peak center: 1084159		ECK12		forward		gene
+ECK12T3558  	ECK120014581	ECK120001673	ECK12T3555  	repressor	7	97	ECK120001673		Peak start: , Peak end: , Peak center: 1084159		ECK12		forward		gene
+ECK12T3559  	ECK120014581	ECK120000482	ECK120013005	repressor	7	110	ECK120000482		Peak start: , Peak end: , Peak center: 1194300		ECK12		forward		gene
+ECK12T3560  	ECK120014581	ECK120000482	ECK120013005	repressor	7	110	ECK120000482		Peak start: , Peak end: , Peak center: 1194300		ECK12		forward		gene
+ECK12T3561  	ECK120014581	ECK120003239	ECK120051410	repressor	7	-31	ECK120003239		Peak start: , Peak end: , Peak center: 1359160		ECK12		reverse		gene
+ECK12T3563  	ECK120014581	ECK120003255	ECK12T3562  	repressor	7	-14	ECK120003255		Peak start: , Peak end: , Peak center: 1386855		ECK12		reverse		gene
+ECK12T3565  	ECK120014581	ECK120003255	ECK12T3564  	repressor	7	-16	ECK120003255		Peak start: , Peak end: , Peak center: 1386855		ECK12		reverse		gene
+ECK12T3567  	ECK120014581	ECK120003263	ECK12T3566  	repressor	7	44	ECK120003263		Peak start: , Peak end: , Peak center: 1395504		ECK12		forward		gene
+ECK12T3568  	ECK120014581	ECK120000032	ECK120011906	repressor	7	48	ECK120000032		Peak start: , Peak end: , Peak center: 1486211		ECK12		forward		gene
+ECK12T3570  	ECK120014581	ECK120000032	ECK12T3569  	repressor	7	26	ECK120000032		Peak start: , Peak end: , Peak center: 1486211		ECK12		forward		gene
+ECK12T3572  	ECK120014581	ECK120000559	ECK12T3571  	activator	7	117	ECK120000559		Peak start: , Peak end: , Peak center: 1686448		ECK12		forward		gene
+ECK12T3573  	ECK120014581	ECK120000349	ECK12T3571  	repressor	7	-82	ECK120000349		Peak start: , Peak end: , Peak center: 1686448		ECK12		reverse		gene
+ECK12T3575  	ECK120014581	ECK120001958	ECK12T3574  	repressor	7	-27	ECK120001958		Peak start: , Peak end: , Peak center: 2276285		ECK12		reverse		gene
+ECK12T3577  	ECK120014581	ECK120001958	ECK12T3576  	repressor	7	-50	ECK120001958		Peak start: , Peak end: , Peak center: 2276285		ECK12		reverse		gene
+ECK12T3578  	ECK120014581	ECK120001958	ECK12T3574  	repressor	7	-27	ECK120001958		Peak start: , Peak end: , Peak center: 2276285		ECK12		reverse		gene
+ECK12T3579  	ECK120014581	ECK120001958	ECK12T3576  	repressor	7	-50	ECK120001958		Peak start: , Peak end: , Peak center: 2276285		ECK12		reverse		gene
+ECK12T3581  	ECK120014581	ECK120001978	ECK12T3580  	repressor	7	-61	ECK120001978		Peak start: , Peak end: , Peak center: 2304901		ECK12		reverse		gene
+ECK12T3583  	ECK120014581	ECK120001896	ECK12T3582  	activator	7	-85	ECK120001896		Peak start: , Peak end: , Peak center: 2511340		ECK12		forward		gene
+ECK12T3585  	ECK120014581	ECK120000515	ECK12T3584  	repressor	7	-61	ECK120000515		Peak start: , Peak end: , Peak center: 2723722		ECK12		reverse		gene
+ECK12T3586  	ECK120014581	ECK120004106	ECK120017136	repressor	7	104	ECK120004106		Peak start: , Peak end: , Peak center: 3126191		ECK12		forward		gene
+ECK12T3587  	ECK120014581	ECK120004106	ECK120017136	repressor	7	102	ECK120004106		Peak start: , Peak end: , Peak center: 3126191		ECK12		forward		gene
+ECK12T3588  	ECK120014581	ECK120004106	ECK120017136	repressor	7	93	ECK120004106		Peak start: , Peak end: , Peak center: 3126191		ECK12		forward		gene
+ECK12T3590  	ECK120014581	ECK120002374	ECK12T3589  	activator	7	180	ECK120002374		Peak start: , Peak end: , Peak center: 3237647		ECK12		forward		gene
+ECK12T3592  	ECK120014581	ECK120002374	ECK12T3591  	activator	7	81	ECK120002374		Peak start: , Peak end: , Peak center: 3237647		ECK12		forward		gene
+ECK12T3594  	ECK120014581	ECK120004283	ECK12T3593  	repressor	7	-67	ECK120004283		Peak start: , Peak end: , Peak center: 3524336		ECK12		reverse		gene
+ECK12T3596  	ECK120014581	ECK120004283	ECK12T3595  	repressor	7	-77	ECK120004283		Peak start: , Peak end: , Peak center: 3524336		ECK12		reverse		gene
+ECK12T3598  	ECK120014581	ECK120004283	ECK12T3597  	repressor	7	-78	ECK120004283		Peak start: , Peak end: , Peak center: 3524336		ECK12		reverse		gene
+ECK12T3600  	ECK120014581	ECK120002132	ECK12T3599  	repressor	7	201	ECK120002132		Peak start: , Peak end: , Peak center: 3672593		ECK12		forward		gene
+ECK12T3602  	ECK120014581	ECK120001429	ECK12T3601  	repressor	7	-21	ECK120001429		Peak start: , Peak end: , Peak center: 4002722		ECK12		reverse		gene
+ECK12T3603  	ECK120014581	ECK120000729	ECK12T3601  	activator	7	144	ECK120000729		Peak start: , Peak end: , Peak center: 4002722		ECK12		forward		gene
+ECK12T3605  	ECK120014581	ECK120000729	ECK12T3604  	activator	7	30	ECK120000729		Peak start: , Peak end: , Peak center: 4002722		ECK12		forward		gene
+ECK12T3607  	ECK120014581	ECK120001392	ECK12T3606  	repressor	7	123	ECK120001392		Peak start: , Peak end: , Peak center: 4158827		ECK12		reverse		gene
+ECK12T3609  	ECK120014581	ECK120001392	ECK12T3608  	repressor	7	-21	ECK120001392		Peak start: , Peak end: , Peak center: 4158827		ECK12		reverse		gene
+ECK12T3611  	ECK120014581	ECK120001392	ECK12T3610  	repressor	7	-32	ECK120001392		Peak start: , Peak end: , Peak center: 4158827		ECK12		reverse		gene
+ECK12T3613  	ECK120014581	ECK120001203	ECK12T3612  	activator	7	-18	ECK120001203		Peak start: , Peak end: , Peak center: 4364933		ECK12		reverse		gene
+ECK12T3615  	ECK120014581	ECK120001203	ECK12T3614  	activator	7	-40	ECK120001203		Peak start: , Peak end: , Peak center: 4364933		ECK12		reverse		gene
+ECK12T3616  	ECK120014581	ECK120001203	ECK12T3612  	activator	7	-18	ECK120001203		Peak start: , Peak end: , Peak center: 4364933		ECK12		reverse		gene
+ECK12T3617  	ECK120014581	ECK120001203	ECK12T3614  	activator	7	-40	ECK120001203		Peak start: , Peak end: , Peak center: 4364933		ECK12		reverse		gene
+ECK12T3619  	ECK120014581	ECK120001358	ECK12T3618  	repressor	7	273	ECK120001358		Peak start: , Peak end: , Peak center: 4609095		ECK12		forward		gene
+ECK12T3620  	ECK120014581	ECK120001358	ECK120013336	repressor	7	250	ECK120001358		Peak start: , Peak end: , Peak center: 4609095		ECK12		forward		gene
+ECK12T3621  	ECK120014581	ECK120000536	ECK120013640	repressor	7	229	ECK120000536		Peak start: , Peak end: , Peak center: 127942		ECK12		forward		gene
+ECK12T3622  	ECK120014581	ECK120000536	ECK120013638	repressor	7	218	ECK120000536		Peak start: , Peak end: , Peak center: 127942		ECK12		forward		gene
+ECK12T3623  	ECK120014581	ECK120002193	ECK120014134	repressor	7	216	ECK120002193		Peak start: , Peak end: , Peak center: 131522		ECK12		forward		gene
+ECK12T3624  	ECK120014581	ECK120002193	ECK120014128	repressor	7	151	ECK120002193		Peak start: , Peak end: , Peak center: 131522		ECK12		forward		gene
+ECK12T3625  	ECK120014581	ECK120002193	ECK120014134	repressor	7	216	ECK120002193		Peak start: , Peak end: , Peak center: 131522		ECK12		forward		gene
+ECK12T3626  	ECK120014581	ECK120002193	ECK120014128	repressor	7	151	ECK120002193		Peak start: , Peak end: , Peak center: 131522		ECK12		forward		gene
+ECK12T3627  	ECK120014581	ECK120002725	ECK12T3538  	repressor	7	-73	ECK120002725		Peak start: , Peak end: , Peak center: 243411		ECK12		reverse		gene
+ECK12T3628  	ECK120014581	ECK120002725	ECK120030291	repressor	7	-84	ECK120002725		Peak start: , Peak end: , Peak center: 243411		ECK12		reverse		gene
+ECK12T3629  	ECK120014581	ECK120001475	ECK120012760	activator	7	229	ECK120001475		Peak start: , Peak end: , Peak center: 728187		ECK12		forward		gene
+ECK12T3630  	ECK120014581	ECK120001475	ECK12T3542  	activator	7	196	ECK120001475		Peak start: , Peak end: , Peak center: 728187		ECK12		forward		gene
+ECK12T3631  	ECK120014581	ECK120001475	ECK12T3544  	activator	7	172	ECK120001475		Peak start: , Peak end: , Peak center: 728187		ECK12		forward		gene
+ECK12T3633  	ECK120014581	ECK120003024	ECK12T3632  	repressor	7	-58	ECK120003024		Peak start: , Peak end: , Peak center: 858457		ECK12		reverse		gene
+ECK12T3634  	ECK120014581	ECK120000688	ECK12T3546  	repressor	7	121	ECK120000688		Peak start: , Peak end: , Peak center: 989716		ECK12		forward		gene
+ECK12T3635  	ECK120014581	ECK120000482	ECK120013005	repressor	7	110	ECK120000482		Peak start: , Peak end: , Peak center: 1194375		ECK12		forward		gene
+ECK12T3636  	ECK120014581	ECK120000482	ECK120013005	repressor	7	110	ECK120000482		Peak start: , Peak end: , Peak center: 1194375		ECK12		forward		gene
+ECK12T3637  	ECK120014581	ECK120003255	ECK12T3562  	repressor	7	-14	ECK120003255		Peak start: , Peak end: , Peak center: 1386675		ECK12		reverse		gene
+ECK12T3638  	ECK120014581	ECK120003255	ECK12T3564  	repressor	7	-16	ECK120003255		Peak start: , Peak end: , Peak center: 1386675		ECK12		reverse		gene
+ECK12T3639  	ECK120014581	ECK120000032	ECK120011906	repressor	7	48	ECK120000032		Peak start: , Peak end: , Peak center: 1486186		ECK12		forward		gene
+ECK12T3640  	ECK120014581	ECK120000032	ECK12T3569  	repressor	7	26	ECK120000032		Peak start: , Peak end: , Peak center: 1486186		ECK12		forward		gene
+ECK12T3642  	ECK120014581	ECK120003352	ECK12T3641  	repressor	7	203	ECK120003352		Peak start: , Peak end: , Peak center: 1521082		ECK12		forward		gene
+ECK12T3644  	ECK120014581	ECK120003352	ECK12T3643  	repressor	7	160	ECK120003352		Peak start: , Peak end: , Peak center: 1521082		ECK12		forward		gene
+ECK12T3645  	ECK120014581	ECK120003351	ECK12T3641  	repressor	7	-39	ECK120003351		Peak start: , Peak end: , Peak center: 1521082		ECK12		reverse		gene
+ECK12T3646  	ECK120014581	ECK120003351	ECK12T3643  	repressor	7	-82	ECK120003351		Peak start: , Peak end: , Peak center: 1521082		ECK12		reverse		gene
+ECK12T3648  	ECK120014581	ECK120003452	ECK12T3647  	repressor	7	319	ECK120003452		Peak start: , Peak end: , Peak center: 1679948		ECK12		reverse		gene
+ECK12T3650  	ECK120014581	ECK120003452	ECK12T3649  	repressor	7	-11	ECK120003452		Peak start: , Peak end: , Peak center: 1679948		ECK12		reverse		gene
+ECK12T3651  	ECK120014581	ECK120000349	ECK12T3571  	repressor	7	-82	ECK120000349		Peak start: , Peak end: , Peak center: 1686671		ECK12		reverse		gene
+ECK12T3653  	ECK120014581	ECK120001062	ECK12T3652  	repressor	7	432	ECK120001062		Peak start: , Peak end: , Peak center: 1830161		ECK12		forward		gene
+ECK12T3655  	ECK120014581	ECK120001062	ECK12T3654  	repressor	7	421	ECK120001062		Peak start: , Peak end: , Peak center: 1830161		ECK12		forward		gene
+ECK12T3657  	ECK120014581	ECK120001062	ECK12T3656  	repressor	7	410	ECK120001062		Peak start: , Peak end: , Peak center: 1830161		ECK12		forward		gene
+ECK12T3658  	ECK120014581	ECK120002257	ECK125141986	repressor	7	430	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3659  	ECK120014581	ECK120002257	ECK125141986	repressor	7	423	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3661  	ECK120014581	ECK120002257	ECK12T3660  	repressor	7	-47	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3662  	ECK120014581	ECK120002257	ECK125141986	repressor	7	430	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3663  	ECK120014581	ECK120002257	ECK125141986	repressor	7	423	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3664  	ECK120014581	ECK120002257	ECK12T3660  	repressor	7	-47	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3666  	ECK120014581	ECK120001953	ECK12T3665  	repressor	7	31	ECK120001953		Peak start: , Peak end: , Peak center: 2264162		ECK12		forward		gene
+ECK12T3668  	ECK120014581	ECK120001953	ECK12T3667  	repressor	7	20	ECK120001953		Peak start: , Peak end: , Peak center: 2264162		ECK12		forward		gene
+ECK12T3669  	ECK120014581	ECK120001958	ECK12T3574  	repressor	7	-27	ECK120001958		Peak start: , Peak end: , Peak center: 2276241		ECK12		reverse		gene
+ECK12T3670  	ECK120014581	ECK120001958	ECK12T3576  	repressor	7	-50	ECK120001958		Peak start: , Peak end: , Peak center: 2276241		ECK12		reverse		gene
+ECK12T3671  	ECK120014581	ECK120001958	ECK12T3574  	repressor	7	-27	ECK120001958		Peak start: , Peak end: , Peak center: 2276241		ECK12		reverse		gene
+ECK12T3672  	ECK120014581	ECK120001958	ECK12T3576  	repressor	7	-50	ECK120001958		Peak start: , Peak end: , Peak center: 2276241		ECK12		reverse		gene
+ECK12T3673  	ECK120014581	ECK120001978	ECK12T3580  	repressor	7	-61	ECK120001978		Peak start: , Peak end: , Peak center: 2304688		ECK12		reverse		gene
+ECK12T3674  	ECK120014581	ECK120001896	ECK12T3582  	activator	7	-85	ECK120001896		Peak start: , Peak end: , Peak center: 2511071		ECK12		forward		gene
+ECK12T3676  	ECK120014581	ECK120002579	ECK12T3675  	activator	7	99	ECK120002579		Peak start: , Peak end: , Peak center: 2940736		ECK12		forward		gene
+ECK12T3677  	ECK120014581	ECK120002579	ECK125141479	activator	7	79	ECK120002579		Peak start: , Peak end: , Peak center: 2940736		ECK12		forward		gene
+ECK12T3678  	ECK120014581	ECK120004106	ECK120017136	repressor	7	104	ECK120004106		Peak start: , Peak end: , Peak center: 3126206		ECK12		forward		gene
+ECK12T3679  	ECK120014581	ECK120004106	ECK120017136	repressor	7	102	ECK120004106		Peak start: , Peak end: , Peak center: 3126206		ECK12		forward		gene
+ECK12T3680  	ECK120014581	ECK120004106	ECK120017136	repressor	7	93	ECK120004106		Peak start: , Peak end: , Peak center: 3126206		ECK12		forward		gene
+ECK12T3681  	ECK120014581	ECK120002681	ECK125110249	repressor	7	30	ECK120002681		Peak start: , Peak end: , Peak center: 3229708		ECK12		forward		gene
+ECK12T3682  	ECK120014581	ECK120002374	ECK12T3589  	activator	7	180	ECK120002374		Peak start: , Peak end: , Peak center: 3237798		ECK12		forward		gene
+ECK12T3683  	ECK120014581	ECK120002374	ECK12T3591  	activator	7	81	ECK120002374		Peak start: , Peak end: , Peak center: 3237798		ECK12		forward		gene
+ECK12T3685  	ECK120014581	ECK120000066	ECK12T3684  	activator	7	196	ECK120000066		Peak start: , Peak end: , Peak center: 3382800		ECK12		forward		gene
+ECK12T3687  	ECK120014581	ECK120000066	ECK12T3686  	activator	7	185	ECK120000066		Peak start: , Peak end: , Peak center: 3382800		ECK12		forward		gene
+ECK12T3688  	ECK120014581	ECK120000066	ECK12T3684  	activator	7	196	ECK120000066		Peak start: , Peak end: , Peak center: 3382800		ECK12		forward		gene
+ECK12T3689  	ECK120014581	ECK120000066	ECK12T3686  	activator	7	185	ECK120000066		Peak start: , Peak end: , Peak center: 3382800		ECK12		forward		gene
+ECK12T3690  	ECK120014581	ECK120004283	ECK12T3593  	repressor	7	-67	ECK120004283		Peak start: , Peak end: , Peak center: 3524386		ECK12		reverse		gene
+ECK12T3691  	ECK120014581	ECK120004283	ECK12T3595  	repressor	7	-77	ECK120004283		Peak start: , Peak end: , Peak center: 3524386		ECK12		reverse		gene
+ECK12T3692  	ECK120014581	ECK120004283	ECK12T3597  	repressor	7	-78	ECK120004283		Peak start: , Peak end: , Peak center: 3524386		ECK12		reverse		gene
+ECK12T3693  	ECK120014581	ECK120004284	ECK12T3593  	activator	7	253	ECK120004284		Peak start: , Peak end: , Peak center: 3524386		ECK12		forward		gene
+ECK12T3694  	ECK120014581	ECK120004284	ECK12T3595  	activator	7	243	ECK120004284		Peak start: , Peak end: , Peak center: 3524386		ECK12		forward		gene
+ECK12T3695  	ECK120014581	ECK120004284	ECK12T3597  	activator	7	242	ECK120004284		Peak start: , Peak end: , Peak center: 3524386		ECK12		forward		gene
+ECK12T3697  	ECK120014581	ECK120000387	ECK12T3696  	repressor	7	90	ECK120000387		Peak start: , Peak end: , Peak center: 3559862		ECK12		forward		gene
+ECK12T3698  	ECK120014581	ECK120002132	ECK12T3599  	repressor	7	201	ECK120002132		Peak start: , Peak end: , Peak center: 3672559		ECK12		forward		gene
+ECK12T3699  	ECK120014581	ECK120001392	ECK12T3606  	repressor	7	123	ECK120001392		Peak start: , Peak end: , Peak center: 4158782		ECK12		reverse		gene
+ECK12T3700  	ECK120014581	ECK120001392	ECK12T3608  	repressor	7	-21	ECK120001392		Peak start: , Peak end: , Peak center: 4158782		ECK12		reverse		gene
+ECK12T3701  	ECK120014581	ECK120001392	ECK12T3610  	repressor	7	-32	ECK120001392		Peak start: , Peak end: , Peak center: 4158782		ECK12		reverse		gene
+ECK12T3702  	ECK120014581	ECK120001203	ECK12T3612  	activator	7	-18	ECK120001203		Peak start: , Peak end: , Peak center: 4364864		ECK12		reverse		gene
+ECK12T3703  	ECK120014581	ECK120001203	ECK12T3614  	activator	7	-40	ECK120001203		Peak start: , Peak end: , Peak center: 4364864		ECK12		reverse		gene
+ECK12T3704  	ECK120014581	ECK120001203	ECK12T3612  	activator	7	-18	ECK120001203		Peak start: , Peak end: , Peak center: 4364864		ECK12		reverse		gene
+ECK12T3705  	ECK120014581	ECK120001203	ECK12T3614  	activator	7	-40	ECK120001203		Peak start: , Peak end: , Peak center: 4364864		ECK12		reverse		gene
+ECK12T3707  	ECK120014581	ECK120002311	ECK12T3706  	repressor	7	152	ECK120002311		Peak start: , Peak end: , Peak center: 4427623		ECK12		forward		gene
+ECK12T3708  	ECK120014581	ECK120001958	ECK12T3574  	repressor	7	-27	ECK120001958		Peak start: , Peak end: , Peak center: 2276285		ECK12		reverse		gene
+ECK12T3709  	ECK120014581	ECK120001958	ECK12T3576  	repressor	7	-50	ECK120001958		Peak start: , Peak end: , Peak center: 2276285		ECK12		reverse		gene
+ECK12T3710  	ECK120014581	ECK120001958	ECK12T3574  	repressor	7	-27	ECK120001958		Peak start: , Peak end: , Peak center: 2276285		ECK12		reverse		gene
+ECK12T3711  	ECK120014581	ECK120001958	ECK12T3576  	repressor	7	-50	ECK120001958		Peak start: , Peak end: , Peak center: 2276285		ECK12		reverse		gene
+ECK12T3712  	ECK120014581	ECK120001978	ECK12T3580  	repressor	7	-61	ECK120001978		Peak start: , Peak end: , Peak center: 2304901		ECK12		reverse		gene
+ECK12T3713  	ECK120014581	ECK120001896	ECK12T3582  	activator	7	-85	ECK120001896		Peak start: , Peak end: , Peak center: 2511340		ECK12		forward		gene
+ECK12T3714  	ECK120014581	ECK120000515	ECK12T3584  	repressor	7	-61	ECK120000515		Peak start: , Peak end: , Peak center: 2723722		ECK12		reverse		gene
+ECK12T3715  	ECK120014581	ECK120004106	ECK120017136	repressor	7	104	ECK120004106		Peak start: , Peak end: , Peak center: 3126191		ECK12		forward		gene
+ECK12T3716  	ECK120014581	ECK120004106	ECK120017136	repressor	7	102	ECK120004106		Peak start: , Peak end: , Peak center: 3126191		ECK12		forward		gene
+ECK12T3717  	ECK120014581	ECK120004106	ECK120017136	repressor	7	93	ECK120004106		Peak start: , Peak end: , Peak center: 3126191		ECK12		forward		gene
+ECK12T3718  	ECK120014581	ECK120002374	ECK12T3589  	activator	7	180	ECK120002374		Peak start: , Peak end: , Peak center: 3237647		ECK12		forward		gene
+ECK12T3719  	ECK120014581	ECK120002374	ECK12T3591  	activator	7	81	ECK120002374		Peak start: , Peak end: , Peak center: 3237647		ECK12		forward		gene
+ECK12T3720  	ECK120014581	ECK120004283	ECK12T3593  	repressor	7	-67	ECK120004283		Peak start: , Peak end: , Peak center: 3524336		ECK12		reverse		gene
+ECK12T3721  	ECK120014581	ECK120004283	ECK12T3597  	repressor	7	-77	ECK120004283		Peak start: , Peak end: , Peak center: 3524336		ECK12		reverse		gene
+ECK12T3722  	ECK120014581	ECK120004283	ECK12T3597  	repressor	7	-78	ECK120004283		Peak start: , Peak end: , Peak center: 3524336		ECK12		reverse		gene
+ECK12T3723  	ECK120014581	ECK120002132	ECK12T3599  	repressor	7	201	ECK120002132		Peak start: , Peak end: , Peak center: 3672593		ECK12		forward		gene
+ECK12T3724  	ECK120014581	ECK120001429	ECK12T3601  	repressor	7	-21	ECK120001429		Peak start: , Peak end: , Peak center: 4002722		ECK12		reverse		gene
+ECK12T3725  	ECK120014581	ECK120000729	ECK12T3601  	activator	7	144	ECK120000729		Peak start: , Peak end: , Peak center: 4002722		ECK12		forward		gene
+ECK12T3726  	ECK120014581	ECK120000729	ECK12T3604  	activator	7	30	ECK120000729		Peak start: , Peak end: , Peak center: 4002722		ECK12		forward		gene
+ECK12T3727  	ECK120014581	ECK120001392	ECK12T3606  	repressor	7	123	ECK120001392		Peak start: , Peak end: , Peak center: 4158827		ECK12		reverse		gene
+ECK12T3728  	ECK120014581	ECK120001392	ECK12T3608  	repressor	7	-21	ECK120001392		Peak start: , Peak end: , Peak center: 4158827		ECK12		reverse		gene
+ECK12T3729  	ECK120014581	ECK120001392	ECK12T3610  	repressor	7	-32	ECK120001392		Peak start: , Peak end: , Peak center: 4158827		ECK12		reverse		gene
+ECK12T3730  	ECK120014581	ECK120001203	ECK12T3612  	activator	7	-18	ECK120001203		Peak start: , Peak end: , Peak center: 4364933		ECK12		reverse		gene
+ECK12T3731  	ECK120014581	ECK120001203	ECK12T3614  	activator	7	-40	ECK120001203		Peak start: , Peak end: , Peak center: 4364933		ECK12		reverse		gene
+ECK12T3732  	ECK120014581	ECK120001203	ECK12T3612  	activator	7	-18	ECK120001203		Peak start: , Peak end: , Peak center: 4364933		ECK12		reverse		gene
+ECK12T3733  	ECK120014581	ECK120001203	ECK12T3614  	activator	7	-40	ECK120001203		Peak start: , Peak end: , Peak center: 4364933		ECK12		reverse		gene
+ECK12T3734  	ECK120014581	ECK120001358	ECK12T3618  	repressor	7	273	ECK120001358		Peak start: , Peak end: , Peak center: 4609095		ECK12		forward		gene
+ECK12T3735  	ECK120014581	ECK120001358	ECK120013336	repressor	7	250	ECK120001358		Peak start: , Peak end: , Peak center: 4609095		ECK12		forward		gene
+ECK12T3736  	ECK120014581	ECK120000536	ECK120013640	repressor	7	229	ECK120000536		Peak start: , Peak end: , Peak center: 127942		ECK12		forward		gene
+ECK12T3737  	ECK120014581	ECK120000536	ECK120013638	repressor	7	218	ECK120000536		Peak start: , Peak end: , Peak center: 127942		ECK12		forward		gene
+ECK12T3738  	ECK120014581	ECK120002193	ECK120014134	repressor	7	216	ECK120002193		Peak start: , Peak end: , Peak center: 131522		ECK12		forward		gene
+ECK12T3739  	ECK120014581	ECK120002193	ECK120014128	repressor	7	151	ECK120002193		Peak start: , Peak end: , Peak center: 131522		ECK12		forward		gene
+ECK12T3740  	ECK120014581	ECK120002193	ECK120014134	repressor	7	216	ECK120002193		Peak start: , Peak end: , Peak center: 131522		ECK12		forward		gene
+ECK12T3741  	ECK120014581	ECK120002193	ECK120014128	repressor	7	151	ECK120002193		Peak start: , Peak end: , Peak center: 131522		ECK12		forward		gene
+ECK12T3742  	ECK120014581	ECK120002725	ECK12T3538  	repressor	7	-73	ECK120002725		Peak start: , Peak end: , Peak center: 243411		ECK12		reverse		gene
+ECK12T3743  	ECK120014581	ECK120002725	ECK120030291	repressor	7	-84	ECK120002725		Peak start: , Peak end: , Peak center: 243411		ECK12		reverse		gene
+ECK12T3744  	ECK120014581	ECK120001475	ECK120012760	activator	7	229	ECK120001475		Peak start: , Peak end: , Peak center: 728187		ECK12		forward		gene
+ECK12T3745  	ECK120014581	ECK120001475	ECK12T3542  	activator	7	196	ECK120001475		Peak start: , Peak end: , Peak center: 728187		ECK12		forward		gene
+ECK12T3746  	ECK120014581	ECK120001475	ECK12T3544  	activator	7	172	ECK120001475		Peak start: , Peak end: , Peak center: 728187		ECK12		forward		gene
+ECK12T3747  	ECK120014581	ECK120003024	ECK12T3632  	repressor	7	-58	ECK120003024		Peak start: , Peak end: , Peak center: 858457		ECK12		reverse		gene
+ECK12T3748  	ECK120014581	ECK120000688	ECK12T3546  	repressor	7	121	ECK120000688		Peak start: , Peak end: , Peak center: 989716		ECK12		forward		gene
+ECK12T3749  	ECK120014581	ECK120000482	ECK120013005	repressor	7	110	ECK120000482		Peak start: , Peak end: , Peak center: 1194375		ECK12		forward		gene
+ECK12T3750  	ECK120014581	ECK120000482	ECK120013005	repressor	7	110	ECK120000482		Peak start: , Peak end: , Peak center: 1194375		ECK12		forward		gene
+ECK12T3751  	ECK120014581	ECK120003255	ECK12T3564  	repressor	7	-14	ECK120003255		Peak start: , Peak end: , Peak center: 1386675		ECK12		reverse		gene
+ECK12T3752  	ECK120014581	ECK120003255	ECK12T3564  	repressor	7	-16	ECK120003255		Peak start: , Peak end: , Peak center: 1386675		ECK12		reverse		gene
+ECK12T3753  	ECK120014581	ECK120000032	ECK120011906	repressor	7	48	ECK120000032		Peak start: , Peak end: , Peak center: 1486186		ECK12		forward		gene
+ECK12T3754  	ECK120014581	ECK120000032	ECK12T3569  	repressor	7	26	ECK120000032		Peak start: , Peak end: , Peak center: 1486186		ECK12		forward		gene
+ECK12T3755  	ECK120014581	ECK120003352	ECK12T3641  	repressor	7	203	ECK120003352		Peak start: , Peak end: , Peak center: 1521082		ECK12		forward		gene
+ECK12T3756  	ECK120014581	ECK120003352	ECK12T3643  	repressor	7	160	ECK120003352		Peak start: , Peak end: , Peak center: 1521082		ECK12		forward		gene
+ECK12T3757  	ECK120014581	ECK120003351	ECK12T3641  	repressor	7	-39	ECK120003351		Peak start: , Peak end: , Peak center: 1521082		ECK12		reverse		gene
+ECK12T3758  	ECK120014581	ECK120003351	ECK12T3643  	repressor	7	-82	ECK120003351		Peak start: , Peak end: , Peak center: 1521082		ECK12		reverse		gene
+ECK12T3759  	ECK120014581	ECK120003452	ECK12T3647  	repressor	7	319	ECK120003452		Peak start: , Peak end: , Peak center: 1679948		ECK12		reverse		gene
+ECK12T3760  	ECK120014581	ECK120003452	ECK12T3649  	repressor	7	-11	ECK120003452		Peak start: , Peak end: , Peak center: 1679948		ECK12		reverse		gene
+ECK12T3761  	ECK120014581	ECK120000349	ECK12T3571  	repressor	7	-82	ECK120000349		Peak start: , Peak end: , Peak center: 1686671		ECK12		reverse		gene
+ECK12T3762  	ECK120014581	ECK120001062	ECK12T3652  	repressor	7	432	ECK120001062		Peak start: , Peak end: , Peak center: 1830161		ECK12		forward		gene
+ECK12T3763  	ECK120014581	ECK120001062	ECK12T3654  	repressor	7	421	ECK120001062		Peak start: , Peak end: , Peak center: 1830161		ECK12		forward		gene
+ECK12T3764  	ECK120014581	ECK120001062	ECK12T3656  	repressor	7	410	ECK120001062		Peak start: , Peak end: , Peak center: 1830161		ECK12		forward		gene
+ECK12T3765  	ECK120014581	ECK120002257	ECK125141986	repressor	7	430	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3766  	ECK120014581	ECK120002257	ECK125141986	repressor	7	423	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3767  	ECK120014581	ECK120002257	ECK12T3660  	repressor	7	-47	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3768  	ECK120014581	ECK120002257	ECK125141986	repressor	7	430	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3769  	ECK120014581	ECK120002257	ECK125141986	repressor	7	423	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3770  	ECK120014581	ECK120002257	ECK12T3660  	repressor	7	-47	ECK120002257		Peak start: , Peak end: , Peak center: 1860796		ECK12		reverse		gene
+ECK12T3771  	ECK120014581	ECK120001953	ECK12T3665  	repressor	7	31	ECK120001953		Peak start: , Peak end: , Peak center: 2264162		ECK12		forward		gene
+ECK12T3772  	ECK120014581	ECK120001953	ECK12T3667  	repressor	7	20	ECK120001953		Peak start: , Peak end: , Peak center: 2264162		ECK12		forward		gene
+ECK12T3773  	ECK120014581	ECK120001958	ECK12T3574  	repressor	7	-27	ECK120001958		Peak start: , Peak end: , Peak center: 2276241		ECK12		reverse		gene
+ECK12T3774  	ECK120014581	ECK120001958	ECK12T3576  	repressor	7	-50	ECK120001958		Peak start: , Peak end: , Peak center: 2276241		ECK12		reverse		gene
+ECK12T3775  	ECK120014581	ECK120001958	ECK12T3574  	repressor	7	-27	ECK120001958		Peak start: , Peak end: , Peak center: 2276241		ECK12		reverse		gene
+ECK12T3776  	ECK120014581	ECK120001958	ECK12T3576  	repressor	7	-50	ECK120001958		Peak start: , Peak end: , Peak center: 2276241		ECK12		reverse		gene
+ECK12T3777  	ECK120014581	ECK120001978	ECK12T3580  	repressor	7	-61	ECK120001978		Peak start: , Peak end: , Peak center: 2304688		ECK12		reverse		gene
+ECK12T3778  	ECK120014581	ECK120001896	ECK12T3582  	activator	7	-85	ECK120001896		Peak start: , Peak end: , Peak center: 2511071		ECK12		forward		gene
+ECK12T3779  	ECK120014581	ECK120002579	ECK12T3675  	activator	7	99	ECK120002579		Peak start: , Peak end: , Peak center: 2940736		ECK12		forward		gene
+ECK12T3780  	ECK120014581	ECK120002579	ECK125141479	activator	7	79	ECK120002579		Peak start: , Peak end: , Peak center: 2940736		ECK12		forward		gene
+ECK12T3781  	ECK120014581	ECK120004106	ECK120017136	repressor	7	104	ECK120004106		Peak start: , Peak end: , Peak center: 3126206		ECK12		forward		gene
+ECK12T3782  	ECK120014581	ECK120004106	ECK120017136	repressor	7	102	ECK120004106		Peak start: , Peak end: , Peak center: 3126206		ECK12		forward		gene
+ECK12T3783  	ECK120014581	ECK120004106	ECK120017136	repressor	7	93	ECK120004106		Peak start: , Peak end: , Peak center: 3126206		ECK12		forward		gene
+ECK12T3784  	ECK120014581	ECK120002681	ECK125110249	repressor	7	30	ECK120002681		Peak start: , Peak end: , Peak center: 3229708		ECK12		forward		gene
+ECK12T3785  	ECK120014581	ECK120002374	ECK12T3589  	activator	7	180	ECK120002374		Peak start: , Peak end: , Peak center: 3237798		ECK12		forward		gene
+ECK12T3786  	ECK120014581	ECK120002374	ECK12T3591  	activator	7	81	ECK120002374		Peak start: , Peak end: , Peak center: 3237798		ECK12		forward		gene
+ECK12T3787  	ECK120014581	ECK120000066	ECK12T3684  	activator	7	196	ECK120000066		Peak start: , Peak end: , Peak center: 3382800		ECK12		forward		gene
+ECK12T3788  	ECK120014581	ECK120000066	ECK12T3686  	activator	7	185	ECK120000066		Peak start: , Peak end: , Peak center: 3382800		ECK12		forward		gene
+ECK12T3789  	ECK120014581	ECK120000066	ECK12T3684  	activator	7	196	ECK120000066		Peak start: , Peak end: , Peak center: 3382800		ECK12		forward		gene
+ECK12T3790  	ECK120014581	ECK120000066	ECK12T3686  	activator	7	185	ECK120000066		Peak start: , Peak end: , Peak center: 3382800		ECK12		forward		gene
+ECK12T3791  	ECK120014581	ECK120004283	ECK12T3593  	repressor	7	-67	ECK120004283		Peak start: , Peak end: , Peak center: 3524386		ECK12		reverse		gene
+ECK12T3792  	ECK120014581	ECK120004283	ECK12T3597  	repressor	7	-77	ECK120004283		Peak start: , Peak end: , Peak center: 3524386		ECK12		reverse		gene
+ECK12T3793  	ECK120014581	ECK120004283	ECK12T3597  	repressor	7	-78	ECK120004283		Peak start: , Peak end: , Peak center: 3524386		ECK12		reverse		gene
+ECK12T3794  	ECK120014581	ECK120004284	ECK12T3593  	activator	7	253	ECK120004284		Peak start: , Peak end: , Peak center: 3524386		ECK12		forward		gene
+ECK12T3795  	ECK120014581	ECK120004284	ECK12T3597  	activator	7	243	ECK120004284		Peak start: , Peak end: , Peak center: 3524386		ECK12		forward		gene
+ECK12T3796  	ECK120014581	ECK120004284	ECK12T3597  	activator	7	242	ECK120004284		Peak start: , Peak end: , Peak center: 3524386		ECK12		forward		gene
+ECK12T3797  	ECK120014581	ECK120000387	ECK12T3696  	repressor	7	90	ECK120000387		Peak start: , Peak end: , Peak center: 3559862		ECK12		forward		gene
+ECK12T3798  	ECK120014581	ECK120002132	ECK12T3599  	repressor	7	201	ECK120002132		Peak start: , Peak end: , Peak center: 3672559		ECK12		forward		gene
+ECK12T3799  	ECK120014581	ECK120001392	ECK12T3606  	repressor	7	123	ECK120001392		Peak start: , Peak end: , Peak center: 4158782		ECK12		reverse		gene
+ECK12T3800  	ECK120014581	ECK120001392	ECK12T3608  	repressor	7	-21	ECK120001392		Peak start: , Peak end: , Peak center: 4158782		ECK12		reverse		gene
+ECK12T3801  	ECK120014581	ECK120001392	ECK12T3610  	repressor	7	-32	ECK120001392		Peak start: , Peak end: , Peak center: 4158782		ECK12		reverse		gene
+ECK12T3802  	ECK120014581	ECK120001203	ECK12T3612  	activator	7	-18	ECK120001203		Peak start: , Peak end: , Peak center: 4364864		ECK12		reverse		gene
+ECK12T3803  	ECK120014581	ECK120001203	ECK12T3614  	activator	7	-40	ECK120001203		Peak start: , Peak end: , Peak center: 4364864		ECK12		reverse		gene
+ECK12T3804  	ECK120014581	ECK120001203	ECK12T3612  	activator	7	-18	ECK120001203		Peak start: , Peak end: , Peak center: 4364864		ECK12		reverse		gene
+ECK12T3805  	ECK120014581	ECK120001203	ECK12T3614  	activator	7	-40	ECK120001203		Peak start: , Peak end: , Peak center: 4364864		ECK12		reverse		gene
+ECK12T3806  	ECK120014581	ECK120002311	ECK12T3706  	repressor	7	152	ECK120002311		Peak start: , Peak end: , Peak center: 4427623		ECK12		forward		gene
+ECK12T4542  	ECK125269430	ECK120000047	ECK12T4541  	repressor	7	358	ECK120000047		Peak start: , Peak end: , Peak center: 490403		ECK12		forward		gene
+ECK12T4544  	ECK125269430	ECK120000080	ECK12T4543  	repressor	7	-353	ECK120000080		Peak start: , Peak end: , Peak center: 121906		ECK12		reverse		gene
+ECK12T4546  	ECK125269430	ECK120000129	ECK12T4545  	activator	7	167	ECK120000129		Peak start: , Peak end: , Peak center: 4360023		ECK12		reverse		gene
+ECK12T4548  	ECK125269430	ECK120000191	ECK12T4547  	repressor	7	55	ECK120000191		Peak start: , Peak end: , Peak center: 553885		ECK12		forward		gene
+ECK12T4550  	ECK125269430	ECK120000511	ECK12T4549  	activator	7	35	ECK120000511		Peak start: , Peak end: , Peak center: 1267235		ECK12		forward		gene
+ECK12T4551  	ECK125269430	ECK120000511	ECK12T4549  	activator	7	35	ECK120000511		Peak start: , Peak end: , Peak center: 1267235		ECK12		forward		gene
+ECK12T4553  	ECK125269430	ECK120000599	ECK12T4552  	repressor	7	290	ECK120000599		Peak start: , Peak end: , Peak center: 667202		ECK12		reverse		gene
+ECK12T4555  	ECK125269430	ECK120000650	ECK12T4554  	repressor	7	27	ECK120000650		Peak start: , Peak end: , Peak center: 3838287		ECK12		reverse		gene
+ECK12T4557  	ECK125269430	ECK120000684	ECK12T4556  	repressor	7	-123	ECK120000684		Peak start: , Peak end: , Peak center: 53540		ECK12		reverse		gene
+ECK12T4558  	ECK125269430	ECK120000684	ECK12T4556  	repressor	7	-123	ECK120000684		Peak start: , Peak end: , Peak center: 53540		ECK12		reverse		gene
+ECK12T4559  	ECK125269430	ECK120000684	ECK12T4556  	repressor	7	-123	ECK120000684		Peak start: , Peak end: , Peak center: 53540		ECK12		reverse		gene
+ECK12T4560  	ECK125269430	ECK120000684	ECK12T4556  	repressor	7	-123	ECK120000684		Peak start: , Peak end: , Peak center: 53540		ECK12		reverse		gene
+ECK12T4562  	ECK125269430	ECK120000896	ECK12T4561  	activator	7	428	ECK120000896		Peak start: , Peak end: , Peak center: 4422782		ECK12		forward		gene
+ECK12T4563  	ECK125269430	ECK120001076	ECK12T4543  	activator	7	188	ECK120001076		Peak start: , Peak end: , Peak center: 121906		ECK12		forward		gene
+ECK12T4565  	ECK125269430	ECK120001151	ECK12T4564  	repressor	7	-48	ECK120001151		Peak start: , Peak end: , Peak center: 3204662		ECK12		forward		gene
+ECK12T4567  	ECK125269430	ECK120001369	ECK12T4566  	repressor	7	154	ECK120001369		Peak start: , Peak end: , Peak center: 2623009		ECK12		forward		gene
+ECK12T4569  	ECK125269430	ECK120001427	ECK12T4568  	activator	7	-81	ECK120001427		Peak start: , Peak end: , Peak center: 4001262		ECK12		reverse		gene
+ECK12T4571  	ECK125269430	ECK120001469	ECK12T4570  	activator	7	242	ECK120001469		Peak start: , Peak end: , Peak center: 3358941		ECK12		forward		gene
+ECK12T4573  	ECK125269430	ECK120001553	ECK12T4572  	activator	7	125	ECK120001553		Peak start: , Peak end: , Peak center: 3430204		ECK12		reverse		gene
+ECK12T4575  	ECK125269430	ECK120001565	ECK12T4574  	repressor	7	35	ECK120001565		Peak start: , Peak end: , Peak center: 2160863		ECK12		forward		gene
+ECK12T4576  	ECK125269430	ECK120001565	ECK12T4574  	repressor	7	35	ECK120001565		Peak start: , Peak end: , Peak center: 2160863		ECK12		forward		gene
+ECK12T4578  	ECK125269430	ECK120001813	ECK12T4577  	repressor	7	142	ECK120001813		Peak start: , Peak end: , Peak center: 1498427		ECK12		forward		gene
+ECK12T4580  	ECK125269430	ECK120001916	ECK12T4579  	repressor	7	386	ECK120001916		Peak start: , Peak end: , Peak center: 2190601		ECK12		reverse		gene
+ECK12T4582  	ECK125269430	ECK120001924	ECK12T4581  	activator	7	17	ECK120001924		Peak start: , Peak end: , Peak center: 2210154		ECK12		reverse		gene
+ECK12T4584  	ECK125269430	ECK120002273	ECK12T4583  	activator	7	98	ECK120002273		Peak start: , Peak end: , Peak center: 2110925		ECK12		reverse		gene
+ECK12T4586  	ECK125269430	ECK120002295	ECK12T4585  	repressor	7	161	ECK120002295		Peak start: , Peak end: , Peak center: 2746638		ECK12		forward		gene
+ECK12T4587  	ECK125269430	ECK120004356	ECK12T4561  	repressor	7	101	ECK120004356		Peak start: , Peak end: , Peak center: 4422782		ECK12		reverse		gene
+ECK12T4589  	ECK125269430	ECK120004375	ECK12T4588  	activator	7	293	ECK120004375		Peak start: , Peak end: , Peak center: 4471822		ECK12		reverse		gene
+ECK12T4590  	ECK125269430	ECK120004377	ECK12T4588  	repressor	7	364	ECK120004377		Peak start: , Peak end: , Peak center: 4471822		ECK12		forward		gene
+ECK12T4592  	ECK125269430	ECK120004440	ECK12T4591  	repressor	7	224	ECK120004440		Peak start: , Peak end: , Peak center: 4601377		ECK12		forward		gene
+ECK12T4593  	ECK125269430	ECK120003554	ECK125095374	repressor	7	-86	ECK120003554		Peak start: , Peak end: , Peak center: 1863730		ECK12		reverse		gene
+ECK12T4595  	ECK125269430	ECK120003961	ECK12T4594  	repressor	7	78	ECK120003961		Peak start: , Peak end: , Peak center: 2786890		ECK12		forward		gene
+ECK12T4596  	ECK125269430	ECK120003330	ECK12T4577  	repressor	7	18	ECK120003330		Peak start: , Peak end: , Peak center: 1498427		ECK12		reverse		gene
+ECK12T4598  	ECK125269430	ECK120003378	ECK12T4597  	activator	7	189	ECK120003378		Peak start: , Peak end: , Peak center: 1581558		ECK12		reverse		gene
+ECK12T4599  	ECK125269430	ECK120003378	ECK12T4597  	activator	7	189	ECK120003378		Peak start: , Peak end: , Peak center: 1581558		ECK12		reverse		gene
+ECK12T4601  	ECK125269430	ECK120003395	ECK12T4600  	repressor	7	-22	ECK120003395		Peak start: , Peak end: , Peak center: 1605292		ECK12		forward		gene
+ECK12T4602  	ECK125269430	ECK120003395	ECK12T4600  	repressor	7	-22	ECK120003395		Peak start: , Peak end: , Peak center: 1605292		ECK12		forward		gene
+ECK12T4604  	ECK125269430	ECK120003407	ECK12T4603  	activator	7	397	ECK120003407		Peak start: , Peak end: , Peak center: 1630807		ECK12		forward		gene
+ECK12T4606  	ECK125269430	ECK120003210	ECK12T4605  	activator	7	389	ECK120003210		Peak start: , Peak end: , Peak center: 1226238		ECK12		reverse		gene
+ECK12T4608  	ECK125269430	ECK120003757	ECK12T4607  	activator	7	75	ECK120003757		Peak start: , Peak end: , Peak center: 2386855		ECK12		forward		gene
+ECK12T4610  	ECK125269430	ECK120003778	ECK12T4609  	repressor	7	281	ECK120003778		Peak start: , Peak end: , Peak center: 2447860		ECK12		reverse		gene
+ECK12T4612  	ECK125269430	ECK120002649	ECK12T4611  	repressor	7	394	ECK120002649		Peak start: , Peak end: , Peak center: 4311501		ECK12		forward		gene
+ECK12T4614  	ECK125269430	ECK120002670	ECK12T4613  	repressor	7	286	ECK120002670		Peak start: , Peak end: , Peak center: 3645540		ECK12		reverse		gene
+ECK12T4615  	ECK125269430	ECK120003379	ECK12T4597  	activator	7	461	ECK120003379		Peak start: , Peak end: , Peak center: 1581558		ECK12		reverse		gene
