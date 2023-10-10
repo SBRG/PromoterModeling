@@ -1,6 +1,7 @@
 # Modules
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 from scipy.stats import spearmanr
 from deap import base, tools
@@ -215,8 +216,8 @@ def mu_plus_lambda(pop = list,
                    cxpb = float,
                    mutpb = float,
                    n_gen = int,
-                   n_iter = int,
-                   grid = pd.Series,
+                   n_iter = None,
+                   grid = None,
                    stats = None,
                    hall_of_fame = None,
                    verbose = __debug__):
@@ -329,3 +330,185 @@ def mu_plus_lambda(pop = list,
             print(logbook.stream)
 
     return pop, logbook
+
+def greedy_algorithm(base_individual: object,
+                     n_iterations: int,
+                     grid: pd.Series,
+                     toolbox = base.Toolbox(),
+                     max_steps: int = 30,
+                     n_rounds: int = 100):
+    """
+    Returns a population of modified individuals that have different parameters
+        for one condition
+
+    :param object base_individual: Individual to copy parameters from
+    :param int n_iterations: How many random copies should be created
+    :param pd.Series grid: Series containing grids for each condition
+    :param base.Toolbox() toolbox: DEAP class containing evolution operators
+    :param int max_steps: Maximum number of steps the greedy algorithm can take
+        at a time before moving on to a different condition
+    """
+    
+    # Create population to hold the individuals we are trying out
+    population = []
+
+    # Create a pd.Series to hold position of each condition's parameter tuple
+    position = pd.Series(index = grid.index, dtype = 'Int64')
+
+    for i, (ind_act, ind_inh) in enumerate(base_individual):
+        # Iterate through the grid parameters for each condition
+        for ii, (grid_act, grid_inh) in enumerate(grid[i]):
+            if (ind_act, ind_inh) == (grid_act, grid_inh):
+                position[i] = ii
+
+    # Record the number of steps needed for each condition at each iteration
+    steps = pd.DataFrame(index=grid.index, columns=range(n_iterations))
+
+    # Shuffle the order of the conditions and run it many times
+    for i in range(n_iterations):
+        # Create the iteration's temporary individual
+        base_score = np.subtract(base_individual.fitness.values[0], 
+                                 base_individual.fitness.values[1])
+        temp_individual = toolbox.clone(base_individual)
+
+        # Baseline score
+        old_l_score = base_score
+        old_r_score = base_score
+
+        # Create a copy of the grid and position series as new objects
+        temp_position = position.copy(deep=True)
+
+        for ii in range(n_rounds):
+            # Copy the grid and position series and shuffle them
+            temp_grid = grid.sample(frac = 1, 
+                                    replace = False, 
+                                    random_state = (i+1)*(ii+1)) # What's the best way to set the random state?
+
+            # Loop over the shuffled conditions
+            for cond in temp_grid.index:
+                # Create the condition's temporary individuals
+                l_individual = toolbox.clone(temp_individual)
+                r_individual = toolbox.clone(temp_individual)
+
+                # Identify where in the individual the condition's parameters are
+                cond_loc = int(grid.index.get_loc(cond))
+
+                if int(temp_position.loc[cond]) == 0:
+                    l_position = 0
+                else:
+                    l_position = int(temp_position.loc[cond]-1)
+                    l_steps = 1
+
+                    # Search the "left" side
+                    while l_position > -1:
+                    # Modify the individual, evaluate, and score
+                        l_individual[cond_loc] = temp_grid.loc[cond][l_position]
+                        l_individual.fitness.values = toolbox.evaluate(l_individual)
+                        new_l_score = np.subtract(l_individual.fitness.values[0],
+                                                  l_individual.fitness.values[1])
+
+                        # Compare the score against the best individual
+                        if new_l_score > old_l_score:
+                            # Continue if not at the end of the grid
+                            if l_position == 0 or l_steps == max_steps:
+                                old_l_score = new_l_score
+                                break
+                            else:
+                                l_position -= 1
+                                l_steps += 1
+                        else: # Roll the individual back one step
+                            l_position += 1
+                            #print(i, ii, cond, l_position, len(temp_grid.loc[cond]))
+                            l_individual[cond_loc] = temp_grid.loc[cond][l_position]
+                            l_individual.fitness.values = toolbox.evaluate(l_individual)
+                            old_l_score = np.subtract(l_individual.fitness.values[0],
+                                                      l_individual.fitness.values[1])
+                            break
+
+                if int(temp_position.loc[cond])+1 == len(temp_grid.loc[cond]):
+                    # This if statement is needed to prevent it from adding one, realizing it is out of bounds, performing better than the left side, and updating to a grid location that is out of bounds
+                    r_position = int(temp_position.loc[cond])
+                else:
+                    r_position = int(temp_position.loc[cond]+1)
+                    r_steps = 1
+                    
+                    # Search the "right" side
+                    while r_position < len(temp_grid.loc[cond]):
+                        # Modify the individual, evaluate, and score
+                        r_individual[cond_loc] = temp_grid.loc[cond][r_position]
+                        r_individual.fitness.values = toolbox.evaluate(r_individual)
+                        new_r_score = np.subtract(r_individual.fitness.values[0],
+                                                  r_individual.fitness.values[1])
+
+                        # Compare the score against the best individual
+                        if new_r_score > old_r_score:
+                            # Continue if not at the end of the grid
+                            if r_position+1 == len(temp_grid.loc[cond]) or r_steps == max_steps:
+                                old_r_score = new_r_score
+                                break
+                            else:
+                                r_position += 1
+                                r_steps += 1
+                        else: # Roll the individual back one step
+                            r_position -= 1
+                            r_individual[cond_loc] = temp_grid.loc[cond][r_position]
+                            r_individual.fitness.values = toolbox.evaluate(r_individual)
+                            old_r_score = np.subtract(r_individual.fitness.values[0],
+                                                      r_individual.fitness.values[1])
+                            break
+
+                # Compare r_individual and l_individual, use best, update the positions for the next round
+                if old_r_score > old_l_score:
+                    temp_individual = r_individual
+                    temp_position.loc[cond] = r_position
+                else:
+                    temp_individual = l_individual
+                    temp_position.loc[cond] = l_position
+                temp_individual.fitness.values = toolbox.evaluate(temp_individual)
+            
+        # Add individual to population
+        population.append(temp_individual)
+    
+    return population
+
+# Functions related to plotting results
+def scatter_individual(ind_one: object, 
+                       ind_two: object = None, 
+                       MA = pd.DataFrame,
+                       GA_parameters: dict = None):
+    '''
+    Create scatter plots of cAct vs MA_activator and cInh vs MA_inhibitor
+
+    :param object ind_one: The individual to plot
+    :param None ind_two: Second individual to plot on the same axes
+    :param pd.DataFrame MA: DataFrame containing MA_activator and MA_inhibitor
+    :param dict GA_parameters: Dictionary containing parameters to include in 
+        the name of the plot
+    '''
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 5), squeeze=True)
+
+    if GA_parameters is not None:
+        title = 'seed='+str(GA_parameters['seed'])+', n_gen='+str(GA_parameters['n_gen'])+', pop='+str(GA_parameters['n_ind'])+', μ='+str(GA_parameters['mu'])+', λ='+str(GA_parameters['lambda_'])+', cxpb='+str(GA_parameters['cxpb'])+', mutpb='+str(GA_parameters['mutpb'])+', mt_prob='+str(GA_parameters['mt_prob'])+', cx_prob='+str(GA_parameters['cx_prob'])
+        fig.suptitle(title)
+
+    ax1.set_xlabel('MA_activator')
+    ax2.set_xlabel('MA_inhibitor')
+    ax1.set_ylabel('cActivator')
+    ax2.set_ylabel('cInhibitor')
+    ax1.set_yscale('log')
+    ax2.set_yscale('log')
+
+    ax1.set_title('Score: '+str(ind_one.fitness.values[0]))
+    ax2.set_title('Score: '+str(ind_one.fitness.values[1]))
+
+    ax1.scatter(MA.MA_activator, list(ind_one['act']), alpha=0.5, c='b')
+    ax2.scatter(MA.MA_inhibitor, list(ind_one['inh']), alpha=0.5, c='b')
+
+    if ind_two is not None:
+        ax1.scatter(MA.MA_activator, list(ind_two['act']), alpha=0.5, c='r')
+        ax2.scatter(MA.MA_inhibitor, list(ind_two['inh']), alpha=0.5, c='r')
+        ax1.set_title('Blue Score: '+str(ind_one.fitness.values[0])+'\n Red Score: '+str(ind_two.fitness.values[0]), fontsize=8)
+        ax2.set_title('Blue Score: '+str(ind_one.fitness.values[1])+'\n Red Score: '+str(ind_two.fitness.values[1]), fontsize=8)
+
+    return fig, (ax1, ax2)
