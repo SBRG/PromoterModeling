@@ -225,8 +225,8 @@ def mu_plus_lambda(pop = list,
     Modified DEAP mu+lambda evolutionary algorithm using var_or
 
     :param list pop: List of individuals to serve as the starting pop
-    :param object rng: np.random.generator or np.random.RandomState class
     :param base.Toolbox() toolbox: DEAP class containing evolution operators
+    :param object rng: np.random.generator or np.random.RandomState class
     :param int mu: Number of individuals to select for the next generation
     :param int lambda_: Number of children to produce at each generation
     :param float cxpb: Probability that an offspring is produced by crossover
@@ -382,7 +382,7 @@ def greedy_algorithm(base_individual: object,
             # Copy the grid and position series and shuffle them
             temp_grid = grid.sample(frac = 1, 
                                     replace = False, 
-                                    random_state = (i+1)*(ii+1)) # What's the best way to set the random state?
+                                    random_state = (i+1)*(ii+1)) # NOTE: What's the best way to set the random state?
 
             # Loop over the shuffled conditions
             for cond in temp_grid.index:
@@ -470,6 +470,30 @@ def greedy_algorithm(base_individual: object,
         population.append(temp_individual)
     
     return population
+
+def voting(population: list, 
+           grid: pd.Series,
+           ) -> pd.DataFrame:
+    '''
+    Create a pd.DataFrame containing the rounded mean, variance, and rounded 
+        median of each condition's integer index corresponding to the grid value 
+    '''
+
+    # Create a pd.Series to hold position of each condition's parameter tuple
+    position = pd.DataFrame(index=grid.index, columns=range(len(population)), dtype='Int64')
+
+    for i, ind in enumerate(population):
+        for ii, (ind_act, ind_inh) in enumerate(ind):
+            # Iterate through the grid parameters for each condition
+            for iii, (grid_act, grid_inh) in enumerate(grid[ii]):
+                if (ind_act, ind_inh) == (grid_act, grid_inh):
+                    position.iloc[ii, i] = iii
+
+    position['_mean'] = position.iloc[:,0:len(population)].mean(axis=1).round()
+    position['_var'] = position.iloc[:,0:len(population)].var(axis=1)
+    position['_med'] = position.iloc[:,0:len(population)].median(axis=1).round()
+    
+    return position
 
 # Functions related to plotting results
 def scatter_individual(ind_one: object, 
