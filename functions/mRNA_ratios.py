@@ -32,7 +32,10 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
 
         # Solve for DataFrame A: A = M_inverse * X
         #fixed_X = log_tpm_df.div(log_tpm_df[basal_conditions].mean(axis = 1), axis = 'index')
-        fixed_X = log_tpm_df.sub(log_tpm_df[basal_conditions].mean(axis = 1), axis = 'index')
+        if input_parameters['basal_or_hard_val'] == 'basal':
+            fixed_X = log_tpm_df.sub(log_tpm_df[basal_conditions].mean(axis = 1), axis = 'index')
+        else:
+            fixed_X = log_tpm_df.sub(input_parameters['hard_val'], axis = 'index')
         fixed_X = fixed_X.fillna(0).drop(columns = ['fps__fps_ptsI_ale3__1', 'fps__fps_ptsI_ale3__2', 'fps__fps_ptsI_ale1__1', 'fps__fps_ptsI_ale1__2'])
         zerod_A_df = M_inverse.dot(fixed_X)
 
@@ -46,7 +49,10 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
     inh_MAs = []
     index = []
     actual_counts = []
-    log_x_c = log_tpm_df.loc[gene][basal_conditions].mean()
+    if input_parameters['basal_or_hard_val'] == 'basal':
+        log_x_c = log_tpm_df.loc[gene][basal_conditions].mean()
+    else:
+        log_x_c = input_parameters['hard_val']
     # predict mRNA values
     for key, val in (A_df.loc[iM_act].T*(M_df[iM_act].loc[gene])).items():
         index.append(key)
