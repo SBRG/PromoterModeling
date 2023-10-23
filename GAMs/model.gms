@@ -7,34 +7,18 @@ Set
    sample 'samples';
 
 * Load in saved values
-$onText take this out of comment for working on Windows
-$call csv2gdx .\input\composite_cAct_vals.csv id=cEff index=1 values=2..lastCol useHeader=y trace=0 output=.\GDX\input.gdx
-$gdxIn .\GDX\input.gdx
+$call csv2gdx ../data/save_for_GAMs/composite_cAct_vals.csv id=cEff index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input.gdx
+$gdxIn ./input_GDX/input.gdx
 $load sample = dim1
 $load gene = dim2
 Parameter cEff(sample, gene) 'cEff values';
 $load cEff
 $gdxIn
-$call csv2gdx .\input\exported_TF_conc.csv id=meas_TF index=1 values=2..lastCol useHeader=y trace=0 output=.\GDX\input2.gdx
-$gdxIn .\GDX\input2.gdx
+$call csv2gdx ../data/save_for_GAMs/exported_TF_conc.csv id=meas_TF index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input2.gdx
+$gdxIn ./input_GDX/input2.gdx
 Parameter meas_TF(sample) 'actual TF values';
 $load meas_TF
 $gdxIn
-$offText
-*$onText take this out of comment for working on Mac
-$call csv2gdx ./input/composite_cAct_vals.csv id=cEff index=1 values=2..lastCol useHeader=y trace=0 output=./GDX/input.gdx
-$gdxIn ./GDX/input.gdx
-$load sample = dim1
-$load gene = dim2
-Parameter cEff(sample, gene) 'cEff values';
-$load cEff
-$gdxIn
-$call csv2gdx ./input/exported_TF_conc.csv id=meas_TF index=1 values=2..lastCol useHeader=y trace=0 output=./GDX/input2.gdx
-$gdxIn ./GDX/input2.gdx
-Parameter meas_TF(sample) 'actual TF values';
-$load meas_TF
-$gdxIn
-*$offText
 
 
 ***
@@ -96,6 +80,7 @@ execute_unload ".\output\Kd_results.gdx" Kd.L Kd.M
 execute 'gdxxrw.exe .\output\Kd_results.gdx o=.\output\Kd_results.xlsx var=Kd.L'
 $offText
 *$onText
-execute_unload "./output/TF_conc_results.gdx" TF_conc.L TF_conc.M
-execute_unload "./output/Kd_results.gdx" Kd.L Kd.M
-*$offText
+execute_unload "./output_GDX/TF_conc_results.gdx" TF_conc.L TF_conc.M
+execute_unload "./output_GDX/Kd_results.gdx" Kd.L Kd.M
+execute 'gdxdump ./output_GDX/TF_conc_results.gdx noData > ../data/GAMS_output/TF_conc.csv symb=TF_conc format=csv';
+execute 'gdxdump ./output_GDX/Kd_results.gdx noData > ../data/GAMS_output/Kd_results.csv symb=Kd format=csv';
