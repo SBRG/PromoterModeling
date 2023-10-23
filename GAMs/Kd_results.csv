@@ -1,7 +1,0 @@
-set j /gene/;
-parameter Kd_results(j, *) /;
-loop(j,
-    put_utility Kd_results(j, *), ( %j% /
-        put_utility (kd_results(j, *, i), *)
-    );
-);
