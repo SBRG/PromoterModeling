@@ -7,7 +7,7 @@ Set
    sample 'samples';
 
 * Load in saved values
-$call csv2gdx ../data/save_for_GAMs/composite_cAct_vals.csv id=cEff index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input.gdx
+$call csv2gdx ../data/save_for_GAMs/composite_cInh_vals.csv id=cEff index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input.gdx
 $gdxIn ./input_GDX/input.gdx
 $load sample = dim1
 $load gene = dim2
@@ -80,7 +80,7 @@ execute_unload ".\output\Kd_results.gdx" Kd.L Kd.M
 execute 'gdxxrw.exe .\output\Kd_results.gdx o=.\output\Kd_results.xlsx var=Kd.L'
 $offText
 *$onText
-execute_unload "./output_GDX/TF_conc_results.gdx" TF_conc.L TF_conc.M
-execute_unload "./output_GDX/Kd_results.gdx" Kd.L Kd.M
-execute 'gdxdump ./output_GDX/TF_conc_results.gdx noData > ../data/GAMS_output/TF_conc_results.csv symb=TF_conc format=csv';
-execute 'gdxdump ./output_GDX/Kd_results.gdx noData > ../data/GAMS_output/Kd_results.csv symb=Kd format=csv';
+execute_unload "./output_GDX/cInh_TF_conc_results.gdx" TF_conc.L TF_conc.M
+execute_unload "./output_GDX/cInh_Kd_results.gdx" Kd.L Kd.M
+execute 'gdxdump ./output_GDX/cInh_TF_conc_results.gdx noData > ../data/GAMS_output/cInh_TF_conc_results.csv symb=TF_conc format=csv';
+execute 'gdxdump ./output_GDX/cInh_Kd_results.gdx noData > ../data/GAMS_output/cInh_ßKd_results.csv symb=Kd format=csv';

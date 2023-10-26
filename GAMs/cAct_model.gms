@@ -80,7 +80,7 @@ execute_unload ".\output\Kd_results.gdx" Kd.L Kd.M
 execute 'gdxxrw.exe .\output\Kd_results.gdx o=.\output\Kd_results.xlsx var=Kd.L'
 $offText
 *$onText
-execute_unload "./output_GDX/TF_conc_results.gdx" TF_conc.L TF_conc.M
-execute_unload "./output_GDX/Kd_results.gdx" Kd.L Kd.M
-execute 'gdxdump ./output_GDX/TF_conc_results.gdx noData > ../data/GAMS_output/TF_conc_results.csv symb=TF_conc format=csv';
-execute 'gdxdump ./output_GDX/Kd_results.gdx noData > ../data/GAMS_output/Kd_results.csv symb=Kd format=csv';
+execute_unload "./output_GDX/cAct_TF_conc_results.gdx" TF_conc.L TF_conc.M
+execute_unload "./output_GDX/cAct_Kd_results.gdx" Kd.L Kd.M
+execute 'gdxdump ./output_GDX/cAct_TF_conc_results.gdx noData > ../data/GAMS_output/cAct_TF_conc_results.csv symb=TF_conc format=csv';
+execute 'gdxdump ./output_GDX/cAct_Kd_results.gdx noData > ../data/GAMS_output/cAct_Kd_results.csv symb=Kd format=csv';
