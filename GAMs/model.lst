@@ -1,4 +1,4 @@
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 10/25/23 10:41:43 Page 1
+GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/25/23 10:51:30 Page 1
 cActivator toy example
 C o m p i l a t i o n
 
@@ -11,12 +11,12 @@ C o m p i l a t i o n
    7     sample 'samples';
    8   
    9  * Load in saved values
-GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/input.gdx
+GDXIN   /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/input_GDX/input.gdx
 --- LOAD  sample = 2:Dim1
 --- LOAD  gene = 3:Dim2
   14  Parameter cEff(sample, gene) 'cEff values';
 --- LOAD  cEff = 1:cEff
-GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/input2.gdx
+GDXIN   /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/input_GDX/input2.gdx
   19  Parameter meas_TF(sample) 'actual TF values';
 --- LOAD  meas_TF = 1:meas_TF
   22   
@@ -82,22 +82,22 @@ GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/input2.gdx
   84  execute_unload "./output_GDX/Kd_results.gdx" Kd.L Kd.M
   85  execute 'gdxdump ./output_GDX/TF_conc_results.gdx noData > ../data/GAMS_output/TF_conc_results.csv symb=TF_conc format=csv';
   86  execute 'gdxdump ./output_GDX/Kd_results.gdx noData > ../data/GAMS_output/Kd_results.csv symb=Kd format=csv';
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 10/25/23 10:41:43 Page 2
+GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/25/23 10:51:30 Page 2
 cActivator toy example
 Include File Summary
 
 
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
-     1        1 INPUT          0       0  /home/chris/github/regulonML/GAMs/model.gms
+     1        1 INPUT          0       0  /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/model.gms
      2       10 CALL           1      10  csv2gdx ../data/save_for_GAMs/composite_cAct_vals.csv id=cEff index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input.gdx
-     3       11 GDXIN          1      11  /home/chris/github/regulonML/GAMs/input_GDX/input.gdx
+     3       11 GDXIN          1      11  /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/input_GDX/input.gdx
      4       17 CALL           1      17  csv2gdx ../data/save_for_GAMs/exported_TF_conc.csv id=meas_TF index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input2.gdx
-     5       18 GDXIN          1      18  /home/chris/github/regulonML/GAMs/input_GDX/input2.gdx
+     5       18 GDXIN          1      18  /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/input_GDX/input2.gdx
 
 
-COMPILATION TIME     =        0.020 SECONDS      3 MB  44.1.1 27c4d1f8 LEX-LEG
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 10/25/23 10:41:43 Page 3
+COMPILATION TIME     =        0.134 SECONDS      3 MB  43.4.1 3da5975b DEX-DEG
+GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/25/23 10:51:30 Page 3
 cActivator toy example
 Equation Listing    SOLVE ElementWiseOptimization Using DNLP From line 68
 
@@ -116,7 +116,7 @@ obj2..  (0.416013150846262)*TF_conc(control__wt_glc__1) + (0.415965469910356)*TF
 
 total_obj..  - 100*diff1 - diff2 + total_diff =E= 0 ; (LHS = 0)
      
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 10/25/23 10:41:43 Page 4
+GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/25/23 10:51:30 Page 4
 cActivator toy example
 Column Listing      SOLVE ElementWiseOptimization Using DNLP From line 68
 
@@ -184,7 +184,7 @@ total_diff
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
         1       total_obj
 
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 10/25/23 10:41:43 Page 5
+GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/25/23 10:51:30 Page 5
 cActivator toy example
 Range Statistics    SOLVE ElementWiseOptimization Using DNLP From line 68
 
@@ -195,7 +195,7 @@ RHS       [min, max] : [        NA,        NA] - Zero values observed as well
 Bound     [min, max] : [ 9.961E-07, 9.000E+00]
 Matrix    [min, max] : [ 4.145E-01, 6.325E+07]
 
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 10/25/23 10:41:43 Page 6
+GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/25/23 10:51:30 Page 6
 cActivator toy example
 Model Statistics    SOLVE ElementWiseOptimization Using DNLP From line 68
 
@@ -208,8 +208,8 @@ NON ZERO ELEMENTS           567     NON LINEAR N-Z            562
 CODE LENGTH              40,894     CONSTANT POOL           1,610
 
 
-GENERATION TIME      =        0.030 SECONDS      4 MB  44.1.1 27c4d1f8 LEX-LEG
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 10/25/23 10:41:43 Page 7
+GENERATION TIME      =        0.033 SECONDS      4 MB  43.4.1 3da5975b DEX-DEG
+GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/25/23 10:51:30 Page 7
 cActivator toy example
 Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 68
 
@@ -224,10 +224,10 @@ Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 68
 **** MODEL STATUS      5 Locally Infeasible
 **** OBJECTIVE VALUE      10000000000.0000
 
- RESOURCE USAGE, LIMIT          0.017 10000000000.000
+ RESOURCE USAGE, LIMIT          0.020 10000000000.000
  ITERATION COUNT, LIMIT         2    2147483647
  EVALUATION ERRORS              0             0
---- *** This solver runs with a demo license. No commercial use.
+--- *** This solver runs with a community license. No commercial use.
  
  
     C O N O P T 3   version 3.17N
@@ -262,9 +262,9 @@ Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 68
     Rtmaxv=x.xxe+xx
  
  
- CONOPT time Total                            0.011 seconds
-   of which: Function evaluations             0.007 = 63.6%
-             1st Derivative evaluations       0.002 = 18.2%
+ CONOPT time Total                            0.010 seconds
+   of which: Function evaluations             0.005 = 50.0%
+             1st Derivative evaluations       0.002 = 20.0%
  
 
 **** ERRORS/WARNINGS IN VARIABLE total_diff
@@ -594,7 +594,7 @@ b2240        -9.0000        -5.0000        -5.0000         EPS
                     MEAN   2.844388E+10
                              1  UNBOUNDED (UNBND)
                              1     ERRORS ( ****)
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 10/25/23 10:41:43 Page 8
+GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/25/23 10:51:30 Page 8
 cActivator toy example
 E x e c u t i o n
 
@@ -617,14 +617,15 @@ pal__tartr_ale28_f10__1     EPS,    pal__tartr_ale28_f10__2     EPS,    pal__tar
             VARIABLE diff2.L               =      223.093  difference between measured TF conc and predicted TF conc
 
 
-EXECUTION TIME       =        0.076 SECONDS      4 MB  44.1.1 27c4d1f8 LEX-LEG
+EXECUTION TIME       =        0.230 SECONDS      4 MB  43.4.1 3da5975b DEX-DEG
 
 
-USER: GAMS Demo, for EULA and demo limitations see   G230706/0001CB-GEN
-      https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
+USER: GAMS Community License for Christopher DalldorfG230829|0002AO-GEN
+      University of California, San Diego, Bioengineering        CL6627
+      License for teaching and research at degree granting institutions
 
 
 **** FILE SUMMARY
 
-Input      /home/chris/github/regulonML/GAMs/model.gms
-Output     /home/chris/github/regulonML/GAMs/model.lst
+Input      /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/model.gms
+Output     /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/model.lst

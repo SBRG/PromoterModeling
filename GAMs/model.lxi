@@ -1,0 +1,28 @@
+B 3 C o m p i l a t i o n
+B 87 Include File Summary
+B 102 Equation Listing    SOLVE ElementWiseOptimization Using DNLP From line 68
+D 105 obj1
+D 110 obj2
+D 115 total_obj
+B 121 Column Listing      SOLVE ElementWiseOptimization Using DNLP From line 68
+E 124 TF_conc
+E 146 Kd
+E 165 diff1
+E 173 diff2
+E 181 total_diff
+B 189 Range Statistics    SOLVE ElementWiseOptimization Using DNLP From line 68
+B 200 Model Statistics    SOLVE ElementWiseOptimization Using DNLP From line 68
+B 214 Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 68
+F 275 obj1
+F 276 obj2
+F 277 total_obj
+G 282 TF_conc
+G 561 Kd
+G 582 diff1
+G 583 diff2
+G 584 total_diff
+B 599 E x e c u t i o n
+I 599 TF_conc
+I 607 TF_conc
+I 615 diff1
+I 616 diff2
