@@ -88,7 +88,7 @@ def promoter_solving(
         # Evaluate the lambda function
         working_grid[i] += ((evaluate_lambda('KeqOpening',lambda_df,values)),) # NOTE: UPDATE w/ Equation
     
-    return working_grid
+    return np.array(object = working_grid, dtype = np.dtype([(list(input_range.keys())[0], float), (list(input_range.keys())[1], float), ('KeqOpening', float)])) # Custom dtype, might make indexing easier
 
 def calculate_minimum_escape(
         lambda_df: pd.DataFrame,
