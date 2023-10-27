@@ -83,4 +83,4 @@ $offText
 execute_unload "./output_GDX/cInh_TF_conc_results.gdx" TF_conc.L TF_conc.M
 execute_unload "./output_GDX/cInh_Kd_results.gdx" Kd.L Kd.M
 execute 'gdxdump ./output_GDX/cInh_TF_conc_results.gdx noData > ../data/GAMS_output/cInh_TF_conc_results.csv symb=TF_conc format=csv';
-execute 'gdxdump ./output_GDX/cInh_Kd_results.gdx noData > ../data/GAMS_output/cInh_ßKd_results.csv symb=Kd format=csv';
+execute 'gdxdump ./output_GDX/cInh_Kd_results.gdx noData > ../data/GAMS_output/cInh_Kd_results.csv symb=Kd format=csv';
