@@ -35,7 +35,7 @@ def log_tpm_to_mRNA_conc(val):
     return(mRNA)
 
 
-def pick_KdRNAPCrp(ratios_df, basal_constants):
+def pick_KdRNAPCrp(ratios_df, basal_constants, initial_guess_ratio = 0.25):
     KdRNAP = basal_constants['KdRNAP']
     KeqOpening = basal_constants['KeqOpening']
     RNAP = basal_constants['RNAP']
@@ -71,7 +71,7 @@ def pick_KdRNAPCrp(ratios_df, basal_constants):
         return(penalty)
 
     # setup and minimize
-    initial_guess = KdRNAP / 4
+    initial_guess = KdRNAP * initial_guess_ratio
     bounds = [(1e-9, KdRNAP/.99)]
     result1 = minimize(objective_function1, initial_guess, bounds = bounds, tol = 1e-10)
     max_KdRNAPCrp = result1.x[0] 

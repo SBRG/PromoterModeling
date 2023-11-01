@@ -29,9 +29,9 @@ Variables
 
 * Constrain matrices
 TF_conc.lo(sample) = log10(1E-9);
-TF_conc.up(sample) = meas_TF(sample);;
+TF_conc.up(sample) = log10(meas_TF(sample));
 Kd.lo(gene) = log10(1E-9);
-Kd.up(gene) = log10(1E-5);
+Kd.up(gene) = log10(1E-3);
 
 * initialize matrices
 TF_conc.l(sample) = uniformInt(1, 10);
@@ -50,26 +50,28 @@ Equations
     total_obj;
     
 * Set weights for the two objectives (you can adjust these weights as needed)
-Scalar weight_obj1 /100/;
+Scalar weight_obj1 /3.846428243279408E-10/;
 Scalar weight_obj2 /1/;
+Scalar weight_obj1_2 /5000/;
+* ^ obj1 is just way bigger by how its calculated, this rebalances them to be about even and obj1_2 can scale them to be different
 
-total_obj .. total_diff =e= weight_obj1 * diff1 + weight_obj2 * diff2;
+total_obj .. total_diff =e= weight_obj1 * weight_obj1_2 * diff1 + weight_obj2 * diff2;
 obj1 .. diff1 =e= sum((gene, sample), abs(10**TF_conc(sample) / 10**Kd(gene) - cEff(sample, gene)));
 obj2 .. diff2 =e= sum(sample, abs(10**(meas_TF(sample)) - 0.1*10**TF_conc(sample))**2);
-* ^ I found one paper that said about 10% of crp is active based on cAMP presence, this should be chaned later though
+* ^ I found one paper that said about 10% of crp is active based on cAMP presence, this should be changed later though
 
 * modify model parameters
-*$set dnlp maxiter=1000000  // Increase the maximum number of iterations
-*$set dnlp acc=1e-15  // Set the accuracy or tolerance level
-*$set dnlp step=1e-15  // Set the step size
+$set dnlp maxiter=10000  // Increase the maximum number of iterations
+$set dnlp acc=1e-15  // Set the accuracy or tolerance level
+$set dnlp step=1e-15  // Set the step size
 
 * run the model
 Model ElementWiseOptimization /all/;
 Solve ElementWiseOptimization using dnlp minimizing total_diff;
 
 * display results
-Display TF_conc.l, TF_conc.m;
-Display diff1.l, diff2.l;
+*Display TF_conc.l, TF_conc.m;
+*Display diff1.l, diff2.l;
 
 
 * Export results
