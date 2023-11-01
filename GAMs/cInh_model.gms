@@ -52,7 +52,7 @@ Equations
 * Set weights for the two objectives (you can adjust these weights as needed)
 Scalar weight_obj1 /3.846428243279408E-10/;
 Scalar weight_obj2 /1/;
-Scalar weight_obj1_2 /5000/;
+Scalar weight_obj1_2 /10000000/;
 * ^ obj1 is just way bigger by how its calculated, this rebalances them to be about even and obj1_2 can scale them to be different
 
 total_obj .. total_diff =e= weight_obj1 * weight_obj1_2 * diff1 + weight_obj2 * diff2;
