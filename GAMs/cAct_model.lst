@@ -1,4 +1,4 @@
-GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/26/23 11:44:15 Page 1
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 11/01/23 16:17:18 Page 1
 cActivator toy example
 C o m p i l a t i o n
 
@@ -11,12 +11,12 @@ C o m p i l a t i o n
    7     sample 'samples';
    8   
    9  * Load in saved values
-GDXIN   /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/input_GDX/input.gdx
+GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/input.gdx
 --- LOAD  sample = 2:Dim1
 --- LOAD  gene = 3:Dim2
   14  Parameter cEff(sample, gene) 'cEff values';
 --- LOAD  cEff = 1:cEff
-GDXIN   /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/input_GDX/input2.gdx
+GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/input2.gdx
   19  Parameter meas_TF(sample) 'actual TF values';
 --- LOAD  meas_TF = 1:meas_TF
   22   
@@ -29,7 +29,7 @@ GDXIN   /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/input_GDX/
   29   
   30  * Constrain matrices
   31  TF_conc.lo(sample) = log10(1E-9);
-  32  TF_conc.up(sample) = meas_TF(sample);;
+  32  TF_conc.up(sample) = log10(meas_TF(sample));
   33  Kd.lo(gene) = log10(1E-9);
   34  Kd.up(gene) = log10(1E-5);
   35   
@@ -50,118 +50,124 @@ GDXIN   /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/input_GDX/
   50      total_obj;
   51   
   52  * Set weights for the two objectives (you can adjust these weights as needed)
-  53  Scalar weight_obj1 /100/;
+  53  Scalar weight_obj1 /3.846428243279408E-10/;
   54  Scalar weight_obj2 /1/;
-  55   
-  56  total_obj .. total_diff =e= weight_obj1 * diff1 + weight_obj2 * diff2;
-  57  obj1 .. diff1 =e= sum((gene, sample), abs(10**TF_conc(sample) / 10**Kd(gene) - cEff(sample, gene)));
-  58  obj2 .. diff2 =e= sum(sample, abs(10**(meas_TF(sample)) - 0.1*10**TF_conc(sample))**2);
-  59  * ^ I found one paper that said about 10% of crp is active based on cAMP presence, this should be chaned later though
-  60   
-  61  * modify model parameters
-  62  *$set dnlp maxiter=1000000  // Increase the maximum number of iterations
-  63  *$set dnlp acc=1e-15  // Set the accuracy or tolerance level
-  64  *$set dnlp step=1e-15  // Set the step size
-  65   
-  66  * run the model
-  67  Model ElementWiseOptimization /all/;
-  68  Solve ElementWiseOptimization using dnlp minimizing total_diff;
-  69   
-  70  * display results
-  71  Display TF_conc.l, TF_conc.m;
-  72  Display diff1.l, diff2.l;
-  73   
-  74   
-  75  * Export results
+  55  Scalar weight_obj1_2 /5000/;
+  56  * ^ obj1 is just way bigger by how its calculated, this rebalances them to be about even and obj1_2 can scale them to be different
+  57   
+  58  total_obj .. total_diff =e= weight_obj1 * weight_obj1_2 * diff1 + weight_obj2 * diff2;
+  59  obj1 .. diff1 =e= sum((gene, sample), abs(10**TF_conc(sample) / 10**Kd(gene) - cEff(sample, gene)));
+  60  obj2 .. diff2 =e= sum(sample, abs(10**(meas_TF(sample)) - 0.1*10**TF_conc(sample))**2);
+  61  * ^ I found one paper that said about 10% of crp is active based on cAMP presence, this should be changed later though
+  62   
+  63  * modify model parameters
+  64  *$set dnlp maxiter=10000  // Increase the maximum number of iterations
+  67   
+  68  * run the model
+  69  Model ElementWiseOptimization /all/;
+  70  Solve ElementWiseOptimization using dnlp minimizing total_diff;
+  71   
+  72  * display results
+  73  *Display TF_conc.l, TF_conc.m;
+  74  *Display diff1.l, diff2.l;
+  75   
+  76   
+  77  * Export results
       execute_unload ".\output\TF_conc_results.gdx" TF_conc.L TF_conc.M
       execute 'gdxxrw.exe .\output\TF_conc_results.gdx o=.\output\TF_conc_results.xlsx var=TF_conc.L'
       execute_unload ".\output\Kd_results.gdx" Kd.L Kd.M
       execute 'gdxxrw.exe .\output\Kd_results.gdx o=.\output\Kd_results.xlsx var=Kd.L'
-  82  *$onText
-  83  execute_unload "./output_GDX/cAct_TF_conc_results.gdx" TF_conc.L TF_conc.M
-  84  execute_unload "./output_GDX/cAct_Kd_results.gdx" Kd.L Kd.M
-  85  execute 'gdxdump ./output_GDX/cAct_TF_conc_results.gdx noData > ../data/GAMS_output/cAct_TF_conc_results.csv symb=TF_conc format=csv';
-  86  execute 'gdxdump ./output_GDX/cAct_Kd_results.gdx noData > ../data/GAMS_output/cAct_Kd_results.csv symb=Kd format=csv';
-GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/26/23 11:44:15 Page 2
+  84  *$onText
+  85  execute_unload "./output_GDX/cAct_TF_conc_results.gdx" TF_conc.L TF_conc.M
+  86  execute_unload "./output_GDX/cAct_Kd_results.gdx" Kd.L Kd.M
+  87  execute 'gdxdump ./output_GDX/cAct_TF_conc_results.gdx noData > ../data/GAMS_output/cAct_TF_conc_results.csv symb=TF_conc format=csv';
+  88  execute 'gdxdump ./output_GDX/cAct_Kd_results.gdx noData > ../data/GAMS_output/cAct_Kd_results.csv symb=Kd format=csv';
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 11/01/23 16:17:18 Page 2
 cActivator toy example
 Include File Summary
 
 
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
-     1        1 INPUT          0       0  /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/cAct_model.gms
+     1        1 INPUT          0       0  /home/chris/github/regulonML/GAMs/cAct_model.gms
      2       10 CALL           1      10  csv2gdx ../data/save_for_GAMs/composite_cAct_vals.csv id=cEff index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input.gdx
-     3       11 GDXIN          1      11  /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/input_GDX/input.gdx
+     3       11 GDXIN          1      11  /home/chris/github/regulonML/GAMs/input_GDX/input.gdx
      4       17 CALL           1      17  csv2gdx ../data/save_for_GAMs/exported_TF_conc.csv id=meas_TF index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input2.gdx
-     5       18 GDXIN          1      18  /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/input_GDX/input2.gdx
+     5       18 GDXIN          1      18  /home/chris/github/regulonML/GAMs/input_GDX/input2.gdx
 
 
-COMPILATION TIME     =        0.075 SECONDS      3 MB  43.4.1 3da5975b DEX-DEG
-GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/26/23 11:44:15 Page 3
+COMPILATION TIME     =        0.018 SECONDS      3 MB  44.1.1 27c4d1f8 LEX-LEG
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 11/01/23 16:17:18 Page 3
 cActivator toy example
-Equation Listing    SOLVE ElementWiseOptimization Using DNLP From line 68
+Equation Listing    SOLVE ElementWiseOptimization Using DNLP From line 70
 
 
 ---- obj1  =E=  difference between TF_conc div Kd and cEff
 
-obj1..  - (461376.125093445)*TF_conc(control__wt_glc__1) - (461349.68425163)*TF_conc(control__wt_glc__2) - (461434.779144033)*TF_conc(fur__wt_dpd__1) - (461400.636696588)*TF_conc(fur__wt_dpd__2) - (461391.780359702)*TF_conc(fur__wt_fe__1) - (461436.530292844)*TF_conc(fur__wt_fe__2) - (461348.773179055)*TF_conc(fur__delfur_dpd__1) - (461325.581191953)*TF_conc(fur__delfur_dpd__2) - (461659.612328503)*TF_conc(fur__delfur_fe2__1) - (461628.13051726)*TF_conc(fur__delfur_fe2__2) - (461693.974173883)*TF_conc(acid__wt_ph5__1) - (461685.358504608)*TF_conc(acid__wt_ph5__2) - (461701.027121753)*TF_conc(acid__delgadx_ph5__1) - (461732.310278376)*TF_conc(acid__delgadx_ph5__2) - (461699.270910994)*TF_conc(acid__delgadw_ph5__1) - (461703.564449785)*TF_conc(acid__delgadw_ph5__2) - (461768.088800245)*TF_conc(acid__delgade_ph5__1) - (461858.518216963)*TF_conc(acid__delgade_ph5__2) - (461529.150602029)*TF_conc(oxidative__wt_pq__1) - (461578.598621326)*TF_conc(oxidative__wt_pq__2) - (461775.494788853)*TF_conc(oxidative__deloxyr_pq__1) - (461807.535934957)*TF_conc(oxidative__deloxyr_pq__2) - (461633.82238256)*TF_conc(oxidative__delsoxr_pq__1) - (461702.276424052)*TF_conc(oxidative__delsoxr_pq__2) - (461797.604207414)*TF_conc(oxidative__delsoxs_pq__1) - (461772.369045114)*TF_conc(oxidative__delsoxs_pq__2) - (461242.171351194)*TF_conc(nac_ntrc__wt_csn__1) - (461253.985121019)*TF_conc(nac_ntrc__wt_csn__2) - (461265.994172252)*TF_conc(nac_ntrc__wt_cytd__1) - (461265.741962122)*TF_conc(nac_ntrc__wt_cytd__2) - (461410.729381748)*TF_conc(nac_ntrc__wt_gln__1) - (461378.603886118)*TF_conc(nac_ntrc__wt_gln__2) - (461497.447888621)*TF_conc(nac_ntrc__bw_delnac_csn__1) - (461313.179375779)*TF_conc(nac_ntrc__bw_delnac_csn__2) - (461558.403106778)*TF_conc(nac_ntrc__bw_delnac_cytd__1) - (461544.434244822)*TF_conc(nac_ntrc__bw_delnac_cytd__2) - (461770.519856979)*TF_conc(nac_ntrc__bw_delnac_gln__1) - (461762.023224286)*TF_conc(nac_ntrc__bw_delnac_gln__2) - (461639.147664897)*TF_conc(nac_ntrc__bw_delnac_nh4__1) - (461636.881449212)*TF_conc(nac_ntrc__bw_delnac_nh4__2) - (461681.211233153)*TF_conc(misc__wt_no_te__1) - (461638.558385217)*TF_conc(misc__wt_no_te__2) - (461580.064889288)*TF_conc(misc__bw_delcbl__1) - (461603.568571253)*TF_conc(misc__bw_delcbl__2) - (461471.564524829)*TF_conc(misc__bw_delfabr__1) - (461458.680346821)*TF_conc(misc__bw_delfabr__2) - (461586.923045356)*TF_conc(misc__bw_delfadr__1) - (461549.509130094)*TF_conc(misc__bw_delfadr__2) - (461596.406482259)*TF_conc(misc__nitr_031__1) - (461276.600428683)*TF_conc(omics__wt_glu__1) - (461357.566652142)*TF_conc(omics__wt_glu__2) - (461454.906116078)*TF_conc(omics__wt_gly__1) - (461464.980414602)*TF_conc(omics__wt_gly__2) - (461620.960306423)*TF_conc(omics__wt_thr__1) - (461705.942633614)*TF_conc(omics__wt_thr__2) - (461609.137390759)*TF_conc(omics__bw_ac__1) - (461697.801267392)*TF_conc(omics__bw_ac__2) - (461723.883887725)*TF_conc(omics__bw_fum__1) - (461812.825892271)*TF_conc(omics__bw_fum__2) - (461636.227255727)*TF_conc(omics__bw_glc__1) - (461664.74490369)*TF_conc(omics__bw_glc__2) - (461973.415216053)*TF_conc(omics__bw_pyr__1) - (461972.167353707)*TF_conc(omics__bw_pyr__2) - (461062.871483733)*TF_conc(ompr__wt_nacl__1) - (461078.991961154)*TF_conc(ompr__wt_nacl__2) - (460922.238438064)*TF_conc(ompr__bw_delompr_nacl__1) - (460914.186578237)*TF_conc(ompr__bw_delompr_nacl__2) - (461508.835695685)*TF_conc(minspan__wt_ade__1) - (461314.740285953)*TF_conc(minspan__wt_glc__1) - (461411.568292949)*TF_conc(minspan__wt_glc__2) - (461376.942928927)*TF_conc(minspan__wt_glc__3) - (461339.081304518)*TF_conc(minspan__wt_glc__4) - (461524.142497241)*TF_conc(minspan__wt_glc_anaero__1) - (461420.778253141)*TF_conc(minspan__wt_glc_anaero__2) - (461775.593702123)*TF_conc(minspan__wt_trp__1) - (461656.732396152)*TF_conc(minspan__bw_delcra_glc__1) - (461619.220353507)*TF_conc(minspan__bw_delcra_glc__2) - (461717.348982577)*TF_conc(minspan__bw_delcra_trp__1) - (461704.813363038)*TF_conc(minspan__bw_delmntr__1) - (461516.840674054)*TF_conc(minspan__bw_delnac_ade__1) - (461703.388501338)*TF_conc(minspan__bw_delnac_glc__1) - (461633.48250752)*TF_conc(cra_crp__wt_ac__1) - (461530.99262701)*TF_conc(cra_crp__wt_ac__2) - (461302.972832021)*TF_conc(cra_crp__wt_fru__1) - (461418.074004723)*TF_conc(cra_crp__wt_fru__2) - (461496.035581157)*TF_conc(cra_crp__delcra_ac__1) - (461506.161797079)*TF_conc(cra_crp__delcra_ac__2) - (461534.700967305)*TF_conc(cra_crp__delcra_fru__1) - (461558.663099188)*TF_conc(cra_crp__delcra_fru__2) - (461451.395240251)*TF_conc(cra_crp__delcra_glc__1) - (461453.061596293)*TF_conc(cra_crp__delcra_glc__2) - (461533.59597347)*TF_conc(rpoB__wt_031__1) - (461483.492377284)*TF_conc(rpoB__wt_044__1) - (461645.682531655)*TF_conc(rpoB__wt_lb__1) - (461636.426195946)*TF_conc(rpoB__wt_lb__2) - (461739.03808679)*TF_conc(rpoB__rpoBE546V_031__1) - (461734.622559231)*TF_conc(rpoB__rpoBE546V_044__1) - (461491.237761335)*TF_conc(rpoB__rpoBE546V_lb__1) - (461527.376762363)*TF_conc(rpoB__rpoBE546V_lb__2) - (461374.794121079)*TF_conc(rpoB__rpoBE546V_glc__1) - (461124.208648648)*TF_conc(rpoB__rpoBE672K_glc__1) - (461209.734903089)*TF_conc(rpoB__rpoBE672K_glc__2) - (461438.945441403)*TF_conc(rpoB__rpoBE672K_lb__1) - (461444.330031352)*TF_conc(rpoB__rpoBE672K_lb__2) - (461370.594437448)*TF_conc(crp__wt_fru__1) - (461372.004587574)*TF_conc(crp__wt_glyc__1) - (461399.777988319)*TF_conc(crp__wt_glyc__2) - (462617.193550068)*TF_conc(crp__delar1_glyc__1) - (462828.525298142)*TF_conc(crp__delar1_glyc__2) - (460518.07483603)*TF_conc(crp__delcrp_fru__1) - (460518.07483603)*TF_conc(crp__delcrp_fru__2) - (460518.07483603)*TF_conc(crp__delcrp_fru__3) - (460519.09371297)*TF_conc(crp__delcrp_glc__1) - (460518.511665146)*TF_conc(crp__delcrp_glc__2) - (460518.07483603)*TF_conc(crp__delcrp_glc__3) - (460518.07483603)*TF_conc(crp__delcrp_glyc__1) - (460518.07483603)*TF_conc(crp__delcrp_glyc__2) - (460518.07483603)*TF_conc(crp__delcrp_glyc__3) - (463130.716894622)*TF_conc(glu__glu_ale3__1) - (461582.420860645)*TF_conc(glu__glu_ale4__1) - (461652.898542416)*TF_conc(glu__glu_ale5__1) - (461310.527885684)*TF_conc(glu__glu_ale6__1) - (463038.713800674)*TF_conc(glu__glu_ale8__1) - (462043.935111187)*TF_conc(glu__glu_ale9__1) - (462656.174099256)*TF_conc(glu__glu_ale10__1) - (461446.762058368)*TF_conc(42c__wt_42c__1) - (461748.052977837)*TF_conc(42c__42c_ale1__1) - (461406.495615266)*TF_conc(42c__42c_ale2__1) - (461211.657174644)*TF_conc(42c__42c_ale3__1) - (461473.17527088)*TF_conc(42c__42c_ale4__1) - (461266.766931461)*TF_conc(42c__42c_ale5__1) - (461701.972640835)*TF_conc(42c__42c_ale6__1) - (462093.11592886)*TF_conc(42c__42c_ale8__1) - (461604.14349695)*TF_conc(42c__42c_ale9__1) - (461783.837007615)*TF_conc(42c__42c_ale10__1) - (461715.527516518)*TF_conc(ssw__wt_ac__1) - (461548.949246443)*TF_conc(ssw__wt_glc__1) - (461783.315834897)*TF_conc(ssw__wt_glyc__1) - (462016.256555881)*TF_conc(ssw__wt_xyl__1) - (461807.138694322)*TF_conc(ssw__glc_ale1__1) - (462094.511544764)*TF_conc(ssw__glc_ale2__1) - (461898.513375608)*TF_conc(ssw__glc_ale3__1) - (461852.356759998)*TF_conc(ssw__glyc_ale1__1) - (461848.755130752)*TF_conc(ssw__glyc_ale2__1) - (461549.198411745)*TF_conc(ssw__xyl_ale1__1) - (461649.270421796)*TF_conc(ssw__xyl_ale2__1) - (461453.116740838)*TF_conc(ssw__xyl_ale3__1) - (461767.609547901)*TF_conc(ssw__glc_ac_ac2__1) - (461619.843105691)*TF_conc(ssw__glc_ac_glc1__1) - (462028.497077018)*TF_conc(ssw__glc_ac_glc2__1) - (462133.52466433)*TF_conc(ssw__glc_glyc_glc__1) - (461886.077426117)*TF_conc(ssw__glc_glyc_glyc__1) - (461709.809197583)*TF_conc(ssw__glc_xyl_glc__1) - (461396.524118755)*TF_conc(ssw__glc_xyl_xyl__1) - (461848.873574283)*TF_conc(pgi__glu4_delpgi__1) - (461505.001200511)*TF_conc(pgi__pgi_ale1__1) - (461666.583240204)*TF_conc(pgi__pgi_ale2__1) - (461633.164244574)*TF_conc(pgi__pgi_ale3__1) - (461627.277788464)*TF_conc(pgi__pgi_ale5__1) - (461783.571219632)*TF_conc(pgi__pgi_ale6__1) - (461787.604181867)*TF_conc(pgi__pgi_ale7__1) - (461631.346849146)*TF_conc(pgi__pgi_ale8__1) - (461565.988083904)*TF_conc(ica__wt_glc__1) - (461567.859371114)*TF_conc(ica__wt_glc__2) - (461671.380587747)*TF_conc(ica__wt_glc__3) - (462105.565118271)*TF_conc(ica__wt_glc__4) - (461767.678442255)*TF_conc(ica__arg_sbt__1) - (462009.788886617)*TF_conc(ica__arg_sbt__2) - (461880.835636987)*TF_conc(ica__cytd_rib__1) - (461920.316774159)*TF_conc(ica__cytd_rib__2) - (461504.5401735)*TF_conc(ica__gth__1) - (461370.067288384)*TF_conc(ica__gth__2) - (462614.412769061)*TF_conc(ica__leu_glcr__1) - (462589.631185386)*TF_conc(ica__leu_glcr__2) - (461613.850601674)*TF_conc(ica__met_glc__1) - (461532.21216751)*TF_conc(ica__met_glc__2) - (461779.8459808)*TF_conc(ica__no3_anaero__1) - (461762.921058703)*TF_conc(ica__no3_anaero__2) - (461631.999135481)*TF_conc(ica__phe_acgam__1) - (461626.813602398)*TF_conc(ica__phe_acgam__2) - (461858.773283194)*TF_conc(ica__thm_gal__1) - (461786.158410032)*TF_conc(ica__thm_gal__2) - (461728.142698787)*TF_conc(ica__tyr_glcn__1) - (461759.17769444)*TF_conc(ica__tyr_glcn__2) - (462521.619487464)*TF_conc(ica__ura_pyr__1) - (462959.185996741)*TF_conc(ica__ura_pyr__2) - (461774.881752308)*TF_conc(ica__wt_glc__5) - (461752.288475219)*TF_conc(ica__wt_glc__6) - (461448.559112857)*TF_conc(ica__bw_delpurR_cytd__1) - (461439.38259858)*TF_conc(ica__bw_delpurR_cytd__2) - (461879.688229967)*TF_conc(ica__ade_glc__1) - (461869.826714341)*TF_conc(ica__ade_glc__2) - (461917.768206546)*TF_conc(ytf__wt_glc__1) - (462069.697579396)*TF_conc(ytf__wt_glc__2) - (462016.79386404)*TF_conc(ytf__delyafC__1) - (462073.715759144)*TF_conc(ytf__delyafC__2) - (461827.91363645)*TF_conc(ytf__delyeiE__1) - (461837.27190457)*TF_conc(ytf__delyeiE__2) - (461997.377070258)*TF_conc(ytf__delyiaJ__1) - (462055.963124688)*TF_conc(ytf__delyiaJ__2) - (462462.149092767)*TF_conc(ytf__delyieP__1) - (462404.484020759)*TF_conc(ytf__delyieP__2) - (461982.643037799)*TF_conc(ytf__wt_ph5__1) - (462076.071327768)*TF_conc(ytf__wt_ph5__2) - (461882.689584334)*TF_conc(ytf__wt_ph8__1) - (461837.024507759)*TF_conc(ytf__wt_ph8__2) - (462133.260158572)*TF_conc(ytf__delybaO__1) - (462180.434309684)*TF_conc(ytf__delybaO__2) - (461817.662754762)*TF_conc(ytf__delybaQ__1) - (461786.529922673)*TF_conc(ytf__delybaQ__2) - (462225.566512371)*TF_conc(ytf__delybiH__1) - (462168.350079952)*TF_conc(ytf__delybiH__2) - (461903.389601989)*TF_conc(ytf__delydcI_ph5__1) - (462074.208130463)*TF_conc(ytf__delydcI_ph5__2) - (461953.230721974)*TF_conc(ytf__delydcI_ph8__1) - (461889.71429971)*TF_conc(ytf__delydcI_ph8__2) - (462431.822850447)*TF_conc(ytf__delyddM__1) - (462419.251264731)*TF_conc(ytf__delyddM__2) - (462105.563083463)*TF_conc(ytf__delyheO__1) - (462156.888117071)*TF_conc(ytf__delyheO__2) - (461822.925598317)*TF_conc(fps__bw_glc__1) - (461795.172456447)*TF_conc(fps__bw_glc__2) - (461987.360038808)*TF_conc(fps__fps_thrA_ale1__1) - (461971.108283208)*TF_conc(fps__fps_thrA_ale1__2) - (461879.846393652)*TF_conc(fps__fps_thrA_ale2__1) - (461871.862852346)*TF_conc(fps__fps_thrA_ale2__2) - (461896.592098354)*TF_conc(fps__fps_serB_ale1__1) - (461869.43151809)*TF_conc(fps__fps_serB_ale1__2) - (462046.426385273)*TF_conc(fps__fps_serB_ale4__1) - (462034.867842167)*TF_conc(fps__fps_serB_ale4__2) - (461748.229686737)*TF_conc(pal__lyx_ale2_f6__1) - (461433.8789061)*TF_conc(pal__lyx_ale2__1) - (461399.714623284)*TF_conc(pal__lyx_ale2__2) - (461433.8789061)*TF_conc(pal__lyx_ale4__1) - (461399.714623284)*TF_conc(pal__lyx_ale4__2) - (461491.673184566)*TF_conc(pal__5drib_ale10_f18__1) - (461470.728122104)*TF_conc(pal__5drib_ale10_f18__2) - (461760.747010016)*TF_conc(pal__5drib_ale10__1) - (461713.173600717)*TF_conc(pal__arab_ale14_f9__1) - (461791.274669954)*TF_conc(pal__arab_ale14_f9__2) - (461853.755740438)*TF_conc(pal__arab_ale14__1) - (461753.019019573)*TF_conc(pal__arab_ale14__2) - (461509.159192747)*TF_conc(pal__arab_ale16__1) - (461574.582591165)*TF_conc(pal__arab_ale16__2) - (461676.217639461)*TF_conc(pal__tartr_ale26_f10__1) - (461595.794580351)*TF_conc(pal__tartr_ale26_f10__2) - (461718.337082552)*TF_conc(pal__tartr_ale26__1) - (461719.961851784)*TF_conc(pal__tartr_ale26__2) - (461485.441749086)*TF_conc(pal__tartr_ale28_f10__1) - (461482.131151808)*TF_conc(pal__tartr_ale28_f10__2) - (461720.767558594)*TF_conc(pal__tartr_ale28__1) - (461766.003604337)*TF_conc(pal__tartr_ale28__2) - (461911.426116626)*TF_conc(efeU__delmenFentC_citr__1) - (462074.694047503)*TF_conc(efeU__delmenFentC_citr__2) - (462203.822134981)*TF_conc(efeU__delmenFentC__1) - (462225.647319371)*TF_conc(efeU__delmenFentC__2) - (462056.140783016)*TF_conc(efeU__menFentC_ale39__1) - (461999.370224168)*TF_conc(efeU__menFentC_ale39__2) - (462284.44020046)*TF_conc(efeU__menFentC_ale29__1) - (462308.710558247)*TF_conc(efeU__menFentC_ale29__2) - (461600.369841035)*TF_conc(efeU__menFentC_ale30__1) - (461531.536776)*TF_conc(efeU__menFentC_ale30__2) - (462103.158012545)*TF_conc(efeU__menFentCubiC_ale36__1) - (461949.313026359)*TF_conc(efeU__menFentCubiC_ale36__2) - (462267.898552111)*TF_conc(efeU__menFentCubiC_ale37__1) - (462390.299337255)*TF_conc(efeU__menFentCubiC_ale37__2) - (461805.513984696)*TF_conc(efeU__menFentCubiC_ale38__1) - (461820.885762387)*TF_conc(efeU__menFentCubiC_ale38__2) + (61866069.2440042)*Kd(b1101) + (61866069.2440042)*Kd(b2143) + diff1 =E= 0 ; (LHS = -53695069.4658941, INFES = 53695069.4658941 ****)
+obj1..  - (1098.83381135024)*TF_conc(42c__42c_ale10__1) - (771.844760423153)*TF_conc(42c__42c_ale2__1) - (602.900810703595)*TF_conc(42c__42c_ale3__1) - (829.646146959516)*TF_conc(42c__42c_ale4__1) - (650.693587590738)*TF_conc(42c__42c_ale5__1) - (1027.91610702757)*TF_conc(42c__42c_ale6__1) - (1366.6434427659)*TF_conc(42c__42c_ale8__1) - (943.151894992877)*TF_conc(42c__42c_ale9__1) - (806.750802347145)*TF_conc(42c__wt_42c__1) - (1085.19238465351)*TF_conc(acid__delgade_ph5__1) - (1163.51790392253)*TF_conc(acid__delgade_ph5__2) - (1025.57543022198)*TF_conc(acid__delgadw_ph5__1) - (1029.2951838344)*TF_conc(acid__delgadw_ph5__2) - (1027.09694652398)*TF_conc(acid__delgadx_ph5__1) - (1054.19855125765)*TF_conc(acid__delgadx_ph5__2) - (1020.98649727088)*TF_conc(acid__wt_ph5__1) - (1013.52202933628)*TF_conc(acid__wt_ph5__2) - (745.515246927152)*TF_conc(control__wt_glc__1) - (722.591130961456)*TF_conc(control__wt_glc__2) - (849.460727999658)*TF_conc(cra_crp__delcra_ac__1) - (858.237492303149)*TF_conc(cra_crp__delcra_ac__2) - (882.97240611755)*TF_conc(cra_crp__delcra_fru__1) - (903.739217208741)*TF_conc(cra_crp__delcra_fru__2) - (810.767004434827)*TF_conc(cra_crp__delcra_glc__1) - (812.211449549685)*TF_conc(cra_crp__delcra_glc__2) - (968.574611531909)*TF_conc(cra_crp__wt_ac__1) - (879.758472096525)*TF_conc(cra_crp__wt_ac__2) - (682.089285080483)*TF_conc(cra_crp__wt_fru__1) - (781.882108658724)*TF_conc(cra_crp__wt_fru__2) - (1820.04180715935)*TF_conc(crp__delar1_glyc__1) - (2002.72718562587)*TF_conc(crp__delar1_glyc__2) - (2780.86790172584)*TF_conc(crp__delar2_glyc__1) - (2617.83723530381)*TF_conc(crp__delar2_glyc__2) - (2516.25084363505)*TF_conc(crp__delar2_glyc__3) - (0.458717469964467)*TF_conc(crp__delcrp_fru__1) - (0.917434939928886)*TF_conc(crp__delcrp_fru__2) - (0.917434939928328)*TF_conc(crp__delcrp_fru__3) - (1.80241719686451)*TF_conc(crp__delcrp_glc__1) - (1.29685883963713)*TF_conc(crp__delcrp_glc__2) - (0.917434939927205)*TF_conc(crp__delcrp_glc__3) - (0.917434939926653)*TF_conc(crp__delcrp_glyc__1) - (0.917434939929505)*TF_conc(crp__delcrp_glyc__2) - (0.917434939927535)*TF_conc(crp__delcrp_glyc__3) - (740.72029647802)*TF_conc(crp__wt_fru__1) - (741.94286938337)*TF_conc(crp__wt_glyc__1) - (766.021109553378)*TF_conc(crp__wt_glyc__2) - (1462.46217987608)*TF_conc(efeU__delmenFentC__1) - (1481.34966463504)*TF_conc(efeU__delmenFentC__2) - (1209.33701725972)*TF_conc(efeU__delmenFentC_citr__1) - (1350.69665807041)*TF_conc(efeU__delmenFentC_citr__2) - (1532.22450696421)*TF_conc(efeU__menFentC_ale29__1) - (1553.22432317339)*TF_conc(efeU__menFentC_ale29__2) - (939.881845195311)*TF_conc(efeU__menFentC_ale30__1) - (880.230075241754)*TF_conc(efeU__menFentC_ale30__2) - (1334.63549980981)*TF_conc(efeU__menFentC_ale39__1) - (1375.33604105279)*TF_conc(efeU__menFentCubiC_ale36__1) - (1242.14448111088)*TF_conc(efeU__menFentCubiC_ale36__2) - (1517.91128950149)*TF_conc(efeU__menFentCubiC_ale37__1) - (1623.81056007594)*TF_conc(efeU__menFentCubiC_ale37__2) - (1117.6101015378)*TF_conc(efeU__menFentCubiC_ale38__1) - (1130.9243833263)*TF_conc(efeU__menFentCubiC_ale38__2) - (1132.69115610654)*TF_conc(fps__bw_glc__1) - (1108.65252634182)*TF_conc(fps__bw_glc__2) - (1196.49104235516)*TF_conc(fps__fps_serB_ale1__1) - (1172.96943226997)*TF_conc(fps__fps_serB_ale1__2) - (1326.22569934976)*TF_conc(fps__fps_serB_ale4__1) - (1316.21918310183)*TF_conc(fps__fps_serB_ale4__2) - (1275.08787524604)*TF_conc(fps__fps_thrA_ale1__1) - (1261.0164586974)*TF_conc(fps__fps_thrA_ale1__2) - (1181.98908798056)*TF_conc(fps__fps_thrA_ale2__1) - (1175.07507312011)*TF_conc(fps__fps_thrA_ale2__2) - (721.801210858915)*TF_conc(fur__delfur_dpd__1) - (701.692719062608)*TF_conc(fur__delfur_dpd__2) - (991.215154289727)*TF_conc(fur__delfur_fe2__1) - (963.937147840241)*TF_conc(fur__delfur_fe2__2) - (796.363411289273)*TF_conc(fur__wt_dpd__1) - (766.765546383012)*TF_conc(fur__wt_dpd__2) - (759.08768798543)*TF_conc(fur__wt_fe__1) - (797.881411723336)*TF_conc(fur__wt_fe__2) - (1853.74475426527)*TF_conc(glu__glu_ale10__1) - (2263.81134003704)*TF_conc(glu__glu_ale3__1) - (924.327846075524)*TF_conc(glu__glu_ale4__1) - (985.398024329722)*TF_conc(glu__glu_ale5__1) - (688.640287125639)*TF_conc(glu__glu_ale6__1) - (2184.34156597455)*TF_conc(glu__glu_ale8__1) - (1324.0689630046)*TF_conc(glu__glu_ale9__1) - (1181.85211407802)*TF_conc(ica__ade_glc__1) - (1173.31169010722)*TF_conc(ica__ade_glc__2) - (1084.83691775771)*TF_conc(ica__arg_sbt__1) - (1294.50685102033)*TF_conc(ica__arg_sbt__2) - (808.308556035979)*TF_conc(ica__bw_delpurR_cytd__1) - (800.353948450233)*TF_conc(ica__bw_delpurR_cytd__2) - (1182.84579760604)*TF_conc(ica__cytd_rib__1) - (1217.0359581989)*TF_conc(ica__cytd_rib__2) - (856.831984370137)*TF_conc(ica__gth__1) - (740.263267467306)*TF_conc(ica__gth__2) - (1817.63740939514)*TF_conc(ica__leu_glcr__1) - (1796.20941513374)*TF_conc(ica__leu_glcr__2) - (951.563433577205)*TF_conc(ica__met_glc__1) - (880.815422904402)*TF_conc(ica__met_glc__2) - (1095.37674443589)*TF_conc(ica__no3_anaero__1) - (1080.71587743317)*TF_conc(ica__no3_anaero__2) - (967.28928498741)*TF_conc(ica__phe_acgam__1) - (962.796041695984)*TF_conc(ica__phe_acgam__2) - (1163.73880807423)*TF_conc(ica__thm_gal__1) - (1100.84461934846)*TF_conc(ica__thm_gal__2) - (1050.58814903581)*TF_conc(ica__tyr_glcn__1) - (1077.47319226668)*TF_conc(ica__tyr_glcn__2) - (1737.39556069552)*TF_conc(ica__ura_pyr__1) - (2115.63488390046)*TF_conc(ica__ura_pyr__2) - (910.087209069922)*TF_conc(ica__wt_glc__1) - (911.708891312686)*TF_conc(ica__wt_glc__2) - (1001.41150583408)*TF_conc(ica__wt_glc__3) - (1377.41964460749)*TF_conc(ica__wt_glc__4) - (1091.07663890429)*TF_conc(ica__wt_glc__5) - (1071.50534500228)*TF_conc(ica__wt_glc__6) - (988.71986013245)*TF_conc(minspan__bw_delcra_glc__1) - (956.216431397972)*TF_conc(minspan__bw_delcra_glc__2) - (1041.23732860705)*TF_conc(minspan__bw_delcra_trp__1) - (1030.37718679945)*TF_conc(minspan__bw_delmntr__1) - (867.493059669807)*TF_conc(minspan__bw_delnac_ade__1) - (1029.14274968073)*TF_conc(minspan__bw_delnac_glc__1) - (860.555026569149)*TF_conc(minspan__wt_ade__1) - (692.292821184428)*TF_conc(minspan__wt_glc__1) - (776.242314291003)*TF_conc(minspan__wt_glc__2) - (746.224286439969)*TF_conc(minspan__wt_glc__3) - (713.398044401232)*TF_conc(minspan__wt_glc__4) - (873.82155283114)*TF_conc(minspan__wt_glc_anaero__1) - (784.226395236493)*TF_conc(minspan__wt_glc_anaero__2) - (1091.69334569759)*TF_conc(minspan__wt_trp__1) - (922.286193479698)*TF_conc(misc__bw_delcbl__1) - (942.653696644127)*TF_conc(misc__bw_delcbl__2) - (828.249967117871)*TF_conc(misc__bw_delfabr__1) - (817.081904890132)*TF_conc(misc__bw_delfabr__2) - (928.229348863353)*TF_conc(misc__bw_delfadr__1) - (895.806045889793)*TF_conc(misc__bw_delfadr__2) - (936.447380190405)*TF_conc(misc__nitr_031__1) - (1009.92885488932)*TF_conc(misc__wt_no_te__1) - (972.972775862236)*TF_conc(misc__wt_no_te__2) - (850.684838452308)*TF_conc(nac_ntrc__bw_delnac_csn__1) - (690.939374022972)*TF_conc(nac_ntrc__bw_delnac_csn__2) - (903.513900251992)*TF_conc(nac_ntrc__bw_delnac_cytd__1) - (891.407893083873)*TF_conc(nac_ntrc__bw_delnac_cytd__2) - (1087.29824722284)*TF_conc(nac_ntrc__bw_delnac_gln__1) - (1079.9381317552)*TF_conc(nac_ntrc__bw_delnac_gln__2) - (973.483373855516)*TF_conc(nac_ntrc__bw_delnac_nh4__1) - (971.519743813777)*TF_conc(nac_ntrc__bw_delnac_nh4__2) - (629.364293747067)*TF_conc(nac_ntrc__wt_csn__1) - (639.609340074636)*TF_conc(nac_ntrc__wt_csn__2) - (650.023467901067)*TF_conc(nac_ntrc__wt_cytd__1) - (649.804756613962)*TF_conc(nac_ntrc__wt_cytd__2) - (775.515057307441)*TF_conc(nac_ntrc__wt_gln__1) - (747.664284018115)*TF_conc(nac_ntrc__wt_gln__2) - (947.479297045788)*TF_conc(omics__bw_ac__1) - (1024.30218069861)*TF_conc(omics__bw_ac__2) - (1046.89867871011)*TF_conc(omics__bw_fum__1) - (1123.94337341783)*TF_conc(omics__bw_fum__2) - (970.952896601188)*TF_conc(omics__bw_glc__1) - (995.662194073258)*TF_conc(omics__bw_glc__2) - (1263.01392307909)*TF_conc(omics__bw_pyr__1) - (1261.93345914702)*TF_conc(omics__bw_pyr__2) - (659.220880785118)*TF_conc(omics__wt_glu__1) - (729.425281667338)*TF_conc(omics__wt_glu__2) - (813.810326012947)*TF_conc(omics__wt_gly__1) - (822.542870340586)*TF_conc(omics__wt_gly__2) - (957.724123936957)*TF_conc(omics__wt_thr__1) - (1031.35553414381)*TF_conc(omics__wt_thr__2) - (351.814717926921)*TF_conc(ompr__bw_delompr_nacl__1) - (344.827048870883)*TF_conc(ompr__bw_delompr_nacl__2) - (473.841024205462)*TF_conc(ompr__wt_nacl__1) - (487.826271431931)*TF_conc(ompr__wt_nacl__2) - (1091.60766487559)*TF_conc(oxidative__deloxyr_pq__1) - (1119.36144124558)*TF_conc(oxidative__deloxyr_pq__2) - (968.869109160722)*TF_conc(oxidative__delsoxr_pq__1) - (1028.17929248866)*TF_conc(oxidative__delsoxr_pq__2) - (1110.75886673686)*TF_conc(oxidative__delsoxs_pq__1) - (1088.90006834617)*TF_conc(oxidative__delsoxs_pq__2) - (878.162021426512)*TF_conc(oxidative__wt_pq__1) - (921.015540431599)*TF_conc(oxidative__wt_pq__2) - (1078.83261335507)*TF_conc(pal__5drib_ale10__1) - (845.679618847475)*TF_conc(pal__5drib_ale10_f18__1) - (1159.39326324401)*TF_conc(pal__arab_ale14__1) - (1072.13818974977)*TF_conc(pal__arab_ale14__2) - (1037.6200499854)*TF_conc(pal__arab_ale14_f9__1) - (1105.27630833463)*TF_conc(pal__arab_ale14_f9__2) - (860.835408588267)*TF_conc(pal__arab_ale16__1) - (917.535268474555)*TF_conc(pal__arab_ale16__2) - (795.583029010592)*TF_conc(pal__lyx_ale2__1) - (765.966176679328)*TF_conc(pal__lyx_ale2__2) - (1067.98934179291)*TF_conc(pal__lyx_ale2_f6__1) - (795.583029010592)*TF_conc(pal__lyx_ale4__1) - (765.966176679328)*TF_conc(pal__lyx_ale4__2) - (1042.09334921787)*TF_conc(pal__tartr_ale26__1) - (1043.50093149719)*TF_conc(pal__tartr_ale26__2) - (1005.6023884215)*TF_conc(pal__tartr_ale26_f10__1) - (935.917131423404)*TF_conc(pal__tartr_ale26_f10__2) - (1044.19893563329)*TF_conc(pal__tartr_ale28__1) - (1083.38610945474)*TF_conc(pal__tartr_ale28__2) - (840.278457427834)*TF_conc(pal__tartr_ale28_f10__1) - (837.408933188391)*TF_conc(pal__tartr_ale28_f10__2) - (1155.16491875319)*TF_conc(pgi__glu4_delpgi__1) - (857.231570281714)*TF_conc(pgi__pgi_ale1__1) - (997.254980071899)*TF_conc(pgi__pgi_ale2__1) - (968.298840325514)*TF_conc(pgi__pgi_ale3__1) - (963.198259087736)*TF_conc(pgi__pgi_ale5__1) - (1098.60358409858)*TF_conc(pgi__pgi_ale6__1) - (1102.09694754908)*TF_conc(pgi__pgi_ale7__1) - (966.724084310364)*TF_conc(pgi__pgi_ale8__1) - (1060.02682816239)*TF_conc(rpoB__rpoBE546V_031__1) - (1056.2016816554)*TF_conc(rpoB__rpoBE546V_044__1) - (744.361330013634)*TF_conc(rpoB__rpoBE546V_glc__1) - (845.302213609689)*TF_conc(rpoB__rpoBE546V_lb__1) - (876.624659747382)*TF_conc(rpoB__rpoBE546V_lb__2) - (527.051194963152)*TF_conc(rpoB__rpoBE672K_glc__1) - (601.233658080043)*TF_conc(rpoB__rpoBE672K_glc__2) - (799.974997367912)*TF_conc(rpoB__rpoBE672K_lb__1) - (804.642621187501)*TF_conc(rpoB__rpoBE672K_lb__2) - (882.014735844805)*TF_conc(rpoB__wt_031__1) - (838.588804196991)*TF_conc(rpoB__wt_044__1) - (979.145649715932)*TF_conc(rpoB__wt_lb__1) - (971.125274906551)*TF_conc(rpoB__wt_lb__2) - (1084.77723895171)*TF_conc(ssw__glc_ac_ac2__1) - (956.756055171005)*TF_conc(ssw__glc_ac_glc1__1) - (1310.70374735027)*TF_conc(ssw__glc_ac_glc2__1) - (1119.01736647369)*TF_conc(ssw__glc_ale1__1) - (1367.85152291043)*TF_conc(ssw__glc_ale2__1) - (1198.15485481109)*TF_conc(ssw__glc_ale3__1) - (1401.62078163076)*TF_conc(ssw__glc_glyc_glc__1) - (1187.38528829865)*TF_conc(ssw__glc_glyc_glyc__1) - (1034.70532666022)*TF_conc(ssw__glc_xyl_glc__1) - (763.20023170087)*TF_conc(ssw__glc_xyl_xyl__1) - (1158.1816393988)*TF_conc(ssw__glyc_ale1__1) - (1155.06233667203)*TF_conc(ssw__glyc_ale2__1) - (1039.65933318973)*TF_conc(ssw__wt_ac__1) - (895.320824712589)*TF_conc(ssw__wt_glc__1) - (1098.38236808205)*TF_conc(ssw__wt_glyc__1) - (1300.10640683071)*TF_conc(ssw__wt_xyl__1) - (895.536763009741)*TF_conc(ssw__xyl_ale1__1) - (982.25442021684)*TF_conc(ssw__xyl_ale2__1) - (812.259250330096)*TF_conc(ssw__xyl_ale3__1) - (1300.57159206052)*TF_conc(ytf__delyafC__1) - (1349.8497911836)*TF_conc(ytf__delyafC__2) - (1401.3918384187)*TF_conc(ytf__delybaO__1) - (1442.22139785165)*TF_conc(ytf__delybaO__2) - (1128.13280852317)*TF_conc(ytf__delybaQ__1) - (1101.166424136)*TF_conc(ytf__delybaQ__2) - (1481.27973601219)*TF_conc(ytf__delybiH__1) - (1431.76280911355)*TF_conc(ytf__delybiH__2) - (1202.37760115104)*TF_conc(ytf__delydcI_ph5__1) - (1350.27601846241)*TF_conc(ytf__delydcI_ph5__2) - (1245.53678315938)*TF_conc(ytf__delydcI_ph8__1) - (1190.53486084699)*TF_conc(ytf__delydcI_ph8__2) - (1659.72969498717)*TF_conc(ytf__delyddM__1) - (1648.85522140486)*TF_conc(ytf__delyddM__2) - (1137.01143638662)*TF_conc(ytf__delyeiE__1) - (1145.11677002214)*TF_conc(ytf__delyeiE__2) - (1421.84252356261)*TF_conc(ytf__delyheO__2) - (1283.76077300982)*TF_conc(ytf__delyiaJ__1) - (1334.4817017355)*TF_conc(ytf__delyiaJ__2) - (1685.96080320102)*TF_conc(ytf__delyieP__1) - (1636.08111675348)*TF_conc(ytf__delyieP__2) - (1214.82901942538)*TF_conc(ytf__wt_glc__1) - (1346.37138755877)*TF_conc(ytf__wt_glc__2) - (1271.00375910079)*TF_conc(ytf__wt_ph5__1) - (1351.88891398058)*TF_conc(ytf__wt_ph5__2) - (1184.45135772744)*TF_conc(ytf__wt_ph8__1) - (1144.9024981192)*TF_conc(ytf__wt_ph8__2) + (68834.9592089847)*Kd(b1101) + (68835.4179264546)*Kd(b1817) + (68835.4179264546)*Kd(b1818) + (68835.4179264546)*Kd(b1819) + diff1 =E= 0 ; (LHS = -119380.683200126, INFES = 119380.683200126 ****)
      
 
 ---- obj2  =E=  difference between measured TF conc and predicted TF conc
 
-obj2..  (0.416013150846262)*TF_conc(control__wt_glc__1) + (0.415965469910356)*TF_conc(control__wt_glc__2) + (0.416118931817968)*TF_conc(fur__wt_dpd__1) + (0.416057355214776)*TF_conc(fur__wt_dpd__2) + (0.416041383374059)*TF_conc(fur__wt_fe__1) + (0.41612209017355)*TF_conc(fur__wt_fe__2) + (0.415963827016167)*TF_conc(fur__delfur_dpd__1) + (0.415922007092526)*TF_conc(fur__delfur_dpd__2) + (0.416524536863812)*TF_conc(fur__delfur_fe2__1) + (0.416467730942766)*TF_conc(fur__delfur_fe2__2) + (0.416586543953018)*TF_conc(acid__wt_ph5__1) + (0.416570996258662)*TF_conc(acid__wt_ph5__2) + (0.416599271802131)*TF_conc(acid__delgadx_ph5__1) + (0.416655728171174)*TF_conc(acid__delgadx_ph5__2) + (0.416596102501269)*TF_conc(acid__delgadw_ph5__1) + (0.416603850747609)*TF_conc(acid__delgadw_ph5__2) + (0.41672030196563)*TF_conc(acid__delgade_ph5__1) + (0.416883533096659)*TF_conc(acid__delgade_ph5__2) + (0.416289156377299)*TF_conc(oxidative__wt_pq__1) + (0.416378363210396)*TF_conc(oxidative__wt_pq__2) + (0.41673366906757)*TF_conc(oxidative__deloxyr_pq__1) + (0.41679150274552)*TF_conc(oxidative__deloxyr_pq__2) + (0.416478001083096)*TF_conc(oxidative__delsoxr_pq__1) + (0.416601526330936)*TF_conc(oxidative__delsoxr_pq__2) + (0.416773575731284)*TF_conc(oxidative__delsoxs_pq__1) + (0.416728027372578)*TF_conc(oxidative__delsoxs_pq__2) + (0.415771619368298)*TF_conc(nac_ntrc__wt_csn__1) + (0.415792917911315)*TF_conc(nac_ntrc__wt_csn__2) + (0.415814569077988)*TF_conc(nac_ntrc__wt_cytd__1) + (0.415814114361538)*TF_conc(nac_ntrc__wt_cytd__2) + (0.41607555710479)*TF_conc(nac_ntrc__wt_gln__1) + (0.416017621008736)*TF_conc(nac_ntrc__wt_gln__2) + (0.416231968039225)*TF_conc(nac_ntrc__bw_delnac_csn__1) + (0.415899644929442)*TF_conc(nac_ntrc__bw_delnac_csn__2) + (0.41634192828314)*TF_conc(nac_ntrc__bw_delnac_cytd__1) + (0.416316727853998)*TF_conc(nac_ntrc__bw_delnac_cytd__2) + (0.416724689767159)*TF_conc(nac_ntrc__bw_delnac_gln__1) + (0.416709354340163)*TF_conc(nac_ntrc__bw_delnac_gln__2) + (0.416487609892623)*TF_conc(nac_ntrc__bw_delnac_nh4__1) + (0.416483520774783)*TF_conc(nac_ntrc__bw_delnac_nh4__2) + (0.416563512264595)*TF_conc(misc__wt_no_te__1) + (0.416486546605291)*TF_conc(misc__wt_no_te__2) + (0.416381008580981)*TF_conc(misc__bw_delcbl__1) + (0.416423413947723)*TF_conc(misc__bw_delcbl__2) + (0.416185280104627)*TF_conc(misc__bw_delfabr__1) + (0.416162040837945)*TF_conc(misc__bw_delfabr__2) + (0.416393381849985)*TF_conc(misc__bw_delfadr__1) + (0.416325883077586)*TF_conc(misc__bw_delfadr__2) + (0.416410491870792)*TF_conc(misc__nitr_031__1) + (0.415833691609054)*TF_conc(omics__wt_glu__1) + (0.415979684006757)*TF_conc(omics__wt_glu__2) + (0.416155233358911)*TF_conc(omics__wt_gly__1) + (0.416173404225716)*TF_conc(omics__wt_gly__2) + (0.416454793523882)*TF_conc(omics__wt_thr__1) + (0.416608142519079)*TF_conc(omics__wt_thr__2) + (0.416433461533904)*TF_conc(omics__bw_ac__1) + (0.416593450355767)*TF_conc(omics__bw_ac__2) + (0.416640520780146)*TF_conc(omics__bw_fum__1) + (0.416801051406876)*TF_conc(omics__bw_fum__2) + (0.416482340363841)*TF_conc(omics__bw_glc__1) + (0.41653379847271)*TF_conc(omics__bw_glc__2) + (0.417090975951701)*TF_conc(omics__bw_pyr__1) + (0.417088722699008)*TF_conc(omics__bw_pyr__2) + (0.415448434233472)*TF_conc(ompr__wt_nacl__1) + (0.415477485994513)*TF_conc(ompr__wt_nacl__2) + (0.415195033355872)*TF_conc(ompr__bw_delompr_nacl__1) + (0.415180527381847)*TF_conc(ompr__bw_delompr_nacl__2) + (0.416252509985227)*TF_conc(minspan__wt_ade__1) + (0.415902459429935)*TF_conc(minspan__wt_glc__1) + (0.416077070076814)*TF_conc(minspan__wt_glc__2) + (0.416014625697685)*TF_conc(minspan__wt_glc__3) + (0.415946350316925)*TF_conc(minspan__wt_glc__4) + (0.416280122025283)*TF_conc(minspan__wt_glc_anaero__1) + (0.416093680373392)*TF_conc(minspan__wt_glc_anaero__2) + (0.416733847598025)*TF_conc(minspan__wt_trp__1) + (0.416519340140014)*TF_conc(minspan__bw_delcra_glc__1) + (0.41645165410679)*TF_conc(minspan__bw_delcra_glc__2) + (0.41662872720779)*TF_conc(minspan__bw_delcra_trp__1) + (0.416606104586715)*TF_conc(minspan__bw_delmntr__1) + (0.416266950104153)*TF_conc(minspan__bw_delnac_ade__1) + (0.416603533224453)*TF_conc(minspan__bw_delnac_glc__1) + (0.416477387824629)*TF_conc(cra_crp__wt_ac__1) + (0.416292479316074)*TF_conc(cra_crp__wt_ac__2) + (0.415881241592379)*TF_conc(cra_crp__wt_fru__1) + (0.416088803187826)*TF_conc(cra_crp__wt_fru__2) + (0.416229420477507)*TF_conc(cra_crp__delcra_ac__1) + (0.416247686615897)*TF_conc(cra_crp__delcra_ac__2) + (0.416299169052635)*TF_conc(cra_crp__delcra_fru__1) + (0.416342397327885)*TF_conc(cra_crp__delcra_fru__2) + (0.416148900936083)*TF_conc(cra_crp__delcra_glc__1) + (0.416151906468171)*TF_conc(cra_crp__delcra_glc__2) + (0.416297175670713)*TF_conc(rpoB__wt_031__1) + (0.416206795019749)*TF_conc(rpoB__wt_044__1) + (0.416499401398237)*TF_conc(rpoB__wt_lb__1) + (0.416482699326596)*TF_conc(rpoB__wt_lb__2) + (0.416667870272881)*TF_conc(rpoB__rpoBE546V_031__1) + (0.416659901270844)*TF_conc(rpoB__rpoBE546V_044__1) + (0.416220766087308)*TF_conc(rpoB__rpoBE546V_lb__1) + (0.416285956454615)*TF_conc(rpoB__rpoBE546V_lb__2) + (0.416010750630131)*TF_conc(rpoB__rpoBE546V_glc__1) + (0.415558979348764)*TF_conc(rpoB__rpoBE672K_glc__1) + (0.41571314388105)*TF_conc(rpoB__rpoBE672K_glc__2) + (0.41612644613252)*TF_conc(rpoB__rpoBE672K_lb__1) + (0.416136157854406)*TF_conc(rpoB__rpoBE672K_lb__2) + (0.416003177153598)*TF_conc(crp__wt_fru__1) + (0.416005720132435)*TF_conc(crp__wt_glyc__1) + (0.416055806575566)*TF_conc(crp__wt_glyc__2) + (0.418254251661275)*TF_conc(crp__delar1_glyc__1) + (0.418636470880656)*TF_conc(crp__delar1_glyc__2) + (0.414467217968104)*TF_conc(crp__delcrp_fru__1) + (0.414467217968104)*TF_conc(crp__delcrp_fru__2) + (0.414467217968104)*TF_conc(crp__delcrp_fru__3) + (0.414469051952831)*TF_conc(crp__delcrp_glc__1) + (0.41446800426269)*TF_conc(crp__delcrp_glc__2) + (0.414467217968104)*TF_conc(crp__delcrp_glc__3) + (0.414467217968104)*TF_conc(crp__delcrp_glyc__1) + (0.414467217968104)*TF_conc(crp__delcrp_glyc__2) + (0.414467217968104)*TF_conc(crp__delcrp_glyc__3) + (0.419183324485052)*TF_conc(glu__glu_ale3__1) + (0.416385259129512)*TF_conc(glu__glu_ale4__1) + (0.416512422153183)*TF_conc(glu__glu_ale5__1) + (0.415894864009801)*TF_conc(glu__glu_ale6__1) + (0.419016795551847)*TF_conc(glu__glu_ale8__1) + (0.417218322919594)*TF_conc(glu__glu_ale9__1) + (0.41832473960484)*TF_conc(glu__glu_ale10__1) + (0.416140544329564)*TF_conc(42c__wt_42c__1) + (0.416684140294738)*TF_conc(42c__42c_ale1__1) + (0.416067921570748)*TF_conc(42c__42c_ale2__1) + (0.415716609181785)*TF_conc(42c__42c_ale3__1) + (0.41618818546226)*TF_conc(42c__42c_ale4__1) + (0.415815962307972)*TF_conc(42c__42c_ale5__1) + (0.416600978113972)*TF_conc(42c__42c_ale6__1) + (0.417307146638544)*TF_conc(42c__42c_ale8__1) + (0.416424451256301)*TF_conc(42c__42c_ale9__1) + (0.41674872623225)*TF_conc(42c__42c_ale10__1) + (0.416625440029646)*TF_conc(ssw__wt_ac__1) + (0.416324873028136)*TF_conc(ssw__wt_glc__1) + (0.416747785541276)*TF_conc(ssw__wt_glyc__1) + (0.417168337826582)*TF_conc(ssw__wt_xyl__1) + (0.416790785708931)*TF_conc(ssw__glc_ale1__1) + (0.417309667348547)*TF_conc(ssw__glc_ale2__1) + (0.416955737221116)*TF_conc(ssw__glc_ale3__1) + (0.416872410241004)*TF_conc(ssw__glyc_ale1__1) + (0.416865908535477)*TF_conc(ssw__glyc_ale2__1) + (0.4163253225308)*TF_conc(ssw__xyl_ale1__1) + (0.416505875453816)*TF_conc(ssw__xyl_ale2__1) + (0.416152005930113)*TF_conc(ssw__xyl_ale3__1) + (0.416719436968317)*TF_conc(ssw__glc_ac_ac2__1) + (0.41645277774437)*TF_conc(ssw__glc_ac_glc1__1) + (0.417190442786861)*TF_conc(ssw__glc_ac_glc2__1) + (0.417380134488053)*TF_conc(ssw__glc_glyc_glc__1) + (0.416933285662881)*TF_conc(ssw__glc_glyc_glyc__1) + (0.416615120331705)*TF_conc(ssw__glc_xyl_glc__1) + (0.416049938403899)*TF_conc(ssw__glc_xyl_xyl__1) + (0.416866122350394)*TF_conc(pgi__glu4_delpgi__1) + (0.41624559305759)*TF_conc(pgi__pgi_ale1__1) + (0.41653711573193)*TF_conc(pgi__pgi_ale2__1) + (0.416476813562667)*TF_conc(pgi__pgi_ale3__1) + (0.416466192328997)*TF_conc(pgi__pgi_ale5__1) + (0.416748246497956)*TF_conc(pgi__pgi_ale6__1) + (0.416755525826991)*TF_conc(pgi__pgi_ale7__1) + (0.41647353432874)*TF_conc(pgi__pgi_ale8__1) + (0.416355612228352)*TF_conc(ica__wt_glc__1) + (0.416358988224555)*TF_conc(ica__wt_glc__2) + (0.416545772558147)*TF_conc(ica__wt_glc__3) + (0.417329632174521)*TF_conc(ica__wt_glc__4) + (0.416719561314928)*TF_conc(ica__arg_sbt__1) + (0.417156658203134)*TF_conc(ica__arg_sbt__2) + (0.416923822446428)*TF_conc(ica__cytd_rib__1) + (0.416995102001125)*TF_conc(ica__cytd_rib__2) + (0.416244761429047)*TF_conc(ica__gth__1) + (0.416002226527082)*TF_conc(ica__gth__2) + (0.418249223443562)*TF_conc(ica__leu_glcr__1) + (0.418204414634213)*TF_conc(ica__leu_glcr__2) + (0.416441965476298)*TF_conc(ica__met_glc__1) + (0.416294679325249)*TF_conc(ica__met_glc__2) + (0.416741522653342)*TF_conc(ica__no3_anaero__1) + (0.41671097481281)*TF_conc(ica__no3_anaero__2) + (0.416474711286021)*TF_conc(ica__phe_acgam__1) + (0.416465354780111)*TF_conc(ica__phe_acgam__2) + (0.416883993553429)*TF_conc(ica__thm_gal__1) + (0.416752916261673)*TF_conc(ica__thm_gal__2) + (0.416648206765229)*TF_conc(ica__tyr_glcn__1) + (0.416704218555098)*TF_conc(ica__tyr_glcn__2) + (0.418081451647078)*TF_conc(ica__ura_pyr__1) + (0.418872874005414)*TF_conc(ica__ura_pyr__2) + (0.416732562587032)*TF_conc(ica__wt_glc__5) + (0.416691784604954)*TF_conc(ica__wt_glc__6) + (0.416143785564527)*TF_conc(ica__bw_delpurR_cytd__1) + (0.416127234591103)*TF_conc(ica__bw_delpurR_cytd__2) + (0.4169217509999)*TF_conc(ica__ade_glc__1) + (0.416903947937436)*TF_conc(ica__ade_glc__2) + (0.416990500613218)*TF_conc(ytf__wt_glc__1) + (0.417264850414584)*TF_conc(ytf__wt_glc__2) + (0.417169308130456)*TF_conc(ytf__delyafC__1) + (0.417272107555532)*TF_conc(ytf__delyafC__2) + (0.416828286208558)*TF_conc(ytf__delyeiE__1) + (0.416845179212506)*TF_conc(ytf__delyeiE__2) + (0.417134244815322)*TF_conc(ytf__delyiaJ__1) + (0.417240045412018)*TF_conc(ytf__delyiaJ__2) + (0.417973945881111)*TF_conc(ytf__delyieP__1) + (0.417869716832113)*TF_conc(ytf__delyieP__2) + (0.417107638727051)*TF_conc(ytf__wt_ph5__1) + (0.417276361922556)*TF_conc(ytf__wt_ph5__2) + (0.416927169441178)*TF_conc(ytf__wt_ph8__1) + (0.416844732621697)*TF_conc(ytf__wt_ph8__2) + (0.417379656706584)*TF_conc(ytf__delybaO__1) + (0.417464872542098)*TF_conc(ytf__delybaO__2) + (0.416809782303103)*TF_conc(ytf__delybaQ__1) + (0.416753586827631)*TF_conc(ytf__delybaQ__2) + (0.41754640792424)*TF_conc(ytf__delybiH__1) + (0.417443042645805)*TF_conc(ytf__delybiH__2) + (0.41696454080562)*TF_conc(ytf__delydcI_ph5__1) + (0.417272996820255)*TF_conc(ytf__delydcI_ph5__2) + (0.417054529757433)*TF_conc(ytf__delydcI_ph8__1) + (0.416939851522735)*TF_conc(ytf__delydcI_ph8__2) + (0.417919129876876)*TF_conc(ytf__delyddM__1) + (0.417896407241937)*TF_conc(ytf__delyddM__2) + (0.417329628499232)*TF_conc(ytf__delyheO__1) + (0.417422337388393)*TF_conc(ytf__delyheO__2) + (0.416819282230682)*TF_conc(fps__bw_glc__1) + (0.416769186419307)*TF_conc(fps__bw_glc__2) + (0.417116156394227)*TF_conc(fps__fps_thrA_ale1__1) + (0.417086810350661)*TF_conc(fps__fps_thrA_ale1__2) + (0.416922036536995)*TF_conc(fps__fps_thrA_ale2__1) + (0.41690762376034)*TF_conc(fps__fps_thrA_ale2__2) + (0.416952268554798)*TF_conc(fps__fps_serB_ale1__1) + (0.416903234494829)*TF_conc(fps__fps_serB_ale1__2) + (0.417222822093458)*TF_conc(fps__fps_serB_ale4__1) + (0.417201947880916)*TF_conc(fps__fps_serB_ale4__2) + (0.416684459221085)*TF_conc(pal__lyx_ale2_f6__1) + (0.416117308161935)*TF_conc(pal__lyx_ale2__1) + (0.416055692299875)*TF_conc(pal__lyx_ale2__2) + (0.416117308161935)*TF_conc(pal__lyx_ale4__1) + (0.416055692299875)*TF_conc(pal__lyx_ale4__2) + (0.416221551507535)*TF_conc(pal__5drib_ale10_f18__1) + (0.416183771460483)*TF_conc(pal__5drib_ale10_f18__2) + (0.416707050947235)*TF_conc(pal__5drib_ale10__1) + (0.416621191964992)*TF_conc(pal__arab_ale14_f9__1) + (0.41676215096053)*TF_conc(pal__arab_ale14_f9__2) + (0.416874935711418)*TF_conc(pal__arab_ale14__1) + (0.416693103113077)*TF_conc(pal__arab_ale14__2) + (0.416253093534232)*TF_conc(pal__arab_ale16__1) + (0.416371117723732)*TF_conc(pal__arab_ale16__2) + (0.416554501121723)*TF_conc(pal__tartr_ale26_f10__1) + (0.416409387866506)*TF_conc(pal__tartr_ale26_f10__2) + (0.416630510425494)*TF_conc(pal__tartr_ale26__1) + (0.41663344264443)*TF_conc(pal__tartr_ale26__2) + (0.416210311260381)*TF_conc(pal__tartr_ale28_f10__1) + (0.416204339675336)*TF_conc(pal__tartr_ale28_f10__2) + (0.416634896706298)*TF_conc(pal__tartr_ale28__1) + (0.416716538424894)*TF_conc(pal__tartr_ale28__2) + (0.416979050206771)*TF_conc(efeU__delmenFentC_citr__1) + (0.417273874428927)*TF_conc(efeU__delmenFentC_citr__2) + (0.417507123757496)*TF_conc(efeU__delmenFentC__1) + (0.417546553916492)*TF_conc(efeU__delmenFentC__2) + (0.417240366265718)*TF_conc(efeU__menFentC_ale39__1) + (0.417137844032918)*TF_conc(efeU__menFentC_ale39__2) + (0.417652780502049)*TF_conc(efeU__menFentC_ale29__1) + (0.417696635962549)*TF_conc(efeU__menFentC_ale29__2) + (0.416417642668499)*TF_conc(efeU__menFentC_ale30__1) + (0.416293460941444)*TF_conc(efeU__menFentC_ale30__2) + (0.417325284449643)*TF_conc(efeU__menFentCubiC_ale36__1) + (0.417047455942746)*TF_conc(efeU__menFentCubiC_ale36__2) + (0.417622891796214)*TF_conc(efeU__menFentCubiC_ale37__1) + (0.417844080148341)*TF_conc(efeU__menFentCubiC_ale37__2) + (0.416787853043957)*TF_conc(efeU__menFentCubiC_ale38__1) + (0.416815600122135)*TF_conc(efeU__menFentCubiC_ale38__2) + diff2 =E= 0 ; (LHS = -218.184660676379, INFES = 218.184660676379 ****)
+obj2..  (0.00055086272750081)*TF_conc(42c__42c_ale10__1) + (0.000386635438504141)*TF_conc(42c__42c_ale2__1) + (0.00030188537699775)*TF_conc(42c__42c_ale3__1) + (0.00041564699098092)*TF_conc(42c__42c_ale4__1) + (0.000325853492034813)*TF_conc(42c__42c_ale5__1) + (0.000515223156346765)*TF_conc(42c__42c_ale6__1) + (0.000685558964832237)*TF_conc(42c__42c_ale8__1) + (0.000472640888739986)*TF_conc(42c__42c_ale9__1) + (0.000404154448320737)*TF_conc(42c__wt_42c__1) + (0.000544006313643908)*TF_conc(acid__delgade_ph5__1) + (0.000583380140829303)*TF_conc(acid__delgade_ph5__2) + (0.000514047059096881)*TF_conc(acid__delgadw_ph5__1) + (0.000515916093898504)*TF_conc(acid__delgadw_ph5__2) + (0.000514811559190101)*TF_conc(acid__delgadx_ph5__1) + (0.000528429945234054)*TF_conc(acid__delgadx_ph5__2) + (0.000511741340488974)*TF_conc(acid__wt_ph5__1) + (0.000507990911546354)*TF_conc(acid__wt_ph5__2) + (0.000373422840292237)*TF_conc(control__wt_glc__1) + (0.000361920482579782)*TF_conc(control__wt_glc__2) + (0.000425594129365708)*TF_conc(cra_crp__delcra_ac__1) + (0.000430000462967189)*TF_conc(cra_crp__delcra_ac__2) + (0.000442419505631055)*TF_conc(cra_crp__delcra_fru__1) + (0.00045284735505062)*TF_conc(cra_crp__delcra_fru__2) + (0.000406170329375316)*TF_conc(cra_crp__delcra_glc__1) + (0.000406895359509841)*TF_conc(cra_crp__delcra_glc__2) + (0.000485410469206157)*TF_conc(cra_crp__wt_ac__1) + (0.00044080575283143)*TF_conc(cra_crp__wt_ac__2) + (0.000341601439195613)*TF_conc(cra_crp__wt_fru__1) + (0.000391672788545452)*TF_conc(cra_crp__wt_fru__2) + (0.000913991200503524)*TF_conc(crp__delar1_glyc__1) + (0.00100617207037038)*TF_conc(crp__delar1_glyc__2) + (0.00139971435122594)*TF_conc(crp__delar2_glyc__1) + (0.00131714101883816)*TF_conc(crp__delar2_glyc__2) + (0.00126572104731295)*TF_conc(crp__delar2_glyc__3) + (4.58718476381764E-7)*TF_conc(crp__delcrp_fru__1) + (4.58718476381739E-7)*TF_conc(crp__delcrp_fru__2) + (4.58718476381461E-7)*TF_conc(crp__delcrp_fru__3) + (9.01212482964111E-7)*TF_conc(crp__delcrp_glc__1) + (6.48431430823651E-7)*TF_conc(crp__delcrp_glc__2) + (4.58718476380899E-7)*TF_conc(crp__delcrp_glc__3) + (4.58718476380623E-7)*TF_conc(crp__delcrp_glyc__1) + (4.58718476382049E-7)*TF_conc(crp__delcrp_glyc__2) + (4.58718476381064E-7)*TF_conc(crp__delcrp_glyc__3) + (0.000371016831484096)*TF_conc(crp__wt_fru__1) + (0.000371630288514895)*TF_conc(crp__wt_glyc__1) + (0.000383712888114959)*TF_conc(crp__wt_glyc__2) + (0.000733793369397694)*TF_conc(efeU__delmenFentC__1) + (0.000743303786995577)*TF_conc(efeU__delmenFentC__2) + (0.00060642000071617)*TF_conc(efeU__delmenFentC_citr__1) + (0.000677533620640634)*TF_conc(efeU__delmenFentC_citr__2) + (0.000768925071456868)*TF_conc(efeU__menFentC_ale29__1) + (0.000779502689117277)*TF_conc(efeU__menFentC_ale29__2) + (0.000470998487498681)*TF_conc(efeU__menFentC_ale30__1) + (0.000441042548578857)*TF_conc(efeU__menFentC_ale30__2) + (0.000669451335017239)*TF_conc(efeU__menFentC_ale39__1) + (0.00068993384041607)*TF_conc(efeU__menFentCubiC_ale36__1) + (0.000622920131517306)*TF_conc(efeU__menFentCubiC_ale36__2) + (0.000761716104854123)*TF_conc(efeU__menFentCubiC_ale37__1) + (0.000815064788688893)*TF_conc(efeU__menFentCubiC_ale37__2) + (0.000560300742335617)*TF_conc(efeU__menFentCubiC_ale38__1) + (0.000566993759024284)*TF_conc(efeU__menFentCubiC_ale38__2) + (0.000567881938045553)*TF_conc(fps__bw_glc__1) + (0.000555798057835782)*TF_conc(fps__bw_glc__2) + (0.000599959972251027)*TF_conc(fps__fps_serB_ale1__1) + (0.000588132370932071)*TF_conc(fps__fps_serB_ale1__2) + (0.000665219608060067)*TF_conc(fps__fps_serB_ale4__1) + (0.000660184651284948)*TF_conc(fps__fps_serB_ale4__2) + (0.000639491229488141)*TF_conc(fps__fps_thrA_ale1__1) + (0.000632412744087733)*TF_conc(fps__fps_thrA_ale1__2) + (0.000592667655525639)*TF_conc(fps__fps_thrA_ale2__1) + (0.000589191116750806)*TF_conc(fps__fps_thrA_ale2__2) + (0.000361524156341327)*TF_conc(fur__delfur_dpd__1) + (0.000351435636180152)*TF_conc(fur__delfur_dpd__2) + (0.000496783897239677)*TF_conc(fur__delfur_fe2__1) + (0.000483081001117132)*TF_conc(fur__delfur_fe2__2) + (0.000398940810255499)*TF_conc(fur__wt_dpd__1) + (0.000384086472965026)*TF_conc(fur__wt_dpd__2) + (0.000380233514679201)*TF_conc(fur__wt_fe__1) + (0.000399702708700681)*TF_conc(fur__wt_fe__2) + (0.000930991258361338)*TF_conc(glu__glu_ale10__1) + (0.00113805167279769)*TF_conc(glu__glu_ale3__1) + (0.000463186753727494)*TF_conc(glu__glu_ale4__1) + (0.000493861557028289)*TF_conc(glu__glu_ale5__1) + (0.000344887691742132)*TF_conc(glu__glu_ale6__1) + (0.0010978922612709)*TF_conc(glu__glu_ale8__1) + (0.000664134387427692)*TF_conc(glu__glu_ale9__1) + (0.000592598780522802)*TF_conc(ica__ade_glc__1) + (0.000588304462258827)*TF_conc(ica__ade_glc__2) + (0.000543827655890476)*TF_conc(ica__arg_sbt__1) + (0.0006492605326208)*TF_conc(ica__arg_sbt__2) + (0.00040493633818365)*TF_conc(ica__bw_delpurR_cytd__1) + (0.000400943709566551)*TF_conc(ica__bw_delpurR_cytd__2) + (0.000593098438447525)*TF_conc(ica__cytd_rib__1) + (0.000610291860896769)*TF_conc(ica__cytd_rib__2) + (0.000429294821832277)*TF_conc(ica__gth__1) + (0.00037078750648167)*TF_conc(ica__gth__2) + (0.00091277850604171)*TF_conc(ica__leu_glcr__1) + (0.000901971587274832)*TF_conc(ica__leu_glcr__2) + (0.000476865750101132)*TF_conc(ica__met_glc__1) + (0.000441336457109294)*TF_conc(ica__met_glc__2) + (0.000549125104393318)*TF_conc(ica__no3_anaero__1) + (0.00054175644211356)*TF_conc(ica__no3_anaero__2) + (0.000484764825088897)*TF_conc(ica__phe_acgam__1) + (0.000482507814171985)*TF_conc(ica__phe_acgam__2) + (0.000583491209026001)*TF_conc(ica__thm_gal__1) + (0.000551873431711644)*TF_conc(ica__thm_gal__2) + (0.000526615638981698)*TF_conc(ica__tyr_glcn__1) + (0.00054012671381668)*TF_conc(ica__tyr_glcn__2) + (0.000872315298684359)*TF_conc(ica__ura_pyr__1) + (0.00106318416977098)*TF_conc(ica__ura_pyr__2) + (0.000456035143107695)*TF_conc(ica__wt_glc__1) + (0.000456849523127233)*TF_conc(ica__wt_glc__2) + (0.000501906414437415)*TF_conc(ica__wt_glc__3) + (0.000690982518918498)*TF_conc(ica__wt_glc__4) + (0.000546963785436133)*TF_conc(ica__wt_glc__5) + (0.000537127423095292)*TF_conc(ica__wt_glc__6) + (0.000495530331239983)*TF_conc(minspan__bw_delcra_glc__1) + (0.000479202883099597)*TF_conc(minspan__bw_delcra_glc__2) + (0.000521916792271902)*TF_conc(minspan__bw_delcra_trp__1) + (0.000516459765498717)*TF_conc(minspan__bw_delmntr__1) + (0.000434647377650772)*TF_conc(minspan__bw_delnac_ade__1) + (0.000515839500877506)*TF_conc(minspan__bw_delnac_glc__1) + (0.000431164001087945)*TF_conc(minspan__wt_ade__1) + (0.000346719998004256)*TF_conc(minspan__wt_glc__1) + (0.000388842367971024)*TF_conc(minspan__wt_glc__2) + (0.00037377862660774)*TF_conc(minspan__wt_glc__3) + (0.000357308132250279)*TF_conc(minspan__wt_glc__4) + (0.000437824823377474)*TF_conc(minspan__wt_glc_anaero__1) + (0.000392849328528228)*TF_conc(minspan__wt_glc_anaero__2) + (0.000547273751864564)*TF_conc(minspan__wt_trp__1) + (0.000462161411251283)*TF_conc(misc__bw_delcbl__1) + (0.000472390664108397)*TF_conc(misc__bw_delcbl__2) + (0.000414946128816212)*TF_conc(misc__bw_delfabr__1) + (0.000409340090808184)*TF_conc(misc__bw_delfabr__2) + (0.000465146163153253)*TF_conc(misc__bw_delfadr__1) + (0.000448863669132682)*TF_conc(misc__bw_delfadr__2) + (0.000469273535412334)*TF_conc(misc__nitr_031__1) + (0.00050618561349648)*TF_conc(misc__wt_no_te__1) + (0.000487619781308487)*TF_conc(misc__wt_no_te__2) + (0.000426208677219968)*TF_conc(nac_ntrc__bw_delnac_csn__1) + (0.000346041032853962)*TF_conc(nac_ntrc__bw_delnac_csn__2) + (0.000452734208808853)*TF_conc(nac_ntrc__bw_delnac_cytd__1) + (0.000446655177418708)*TF_conc(nac_ntrc__bw_delnac_cytd__2) + (0.000545064726938031)*TF_conc(nac_ntrc__bw_delnac_gln__1) + (0.00054136555569111)*TF_conc(nac_ntrc__bw_delnac_gln__2) + (0.000487876270942021)*TF_conc(nac_ntrc__bw_delnac_nh4__1) + (0.000486889880459085)*TF_conc(nac_ntrc__bw_delnac_nh4__2) + (0.00031515615788889)*TF_conc(nac_ntrc__wt_csn__1) + (0.000320294245500678)*TF_conc(nac_ntrc__wt_csn__2) + (0.000325517388633608)*TF_conc(nac_ntrc__wt_cytd__1) + (0.000325407692630867)*TF_conc(nac_ntrc__wt_cytd__2) + (0.000388477388031402)*TF_conc(nac_ntrc__wt_gln__1) + (0.000374501201379274)*TF_conc(nac_ntrc__wt_gln__2) + (0.000474814390665302)*TF_conc(omics__bw_ac__1) + (0.000513407307240063)*TF_conc(omics__bw_ac__2) + (0.000524761631610669)*TF_conc(omics__bw_fum__1) + (0.000563484390397496)*TF_conc(omics__bw_fum__2) + (0.000486605137761546)*TF_conc(omics__bw_glc__1) + (0.000499018002717121)*TF_conc(omics__bw_glc__2) + (0.000633417519592275)*TF_conc(omics__bw_pyr__1) + (0.000632874017500046)*TF_conc(omics__bw_pyr__2) + (0.000330130511937245)*TF_conc(omics__wt_glu__1) + (0.000365349440251272)*TF_conc(omics__wt_glu__2) + (0.000407697911324522)*TF_conc(omics__wt_gly__1) + (0.000412081297090843)*TF_conc(omics__wt_gly__2) + (0.000479960186238672)*TF_conc(omics__wt_thr__1) + (0.000516951355911953)*TF_conc(omics__wt_thr__2) + (0.00017605542474404)*TF_conc(ompr__bw_delompr_nacl__1) + (0.000172555765625537)*TF_conc(ompr__bw_delompr_nacl__2) + (0.000237189146283721)*TF_conc(ompr__wt_nacl__1) + (0.000244197866394583)*TF_conc(ompr__wt_nacl__2) + (0.000547230687295852)*TF_conc(oxidative__deloxyr_pq__1) + (0.000561181106914416)*TF_conc(oxidative__deloxyr_pq__2) + (0.000485558401558572)*TF_conc(oxidative__delsoxr_pq__1) + (0.000515355397424215)*TF_conc(oxidative__delsoxr_pq__2) + (0.000556856829969875)*TF_conc(oxidative__delsoxs_pq__1) + (0.000545869814513469)*TF_conc(oxidative__delsoxs_pq__2) + (0.00044000416601997)*TF_conc(oxidative__wt_pq__1) + (0.000461523279066817)*TF_conc(oxidative__wt_pq__2) + (0.000540809936804047)*TF_conc(pal__5drib_ale10__1) + (0.000423695898108692)*TF_conc(pal__5drib_ale10_f18__1) + (0.000581306338038824)*TF_conc(pal__arab_ale14__1) + (0.00053744547097778)*TF_conc(pal__arab_ale14__2) + (0.000520099143088785)*TF_conc(pal__arab_ale14_f9__1) + (0.000554100991810533)*TF_conc(pal__arab_ale14_f9__2) + (0.000431304770179353)*TF_conc(pal__arab_ale16__1) + (0.000459775478329591)*TF_conc(pal__arab_ale16__2) + (0.00039854913132994)*TF_conc(pal__lyx_ale2__1) + (0.000383685320899725)*TF_conc(pal__lyx_ale2__2) + (0.000535360407890843)*TF_conc(pal__lyx_ale2_f6__1) + (0.00039854913132994)*TF_conc(pal__lyx_ale4__1) + (0.000383685320899725)*TF_conc(pal__lyx_ale4__2) + (0.000522346939340106)*TF_conc(pal__tartr_ale26__1) + (0.000523054247853073)*TF_conc(pal__tartr_ale26__2) + (0.000504011932870472)*TF_conc(pal__tartr_ale26_f10__1) + (0.000469007221721403)*TF_conc(pal__tartr_ale26_f10__2) + (0.000523404995911326)*TF_conc(pal__tartr_ale28__1) + (0.000543098482410299)*TF_conc(pal__tartr_ale28__2) + (0.000420984411068869)*TF_conc(pal__tartr_ale28_f10__1) + (0.000419543883115321)*TF_conc(pal__tartr_ale28_f10__2) + (0.000579180437068642)*TF_conc(pgi__glu4_delpgi__1) + (0.000429495435127818)*TF_conc(pgi__pgi_ale1__1) + (0.000499818198679158)*TF_conc(pgi__pgi_ale2__1) + (0.000485271943718308)*TF_conc(pgi__pgi_ale3__1) + (0.000482709850899408)*TF_conc(pgi__pgi_ale5__1) + (0.000550747007647386)*TF_conc(pgi__pgi_ale6__1) + (0.000552502901683275)*TF_conc(pgi__pgi_ale7__1) + (0.000484480915229409)*TF_conc(pgi__pgi_ale8__1) + (0.00053135884817801)*TF_conc(rpoB__rpoBE546V_031__1) + (0.000529436575666243)*TF_conc(rpoB__rpoBE546V_044__1) + (0.000372843823168687)*TF_conc(rpoB__rpoBE546V_glc__1) + (0.000423506431137268)*TF_conc(rpoB__rpoBE546V_lb__1) + (0.000439232253901929)*TF_conc(rpoB__rpoBE546V_lb__2) + (0.000263857975092899)*TF_conc(rpoB__rpoBE672K_glc__1) + (0.000301049397485879)*TF_conc(rpoB__rpoBE672K_glc__2) + (0.000400753507751115)*TF_conc(rpoB__rpoBE672K_lb__1) + (0.000403096289351884)*TF_conc(rpoB__rpoBE672K_lb__2) + (0.00044193864591021)*TF_conc(rpoB__wt_031__1) + (0.00042013618698346)*TF_conc(rpoB__wt_044__1) + (0.000490720654391914)*TF_conc(rpoB__wt_lb__1) + (0.000486691727968417)*TF_conc(rpoB__wt_lb__2) + (0.00054379766133695)*TF_conc(ssw__glc_ac_ac2__1) + (0.00047947393162002)*TF_conc(ssw__glc_ac_glc1__1) + (0.000657409564502204)*TF_conc(ssw__glc_ac_glc2__1) + (0.000561008146603682)*TF_conc(ssw__glc_ale1__1) + (0.000686166965532047)*TF_conc(ssw__glc_ale2__1) + (0.000600796653684881)*TF_conc(ssw__glc_ale3__1) + (0.000703163725618168)*TF_conc(ssw__glc_glyc_glc__1) + (0.0005953810791652)*TF_conc(ssw__glc_glyc_glyc__1) + (0.000518634544327778)*TF_conc(ssw__glc_xyl_glc__1) + (0.000382297283447926)*TF_conc(ssw__glc_xyl_xyl__1) + (0.000580697160882714)*TF_conc(ssw__glyc_ale1__1) + (0.000579128862016056)*TF_conc(ssw__glyc_ale2__1) + (0.000521123860248531)*TF_conc(ssw__wt_ac__1) + (0.000448620017532467)*TF_conc(ssw__wt_glc__1) + (0.000550635817259567)*TF_conc(ssw__wt_glyc__1) + (0.000652077726901554)*TF_conc(ssw__wt_xyl__1) + (0.000448728449893347)*TF_conc(ssw__xyl_ale1__1) + (0.000492282344585167)*TF_conc(ssw__xyl_ale2__1) + (0.000406919352896288)*TF_conc(ssw__xyl_ale3__1) + (0.000652311769779076)*TF_conc(ytf__delyafC__1) + (0.000677107445348582)*TF_conc(ytf__delyafC__2) + (0.000703048484575027)*TF_conc(ytf__delybaO__1) + (0.000723602478285799)*TF_conc(ytf__delybaO__2) + (0.000565590414348257)*TF_conc(ytf__delybaQ__1) + (0.000552035183239752)*TF_conc(ytf__delybaQ__2) + (0.000743268574244695)*TF_conc(ytf__delybiH__1) + (0.00071833714199078)*TF_conc(ytf__delybiH__2) + (0.000602920176161998)*TF_conc(ytf__delydcI_ph5__1) + (0.000677321938742224)*TF_conc(ytf__delydcI_ph5__2) + (0.000624626397760564)*TF_conc(ytf__delydcI_ph8__1) + (0.000596964841549873)*TF_conc(ytf__delydcI_ph8__2) + (0.000833165835536066)*TF_conc(ytf__delyddM__1) + (0.000827685438280229)*TF_conc(ytf__delyddM__2) + (0.000570053829166184)*TF_conc(ytf__delyeiE__1) + (0.000574128663113555)*TF_conc(ytf__delyeiE__2) + (0.000713343055456653)*TF_conc(ytf__delyheO__2) + (0.000643854281036594)*TF_conc(ytf__delyiaJ__1) + (0.000669373943847823)*TF_conc(ytf__delyiaJ__2) + (0.000846386671566349)*TF_conc(ytf__delyieP__1) + (0.00082124804946288)*TF_conc(ytf__delyieP__2) + (0.000609181958828964)*TF_conc(ytf__wt_glc__1) + (0.000675356999808365)*TF_conc(ytf__wt_glc__2) + (0.000637436706681238)*TF_conc(ytf__wt_ph5__1) + (0.000678133611611478)*TF_conc(ytf__wt_ph5__2) + (0.000593905773778324)*TF_conc(ytf__wt_ph8__1) + (0.000574020939122928)*TF_conc(ytf__wt_ph8__2) + diff2 =E= 0 ; (LHS = -268.320795749442, INFES = 268.320795749442 ****)
      
 
 ---- total_obj  =E=  
 
-total_obj..  - 100*diff1 - diff2 + total_diff =E= 0 ; (LHS = 0)
+total_obj..  - 1.9232141216397E-6*diff1 - diff2 + total_diff =E= 0 ; (LHS = 0)
      
-GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/26/23 11:44:15 Page 4
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 11/01/23 16:17:18 Page 4
 cActivator toy example
-Column Listing      SOLVE ElementWiseOptimization Using DNLP From line 68
+Column Listing      SOLVE ElementWiseOptimization Using DNLP From line 70
 
 
 ---- TF_conc  TF concentration
 
-TF_conc(control__wt_glc__1)
-                (.LO, .L, .UP, .M = -9, 0.000809432894788004, 0.000809432894788004, 0)
- (-461376.1251) obj1
-       (0.416)  obj2
+TF_conc(42c__42c_ale10__1)
+                (.LO, .L, .UP, .M = -9, -2.92334366573966, -2.92334366573966, 0)
+   (-1098.8338) obj1
+       (0.0006) obj2
         2       (OLD LEVEL ****)
 
-TF_conc(control__wt_glc__2)
-                (.LO, .L, .UP, .M = -9, 0.000784543352121975, 0.000784543352121975, 0)
- (-461349.6843) obj1
-       (0.416)  obj2
+TF_conc(42c__42c_ale2__1)
+                (.LO, .L, .UP, .M = -9, -3.07674571968021, -3.07674571968021, 0)
+    (-771.8448) obj1
+       (0.0004) obj2
         9       (OLD LEVEL ****)
 
-TF_conc(fur__wt_dpd__1)
-                (.LO, .L, .UP, .M = -9, 0.000864640587781451, 0.000864640587781451, 0)
- (-461434.7791) obj1
-       (0.4161) obj2
+TF_conc(42c__42c_ale3__1)
+                (.LO, .L, .UP, .M = -9, -3.18402981217823, -3.18402981217823, 0)
+    (-602.9008) obj1
+       (0.0003) obj2
         6       (OLD LEVEL ****)
 
-REMAINING 265 ENTRIES SKIPPED
+REMAINING 264 ENTRIES SKIPPED
 
 ---- Kd  Kd Values
 
 Kd(b1101)
                 (.LO, .L, .UP, .M = -9, -5, -5, 0)
- (6.1866069E+7) obj1
+   (68834.9592) obj1
+        5       (OLD LEVEL ****)
+
+Kd(b1817)
+                (.LO, .L, .UP, .M = -9, -5, -5, 0)
+   (68835.4179) obj1
         3       (OLD LEVEL ****)
 
-Kd(b2143)
+Kd(b1818)
                 (.LO, .L, .UP, .M = -9, -5, -5, 0)
- (6.1866069E+7) obj1
+   (68835.4179) obj1
         9       (OLD LEVEL ****)
 
+REMAINING ENTRY SKIPPED
 
 ---- diff1  difference between TF_conc div Kd and Ceff
 
 diff1
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
         1       obj1
-     -100       total_obj
+  -1.923214E-6  total_obj
 
 
 ---- diff2  difference between measured TF conc and predicted TF conc
@@ -178,50 +184,50 @@ total_diff
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
         1       total_obj
 
-GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/26/23 11:44:15 Page 5
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 11/01/23 16:17:18 Page 5
 cActivator toy example
-Range Statistics    SOLVE ElementWiseOptimization Using DNLP From line 68
+Range Statistics    SOLVE ElementWiseOptimization Using DNLP From line 70
 
 
 RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
 
 RHS       [min, max] : [        NA,        NA] - Zero values observed as well
-Bound     [min, max] : [ 9.961E-07, 9.000E+00]
-Matrix    [min, max] : [ 4.145E-01, 6.187E+07]
+Bound     [min, max] : [ 2.520E+00, 9.000E+00]
+Matrix    [min, max] : [ 4.587E-07, 6.884E+04]
 
-GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/26/23 11:44:15 Page 6
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 11/01/23 16:17:18 Page 6
 cActivator toy example
-Model Statistics    SOLVE ElementWiseOptimization Using DNLP From line 68
+Model Statistics    SOLVE ElementWiseOptimization Using DNLP From line 70
 
 
 MODEL STATISTICS
 
 BLOCKS OF EQUATIONS           3     SINGLE EQUATIONS            3
-BLOCKS OF VARIABLES           5     SINGLE VARIABLES          273  270 projected
+BLOCKS OF VARIABLES           5     SINGLE VARIABLES          274  271 projected
 NON ZERO ELEMENTS           543     NON LINEAR N-Z            538
-CODE LENGTH               8,037     CONSTANT POOL             560
+CODE LENGTH              13,354     CONSTANT POOL             910
 
 
-GENERATION TIME      =        0.009 SECONDS      4 MB  43.4.1 3da5975b DEX-DEG
-GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/26/23 11:44:15 Page 7
+GENERATION TIME      =        0.024 SECONDS      4 MB  44.1.1 27c4d1f8 LEX-LEG
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 11/01/23 16:17:18 Page 7
 cActivator toy example
-Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 68
+Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 70
 
 
                S O L V E      S U M M A R Y
 
      MODEL   ElementWiseOptimization   OBJECTIVE  total_diff
      TYPE    DNLP                      DIRECTION  MINIMIZE
-     SOLVER  CONOPT                    FROM LINE  68
+     SOLVER  CONOPT                    FROM LINE  70
 
 **** SOLVER STATUS     4 Terminated By Solver
 **** MODEL STATUS      7 Feasible Solution
-**** OBJECTIVE VALUE          2596158.6683
+**** OBJECTIVE VALUE              268.3809
 
- RESOURCE USAGE, LIMIT          0.137 10000000000.000
- ITERATION COUNT, LIMIT        50    2147483647
+ RESOURCE USAGE, LIMIT          0.978 10000000000.000
+ ITERATION COUNT, LIMIT       131    2147483647
  EVALUATION ERRORS              0             0
---- *** This solver runs with a community license. No commercial use.
+--- *** This solver runs with a demo license. No commercial use.
  
  
     C O N O P T 3   version 3.17N
@@ -230,16 +236,16 @@ Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 68
                     DK-2880 Bagsvaerd, Denmark
  
  
-    The model has 273 variables and 3 constraints
+    The model has 274 variables and 3 constraints
     with 543 Jacobian elements, 538 of which are nonlinear.
-    The Hessian of the Lagrangian has 270 elements on the diagonal,
-    536 elements below the diagonal, and 270 nonlinear variables.
+    The Hessian of the Lagrangian has 271 elements on the diagonal,
+    1068 elements below the diagonal, and 271 nonlinear variables.
  
  ** Warning **  The value of LFITER is out of range.
                 LFITER is decreased from 2147483647 to 1000000000.
  
  ** Warning **  The variance of the derivatives in the initial
-                point is large (= 9.2 ). A better initial
+                point is large (= 6.9 ). A better initial
                 point, a better scaling, or better bounds on the
                 variables will probably help the optimization.
  
@@ -249,25 +255,25 @@ Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 68
  
  
  ** Feasible solution. Convergence too slow. The change in objective
-    has been less than 7.7885E-06 for 20 consecutive iterations
+    has been less than 8.0514E-10 for 20 consecutive iterations
  
  
  ** Warning **  The variance of the derivatives in the final
-                point is large (= 5.5 ). A better scaling or
+                point is large (= 5.1 ). A better scaling or
                 better bounds on the variables will probably
                 help the optimization.
  
  
- CONOPT time Total                            0.129 seconds
-   of which: Function evaluations             0.061 = 47.3%
-             1st Derivative evaluations       0.030 = 23.3%
-             2nd Derivative evaluations       0.002 =  1.6%
-             Directional 2nd Derivative       0.007 =  5.4%
+ CONOPT time Total                            0.972 seconds
+   of which: Function evaluations             0.381 = 39.2%
+             1st Derivative evaluations       0.386 = 39.7%
+             2nd Derivative evaluations       0.009 =  0.9%
+             Directional 2nd Derivative       0.086 =  8.8%
  
 
                            LOWER          LEVEL          UPPER         MARGINAL
 
----- EQU obj1                .              .              .           100.0000      
+---- EQU obj1                .              .              .       1.9232141E-6      
 ---- EQU obj2                .              .              .             1.0000      
 ---- EQU total_obj           .              .              .             1.0000      
 
@@ -278,328 +284,310 @@ Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 68
 
                                    LOWER          LEVEL          UPPER         MARGINAL
 
-control__wt_glc__1                 -9.0000        -3.6303         0.0008     19009.8479  NOPT
-control__wt_glc__2                 -9.0000        -3.6225         0.0008     19352.5787  NOPT
-fur__wt_dpd__1                     -9.0000        -3.9566         0.0009      8966.6725  NOPT
-fur__wt_dpd__2                     -9.0000        -3.6532         0.0008     18033.5185  NOPT
-fur__wt_fe__1                      -9.0000        -3.6435         0.0008     18437.9563  NOPT
-fur__wt_fe__2                      -9.0000        -3.9522         0.0009      9058.0515  NOPT
-fur__delfur_dpd__1                 -9.0000        -3.6226         0.0008     19349.0249  NOPT
-fur__delfur_dpd__2                 -9.0000        -3.6317         0.0008     18947.2296  NOPT
-fur__delfur_fe2__1                 -9.0000        -5.0403         0.0011      -739.4686  NOPT
-fur__delfur_fe2__2                 -9.0000        -4.6488         0.0010       787.7544  NOPT
-acid__wt_ph5__1                    -9.0000        -5.1073         0.0011       274.0980  NOPT
-acid__wt_ph5__2                    -9.0000        -5.1022         0.0011       277.3081  NOPT
-acid__delgadx_ph5__1               -9.0000        -5.5351         0.0011      -236.6901  NOPT
-acid__delgadx_ph5__2               -9.0000        -5.8641         0.0011      -110.9465  NOPT
-acid__delgadw_ph5__1               -9.0000        -5.4802         0.0011      -268.5409  NOPT
-acid__delgadw_ph5__2               -9.0000        -5.6122         0.0011      -198.1544  NOPT
-acid__delgade_ph5__1               -9.0000        -6.0984         0.0012       -64.6946  NOPT
-acid__delgade_ph5__2               -9.0000        -6.2894         0.0013       -41.6716  NOPT
-oxidative__wt_pq__1                -9.0000        -4.2624         0.0010      4434.9226  NOPT
-oxidative__wt_pq__2                -9.0000        -4.7345         0.0010      1495.2412  NOPT
-oxidative__deloxyr_pq__1           -9.0000        -6.0209         0.0012       -77.3288  NOPT
-oxidative__deloxyr_pq__2           -9.0000        -5.8583         0.0012      -112.4446  NOPT
-oxidative__delsoxr_pq__1           -9.0000        -5.1712         0.0011       236.5800  NOPT
-oxidative__delsoxr_pq__2           -9.0000        -5.5803         0.0011      -213.2629  NOPT
-oxidative__delsoxs_pq__1           -9.0000        -5.7218         0.0012      -153.9709  NOPT
-oxidative__delsoxs_pq__2           -9.0000        -6.0668         0.0012       -30.0866  NOPT
-nac_ntrc__wt_csn__1                -9.0000        -3.3490         0.0007     36331.0863  NOPT
-nac_ntrc__wt_csn__2                -9.0000        -3.3565         0.0007     35706.4487  NOPT
-nac_ntrc__wt_cytd__1               -9.0000        -0.9277         0.0007   -4.144405E+6  NOPT
-nac_ntrc__wt_cytd__2               -9.0000        -3.3645         0.0007     35058.1176  NOPT
-nac_ntrc__wt_gln__1                -9.0000        -3.9566         0.0008      8966.3955  NOPT
-nac_ntrc__wt_gln__2                -9.0000        -3.6320         0.0008     18935.1741  NOPT
-nac_ntrc__bw_delnac_csn__1         -9.0000        -4.2624         0.0009      4434.6911  NOPT
-nac_ntrc__bw_delnac_csn__2         -9.0000        -3.6410         0.0008     18546.8940  NOPT
-nac_ntrc__bw_delnac_cytd__1        -9.0000        -4.7036         0.0010      1605.4443  NOPT
-nac_ntrc__bw_delnac_cytd__2        -9.0000        -4.2623         0.0010      4435.0342  NOPT
-nac_ntrc__bw_delnac_gln__1         -9.0000        -6.0792         0.0012       -67.6077  NOPT
-nac_ntrc__bw_delnac_gln__2         -9.0000        -6.1242         0.0012        26.3650  NOPT
-nac_ntrc__bw_delnac_nh4__1         -9.0000        -5.0500         0.0011      -723.2149  NOPT
-nac_ntrc__bw_delnac_nh4__2         -9.0000        -5.0560         0.0011      -713.2892  NOPT
-misc__wt_no_te__1                  -9.0000        -5.1295         0.0011       260.4311  NOPT
-misc__wt_no_te__2                  -9.0000        -5.0806         0.0011      -673.9791  NOPT
-misc__bw_delcbl__1                 -9.0000        -4.6177         0.0010     -1956.9360  NOPT
-misc__bw_delcbl__2                 -9.0000        -4.5971         0.0010     -2051.9811  NOPT
-misc__bw_delfabr__1                -9.0000        -3.9566         0.0009      8967.0960  NOPT
-misc__bw_delfabr__2                -9.0000        -3.9026         0.0009     -4391.5567  NOPT
-misc__bw_delfadr__1                -9.0000        -4.6973         0.0010      1628.9304  NOPT
-misc__bw_delfadr__2                -9.0000        -4.4382         0.0010      2958.0149  NOPT
-misc__nitr_031__1                  -9.0000        -4.6816         0.0010      1689.1847  NOPT
-omics__wt_glu__1                   -9.0000        -3.3722         0.0007     34435.6436  NOPT
-omics__wt_glu__2                   -9.0000        -3.6228         0.0008     19340.6058  NOPT
-omics__wt_gly__1                   -9.0000        -3.9566         0.0009      8966.9042  NOPT
-omics__wt_gly__2                   -9.0000        -3.9566         0.0009      8967.0202  NOPT
-omics__wt_thr__1                   -9.0000        -4.6949         0.0010       708.4328  NOPT
-omics__wt_thr__2                   -9.0000        -5.6709         0.0011      -173.1103  NOPT
-omics__bw_ac__1                    -9.0000        -4.3900         0.0010     -3305.3408  NOPT
-omics__bw_ac__2                    -9.0000        -4.8215         0.0011     -1223.9309  NOPT
-omics__bw_fum__1                   -9.0000        -5.4979         0.0011      -257.8436  NOPT
-omics__bw_fum__2                   -9.0000        -5.1469         0.0012      -578.5471  NOPT
-omics__bw_glc__1                   -9.0000        -5.0773         0.0011      -679.0437  NOPT
-omics__bw_glc__2                   -9.0000        -5.0378         0.0011      -743.8091  NOPT
-omics__bw_pyr__1                   -9.0000        -4.3666         0.0014      1508.6791  NOPT
-omics__bw_pyr__2                   -9.0000        -3.6180         0.0014      8456.7017  NOPT
-ompr__wt_nacl__1                   -9.0000        -3.2793         0.0005     42648.6590  NOPT
-ompr__wt_nacl__2                   -9.0000        -3.2828         0.0005     42311.5855  NOPT
-ompr__bw_delompr_nacl__1           -9.0000        -3.2676         0.0004     43820.8011  NOPT
-ompr__bw_delompr_nacl__2           -9.0000        -3.2678         0.0004     43796.4422  NOPT
-minspan__wt_ade__1                 -9.0000        -4.2624         0.0009      4434.7743  NOPT
-minspan__wt_glc__1                 -9.0000        -3.6397         0.0008     18601.2210  NOPT
-minspan__wt_glc__2                 -9.0000        -3.9566         0.0008      8966.4050  NOPT
-minspan__wt_glc__3                 -9.0000        -3.6308         0.0008     18985.9473  NOPT
-minspan__wt_glc__4                 -9.0000        -3.6248         0.0008     19250.4161  NOPT
-minspan__wt_glc_anaero__1          -9.0000        -4.2624         0.0009      4434.8860  NOPT
-minspan__wt_glc_anaero__2          -9.0000        -3.9566         0.0009      8966.5111  NOPT
-minspan__wt_trp__1                 -9.0000        -5.9438         0.0012       -92.3490  NOPT
-minspan__bw_delcra_glc__1          -9.0000        -5.0967         0.0011       280.8401  NOPT
-minspan__bw_delcra_glc__2          -9.0000        -4.6988         0.0010      1623.5864  NOPT
-minspan__bw_delcra_trp__1          -9.0000        -5.8483         0.0011      -115.0548  NOPT
-minspan__bw_delmntr__1             -9.0000        -5.6112         0.0011      -198.6406  NOPT
-minspan__bw_delnac_ade__1          -9.0000        -4.2624         0.0009      4434.8327  NOPT
-minspan__bw_delnac_glc__1          -9.0000        -5.6009         0.0011      -203.4136  NOPT
-cra_crp__wt_ac__1                  -9.0000        -4.4842         0.0011     -2661.0259  NOPT
-cra_crp__wt_ac__2                  -9.0000        -4.2073         0.0010     -5034.6747  NOPT
-cra_crp__wt_fru__1                 -9.0000        -3.6495         0.0007    -18187.6282  NOPT
-cra_crp__wt_fru__2                 -9.0000        -3.9007         0.0008    -10198.6262  NOPT
-cra_crp__delcra_ac__1              -9.0000        -4.2097         0.0009     -5006.0675  NOPT
-cra_crp__delcra_ac__2              -9.0000        -4.2109         0.0009     -4993.1338  NOPT
-cra_crp__delcra_fru__1             -9.0000        -4.2624         0.0010      4434.9631  NOPT
-cra_crp__delcra_fru__2             -9.0000        -4.7042         0.0010      1603.2437  NOPT
-cra_crp__delcra_glc__1             -9.0000        -3.9566         0.0009      8966.8638  NOPT
-cra_crp__delcra_glc__2             -9.0000        -3.9566         0.0009      8966.8830  NOPT
-rpoB__wt_031__1                    -9.0000        -4.1977         0.0010     -5146.8692  NOPT
-rpoB__wt_044__1                    -9.0000        -4.2370         0.0009     -2033.1486  NOPT
-rpoB__wt_lb__1                     -9.0000        -4.9210         0.0011      -973.2529  NOPT
-rpoB__wt_lb__2                     -9.0000        -4.8598         0.0011     -1120.6482  NOPT
-rpoB__rpoBE546V_031__1             -9.0000        -5.7124         0.0012      -157.3400  NOPT
-rpoB__rpoBE546V_044__1             -9.0000        -5.7860         0.0011      -132.8168  NOPT
-rpoB__rpoBE546V_lb__1              -9.0000        -4.2098         0.0009     -5006.0246  NOPT
-rpoB__rpoBE546V_lb__2              -9.0000        -4.2109         0.0010     -4992.2896  NOPT
-rpoB__rpoBE546V_glc__1             -9.0000        -3.6294         0.0008     19047.1582  NOPT
-rpoB__rpoBE672K_glc__1             -9.0000        -3.2951         0.0006     41131.1949  NOPT
-rpoB__rpoBE672K_glc__2             -9.0000        -3.3305         0.0007     37908.6820  NOPT
-rpoB__rpoBE672K_lb__1              -9.0000        -3.9057         0.0009      4359.5179  NOPT
-rpoB__rpoBE672K_lb__2              -9.0000        -3.9057         0.0009      4359.5508  NOPT
-crp__wt_fru__1                     -9.0000        -3.6270         0.0008    -19152.7233  NOPT
-crp__wt_glyc__1                    -9.0000        -3.6278         0.0008    -19120.2947  NOPT
-crp__wt_glyc__2                    -9.0000        -3.3720         0.0008     14900.4849  NOPT
-crp__delar1_glyc__1                -9.0000        -5.2109         0.0020       499.2448  NOPT
-crp__delar1_glyc__2                -9.0000        -5.2114         0.0022       498.7281  NOPT
-crp__delcrp_fru__1                 -9.0000        -3.3836   9.9609233E-7     33549.0280  NOPT
-crp__delcrp_fru__2                 -9.0000        -3.3836   9.9609233E-7     33549.0256  NOPT
-crp__delcrp_fru__3                 -9.0000        -3.3836   9.9609233E-7     33549.0259  NOPT
-crp__delcrp_glc__1                 -9.0000        -3.3830   1.9569496E-6     33592.1416  NOPT
-crp__delcrp_glc__2                 -9.0000        -3.3833   1.4080466E-6     33567.5221  NOPT
-crp__delcrp_glc__3                 -9.0000        -3.3836   9.9609233E-7     33549.0281  NOPT
-crp__delcrp_glyc__1                -9.0000        -3.3836   9.9609233E-7     33549.0261  NOPT
-crp__delcrp_glyc__2                -9.0000        -3.3836   9.9609233E-7     33549.0279  NOPT
-crp__delcrp_glyc__3                -9.0000        -3.3836   9.9609233E-7     33549.0279  NOPT
-glu__glu_ale3__1                   -9.0000        -5.2120         0.0025       497.9844  NOPT
-glu__glu_ale4__1                   -9.0000        -4.6251         0.0010      -832.0105  NOPT
-glu__glu_ale5__1                   -9.0000        -4.9391         0.0011      -933.4869  NOPT
-glu__glu_ale6__1                   -9.0000        -3.6432         0.0007     18453.3180  NOPT
-glu__glu_ale8__1                   -9.0000        -3.4245         0.0024     30532.7657  NOPT
-glu__glu_ale9__1                   -9.0000        -4.9083         0.0014      1002.2491  NOPT
-glu__glu_ale10__1                  -9.0000        -5.0012         0.0020       809.2622  NOPT
-42c__wt_42c__1                     -9.0000        -3.9566         0.0009      8966.8104  NOPT
-42c__42c_ale1__1                   -9.0000        -5.5526         0.0012      -227.3101  NOPT
-42c__42c_ale2__1                   -9.0000        -3.6600         0.0008     17752.0930  NOPT
-42c__42c_ale3__1                   -9.0000        -3.3315         0.0007     37820.7658  NOPT
-42c__42c_ale4__1                   -9.0000        -3.9566         0.0009      8967.1145  NOPT
-42c__42c_ale5__1                   -9.0000        -3.3652         0.0007     35000.3269  NOPT
-42c__42c_ale6__1                   -9.0000        -5.5680         0.0011      -219.4207  NOPT
-42c__42c_ale8__1                   -9.0000        -4.7136         0.0015      -678.5631  NOPT
-42c__42c_ale9__1                   -9.0000        -4.6821         0.0010     -1687.1001  NOPT
-42c__42c_ale10__1                  -9.0000        -5.5711         0.0012      -217.8568  NOPT
-ssw__wt_ac__1                      -9.0000        -3.5928         0.0011    -20724.7515  NOPT
-ssw__wt_glc__1                     -9.0000        -4.2623         0.0010      4435.0671  NOPT
-ssw__wt_glyc__1                    -9.0000        -5.8056         0.0012      -126.9552  NOPT
-ssw__wt_xyl__1                     -9.0000        -3.6193         0.0014      8431.7889  NOPT
-ssw__glc_ale1__1                   -9.0000        -5.8198         0.0012      -122.8675  NOPT
-ssw__glc_ale2__1                   -9.0000        -4.9077         0.0015      1003.5515  NOPT
-ssw__glc_ale3__1                   -9.0000        -4.5780         0.0013     -2144.1347  NOPT
-ssw__glyc_ale1__1                  -9.0000        -6.2676         0.0013       -18.9496  NOPT
-ssw__glyc_ale2__1                  -9.0000        -6.1665         0.0013       -55.2992  NOPT
-ssw__xyl_ale1__1                   -9.0000        -4.2623         0.0010      4435.0690  NOPT
-ssw__xyl_ale2__1                   -9.0000        -5.0683         0.0011       299.8553  NOPT
-ssw__xyl_ale3__1                   -9.0000        -3.9566         0.0009      8966.8835  NOPT
-ssw__glc_ac_ac2__1                 -9.0000        -4.7272         0.0012     -1520.8220  NOPT
-ssw__glc_ac_glc1__1                -9.0000        -4.6974         0.0010      1628.7557  NOPT
-ssw__glc_ac_glc2__1                -9.0000        -3.6288         0.0014     19074.7618  NOPT
-ssw__glc_glyc_glc__1               -9.0000        -4.7140         0.0015      -677.9599  NOPT
-ssw__glc_glyc_glyc__1              -9.0000        -4.5775         0.0013     -2146.5846  NOPT
-ssw__glc_xyl_glc__1                -9.0000        -5.7598         0.0011      -141.0716  NOPT
-ssw__glc_xyl_xyl__1                -9.0000        -3.6486         0.0008     18226.1018  NOPT
-pgi__glu4_delpgi__1                -9.0000        -5.6082         0.0013      -200.0074  NOPT
-pgi__pgi_ale1__1                   -9.0000        -4.2358         0.0009     -4714.1473  NOPT
-pgi__pgi_ale2__1                   -9.0000        -4.7356         0.0011     -1491.4731  NOPT
-pgi__pgi_ale3__1                   -9.0000        -4.9778         0.0011      -853.9471  NOPT
-pgi__pgi_ale5__1                   -9.0000        -4.4961         0.0010     -2589.2912  NOPT
-pgi__pgi_ale6__1                   -9.0000        -5.8156         0.0012      -124.0529  NOPT
-pgi__pgi_ale7__1                   -9.0000        -5.7731         0.0012      -136.8159  NOPT
-pgi__pgi_ale8__1                   -9.0000        -5.1236         0.0010      -610.3836  NOPT
-ica__wt_glc__1                     -9.0000        -4.5516         0.0010     -2278.2368  NOPT
-ica__wt_glc__2                     -9.0000        -4.5579         0.0010     -2245.8043  NOPT
-ica__wt_glc__3                     -9.0000        -5.0291         0.0011      -758.8950  NOPT
-ica__wt_glc__4                     -9.0000        -4.3076         0.0015     -1728.2499  NOPT
-ica__arg_sbt__1                    -9.0000        -5.4227         0.0012      -306.6031  NOPT
-ica__arg_sbt__2                    -9.0000        -3.2653         0.0014    -44047.4218  NOPT
-ica__cytd_rib__1                   -9.0000        -4.5773         0.0013     -2147.6184  NOPT
-ica__cytd_rib__2                   -9.0000        -4.5789         0.0013     -2139.8491  NOPT
-ica__gth__1                        -9.0000        -4.2624         0.0009      4434.7429  NOPT
-ica__gth__2                        -9.0000        -3.6268         0.0008     19163.3219  NOPT
-ica__leu_glcr__1                   -9.0000        -3.4187         0.0020     30943.0752  NOPT
-ica__leu_glcr__2                   -9.0000        -3.4183         0.0020     13391.9423  NOPT
-ica__met_glc__1                    -9.0000        -4.5441         0.0010     -2318.3633  NOPT
-ica__met_glc__2                    -9.0000        -4.2358         0.0010     -2038.7485  NOPT
-ica__no3_anaero__1                 -9.0000        -5.9664         0.0012        37.9150  NOPT
-ica__no3_anaero__2                 -9.0000        -6.1241         0.0012       -60.9761  NOPT
-ica__phe_acgam__1                  -9.0000        -4.9915         0.0011      -827.5236  NOPT
-ica__phe_acgam__2                  -9.0000        -4.5379         0.0010     -2351.4751  NOPT
-ica__thm_gal__1                    -9.0000        -3.2616         0.0013     19213.4201  NOPT
-ica__thm_gal__2                    -9.0000        -4.7877         0.0012     -1323.0369  NOPT
-ica__tyr_glcn__1                   -9.0000        -5.8186         0.0011      -123.2216  NOPT
-ica__tyr_glcn__2                   -9.0000        -5.7830         0.0012      -133.7235  NOPT
-ica__ura_pyr__1                    -9.0000        -3.4174         0.0019     13420.7410  NOPT
-ica__ura_pyr__2                    -9.0000        -3.4234         0.0023     13237.0264  NOPT
-ica__wt_glc__5                     -9.0000        -5.7629         0.0012      -140.0653  NOPT
-ica__wt_glc__6                     -9.0000        -5.3025         0.0012      -404.3238  NOPT
-ica__bw_delpurR_cytd__1            -9.0000        -3.9522         0.0009      9058.1910  NOPT
-ica__bw_delpurR_cytd__2            -9.0000        -3.9566         0.0009      8966.7255  NOPT
-ica__ade_glc__1                    -9.0000        -4.5772         0.0013     -2147.8448  NOPT
-ica__ade_glc__2                    -9.0000        -4.5768         0.0013       929.6872  NOPT
-ytf__wt_glc__1                     -9.0000        -4.5788         0.0013     -2140.3494  NOPT
-ytf__wt_glc__2                     -9.0000        -4.3208         0.0015     -1676.3082  NOPT
-ytf__delyafC__1                    -9.0000        -3.6283         0.0014     19095.6753  NOPT
-ytf__delyafC__2                    -9.0000        -3.4242         0.0015     30549.5404  NOPT
-ytf__delyeiE__1                    -9.0000        -6.0623         0.0012       -70.3040  NOPT
-ytf__delyeiE__2                    -9.0000        -6.1531         0.0012       -57.0306  NOPT
-ytf__delyiaJ__1                    -9.0000        -4.2962         0.0014      4102.8238  NOPT
-ytf__delyiaJ__2                    -9.0000        -4.3361         0.0014      3742.1890  NOPT
-ytf__delyieP__1                    -9.0000        -3.4166         0.0018     31092.2839  NOPT
-ytf__delyieP__2                    -9.0000        -4.7078         0.0018      -687.7550  NOPT
-ytf__wt_ph5__1                     -9.0000        -4.3191         0.0014      3891.7598  NOPT
-ytf__wt_ph5__2                     -9.0000        -4.7384         0.0015       640.9160  NOPT
-ytf__wt_ph8__1                     -9.0000        -4.5774         0.0013      -928.5758  NOPT
-ytf__wt_ph8__2                     -9.0000        -6.0900         0.0012       -65.9498  NOPT
-ytf__delybaO__1                    -9.0000        -3.4251         0.0015     30492.4486  NOPT
-ytf__delybaO__2                    -9.0000        -3.1230         0.0016    -26433.4189  NOPT
-ytf__delybaQ__1                    -9.0000        -5.8995         0.0012      -102.2757  NOPT
-ytf__delybaQ__2                    -9.0000        -5.8033         0.0012      -127.6370  NOPT
-ytf__delybiH__1                    -9.0000        -4.3101         0.0016     -1718.4435  NOPT
-ytf__delybiH__2                    -9.0000        -4.2961         0.0016     -1774.3707  NOPT
-ytf__delydcI_ph5__1                -9.0000        -4.5806         0.0013       921.7078  NOPT
-ytf__delydcI_ph5__2                -9.0000        -4.3069         0.0015     -1730.8252  NOPT
-ytf__delydcI_ph8__1                -9.0000        -4.5889         0.0014      -904.1772  NOPT
-ytf__delydcI_ph8__2                -9.0000        -4.5776         0.0013      -927.9768  NOPT
-ytf__delyddM__1                    -9.0000        -5.0908         0.0018      -658.2601  NOPT
-ytf__delyddM__2                    -9.0000        -4.7332         0.0018       648.6785  NOPT
-ytf__delyheO__1                    -9.0000        -3.4247         0.0015     30518.9854  NOPT
-ytf__delyheO__2                    -9.0000        -3.6271         0.0015     19150.5046  NOPT
-fps__bw_glc__1                     -9.0000        -5.7466         0.0012      -145.4232  NOPT
-fps__bw_glc__2                     -9.0000        -5.4734         0.0012      -272.7824  NOPT
-fps__fps_thrA_ale1__1              -9.0000        -4.3348         0.0014     -1623.3771  NOPT
-fps__fps_thrA_ale1__2              -9.0000        -5.1050         0.0014      -637.2239  NOPT
-fps__fps_thrA_ale2__1              -9.0000        -5.0282         0.0013      -760.3878  NOPT
-fps__fps_thrA_ale2__2              -9.0000        -4.5769         0.0013     -2149.3898  NOPT
-fps__fps_serB_ale1__1              -9.0000        -4.5779         0.0013     -2144.5129  NOPT
-fps__fps_serB_ale1__2              -9.0000        -4.5768         0.0013       929.7209  NOPT
-fps__fps_serB_ale4__1              -9.0000        -4.7396         0.0014       639.1664  NOPT
-fps__fps_serB_ale4__2              -9.0000        -4.7146         0.0014      -677.0276  NOPT
-pal__lyx_ale2_f6__1                -9.0000        -5.4035         0.0012      -320.4293  NOPT
-pal__lyx_ale2__1                   -9.0000        -3.9009         0.0009    -10194.1975  NOPT
-pal__lyx_ale2__2                   -9.0000        -3.6521         0.0008      7817.7508  NOPT
-pal__lyx_ale4__1                   -9.0000        -3.9007         0.0009    -10198.8518  NOPT
-pal__lyx_ale4__2                   -9.0000        -3.6521         0.0008      7817.7507  NOPT
-pal__5drib_ale10_f18__1            -9.0000        -4.2084         0.0009     -5021.1820  NOPT
-pal__5drib_ale10_f18__2            -9.0000        -3.8446         0.0009    -11604.6902  NOPT
-pal__5drib_ale10__1                -9.0000        -5.3360         0.0012      -374.3468  NOPT
-pal__arab_ale14_f9__1              -9.0000        -5.7948         0.0011      -130.1417  NOPT
-pal__arab_ale14_f9__2              -9.0000        -5.5601         0.0012      -223.4368  NOPT
-pal__arab_ale14__1                 -9.0000        -6.1982         0.0013       -51.4091  NOPT
-pal__arab_ale14__2                 -9.0000        -5.8828         0.0012        45.9586  NOPT
-pal__arab_ale16__1                 -9.0000        -4.2383         0.0009      2027.1441  NOPT
-pal__arab_ale16__2                 -9.0000        -4.5004         0.0010      1108.7270  NOPT
-pal__tartr_ale26_f10__1            -9.0000        -4.8117         0.0011     -1251.8572  NOPT
-pal__tartr_ale26_f10__2            -9.0000        -4.2350         0.0010     -4722.8093  NOPT
-pal__tartr_ale26__1                -9.0000        -5.2790         0.0011      -426.8413  NOPT
-pal__tartr_ale26__2                -9.0000        -5.3004         0.0011      -406.3431  NOPT
-pal__tartr_ale28_f10__1            -9.0000        -4.2098         0.0009     -5005.9729  NOPT
-pal__tartr_ale28_f10__2            -9.0000        -3.8474         0.0009    -11529.3569  NOPT
-pal__tartr_ale28__1                -9.0000        -5.3082         0.0011      -399.0675  NOPT
-pal__tartr_ale28__2                -9.0000        -3.0303         0.0012    -32724.4543  NOPT
-efeU__delmenFentC_citr__1          -9.0000        -4.5785         0.0013     -2141.5951  NOPT
-efeU__delmenFentC_citr__2          -9.0000        -4.2942         0.0015     -1782.4684  NOPT
-efeU__delmenFentC__1               -9.0000        -4.7395         0.0016       639.2168  NOPT
-efeU__delmenFentC__2               -9.0000        -4.9078         0.0016       433.9180  NOPT
-efeU__menFentC_ale39__1            -9.0000        -3.6299         0.0014     19025.4982  NOPT
-efeU__menFentC_ale39__2            -9.0000        -3.6276         0.0014     19126.8744  NOPT
-efeU__menFentC_ale29__1            -9.0000        -4.7066         0.0017      -689.5716  NOPT
-efeU__menFentC_ale29__2            -9.0000        -4.3033         0.0017     -1745.5082  NOPT
-efeU__menFentC_ale30__1            -9.0000        -4.6865         0.0010       722.2955  NOPT
-efeU__menFentC_ale30__2            -9.0000        -4.2370         0.0010     -2033.3161  NOPT
-efeU__menFentCubiC_ale36__1        -9.0000        -5.0026         0.0015       806.5386  NOPT
-efeU__menFentCubiC_ale36__2        -9.0000        -5.3684         0.0013       150.2265  NOPT
-efeU__menFentCubiC_ale37__1        -9.0000        -4.7318         0.0016       650.7170  NOPT
-efeU__menFentCubiC_ale37__2        -9.0000        -4.7329         0.0018       649.0680  NOPT
-efeU__menFentCubiC_ale38__1        -9.0000        -5.8316         0.0012      -119.5769  NOPT
-efeU__menFentCubiC_ale38__2        -9.0000        -5.9981         0.0012       -81.4980  NOPT
+42c__42c_ale10__1                  -9.0000        -6.3460        -2.9233   3.4660357E-7  NOPT
+42c__42c_ale2__1                   -9.0000        -6.8072        -3.0767   -1.814615E-8      
+42c__42c_ale3__1                   -9.0000        -6.8915        -3.1840   -3.308930E-7  NOPT
+42c__42c_ale4__1                   -9.0000        -6.1439        -3.0454   1.1882345E-6  NOPT
+42c__42c_ale5__1                   -9.0000        -6.9465        -3.1509   8.7030183E-8      
+42c__42c_ale6__1                   -9.0000        -6.2773        -2.9523   4.0605638E-7  NOPT
+42c__42c_ale8__1                   -9.0000        -6.6976        -2.8286   1.5421827E-7  NOPT
+42c__42c_ale9__1                   -9.0000        -6.1675        -2.9897   -5.484297E-7  NOPT
+42c__wt_42c__1                     -9.0000        -6.2275        -3.0575   -4.776541E-7  NOPT
+acid__delgade_ph5__1               -9.0000        -6.0160        -2.9288   -7.776006E-7  NOPT
+acid__delgade_ph5__2               -9.0000        -6.2280        -2.8985   -4.773429E-7  NOPT
+acid__delgadw_ph5__1               -9.0000        -6.6538        -2.9533   3.6723480E-7  NOPT
+acid__delgadw_ph5__2               -9.0000        -6.5724        -2.9517   -2.159243E-7  NOPT
+acid__delgadx_ph5__1               -9.0000        -6.7554        -2.9527   1.3506663E-7  NOPT
+acid__delgadx_ph5__2               -9.0000        -6.4647        -2.9414   -5.804882E-7  NOPT
+acid__wt_ph5__1                    -9.0000        -6.6045        -2.9553   1.9116567E-7  NOPT
+acid__wt_ph5__2                    -9.0000        -6.1921        -2.9584   -5.183538E-7  NOPT
+control__wt_glc__1                 -9.0000        -6.6704        -3.0918   3.5351669E-7  NOPT
+control__wt_glc__2                 -9.0000        -6.8865        -3.1054   -1.510801E-8      
+cra_crp__delcra_ac__1              -9.0000        -5.8012        -3.0351   -1.840981E-7  NOPT
+cra_crp__delcra_ac__2              -9.0000        -5.8353        -3.0307   -1.702352E-7  NOPT
+cra_crp__delcra_fru__1             -9.0000        -6.4117        -3.0183   9.8443971E-7  NOPT
+cra_crp__delcra_fru__2             -9.0000        -6.4046        -3.0082   1.0007415E-6  NOPT
+cra_crp__delcra_glc__1             -9.0000        -6.1814        -3.0554   1.0899661E-6  NOPT
+cra_crp__delcra_glc__2             -9.0000        -6.5119        -3.0546   2.3668416E-7  NOPT
+cra_crp__wt_ac__1                  -9.0000        -5.3776        -2.9781   1.0649169E-5  NOPT
+cra_crp__wt_ac__2                  -9.0000        -5.8520        -3.0199   1.0814106E-6  NOPT
+cra_crp__wt_fru__1                 -9.0000        -5.5925        -3.1304   4.2300249E-6  NOPT
+cra_crp__wt_fru__2                 -9.0000        -6.3404        -3.0711   -5.315430E-8      
+crp__delar1_glyc__1                -9.0000        -7.1377        -2.7042   -8.565683E-9      
+crp__delar1_glyc__2                -9.0000        -7.6991        -2.6627   -6.928286E-8      
+crp__delar2_glyc__1                -9.0000        -9.0000        -2.5201         EPS         
+crp__delar2_glyc__2                -9.0000        -9.0000        -2.5463         EPS         
+crp__delar2_glyc__3                -9.0000        -9.0000        -2.5635         EPS         
+crp__delcrp_fru__1                 -9.0000        -6.0017        -6.0017   2.5315785E-6  NOPT
+crp__delcrp_fru__2                 -9.0000        -6.0017        -6.0017   2.5315785E-6  NOPT
+crp__delcrp_fru__3                 -9.0000        -6.0017        -6.0017   2.5315785E-6  NOPT
+crp__delcrp_glc__1                 -9.0000        -5.7084        -5.7084   4.9736049E-6  NOPT
+crp__delcrp_glc__2                 -9.0000        -5.8514        -5.8514   3.5785638E-6  NOPT
+crp__delcrp_glc__3                 -9.0000        -6.0017        -6.0017   2.5315785E-6  NOPT
+crp__delcrp_glyc__1                -9.0000        -6.0017        -6.0017   2.5315785E-6  NOPT
+crp__delcrp_glyc__2                -9.0000        -6.0017        -6.0017   2.5315785E-6  NOPT
+crp__delcrp_glyc__3                -9.0000        -6.0017        -6.0017   2.5315785E-6  NOPT
+crp__wt_fru__1                     -9.0000        -5.7713        -3.0946   2.8021772E-6  NOPT
+crp__wt_glyc__1                    -9.0000        -6.0848        -3.0939   -9.571544E-8      
+crp__wt_glyc__2                    -9.0000        -5.7742        -3.0800   1.2938305E-6  NOPT
+efeU__delmenFentC__1               -9.0000        -6.7648        -2.7992   1.3207864E-7  NOPT
+efeU__delmenFentC__2               -9.0000        -6.8173        -2.7936   -1.785192E-8      
+efeU__delmenFentC_citr__1          -9.0000        -6.0104        -2.8817   -1.652419E-6  NOPT
+efeU__delmenFentC_citr__2          -9.0000        -6.4398        -2.8337   -4.252317E-8      
+efeU__menFentC_ale29__1            -9.0000        -5.8921        -2.7790   -1.034882E-6  NOPT
+efeU__menFentC_ale29__2            -9.0000        -5.8613        -2.7730   -1.110992E-6  NOPT
+efeU__menFentC_ale30__1            -9.0000        -5.4875        -2.9912   -2.624957E-6  NOPT
+efeU__menFentC_ale30__2            -9.0000        -6.1356        -3.0197   -5.902227E-7  NOPT
+efeU__menFentC_ale39__1            -9.0000        -4.7194        -2.8389   -1.540033E-5  NOPT
+efeU__menFentCubiC_ale36__1        -9.0000        -6.8579        -2.8259   -1.624073E-8      
+efeU__menFentCubiC_ale36__2        -9.0000        -6.4237        -2.8701   -3.042228E-7  NOPT
+efeU__menFentCubiC_ale37__1        -9.0000        -6.7771        -2.7830   2.7637952E-7  NOPT
+efeU__menFentCubiC_ale37__2        -9.0000        -6.7515        -2.7537   1.3613845E-7  NOPT
+efeU__menFentCubiC_ale38__1        -9.0000        -5.6339        -2.9160   -1.874381E-6  NOPT
+efeU__menFentCubiC_ale38__2        -9.0000        -5.4954        -2.9108   -2.578388E-6  NOPT
+fps__bw_glc__1                     -9.0000        -4.9656        -2.9102   -8.733414E-6  NOPT
+fps__bw_glc__2                     -9.0000        -4.8578        -2.9195   -1.119252E-5  NOPT
+fps__fps_serB_ale1__1              -9.0000        -5.8779        -2.8864   -1.068953E-6  NOPT
+fps__fps_serB_ale1__2              -9.0000        -6.5117        -2.8950   -7.936678E-7  NOPT
+fps__fps_serB_ale4__1              -9.0000        -6.6444        -2.8417   3.7512111E-7  NOPT
+fps__fps_serB_ale4__2              -9.0000        -6.8588        -2.8449   1.0638635E-7  NOPT
+fps__fps_thrA_ale1__1              -9.0000        -6.6168        -2.8587   1.8576953E-7  NOPT
+fps__fps_thrA_ale1__2              -9.0000        -6.4200        -2.8636   2.9228708E-7  NOPT
+fps__fps_thrA_ale2__1              -9.0000        -6.4398        -2.8917   -9.364895E-7  NOPT
+fps__fps_thrA_ale2__2              -9.0000        -6.0359        -2.8942   2.3387955E-6  NOPT
+fur__delfur_dpd__1                 -9.0000        -6.9775        -3.1059   8.1015626E-8      
+fur__delfur_dpd__2                 -9.0000        -7.0363        -3.1181   -1.069938E-8      
+fur__delfur_fe2__1                 -9.0000        -6.7432        -2.9681   1.3890811E-7  NOPT
+fur__delfur_fe2__2                 -9.0000        -6.3076        -2.9802   8.1493665E-7  NOPT
+fur__wt_dpd__1                     -9.0000        -6.7615        -3.0632   -2.016034E-8      
+fur__wt_dpd__2                     -9.0000        -6.7616        -3.0796   2.8652162E-7  NOPT
+fur__wt_fe__1                      -9.0000        -6.5757        -3.0840   -3.091904E-8      
+fur__wt_fe__2                      -9.0000        -6.4639        -3.0623   2.6435651E-7  NOPT
+glu__glu_ale10__1                  -9.0000        -7.2182        -2.6962   -2.096509E-7  NOPT
+glu__glu_ale3__1                   -9.0000        -8.3812        -2.6094   -1.440633E-8      
+glu__glu_ale4__1                   -9.0000        -6.5810        -2.9984   4.3426512E-7  NOPT
+glu__glu_ale5__1                   -9.0000        -5.5994        -2.9707   6.3904768E-6  NOPT
+glu__glu_ale6__1                   -9.0000        -6.4908        -3.1263   -2.604657E-7  NOPT
+glu__glu_ale8__1                   -9.0000        -8.1825        -2.6250   -2.276331E-8      
+glu__glu_ale9__1                   -9.0000        -6.2724        -2.8424   -4.310282E-7  NOPT
+ica__ade_glc__1                    -9.0000        -6.2610        -2.8917   -4.424269E-7  NOPT
+ica__ade_glc__2                    -9.0000        -6.3550        -2.8949   -3.562666E-7  NOPT
+ica__arg_sbt__1                    -9.0000        -5.1194        -2.9289   -6.128688E-6  NOPT
+ica__arg_sbt__2                    -9.0000        -5.2533        -2.8522   1.4174982E-5  NOPT
+ica__bw_delpurR_cytd__1            -9.0000        -6.3953        -3.0567   -6.810263E-7  NOPT
+ica__bw_delpurR_cytd__2            -9.0000        -5.9534        -3.0610   2.8282774E-6  NOPT
+ica__cytd_rib__1                   -9.0000        -6.1033        -2.8913   6.0610634E-7  NOPT
+ica__cytd_rib__2                   -9.0000        -6.0085        -2.8790   7.5382818E-7  NOPT
+ica__gth__1                        -9.0000        -6.4101        -3.0314   9.8817071E-7  NOPT
+ica__gth__2                        -9.0000        -6.6661        -3.0949   3.5700275E-7  NOPT
+ica__leu_glcr__1                   -9.0000        -7.0723        -2.7048   -2.933378E-7  NOPT
+ica__leu_glcr__2                   -9.0000        -6.9753        -2.7099   -3.667764E-7  NOPT
+ica__met_glc__1                    -9.0000        -6.1287        -2.9858   -5.997711E-7  NOPT
+ica__met_glc__2                    -9.0000        -5.9931        -3.0194   -8.195402E-7  NOPT
+ica__no3_anaero__1                 -9.0000        -6.6426        -2.9247   3.7673904E-7  NOPT
+ica__no3_anaero__2                 -9.0000        -6.5736        -2.9306   4.4161478E-7  NOPT
+ica__phe_acgam__1                  -9.0000        -6.0751        -2.9787   1.3918102E-6  NOPT
+ica__phe_acgam__2                  -9.0000        -6.0299        -2.9807   -7.529628E-7  NOPT
+ica__thm_gal__1                    -9.0000        -6.0998        -2.8984   -9.285445E-8      
+ica__thm_gal__2                    -9.0000        -5.5744        -2.9225   6.7685955E-6  NOPT
+ica__tyr_glcn__1                   -9.0000        -6.0479        -2.9428   -7.224804E-7  NOPT
+ica__tyr_glcn__2                   -9.0000        -5.8264        -2.9319   -1.203103E-6  NOPT
+ica__ura_pyr__1                    -9.0000        -6.6387        -2.7244   -7.959924E-7  NOPT
+ica__ura_pyr__2                    -9.0000        -8.0060        -2.6388   -3.417304E-8      
+ica__wt_glc__1                     -9.0000        -6.1279        -3.0052   -6.008125E-7  NOPT
+ica__wt_glc__2                     -9.0000        -5.8881        -3.0044   -2.189594E-6  NOPT
+ica__wt_glc__3                     -9.0000        -6.3697        -2.9637   -3.443633E-7  NOPT
+ica__wt_glc__4                     -9.0000        -6.4085        -2.8252   -1.006629E-6  NOPT
+ica__wt_glc__5                     -9.0000        -5.8017        -2.9264   -1.273570E-6  NOPT
+ica__wt_glc__6                     -9.0000        -5.8065        -2.9343   -1.259778E-6  NOPT
+minspan__bw_delcra_glc__1          -9.0000        -6.8082        -2.9692   -1.813977E-8      
+minspan__bw_delcra_glc__2          -9.0000        -6.8383        -2.9837   -1.692282E-8      
+minspan__bw_delcra_trp__1          -9.0000        -5.6899        -2.9467   1.5702247E-6  NOPT
+minspan__bw_delmntr__1             -9.0000        -5.8795        -2.9513   -1.064785E-6  NOPT
+minspan__bw_delnac_ade__1          -9.0000        -6.1391        -3.0260   -1.228341E-6  NOPT
+minspan__bw_delnac_glc__1          -9.0000        -5.8801        -2.9518   2.1806630E-6  NOPT
+minspan__wt_ade__1                 -9.0000        -6.4199        -3.0295   9.6618157E-7  NOPT
+minspan__wt_glc__1                 -9.0000        -6.7044        -3.1240   -2.297271E-8      
+minspan__wt_glc__2                 -9.0000        -6.7387        -3.0743   -6.321541E-7  NOPT
+minspan__wt_glc__3                 -9.0000        -6.5994        -3.0914   1.9349966E-7  NOPT
+minspan__wt_glc__4                 -9.0000        -7.0769        -3.1109   -9.745369E-9      
+minspan__wt_glc_anaero__1          -9.0000        -6.3995        -3.0229   3.0653158E-7  NOPT
+minspan__wt_glc_anaero__2          -9.0000        -6.7808        -3.0698   -5.737782E-7  NOPT
+minspan__wt_trp__1                 -9.0000        -5.3511        -2.9262   3.4256551E-6  NOPT
+misc__bw_delcbl__1                 -9.0000        -6.1717        -2.9994   1.7109412E-6  NOPT
+misc__bw_delcbl__2                 -9.0000        -6.1131        -2.9899   -1.304373E-6  NOPT
+misc__bw_delfabr__1                -9.0000        -6.3742        -3.0461   6.9920348E-7  NOPT
+misc__bw_delfabr__2                -9.0000        -6.0779        -3.0520   -6.740523E-7  NOPT
+misc__bw_delfadr__1                -9.0000        -6.1022        -2.9966   2.0078189E-6  NOPT
+misc__bw_delfadr__2                -9.0000        -6.1599        -3.0121   -5.581823E-7  NOPT
+misc__nitr_031__1                  -9.0000        -6.8494        -2.9928   2.3404482E-7  NOPT
+misc__wt_no_te__1                  -9.0000        -6.7397        -2.9600   -2.124409E-8      
+misc__wt_no_te__2                  -9.0000        -6.9880        -2.9762   -1.199007E-8      
+nac_ntrc__bw_delnac_csn__1         -9.0000        -6.7878        -3.0345   2.6974717E-7  NOPT
+nac_ntrc__bw_delnac_csn__2         -9.0000        -6.6323        -3.1248   -3.945315E-7  NOPT
+nac_ntrc__bw_delnac_cytd__1        -9.0000        -6.3930        -3.0083   1.0278517E-6  NOPT
+nac_ntrc__bw_delnac_cytd__2        -9.0000        -6.3543        -3.0142   1.1237326E-6  NOPT
+nac_ntrc__bw_delnac_gln__1         -9.0000        -6.3749        -2.9279   1.0713913E-6  NOPT
+nac_ntrc__bw_delnac_gln__2         -9.0000        -6.4961        -2.9309   -2.574510E-7  NOPT
+nac_ntrc__bw_delnac_nh4__1         -9.0000        -6.6552        -2.9759   -5.703016E-7  NOPT
+nac_ntrc__bw_delnac_nh4__2         -9.0000        -6.7332        -2.9768   -6.401912E-7  NOPT
+nac_ntrc__wt_csn__1                -9.0000        -6.4590        -3.1654   -2.802127E-7  NOPT
+nac_ntrc__wt_csn__2                -9.0000        -6.8557        -3.1584   1.0727016E-7  NOPT
+nac_ntrc__wt_cytd__1               -9.0000        -6.9107        -3.1513   9.4499198E-8      
+nac_ntrc__wt_cytd__2               -9.0000        -6.9228        -3.1515   9.1906350E-8      
+nac_ntrc__wt_gln__1                -9.0000        -6.8516        -3.0747   -1.638252E-8      
+nac_ntrc__wt_gln__2                -9.0000        -6.6345        -3.0906   5.8943047E-7  NOPT
+omics__bw_ac__1                    -9.0000        -5.4138        -2.9877   9.7984035E-6  NOPT
+omics__bw_ac__2                    -9.0000        -5.5326        -2.9538   7.4530776E-6  NOPT
+omics__bw_fum__1                   -9.0000        -5.8854        -2.9444   -1.050398E-6  NOPT
+omics__bw_fum__2                   -9.0000        -6.2964        -2.9135   -5.903206E-8      
+omics__bw_glc__1                   -9.0000        -6.7495        -2.9771   2.9456602E-7  NOPT
+omics__bw_glc__2                   -9.0000        -6.6248        -2.9662   1.8246129E-7  NOPT
+omics__bw_pyr__1                   -9.0000        -5.7561        -2.8629   4.4537767E-6  NOPT
+omics__bw_pyr__2                   -9.0000        -6.2118        -2.8632   4.7199448E-7  NOPT
+omics__wt_glu__1                   -9.0000        -6.4521        -3.1452   -9.101724E-7  NOPT
+omics__wt_glu__2                   -9.0000        -6.5654        -3.1013   -3.164758E-8      
+omics__wt_gly__1                   -9.0000        -6.1425        -3.0538   -1.856560E-6  NOPT
+omics__wt_gly__2                   -9.0000        -6.0415        -3.0491   -7.329359E-7  NOPT
+omics__wt_thr__1                   -9.0000        -5.7386        -2.9830   -1.472698E-6  NOPT
+omics__wt_thr__2                   -9.0000        -6.3147        -2.9509   -8.199915E-7  NOPT
+ompr__bw_delompr_nacl__1           -9.0000        -6.6801        -3.4180   5.3079071E-7  NOPT
+ompr__bw_delompr_nacl__2           -9.0000        -6.8288        -3.4267   1.1418359E-7  NOPT
+ompr__wt_nacl__1                   -9.0000        -6.6164        -3.2886   6.1459506E-7  NOPT
+ompr__wt_nacl__2                   -9.0000        -6.5319        -3.2760   7.4654369E-7  NOPT
+oxidative__deloxyr_pq__1           -9.0000        -6.6653        -2.9262   3.5757221E-7  NOPT
+oxidative__deloxyr_pq__2           -9.0000        -6.5572        -2.9153   4.5863994E-7  NOPT
+oxidative__delsoxr_pq__1           -9.0000        -6.6473        -2.9780   -5.808004E-7  NOPT
+oxidative__delsoxr_pq__2           -9.0000        -6.8098        -2.9522   1.1915910E-7  NOPT
+oxidative__delsoxs_pq__1           -9.0000        -6.8296        -2.9187   1.1384346E-7  NOPT
+oxidative__delsoxs_pq__2           -9.0000        -6.6872        -2.9273   3.4000205E-7  NOPT
+oxidative__wt_pq__1                -9.0000        -6.3866        -3.0207   6.7949360E-7  NOPT
+oxidative__wt_pq__2                -9.0000        -6.3576        -3.0000   7.2633973E-7  NOPT
+pal__5drib_ale10__1                -9.0000        -6.0429        -2.9313   -1.057678E-7  NOPT
+pal__5drib_ale10_f18__1            -9.0000        -6.5650        -3.0371   -3.171500E-8      
+pal__arab_ale14__1                 -9.0000        -5.9757        -2.9000   -1.789799E-6  NOPT
+pal__arab_ale14__2                 -9.0000        -6.3012        -2.9340   3.8430031E-7  NOPT
+pal__arab_ale14_f9__1              -9.0000        -5.7812        -2.9482   2.7384565E-6  NOPT
+pal__arab_ale14_f9__2              -9.0000        -6.0906        -2.9208   -9.480324E-8      
+pal__arab_ale16__1                 -9.0000        -6.2890        -3.0294   -5.988298E-8      
+pal__arab_ale16__2                 -9.0000        -6.2572        -3.0017   -6.447708E-8      
+pal__lyx_ale2__1                   -9.0000        -6.8035        -3.0636   -5.445018E-7  NOPT
+pal__lyx_ale2__2                   -9.0000        -6.4124        -3.0801   -4.503063E-8      
+pal__lyx_ale2_f6__1                -9.0000        -5.8394        -2.9357   -1.689698E-7  NOPT
+pal__lyx_ale4__1                   -9.0000        -6.1698        -3.0636   5.2037291E-7  NOPT
+pal__lyx_ale4__2                   -9.0000        -6.1384        -3.0801   5.5939491E-7  NOPT
+pal__tartr_ale26__1                -9.0000        -6.2097        -2.9464   -1.044283E-6  NOPT
+pal__tartr_ale26__2                -9.0000        -6.4699        -2.9458   -5.735497E-7  NOPT
+pal__tartr_ale26_f10__1            -9.0000        -6.2259        -2.9618   4.5715497E-7  NOPT
+pal__tartr_ale26_f10__2            -9.0000        -6.3431        -2.9930   3.4906479E-7  NOPT
+pal__tartr_ale28__1                -9.0000        -6.1734        -2.9455   -7.828833E-8      
+pal__tartr_ale28__2                -9.0000        -6.2372        -2.9295   4.4531802E-7  NOPT
+pal__tartr_ale28_f10__1            -9.0000        -6.1308        -3.0399   -8.619063E-8      
+pal__tartr_ale28_f10__2            -9.0000        -6.2206        -3.0413   4.6284255E-7  NOPT
+pgi__glu4_delpgi__1                -9.0000        -5.4660        -2.9016   -2.758985E-6  NOPT
+pgi__pgi_ale1__1                   -9.0000        -5.9898        -3.0312   -1.732490E-6  NOPT
+pgi__pgi_ale2__1                   -9.0000        -5.9304        -2.9655   9.0260883E-7  NOPT
+pgi__pgi_ale3__1                   -9.0000        -5.9440        -2.9783   -9.175714E-7  NOPT
+pgi__pgi_ale5__1                   -9.0000        -5.5172        -2.9806   -2.451728E-6  NOPT
+pgi__pgi_ale6__1                   -9.0000        -6.2638        -2.9234   -6.361164E-8      
+pgi__pgi_ale7__1                   -9.0000        -5.2855        -2.9221   -4.181122E-6  NOPT
+pgi__pgi_ale8__1                   -9.0000        -6.3411        -2.9790   7.5443829E-7  NOPT
+rpoB__rpoBE546V_031__1             -9.0000        -5.1011        -2.9390   -1.340991E-5  NOPT
+rpoB__rpoBE546V_044__1             -9.0000        -5.3342        -2.9405   7.6645280E-6  NOPT
+rpoB__rpoBE546V_glc__1             -9.0000        -6.5860        -3.0925   4.2931831E-7  NOPT
+rpoB__rpoBE546V_lb__1              -9.0000        -5.9330        -3.0373   -4.040975E-6  NOPT
+rpoB__rpoBE546V_lb__2              -9.0000        -5.6005        -3.0215   6.3734308E-6  NOPT
+rpoB__rpoBE672K_glc__1             -9.0000        -6.9425        -3.2424   -2.942568E-7  NOPT
+rpoB__rpoBE672K_glc__2             -9.0000        -6.6071        -3.1852   -1.992116E-7  NOPT
+rpoB__rpoBE672K_lb__1              -9.0000        -5.9914        -3.0612   -3.532465E-6  NOPT
+rpoB__rpoBE672K_lb__2              -9.0000        -5.9460        -3.0587   -9.131761E-7  NOPT
+rpoB__wt_031__1                    -9.0000        -4.7080        -3.0188   3.2413897E-5  NOPT
+rpoB__wt_044__1                    -9.0000        -6.4169        -3.0407   -4.459529E-8      
+rpoB__wt_lb__1                     -9.0000        -5.5468        -2.9734   -2.290203E-6  NOPT
+rpoB__wt_lb__2                     -9.0000        -5.5301        -2.9770   -4.992818E-6  NOPT
+ssw__glc_ac_ac2__1                 -9.0000        -6.0421        -2.9289   -1.059590E-7  NOPT
+ssw__glc_ac_glc1__1                -9.0000        -6.8242        -2.9835   -2.536505E-7  NOPT
+ssw__glc_ac_glc2__1                -9.0000        -5.8699        -2.8468   3.4268697E-6  NOPT
+ssw__glc_ale1__1                   -9.0000        -5.8642        -2.9154   -1.102922E-6  NOPT
+ssw__glc_ale2__1                   -9.0000        -6.4004        -2.8282   -1.025632E-6  NOPT
+ssw__glc_ale3__1                   -9.0000        -5.7461        -2.8858   -1.447863E-6  NOPT
+ssw__glc_glyc_glc__1               -9.0000        -6.3662        -2.8176   3.3070961E-7  NOPT
+ssw__glc_glyc_glyc__1              -9.0000        -6.1820        -2.8897   -7.686993E-8      
+ssw__glc_xyl_glc__1                -9.0000        -6.1702        -2.9495   1.7165582E-6  NOPT
+ssw__glc_xyl_xyl__1                -9.0000        -6.5366        -3.0816   -3.382882E-8      
+ssw__glyc_ale1__1                  -9.0000        -6.3938        -2.9005   -4.718937E-8      
+ssw__glyc_ale2__1                  -9.0000        -6.1356        -2.9017   1.2108907E-6  NOPT
+ssw__wt_ac__1                      -9.0000        -6.0835        -2.9474   -6.656355E-7  NOPT
+ssw__wt_glc__1                     -9.0000        -6.3940        -3.0123   6.6788764E-7  NOPT
+ssw__wt_glyc__1                    -9.0000        -6.3210        -2.9235   3.6721243E-7  NOPT
+ssw__wt_xyl__1                     -9.0000        -5.4689        -2.8503   -5.750119E-6  NOPT
+ssw__xyl_ale1__1                   -9.0000        -6.3928        -3.0122   6.6975003E-7  NOPT
+ssw__xyl_ale2__1                   -9.0000        -6.0619        -2.9721   6.6687024E-7  NOPT
+ssw__xyl_ale3__1                   -9.0000        -6.7409        -3.0546   3.0051980E-7  NOPT
+ytf__delyafC__1                    -9.0000        -5.4987        -2.8501   5.2466628E-6  NOPT
+ytf__delyafC__2                    -9.0000        -5.9829        -2.8340   -1.217739E-7  NOPT
+ytf__delybaO__1                    -9.0000        -5.5064        -2.8177   -3.649696E-7  NOPT
+ytf__delybaO__2                    -9.0000        -6.8254        -2.8052   -5.178605E-7  NOPT
+ytf__delybaQ__1                    -9.0000        -6.6847        -2.9119   3.4193491E-7  NOPT
+ytf__delybaQ__2                    -9.0000        -6.4278        -2.9224   6.1792076E-7  NOPT
+ytf__delybiH__1                    -9.0000        -6.5109        -2.7936   -3.614816E-8      
+ytf__delybiH__2                    -9.0000        -6.4980        -2.8084   -3.721604E-8      
+ytf__delydcI_ph5__1                -9.0000        -6.3517        -2.8842   3.4202521E-7  NOPT
+ytf__delydcI_ph5__2                -9.0000        -5.9439        -2.8339   -9.182804E-7  NOPT
+ytf__delydcI_ph8__1                -9.0000        -6.7407        -2.8689   3.0059225E-7  NOPT
+ytf__delydcI_ph8__2                -9.0000        -6.3707        -2.8885   -3.436146E-7  NOPT
+ytf__delyddM__1                    -9.0000        -6.5235        -2.7442   -2.418604E-7  NOPT
+ytf__delyddM__2                    -9.0000        -6.7821        -2.7471   2.7315400E-7  NOPT
+ytf__delyeiE__1                    -9.0000        -5.8218        -2.9085   2.4940374E-6  NOPT
+ytf__delyeiE__2                    -9.0000        -5.8076        -2.9054   2.5768561E-6  NOPT
+ytf__delyheO__2                    -9.0000        -5.5100        -2.8114   2.3749394E-6  NOPT
+ytf__delyiaJ__1                    -9.0000        -6.0216        -2.8558   1.5741717E-6  NOPT
+ytf__delyiaJ__2                    -9.0000        -5.9629        -2.8390   2.7662480E-6  NOPT
+ytf__delyieP__1                    -9.0000        -6.1603        -2.7374   -1.782859E-6  NOPT
+ytf__delyieP__2                    -9.0000        -6.4366        -2.7505   2.8112963E-7  NOPT
+ytf__wt_glc__1                     -9.0000        -6.3193        -2.8798   1.2176945E-6  NOPT
+ytf__wt_glc__2                     -9.0000        -6.6132        -2.8351   -2.852283E-8      
+ytf__wt_ph5__1                     -9.0000        -6.6102        -2.8601   4.0586847E-7  NOPT
+ytf__wt_ph5__2                     -9.0000        -6.2403        -2.8333   -4.641092E-7  NOPT
+ytf__wt_ph8__1                     -9.0000        -6.0783        -2.8908   2.1212900E-6  NOPT
+ytf__wt_ph8__2                     -9.0000        -6.6575        -2.9055   -2.570439E-8      
 
 ---- VAR Kd  Kd Values
 
              LOWER          LEVEL          UPPER         MARGINAL
 
-b1101        -9.0000        -5.0000        -5.0000   -3.056289E+6      
-b2143        -9.0000        -5.4021        -5.0000   5878947.9533  NOPT
+b1101        -9.0000        -5.5774        -5.0000   -1.291300E-5  NOPT
+b1817        -9.0000        -5.0000        -5.0000        -0.0001      
+b1818        -9.0000        -5.0000        -5.0000        -0.0001      
+b1819        -9.0000        -5.0000        -5.0000   -3.388728E-5      
 
                            LOWER          LEVEL          UPPER         MARGINAL
 
----- VAR diff1             -INF        25958.8933        +INF             .          
----- VAR diff2             -INF          269.3344        +INF             .          
----- VAR total_diff        -INF      2596158.6683        +INF             .          
+---- VAR diff1             -INF          109.9209        +INF             .          
+---- VAR diff2             -INF          268.3807        +INF             .          
+---- VAR total_diff        -INF          268.3809        +INF             .          
 
   diff1  difference between TF_conc div Kd and Ceff
   diff2  difference between measured TF conc and predicted TF conc
 
 
-**** REPORT SUMMARY :      269     NONOPT ( NOPT)
+**** REPORT SUMMARY :      220     NONOPT ( NOPT)
                              0 INFEASIBLE
                              0  UNBOUNDED
                              0     ERRORS
-GAMS 43.4.1  3da5975b Jun 22, 2023          DEX-DEG x86 64bit/macOS - 10/26/23 11:44:15 Page 8
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 11/01/23 16:17:18 Page 8
 cActivator toy example
 E x e c u t i o n
 
 
-----     71 VARIABLE TF_conc.L  TF concentration
-
-control__wt_glc__1          -3.630,    control__wt_glc__2          -3.623,    fur__wt_dpd__1              -3.957,    fur__wt_dpd__2              -3.653,    fur__wt_fe__1               -3.644,    fur__wt_fe__2               -3.952,    fur__delfur_dpd__1          -3.623,    fur__delfur_dpd__2          -3.632,    fur__delfur_fe2__1          -5.040,    fur__delfur_fe2__2          -4.649,    acid__wt_ph5__1             -5.107,    acid__wt_ph5__2             -5.102,    acid__delgadx_ph5__1        -5.535,    acid__delgadx_ph5__2        -5.864,    acid__delgadw_ph5__1        -5.480,    acid__delgadw_ph5__2        -5.612,    acid__delgade_ph5__1        -6.098,    acid__delgade_ph5__2        -6.289,    oxidative__wt_pq__1         -4.262,    oxidative__wt_pq__2         -4.735,    oxidative__deloxyr_pq__1    -6.021,    oxidative__deloxyr_pq__2    -5.858,    oxidative__delsoxr_pq__1    -5.171,    oxidative__delsoxr_pq__2    -5.580,    oxidative__delsoxs_pq__1    -5.722,    oxidative__delsoxs_pq__2    -6.067,    nac_ntrc__wt_csn__1         -3.349,    nac_ntrc__wt_csn__2         -3.356,    nac_ntrc__wt_cytd__1        -0.928,    nac_ntrc__wt_cytd__2        -3.364,    nac_ntrc__wt_gln__1         -3.957,    nac_ntrc__wt_gln__2         -3.632,    nac_ntrc__bw_delnac_csn__1  -4.262,    nac_ntrc__bw_delnac_csn__2  -3.641,    nac_ntrc__bw_delnac_cytd__1 -4.704,    nac_ntrc__bw_delnac_cytd__2 -4.262,    nac_ntrc__bw_delnac_gln__1  -6.079,    nac_ntrc__bw_delnac_gln__2  -6.124,    nac_ntrc__bw_delnac_nh4__1  -5.050,    nac_ntrc__bw_delnac_nh4__2  -5.056,    misc__wt_no_te__1           -5.129,    misc__wt_no_te__2           -5.081,    misc__bw_delcbl__1          -4.618,    misc__bw_delcbl__2          -4.597,    misc__bw_delfabr__1         -3.957,    misc__bw_delfabr__2         -3.903,    misc__bw_delfadr__1         -4.697,    misc__bw_delfadr__2         -4.438,    misc__nitr_031__1           -4.682,    omics__wt_glu__1            -3.372,    omics__wt_glu__2            -3.623,    omics__wt_gly__1            -3.957,    omics__wt_gly__2            -3.957,    omics__wt_thr__1            -4.695,    omics__wt_thr__2            -5.671,    omics__bw_ac__1             -4.390,    omics__bw_ac__2             -4.821,    omics__bw_fum__1            -5.498,    omics__bw_fum__2            -5.147,    omics__bw_glc__1            -5.077,    omics__bw_glc__2            -5.038,    omics__bw_pyr__1            -4.367,    omics__bw_pyr__2            -3.618,    ompr__wt_nacl__1            -3.279,    ompr__wt_nacl__2            -3.283,    ompr__bw_delompr_nacl__1    -3.268,    ompr__bw_delompr_nacl__2    -3.268,    minspan__wt_ade__1          -4.262,    minspan__wt_glc__1          -3.640,    minspan__wt_glc__2          -3.957,    minspan__wt_glc__3          -3.631,    minspan__wt_glc__4          -3.625,    minspan__wt_glc_anaero__1   -4.262,    minspan__wt_glc_anaero__2   -3.957,    minspan__wt_trp__1          -5.944,    minspan__bw_delcra_glc__1   -5.097,    minspan__bw_delcra_glc__2   -4.699,    minspan__bw_delcra_trp__1   -5.848,    minspan__bw_delmntr__1      -5.611,    minspan__bw_delnac_ade__1   -4.262,    minspan__bw_delnac_glc__1   -5.601,    cra_crp__wt_ac__1           -4.484,    cra_crp__wt_ac__2           -4.207,    cra_crp__wt_fru__1          -3.649,    cra_crp__wt_fru__2          -3.901,    cra_crp__delcra_ac__1       -4.210,    cra_crp__delcra_ac__2       -4.211,    cra_crp__delcra_fru__1      -4.262,    cra_crp__delcra_fru__2      -4.704,    cra_crp__delcra_glc__1      -3.957,    cra_crp__delcra_glc__2      -3.957,    rpoB__wt_031__1             -4.198,    rpoB__wt_044__1             -4.237,    rpoB__wt_lb__1              -4.921,    rpoB__wt_lb__2              -4.860,    rpoB__rpoBE546V_031__1      -5.712,    rpoB__rpoBE546V_044__1      -5.786,    rpoB__rpoBE546V_lb__1       -4.210,    rpoB__rpoBE546V_lb__2       -4.211,    rpoB__rpoBE546V_glc__1      -3.629,    rpoB__rpoBE672K_glc__1      -3.295,    rpoB__rpoBE672K_glc__2      -3.331,    rpoB__rpoBE672K_lb__1       -3.906,    rpoB__rpoBE672K_lb__2       -3.906,    crp__wt_fru__1              -3.627,    crp__wt_glyc__1             -3.628,    crp__wt_glyc__2             -3.372,    crp__delar1_glyc__1         -5.211,    crp__delar1_glyc__2         -5.211,    crp__delcrp_fru__1          -3.384,    crp__delcrp_fru__2          -3.384,    crp__delcrp_fru__3          -3.384,    crp__delcrp_glc__1          -3.383,    crp__delcrp_glc__2          -3.383,    crp__delcrp_glc__3          -3.384,    crp__delcrp_glyc__1         -3.384,    crp__delcrp_glyc__2         -3.384,    crp__delcrp_glyc__3         -3.384,    glu__glu_ale3__1            -5.212,    glu__glu_ale4__1            -4.625,    glu__glu_ale5__1            -4.939,    glu__glu_ale6__1            -3.643,    glu__glu_ale8__1            -3.424,    glu__glu_ale9__1            -4.908,    glu__glu_ale10__1           -5.001,    42c__wt_42c__1              -3.957,    42c__42c_ale1__1            -5.553
-42c__42c_ale2__1            -3.660,    42c__42c_ale3__1            -3.332,    42c__42c_ale4__1            -3.957,    42c__42c_ale5__1            -3.365,    42c__42c_ale6__1            -5.568,    42c__42c_ale8__1            -4.714,    42c__42c_ale9__1            -4.682,    42c__42c_ale10__1           -5.571,    ssw__wt_ac__1               -3.593,    ssw__wt_glc__1              -4.262,    ssw__wt_glyc__1             -5.806,    ssw__wt_xyl__1              -3.619,    ssw__glc_ale1__1            -5.820,    ssw__glc_ale2__1            -4.908,    ssw__glc_ale3__1            -4.578,    ssw__glyc_ale1__1           -6.268,    ssw__glyc_ale2__1           -6.167,    ssw__xyl_ale1__1            -4.262,    ssw__xyl_ale2__1            -5.068,    ssw__xyl_ale3__1            -3.957,    ssw__glc_ac_ac2__1          -4.727,    ssw__glc_ac_glc1__1         -4.697,    ssw__glc_ac_glc2__1         -3.629,    ssw__glc_glyc_glc__1        -4.714,    ssw__glc_glyc_glyc__1       -4.577,    ssw__glc_xyl_glc__1         -5.760,    ssw__glc_xyl_xyl__1         -3.649,    pgi__glu4_delpgi__1         -5.608,    pgi__pgi_ale1__1            -4.236,    pgi__pgi_ale2__1            -4.736,    pgi__pgi_ale3__1            -4.978,    pgi__pgi_ale5__1            -4.496,    pgi__pgi_ale6__1            -5.816,    pgi__pgi_ale7__1            -5.773,    pgi__pgi_ale8__1            -5.124,    ica__wt_glc__1              -4.552,    ica__wt_glc__2              -4.558,    ica__wt_glc__3              -5.029,    ica__wt_glc__4              -4.308,    ica__arg_sbt__1             -5.423,    ica__arg_sbt__2             -3.265,    ica__cytd_rib__1            -4.577,    ica__cytd_rib__2            -4.579,    ica__gth__1                 -4.262,    ica__gth__2                 -3.627,    ica__leu_glcr__1            -3.419,    ica__leu_glcr__2            -3.418,    ica__met_glc__1             -4.544,    ica__met_glc__2             -4.236,    ica__no3_anaero__1          -5.966,    ica__no3_anaero__2          -6.124,    ica__phe_acgam__1           -4.991,    ica__phe_acgam__2           -4.538,    ica__thm_gal__1             -3.262,    ica__thm_gal__2             -4.788,    ica__tyr_glcn__1            -5.819,    ica__tyr_glcn__2            -5.783,    ica__ura_pyr__1             -3.417,    ica__ura_pyr__2             -3.423,    ica__wt_glc__5              -5.763,    ica__wt_glc__6              -5.303,    ica__bw_delpurR_cytd__1     -3.952,    ica__bw_delpurR_cytd__2     -3.957,    ica__ade_glc__1             -4.577,    ica__ade_glc__2             -4.577,    ytf__wt_glc__1              -4.579,    ytf__wt_glc__2              -4.321,    ytf__delyafC__1             -3.628,    ytf__delyafC__2             -3.424,    ytf__delyeiE__1             -6.062,    ytf__delyeiE__2             -6.153,    ytf__delyiaJ__1             -4.296,    ytf__delyiaJ__2             -4.336,    ytf__delyieP__1             -3.417,    ytf__delyieP__2             -4.708,    ytf__wt_ph5__1              -4.319,    ytf__wt_ph5__2              -4.738,    ytf__wt_ph8__1              -4.577,    ytf__wt_ph8__2              -6.090,    ytf__delybaO__1             -3.425,    ytf__delybaO__2             -3.123,    ytf__delybaQ__1             -5.899,    ytf__delybaQ__2             -5.803,    ytf__delybiH__1             -4.310,    ytf__delybiH__2             -4.296,    ytf__delydcI_ph5__1         -4.581,    ytf__delydcI_ph5__2         -4.307,    ytf__delydcI_ph8__1         -4.589,    ytf__delydcI_ph8__2         -4.578,    ytf__delyddM__1             -5.091,    ytf__delyddM__2             -4.733,    ytf__delyheO__1             -3.425,    ytf__delyheO__2             -3.627,    fps__bw_glc__1              -5.747,    fps__bw_glc__2              -5.473,    fps__fps_thrA_ale1__1       -4.335,    fps__fps_thrA_ale1__2       -5.105,    fps__fps_thrA_ale2__1       -5.028,    fps__fps_thrA_ale2__2       -4.577,    fps__fps_serB_ale1__1       -4.578,    fps__fps_serB_ale1__2       -4.577,    fps__fps_serB_ale4__1       -4.740,    fps__fps_serB_ale4__2       -4.715,    pal__lyx_ale2_f6__1         -5.404,    pal__lyx_ale2__1            -3.901,    pal__lyx_ale2__2            -3.652,    pal__lyx_ale4__1            -3.901,    pal__lyx_ale4__2            -3.652,    pal__5drib_ale10_f18__1     -4.208,    pal__5drib_ale10_f18__2     -3.845,    pal__5drib_ale10__1         -5.336,    pal__arab_ale14_f9__1       -5.795,    pal__arab_ale14_f9__2       -5.560,    pal__arab_ale14__1          -6.198,    pal__arab_ale14__2          -5.883,    pal__arab_ale16__1          -4.238,    pal__arab_ale16__2          -4.500,    pal__tartr_ale26_f10__1     -4.812,    pal__tartr_ale26_f10__2     -4.235,    pal__tartr_ale26__1         -5.279,    pal__tartr_ale26__2         -5.300,    pal__tartr_ale28_f10__1     -4.210,    pal__tartr_ale28_f10__2     -3.847,    pal__tartr_ale28__1         -5.308,    pal__tartr_ale28__2         -3.030,    efeU__delmenFentC_citr__1   -4.579,    efeU__delmenFentC_citr__2   -4.294
-efeU__delmenFentC__1        -4.740,    efeU__delmenFentC__2        -4.908,    efeU__menFentC_ale39__1     -3.630,    efeU__menFentC_ale39__2     -3.628,    efeU__menFentC_ale29__1     -4.707,    efeU__menFentC_ale29__2     -4.303,    efeU__menFentC_ale30__1     -4.686,    efeU__menFentC_ale30__2     -4.237,    efeU__menFentCubiC_ale36__1 -5.003,    efeU__menFentCubiC_ale36__2 -5.368,    efeU__menFentCubiC_ale37__1 -4.732,    efeU__menFentCubiC_ale37__2 -4.733,    efeU__menFentCubiC_ale38__1 -5.832,    efeU__menFentCubiC_ale38__2 -5.998
+EXECUTION TIME       =        1.029 SECONDS      4 MB  44.1.1 27c4d1f8 LEX-LEG
 
 
-----     71 VARIABLE TF_conc.M  TF concentration
-
-control__wt_glc__1            19009.848,    control__wt_glc__2            19352.579,    fur__wt_dpd__1                 8966.672,    fur__wt_dpd__2                18033.519,    fur__wt_fe__1                 18437.956,    fur__wt_fe__2                  9058.052,    fur__delfur_dpd__1            19349.025,    fur__delfur_dpd__2            18947.230,    fur__delfur_fe2__1             -739.469,    fur__delfur_fe2__2              787.754,    acid__wt_ph5__1                 274.098,    acid__wt_ph5__2                 277.308,    acid__delgadx_ph5__1           -236.690,    acid__delgadx_ph5__2           -110.946,    acid__delgadw_ph5__1           -268.541,    acid__delgadw_ph5__2           -198.154,    acid__delgade_ph5__1            -64.695,    acid__delgade_ph5__2            -41.672,    oxidative__wt_pq__1            4434.923,    oxidative__wt_pq__2            1495.241,    oxidative__deloxyr_pq__1        -77.329,    oxidative__deloxyr_pq__2       -112.445,    oxidative__delsoxr_pq__1        236.580,    oxidative__delsoxr_pq__2       -213.263,    oxidative__delsoxs_pq__1       -153.971,    oxidative__delsoxs_pq__2        -30.087,    nac_ntrc__wt_csn__1           36331.086,    nac_ntrc__wt_csn__2           35706.449,    nac_ntrc__wt_cytd__1        -4.14441E+6,    nac_ntrc__wt_cytd__2          35058.118,    nac_ntrc__wt_gln__1            8966.395,    nac_ntrc__wt_gln__2           18935.174,    nac_ntrc__bw_delnac_csn__1     4434.691,    nac_ntrc__bw_delnac_csn__2    18546.894,    nac_ntrc__bw_delnac_cytd__1    1605.444,    nac_ntrc__bw_delnac_cytd__2    4435.034,    nac_ntrc__bw_delnac_gln__1      -67.608,    nac_ntrc__bw_delnac_gln__2       26.365,    nac_ntrc__bw_delnac_nh4__1     -723.215,    nac_ntrc__bw_delnac_nh4__2     -713.289,    misc__wt_no_te__1               260.431,    misc__wt_no_te__2              -673.979,    misc__bw_delcbl__1            -1956.936,    misc__bw_delcbl__2            -2051.981,    misc__bw_delfabr__1            8967.096,    misc__bw_delfabr__2           -4391.557,    misc__bw_delfadr__1            1628.930,    misc__bw_delfadr__2            2958.015,    misc__nitr_031__1              1689.185,    omics__wt_glu__1              34435.644,    omics__wt_glu__2              19340.606,    omics__wt_gly__1               8966.904,    omics__wt_gly__2               8967.020,    omics__wt_thr__1                708.433,    omics__wt_thr__2               -173.110,    omics__bw_ac__1               -3305.341,    omics__bw_ac__2               -1223.931,    omics__bw_fum__1               -257.844,    omics__bw_fum__2               -578.547,    omics__bw_glc__1               -679.044,    omics__bw_glc__2               -743.809,    omics__bw_pyr__1               1508.679,    omics__bw_pyr__2               8456.702,    ompr__wt_nacl__1              42648.659,    ompr__wt_nacl__2              42311.585,    ompr__bw_delompr_nacl__1      43820.801,    ompr__bw_delompr_nacl__2      43796.442,    minspan__wt_ade__1             4434.774,    minspan__wt_glc__1            18601.221,    minspan__wt_glc__2             8966.405,    minspan__wt_glc__3            18985.947,    minspan__wt_glc__4            19250.416,    minspan__wt_glc_anaero__1      4434.886,    minspan__wt_glc_anaero__2      8966.511,    minspan__wt_trp__1              -92.349,    minspan__bw_delcra_glc__1       280.840,    minspan__bw_delcra_glc__2      1623.586,    minspan__bw_delcra_trp__1      -115.055,    minspan__bw_delmntr__1         -198.641,    minspan__bw_delnac_ade__1      4434.833,    minspan__bw_delnac_glc__1      -203.414,    cra_crp__wt_ac__1             -2661.026,    cra_crp__wt_ac__2             -5034.675,    cra_crp__wt_fru__1           -18187.628,    cra_crp__wt_fru__2           -10198.626,    cra_crp__delcra_ac__1         -5006.068,    cra_crp__delcra_ac__2         -4993.134,    cra_crp__delcra_fru__1         4434.963,    cra_crp__delcra_fru__2         1603.244,    cra_crp__delcra_glc__1         8966.864,    cra_crp__delcra_glc__2         8966.883,    rpoB__wt_031__1               -5146.869,    rpoB__wt_044__1               -2033.149,    rpoB__wt_lb__1                 -973.253,    rpoB__wt_lb__2                -1120.648,    rpoB__rpoBE546V_031__1         -157.340,    rpoB__rpoBE546V_044__1         -132.817,    rpoB__rpoBE546V_lb__1         -5006.025,    rpoB__rpoBE546V_lb__2         -4992.290,    rpoB__rpoBE546V_glc__1        19047.158,    rpoB__rpoBE672K_glc__1        41131.195,    rpoB__rpoBE672K_glc__2        37908.682,    rpoB__rpoBE672K_lb__1          4359.518,    rpoB__rpoBE672K_lb__2          4359.551,    crp__wt_fru__1               -19152.723,    crp__wt_glyc__1              -19120.295,    crp__wt_glyc__2               14900.485,    crp__delar1_glyc__1             499.245,    crp__delar1_glyc__2             498.728,    crp__delcrp_fru__1            33549.028,    crp__delcrp_fru__2            33549.026,    crp__delcrp_fru__3            33549.026,    crp__delcrp_glc__1            33592.142,    crp__delcrp_glc__2            33567.522,    crp__delcrp_glc__3            33549.028,    crp__delcrp_glyc__1           33549.026,    crp__delcrp_glyc__2           33549.028,    crp__delcrp_glyc__3           33549.028,    glu__glu_ale3__1                497.984,    glu__glu_ale4__1               -832.010,    glu__glu_ale5__1               -933.487,    glu__glu_ale6__1              18453.318,    glu__glu_ale8__1              30532.766,    glu__glu_ale9__1               1002.249,    glu__glu_ale10__1               809.262,    42c__wt_42c__1                 8966.810,    42c__42c_ale1__1               -227.310
-42c__42c_ale2__1              17752.093,    42c__42c_ale3__1              37820.766,    42c__42c_ale4__1               8967.114,    42c__42c_ale5__1              35000.327,    42c__42c_ale6__1               -219.421,    42c__42c_ale8__1               -678.563,    42c__42c_ale9__1              -1687.100,    42c__42c_ale10__1              -217.857,    ssw__wt_ac__1                -20724.752,    ssw__wt_glc__1                 4435.067,    ssw__wt_glyc__1                -126.955,    ssw__wt_xyl__1                 8431.789,    ssw__glc_ale1__1               -122.868,    ssw__glc_ale2__1               1003.552,    ssw__glc_ale3__1              -2144.135,    ssw__glyc_ale1__1               -18.950,    ssw__glyc_ale2__1               -55.299,    ssw__xyl_ale1__1               4435.069,    ssw__xyl_ale2__1                299.855,    ssw__xyl_ale3__1               8966.884,    ssw__glc_ac_ac2__1            -1520.822,    ssw__glc_ac_glc1__1            1628.756,    ssw__glc_ac_glc2__1           19074.762,    ssw__glc_glyc_glc__1           -677.960,    ssw__glc_glyc_glyc__1         -2146.585,    ssw__glc_xyl_glc__1            -141.072,    ssw__glc_xyl_xyl__1           18226.102,    pgi__glu4_delpgi__1            -200.007,    pgi__pgi_ale1__1              -4714.147,    pgi__pgi_ale2__1              -1491.473,    pgi__pgi_ale3__1               -853.947,    pgi__pgi_ale5__1              -2589.291,    pgi__pgi_ale6__1               -124.053,    pgi__pgi_ale7__1               -136.816,    pgi__pgi_ale8__1               -610.384,    ica__wt_glc__1                -2278.237,    ica__wt_glc__2                -2245.804,    ica__wt_glc__3                 -758.895,    ica__wt_glc__4                -1728.250,    ica__arg_sbt__1                -306.603,    ica__arg_sbt__2              -44047.422,    ica__cytd_rib__1              -2147.618,    ica__cytd_rib__2              -2139.849,    ica__gth__1                    4434.743,    ica__gth__2                   19163.322,    ica__leu_glcr__1              30943.075,    ica__leu_glcr__2              13391.942,    ica__met_glc__1               -2318.363,    ica__met_glc__2               -2038.749,    ica__no3_anaero__1               37.915,    ica__no3_anaero__2              -60.976,    ica__phe_acgam__1              -827.524,    ica__phe_acgam__2             -2351.475,    ica__thm_gal__1               19213.420,    ica__thm_gal__2               -1323.037,    ica__tyr_glcn__1               -123.222,    ica__tyr_glcn__2               -133.724,    ica__ura_pyr__1               13420.741,    ica__ura_pyr__2               13237.026,    ica__wt_glc__5                 -140.065,    ica__wt_glc__6                 -404.324,    ica__bw_delpurR_cytd__1        9058.191,    ica__bw_delpurR_cytd__2        8966.725,    ica__ade_glc__1               -2147.845,    ica__ade_glc__2                 929.687,    ytf__wt_glc__1                -2140.349,    ytf__wt_glc__2                -1676.308,    ytf__delyafC__1               19095.675,    ytf__delyafC__2               30549.540,    ytf__delyeiE__1                 -70.304,    ytf__delyeiE__2                 -57.031,    ytf__delyiaJ__1                4102.824,    ytf__delyiaJ__2                3742.189,    ytf__delyieP__1               31092.284,    ytf__delyieP__2                -687.755,    ytf__wt_ph5__1                 3891.760,    ytf__wt_ph5__2                  640.916,    ytf__wt_ph8__1                 -928.576,    ytf__wt_ph8__2                  -65.950,    ytf__delybaO__1               30492.449,    ytf__delybaO__2              -26433.419,    ytf__delybaQ__1                -102.276,    ytf__delybaQ__2                -127.637,    ytf__delybiH__1               -1718.444,    ytf__delybiH__2               -1774.371,    ytf__delydcI_ph5__1             921.708,    ytf__delydcI_ph5__2           -1730.825,    ytf__delydcI_ph8__1            -904.177,    ytf__delydcI_ph8__2            -927.977,    ytf__delyddM__1                -658.260,    ytf__delyddM__2                 648.679,    ytf__delyheO__1               30518.985,    ytf__delyheO__2               19150.505,    fps__bw_glc__1                 -145.423,    fps__bw_glc__2                 -272.782,    fps__fps_thrA_ale1__1         -1623.377,    fps__fps_thrA_ale1__2          -637.224,    fps__fps_thrA_ale2__1          -760.388,    fps__fps_thrA_ale2__2         -2149.390,    fps__fps_serB_ale1__1         -2144.513,    fps__fps_serB_ale1__2           929.721,    fps__fps_serB_ale4__1           639.166,    fps__fps_serB_ale4__2          -677.028,    pal__lyx_ale2_f6__1            -320.429,    pal__lyx_ale2__1             -10194.198,    pal__lyx_ale2__2               7817.751,    pal__lyx_ale4__1             -10198.852,    pal__lyx_ale4__2               7817.751,    pal__5drib_ale10_f18__1       -5021.182,    pal__5drib_ale10_f18__2      -11604.690,    pal__5drib_ale10__1            -374.347,    pal__arab_ale14_f9__1          -130.142,    pal__arab_ale14_f9__2          -223.437,    pal__arab_ale14__1              -51.409,    pal__arab_ale14__2               45.959,    pal__arab_ale16__1             2027.144,    pal__arab_ale16__2             1108.727,    pal__tartr_ale26_f10__1       -1251.857,    pal__tartr_ale26_f10__2       -4722.809,    pal__tartr_ale26__1            -426.841,    pal__tartr_ale26__2            -406.343,    pal__tartr_ale28_f10__1       -5005.973,    pal__tartr_ale28_f10__2      -11529.357,    pal__tartr_ale28__1            -399.068,    pal__tartr_ale28__2          -32724.454,    efeU__delmenFentC_citr__1     -2141.595,    efeU__delmenFentC_citr__2     -1782.468
-efeU__delmenFentC__1            639.217,    efeU__delmenFentC__2            433.918,    efeU__menFentC_ale39__1       19025.498,    efeU__menFentC_ale39__2       19126.874,    efeU__menFentC_ale29__1        -689.572,    efeU__menFentC_ale29__2       -1745.508,    efeU__menFentC_ale30__1         722.295,    efeU__menFentC_ale30__2       -2033.316,    efeU__menFentCubiC_ale36__1     806.539,    efeU__menFentCubiC_ale36__2     150.226,    efeU__menFentCubiC_ale37__1     650.717,    efeU__menFentCubiC_ale37__2     649.068,    efeU__menFentCubiC_ale38__1    -119.577,    efeU__menFentCubiC_ale38__2     -81.498
-
-
-----     72 VARIABLE diff1.L               =    25958.893  difference between TF_conc div Kd and Ceff
-            VARIABLE diff2.L               =      269.334  difference between measured TF conc and predicted TF conc
-
-
-EXECUTION TIME       =        0.275 SECONDS      4 MB  43.4.1 3da5975b DEX-DEG
-
-
-USER: GAMS Community License for Christopher DalldorfG230829|0002AO-GEN
-      University of California, San Diego, Bioengineering        CL6627
-      License for teaching and research at degree granting institutions
+USER: GAMS Demo, for EULA and demo limitations see   G230706/0001CB-GEN
+      https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
 
 
 **** FILE SUMMARY
 
-Input      /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/cAct_model.gms
-Output     /Users/cdalldorf/Professional/SBRG/github_work/regulonML/GAMs/cAct_model.lst
+Input      /home/chris/github/regulonML/GAMs/cAct_model.gms
+Output     /home/chris/github/regulonML/GAMs/cAct_model.lst
