@@ -4,6 +4,7 @@ import numpy as np
 from scipy.optimize import minimize
 from sympy import *
 from itertools import product
+import math
 
 # these values should get overwritten in the actual code, but need to be initialized
 KdRNAP = None
@@ -108,7 +109,9 @@ def cActivator_cInhibitor_to_mRNA(cActivator, cInhibitor, KdRNAPCrp):
     return(mRNA)
 
 
-def pick_KdRNAPCrp(ratios_df, initial_guess_ratio = 0.25, min_cInh = 0.01):
+def pick_KdRNAPCrp(ratios_df, flags):
+    initial_guess_ratio = flags['initial_guess_ratio']
+    min_cInh = flags['base_cInhibitor_val']
     # v1 assumed cInhibitor = 0, this instead sets it to a minimum value instead of zero, I'm hoping this elevates values that are below zero and is a more realistic assumption
     
     # first let's find the maximum KdRNAPCrp value for the mRNA values
@@ -179,6 +182,19 @@ def pick_KdRNAPCrp(ratios_df, initial_guess_ratio = 0.25, min_cInh = 0.01):
 
     # The optimal KdRNAPCrp value
     optimal_KdRNAPCrp = result2.x[0]
+    
+    
+    if flags['auto_set_max_range']:
+        rat_vals = np.linspace(min(ratios_df['actual_mRNA_ratio'].values.flatten()), max(ratios_df['actual_mRNA_ratio'].values.flatten()), 1000)
+
+        cInh_vals = [mRNA_cActivator_to_cInhibitor(rat_val, flags['base_cActivator_val'], optimal_KdRNAPCrp) for rat_val in rat_vals]
+        cAct_vals = [mRNA_cInhibitor_to_cActivator(rat_val, flags['base_cInhibitor_val'], optimal_KdRNAPCrp) for rat_val in rat_vals]
+
+        
+        flags['cActivator'] = [-2, math.log10((1+flags['additional_tolerance'])*max(cAct_vals))] # Uses a log10 range
+        flags['cInhibitor'] = [-2, math.log10((1+flags['additional_tolerance'])*max(cInh_vals))] # Uses a log10 range
+    
+    
     return(optimal_KdRNAPCrp)
 
 
