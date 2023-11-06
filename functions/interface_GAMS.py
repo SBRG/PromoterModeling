@@ -2,9 +2,18 @@
 import subprocess
 import os
 import pandas as pd
+import numpy as np
 
 
-def run_GAMs(flags):
+def run_GAMs(flags, regulator, cell_constants):
+    ############################################################
+    # create TF concentration
+    ############################################################
+    log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
+    concentrations = 2**log_tpm_df*10**-6*cell_constants['mRNA_total']/cell_constants['cell_volume']/(6.022*10**23)
+    concentrations.loc[regulator].to_csv('../data/save_for_GAMs/exported_TF_conc.csv')
+    
+    
     # first let's merge together the files
     files_use = []
     if flags['run_on_all']:

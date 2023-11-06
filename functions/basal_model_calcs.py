@@ -12,8 +12,8 @@ def basal_values(grid_constants, eq_str, flags):
 
     # Define constants
     log_test = {
-        'KdRNAP': flags['KdRNAP'],
-        'kEscape': flags['kEscape'],
+        'KdRNAP': [-7,-5],
+        'kEscape': [-3,1],
     }
 
     # Parameter Equation

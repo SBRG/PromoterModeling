@@ -28,7 +28,7 @@ Variables
     Kd(gene) 'Kd Values';
 
 * Constrain matrices
-TF_conc.lo(sample) = log10(1E-9);
+TF_conc.lo(sample) = log10(1E-11);
 TF_conc.up(sample) = log10(meas_TF(sample));
 Kd.lo(gene) = log10(1E-9);
 Kd.up(gene) = log10(1E-5);

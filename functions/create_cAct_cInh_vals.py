@@ -7,10 +7,11 @@ import sys
 sys.path.insert(0, '../functions/')
 import promoter_solving_core as ps
 import GA_core as ga
-
+import matplotlib.pyplot as plt
 
 
 def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
+    return_figs = []
     # setup
     rng = np.random.default_rng(seed = flags['seed'])
 
@@ -103,6 +104,51 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
     ratios_df = ratios_df.drop(to_remove)
 
 
+    # sanity plot 1
+    if flags['sanity_plots']:
+        i = 0 # The integer corresponding to the condition of interest index
+
+        x = [cAct for (cAct, _) in grid.iloc[i,1]]
+        y = [cInh for (_, cInh) in grid.iloc[i,1]]
+
+        # Start with a square Figure.
+        fig = plt.figure(figsize=(3, 3))
+        # Add a gridspec with two rows and two columns and a ratio of 1 to 4 between
+        # the size of the marginal axes and the main axes in both directions.
+        # Also adjust the subplot parameters for a square plot.
+        gs = fig.add_gridspec(2, 2,  width_ratios=(4, 1), height_ratios=(1, 4),
+                              left=0.1, right=0.9, bottom=0.1, top=0.9,
+                              wspace=0.05, hspace=0.05)
+        # Create the Axes.
+        ax = fig.add_subplot(gs[1, 0])
+        ax_histx = fig.add_subplot(gs[0, 0], sharex=ax)
+        ax_histy = fig.add_subplot(gs[1, 1], sharey=ax)
+
+        # no labels
+        ax_histx.tick_params(axis="x", labelbottom=False)
+        ax_histy.tick_params(axis="y", labelleft=False)
+
+        # the scatter plot:
+        ax.scatter(x, y, alpha=0.25)
+
+        x_bins = np.logspace(np.log10(min(x)), np.log10(max(x)), 50)
+        y_bins = np.logspace(np.log10(min(y)), np.log10(max(y)), 50)
+
+        ax_histx.hist(x, bins=x_bins)
+        ax_histy.hist(y, bins=y_bins, orientation='horizontal')
+
+        ax.set_xscale('log')
+        ax.set_yscale('log')
+
+        ax.set_xlabel('cAct Grid Values')
+        ax.set_ylabel('cInh Grid Values')
+
+        fig.suptitle('Condition: '+str(grid.index[i]))
+        return_figs.append(fig)
+        plt.close(fig)
+    
+    
+    
     # Create fitness and individual objects
     creator.create(name = 'fitness',
                    base = base.Fitness,
@@ -186,6 +232,18 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
     vals_for_GAMs.cInh = list(GAMs_individual['inh'])
     
     
+    # sanity plot for GA
+    if flags['sanity_plots']:
+        fig, (ax1, ax2) = ga.scatter_individual(ind_one = pop[total_sort[-1]],
+                                         MA = ratios_df.loc[:,['MA_activator','MA_inhibitor']],
+                                         GA_parameters = flags)
+        fig.suptitle('GA Results', fontsize = 16)
+        plt.tight_layout()
+        return_figs.append(fig)
+        plt.close(fig)
+
+
+    
     
     # run greedy algo
     if flags['run_greedy']:
@@ -218,6 +276,18 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
         greed_vals_for_GAMs.cAct = list(GAMs_individual['act'])
         greed_vals_for_GAMs.cInh = list(GAMs_individual['inh'])
         
-        return(greed_vals_for_GAMs, vals_for_GAMs)
+        
+        # sanity plot for greedy
+        if  flags['sanity_plots']:
+            fig, (ax1, ax2) = ga.scatter_individual(ind_one = greedy_pop[greedy_sort[-1]],
+                                            MA = ratios_df.loc[:,['MA_activator','MA_inhibitor']],
+                                            GA_parameters = None)
+            fig.suptitle('Greedy Results', fontsize = 16)
+            plt.tight_layout()
+            return_figs.append(fig)
+            plt.close(fig)
+        
+        
+        return(return_figs, greed_vals_for_GAMs, vals_for_GAMs)
     else:
-        return(None, vals_for_GAMs)
+        return(return_figs, None, vals_for_GAMs)
