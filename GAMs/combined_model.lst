@@ -1,0 +1,202 @@
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 11/08/23 10:16:45 Page 1
+cActivator toy example
+C o m p i l a t i o n
+
+
+   2   
+   3  * Load in cEffector Matrix
+   4  * Set Dimensions
+   5  Set
+   6     gene 'genes'
+   7     sample 'samples'
+   8     constant 'grid basal constants'
+   9         / KdRNAP,
+  10           KdRNAPCrp,
+  11           RNAP,
+  12           mRNA_total,
+  13           cell_volume,
+  14           k_d_TF,
+  15           kDeg,
+  16           promoterConcVal,
+  17           TF,
+  18           u,
+  19           kEscape,
+  20           KeqOpening /;
+  21   
+  22  * Load in saved values
+GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/input_cAct.gdx
+--- LOAD  sample = 2:Dim1
+--- LOAD  gene = 3:Dim2
+  27  Parameter cAct(sample, gene) 'cAct values';
+--- LOAD  cAct = 1:cAct
+  30   
+GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/input_cInh.gdx
+  33  Parameter cInh(sample, gene) 'cInh values';
+--- LOAD  cInh = 1:cInh
+  36   
+GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/input_act_TF_conc.gdx
+  39  Parameter meas_act_TF(sample) 'actual act TF values';
+--- LOAD  meas_act_TF = 1:meas_act_TF
+  42   
+GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/input_inh_TF_conc.gdx
+  45  Parameter meas_inh_TF(sample) 'actual inh TF values';
+--- LOAD  meas_inh_TF = 1:meas_inh_TF
+  48   
+GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/basal.gdx
+  51  Parameter basal_constants(constant, gene) 'basal constants';
+--- LOAD  basal_constants = 1:basal_constants
+  54   
+GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/actual_mRNA.gdx
+  57  Parameter actual_mRNA(sample, gene) 'actual_mRNA';
+--- LOAD  actual_mRNA = 1:actual_mRNA
+  60   
+GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/max_cAct.gdx
+  63  Parameter max_cAct(gene) 'max_cAct';
+--- LOAD  max_cAct = 1:max_cAct
+  66   
+GDXIN   /home/chris/github/regulonML/GAMs/input_GDX/max_cInh.gdx
+  69  Parameter max_cInh(gene) 'max_cInh';
+  70  $load max_cInh
+****               $492
+**** 492  Symbol not in GDX
+  72   
+  73  ***
+  74  * Set up other matrices
+  75  Variables
+  76      act_TF_conc(sample) 'TF concentration'
+  77      act_Kd(gene) 'Kd Values'
+  78      inh_TF_conc(sample) 'TF concentration'
+  79      inh_Kd(gene) 'Kd Values';
+  80   
+  81  * Constrain matrices
+  82  act_TF_conc.lo(sample) = log10(1E-15);
+  83  act_TF_conc.up(sample) = 5+log10(meas_act_TF(sample));
+  84  act_Kd.lo(gene) = log10(1E-9);
+  85  act_Kd.up(gene) = log10(1E-5);
+  86  inh_TF_conc.lo(sample) = log10(1E-15);
+  87  inh_TF_conc.up(sample) = 5+log10(meas_inh_TF(sample));
+  88  inh_Kd.lo(gene) = log10(1E-9);
+  89  inh_Kd.up(gene) = log10(1E-5);
+  90   
+  91  * initialize matrices
+  92  act_TF_conc.l(sample) = uniformInt(1, 10);
+  93  act_Kd.l(gene) = uniformInt(1, 10);
+  94  inh_TF_conc.l(sample) = uniformInt(1, 10);
+  95  inh_Kd.l(gene) = uniformInt(1, 10);
+  96   
+  97  * Now set up the optimization
+  98  Variables
+  99      act_diff1   difference between TF_conc div Kd and Ceff
+ 100      inh_diff1   similar
+ 101      act_diff2   difference between measured TF conc and predicted TF conc
+ 102      inh_diff2   similar
+ 103      match_diff
+ 104      total_diff;
+ 105   
+ 106  Equations
+ 107      act_obj1   difference between TF_conc div Kd and cEff
+ 108      inh_obj1   difference between TF_conc div Kd and cEff
+ 109      act_obj2   difference between measured TF conc and predicted TF conc
+ 110      inh_obj2   difference between measured TF conc and predicted TF conc
+ 111      match_obj  difference between predicted and actual mRNA TODO IMPLEMENT THIS
+ 112      total_obj;
+ 113   
+ 114  * Set weights for the two objectives (you can adjust these weights as needed)
+ 115  Scalar weight_balance2 /3.846428243279408E-10/;
+ 116  Scalar weight_balance3 /3.3793970672271763/;
+ 117  Scalar weight_act_obj1 /1/;
+ 118  Scalar weight_inh_obj1 /1/;
+ 119  Scalar weight_act_obj2 /0/;
+ 120  Scalar weight_inh_obj2 /0/;
+ 121  Scalar weight_mRNA_match /2/;
+ 122  * ^ obj1 is just way bigger by how its calculated, this rebalances them to be about even and obj1_2 can scale them to be different
+ 123   
+ 124  total_obj .. total_diff =e= weight_balance3 * weight_mRNA_match * match_diff + weight_act_obj1 * act_diff1 + weight_inh_obj1 * inh_diff1 + weight_balance2 * (weight_act_obj2 * act_diff2 + weight_inh_obj2 * inh_diff2);
+ 125   
+ 126  act_obj1 .. act_diff1 =e= sum((gene, sample), abs((10**act_TF_conc(sample) / 10**act_Kd(gene) - cAct(sample, gene)))/max_cAct(gene));
+ 127   
+ 128  act_obj2 .. act_diff2 =e= sum(sample, abs(10**(meas_act_TF(sample)) - 0.1*10**act_TF_conc(sample))**2);
+ 129   
+ 130  inh_obj1 .. inh_diff1 =e= sum((gene, sample), abs(10**inh_TF_conc(sample) / 10**inh_Kd(gene) - cInh(sample, gene)))/max_cInh(gene));
+****                                                                                                                                   $149,408
+**** 149  Uncontrolled set entered as constant
+**** 408  Too many ),] or }
+ 131   
+ 132  inh_obj2 .. inh_diff2 =e= sum(sample, abs((10**(meas_inh_TF(sample)) - 0.1*10**inh_TF_conc(sample))**2);
+****                                                                                                         $8
+****   8  ')' expected
+ 133   
+ 134  match_obj .. match_diff =e= sum((gene, sample), abs(actual_mRNA(sample, gene) - (((10**act_TF_conc(sample) / 10**act_Kd(gene))*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + basal_constants('RNAP', gene) +  basal_constants('KeqOpening', gene)*basal_constants('RNAP', gene))) / ((1 + (10**act_TF_conc(sample) / 10**act_Kd(gene)) + (10**inh_TF_conc(sample) / 10**inh_Kd(gene)))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + (10**act_TF_conc(sample) / 10**act_Kd(gene))*basal_constants('KdRNAP', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene))))
+ 135   
+ 136   
+ 137  *need to add existing mRNA value to the above equation
+ 138   
+ 139   
+ 140  * ^ I found one paper that said about 10% of crp is active based on cAMP presence, this should be changed later though
+ 141   
+ 142  * modify model parameters
+ 143  *$set dnlp maxiter=10000  // Increase the maximum number of iterations
+ 144  *$set dnlp acc=1e-15  // Set the accuracy or tolerance level
+ 145  *$set dnlp step=1e-15  // Set the step size
+ 146   
+ 147  * run the model
+ 148  Model ElementWiseOptimization /all/;
+ 149  Solve ElementWiseOptimization using dnlp minimizing total_diff;
+****                                                                $257
+**** 257  Solve statement not checked because of previous errors
+ 150   
+ 151  * display results
+ 152  *Display TF_conc.l, TF_conc.m;
+ 153  *Display diff1.l, diff2.l;
+ 154   
+ 155   
+ 156  * Export results
+ 157  execute_unload "./output_GDX/cAct_TF_conc_results.gdx" act_TF_conc.L act_TF_conc.M
+ 158  execute_unload "./output_GDX/cAct_Kd_results.gdx" act_Kd.L act_Kd.M
+ 159  execute 'gdxdump ./output_GDX/cAct_TF_conc_results.gdx noData > ../data/GAMS_output/cAct_TF_conc_results.csv symb=act_TF_conc format=csv';
+ 160  execute 'gdxdump ./output_GDX/cAct_Kd_results.gdx noData > ../data/GAMS_output/cAct_Kd_results.csv symb=act_Kd format=csv';
+ 161  execute_unload "./output_GDX/cInh_TF_conc_results.gdx" inh_TF_conc.L inh_TF_conc.M
+ 162  execute_unload "./output_GDX/cInh_Kd_results.gdx" inh_Kd.L inh_Kd.M
+ 163  execute 'gdxdump ./output_GDX/cInh_TF_conc_results.gdx noData > ../data/GAMS_output/cInh_TF_conc_results.csv symb=inh_TF_conc format=csv';
+ 164  execute 'gdxdump ./output_GDX/cInh_Kd_results.gdx noData > ../data/GAMS_output/cInh_Kd_results.csv symb=inh_Kd format=csv';
+
+**** 5 ERROR(S)   0 WARNING(S)
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 11/08/23 10:16:45 Page 2
+cActivator toy example
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  /home/chris/github/regulonML/GAMs/combined_model.gms
+     2       23 CALL           1      23  csv2gdx ../data/save_for_GAMs/composite_cAct_vals.csv id=cAct index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_cAct.gdx
+     3       24 GDXIN          1      24  /home/chris/github/regulonML/GAMs/input_GDX/input_cAct.gdx
+     4       31 CALL           1      31  csv2gdx ../data/save_for_GAMs/composite_cInh_vals.csv id=cInh index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_cInh.gdx
+     5       32 GDXIN          1      32  /home/chris/github/regulonML/GAMs/input_GDX/input_cInh.gdx
+     6       37 CALL           1      37  csv2gdx ../data/save_for_GAMs/exported_act_TF_conc.csv id=meas_act_TF index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_act_TF_conc.gdx
+     7       38 GDXIN          1      38  /home/chris/github/regulonML/GAMs/input_GDX/input_act_TF_conc.gdx
+     8       43 CALL           1      43  csv2gdx ../data/save_for_GAMs/exported_inh_TF_conc.csv id=meas_inh_TF index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_inh_TF_conc.gdx
+     9       44 GDXIN          1      44  /home/chris/github/regulonML/GAMs/input_GDX/input_inh_TF_conc.gdx
+    10       49 CALL           1      49  csv2gdx ../data/save_for_GAMs/grid_constants.csv id=basal_constants index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/basal.gdx
+    11       50 GDXIN          1      50  /home/chris/github/regulonML/GAMs/input_GDX/basal.gdx
+    12       55 CALL           1      55  csv2gdx ../data/save_for_GAMs/actual_mRNA_ratio.csv id=actual_mRNA index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/actual_mRNA.gdx
+    13       56 GDXIN          1      56  /home/chris/github/regulonML/GAMs/input_GDX/actual_mRNA.gdx
+    14       61 CALL           1      61  csv2gdx ../data/save_for_GAMs/max_cActs.csv id=max_cAct index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/max_cAct.gdx
+    15       62 GDXIN          1      62  /home/chris/github/regulonML/GAMs/input_GDX/max_cAct.gdx
+    16       67 CALL           1      67  csv2gdx ../data/save_for_GAMs/max_cInhs.csv id=max_cInh index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/max_cInh.gdx
+    17       68 GDXIN          1      68  /home/chris/github/regulonML/GAMs/input_GDX/max_cInh.gdx
+
+
+COMPILATION TIME     =        0.065 SECONDS      3 MB  44.1.1 27c4d1f8 LEX-LEG
+
+
+USER: GAMS Demo, for EULA and demo limitations see   G230706/0001CB-GEN
+      https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
+
+
+**** FILE SUMMARY
+
+Input      /home/chris/github/regulonML/GAMs/combined_model.gms
+Output     /home/chris/github/regulonML/GAMs/combined_model.lst
+
+**** USER ERROR(S) ENCOUNTERED

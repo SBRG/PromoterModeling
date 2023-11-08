@@ -27,7 +27,7 @@ def create_data_for_gene(flags):
     if not flags['force_rerun'] and os.path.exists('../data/saved_mRNA_ratios_MA_vals/'+df_name):
         ratios_df = pd.read_csv('../data/saved_mRNA_ratios_MA_vals/'+df_name, index_col = 0)
     else:
-        ratios_df = mr.calculate_mRNA_ratios_and_MA_values(gene_to_act_inh_iMs[flags['central_gene']][0], gene_to_act_inh_iMs[flags['central_gene']][1], flags)
+        ratios_df = mr.calculate_mRNA_ratios_and_MA_values(flags['act_iM'], flags['inh_iM'], flags)
         ratios_df.to_csv('../data/saved_mRNA_ratios_MA_vals/'+df_name)
     if flags['sanity_plots']:
         # sanity check plot
@@ -58,7 +58,7 @@ def create_data_for_gene(flags):
     gene_grid_name = '../data/gene_grid_constants/'+flags['central_gene']+'.pkl'
     if flags['force_rerun'] or not os.path.exists(gene_grid_name):  
         # basal model calculations
-        grid_constants = bmc.basal_values(grid_constants, eq_str, flags)
+        grid_constants = bmc.basal_values(eq_str, flags)
 
         # pick KdRNAPCrp
         po.create_shared_lambda_df(eq_str, grid_constants)
@@ -193,5 +193,5 @@ def create_data_for_gene(flags):
                 pickle_out.close()
     for fig in return_figs:
         gene_figs.append(fig)
-        
+
     return(gene_figs)

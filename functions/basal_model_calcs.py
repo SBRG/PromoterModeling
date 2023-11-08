@@ -8,14 +8,29 @@ import numpy as np
 
 
 # In the future, when we move towards a promoter based model, this code will need to be replaced with promoter specific calculations
-def basal_values(grid_constants, eq_str, flags):
+def basal_values(eq_str, flags):
 
     # Define constants
     log_test = {
         'KdRNAP': [-7,-5],
         'kEscape': [-3,1],
     }
-
+    
+    t_half_life_deg = 300
+    grid_constants = {
+        'KdRNAP': 10**-5,
+        'KdRNAPCrp': 2.5118864315095796e-07*1.4,
+        #'KeqOpening': 10**-0.34444956947383365, gets set later
+        'RNAP': 10**-6,
+        'mRNA_total': 1800, # Total mRNA/cell from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3554401
+        'cell_volume': 10**-15, # Liters from https://bionumbers.hms.harvard.edu/bionumber.aspx?id=100004&ver=19
+        'k_d_TF': 1, # May change depending on model
+        'kDeg': np.log(2)/t_half_life_deg, # Rate of degradation
+        'promoterConcVal': 10**-9, # Promoter concentration
+        'TF': 0, # Concentration of TF
+        'u': 1/3600, # Growth Rate
+    }
+    
     # Parameter Equation
     parameter_equation = sympify('Eq((KeqOpening*kEscape*promoterConcVal)/((KdRNAP/RNAP+1+KeqOpening+KdRNAP/RNAP*TF/k_d_TF)*(u+kDeg)),mRNA)')
 

@@ -3,16 +3,17 @@ import subprocess
 import os
 import pandas as pd
 import numpy as np
+import pickle
 
-
-def run_GAMs(flags, regulator, cell_constants):
+def run_GAMs(flags, promoter, inhibitor, cell_constants):
     ############################################################
     # create TF concentration
     ############################################################
     log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
     concentrations = 2**log_tpm_df*10**-6*cell_constants['mRNA_total']/cell_constants['cell_volume']/(6.022*10**23)
-    concentrations.loc[regulator].to_csv('../data/save_for_GAMs/exported_TF_conc.csv')
-    
+    concentrations.loc[promoter].to_csv('../data/save_for_GAMs/exported_act_TF_conc.csv')
+    concentrations.loc[inhibitor].to_csv('../data/save_for_GAMs/exported_inh_TF_conc.csv')
+
     
     # first let's merge together the files
     files_use = []
@@ -51,9 +52,49 @@ def run_GAMs(flags, regulator, cell_constants):
             gene_name = file.split('_')[0]
             act_df[gene_name] = pd.read_csv('../data/save_for_GAMs/'+file, index_col = 0)['cAct'].loc[act_df.index].values
             inh_df[gene_name] = pd.read_csv('../data/save_for_GAMs/'+file, index_col = 0)['cInh'].loc[inh_df.index].values
+        
     act_df.to_csv('../data/save_for_GAMs/composite_cAct_vals.csv')
     inh_df.to_csv('../data/save_for_GAMs/composite_cInh_vals.csv')
-
+    vals = []
+    for col in act_df.columns:
+        vals.append(max(act_df[col]))
+    max_df = pd.DataFrame(vals, index = act_df.columns)
+    max_df.to_csv('../data/save_for_GAMs/max_cActs.csv')
+    vals = []
+    for col in inh_df.columns:
+        vals.append(max(inh_df[col]))
+    max_df = pd.DataFrame(vals, index = inh_df.columns)
+    max_df.to_csv('../data/save_for_GAMs/max_cInh.csv')
+    
+    ############################################################
+    # create constants file for mRNA calculation
+    ############################################################
+    index = []
+    collection = []
+    for f in files_use:
+        gene_name = f.split('_')[0]
+        gene_grid_name = '../data/gene_grid_constants/'+gene_name+'.pkl'
+        pickle_in = open(gene_grid_name, 'rb')
+        grid_constants = pickle.load(pickle_in)
+        pickle_in.close()
+        index.append(gene_name)
+        collection.append(grid_constants)
+    constants_df = pd.DataFrame(collection, index = index)
+    constants_df.T.to_csv('../data/save_for_GAMs/grid_constants.csv')     
+    
+    ############################################################
+    # save actual ratio_df values
+    ############################################################
+    collection = []
+    index = []
+    for gene_name in ['b1101', 'b1817', 'b1818']:
+        df_name = gene_name+'_zerod'+str(flags['use_zerod_A_matrix'])+'_mRNA_ratios_and_MA_vals.csv'
+        ratios_df = pd.read_csv('../data/saved_mRNA_ratios_MA_vals/'+df_name, index_col = 0)
+        collection.append(ratios_df['actual_mRNA_ratio'])
+        index.append(gene_name)
+    ratios_combo_df = pd.DataFrame(collection, index = index)
+    ratios_combo_df.T.to_csv('../data/save_for_GAMs/actual_mRNA_ratio.csv')
+    
     # remove old results
     if flags['delete_old']:
         if os.path.exists('../data/GAMS_output/cInh_Kd_results.csv'):
@@ -66,8 +107,11 @@ def run_GAMs(flags, regulator, cell_constants):
             os.remove('../data/GAMS_output/cAct_TF_conc_results.csv')
 
     # call GAMs
-    _ = subprocess.call('gams cAct_model', shell = True, cwd = '../GAMs')
-    _ = subprocess.call('gams cInh_model', shell = True, cwd = '../GAMs')
+    if flags['run_seperate']:
+        _ = subprocess.call('gams cAct_model', shell = True, cwd = '../GAMs')
+        _ = subprocess.call('gams cInh_model', shell = True, cwd = '../GAMs')
+    else:
+        _ = subprocess.call('gams combined_model', shell = True, cwd = '../GAMs')
     
 def read_GAMs(flags):
     # look at GAMs results
