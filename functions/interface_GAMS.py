@@ -64,7 +64,7 @@ def run_GAMs(flags, promoter, inhibitor, cell_constants):
     for col in inh_df.columns:
         vals.append(max(inh_df[col]))
     max_df = pd.DataFrame(vals, index = inh_df.columns)
-    max_df.to_csv('../data/save_for_GAMs/max_cInh.csv')
+    max_df.to_csv('../data/save_for_GAMs/max_cInhs.csv')
     
     ############################################################
     # create constants file for mRNA calculation

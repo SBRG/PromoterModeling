@@ -78,15 +78,15 @@ Variables
     inh_TF_conc(sample) 'TF concentration'
     inh_Kd(gene) 'Kd Values';
 
-* Constrain matrices
+* constrain matrices
 act_TF_conc.lo(sample) = log10(1E-15);
 act_TF_conc.up(sample) = 5+log10(meas_act_TF(sample));
 act_Kd.lo(gene) = log10(1E-9);
-act_Kd.up(gene) = log10(1E-5);
+act_Kd.up(gene) = log10(1E-4);
 inh_TF_conc.lo(sample) = log10(1E-15);
 inh_TF_conc.up(sample) = 5+log10(meas_inh_TF(sample));
 inh_Kd.lo(gene) = log10(1E-9);
-inh_Kd.up(gene) = log10(1E-5);
+inh_Kd.up(gene) = log10(1E-4);
 
 * initialize matrices
 act_TF_conc.l(sample) = uniformInt(1, 10);
@@ -108,28 +108,28 @@ Equations
     inh_obj1   difference between TF_conc div Kd and cEff
     act_obj2   difference between measured TF conc and predicted TF conc
     inh_obj2   difference between measured TF conc and predicted TF conc
-    match_obj  difference between predicted and actual mRNA TODO IMPLEMENT THIS
+    match_obj  difference between predicted and actual mRNA
     total_obj;
 
 * Set weights for the two objectives (you can adjust these weights as needed)
-Scalar weight_balance2 /3.846428243279408E-10/;
-Scalar weight_balance3 /3.3793970672271763/;
+Scalar weight_balance2 /230632.01555323132/;
+Scalar weight_balance3 /0.1874203277944165/;
 Scalar weight_act_obj1 /1/;
 Scalar weight_inh_obj1 /1/;
 Scalar weight_act_obj2 /0/;
 Scalar weight_inh_obj2 /0/;
-Scalar weight_mRNA_match /2/;
+Scalar weight_mRNA_match /.5/;
 * ^ obj1 is just way bigger by how its calculated, this rebalances them to be about even and obj1_2 can scale them to be different
 
 total_obj .. total_diff =e= weight_balance3 * weight_mRNA_match * match_diff + weight_act_obj1 * act_diff1 + weight_inh_obj1 * inh_diff1 + weight_balance2 * (weight_act_obj2 * act_diff2 + weight_inh_obj2 * inh_diff2);
 
-act_obj1 .. act_diff1 =e= sum((gene, sample), abs((10**act_TF_conc(sample) / 10**act_Kd(gene) - cAct(sample, gene)))/max_cAct(gene));
+act_obj1 .. act_diff1 =e= sum((gene, sample), abs((10**act_TF_conc(sample) / 10**act_Kd(gene) - cAct(sample, gene))/max_cAct(gene)));
 
-act_obj2 .. act_diff2 =e= sum(sample, abs(10**(meas_act_TF(sample)) - 0.1*10**act_TF_conc(sample))**2);
+inh_obj1 .. inh_diff1 =e= sum((gene, sample), abs((10**inh_TF_conc(sample) / 10**inh_Kd(gene) - cInh(sample, gene))/max_cInh(gene)));
 
-inh_obj1 .. inh_diff1 =e= sum((gene, sample), abs(10**inh_TF_conc(sample) / 10**inh_Kd(gene) - cInh(sample, gene)))/max_cInh(gene));
+act_obj2 .. act_diff2 =e= sum(sample, (10**(meas_act_TF(sample)) - 0.1*10**act_TF_conc(sample))**2);
 
-inh_obj2 .. inh_diff2 =e= sum(sample, abs((10**(meas_inh_TF(sample)) - 0.1*10**inh_TF_conc(sample))**2);
+inh_obj2 .. inh_diff2 =e= sum(sample, (10**(meas_inh_TF(sample)) - 0.1*10**inh_TF_conc(sample))**2);
 
 match_obj .. match_diff =e= sum((gene, sample), abs(actual_mRNA(sample, gene) - (((10**act_TF_conc(sample) / 10**act_Kd(gene))*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + basal_constants('RNAP', gene) +  basal_constants('KeqOpening', gene)*basal_constants('RNAP', gene))) / ((1 + (10**act_TF_conc(sample) / 10**act_Kd(gene)) + (10**inh_TF_conc(sample) / 10**inh_Kd(gene)))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + (10**act_TF_conc(sample) / 10**act_Kd(gene))*basal_constants('KdRNAP', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene))))
 
