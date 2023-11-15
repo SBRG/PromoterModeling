@@ -14,7 +14,7 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
     return_figs = []
     # setup
     rng = np.random.default_rng(seed = flags['seed'])
-
+    
     # DataFrame to hold the Grid
     grid = pd.DataFrame(columns = ['mRNA_ratio','grid'], index = ratios_df.index)
     grid.loc[:,'mRNA_ratio'] = ratios_df.loc[:,'actual_mRNA_ratio']

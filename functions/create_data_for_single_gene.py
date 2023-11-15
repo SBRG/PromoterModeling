@@ -143,10 +143,23 @@ def create_data_for_gene(flags):
         plt.tight_layout()
         gene_figs.append(fig)
         plt.close(fig)
-        
-        
-        
-    
+    if flags['only_check_KdRNAPCrp']:
+            # potentially save off results
+        if flags['save_results']:
+            # let's create our gene specific folder within runs
+            save_folder = flags['save_results_folder']+'/'+flags['central_gene']
+            os.mkdir(save_folder)
+
+            # let's save off the relevant things in pickle
+            pickle_out = open(save_folder+'/figures.pkl', 'wb')
+            pickle.dump(gene_figs, pickle_out)
+            pickle_out.close()
+
+            pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
+            pickle.dump(ratios_df, pickle_out)
+            pickle_out.close()
+        return(gene_figs)
+   
     
     ############################################################
     # determine cActivator and cInhibior values, and greedy
@@ -193,5 +206,30 @@ def create_data_for_gene(flags):
                 pickle_out.close()
     for fig in return_figs:
         gene_figs.append(fig)
+    
+    # potentially save off results
+    if flags['save_results']:
+        # let's create our gene specific folder within runs
+        save_folder = flags['save_results_folder']+'/'+flags['central_gene']
+        os.mkdir(save_folder)
+        
+        # let's save off the relevant things in pickle
+        pickle_out = open(save_folder+'/figures.pkl', 'wb')
+        pickle.dump(gene_figs, pickle_out)
+        pickle_out.close()
+        
+        pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
+        pickle.dump(ratios_df, pickle_out)
+        pickle_out.close()
+        
+        pickle_out = open(save_folder+'/cAct_cInh.pkl', 'wb')
+        pickle.dump(cAct_cInh_df, pickle_out)
+        pickle_out.close()
+        
+        if flags['run_greedy']:
+            pickle_out = open(save_folder+'/greedy_cAct_cInh.pkl', 'wb')
+            pickle.dump(greedy_cAct_cInh_df, pickle_out)
+            pickle_out.close()
+        
 
     return(gene_figs)

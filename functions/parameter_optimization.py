@@ -172,6 +172,10 @@ def pick_KdRNAPCrp(ratios_df, flags):
         # I want to maximize "spread" and getting a more diverse range of values... let me think on what that measure would be
         penalty -= np.corrcoef(cActs, np.arange(len(cActs)))[0, 1]
         penalty -= cActs[closest_index]
+        
+        if flags['use_target_range']:
+            penalty += abs(10**flags['target_range'][1] - max(cActs))
+            penalty += abs(10**flags['target_range'][0] - min(cActs))
 
         return(penalty)
 
