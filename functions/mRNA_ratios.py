@@ -32,8 +32,15 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
     if use_zerod_A_matrix:
         gene_iMs_df = pd.read_csv('../data/precise_1.0/gene_presence_matrix.csv', index_col = 0)
         gene_iMs_df.columns = M_df.columns
-        genes_to_zero = list(gene_iMs_df.index[[val for val in gene_iMs_df[[iM_act, iM_inh]].T.any()]])
-        iMs_to_zero = list(set(gene_iMs_df.columns) - set([iM_act, iM_inh]))
+        if type(iM_act) == float:
+            genes_to_zero = list(gene_iMs_df.index[[val for val in gene_iMs_df[[iM_inh]].T.any()]])
+            iMs_to_zero = list(set(gene_iMs_df.columns) - set([iM_inh]))
+        elif type(iM_inh) == float:
+            genes_to_zero = list(gene_iMs_df.index[[val for val in gene_iMs_df[[iM_act]].T.any()]])
+            iMs_to_zero = list(set(gene_iMs_df.columns) - set([iM_act]))
+        else:
+            genes_to_zero = list(gene_iMs_df.index[[val for val in gene_iMs_df[[iM_act, iM_inh]].T.any()]])
+            iMs_to_zero = list(set(gene_iMs_df.columns) - set([iM_act, iM_inh]))
 
         zerod_M = M_df.copy()
         zerod_M.loc[genes_to_zero, iMs_to_zero] = 0
@@ -65,13 +72,21 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
         log_x_c = log_tpm_df.loc[gene][basal_conditions].mean()
     else:
         log_x_c = input_parameters['hard_val']
+    
     # predict mRNA values
-    for key, val in (A_df.loc[iM_act].T*(M_df[iM_act].loc[gene])).items():
+    for key, _ in (A_df.loc[A_df.index[0]].T*(M_df[M_df.columns[0]].loc[gene])).items():
         index.append(key)
-        act_MAs.append(val)
         actual_counts.append(2**(log_tpm_df.loc[gene][key]) / 2**(log_x_c))
-    for key, val in (A_df.loc[iM_inh].T*(M_df[iM_inh].loc[gene])).items():
-        inh_MAs.append(val)
+    if type(iM_act) == float:
+        act_MAs = [0 for _ in index]
+    else:
+        for key, val in (A_df.loc[iM_act].T*(M_df[iM_act].loc[gene])).items():
+            act_MAs.append(val)
+    if type(iM_inh) == float:
+        inh_MAs = [0 for _ in index]
+    else:
+        for key, val in (A_df.loc[iM_inh].T*(M_df[iM_inh].loc[gene])).items():
+            inh_MAs.append(val)
 
     values_df = pd.DataFrame(index = index)
     values_df['MA_activator'] = act_MAs

@@ -12,6 +12,77 @@ import matplotlib.pyplot as plt
 
 def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
     return_figs = []
+        
+    # first let's handle edge cases
+    if type(flags['act_iM']) == float:
+        # there is no need to run GA, solve for cInh with cAct = 0 and save those results
+        lambda_df = ps.create_lambdas(eq_str, grid_constants)
+        temp = grid_constants.copy()
+        temp.update({'cActivator' : flags['base_cActivator_val']})
+        cInhibitors = []
+        indices = []
+        for index, row in ratios_df.iterrows():
+            indices.append(index)
+            mRNA = row['actual_mRNA_ratio']
+            temp2 = temp.copy()
+            temp2.update({'mRNARatio' : mRNA})
+            inputs = tuple([temp2[p] for p in lambda_df.loc['cInhibitor','order']])
+            cInhibitors.append(lambda_df.loc['cInhibitor']['lambda'](inputs)[0])
+        cActivators = [flags['base_cActivator_val'] for _ in cInhibitors]
+        
+        vals_for_GAMs = pd.DataFrame(index = indices,
+                                    columns = ['cAct', 'cInh'],)
+
+        vals_for_GAMs.cAct = list(cActivators)
+        vals_for_GAMs.cInh = list(cInhibitors)
+
+        # sanity plot
+        fig = plt.figure()
+        fig.suptitle('No cInh, cAct Results', fontsize = 16)
+        plt.scatter(ratios_df['actual_mRNA_ratio'], vals_for_GAMs.cInh)
+        plt.xlabel('actual mRNA ratio')
+        plt.ylabel('cInhibitor Values')
+        plt.tight_layout()
+        return_figs.append(fig)
+        plt.close(fig)
+        
+        return(return_figs, vals_for_GAMs, vals_for_GAMs)
+    if type(flags['inh_iM']) == float:
+        # very similar to above just flipped
+        lambda_df = ps.create_lambdas(eq_str, grid_constants)
+        temp = grid_constants.copy()
+        temp.update({'cInhibitor' : flags['base_cInhibitor_val']})
+        cActivators = []
+        indices = []
+        for index, row in ratios_df.iterrows():
+            indices.append(index)
+            mRNA = row['actual_mRNA_ratio']
+            temp2 = temp.copy()
+            temp2.update({'mRNARatio' : mRNA})
+            inputs = tuple([temp2[p] for p in lambda_df.loc['cActivator','order']])
+            cActivators.append(lambda_df.loc['cActivator']['lambda'](inputs)[0])
+        cInhibitors = [flags['base_cInhibitor_val'] for _ in cActivators]
+        
+        vals_for_GAMs = pd.DataFrame(index = indices,
+                                    columns = ['cAct', 'cInh'],)
+
+        vals_for_GAMs.cAct = list(cActivators)
+        vals_for_GAMs.cInh = list(cInhibitors)
+
+        # sanity plot
+        fig = plt.figure()
+        fig.suptitle('No cAct, cInh Results', fontsize = 16)
+        plt.scatter(ratios_df['actual_mRNA_ratio'], vals_for_GAMs.cAct)
+        plt.xlabel('actual mRNA ratio')
+        plt.ylabel('cActivators Values')
+        plt.tight_layout()
+        return_figs.append(fig)
+        plt.close(fig)
+        
+        return(return_figs, vals_for_GAMs, vals_for_GAMs)
+    
+    
+
     # setup
     rng = np.random.default_rng(seed = flags['seed'])
     

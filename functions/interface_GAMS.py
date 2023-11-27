@@ -30,6 +30,25 @@ def run_GAMs(flags_df, stable_flags, promoter, inhibitor, cell_constants, GAMs_r
         'weight_act_corr' : parameter_flags['weight_act_corr'],
         'weight_inh_corr' : parameter_flags['weight_inh_corr'],
     }
+    if not promoter:
+        # no promoter exists, so set the relative weights to zero so the model doesn't optimize for it
+        baby_dict['weight_act_obj1'] = 0
+        baby_dict['weight_act_obj2'] = 0
+        baby_dict['weight_act_corr'] = 0
+        # set cActivator to be the minimum value across all samples (I think zero is iffy with how the model is set up currently, so instead setting it to a very low value
+        baby_dict['act_TF_conc_up'] = stable_flags['act_TF_conc_lo']
+        baby_dict['act_Kd_lo'] = stable_flags['act_Kd_up']
+    if not inhibitor:
+        # no inhibitor exists, so set the relative weights to zero so the model doesn't optimize for it
+        baby_dict['weight_inh_obj1'] = 0
+        baby_dict['weight_inh_obj2'] = 0
+        baby_dict['weight_inh_corr'] = 0
+        # set cActivator to be the minimum value across all samples (I think zero is iffy with how the model is set up currently, so instead setting it to a very low value
+        baby_dict['inh_TF_conc_up'] = stable_flags['inh_TF_conc_lo']
+        baby_dict['inh_Kd_lo'] = stable_flags['inh_Kd_up']
+        
+
+        
     df = pd.DataFrame(list(baby_dict.items()), columns=['Parameter', 'Value']).set_index('Parameter')
     df.to_csv(GAMs_run_dir+'/input_files/parameters.csv')
     
@@ -51,8 +70,16 @@ def run_GAMs(flags_df, stable_flags, promoter, inhibitor, cell_constants, GAMs_r
     else:
         log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
     concentrations = 2**log_tpm_df*cell_constants['mRNA_total']/cell_constants['cell_volume']/(6.022*10**23)
-    concentrations.loc[promoter].to_csv(GAMs_run_dir+'/input_files/exported_act_TF_conc.csv')
-    concentrations.loc[inhibitor].to_csv(GAMs_run_dir+'/input_files/exported_inh_TF_conc.csv')
+    if promoter:
+        concentrations.loc[promoter].to_csv(GAMs_run_dir+'/input_files/exported_act_TF_conc.csv')
+    else:
+        # still need a dummy for this that isn't used
+        concentrations.loc[inhibitor].to_csv(GAMs_run_dir+'/input_files/exported_act_TF_conc.csv')
+    if inhibitor:
+        concentrations.loc[inhibitor].to_csv(GAMs_run_dir+'/input_files/exported_inh_TF_conc.csv')
+    else:
+        # still need a dummy for this that isn't used
+        concentrations.loc[promoter].to_csv(GAMs_run_dir+'/input_files/exported_act_TF_conc.csv')
 
     
     # first let's merge together the files
@@ -128,6 +155,7 @@ def run_GAMs(flags_df, stable_flags, promoter, inhibitor, cell_constants, GAMs_r
     max_df = pd.DataFrame(vals, index = inh_df.columns)
     max_df.to_csv(GAMs_run_dir+'/input_files/max_cInhs.csv')
     
+    
     ############################################################
     # create constants file for mRNA calculation
     ############################################################
@@ -143,6 +171,7 @@ def run_GAMs(flags_df, stable_flags, promoter, inhibitor, cell_constants, GAMs_r
         collection.append(grid_constants)
     constants_df = pd.DataFrame(collection, index = index)
     constants_df.T.to_csv(GAMs_run_dir+'/input_files/grid_constants.csv')     
+    
     
     ############################################################
     # save actual ratio_df values

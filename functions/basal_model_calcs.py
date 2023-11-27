@@ -43,7 +43,11 @@ def basal_values(eq_str, flags):
 
     # Only using num_steps = 3 to make it easier to manually iterate through the values, feel free to increase it if you'd like
     lambda_df, k_df = ps.create_grid(gene_exp = gene_exp, gene_name = [flags['central_gene']], equation = parameter_equation, constants = grid_constants, num_steps = 3, **log_test)
-    grid_vals = k_df.iloc[0, 1][-1]
+    
+    grid_use = flags['grid_use']
+    if grid_use == 'median':
+        grid_use = int(len(k_df.iloc[0, 1]) / 2)
+    grid_vals = k_df.iloc[0, 1][grid_use]
     grid_constants['KdRNAP'] = 10**(grid_vals[0])
     grid_constants['kEscape'] = 10**(grid_vals[1])
     grid_constants['KeqOpening'] = 10**(grid_vals[2])

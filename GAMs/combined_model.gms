@@ -1,4 +1,5 @@
 $title cActivator toy example
+Option Seed=42;
 
 * Load in cEffector Matrix
 * Set Dimensions

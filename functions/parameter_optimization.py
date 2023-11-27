@@ -5,6 +5,8 @@ from scipy.optimize import minimize
 from sympy import *
 from itertools import product
 import math
+import matplotlib.pyplot as plt
+
 
 # these values should get overwritten in the actual code, but need to be initialized
 KdRNAP = None
@@ -96,20 +98,27 @@ def create_shared_lambda_df(equation_string, grid):
     KeqOpening = our_grid['KeqOpening']
     RNAP = our_grid['RNAP']
 
-def mRNA_cInhibitor_to_cActivator(mRNA, cInhibitor, KdRNAPCrp):
-    cActivator = evaluate_lambda('cActivator', lambda_df, {'cInhibitor': cInhibitor, 'mRNARatio' : mRNA, 'KdRNAPCrp' : KdRNAPCrp})
+def mRNA_cInhibitor_to_cActivator(mRNA, cInhibitor, KdRNAPCrp, lambda_df_input = None):
+    if not lambda_df_input:
+        lambda_df_input = lambda_df
+    cActivator = evaluate_lambda('cActivator', lambda_df_input, {'cInhibitor': cInhibitor, 'mRNARatio' : mRNA, 'KdRNAPCrp' : KdRNAPCrp})
     return(cActivator)
 
-def mRNA_cActivator_to_cInhibitor(mRNA, cActivator, KdRNAPCrp):
-    cInhibitor = evaluate_lambda('cInhibitor', lambda_df, {'cActivator': cActivator, 'mRNARatio' : mRNA, 'KdRNAPCrp' : KdRNAPCrp})
+def mRNA_cActivator_to_cInhibitor(mRNA, cActivator, KdRNAPCrp, lambda_df_input = None):
+    if not lambda_df_input:
+        lambda_df_input = lambda_df
+    cInhibitor = evaluate_lambda('cInhibitor', lambda_df_input, {'cActivator': cActivator, 'mRNARatio' : mRNA, 'KdRNAPCrp' : KdRNAPCrp})
     return(cInhibitor)
 
-def cActivator_cInhibitor_to_mRNA(cActivator, cInhibitor, KdRNAPCrp):
-    mRNA = evaluate_lambda('mRNARatio', lambda_df, {'cActivator': cActivator, 'cInhibitor' : cInhibitor, 'KdRNAPCrp' : KdRNAPCrp})
+def cActivator_cInhibitor_to_mRNA(cActivator, cInhibitor, KdRNAPCrp, lambda_df_input = None):
+    if not lambda_df_input:
+        lambda_df_input = lambda_df
+    mRNA = evaluate_lambda('mRNARatio', lambda_df_input, {'cActivator': cActivator, 'cInhibitor' : cInhibitor, 'KdRNAPCrp' : KdRNAPCrp})
     return(mRNA)
 
 
 def pick_KdRNAPCrp(ratios_df, flags):
+    ret_figs = []
     initial_guess_ratio = flags['initial_guess_ratio']
     min_cInh = flags['base_cInhibitor_val']
     # v1 assumed cInhibitor = 0, this instead sets it to a minimum value instead of zero, I'm hoping this elevates values that are below zero and is a more realistic assumption
@@ -150,9 +159,24 @@ def pick_KdRNAPCrp(ratios_df, flags):
     # setup and minimize
     initial_guess = KdRNAP * initial_guess_ratio
     bounds = [(1e-9, KdRNAP/.99)]
-    result1 = minimize(objective_function1, initial_guess, bounds = bounds, tol = 1e-10)
+    
+    result1 = minimize(objective_function1, initial_guess, method = 'Nelder-Mead', bounds = bounds)#, tol = 1e-10)
     max_KdRNAPCrp = result1.x[0] 
+    if flags['KdRNAPCrp_sanity']:
+        # Define the range of KdRNAPCrp values for plotting
+        KdRNAPCrp_values = np.linspace(1e-9, KdRNAP / .99, 1000)  # Adjust the range as needed
 
+        # Calculate the objective function values for each KdRNAPCrp value
+        objective_values = [objective_function1(KdRNAPCrp) for KdRNAPCrp in KdRNAPCrp_values]
+
+        # Create a plot to visualize the objective function
+        fig, axs = plt.subplots(1, 2, figsize = (6, 3))
+        axs[0].plot(KdRNAPCrp_values, objective_values)
+        axs[0].axvline(x = max_KdRNAPCrp, c = 'k', ls = '--')
+        #plt.ylim(min(objective_values), 10)
+        axs[0].set_xlabel('KdRNAPCrp')
+        axs[0].set_ylabel('Objective Function Value')
+        axs[0].set_title('1st Objective Function vs. KdRNAPCrp')
     
     
     # now with our new maximum, let's look for the ideal value (and we can ignore negative value penalty I think)
@@ -182,10 +206,28 @@ def pick_KdRNAPCrp(ratios_df, flags):
     # setup and minimize
     initial_guess = max_KdRNAPCrp / 2
     bounds = [(max_KdRNAPCrp / 100, max_KdRNAPCrp)]
-    result2 = minimize(objective_function2, initial_guess, bounds = bounds, tol = 1e-10)
+    result2 = minimize(objective_function2, initial_guess, method = 'Nelder-Mead', bounds = bounds)#, tol = 1e-10)
 
     # The optimal KdRNAPCrp value
     optimal_KdRNAPCrp = result2.x[0]
+    
+    if flags['KdRNAPCrp_sanity']:
+        # Define the range of KdRNAPCrp values for plotting
+        KdRNAPCrp_values = np.linspace(max_KdRNAPCrp / 100, max_KdRNAPCrp, 1000)  # Adjust the range as needed
+
+        # Calculate the objective function values for each KdRNAPCrp value
+        objective_values = [objective_function2(KdRNAPCrp) for KdRNAPCrp in KdRNAPCrp_values]
+
+        # Create a plot to visualize the objective function  
+        axs[1].plot(KdRNAPCrp_values, objective_values)
+        axs[1].axvline(x = optimal_KdRNAPCrp, c = 'k', ls = '--')
+        #plt.ylim(min(objective_values), 10)
+        axs[1].set_xlabel('KdRNAPCrp')
+        axs[1].set_ylabel('Objective Function Value')
+        axs[1].set_title('2nd Objective Function vs. KdRNAPCrp')
+        plt.tight_layout()
+        plt.close()
+        ret_figs.append(fig)
     
     
     if flags['auto_set_max_range']:
@@ -199,7 +241,7 @@ def pick_KdRNAPCrp(ratios_df, flags):
         flags['cInhibitor'] = [-4, math.log10((1+flags['additional_tolerance'])*max(cInh_vals))] # Uses a log10 range
     
     
-    return(optimal_KdRNAPCrp)
+    return(optimal_KdRNAPCrp, ret_figs)
 
 
 

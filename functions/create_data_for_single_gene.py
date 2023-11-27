@@ -62,7 +62,9 @@ def create_data_for_gene(flags):
 
         # pick KdRNAPCrp
         po.create_shared_lambda_df(eq_str, grid_constants)
-        grid_constants['KdRNAPCrp'] = po.pick_KdRNAPCrp(ratios_df, flags)
+        grid_constants['KdRNAPCrp'], ret_figs = po.pick_KdRNAPCrp(ratios_df, flags)
+        for temp in ret_figs:
+            gene_figs.append(temp)
 
         # save off grid constants
         pickle_out = open(gene_grid_name, 'wb')
