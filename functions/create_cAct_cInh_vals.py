@@ -38,7 +38,7 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
 
         # sanity plot
         fig = plt.figure()
-        fig.suptitle('No cInh, cAct Results', fontsize = 16)
+        fig.suptitle('No cAct, cInh Results', fontsize = 16)
         plt.scatter(ratios_df['actual_mRNA_ratio'], vals_for_GAMs.cInh)
         plt.xlabel('actual mRNA ratio')
         plt.ylabel('cInhibitor Values')
@@ -71,7 +71,7 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
 
         # sanity plot
         fig = plt.figure()
-        fig.suptitle('No cAct, cInh Results', fontsize = 16)
+        fig.suptitle('No cInh, cAct Results', fontsize = 16)
         plt.scatter(ratios_df['actual_mRNA_ratio'], vals_for_GAMs.cAct)
         plt.xlabel('actual mRNA ratio')
         plt.ylabel('cActivators Values')

@@ -8,9 +8,9 @@ b3409,TRUE,TRUE,Fnr,Fur-2,"['control__wt_glc__1', 'control__wt_glc__2']",-2,FALS
 b2818,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-2,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
 b3959,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-2,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
 b3958,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-2,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
-b3359,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-2,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
-b3957,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-2,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
-b0273,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-2,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
-b3172,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-2,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
-b3960,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-2,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
-b4254,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-2,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b3359,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-1,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b3957,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-1,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b0273,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-1,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b3172,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-1,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b3960,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-1,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b4254,TRUE,TRUE,,ArgR,"['ytf__delyafC__1', 'ytf__delyafC__2']",-1,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100

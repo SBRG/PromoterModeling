@@ -6,7 +6,7 @@ import numpy as np
 import pickle
 import shutil
 
-def run_GAMs(flags_df, stable_flags, promoter, inhibitor, cell_constants, GAMs_run_dir, parameter_flags = None):
+def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_constants, GAMs_run_dir, parameter_flags = None):
     ############################################################
     # save input parameters
     ############################################################
@@ -36,40 +36,40 @@ def run_GAMs(flags_df, stable_flags, promoter, inhibitor, cell_constants, GAMs_r
         baby_dict['weight_act_obj2'] = 0
         baby_dict['weight_act_corr'] = 0
         # set cActivator to be the minimum value across all samples (I think zero is iffy with how the model is set up currently, so instead setting it to a very low value
-        baby_dict['act_TF_conc_up'] = stable_flags['act_TF_conc_lo']
         baby_dict['act_Kd_lo'] = stable_flags['act_Kd_up']
+        baby_dict['act_TF_conc_up'] = 1e-25
+        baby_dict['act_TF_conc_lo'] = 1e-25
     if not inhibitor:
         # no inhibitor exists, so set the relative weights to zero so the model doesn't optimize for it
         baby_dict['weight_inh_obj1'] = 0
         baby_dict['weight_inh_obj2'] = 0
         baby_dict['weight_inh_corr'] = 0
         # set cActivator to be the minimum value across all samples (I think zero is iffy with how the model is set up currently, so instead setting it to a very low value
-        baby_dict['inh_TF_conc_up'] = stable_flags['inh_TF_conc_lo']
         baby_dict['inh_Kd_lo'] = stable_flags['inh_Kd_up']
-        
-
-        
+        baby_dict['inh_TF_conc_up'] = 1e-25
+        baby_dict['inh_TF_conc_lo'] = 1e-25
     df = pd.DataFrame(list(baby_dict.items()), columns=['Parameter', 'Value']).set_index('Parameter')
     df.to_csv(GAMs_run_dir+'/input_files/parameters.csv')
+    # now pull in TF specific parameters
+    baby_dict = {
+        'kd_act_metab' : 0,
+        'kd_inh_metab' : 0,
+    }
+    if promoter:
+        baby_dict.update({'kd_act_metab' : TF_flags_df.loc[promoter].values[0]})
+    if inhibitor:
+        baby_dict.update({'kd_inh_metab' : TF_flags_df.loc[inhibitor].values[0]})
+    df = pd.DataFrame(list(baby_dict.items()), columns=['Parameter', 'Value']).set_index('Parameter')
+    df.to_csv(GAMs_run_dir+'/input_files/input_constants.csv')
     
     
     ############################################################
     # create TF concentration
     ############################################################
-    if stable_flags['include_Amy_samples']:
-        # merge together log_tpm_df files
-        log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
-        starve_log_tpm = pd.read_csv('../data/validation_data_sets/stationary_phase/cleaned_log_tpm_qc.csv', index_col = 0)
-        to_blank_inds = list(set(log_tpm_df.index) - set(starve_log_tpm.index))
-        # need to create zero rows for missing values
-        zeros_data = {col : 0 for col in starve_log_tpm.columns}
-        zeros_df = pd.DataFrame(zeros_data, index = to_blank_inds)
-        starve_log_tpm = pd.concat([starve_log_tpm, zeros_df])
-        starve_log_tpm = starve_log_tpm.loc[log_tpm_df.index]
-        log_tpm_df = pd.concat([starve_log_tpm, log_tpm_df], axis = 1)
-    else:
-        log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
-    concentrations = 2**log_tpm_df*cell_constants['mRNA_total']/cell_constants['cell_volume']/(6.022*10**23)
+    concentrations = pd.read_csv('../data/validation_data_sets/converted_log_tpm_in_M.csv', index_col = 0)
+    
+    # the above converts it into concentrations, but not
+    
     if promoter:
         concentrations.loc[promoter].to_csv(GAMs_run_dir+'/input_files/exported_act_TF_conc.csv')
     else:
@@ -209,6 +209,12 @@ def run_GAMs(flags_df, stable_flags, promoter, inhibitor, cell_constants, GAMs_r
         else:
             _ = subprocess.call('gams cAct_model', shell = True, cwd = GAMs_run_dir)
             _ = subprocess.call('gams cInh_model', shell = True, cwd = GAMs_run_dir)
+    elif False: # zzz xxx temporary to get arginine case working, will organize later
+        shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
+        if stable_flags['supress_output']:
+            _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
+        else:
+            _ = subprocess.call('gams combined_model', shell = True, cwd = GAMs_run_dir)
     else:
         shutil.copyfile('../GAMs/combined_model.gms', GAMs_run_dir+'/combined_model.gms')
         if stable_flags['supress_output']:
@@ -217,9 +223,7 @@ def run_GAMs(flags_df, stable_flags, promoter, inhibitor, cell_constants, GAMs_r
             _ = subprocess.call('gams combined_model', shell = True, cwd = GAMs_run_dir)
     
     
-    
-    
-    
+
     
 def read_GAMs(GAMs_run_dir):
     # look at GAMs results

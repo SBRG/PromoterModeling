@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+import pickle
 
 
 def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
@@ -27,7 +27,18 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
     M_df = pd.read_csv('../data/precise_1.0/M.csv', index_col = 0)
     iM_table = pd.read_csv('../data/precise_1.0/iM_table.csv', index_col = 0)
     M_df = M_df.rename(columns = {str(index) : row['name'] for index, row in iM_table.iterrows()})
+    
+    # filter out samples
+    if input_parameters['remove_outliers']:
+        pickle_in = open('../data/case_to_mRNA_passed.pkl', 'rb')
+        case_to_mRNA_passed = pickle.load(pickle_in)
+        pickle_in.close()
         
+        passed = case_to_mRNA_passed[input_parameters['case']]
+        for cond in basal_conditions:
+            passed.append(cond)
+        log_tpm_df = log_tpm_df[list(set(passed).intersection(set(log_tpm_df.columns)))]
+    
     # creates zerod matrices
     if use_zerod_A_matrix:
         gene_iMs_df = pd.read_csv('../data/precise_1.0/gene_presence_matrix.csv', index_col = 0)
@@ -55,13 +66,12 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
             fixed_X = log_tpm_df.sub(log_tpm_df[basal_conditions].mean(axis = 1), axis = 'index')
         else:
             fixed_X = log_tpm_df.sub(input_parameters['hard_val'], axis = 'index')
-        fixed_X = fixed_X.fillna(0).drop(columns = ['fps__fps_ptsI_ale3__1', 'fps__fps_ptsI_ale3__2', 'fps__fps_ptsI_ale1__1', 'fps__fps_ptsI_ale1__2'])
+        to_drop = list(set(['fps__fps_ptsI_ale3__1', 'fps__fps_ptsI_ale3__2', 'fps__fps_ptsI_ale1__1', 'fps__fps_ptsI_ale1__2']).intersection(set(fixed_X.columns)))
+        fixed_X = fixed_X.fillna(0).drop(columns = to_drop)
         zerod_A_df = M_inverse.dot(fixed_X)
 
         A_df = zerod_A_df
         M_df = zerod_M
-
-
 
     # create data matrix
     act_MAs = []

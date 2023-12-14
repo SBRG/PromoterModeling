@@ -214,7 +214,7 @@ inh_tf_conc_correlation_obj .. inh_tf_conc_correlation_diff =e= sum(sample, (10*
 * ^ I found one paper that said about 10% of crp is active based on cAMP presence, this should be changed later though
 
 * modify model parameters
-Option Iterlim=10000;
+*Option Iterlim=10000;
 *$set dnlp acc=1e-15  // Set the accuracy or tolerance level
 *$set dnlp step=1e-15  // Set the step size
 
