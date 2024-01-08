@@ -48,7 +48,22 @@ def create_data_for_gene(flags):
         plt.ylabel('Count')
         gene_figs.append(fig)
         plt.close(fig)
-    
+    if flags['only_create_ratios']:
+        # potentially save off results
+        if flags['save_results']:
+            # let's create our gene specific folder within runs
+            save_folder = flags['save_results_folder']+'/'+flags['central_gene']
+            os.mkdir(save_folder)
+
+            # let's save off the relevant things in pickle
+            pickle_out = open(save_folder+'/figures.pkl', 'wb')
+            pickle.dump(gene_figs, pickle_out)
+            pickle_out.close()
+
+            pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
+            pickle.dump(ratios_df, pickle_out)
+            pickle_out.close()
+        return(gene_figs)
     
     
     ############################################################
@@ -58,7 +73,10 @@ def create_data_for_gene(flags):
     gene_grid_name = '../data/gene_grid_constants/'+flags['central_gene']+'.pkl'
     if flags['force_rerun'] or not os.path.exists(gene_grid_name):  
         # basal model calculations
-        grid_constants = bmc.basal_values(eq_str, flags)
+        num_grid_steps = 4
+        if 'grid_steps' in flags:
+            num_grid_steps = flags['grid_steps']
+        grid_constants = bmc.basal_values(eq_str, flags, num_steps = num_grid_steps)
 
         # pick KdRNAPCrp
         po.create_shared_lambda_df(eq_str, grid_constants)
@@ -146,11 +164,16 @@ def create_data_for_gene(flags):
         gene_figs.append(fig)
         plt.close(fig)
     if flags['only_check_KdRNAPCrp']:
-            # potentially save off results
+        # potentially save off results
         if flags['save_results']:
             # let's create our gene specific folder within runs
             save_folder = flags['save_results_folder']+'/'+flags['central_gene']
             os.mkdir(save_folder)
+            
+            # save off constants used
+            pickle_out = open(save_folder+'/constants.pkl', 'wb')
+            pickle.dump(grid_constants, pickle_out)
+            pickle_out.close()
 
             # let's save off the relevant things in pickle
             pickle_out = open(save_folder+'/figures.pkl', 'wb')
@@ -214,6 +237,11 @@ def create_data_for_gene(flags):
         # let's create our gene specific folder within runs
         save_folder = flags['save_results_folder']+'/'+flags['central_gene']
         os.mkdir(save_folder)
+        
+        # save off constants used
+        pickle_out = open(save_folder+'/constants.pkl', 'wb')
+        pickle.dump(grid_constants, pickle_out)
+        pickle_out.close()
         
         # let's save off the relevant things in pickle
         pickle_out = open(save_folder+'/figures.pkl', 'wb')

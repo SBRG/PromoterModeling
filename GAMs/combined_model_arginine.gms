@@ -107,7 +107,6 @@ $gdxIn
 Variables
     act_TF_conc(sample) 'TF concentration'
     act_Kd(gene) 'Kd Values'
-    inh_TF_conc(sample) 'TF concentration'
     inh_Kd(gene) 'Kd Values'
     act_metab_Total(sample)
     inh_metab_Total(sample);
@@ -118,46 +117,42 @@ act_TF_conc.up(sample) = log10(input_parameters('act_TF_conc_up'));
 *log10(meas_act_TF(sample));
 act_Kd.lo(gene) = log10(input_parameters('act_Kd_lo'));
 act_Kd.up(gene) = log10(input_parameters('act_Kd_up'));
-inh_TF_conc.lo(sample) = log10(input_parameters('inh_TF_conc_lo'));
-inh_TF_conc.up(sample) = log10(input_parameters('inh_TF_conc_up'));
 *log10(meas_inh_TF(sample));
 inh_Kd.lo(gene) = log10(input_parameters('inh_Kd_lo'));
 inh_Kd.up(gene) = log10(input_parameters('inh_Kd_up'));
+
+* temp, delete these four lines
+inh_Kd.lo(gene) = log10(1E-15);
+inh_Kd.up(gene) = log10(1E-1);
+inh_metab_Total.lo(sample) = log10(1E-35);
+inh_metab_Total.up(sample) = log10(1E5);
+
 $onText
 * standard values for above
 act_TF_conc.lo(sample) = log10(1E-8);
 act_TF_conc.up(sample) = log10(1E-5);
 act_Kd.lo(gene) = log10(1E-10);
 act_Kd.up(gene) = log10(1E-6);
-inh_TF_conc.lo(sample) = log10(1E-8);
-inh_TF_conc.up(sample) = log10(1E-5);
 inh_Kd.lo(gene) = log10(1E-10);
 inh_Kd.up(gene) = log10(1E-6);
 act_metab_Total.lo(gene) = log10(1E-10);
 act_metab_Total.up(gene) = log10(1E-6);
-inh_metab_Total.lo(gene) = log10(1E-10);
-inh_metab_Total.up(gene) = log10(1E-6);
+inh_metab_Total.lo(gene) = log10(1E-15);
+inh_metab_Total.up(gene) = log10(1E-1);
 $offText
 
 * initialize matrices
 act_TF_conc.l(sample) = uniformInt(-10, -3);
 act_Kd.l(gene) = uniformInt(-10, -3);
-inh_TF_conc.l(sample) = uniformInt(-10, -3);
 inh_Kd.l(gene) = uniformInt(-10, -3);
+inh_metab_Total.l(sample) = uniformInt(-10, -3);
 
 * Now set up the optimization
 Variables
     act_diff1   difference between TF_conc div Kd and Ceff
     inh_diff1   similar
     match_diff
-    act_tf_conc_correlation_diff
-    inh_tf_conc_correlation_diff
-    act_avg_actual_TF_conc
-    act_avg_pred_TF_conc
-    inh_avg_actual_TF_conc
-    inh_avg_pred_TF_conc
     total_diff;
-
 
 * calculated sub variables
 Variables
@@ -169,22 +164,15 @@ Equations
     eq_cInh_calc(sample, gene);
 
 Equations
-    act_avg_actual_TF_conc_eq
-    act_avg_pred_TF_conc_eq
-    inh_avg_actual_TF_conc_eq
-    inh_avg_pred_TF_conc_eq;
-    
-Equations
     act_obj1   difference between TF_conc div Kd and cEff
     inh_obj1   difference between TF_conc div Kd and cEff
     match_obj  difference between predicted and actual mRNA
-    act_tf_conc_correlation_obj
-    inh_tf_conc_correlation_obj
     total_obj;
+
 
 * Set weights for the two objectives (you can adjust these weights as needed)
 * mRNA weighting
-Scalar weight_balance3 /60.56763055777653/;
+Scalar weight_balance3 /99960.56763055777653/;
 * TF conenctration correlation matching
 Scalar weight_balance4 /1953.70798879785/;
 Scalar weight_act_obj1 /1/;
@@ -192,6 +180,7 @@ Scalar weight_inh_obj1 /1/;
 Scalar weight_mRNA_match /0/;
 Scalar weight_act_corr /0/;
 Scalar weight_inh_corr /0/;
+
 
 * set them from parameters file
 weight_act_obj1 = input_parameters('weight_act_obj1');
@@ -208,21 +197,16 @@ total_obj .. total_diff =e= weight_balance3 * weight_mRNA_match * match_diff + w
 * equations for cInhibitor and cActivator (cActivator is basically null and unused right now)
 eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= 10**act_TF_conc(sample) / 10**act_Kd(gene);
 
+eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= 10**inh_metab_Total(sample) * 10**inh_Kd(gene) + input_constants('kd_inh_metab') * 10**inh_metab_Total(sample) + 10**inh_metab_Total(sample) * meas_inh_TF(sample) + (-4*(10**inh_metab_Total(sample)) * 10**inh_Kd(gene)**2 * meas_inh_TF(sample) + (10**inh_metab_Total(sample) * 10**inh_Kd(gene) + input_constants('kd_inh_metab') * 10**inh_Kd(gene) + 10**inh_Kd(gene) * meas_inh_TF(sample))**2)**(.5) / (2 * (10**inh_Kd(gene))**2);
 
-
-
-* TODO - get this working
-eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= 10**inh_metab_Total(sample) * 10**inh_Kd(gene) + input_constants('kd_inh_metab') * meas_inh_TF(sample) + (-4*(10**inh_metab_Total(sample)) * 10**inh_Kd(gene)**2 + (10**inh_metab_Total(sample) * 10**inh_Kd(gene) + input_constants('kd_inh_metab') * 10**inh_Kd(gene) * meas_act_TF(sample)))**(.5) / (2 * (10**inh_Kd(gene))**2);
-
-
-
+*eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= 10**inh_metab_Total(sample) * 10**inh_Kd(gene) + input_constants('kd_inh_metab') * meas_inh_TF(sample) + (-4*(10**inh_metab_Total(sample)) * 10**inh_Kd(gene)**2 + (10**inh_metab_Total(sample) * 10**inh_Kd(gene) + input_constants('kd_inh_metab') * 10**inh_Kd(gene) * meas_act_TF(sample)))**(.5) / (2 * (10**inh_Kd(gene))**2);
 
 * objective equations
-act_obj1 .. act_diff1 =e= sum((gene, sample), abs((10**act_TF_conc(sample) / 10**act_Kd(gene) - cAct(sample, gene))));
+act_obj1 .. act_diff1 =e= sum((gene, sample), abs((cAct_calc(sample, gene) - cAct(sample, gene))));
 
-inh_obj1 .. inh_diff1 =e= sum((gene, sample), abs((10**inh_TF_conc(sample) / 10**inh_Kd(gene) - cInh(sample, gene))));
+inh_obj1 .. inh_diff1 =e= sum((gene, sample), abs((cInh_calc(sample, gene) - cInh(sample, gene))));
 
-match_obj .. match_diff =e= sum((gene, sample), abs(actual_mRNA(sample, gene) - (((10**act_TF_conc(sample) / 10**act_Kd(gene))*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + basal_constants('RNAP', gene) +  basal_constants('KeqOpening', gene)*basal_constants('RNAP', gene))) / ((1 + (10**act_TF_conc(sample) / 10**act_Kd(gene)) + (10**inh_TF_conc(sample) / 10**inh_Kd(gene)))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + (10**act_TF_conc(sample) / 10**act_Kd(gene))*basal_constants('KdRNAP', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene))));
+match_obj .. match_diff =e= sum((gene, sample), abs(actual_mRNA(sample, gene) - ((cAct_calc(sample, gene)*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + basal_constants('RNAP', gene) +  basal_constants('KeqOpening', gene)*basal_constants('RNAP', gene))) / ((1 + cAct_calc(sample, gene) + cInh_calc(sample, gene))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + cAct_calc(sample, gene)*basal_constants('KdRNAP', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene))));
 
 
 
@@ -235,17 +219,16 @@ Option Iterlim=10000;
 Model ElementWiseOptimization /all/;
 Solve ElementWiseOptimization using dnlp minimizing total_diff;
 
-* display results
-*Display TF_conc.l, TF_conc.m;
-*Display diff1.l, diff2.l;
-
 
 * Export results
 execute_unload "./output_GDX/cAct_TF_conc_results.gdx" act_TF_conc.L act_TF_conc.M
-execute_unload "./output_GDX/cAct_Kd_results.gdx" act_Kd.L act_Kd.M
 execute 'gdxdump ./output_GDX/cAct_TF_conc_results.gdx noData > ./output_files/cAct_TF_conc_results.csv symb=act_TF_conc format=csv';
+
+execute_unload "./output_GDX/cAct_Kd_results.gdx" act_Kd.L act_Kd.M
 execute 'gdxdump ./output_GDX/cAct_Kd_results.gdx noData > ./output_files/cAct_Kd_results.csv symb=act_Kd format=csv';
-execute_unload "./output_GDX/cInh_TF_conc_results.gdx" inh_TF_conc.L inh_TF_conc.M
+
 execute_unload "./output_GDX/cInh_Kd_results.gdx" inh_Kd.L inh_Kd.M
-execute 'gdxdump ./output_GDX/cInh_TF_conc_results.gdx noData > ./output_files/cInh_TF_conc_results.csv symb=inh_TF_conc format=csv';
 execute 'gdxdump ./output_GDX/cInh_Kd_results.gdx noData > ./output_files/cInh_Kd_results.csv symb=inh_Kd format=csv';
+
+execute_unload "./output_GDX/inh_metab_Total.gdx" inh_metab_Total.L inh_metab_Total.M
+execute 'gdxdump ./output_GDX/inh_metab_Total.gdx noData > ./output_files/inh_metab_Total.csv symb=inh_metab_Total format=csv';

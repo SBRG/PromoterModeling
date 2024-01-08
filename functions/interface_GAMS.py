@@ -209,7 +209,7 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
         else:
             _ = subprocess.call('gams cAct_model', shell = True, cwd = GAMs_run_dir)
             _ = subprocess.call('gams cInh_model', shell = True, cwd = GAMs_run_dir)
-    elif False: # zzz xxx temporary to get arginine case working, will organize later
+    elif stable_flags['case'] == 'argR':
         shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
         if stable_flags['supress_output']:
             _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
@@ -230,7 +230,7 @@ def read_GAMs(GAMs_run_dir):
 
     # load in cActivators
     saved_cActivators = pd.read_csv(GAMs_run_dir+'/input_files/composite_cAct_vals.csv', index_col = 0)
-
+        
     # GAMS calculated cActivators
     cAct_kd_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cAct_Kd_results.csv', index_col = 0).astype(float).T
     saved_cActivators = saved_cActivators[cAct_kd_df.columns]
@@ -250,15 +250,43 @@ def read_GAMs(GAMs_run_dir):
 
     # GAMS calculated cActivators
     kd_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cInh_Kd_results.csv', index_col = 0).astype(float).T
+
     saved_cActivators = saved_cActivators[kd_df.columns]
-    TF_conc_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cInh_TF_conc_results.csv', index_col = 0).astype(float).T
-    saved_cActivators = saved_cActivators.loc[TF_conc_df.columns]
-    calc_cInh = pd.DataFrame(index = saved_cActivators.columns, columns = saved_cActivators.index)
-    cActs = []
-    for sample in calc_cInh.columns:
-        for gene in calc_cInh.index:
-            calc_cInh.at[gene, sample] = TF_conc_df[sample].values[0] / kd_df[gene].values[0]
-    calc_cInh = calc_cInh.T
-    
+    if os.path.exists(GAMs_run_dir+'/output_files/cInh_TF_conc_results.csv'):
+        TF_conc_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cInh_TF_conc_results.csv', index_col = 0).astype(float).T
+        saved_cActivators = saved_cActivators.loc[TF_conc_df.columns]
+        calc_cInh = pd.DataFrame(index = saved_cActivators.columns, columns = saved_cActivators.index)
+        cActs = []
+        for sample in calc_cInh.columns:
+            for gene in calc_cInh.index:
+                calc_cInh.at[gene, sample] = TF_conc_df[sample].values[0] / kd_df[gene].values[0]
+        calc_cInh = calc_cInh.T
+    else:
+        TF_conc_df = None
+        # we are using the arginine model, so need to calculate cInhibitor using that
+        inh_metab = 10**pd.read_csv(GAMs_run_dir+'/output_files/inh_metab_Total.csv', index_col = 0).astype(float).T
+        input_constants = pd.read_csv(GAMs_run_dir+'/input_files/input_constants.csv', index_col = 0).astype(float)
+        KdArg = input_constants.loc['kd_inh_metab'].values[0]
+        
+        TF_concs = pd.read_csv(GAMs_run_dir+'/input_files/exported_inh_TF_conc.csv', index_col = 0).astype(float)
+        
+        calc_cInh = pd.DataFrame(index = saved_cActivators.columns, columns = saved_cActivators.index)
+        cActs = []
+        for sample in calc_cInh.columns:
+            ArgTotal = inh_metab[sample].values[0]
+            TFTotal = TF_concs.loc[sample].values[0]
+            for gene in calc_cInh.index:
+                KdTF = kd_df[gene].values[0]
+                
+                calc_cInh.at[gene, sample] = (ArgTotal * KdTF + KdArg * KdTF +  KdTF * TFTotal + \
+                    ( -4 * ArgTotal * KdTF**2 * TFTotal + \
+                     (ArgTotal * KdTF + KdArg * KdTF + KdTF * TFTotal)**2)**.5 \
+                    ) / (2 * KdTF**2)
+        calc_cInh = calc_cInh.T
+        
+
     # return
-    return(calc_cAct, cAct_kd_df, cAct_TF_conc_df, calc_cInh, kd_df, TF_conc_df)
+    if TF_conc_df:
+        return(calc_cAct, cAct_kd_df, cAct_TF_conc_df, calc_cInh, kd_df, TF_conc_df)
+    else:
+        return(calc_cAct, cAct_kd_df, cAct_TF_conc_df, calc_cInh, kd_df, inh_metab)
