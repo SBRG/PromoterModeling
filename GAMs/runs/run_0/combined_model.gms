@@ -172,7 +172,7 @@ Equations
 
 * Set weights for the two objectives (you can adjust these weights as needed)
 * mRNA weighting
-Scalar weight_balance3 /99960.56763055777653/;
+Scalar weight_balance3 /99960.567630557776/;
 * TF conenctration correlation matching
 Scalar weight_balance4 /1953.70798879785/;
 Scalar weight_act_obj1 /1/;
