@@ -10,24 +10,7 @@ C o m p i l a t i o n
    6  Set
    7     gene 'genes'
    8     sample 'samples'
-   9     stable_constant 'constant across all'
-  10         / kd_act_metab,
-  11           kd_inh_metab /
-  12     constant 'grid basal constants'
-  13         / KdRNAP,
-  14           KdRNAPCrp,
-  15           RNAP,
-  16           mRNA_total,
-  17           cell_volume,
-  18           k_d_TF,
-  19           kDeg,
-  20           promoterConcVal,
-  21           TF,
-  22           u,
-  23           kEscape,
-  24           KeqOpening /
-  25      limits 'input parameters'
-  26         / act_TF_conc_lo,
+   9     stable_constant 
   27           act_TF_conc_up,
   28           act_Kd_lo,
   29           act_Kd_up,
