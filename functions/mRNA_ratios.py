@@ -103,6 +103,11 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
     values_df['MA_inhibitor'] = inh_MAs
     values_df['actual_mRNA_ratio'] = actual_counts
 
-
+    # if set, remove basal conditions from sample to not weight results towards them
+    if input_parameters['drop_basal_conds']:
+        new_group = list(values_df.index)
+        for cond in basal_conditions:
+            new_group.remove(cond)
+        values_df = values_df.loc[new_group]
     
     return(values_df)

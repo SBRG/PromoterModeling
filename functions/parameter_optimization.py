@@ -236,10 +236,14 @@ def pick_KdRNAPCrp(ratios_df, flags):
         cInh_vals = [mRNA_cActivator_to_cInhibitor(rat_val, flags['base_cActivator_val'], optimal_KdRNAPCrp) for rat_val in rat_vals]
         cAct_vals = [mRNA_cInhibitor_to_cActivator(rat_val, flags['base_cInhibitor_val'], optimal_KdRNAPCrp) for rat_val in rat_vals]
 
-        
-        flags['cActivator'] = [-4, math.log10((1+flags['additional_tolerance'])*max(cAct_vals))] # Uses a log10 range
-        flags['cInhibitor'] = [-4, math.log10((1+flags['additional_tolerance'])*max(cInh_vals))] # Uses a log10 range
-    
+        try:
+            flags['cActivator'] = [-4, math.log10((1+flags['additional_tolerance'])*max(cAct_vals))] # Uses a log10 range
+        except:
+            pass
+        try:
+            flags['cInhibitor'] = [-4, math.log10((1+flags['additional_tolerance'])*max(cInh_vals))] # Uses a log10 range
+        except:
+            pass # if there is no Inhibitor, this fails but doesn't matter
     
     return(optimal_KdRNAPCrp, ret_figs)
 

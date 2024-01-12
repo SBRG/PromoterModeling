@@ -122,10 +122,10 @@ inh_Kd.lo(gene) = log10(input_parameters('inh_Kd_lo'));
 inh_Kd.up(gene) = log10(input_parameters('inh_Kd_up'));
 
 * temp, delete these four lines
-inh_Kd.lo(gene) = log10(1E-15);
-inh_Kd.up(gene) = log10(1E-1);
-inh_metab_Total.lo(sample) = log10(1E-35);
-inh_metab_Total.up(sample) = log10(1E5);
+inh_Kd.lo(gene) = log10(1E-11);
+inh_Kd.up(gene) = log10(1E-4);
+inh_metab_Total.lo(sample) = log10(1E-7);
+inh_metab_Total.up(sample) = log10(1E-1);
 
 $onText
 * standard values for above
@@ -137,8 +137,8 @@ inh_Kd.lo(gene) = log10(1E-10);
 inh_Kd.up(gene) = log10(1E-6);
 act_metab_Total.lo(gene) = log10(1E-10);
 act_metab_Total.up(gene) = log10(1E-6);
-inh_metab_Total.lo(gene) = log10(1E-15);
-inh_metab_Total.up(gene) = log10(1E-1);
+inh_metab_Total.lo(gene) = log10(1E-5);
+inh_metab_Total.up(gene) = log10(1E-3);
 $offText
 
 * initialize matrices
@@ -206,7 +206,9 @@ act_obj1 .. act_diff1 =e= sum((gene, sample), abs((cAct_calc(sample, gene) - cAc
 
 inh_obj1 .. inh_diff1 =e= sum((gene, sample), abs((cInh_calc(sample, gene) - cInh(sample, gene))));
 
-match_obj .. match_diff =e= sum((gene, sample), abs(actual_mRNA(sample, gene) - ((cAct_calc(sample, gene)*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + basal_constants('RNAP', gene) +  basal_constants('KeqOpening', gene)*basal_constants('RNAP', gene))) / ((1 + cAct_calc(sample, gene) + cInh_calc(sample, gene))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + cAct_calc(sample, gene)*basal_constants('KdRNAP', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene))));
+
+
+match_obj .. match_diff =e= sum((gene, sample), (abs(actual_mRNA(sample, gene) - ((cAct_calc(sample, gene)*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + basal_constants('RNAP', gene) +  basal_constants('KeqOpening', gene)*basal_constants('RNAP', gene))) / (((1 + cAct_calc(sample, gene) + cInh_calc(sample, gene))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + cAct_calc(sample, gene)*basal_constants('KdRNAP', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*basal_constants('RNAP', gene)))))**2 );
 
 
 

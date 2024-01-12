@@ -139,9 +139,15 @@ def create_data_for_gene(flags):
         ax1.set_title('cAct and cInh ranges assuming other = 0')
 
         if flags['auto_set_max_range']:
-            flags['cActivator'] = [-2, math.log10((1+flags['additional_tolerance'])*max(cAct_vals))] # Uses a log10 range
-            flags['cInhibitor'] = [-2, math.log10((1+flags['additional_tolerance'])*max(cInh_vals))] # Uses a log10 range
-
+            try:
+                flags['cActivator'] = [-2, math.log10((1+flags['additional_tolerance'])*max(cAct_vals))] # Uses a log10 range
+            except:
+                pass
+            try:
+                flags['cInhibitor'] = [-2, math.log10((1+flags['additional_tolerance'])*max(cInh_vals))] # Uses a log10 range
+            except:
+                pass
+            
         # let's create a 2D heatmap version of this, colored by the mRNA ratio
         cInh_range = np.linspace(0, max(cInh_vals), 100)
         cAct_range = np.linspace(0, max(cAct_vals), 100)
