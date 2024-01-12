@@ -1,4 +1,4 @@
-GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 14:56:19 Page 1
+GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 16:05:32 Page 1
 cActivator toy example
 C o m p i l a t i o n
 
@@ -10,7 +10,24 @@ C o m p i l a t i o n
    6  Set
    7     gene 'genes'
    8     sample 'samples'
-   9     stable_constant 
+   9     stable_constant 'constant across all'
+  10         / kd_act_metab,
+  11           kd_inh_metab /
+  12     constant 'grid basal constants'
+  13         / KdRNAP,
+  14           KdRNAPCrp,
+  15           RNAP,
+  16           mRNA_total,
+  17           cell_volume,
+  18           k_d_TF,
+  19           kDeg,
+  20           promoterConcVal,
+  21           TF,
+  22           u,
+  23           kEscape,
+  24           KeqOpening /
+  25      limits 'input parameters'
+  26         / act_TF_conc_lo,
   27           act_TF_conc_up,
   28           act_Kd_lo,
   29           act_Kd_up,
@@ -203,7 +220,7 @@ GDXIN   C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\runs\run_0\./input_GD
  234   
  235  execute_unload "./output_GDX/inh_metab_Total.gdx" inh_metab_Total.L inh_metab_Total.M
  236  execute 'gdxdump ./output_GDX/inh_metab_Total.gdx noData > ./output_files/inh_metab_Total.csv symb=inh_metab_Total format=csv';
-GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 14:56:19 Page 2
+GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 16:05:32 Page 2
 cActivator toy example
 Include File Summary
 
@@ -233,8 +250,8 @@ Include File Summary
     21      100 GDXIN          1     100  C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\runs\run_0\./input_GDX/input_parameters.gdx
 
 
-COMPILATION TIME     =        0.297 SECONDS      3 MB  28.2.0 r750fa45 WEX-WEI
-GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 14:56:19 Page 3
+COMPILATION TIME     =        0.312 SECONDS      3 MB  28.2.0 r750fa45 WEX-WEI
+GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 16:05:32 Page 3
 cActivator toy example
 Equation Listing    SOLVE ElementWiseOptimization Using DNLP From line 222
 
@@ -5694,7 +5711,7 @@ match_obj..  match_diff - (183.609228295399)*cAct_calc(42c__42c_ale10__1,b2818) 
 
 total_obj..  - 0.0541052653027954*inh_diff1 - 170079.093167268*match_diff + total_diff =E= 0 ; (LHS = 0)
      
-GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 14:56:19 Page 4
+GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 16:05:32 Page 4
 cActivator toy example
 Column Listing      SOLVE ElementWiseOptimization Using DNLP From line 222
 
@@ -7816,7 +7833,7 @@ cInh_calc(42c__42c_ale10__1,b3958)
        (1.8173) match_obj
 
 REMAINING 2895 ENTRIES SKIPPED
-GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 14:56:19 Page 5
+GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 16:05:32 Page 5
 cActivator toy example
 Model Statistics    SOLVE ElementWiseOptimization Using DNLP From line 222
 
@@ -7833,8 +7850,8 @@ CODE LENGTH             263,724
 GENERATION TIME      =        0.078 SECONDS      7 MB  28.2.0 r750fa45 WEX-WEI
 
 
-EXECUTION TIME       =        0.094 SECONDS      7 MB  28.2.0 r750fa45 WEX-WEI
-GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 14:56:19 Page 6
+EXECUTION TIME       =        0.078 SECONDS      7 MB  28.2.0 r750fa45 WEX-WEI
+GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 16:05:32 Page 6
 cActivator toy example
 Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 222
 
@@ -7849,7 +7866,7 @@ Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 222
 **** MODEL STATUS      2 Locally Optimal           
 **** OBJECTIVE VALUE          6895034.1119
 
- RESOURCE USAGE, LIMIT          4.953      1000.000
+ RESOURCE USAGE, LIMIT          4.938      1000.000
  ITERATION COUNT, LIMIT       124         10000
  EVALUATION ERRORS              0             0
 CONOPT 3         28.2.0 r750fa45 Released Aug 19, 2019 WEI x86 64bit/MS Window
@@ -7879,11 +7896,11 @@ CONOPT 3         28.2.0 r750fa45 Released Aug 19, 2019 WEI x86 64bit/MS Window
  ** Optimal solution. Reduced gradient less than tolerance.
  
  
- CONOPT time Total                            4.937 seconds
-   of which: Function evaluations             0.798 = 16.2%
-             1st Derivative evaluations       0.745 = 15.1%
-             2nd Derivative evaluations       0.917 = 18.6%
-             Directional 2nd Derivative       2.091 = 42.4%
+ CONOPT time Total                            4.923 seconds
+   of which: Function evaluations             0.789 = 16.0%
+             1st Derivative evaluations       0.735 = 14.9%
+             2nd Derivative evaluations       0.952 = 19.3%
+             Directional 2nd Derivative       2.070 = 42.0%
  
 
 ---- EQU eq_cAct_calc  
@@ -20206,12 +20223,12 @@ ytf__wt_ph8__2               .b4254        -INF            2.2385        +INF   
                              0 INFEASIBLE
                              0  UNBOUNDED
                              0     ERRORS
-GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 14:56:19 Page 7
+GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 01/11/24 16:05:32 Page 7
 cActivator toy example
 E x e c u t i o n
 
 
-EXECUTION TIME       =        0.203 SECONDS      4 MB  28.2.0 r750fa45 WEX-WEI
+EXECUTION TIME       =        0.141 SECONDS      4 MB  28.2.0 r750fa45 WEX-WEI
 
 
 USER: Bernhard Palsson, Single User License          G190618/0001AO-GEN
