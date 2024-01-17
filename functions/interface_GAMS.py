@@ -209,6 +209,7 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
             os.remove('../data/GAMS_output/cAct_TF_conc_results.csv')
 
     # call GAMs
+    shutil.copyfile('../GAMs/conopt.opt', GAMs_run_dir+'/conopt.opt')
     if stable_flags['run_seperate']:
         shutil.copyfile('../GAMs/cAct_model.gms', GAMs_run_dir+'/cAct_model.gms')
         shutil.copyfile('../GAMs/cInh_model.gms', GAMs_run_dir+'/cInh_model.gms')
