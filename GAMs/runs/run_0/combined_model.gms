@@ -37,7 +37,9 @@ Set
          weight_inh_obj2,
          weight_mRNA_match,
          weight_act_corr,
-         weight_inh_corr /
+         weight_inh_corr,
+         inh_metab_Total_lo,
+         inh_metab_Total_up /
 
 * Load in saved values
 $call csv2gdx ./input_files/composite_cAct_vals.csv id=cAct index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_cAct.gdx
@@ -111,21 +113,18 @@ Variables
     act_metab_Total(sample)
     inh_metab_Total(sample);
 
+Display input_parameters;
+
 * constrain matrices
 act_TF_conc.lo(sample) = log10(input_parameters('act_TF_conc_lo'));
 act_TF_conc.up(sample) = log10(input_parameters('act_TF_conc_up'));
-*log10(meas_act_TF(sample));
 act_Kd.lo(gene) = log10(input_parameters('act_Kd_lo'));
 act_Kd.up(gene) = log10(input_parameters('act_Kd_up'));
-*log10(meas_inh_TF(sample));
 inh_Kd.lo(gene) = log10(input_parameters('inh_Kd_lo'));
 inh_Kd.up(gene) = log10(input_parameters('inh_Kd_up'));
+inh_metab_Total.lo(sample) = log10(input_parameters('inh_metab_Total_lo'));
+inh_metab_Total.up(sample) = log10(input_parameters('inh_metab_Total_up'));
 
-* temp, delete these four lines
-inh_Kd.lo(gene) = log10(1E-11);
-inh_Kd.up(gene) = log10(1E-4);
-inh_metab_Total.lo(sample) = log10(1E-7);
-inh_metab_Total.up(sample) = log10(1E-1);
 
 $onText
 * standard values for above
@@ -172,7 +171,7 @@ Equations
 
 * Set weights for the two objectives (you can adjust these weights as needed)
 * mRNA weighting
-Scalar weight_balance3 /99960.567630557776/;
+Scalar weight_balance3 /195260.5676/;
 * TF conenctration correlation matching
 Scalar weight_balance4 /1953.70798879785/;
 Scalar weight_act_obj1 /1/;

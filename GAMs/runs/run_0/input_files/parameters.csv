@@ -14,3 +14,5 @@ weight_inh_obj2,0.0
 weight_mRNA_match,1.7014618583986063
 weight_act_corr,0.0
 weight_inh_corr,6.553309235259481e-17
+inh_metab_Total_lo,3.8e-06
+inh_metab_Total_up,0.00408
