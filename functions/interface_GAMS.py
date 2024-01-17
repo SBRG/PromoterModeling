@@ -12,24 +12,33 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
     ############################################################
     if not parameter_flags:
         parameter_flags = stable_flags
-    baby_dict = {
-        'act_TF_conc_lo' : parameter_flags['act_TF_conc_lo'],
-        'act_TF_conc_up' : parameter_flags['act_TF_conc_up'],
-        'act_Kd_lo' : parameter_flags['act_Kd_lo'],
-        'act_Kd_up' : parameter_flags['act_Kd_up'],
-        'inh_TF_conc_lo' : parameter_flags['inh_TF_conc_lo'],
-        'inh_TF_conc_up' : parameter_flags['inh_TF_conc_up'],
-        'inh_Kd_lo' : parameter_flags['inh_Kd_lo'],
-        'inh_Kd_up' : parameter_flags['inh_Kd_up'],
+        baby_dict = {
+            'act_TF_conc_lo' : parameter_flags['act_TF_conc_lo'],
+            'act_TF_conc_up' : parameter_flags['act_TF_conc_up'],
+            'act_Kd_lo' : parameter_flags['act_Kd_lo'],
+            'act_Kd_up' : parameter_flags['act_Kd_up'],
+            'inh_TF_conc_lo' : parameter_flags['inh_TF_conc_lo'],
+            'inh_TF_conc_up' : parameter_flags['inh_TF_conc_up'],
+            'inh_Kd_lo' : parameter_flags['inh_Kd_lo'],
+            'inh_Kd_up' : parameter_flags['inh_Kd_up'],
 
-        'weight_act_obj1' : parameter_flags['weight_act_obj1'],
-        'weight_inh_obj1' : parameter_flags['weight_inh_obj1'],
-        'weight_act_obj2' : parameter_flags['weight_act_obj2'],
-        'weight_inh_obj2' : parameter_flags['weight_inh_obj2'],
-        'weight_mRNA_match' : parameter_flags['weight_mRNA_match'],
-        'weight_act_corr' : parameter_flags['weight_act_corr'],
-        'weight_inh_corr' : parameter_flags['weight_inh_corr'],
-    }
+            'weight_act_obj1' : parameter_flags['weight_act_obj1'],
+            'weight_inh_obj1' : parameter_flags['weight_inh_obj1'],
+            'weight_act_obj2' : parameter_flags['weight_act_obj2'],
+            'weight_inh_obj2' : parameter_flags['weight_inh_obj2'],
+            'weight_mRNA_match' : parameter_flags['weight_mRNA_match'],
+            'weight_act_corr' : parameter_flags['weight_act_corr'],
+            'weight_inh_corr' : parameter_flags['weight_inh_corr'],
+            'inh_metab_Total_lo' : parameter_flags['inh_metab_Total_lo'],
+            'inh_metab_Total_up' : parameter_flags['inh_metab_Total_up'],
+        }
+    else:
+        para_sweep = ['act_TF_conc_lo', 'act_TF_conc_up', 'act_Kd_lo', 'act_Kd_up', 'inh_TF_conc_lo', 'inh_TF_conc_up', 'inh_Kd_lo', 'inh_Kd_up', 'inh_metab_Total_lo', 'inh_metab_Total_up', 'weight_act_obj1', 'weight_inh_obj1', 'weight_act_obj2', 'weight_inh_obj2', 'weight_mRNA_match', 'weight_act_corr', 'weight_inh_corr', 'inh_metab_Total_lo', 'inh_metab_Total_up']
+        baby_dict = {}
+        for para in para_sweep:
+            if para in parameter_flags:
+                baby_dict.update({para : parameter_flags[para]})
+
     if not promoter:
         # no promoter exists, so set the relative weights to zero so the model doesn't optimize for it
         baby_dict['weight_act_obj1'] = 0
@@ -58,7 +67,7 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
     if promoter:
         baby_dict.update({'kd_act_metab' : TF_flags_df.loc[promoter].values[0]})
     if inhibitor:
-        baby_dict.update({'kd_inh_metab' : TF_flags_df.loc[inhibitor].values[0]})
+        baby_dict.update({'kd_inh_metab' : TF_flags_df.loc[inhibitor].values[1]})
     df = pd.DataFrame(list(baby_dict.items()), columns=['Parameter', 'Value']).set_index('Parameter')
     df.to_csv(GAMs_run_dir+'/input_files/input_constants.csv')
     
