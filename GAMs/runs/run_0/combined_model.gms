@@ -218,6 +218,7 @@ Option Iterlim=10000;
 
 * run the model
 Model ElementWiseOptimization /all/;
+ElementWiseOptimization.optfile = 1;
 Solve ElementWiseOptimization using dnlp minimizing total_diff;
 
 
