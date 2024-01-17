@@ -1,4 +1,4 @@
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 10:44:44 Page 1
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 11:03:13 Page 1
 cActivator toy example
 C o m p i l a t i o n
 
@@ -215,7 +215,7 @@ GDXIN   /home/chris/github/regulonML/GAMs/runs/run_0/input_GDX/input_parameters.
  233   
  234  execute_unload "./output_GDX/inh_metab_Total.gdx" inh_metab_Total.L inh_metab_Total.M
  235  execute 'gdxdump ./output_GDX/inh_metab_Total.gdx noData > ./output_files/inh_metab_Total.csv symb=inh_metab_Total format=csv';
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 10:44:44 Page 2
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 11:03:13 Page 2
 cActivator toy example
 Include File Summary
 
@@ -245,17 +245,17 @@ Include File Summary
     21      102 GDXIN          1     102  /home/chris/github/regulonML/GAMs/runs/run_0/input_GDX/input_parameters.gdx
 
 
-COMPILATION TIME     =        0.065 SECONDS      3 MB  44.1.1 27c4d1f8 LEX-LEG
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 10:44:44 Page 3
+COMPILATION TIME     =        0.071 SECONDS      3 MB  44.1.1 27c4d1f8 LEX-LEG
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 11:03:13 Page 3
 cActivator toy example
 E x e c u t i o n
 
 
 ----    116 PARAMETER input_parameters  input_paras
 
-act_TF_conc_lo     1.00000E-25,    act_TF_conc_up     1.00000E-25,    act_Kd_lo          1.000000E-6,    act_Kd_up          1.000000E-6,    inh_TF_conc_lo     2.751404E-7,    inh_TF_conc_up     1.497325E-6,    inh_Kd_lo          2.53570E-13,    inh_Kd_up                0.002,    weight_inh_obj1          0.054,    weight_mRNA_match        1.701,    weight_inh_corr    6.55331E-17,    inh_metab_Total_lo 3.800000E-6,    inh_metab_Total_up       0.004
+act_TF_conc_lo     1.00000E-25,    act_TF_conc_up     1.00000E-25,    act_Kd_lo          1.000000E-6,    act_Kd_up          1.000000E-6,    inh_TF_conc_lo     2.751404E-7,    inh_TF_conc_up     1.497325E-6,    inh_Kd_lo          2.53570E-22,    inh_Kd_up          1929718.671,    weight_inh_obj1          0.054,    weight_mRNA_match        1.701,    weight_inh_corr    6.55331E-17,    inh_metab_Total_lo 3.800000E-6,    inh_metab_Total_up       0.004
 
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 10:44:44 Page 4
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 11:03:13 Page 4
 cActivator toy example
 Equation Listing    SOLVE ElementWiseOptimization Using DNLP From line 221
 
@@ -323,7 +323,7 @@ match_obj..  match_diff - (155.476914582609)*cAct_calc(42c__42c_ale10__1,b2818) 
 
 total_obj..  - 0.0541052653027954*inh_diff1 - 332228.408220663*match_diff + total_diff =E= 0 ; (LHS = 0)
      
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 10:44:44 Page 5
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 11:03:13 Page 5
 cActivator toy example
 Column Listing      SOLVE ElementWiseOptimization Using DNLP From line 221
 
@@ -1077,7 +1077,7 @@ REMAINING 6 ENTRIES SKIPPED
 ---- inh_Kd  Kd Values
 
 inh_Kd(b2818)
-                (.LO, .L, .UP, .M = -12.5959017681444, -3, -2.71450600101708, 0)
+                (.LO, .L, .UP, .M = -21.5959017681444, -3, 6.28549399898292, 0)
        (0.0352) eq_cInh_calc(42c__42c_ale10__1,b2818)
        (1.1741) eq_cInh_calc(42c__42c_ale3__1,b2818)
        (0.0352) eq_cInh_calc(42c__42c_ale4__1,b2818)
@@ -1309,7 +1309,7 @@ inh_Kd(b2818)
        (0.0285) eq_cInh_calc(ytf__wt_ph8__2,b2818)
 
 inh_Kd(b3959)
-                (.LO, .L, .UP, .M = -12.5959017681444, -6, -2.71450600101708, 0)
+                (.LO, .L, .UP, .M = -21.5959017681444, -6, 6.28549399898292, 0)
       (35.2275) eq_cInh_calc(42c__42c_ale10__1,b3959)
     (1174.1009) eq_cInh_calc(42c__42c_ale3__1,b3959)
       (35.2465) eq_cInh_calc(42c__42c_ale4__1,b3959)
@@ -1541,7 +1541,7 @@ inh_Kd(b3959)
       (28.4739) eq_cInh_calc(ytf__wt_ph8__2,b3959)
 
 inh_Kd(b3958)
-                (.LO, .L, .UP, .M = -12.5959017681444, -8, -2.71450600101708, 0)
+                (.LO, .L, .UP, .M = -21.5959017681444, -8, 6.28549399898292, 0)
     (3522.7465) eq_cInh_calc(42c__42c_ale10__1,b3958)
   (117410.0895) eq_cInh_calc(42c__42c_ale3__1,b3958)
     (3524.649)  eq_cInh_calc(42c__42c_ale4__1,b3958)
@@ -1887,7 +1887,7 @@ cInh_calc(42c__42c_ale10__1,b3958)
        (1.8173) match_obj
 
 REMAINING 2058 ENTRIES SKIPPED
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 10:44:44 Page 6
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 11:03:13 Page 6
 cActivator toy example
 Range Statistics    SOLVE ElementWiseOptimization Using DNLP From line 221
 
@@ -1898,7 +1898,7 @@ RHS       [min, max] : [        NA,        NA] - Zero values observed as well
 Bound     [min, max] : [ 2.389E+00, 2.500E+01]
 Matrix    [min, max] : [ 2.303E-19, 3.322E+05]
 
-GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 10:44:44 Page 7
+GAMS 44.1.1  27c4d1f8 Aug 3, 2023           LEX-LEG x86 64bit/Linux - 01/17/24 11:03:13 Page 7
 cActivator toy example
 Model Statistics    SOLVE ElementWiseOptimization Using DNLP From line 221
 
