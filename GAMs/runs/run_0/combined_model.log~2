@@ -1,4 +1,4 @@
---- Job combined_model.gms Start 01/19/24 10:05:35 28.2.0 r750fa45 WEX-WEI x86 64bit/MS Windows
+--- Job combined_model.gms Start 01/19/24 11:26:11 28.2.0 r750fa45 WEX-WEI x86 64bit/MS Windows
 --- GAMS Parameters defined
     Input C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\runs\run_0\combined_model.gms
     PageSize 0
@@ -56,14 +56,16 @@ Licensee: Bernhard Palsson, Single User License          G190618/0001AO-GEN
 --- combined_model.gms(102) 3 Mb
 --- GDXin=C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\runs\run_0\./input_GDX/input_parameters.gdx
 --- combined_model.gms(233) 3 Mb
---- Starting execution: elapsed 0:00:00.452
+--- Starting execution: elapsed 0:00:00.246
 --- combined_model.gms(218) 4 Mb
 --- Generating DNLP model ElementWiseOptimization
+--- combined_model.gms(199) 7 Mb
 --- combined_model.gms(219) 9 Mb
+
 ---   4,126 rows  4,602 columns  20,616 non-zeroes
 ---   191,679 nl-code  16,488 nl-non-zeroes
 --- combined_model.gms(219) 6 Mb
---- Executing CONOPT: elapsed 0:00:00.512
+--- Executing CONOPT: elapsed 0:00:00.312
 CONOPT 3         28.2.0 r750fa45 Released Aug 19, 2019 WEI x86 64bit/MS Window
 Reading parameter(s) from "C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\runs\run_0\conopt.opt"
 >>  rtmaxv = 1e13
@@ -292,7 +294,7 @@ Finished reading from "C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\runs\r
 --- Restarting execution
 --- combined_model.gms(219) 3 Mb
 --- Reading solution for model ElementWiseOptimization
---- Executing after solve: elapsed 0:00:05.121
+--- Executing after solve: elapsed 0:00:04.813
 --- combined_model.gms(223) 4 Mb
 --- GDX File C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\runs\run_0\./output_GDX/cAct_TF_conc_results.gdx
 --- combined_model.gms(224) 4 Mb
@@ -306,4 +308,4 @@ Finished reading from "C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\runs\r
 --- GDX File C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\runs\run_0\./output_GDX/inh_metab_Total.gdx
 --- combined_model.gms(233) 4 Mb
 *** Status: Normal completion
---- Job combined_model.gms Stop 01/19/24 10:05:40 elapsed 0:00:05.264
+--- Job combined_model.gms Stop 01/19/24 11:26:16 elapsed 0:00:04.902
