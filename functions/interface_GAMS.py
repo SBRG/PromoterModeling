@@ -220,7 +220,8 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
             _ = subprocess.call('gams cAct_model', shell = True, cwd = GAMs_run_dir)
             _ = subprocess.call('gams cInh_model', shell = True, cwd = GAMs_run_dir)
     elif stable_flags['case'] == 'argR':
-        shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
+        #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
+        shutil.copyfile('../GAMs/combined_model_arginine_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
         if stable_flags['supress_output']:
             _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
         else:
