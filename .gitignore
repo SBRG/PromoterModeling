@@ -1,6 +1,6 @@
 # Project specific
 GAMs/optimization_runs/*r*
-GAMs/runs/*r*
+#GAMs/runs/*r*
 GAMs/225a/
 
 # Byte-compiled / optimized / DLL files
