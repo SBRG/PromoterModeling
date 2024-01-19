@@ -24,6 +24,7 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
         log_tpm_df = pd.concat([starve_log_tpm, log_tpm_df], axis = 1)
     else:
         log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
+    
     M_df = pd.read_csv('../data/precise_1.0/M.csv', index_col = 0)
     iM_table = pd.read_csv('../data/precise_1.0/iM_table.csv', index_col = 0)
     M_df = M_df.rename(columns = {str(index) : row['name'] for index, row in iM_table.iterrows()})
