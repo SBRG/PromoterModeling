@@ -10,18 +10,25 @@ import GA_core as ga
 import matplotlib.pyplot as plt
 
 
-def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
+def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, lambdas_df, flags):
     return_figs = []
-        
+    
+    # now setting RNAP concentration specific to sample
+    RNAP_conc_df = pd.read_csv('../data/RNAP_conc.csv', index_col = 0)
+    gene_lambda_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
+    
     # first let's handle edge cases
     if type(flags['act_iM']) == float:
         # there is no need to run GA, solve for cInh with cAct = 0 and save those results
-        lambda_df = ps.create_lambdas(eq_str, grid_constants)
+        #lambda_df = ps.create_lambdas(eq_str, grid_constants)
         temp = grid_constants.copy()
         temp.update({'cActivator' : flags['base_cActivator_val']})
         cInhibitors = []
         indices = []
+        
         for index, row in ratios_df.iterrows():
+            lambda_df = gene_lambda_df.loc[index].values[0]
+            lambda_df['lambda'] = [lambdify([lambda_df.loc[index,'order']], lambda_df.loc[index,'equation']) for index in lambda_df.index]
             indices.append(index)
             mRNA = row['actual_mRNA_ratio']
             temp2 = temp.copy()
@@ -49,12 +56,14 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
         return(return_figs, vals_for_GAMs, vals_for_GAMs)
     if type(flags['inh_iM']) == float:
         # very similar to above just flipped
-        lambda_df = ps.create_lambdas(eq_str, grid_constants)
+        #lambda_df = ps.create_lambdas(eq_str, grid_constants)
         temp = grid_constants.copy()
         temp.update({'cInhibitor' : flags['base_cInhibitor_val']})
         cActivators = []
         indices = []
         for index, row in ratios_df.iterrows():
+            lambda_df = gene_lambda_df.loc[index].values[0]
+            lambda_df['lambda'] = [lambdify([lambda_df.loc[index,'order']], lambda_df.loc[index,'equation']) for index in lambda_df.index]
             indices.append(index)
             mRNA = row['actual_mRNA_ratio']
             temp2 = temp.copy()
@@ -112,6 +121,9 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
         # Use a dict just in case order of tuple to sub into lambda function ever changes
         values = {'mRNARatio': grid.loc[condition,'mRNA_ratio']}
         for ii, pair in enumerate(cAct_grid):
+            # this is untested, likely will cause issues, I'm trying to intergate the sample-specific RNAP values, but this isn't in use currently
+            lambda_df = lambdas_df.loc[index][flags['central_gene']]
+            
             values['cActivator'] = pair[0] # Add cAct to values dict
 
             # Create a tuple in the correct order to pass into the lambda function
@@ -122,6 +134,9 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
 
         values = {'mRNARatio': grid.loc[condition,'mRNA_ratio']}
         for ii, pair in enumerate(cInh_grid):
+            # this is untested, likely will cause issues, I'm trying to intergate the sample-specific RNAP values, but this isn't in use currently
+            lambda_df = lambdas_df.loc[index][flags['central_gene']]
+            
             values['cInhibitor'] = pair[0] # Add cInh to values dict
 
             # Create a tuple in the correct order to pass into the lambda function

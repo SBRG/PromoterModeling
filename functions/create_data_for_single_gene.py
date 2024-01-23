@@ -5,6 +5,7 @@ import math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from sympy import *
 
 import sys
 sys.path.insert(0, '../functions/')
@@ -19,6 +20,7 @@ def create_data_for_gene(flags):
     # setup
     gene_figs = []
     eq_str = flags['eq_str']
+    
     
     ############################################################
     # create mRNA ratios and MA values
@@ -67,13 +69,44 @@ def create_data_for_gene(flags):
     
     
     ############################################################
+    # create lambda dfs for various calculations --- very slow
+    ############################################################
+    # TO DO, THIS, pseudo code below, also need to make the rest of the code use this as opposed to recalculating lambda_df every time they call it, should speed up whole code on average, need to add flag to not run this portion of code as often
+    if not flags['run_basal_calculations'] and os.path.exists('../data/lambda_dfs/'+flags['central_gene']+'.pkl'):
+        lambdas_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
+    else:
+        # load in
+        if os.path.exists('../data/lambdas_df.pkl'):
+            lambdas_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
+        else:
+            lambdas_df = pd.DataFrame(index = ratios_df.index)
+        RNAP_conc_df = pd.read_csv('../data/RNAP_conc.csv', index_col = 0)
+        
+        # calculate gene specific grid constants
+        num_grid_steps = 3
+        if 'grid_steps' in flags:
+            num_grid_steps = flags['grid_steps']
+        gene_grid_constants = bmc.basal_values(eq_str, flags, num_steps = num_grid_steps)
+        new_col = []
+        for sample in ratios_df.index:
+            # adjust constants
+            gene_grid_constants.update({'RNAP' : RNAP_conc_df.loc[sample]['RNAP']})
+            
+            # create lambdas_df and put it in dataframe
+            lambda_df = po.create_lambdas(eq_str, gene_grid_constants)
+            new_col.append(lambda_df[['equation', 'order']])
+        lambdas_df[flags['central_gene']] = new_col
+        lambdas_df.to_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
+    
+    
+    ############################################################
     # pick KdRNAPCrp value, limit cActivator and cInhibitor based on it
     ############################################################
     # load in calculator
     gene_grid_name = '../data/gene_grid_constants/'+flags['central_gene']+'.pkl'
     if flags['force_rerun'] or not os.path.exists(gene_grid_name):  
         # basal model calculations
-        num_grid_steps = 4
+        num_grid_steps = 3
         if 'grid_steps' in flags:
             num_grid_steps = flags['grid_steps']
         grid_constants = bmc.basal_values(eq_str, flags, num_steps = num_grid_steps)
@@ -198,7 +231,7 @@ def create_data_for_gene(flags):
     greedy_path = '../data/cAct_cInh_vals/'+flags['central_gene']+'_greedy.pkl'
     norm_path = '../data/cAct_cInh_vals/'+flags['central_gene']+'.pkl'
     if flags['force_rerun']:
-        return_figs, greedy_cAct_cInh_df, cAct_cInh_df = cv.create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags)
+        return_figs, greedy_cAct_cInh_df, cAct_cInh_df = cv.create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, lambdas_df, flags)
         if flags['run_greedy']:
             pickle_out = open(greedy_path, 'wb')
             pickle.dump(greedy_cAct_cInh_df, pickle_out)
