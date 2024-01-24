@@ -1,41 +1,42 @@
 B 3 C o m p i l a t i o n
-B 222 Include File Summary
-B 253 E x e c u t i o n
-I 253 input_parameters
-B 263 Equation Listing    SOLVE ElementWiseOptimization Using DNLP From line 219
-D 266 eq_cAct_calc
-D 277 eq_cInh_calc
-D 288 act_obj1
-D 987 inh_obj1
-D 1686 match_obj
-D 3667 total_obj
-B 3673 Column Listing      SOLVE ElementWiseOptimization Using DNLP From line 219
-E 3676 act_TF_conc
-E 3719 act_Kd
-E 4356 inh_Kd
-E 4990 inh_metab_Total
-E 5032 act_diff1
-E 5039 inh_diff1
-E 5047 match_diff
-E 5055 total_diff
-E 5062 cAct_calc
-E 5084 cInh_calc
-B 5107 Model Statistics    SOLVE ElementWiseOptimization Using DNLP From line 219
-B 5125 Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 219
-F 5179 eq_cAct_calc
-F 7047 eq_cInh_calc
-F 8917 act_obj1
-F 8918 inh_obj1
-F 8919 match_obj
-F 8920 total_obj
-G 8926 act_TF_conc
-G 9138 act_Kd
-G 9152 inh_Kd
-G 9166 inh_metab_Total
-G 9380 act_diff1
-G 9381 inh_diff1
-G 9382 match_diff
-G 9383 total_diff
-G 9388 cAct_calc
-G 11256 cInh_calc
-B 13131 E x e c u t i o n
+B 228 Include File Summary
+B 261 E x e c u t i o n
+I 261 input_parameters
+I 268 sample_constants
+B 318 Equation Listing    SOLVE ElementWiseOptimization Using DNLP From line 227
+D 321 eq_cAct_calc
+D 332 eq_cInh_calc
+D 343 act_obj1
+D 1042 inh_obj1
+D 1741 match_obj
+D 3720 total_obj
+B 3726 Column Listing      SOLVE ElementWiseOptimization Using DNLP From line 227
+E 3729 act_TF_conc
+E 3772 act_Kd
+E 4409 inh_Kd
+E 5043 inh_metab_Total
+E 5085 act_diff1
+E 5092 inh_diff1
+E 5100 match_diff
+E 5108 total_diff
+E 5115 cAct_calc
+E 5137 cInh_calc
+B 5160 Model Statistics    SOLVE ElementWiseOptimization Using DNLP From line 227
+B 5178 Solution Report     SOLVE ElementWiseOptimization Using DNLP From line 227
+F 5231 eq_cAct_calc
+F 7099 eq_cInh_calc
+F 8969 act_obj1
+F 8970 inh_obj1
+F 8971 match_obj
+F 8972 total_obj
+G 8978 act_TF_conc
+G 9190 act_Kd
+G 9204 inh_Kd
+G 9218 inh_metab_Total
+G 9432 act_diff1
+G 9433 inh_diff1
+G 9434 match_diff
+G 9435 total_diff
+G 9440 cAct_calc
+G 11308 cInh_calc
+B 13183 E x e c u t i o n
