@@ -166,23 +166,6 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
     
     
     ############################################################
-    # create constants file for mRNA calculation
-    ############################################################
-    index = []
-    collection = []
-    for f in files_use:
-        gene_name = f.split('.')[0].split('_')[0]
-        gene_grid_name = '../data/gene_grid_constants/'+gene_name+'.pkl'
-        pickle_in = open(gene_grid_name, 'rb')
-        grid_constants = pickle.load(pickle_in)
-        pickle_in.close()
-        index.append(gene_name)
-        collection.append(grid_constants)
-    constants_df = pd.DataFrame(collection, index = index)
-    constants_df.T.to_csv(GAMs_run_dir+'/input_files/grid_constants.csv')     
-    
-    
-    ############################################################
     # save actual ratio_df values
     ############################################################
     collection = []
@@ -196,6 +179,28 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
         index.append(gene_name)
     ratios_combo_df = pd.DataFrame(collection, index = index)
     ratios_combo_df.T.to_csv(GAMs_run_dir+'/input_files/actual_mRNA_ratio.csv')
+    
+    
+    ############################################################
+    # create constants files for mRNA calculation
+    ############################################################
+    index = []
+    collection = []
+    for f in files_use:
+        gene_name = f.split('.')[0].split('_')[0]
+        gene_grid_name = '../data/gene_grid_constants/'+gene_name+'.pkl'
+        pickle_in = open(gene_grid_name, 'rb')
+        grid_constants = pickle.load(pickle_in)
+        pickle_in.close()
+        index.append(gene_name)
+        collection.append(grid_constants)
+    constants_df = pd.DataFrame(collection, index = index)
+    constants_df.T.to_csv(GAMs_run_dir+'/input_files/grid_constants.csv')     
+    # make sample_constants file, for now just contains RNAP conc
+    RNAP_conc_df = pd.read_csv('../data/RNAP_conc.csv', index_col = 0)
+    RNAP_conc_df = RNAP_conc_df.loc[ratios_df.index]
+    RNAP_conc_df.T.to_csv(GAMs_run_dir+'/input_files/sample_constants.csv')     
+    
     
     # remove old results
     if stable_flags['delete_old']:
