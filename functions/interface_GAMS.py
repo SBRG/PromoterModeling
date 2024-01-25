@@ -226,10 +226,10 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
         elif stable_flags['case'] == 'argR':
             #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
             shutil.copyfile('../GAMs/combined_model_arginine_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
-            _ = subprocess.call(gams_loc+' combined_model.gms', cwd = gams_dir, shell=True)
+            _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMs_run_dir, shell=True)
         else:
             shutil.copyfile('../GAMs/combined_model.gms', GAMs_run_dir+'/combined_model.gms')
-            _ = subprocess.call(gams_loc+' combined_model.gms', cwd = gams_dir, shell=True)
+            _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMs_run_dir, shell=True)
     else:
         if stable_flags['run_seperate']:
             shutil.copyfile('../GAMs/cAct_model.gms', GAMs_run_dir+'/cAct_model.gms')
