@@ -34,11 +34,13 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
             'inh_metab_Total_up' : parameter_flags['inh_metab_Total_up'],
         }
     else:
-        para_sweep = ['act_TF_conc_lo', 'act_TF_conc_up', 'act_Kd_lo', 'act_Kd_up', 'inh_TF_conc_lo', 'inh_TF_conc_up', 'inh_Kd_lo', 'inh_Kd_up', 'inh_metab_Total_lo', 'inh_metab_Total_up', 'weight_act_obj1', 'weight_inh_obj1', 'weight_act_obj2', 'weight_inh_obj2', 'weight_mRNA_match', 'weight_act_corr', 'weight_inh_corr', 'inh_metab_Total_lo', 'inh_metab_Total_up']
+        para_sweep = ['act_TF_conc_lo', 'act_TF_conc_up', 'act_Kd_lo', 'act_Kd_up', 'inh_TF_conc_lo', 'inh_TF_conc_up', 'inh_Kd_lo', 'inh_Kd_up', 'weight_act_obj1', 'weight_inh_obj1', 'weight_act_obj2', 'weight_inh_obj2', 'weight_mRNA_match', 'weight_act_corr', 'weight_inh_corr', 'inh_metab_Total_lo', 'inh_metab_Total_up']
         baby_dict = {}
         for para in para_sweep:
             if para in parameter_flags:
                 baby_dict.update({para : parameter_flags[para]})
+            else:
+                baby_dict.update({para : stable_flags[para]}) # these are likely unused, but it makes comparison easier
 
     if not promoter:
         # no promoter exists, so set the relative weights to zero so the model doesn't optimize for it
