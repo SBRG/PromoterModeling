@@ -181,7 +181,7 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
     ratios_combo_df = pd.DataFrame(collection, index = index)
     ratios_combo_df.T.to_csv(GAMs_run_dir+'/input_files/actual_mRNA_ratio.csv')
     
-    
+
     ############################################################
     # create constants files for mRNA calculation
     ############################################################
@@ -202,7 +202,7 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
     RNAP_conc_df = RNAP_conc_df.loc[ratios_df.index]
     RNAP_conc_df.T.to_csv(GAMs_run_dir+'/input_files/sample_constants.csv')     
     
-    
+
     # remove old results
     if stable_flags['delete_old']:
         if os.path.exists('../data/GAMS_output/cInh_Kd_results.csv'):
