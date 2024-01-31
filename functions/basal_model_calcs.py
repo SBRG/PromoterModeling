@@ -32,9 +32,22 @@ def basal_values(eq_str, flags, num_steps = 3):
 
     # Load in the precise data for gene expression
     # NOTE: In the basal model I'm building, I am using the Precise1k data, but in this cell I will try to use the Precise1.0
-    precise_path = '../data/precise_1.0/log_tpm.csv'
-    precise_data = pd.read_csv(filepath_or_buffer = precise_path, index_col = 'Unnamed: 0')
-
+    # loading
+    if flags['include_Amy_samples']:
+        # merge together log_tpm_df files
+        log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
+        starve_log_tpm = pd.read_csv('../data/validation_data_sets/stationary_phase/cleaned_log_tpm_qc.csv', index_col = 0)
+        to_blank_inds = list(set(log_tpm_df.index) - set(starve_log_tpm.index))
+        # need to create zero rows for missing values
+        zeros_data = {col : 0 for col in starve_log_tpm.columns}
+        zeros_df = pd.DataFrame(zeros_data, index = to_blank_inds)
+        starve_log_tpm = pd.concat([starve_log_tpm, zeros_df])
+        starve_log_tpm = starve_log_tpm.loc[log_tpm_df.index]
+        log_tpm_df = pd.concat([starve_log_tpm, log_tpm_df], axis = 1)
+    else:
+        log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
+    precise_data = log_tpm_df
+        
     gene_exp = [2**precise_data.loc[flags['central_gene'], flags['basal_conditions']].mean(axis = 0)]
 
     # Only using num_steps = 3 to make it easier to manually iterate through the values, feel free to increase it if you'd like

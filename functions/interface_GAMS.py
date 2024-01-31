@@ -30,11 +30,13 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
             'weight_mRNA_match' : parameter_flags['weight_mRNA_match'],
             'weight_act_corr' : parameter_flags['weight_act_corr'],
             'weight_inh_corr' : parameter_flags['weight_inh_corr'],
-            'inh_metab_Total_lo' : parameter_flags['inh_metab_Total_lo'],
-            'inh_metab_Total_up' : parameter_flags['inh_metab_Total_up'],
+            'act_metab_Total_lo' : parameter_flags['metab_Total_lo'],
+            'act_metab_Total_up' : parameter_flags['metab_Total_up'],
+            'inh_metab_Total_lo' : parameter_flags['metab_Total_lo'],
+            'inh_metab_Total_up' : parameter_flags['metab_Total_up'],
         }
     else:
-        para_sweep = ['act_TF_conc_lo', 'act_TF_conc_up', 'act_Kd_lo', 'act_Kd_up', 'inh_TF_conc_lo', 'inh_TF_conc_up', 'inh_Kd_lo', 'inh_Kd_up', 'weight_act_obj1', 'weight_inh_obj1', 'weight_act_obj2', 'weight_inh_obj2', 'weight_mRNA_match', 'weight_act_corr', 'weight_inh_corr', 'inh_metab_Total_lo', 'inh_metab_Total_up']
+        para_sweep = ['act_TF_conc_lo', 'act_TF_conc_up', 'act_Kd_lo', 'act_Kd_up', 'inh_TF_conc_lo', 'inh_TF_conc_up', 'inh_Kd_lo', 'inh_Kd_up', 'weight_act_obj1', 'weight_inh_obj1', 'weight_act_obj2', 'weight_inh_obj2', 'weight_mRNA_match', 'weight_act_corr', 'weight_inh_corr', 'inh_metab_Total_lo', 'inh_metab_Total_up', 'act_metab_Total_lo', 'act_metab_Total_up']
         baby_dict = {}
         for para in para_sweep:
             if para in parameter_flags:
@@ -91,7 +93,7 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
         concentrations.loc[inhibitor].to_csv(GAMs_run_dir+'/input_files/exported_inh_TF_conc.csv')
     else:
         # still need a dummy for this that isn't used
-        concentrations.loc[promoter].to_csv(GAMs_run_dir+'/input_files/exported_act_TF_conc.csv')
+        concentrations.loc[promoter].to_csv(GAMs_run_dir+'/input_files/exported_inh_TF_conc.csv')
 
     
     # first let's merge together the files
@@ -204,7 +206,10 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
     RNAP_conc_df = RNAP_conc_df.loc[ratios_df.index]
     RNAP_conc_df.T.to_csv(GAMs_run_dir+'/input_files/sample_constants.csv')     
     
-
+    
+    ############################################################
+    # run GAMS
+    ############################################################
     # remove old results
     if stable_flags['delete_old']:
         if os.path.exists('../data/GAMS_output/cInh_Kd_results.csv'):
@@ -216,7 +221,7 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
         if os.path.exists('../data/GAMS_output/cAct_TF_conc_results.csv'):
             os.remove('../data/GAMS_output/cAct_TF_conc_results.csv')
 
-    # call GAMs
+    # call GAMS
     shutil.copyfile('../GAMs/conopt.opt', GAMs_run_dir+'/conopt.opt')
     if platform.system() == 'Windows':
         gams_loc =  r'"C:\GAMS\win64\28.2\gams.exe"' # zzz shouldn't be hard set like this, but for now this is fine
@@ -225,9 +230,13 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
             shutil.copyfile('../GAMs/cInh_model.gms', GAMs_run_dir+'/cInh_model.gms')
             _ = subprocess.call(gams_loc+' cAct_model.gms', shell = True, cwd = GAMs_run_dir)
             _ = subprocess.call(gams_loc+' cInh_model.gms', shell = True, cwd = GAMs_run_dir)
-        elif stable_flags['case'] == 'argR':
+        elif inhibitor and not promoter:# stable_flags['case'] == 'argR':
             #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
-            shutil.copyfile('../GAMs/combined_model_arginine_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
+            shutil.copyfile('../GAMs/model_inhibitor_metab_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
+            _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMs_run_dir, shell=True)
+        elif promoter and not inhibitor:# stable_flags['case'] == 'argR':
+            #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
+            shutil.copyfile('../GAMs/model_inhibitor_metab_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
             _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMs_run_dir, shell=True)
         else:
             shutil.copyfile('../GAMs/combined_model.gms', GAMs_run_dir+'/combined_model.gms')
@@ -242,13 +251,20 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
             else:
                 _ = subprocess.call('gams cAct_model', shell = True, cwd = GAMs_run_dir)
                 _ = subprocess.call('gams cInh_model', shell = True, cwd = GAMs_run_dir)
-        elif stable_flags['case'] == 'argR':
+        elif inhibitor and not promoter:# stable_flags['case'] == 'argR':
             #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
-            shutil.copyfile('../GAMs/combined_model_arginine_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
+            shutil.copyfile('../GAMs/model_inhibitor_metab_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
             if stable_flags['supress_output']:
                 _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
             else:
                 _ = subprocess.call('gams combined_model', shell = True, cwd = GAMs_run_dir)
+        elif promoter and not inhibitor:# stable_flags['case'] == 'argR':
+            #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
+            shutil.copyfile('../GAMs/model_activator_metab_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
+            if stable_flags['supress_output']:
+                _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
+            else:
+                _ = subprocess.call('gams combined_model', shell = True, cwd = GAMs_run_dir)  
         else:
             shutil.copyfile('../GAMs/combined_model.gms', GAMs_run_dir+'/combined_model.gms')
             if stable_flags['supress_output']:
@@ -261,31 +277,60 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
     
 def read_GAMs(GAMs_run_dir):
     # look at GAMs results
+    no_promoter = False
+    no_inhibitor = False
 
     # load in cActivators
     saved_cActivators = pd.read_csv(GAMs_run_dir+'/input_files/composite_cAct_vals.csv', index_col = 0)
-        
+    
     # GAMS calculated cActivators
-    cAct_kd_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cAct_Kd_results.csv', index_col = 0).astype(float).T
-    saved_cActivators = saved_cActivators[cAct_kd_df.columns]
-    cAct_TF_conc_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cAct_TF_conc_results.csv', index_col = 0).astype(float).T
-    saved_cActivators = saved_cActivators.loc[cAct_TF_conc_df.columns]
-    calc_cAct = pd.DataFrame(index = saved_cActivators.columns, columns = saved_cActivators.index)
-    cActs = []
-    for sample in calc_cAct.columns:
-        for gene in calc_cAct.index:
-            calc_cAct.at[gene, sample] = cAct_TF_conc_df[sample].values[0] / cAct_kd_df[gene].values[0]
-    calc_cAct = calc_cAct.T
-
+    act_kd_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cAct_Kd_results.csv', index_col = 0).astype(float).T
+    
+    saved_cActivators = saved_cActivators[act_kd_df.columns]
+    if os.path.exists(GAMs_run_dir+'/output_files/cAct_TF_conc_results.csv'):
+        cAct_kd_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cAct_Kd_results.csv', index_col = 0).astype(float).T
+        saved_cActivators = saved_cActivators[cAct_kd_df.columns]
+        cAct_TF_conc_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cAct_TF_conc_results.csv', index_col = 0).astype(float).T
+        saved_cActivators = saved_cActivators.loc[cAct_TF_conc_df.columns]
+        calc_cAct = pd.DataFrame(index = saved_cActivators.columns, columns = saved_cActivators.index)
+        cActs = []
+        for sample in calc_cAct.columns:
+            for gene in calc_cAct.index:
+                calc_cAct.at[gene, sample] = cAct_TF_conc_df[sample].values[0] / cAct_kd_df[gene].values[0]
+        calc_cAct = calc_cAct.T
+    else:
+        # activator metabolite, no promoter model
+        no_inhibitor = True
+        TF_conc_df = None
+        # we are using either one of the metabolite models, so need to calculate cActivator using that
+        act_metab = 10**pd.read_csv(GAMs_run_dir+'/output_files/act_metab_Total.csv', index_col = 0).astype(float).T
+        input_constants = pd.read_csv(GAMs_run_dir+'/input_files/input_constants.csv', index_col = 0).astype(float)
+        KdArg = input_constants.loc['kd_inh_metab'].values[0]
+        
+        TF_concs = pd.read_csv(GAMs_run_dir+'/input_files/exported_act_TF_conc.csv', index_col = 0).astype(float)
+        
+        calc_cAct = pd.DataFrame(index = saved_cActivators.columns, columns = saved_cActivators.index)
+        cActs = []
+        for sample in calc_cAct.columns:
+            ArgTotal = act_metab[sample].values[0]
+            TFTotal = TF_concs.loc[sample].values[0]
+            for gene in calc_cAct.index:
+                KdTF = act_kd_df[gene].values[0]
+                
+                calc_cAct.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
+                    ( -36 * ArgTotal * KdTF**2 * TFTotal + \
+                     (3 * ArgTotal * KdTF + KdArg * KdTF + 3 * KdTF * TFTotal)**2)**.5 \
+                    ) / (18 * KdTF**2)
+        calc_cAct = calc_cAct.T
 
     # now cInhibitor
     # load in cActivators
     saved_cActivators = pd.read_csv(GAMs_run_dir+'/input_files/composite_cInh_vals.csv', index_col = 0)
 
     # GAMS calculated cActivators
-    kd_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cInh_Kd_results.csv', index_col = 0).astype(float).T
+    inh_kd_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cInh_Kd_results.csv', index_col = 0).astype(float).T
 
-    saved_cActivators = saved_cActivators[kd_df.columns]
+    saved_cActivators = saved_cActivators[inh_kd_df.columns]
     if os.path.exists(GAMs_run_dir+'/output_files/cInh_TF_conc_results.csv'):
         TF_conc_df = 10**pd.read_csv(GAMs_run_dir+'/output_files/cInh_TF_conc_results.csv', index_col = 0).astype(float).T
         saved_cActivators = saved_cActivators.loc[TF_conc_df.columns]
@@ -293,11 +338,13 @@ def read_GAMs(GAMs_run_dir):
         cActs = []
         for sample in calc_cInh.columns:
             for gene in calc_cInh.index:
-                calc_cInh.at[gene, sample] = TF_conc_df[sample].values[0] / kd_df[gene].values[0]
+                calc_cInh.at[gene, sample] = TF_conc_df[sample].values[0] / inh_kd_df[gene].values[0]
         calc_cInh = calc_cInh.T
     else:
+        # inhibitor metabolite, no promoter model
+        no_promoter = True
         TF_conc_df = None
-        # we are using the arginine model, so need to calculate cInhibitor using that
+        # we are using either one of the metabolite models, so need to calculate cInhibitor using that
         inh_metab = 10**pd.read_csv(GAMs_run_dir+'/output_files/inh_metab_Total.csv', index_col = 0).astype(float).T
         input_constants = pd.read_csv(GAMs_run_dir+'/input_files/input_constants.csv', index_col = 0).astype(float)
         KdArg = input_constants.loc['kd_inh_metab'].values[0]
@@ -312,15 +359,19 @@ def read_GAMs(GAMs_run_dir):
             for gene in calc_cInh.index:
                 KdTF = kd_df[gene].values[0]
                 
-                calc_cInh.at[gene, sample] = (ArgTotal * KdTF + KdArg * KdTF +  KdTF * TFTotal + \
-                    ( -4 * ArgTotal * KdTF**2 * TFTotal + \
-                     (ArgTotal * KdTF + KdArg * KdTF + KdTF * TFTotal)**2)**.5 \
-                    ) / (2 * KdTF**2)
+                calc_cInh.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
+                    ( -36 * ArgTotal * KdTF**2 * TFTotal + \
+                     (3 * ArgTotal * KdTF + KdArg * KdTF + 3 * KdTF * TFTotal)**2)**.5 \
+                    ) / (18 * KdTF**2)
         calc_cInh = calc_cInh.T
         
 
     # return
-    if TF_conc_df:
-        return(calc_cAct, cAct_kd_df, cAct_TF_conc_df, calc_cInh, kd_df, TF_conc_df)
+    if no_promoter:
+        return(calc_cAct, act_kd_df, cAct_TF_conc_df, calc_cInh, inh_kd_df, inh_metab)
+    elif no_inhibitor:
+        return(calc_cAct, act_kd_df, act_metab, calc_cInh, inh_kd_df, TF_conc_df)
     else:
-        return(calc_cAct, cAct_kd_df, cAct_TF_conc_df, calc_cInh, kd_df, inh_metab)
+        return(calc_cAct, act_kd_df, cAct_TF_conc_df, calc_cInh, inh_kd_df, TF_conc_df)
+    
+    
