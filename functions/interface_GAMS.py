@@ -236,7 +236,7 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
             _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMs_run_dir, shell=True)
         elif promoter and not inhibitor:# stable_flags['case'] == 'argR':
             #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
-            shutil.copyfile('../GAMs/model_inhibitor_metab_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
+            shutil.copyfile('../GAMs/model_activator_metab_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
             _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMs_run_dir, shell=True)
         else:
             shutil.copyfile('../GAMs/combined_model.gms', GAMs_run_dir+'/combined_model.gms')
@@ -357,7 +357,7 @@ def read_GAMs(GAMs_run_dir):
             ArgTotal = inh_metab[sample].values[0]
             TFTotal = TF_concs.loc[sample].values[0]
             for gene in calc_cInh.index:
-                KdTF = kd_df[gene].values[0]
+                KdTF = inh_kd_df[gene].values[0]
                 
                 calc_cInh.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
                     ( -36 * ArgTotal * KdTF**2 * TFTotal + \
