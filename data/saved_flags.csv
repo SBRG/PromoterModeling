@@ -19,7 +19,7 @@ b4254,TRUE,TRUE,,ArgR,"['ica__wt_glc__1', 'ica__wt_glc__2']",-1,FALSE,basal,10,T
 b3255,TRUE,TRUE,FadR/IclR,,"['starve_series__t02_starve']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
 b2323,TRUE,TRUE,FadR/IclR,,"['starve_series__t02_starve']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
 b1092,TRUE,TRUE,FadR/IclR,,"['starve_series__t02_starve']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
-b1288,TRUE,TRUE,FadR/IclR,,"['starve_series__t02_starve']",6,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b1288,TRUE,TRUE,FadR/IclR,,"['starve_series__t02_starve']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
 b0185,TRUE,TRUE,FadR/IclR,,"['starve_series__t02_starve']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
 b3256,TRUE,TRUE,FadR/IclR,,"['starve_series__t02_starve']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
 b0954,TRUE,TRUE,FadR/IclR,,"['starve_series__t02_starve']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
