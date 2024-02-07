@@ -30,10 +30,10 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
             'weight_mRNA_match' : parameter_flags['weight_mRNA_match'],
             'weight_act_corr' : parameter_flags['weight_act_corr'],
             'weight_inh_corr' : parameter_flags['weight_inh_corr'],
-            'act_metab_Total_lo' : parameter_flags['metab_Total_lo'],
-            'act_metab_Total_up' : parameter_flags['metab_Total_up'],
-            'inh_metab_Total_lo' : parameter_flags['metab_Total_lo'],
-            'inh_metab_Total_up' : parameter_flags['metab_Total_up'],
+            'act_metab_Total_lo' : parameter_flags['act_metab_Total_lo'],
+            'act_metab_Total_up' : parameter_flags['act_metab_Total_up'],
+            'inh_metab_Total_lo' : parameter_flags['inh_metab_Total_lo'],
+            'inh_metab_Total_up' : parameter_flags['inh_metab_Total_up'],
         }
     else:
         para_sweep = ['act_TF_conc_lo', 'act_TF_conc_up', 'act_Kd_lo', 'act_Kd_up', 'inh_TF_conc_lo', 'inh_TF_conc_up', 'inh_Kd_lo', 'inh_Kd_up', 'weight_act_obj1', 'weight_inh_obj1', 'weight_act_obj2', 'weight_inh_obj2', 'weight_mRNA_match', 'weight_act_corr', 'weight_inh_corr', 'inh_metab_Total_lo', 'inh_metab_Total_up', 'act_metab_Total_lo', 'act_metab_Total_up']
