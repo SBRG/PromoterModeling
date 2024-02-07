@@ -41,8 +41,6 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
         for para in para_sweep:
             if para in parameter_flags:
                 baby_dict.update({para : parameter_flags[para]})
-            else:
-                baby_dict.update({para : stable_flags[para]}) # these are likely unused, but it makes comparison easier
 
     if not promoter:
         # no promoter exists, so set the relative weights to zero so the model doesn't optimize for it
