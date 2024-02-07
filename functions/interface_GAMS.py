@@ -224,16 +224,15 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
     if platform.system() == 'Windows':
         gams_loc =  r'"C:\GAMS\win64\28.2\gams.exe"' # zzz shouldn't be hard set like this, but for now this is fine
         if stable_flags['run_seperate']:
+            print('a')
             shutil.copyfile('../GAMs/cAct_model.gms', GAMs_run_dir+'/cAct_model.gms')
             shutil.copyfile('../GAMs/cInh_model.gms', GAMs_run_dir+'/cInh_model.gms')
             _ = subprocess.call(gams_loc+' cAct_model.gms', shell = True, cwd = GAMs_run_dir)
             _ = subprocess.call(gams_loc+' cInh_model.gms', shell = True, cwd = GAMs_run_dir)
-        elif inhibitor and not promoter:# stable_flags['case'] == 'argR':
-            #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
+        elif inhibitor and not promoter:
             shutil.copyfile('../GAMs/model_inhibitor_metab_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
             _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMs_run_dir, shell=True)
-        elif promoter and not inhibitor:# stable_flags['case'] == 'argR':
-            #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
+        elif promoter and not inhibitor:
             shutil.copyfile('../GAMs/model_activator_metab_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
             _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMs_run_dir, shell=True)
         else:
@@ -249,15 +248,13 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
             else:
                 _ = subprocess.call('gams cAct_model', shell = True, cwd = GAMs_run_dir)
                 _ = subprocess.call('gams cInh_model', shell = True, cwd = GAMs_run_dir)
-        elif inhibitor and not promoter:# stable_flags['case'] == 'argR':
-            #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
+        elif inhibitor and not promoter:
             shutil.copyfile('../GAMs/model_inhibitor_metab_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
             if stable_flags['supress_output']:
                 _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
             else:
                 _ = subprocess.call('gams combined_model', shell = True, cwd = GAMs_run_dir)
-        elif promoter and not inhibitor:# stable_flags['case'] == 'argR':
-            #shutil.copyfile('../GAMs/combined_model_arginine.gms', GAMs_run_dir+'/combined_model.gms')
+        elif promoter and not inhibitor:
             shutil.copyfile('../GAMs/model_activator_metab_complimentary.gms', GAMs_run_dir+'/combined_model.gms')
             if stable_flags['supress_output']:
                 _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
