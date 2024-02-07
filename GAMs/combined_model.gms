@@ -1,4 +1,4 @@
-$title cActivator toy example
+$title combined model
 Option Seed=42;
 
 * Load in cEffector Matrix

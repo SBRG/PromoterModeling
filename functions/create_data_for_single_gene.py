@@ -71,7 +71,6 @@ def create_data_for_gene(flags):
     ############################################################
     # create lambda dfs for various calculations --- very slow
     ############################################################
-    # TO DO, THIS, pseudo code below, also need to make the rest of the code use this as opposed to recalculating lambda_df every time they call it, should speed up whole code on average, need to add flag to not run this portion of code as often
     if not flags['run_basal_calculations'] and os.path.exists('../data/lambda_dfs/'+flags['central_gene']+'.pkl'):
         lambdas_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
     else:

@@ -1,4 +1,4 @@
-$title cActivator toy example
+$title No Inhibitor, metaboltie binding activator
 Option Seed=42;
 
 * Load in cEffector Matrix

@@ -56,7 +56,8 @@ def basal_values(eq_str, flags, num_steps = 3):
     grid_use = flags['grid_use']
     if grid_use == 'median':
         grid_use = int(len(k_df.iloc[0, 1]) / 2)
-
+    grid_use = int(grid_use)
+    
     grid_vals = k_df.iloc[0, 1][grid_use]
     grid_constants['KdRNAP'] = 10**(grid_vals[0])
     grid_constants['kEscape'] = 10**(grid_vals[1])
