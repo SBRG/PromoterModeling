@@ -7,7 +7,7 @@ data/saved_mRNA_ratios_MA_vals/*
 data/lambda_dfs/*
 data/gene_grid_constants/*
 data/cAct_cInh_vals/*
-figures/*
+figures/*/*.gif
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
