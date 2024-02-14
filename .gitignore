@@ -1,5 +1,5 @@
 # Project specific
-GAMs/optimization_runs/*r*
+GAMs/optimization_runs/*/*r*
 GAMs/runs/*r*
 GAMs/225a/
 data/saved_run_results/*

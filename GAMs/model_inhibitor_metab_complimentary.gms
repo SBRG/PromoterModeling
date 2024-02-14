@@ -207,9 +207,9 @@ eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= 10**act_TF_conc(sample
 eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= 3 * (10**inh_metab_Total(sample)) * 10**inh_Kd(gene) + input_constants('kd_inh_metab') * 10**inh_metab_Total(sample) + 3 * (10**inh_metab_Total(sample)) * meas_inh_TF(sample) + (-36*(10**inh_metab_Total(sample)) * (10**inh_Kd(gene))**2 * meas_inh_TF(sample) + (3 * (10**inh_metab_Total(sample)) * 10**inh_Kd(gene) + input_constants('kd_inh_metab') * 10**inh_Kd(gene) + 3 * (10**inh_Kd(gene) * meas_inh_TF(sample)))**2)**(.5) / (18 * (10**inh_Kd(gene))**2);
 
 * objective equations
-act_obj1 .. act_diff1 =e= sum((gene, sample), abs((cAct_calc(sample, gene) - cAct(sample, gene))) / max_cAct(gene));
+act_obj1 .. act_diff1 =e= sum((gene, sample), (abs((cAct_calc(sample, gene) - cAct(sample, gene))) / max_cAct(gene) )**2);
 
-inh_obj1 .. inh_diff1 =e= sum((gene, sample), abs((cInh_calc(sample, gene) - cInh(sample, gene))) / max_cInh(gene));
+inh_obj1 .. inh_diff1 =e= sum((gene, sample), (abs((cInh_calc(sample, gene) - cInh(sample, gene))) / max_cInh(gene) )**2);
 
 
 match_obj .. match_diff =e= sum((gene, sample), (abs(actual_mRNA(sample, gene) - ((cAct_calc(sample, gene)*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + sample_constants('RNAP', sample) +  basal_constants('KeqOpening', gene)*sample_constants('RNAP', sample))) / (((1 + cAct_calc(sample, gene) + cInh_calc(sample, gene))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + cAct_calc(sample, gene)*basal_constants('KdRNAP', gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample)))))**2 );
