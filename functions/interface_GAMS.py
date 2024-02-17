@@ -7,6 +7,67 @@ import pickle
 import shutil
 import platform
 
+
+iM_to_b_regulator = {
+    'GlpR' : ['b3423'], 
+    'DhaR/Mlc' : ['b1201', 'b1594'], 
+    'ArgR' : ['b3237'], 
+    'NarL' : ['b1221'], 
+    'MalT' : ['b3418'], 
+    'OxyR' : ['b3961'], 
+    'Crp-2' : ['b3357'], 
+    'AtoC' : ['b2220'], 
+    'PurR-1' : ['b1658'], 
+    'CsqR' : ['b3884'], 
+    'MetJ' : ['b3938'], 
+    'PurR-2' : ['b1658'], 
+    'Cbl+CysB' : ['b1987' 'b1275'], 
+    'GlcC' : ['b2980'], 
+    'Crp-1' : ['b3357'], 
+    'YiaJ' : ['b3574'], 
+    'GcvA' : ['b2808'], 
+    'XylR' : ['b3569'], 
+    'RpoH' : ['b3461'], 
+    'GadEWX' : ['b3512', 'b3515', 'b3516'], 
+    'PrpR' : ['b0330'], 
+    'GadWX' : ['b3516', 'b3515'], 
+    'CecR' : ['b0796'], 
+    'ArcA-1' : ['b4401'], 
+    'Fnr' : ['b1334'], 
+    'CdaR' : ['b0162'], 
+    'Pyruvate' : ['b2125', 'b2381', 'b0113'], 
+    'SrlR+GutM' : ['b2707', 'b2706'], 
+    'NagC/TyrR' : ['b0676', 'b1323'], 
+    'CpxR' : ['b3912'], 
+    'Lrp' : ['b0889'], 
+    'Leu/Ile' : ['b3773'], 
+    'Fur-1' : ['b0683'], 
+    'CysB' : ['b1275'], 
+    'FliA' : ['b1922'], 
+    'PuuR' : ['b1299'], 
+    'NikR' : ['b3481'], 
+    'NtrC+RpoN' : ['b3868', 'b3202'], 
+    'RcsAB' : ['b1951', 'b2217'], 
+    'Fur-2' : ['b0683'], 
+    'Copper' : ['b0571', 'b1969', 'b0487'], 
+    'AllR/AraC/FucR' : ['b0506', 'b0064', 'b2805'], 
+    'Cra' : ['b0080'], 
+    'ArcA-2' : ['b4401'], 
+    'EvgA' : ['b2369'], 
+    'Zinc' : ['b3292', 'b4046'], 
+    'SoxS' : ['b4062'], 
+    'Nac' : ['b1988'], 
+    'Tryptophan' : ['b4393'], 
+    'FadR/IclR' : ['b1187', 'b4018'], 
+    'FlhDC' : ['b1892', 'b1891'], 
+    'GntR/TyrR' : ['b3438', 'b1323'], 
+    'RpoS' : ['b2741'], 
+    'ExuR/FucR' : ['b3094', 'b2805'], 
+    'FecI' : ['b4293'], 
+    'RbsR' : ['b3753']
+}
+
+
 def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_constants, GAMs_run_dir, parameter_flags = None):
     ############################################################
     # save input parameters
@@ -266,7 +327,231 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
                 _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
             else:
                 _ = subprocess.call('gams combined_model', shell = True, cwd = GAMs_run_dir)
+
+
+
+def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run_dir, parameter_flags = None):
+    ############################################################
+    # save input parameters
+    ############################################################
+    if not parameter_flags:
+        parameter_flags = stable_flags
+        baby_dict = {
+            'act_TF_conc_lo' : parameter_flags['act_TF_conc_lo'],
+            'act_TF_conc_up' : parameter_flags['act_TF_conc_up'],
+            'act_Kd_lo' : parameter_flags['act_Kd_lo'],
+            'act_Kd_up' : parameter_flags['act_Kd_up'],
+            'inh_TF_conc_lo' : parameter_flags['inh_TF_conc_lo'],
+            'inh_TF_conc_up' : parameter_flags['inh_TF_conc_up'],
+            'inh_Kd_lo' : parameter_flags['inh_Kd_lo'],
+            'inh_Kd_up' : parameter_flags['inh_Kd_up'],
+
+            'weight_act_obj1' : parameter_flags['weight_act_obj1'],
+            'weight_inh_obj1' : parameter_flags['weight_inh_obj1'],
+            'weight_act_obj2' : parameter_flags['weight_act_obj2'],
+            'weight_inh_obj2' : parameter_flags['weight_inh_obj2'],
+            'weight_mRNA_match' : parameter_flags['weight_mRNA_match'],
+            'weight_act_corr' : parameter_flags['weight_act_corr'],
+            'weight_inh_corr' : parameter_flags['weight_inh_corr'],
+            'act_metab_Total_lo' : parameter_flags['act_metab_Total_lo'],
+            'act_metab_Total_up' : parameter_flags['act_metab_Total_up'],
+            'inh_metab_Total_lo' : parameter_flags['inh_metab_Total_lo'],
+            'inh_metab_Total_up' : parameter_flags['inh_metab_Total_up'],
+        }
+    else:
+        para_sweep = ['act_TF_conc_lo', 'act_TF_conc_up', 'act_Kd_lo', 'act_Kd_up', 'inh_TF_conc_lo', 'inh_TF_conc_up', 'inh_Kd_lo', 'inh_Kd_up', 'weight_act_obj1', 'weight_inh_obj1', 'weight_act_obj2', 'weight_inh_obj2', 'weight_mRNA_match', 'weight_act_corr', 'weight_inh_corr', 'inh_metab_Total_lo', 'inh_metab_Total_up', 'act_metab_Total_lo', 'act_metab_Total_up']
+        baby_dict = {}
+        for para in para_sweep:
+            if para in parameter_flags:
+                baby_dict.update({para : parameter_flags[para]})
+    df = pd.DataFrame(list(baby_dict.items()), columns=['Parameter', 'Value']).set_index('Parameter')
+    df.to_csv(GAMs_run_dir+'/input_files/parameters.csv')
     
+    # now pull in TF specific parameters zzz need to set up proplery TODO
+    baby_dict = {
+        'kd_act_metab' : 0,
+        'kd_inh_metab' : 0,
+    }
+    if True:#promoter:
+        baby_dict.update({'kd_act_metab' : TF_flags_df.iloc[0].values[0]})
+    if True:#inhibitor:
+        baby_dict.update({'kd_inh_metab' : TF_flags_df.iloc[0].values[1]})
+    df = pd.DataFrame(list(baby_dict.items()), columns=['Parameter', 'Value']).set_index('Parameter')
+    df.to_csv(GAMs_run_dir+'/input_files/input_constants.csv')
+    
+    
+    ############################################################
+    # gather files needed to run GAMS
+    ############################################################
+    files_use = []
+    for sample in stable_flags['limit_samples']:
+        use_zerod_A = flags_df.loc[sample]['use_zerod_A_matrix']
+        if stable_flags['use_greedy']:
+            f_name = sample+'_greedy.pkl'
+        else:
+            f_name = sample+'.pkl'
+        if os.path.exists('../data/cAct_cInh_vals/'+f_name):
+            files_use.append(f_name)
+                
+    for f in files_use:
+        shared_indices = []
+        first = True
+        for file in files_use:
+            gene_name = file.split('.')[0].split('_')[0]
+            temp_df = pd.read_pickle('../data/cAct_cInh_vals/'+file)
+            if first:
+                shared_indices = set(temp_df.index)
+                first = False
+            else:
+                shared_indices = set(shared_indices.intersection(set(temp_df.index)))
+        shared_indices = list(shared_indices)
+        shared_indices.sort()
+        act_df = pd.DataFrame(index = shared_indices)
+        inh_df = pd.DataFrame(index = shared_indices)
+        for file in files_use:
+            gene_name = file.split('.')[0].split('_')[0]
+            act_df[gene_name] = pd.read_pickle('../data/cAct_cInh_vals/'+file)['cAct'].loc[act_df.index].values
+            inh_df[gene_name] = pd.read_pickle('../data/cAct_cInh_vals/'+file)['cInh'].loc[inh_df.index].values
+    
+    # save off max values for scaling objective functions
+    vals = []
+    for col in act_df.columns:
+        vals.append(max(act_df[col]))
+    max_df = pd.DataFrame(vals, index = act_df.columns)
+    max_df.to_csv(GAMs_run_dir+'/input_files/max_cActs.csv')
+    vals = []
+    for col in inh_df.columns:
+        vals.append(max(inh_df[col]))
+    max_df = pd.DataFrame(vals, index = inh_df.columns)
+    max_df.to_csv(GAMs_run_dir+'/input_files/max_cInhs.csv')
+    
+    # convert this into iModulon format that looks like excel so GAMS can read it
+    act_df = act_df.T
+    inh_df = inh_df.T
+    iMs = []
+    keep = []
+    for gene in act_df.index:
+        iM = flags_df.loc[gene]['act_iM']
+        if type(iM) == float:
+            keep.append(False)
+        else:
+            keep.append(True)
+            iMs.append(iM)
+    act_df = act_df.loc[keep]
+    cols = inh_df.columns.to_list()
+    act_df['iM'] = iMs
+    cols.insert(0, 'iM')
+    act_df['iM'] = iMs
+    act_df = act_df[cols]
+
+    iMs = []
+    keep = []
+    for gene in inh_df.index:
+        iM = flags_df.loc[gene]['inh_iM']
+        if type(iM) == float:
+            keep.append(False)
+        else:
+            keep.append(True)
+            iMs.append(iM)
+    inh_df = inh_df.loc[keep]
+    cols = inh_df.columns.to_list()
+    cols.insert(0, 'iM')
+    inh_df['iM'] = iMs
+    inh_df = inh_df[cols]
+    act_df.to_csv(GAMs_run_dir+'/input_files/composite_cAct_vals.csv')
+    inh_df.to_csv(GAMs_run_dir+'/input_files/composite_cInh_vals.csv')
+    inh_df.to_excel(GAMs_run_dir+'/input_files/composite_cInh_vals.xlsx')
+
+    
+    ############################################################
+    # save actual ratio_df values
+    ############################################################
+    collection = []
+    index = []
+    for f in files_use:
+        gene_name = f.split('.')[0].split('_')[0]
+        use_zerod_A = flags_df.loc[gene_name]['use_zerod_A_matrix']
+        df_name = gene_name+'_zerod'+str(use_zerod_A)+'_mRNA_ratios_and_MA_vals.csv'
+        ratios_df = pd.read_csv('../data/saved_mRNA_ratios_MA_vals/'+df_name, index_col = 0)
+        collection.append(ratios_df['actual_mRNA_ratio'])
+        index.append(gene_name)
+    ratios_combo_df = pd.DataFrame(collection, index = index)
+    ratios_combo_df.T.to_csv(GAMs_run_dir+'/input_files/actual_mRNA_ratio.csv')
+    
+
+    ############################################################
+    # create constants files for mRNA calculation
+    ############################################################
+    index = []
+    collection = []
+    for f in files_use:
+        gene_name = f.split('.')[0].split('_')[0]
+        gene_grid_name = '../data/gene_grid_constants/'+gene_name+'.pkl'
+        pickle_in = open(gene_grid_name, 'rb')
+        grid_constants = pickle.load(pickle_in)
+        pickle_in.close()
+        index.append(gene_name)
+        collection.append(grid_constants)
+    constants_df = pd.DataFrame(collection, index = index)
+    constants_df.T.to_csv(GAMs_run_dir+'/input_files/grid_constants.csv')     
+    # make sample_constants file, for now just contains RNAP conc
+    RNAP_conc_df = pd.read_csv('../data/RNAP_conc.csv', index_col = 0)
+    RNAP_conc_df = RNAP_conc_df.loc[ratios_df.index]
+    RNAP_conc_df.T.to_csv(GAMs_run_dir+'/input_files/sample_constants.csv')     
+    
+    
+    ############################################################
+    # create TF concentration
+    ############################################################
+    concentrations = pd.read_csv('../data/validation_data_sets/converted_log_tpm_in_M.csv', index_col = 0)
+    keep = []
+    old_to_new = {}
+    for promoter in set(flags_df.act_iM):
+        if str(promoter) == 'nan':
+            continue
+        gene = iM_to_b_regulator[promoter][0] # not sure how we're handling this long term, for now there shall only be one regulator of each iModulon
+        keep.append(gene)
+        old_to_new.update({gene : promoter})
+    concentrations.loc[keep].rename(index = old_to_new).to_csv(GAMs_run_dir+'/input_files/exported_act_TF_conc.csv')
+    keep = []
+    old_to_new = {}
+    for inhibitor in set(flags_df.inh_iM):
+        if str(promoter) == 'nan':
+            continue
+        gene = iM_to_b_regulator[promoter][0]
+        keep.append(gene)
+        old_to_new.update({gene : promoter})
+    concentrations.loc[keep].rename(index = old_to_new).to_csv(GAMs_run_dir+'/input_files/exported_inh_TF_conc.csv')
+    
+    
+    ############################################################
+    # run GAMS
+    ############################################################
+    # remove old results
+    if stable_flags['delete_old']:
+        if os.path.exists('../data/GAMS_output/cInh_Kd_results.csv'):
+            os.remove('../data/GAMS_output/cInh_Kd_results.csv')
+        if os.path.exists('../data/GAMS_output/cInh_TF_conc_results.csv'):
+            os.remove('../data/GAMS_output/cInh_TF_conc_results.csv')
+        if os.path.exists('../data/GAMS_output/cAct_Kd_results.csv'):
+            os.remove('../data/GAMS_output/cAct_Kd_results.csv')
+        if os.path.exists('../data/GAMS_output/cAct_TF_conc_results.csv'):
+            os.remove('../data/GAMS_output/cAct_TF_conc_results.csv')
+
+    # call GAMS
+    shutil.copyfile('../GAMs/conopt.opt', GAMs_run_dir+'/conopt.opt')
+    if platform.system() == 'Windows':
+        gams_loc =  r'"C:\GAMS\win64\28.2\gams.exe"' # zzz shouldn't be hard set like this, but for now this is fine
+
+        shutil.copyfile('../GAMs/merged_iMs_model_test.gms', GAMs_run_dir+'/combined_model.gms')
+        _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMs_run_dir, shell=True)
+    else:
+
+        shutil.copyfile('../GAMs/merged_iMs_model_test.gms', GAMs_run_dir+'/combined_model.gms')
+        if stable_flags['supress_output']:
+            _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
+        else:
+            _ = subprocess.call('gams combined_model', shell = True, cwd = GAMs_run_dir)
     
 
     
