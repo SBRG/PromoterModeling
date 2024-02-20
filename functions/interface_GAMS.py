@@ -6,7 +6,7 @@ import numpy as np
 import pickle
 import shutil
 import platform
-
+import itertools
 
 iM_to_b_regulator = {
     'GlpR' : ['b3423'], 
@@ -329,7 +329,6 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
                 _ = subprocess.call('gams combined_model', shell = True, cwd = GAMs_run_dir)
 
 
-
 def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run_dir, parameter_flags = None):
     ############################################################
     # save input parameters
@@ -426,6 +425,9 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
     max_df.to_csv(GAMs_run_dir+'/input_files/max_cInhs.csv')
     
     # convert this into iModulon format that looks like excel so GAMS can read it
+    # also need to create mapping between existing gene- iM in act and gene-iM in inh pairs
+    act_gene_iM_pairs = []
+    inh_gene_iM_pairs = []
     act_df = act_df.T
     inh_df = inh_df.T
     iMs = []
@@ -435,6 +437,7 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
         if type(iM) == float:
             keep.append(False)
         else:
+            act_gene_iM_pairs.append((gene, iM))
             keep.append(True)
             iMs.append(iM)
     act_df = act_df.loc[keep]
@@ -451,6 +454,7 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
         if type(iM) == float:
             keep.append(False)
         else:
+            inh_gene_iM_pairs.append((gene, iM))
             keep.append(True)
             iMs.append(iM)
     inh_df = inh_df.loc[keep]
@@ -458,10 +462,57 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
     cols.insert(0, 'iM')
     inh_df['iM'] = iMs
     inh_df = inh_df[cols]
+    
+    
+    
+    # include missing values as zeros and finish making mapping df
+    all_iMs = list(set(act_df.iM).union(inh_df.iM))
+    genes = list(set(act_df.index).union(set(inh_df.index)))
+    needs_to_exist = [gene+';'+iM for gene, iM in itertools.product(genes, all_iMs)]
+    
+    # add missing to cAct
+    exists = [gene+';'+iM for gene, iM in zip(act_df.index, act_df.iM)]
+    to_create = list(set(needs_to_exist) - set(exists))
+    new_row_indices = [val.split(';')[0] for val in to_create]
+    new_iMs = [val.split(';')[1] for val in to_create]
+    new_rows = pd.DataFrame(index = new_row_indices, columns = act_df.columns)
+    new_rows['iM'] = new_iMs
+    act_df = pd.concat([act_df, new_rows])
+    act_df = act_df.fillna(0)
+
+    # add missing to cAct
+    exists = [gene+';'+iM for gene, iM in zip(inh_df.index, inh_df.iM)]
+    to_create = list(set(needs_to_exist) - set(exists))
+    new_row_indices = [val.split(';')[0] for val in to_create]
+    new_iMs = [val.split(';')[1] for val in to_create]
+    new_rows = pd.DataFrame(index = new_row_indices, columns = inh_df.columns)
+    new_rows['iM'] = new_iMs
+    inh_df = pd.concat([inh_df, new_rows])
+    inh_df = inh_df.fillna(0)
+    
     act_df.to_csv(GAMs_run_dir+'/input_files/composite_cAct_vals.csv')
     inh_df.to_csv(GAMs_run_dir+'/input_files/composite_cInh_vals.csv')
-    inh_df.to_excel(GAMs_run_dir+'/input_files/composite_cInh_vals.xlsx')
-
+    
+    # make mapping
+    act_mapping_df = pd.DataFrame(index = act_df.index, columns = all_iMs).fillna(0)
+    inh_mapping_df = pd.DataFrame(index = inh_df.index, columns = all_iMs).fillna(0)
+    for gene, iM in act_gene_iM_pairs:
+        act_mapping_df.at[gene, iM] = 1
+    for gene, iM in inh_gene_iM_pairs:
+        inh_mapping_df.at[gene, iM] = 1
+    act_mapping_df.to_csv(GAMs_run_dir+'./input_files/cAct_mapping.csv')
+    inh_mapping_df.to_csv(GAMs_run_dir+'./input_files/cInh_mapping.csv')
+    
+    # need to save off dummy dimensional dataframe
+    all_samples = list(set(act_df.columns).union(inh_df.columns))
+    all_samples.insert(0, 'iM')
+    new_row_indices = [val.split(';')[0] for val in needs_to_exist]
+    new_iMs = [val.split(';')[1] for val in needs_to_exist]
+    dummy_df = pd.DataFrame(index = new_row_indices, columns = all_samples)
+    dummy_df['iM'] = new_iMs
+    dummy_df = dummy_df.fillna(1)
+    dummy_df.to_csv(GAMs_run_dir+'./input_files/dimensions.csv')
+    
     
     ############################################################
     # save actual ratio_df values
@@ -543,11 +594,11 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
     if platform.system() == 'Windows':
         gams_loc =  r'"C:\GAMS\win64\28.2\gams.exe"' # zzz shouldn't be hard set like this, but for now this is fine
 
-        shutil.copyfile('../GAMs/merged_iMs_model_test.gms', GAMs_run_dir+'/combined_model.gms')
+        shutil.copyfile('../GAMs/merged_iMs_model.gms', GAMs_run_dir+'/combined_model.gms')
         _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMs_run_dir, shell=True)
     else:
 
-        shutil.copyfile('../GAMs/merged_iMs_model_test.gms', GAMs_run_dir+'/combined_model.gms')
+        shutil.copyfile('../GAMs/merged_iMs_model.gms', GAMs_run_dir+'/combined_model.gms')
         if stable_flags['supress_output']:
             _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
         else:

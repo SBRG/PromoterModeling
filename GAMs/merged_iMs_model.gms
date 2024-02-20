@@ -46,22 +46,39 @@ Set
          inh_metab_Total_up /
 
 * Load in saved values
-$call csv2gdx ./input_files/composite_cAct_vals.csv id=cAct index=1,2 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_cAct.gdx
-$gdxIn ./input_GDX/input_cAct.gdx
+* Load in saved values
+$onUNDF
+$call csv2gdx ./input_files/dimensions.csv id=dims index=1,2 values=3..lastCol useHeader=y trace=0 output=./input_GDX/dimensions.gdx
+$gdxIn ./input_GDX/dimensions.gdx
 $load gene = dim1
 $load iM = dim2
 $load sample = dim3
+Parameter dims(gene, iM, sample) 'dummy dimensions';
+$load dims
+$gdxIn
+
+$call csv2gdx ./input_files/composite_cAct_vals.csv id=cAct index=1,2 values=3..lastCol useHeader=y trace=0 output=./input_GDX/input_cAct.gdx
+$gdxIn ./input_GDX/input_cAct.gdx
 Parameter cAct(gene, iM, sample) 'cAct values';
 $load cAct
 $gdxIn
 
-$call csv2gdx ./input_files/composite_cInh_vals.csv id=cInh index=1,2 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_cInh.gdx
+$call csv2gdx ./input_files/cAct_mapping.csv id=cAct_mapping index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/cAct_mapping.gdx
+$gdxIn ./input_GDX/cAct_mapping.gdx
+Parameter cAct_mapping(gene, iM) 'cAct_mapping';
+$load cAct_mapping
+$gdxIn
+
+$call csv2gdx ./input_files/composite_cInh_vals.csv id=cInh index=1,2 values=3..lastCol useHeader=y trace=0 output=./input_GDX/input_cInh.gdx
 $gdxIn ./input_GDX/input_cInh.gdx
-$load gene = dim1
-$load iM = dim2
-$load sample = dim3
 Parameter cInh(gene, iM, sample) 'cInh values';
 $load cInh
+$gdxIn
+
+$call csv2gdx ./input_files/cInh_mapping.csv id=cInh_mapping index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/cInh_mapping.gdx
+$gdxIn ./input_GDX/cInh_mapping.gdx
+Parameter cInh_mapping(gene, iM) 'cInh_mapping';
+$load cInh_mapping
 $gdxIn
 
 $call csv2gdx ./input_files/exported_act_TF_conc.csv id=meas_act_TF index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_act_TF_conc.gdx
@@ -194,9 +211,9 @@ total_obj .. total_diff =e= weight_balance3 * weight_mRNA_match * match_diff + w
 
 
 * equations for cInhibitor and cActivator (cActivator is basically null and unused right now)
-eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= sum(iM, 3 * (10**act_metab_Total(sample, iM)) * 10**act_Kd(gene, iM) + input_constants('kd_act_metab') * 10**act_metab_Total(sample, iM) + 3 * (10**act_metab_Total(sample, iM)) * meas_act_TF(sample, iM) + (-36*(10**act_metab_Total(sample, iM)) * (10**act_Kd(gene, iM))**2 * meas_act_TF(sample, iM) + (3 * (10**act_metab_Total(sample, iM)) * 10**act_Kd(gene, iM) + input_constants('kd_act_metab') * 10**act_Kd(gene, iM) + 3 * (10**act_Kd(gene, iM) * meas_act_TF(sample, iM)))**2)**(.5) / (18 * (10**act_Kd(gene, iM))**2));
+eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= sum(iM, cAct_mapping(gene, iM) * 3 * (10**act_metab_Total(sample, iM)) * 10**act_Kd(gene, iM) + input_constants('kd_act_metab') * 10**act_metab_Total(sample, iM) + 3 * (10**act_metab_Total(sample, iM)) * meas_act_TF(sample, iM) + (-36*(10**act_metab_Total(sample, iM)) * (10**act_Kd(gene, iM))**2 * meas_act_TF(sample, iM) + (3 * (10**act_metab_Total(sample, iM)) * 10**act_Kd(gene, iM) + input_constants('kd_act_metab') * 10**act_Kd(gene, iM) + 3 * (10**act_Kd(gene, iM) * meas_act_TF(sample, iM)))**2)**(.5) / (18 * (10**act_Kd(gene, iM))**2));
 
-eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= sum(iM, 3 * (10**inh_metab_Total(sample, iM)) * 10**inh_Kd(gene, iM) + input_constants('kd_inh_metab') * 10**inh_metab_Total(sample, iM) + 3 * (10**inh_metab_Total(sample, iM)) * meas_inh_TF(sample, iM) + (-36*(10**inh_metab_Total(sample, iM)) * (10**inh_Kd(gene, iM))**2 * meas_inh_TF(sample, iM) + (3 * (10**inh_metab_Total(sample, iM)) * 10**inh_Kd(gene, iM) + input_constants('kd_inh_metab') * 10**inh_Kd(gene, iM) + 3 * (10**inh_Kd(gene, iM) * meas_inh_TF(sample, iM)))**2)**(.5) / (18 * (10**inh_Kd(gene, iM))**2));
+eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= sum(iM, cInh_mapping(gene, iM) * 3 * (10**inh_metab_Total(sample, iM)) * 10**inh_Kd(gene, iM) + input_constants('kd_inh_metab') * 10**inh_metab_Total(sample, iM) + 3 * (10**inh_metab_Total(sample, iM)) * meas_inh_TF(sample, iM) + (-36*(10**inh_metab_Total(sample, iM)) * (10**inh_Kd(gene, iM))**2 * meas_inh_TF(sample, iM) + (3 * (10**inh_metab_Total(sample, iM)) * 10**inh_Kd(gene, iM) + input_constants('kd_inh_metab') * 10**inh_Kd(gene, iM) + 3 * (10**inh_Kd(gene, iM) * meas_inh_TF(sample, iM)))**2)**(.5) / (18 * (10**inh_Kd(gene, iM))**2));
 
 
 * objective equations
