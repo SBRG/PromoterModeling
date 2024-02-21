@@ -211,9 +211,9 @@ total_obj .. total_diff =e= weight_balance3 * weight_mRNA_match * match_diff + w
 
 
 * equations for cInhibitor and cActivator (cActivator is basically null and unused right now)
-eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= sum(iM, cAct_mapping(gene, iM) * 3 * (10**act_metab_Total(sample, iM)) * 10**act_Kd(gene, iM) + input_constants('kd_act_metab') * 10**act_metab_Total(sample, iM) + 3 * (10**act_metab_Total(sample, iM)) * meas_act_TF(sample, iM) + (-36*(10**act_metab_Total(sample, iM)) * (10**act_Kd(gene, iM))**2 * meas_act_TF(sample, iM) + (3 * (10**act_metab_Total(sample, iM)) * 10**act_Kd(gene, iM) + input_constants('kd_act_metab') * 10**act_Kd(gene, iM) + 3 * (10**act_Kd(gene, iM) * meas_act_TF(sample, iM)))**2)**(.5) / (18 * (10**act_Kd(gene, iM))**2));
+eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= sum(iM, cAct_mapping(gene, iM) * ( 3 * (10**act_metab_Total(sample, iM)) * 10**act_Kd(gene, iM) + input_constants('kd_act_metab') * 10**act_metab_Total(sample, iM) + 3 * (10**act_metab_Total(sample, iM)) * meas_act_TF(sample, iM) + (-36*(10**act_metab_Total(sample, iM)) * (10**act_Kd(gene, iM))**2 * meas_act_TF(sample, iM) + (3 * (10**act_metab_Total(sample, iM)) * 10**act_Kd(gene, iM) + input_constants('kd_act_metab') * 10**act_Kd(gene, iM) + 3 * (10**act_Kd(gene, iM) * meas_act_TF(sample, iM)))**2)**(.5) / (18 * (10**act_Kd(gene, iM))**2)) );
 
-eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= sum(iM, cInh_mapping(gene, iM) * 3 * (10**inh_metab_Total(sample, iM)) * 10**inh_Kd(gene, iM) + input_constants('kd_inh_metab') * 10**inh_metab_Total(sample, iM) + 3 * (10**inh_metab_Total(sample, iM)) * meas_inh_TF(sample, iM) + (-36*(10**inh_metab_Total(sample, iM)) * (10**inh_Kd(gene, iM))**2 * meas_inh_TF(sample, iM) + (3 * (10**inh_metab_Total(sample, iM)) * 10**inh_Kd(gene, iM) + input_constants('kd_inh_metab') * 10**inh_Kd(gene, iM) + 3 * (10**inh_Kd(gene, iM) * meas_inh_TF(sample, iM)))**2)**(.5) / (18 * (10**inh_Kd(gene, iM))**2));
+eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= sum(iM, cInh_mapping(gene, iM) * ( 3 * (10**inh_metab_Total(sample, iM)) * 10**inh_Kd(gene, iM) + input_constants('kd_inh_metab') * 10**inh_metab_Total(sample, iM) + 3 * (10**inh_metab_Total(sample, iM)) * meas_inh_TF(sample, iM) + (-36*(10**inh_metab_Total(sample, iM)) * (10**inh_Kd(gene, iM))**2 * meas_inh_TF(sample, iM) + (3 * (10**inh_metab_Total(sample, iM)) * 10**inh_Kd(gene, iM) + input_constants('kd_inh_metab') * 10**inh_Kd(gene, iM) + 3 * (10**inh_Kd(gene, iM) * meas_inh_TF(sample, iM)))**2)**(.5) / (18 * (10**inh_Kd(gene, iM))**2)) );
 
 
 * objective equations
@@ -221,9 +221,7 @@ act_obj1 .. act_diff1 =e= sum((gene, sample), (abs((cAct_calc(sample, gene) - su
 
 inh_obj1 .. inh_diff1 =e= sum((gene, sample), (abs((cInh_calc(sample, gene) - sum(iM, cInh(gene, iM, sample)))) / max_cInh(gene) )**2);
 
-match_obj .. match_diff =e= 1;
-* setting to a constant for now to get the multidimensionality working
-*sum((gene, sample), (abs(actual_mRNA(sample, gene) - ((cAct_calc(sample, gene)*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + sample_constants('RNAP', sample) +  basal_constants('KeqOpening', gene)*sample_constants('RNAP', sample))) / (((1 + cAct_calc(sample, gene) + cInh_calc(sample, gene))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + cAct_calc(sample, gene)*basal_constants('KdRNAP', gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample)))))**2 );
+match_obj .. match_diff =e= sum((gene, sample), (abs(actual_mRNA(sample, gene) - ((cAct_calc(sample, gene)*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + sample_constants('RNAP', sample) +  basal_constants('KeqOpening', gene)*sample_constants('RNAP', sample))) / (((1 + cAct_calc(sample, gene) + cInh_calc(sample, gene))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + cAct_calc(sample, gene)*basal_constants('KdRNAP', gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample)))))**2 );
 
 
 * modify model parameters

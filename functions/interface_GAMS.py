@@ -494,8 +494,8 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
     inh_df.to_csv(GAMs_run_dir+'/input_files/composite_cInh_vals.csv')
     
     # make mapping
-    act_mapping_df = pd.DataFrame(index = act_df.index, columns = all_iMs).fillna(0)
-    inh_mapping_df = pd.DataFrame(index = inh_df.index, columns = all_iMs).fillna(0)
+    act_mapping_df = pd.DataFrame(index = list(set(act_df.index)), columns = all_iMs).fillna(0)
+    inh_mapping_df = pd.DataFrame(index = list(set(inh_df.index)), columns = all_iMs).fillna(0)
     for gene, iM in act_gene_iM_pairs:
         act_mapping_df.at[gene, iM] = 1
     for gene, iM in inh_gene_iM_pairs:
@@ -505,6 +505,7 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
     
     # need to save off dummy dimensional dataframe
     all_samples = list(set(act_df.columns).union(inh_df.columns))
+    all_samples.remove('iM')
     all_samples.insert(0, 'iM')
     new_row_indices = [val.split(';')[0] for val in needs_to_exist]
     new_iMs = [val.split(';')[1] for val in needs_to_exist]
@@ -567,11 +568,11 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
     keep = []
     old_to_new = {}
     for inhibitor in set(flags_df.inh_iM):
-        if str(promoter) == 'nan':
+        if str(inhibitor) == 'nan':
             continue
-        gene = iM_to_b_regulator[promoter][0]
+        gene = iM_to_b_regulator[inhibitor][0]
         keep.append(gene)
-        old_to_new.update({gene : promoter})
+        old_to_new.update({gene : inhibitor})
     concentrations.loc[keep].rename(index = old_to_new).to_csv(GAMs_run_dir+'/input_files/exported_inh_TF_conc.csv')
     
     
@@ -603,9 +604,8 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
             _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMs_run_dir)
         else:
             _ = subprocess.call('gams combined_model', shell = True, cwd = GAMs_run_dir)
-    
 
-    
+
 def read_GAMs(GAMs_run_dir):
     # look at GAMs results
     no_promoter = False
@@ -705,4 +705,77 @@ def read_GAMs(GAMs_run_dir):
     else:
         return(calc_cAct, act_kd_df, cAct_TF_conc_df, calc_cInh, inh_kd_df, TF_conc_df)
     
+
+def read_multi_GAMs(GAMs_run_dir):
+    # look at GAMs results
+    
+    # inputs
+    saved_cActivators = pd.read_csv(GAMs_run_dir+'/input_files/composite_cAct_vals.csv', index_col = 0)
+    saved_cInhibitors = pd.read_csv(GAMs_run_dir+'/input_files/composite_cInh_vals.csv', index_col = 0)
+    act_TF_concs = pd.read_csv(GAMs_run_dir+'/input_files/exported_act_TF_conc.csv', index_col = 0)
+    inh_TF_concs = pd.read_csv(GAMs_run_dir+'/input_files/exported_inh_TF_conc.csv', index_col = 0)
+    input_constants = pd.read_csv(GAMs_run_dir+'/input_files/input_constants.csv', index_col = 0)
+    cAct_mapping = pd.read_csv(GAMs_run_dir+'/input_files/cAct_mapping.csv', index_col = 0)
+    cInh_mapping = pd.read_csv(GAMs_run_dir+'/input_files/cInh_mapping.csv', index_col = 0)
+    
+    # outputs
+    act_kd_df = pd.read_csv(GAMs_run_dir+'/output_files/cAct_Kd_results.csv', index_col = 0)
+    inh_kd_df = pd.read_csv(GAMs_run_dir+'/output_files/cInh_Kd_results.csv', index_col = 0)
+    act_metab = pd.read_csv(GAMs_run_dir+'/output_files/act_metab_Total.csv', index_col = 0)
+    inh_metab = pd.read_csv(GAMs_run_dir+'/output_files/inh_metab_Total.csv', index_col = 0)
+
+    # limit overlaps
+    saved_cActivators = saved_cActivators.loc[act_kd_df.index]
+    saved_cInhibitors = saved_cInhibitors.loc[inh_kd_df.index]
+
+    # activator calculations
+    iM_to_cActs = {}
+    KdArg = input_constants.loc['kd_act_metab'].values[0]
+    for iM, group in act_kd_df.groupby('iM'):
+        bby_kd_df = 10**(group.drop(columns = 'iM').astype(float))
+        bby_metab_df = 10**(act_metab[act_metab['iM'] == iM].drop(columns = 'iM').astype(float))
+        
+        calc_cAct = pd.DataFrame(index = bby_kd_df.index, columns = bby_metab_df.index)
+        for sample in calc_cAct.columns:
+            ArgTotal = bby_metab_df.loc[sample].values[0]
+            try:
+                TFTotal = act_TF_concs.loc[iM][sample]
+            except:
+                TFTotal = 1 # generally this means there is no activator, so setting this isn't important
+            for gene in calc_cAct.index:
+                KdTF = bby_kd_df.loc[gene].values[0]
+
+                calc_cAct.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
+                    ( -36 * ArgTotal * KdTF**2 * TFTotal + \
+                     (3 * ArgTotal * KdTF + KdArg * KdTF + 3 * KdTF * TFTotal)**2)**.5 \
+                    ) / (18 * KdTF**2)
+        calc_cAct = calc_cAct.T
+        
+        iM_to_cActs.update({iM : calc_cAct})
+
+    
+    # inhibitor calculations
+    iM_to_cInhs = {}
+    KdArg = input_constants.loc['kd_inh_metab'].values[0]
+    for iM, group in inh_kd_df.groupby('iM'):
+        bby_kd_df = 10**(group.drop(columns = 'iM').astype(float))
+        bby_metab_df = 10**(inh_metab[inh_metab['iM'] == iM].drop(columns = 'iM').astype(float))
+        
+        calc_cInh = pd.DataFrame(index = bby_kd_df.index, columns = bby_metab_df.index)
+        for sample in calc_cInh.columns:
+            ArgTotal = bby_metab_df.loc[sample].values[0]
+            TFTotal = inh_TF_concs.loc[iM][sample]
+            for gene in calc_cInh.index:
+                KdTF = bby_kd_df.loc[gene].values[0]
+                
+                calc_cInh.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
+                    ( -36 * ArgTotal * KdTF**2 * TFTotal + \
+                     (3 * ArgTotal * KdTF + KdArg * KdTF + 3 * KdTF * TFTotal)**2)**.5 \
+                    ) / (18 * KdTF**2)
+        calc_cInh = calc_cInh.T
+        
+        iM_to_cInhs.update({iM : calc_cInh})
+
+    # return
+    return(iM_to_cActs, act_kd_df, act_metab, iM_to_cInhs, inh_kd_df, inh_metab)
     
