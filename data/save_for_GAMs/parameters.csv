@@ -1,9 +1,0 @@
-Parameter,Value
-act_TF_conc_lo,1e-10
-act_TF_conc_up,1e-05
-act_Kd_lo,1e-10
-act_Kd_up,1e-06
-inh_TF_conc_lo,1e-10
-inh_TF_conc_up,1e-05
-inh_Kd_lo,1e-10
-inh_Kd_up,1e-06

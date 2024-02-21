@@ -728,15 +728,24 @@ def read_multi_GAMs(GAMs_run_dir):
     saved_cActivators = saved_cActivators.loc[act_kd_df.index]
     saved_cInhibitors = saved_cInhibitors.loc[inh_kd_df.index]
 
+    
+    # let's unlog kd_df and metab_df
+    act_kd_df[act_kd_df.columns[1:]] = 10**act_kd_df[act_kd_df.columns[1:]].astype(float)
+    inh_kd_df[inh_kd_df.columns[1:]] = 10**inh_kd_df[inh_kd_df.columns[1:]].astype(float)
+    act_metab[act_metab.columns[1:]] = 10**act_metab[act_metab.columns[1:]].astype(float)
+    inh_metab[inh_metab.columns[1:]] = 10**inh_metab[inh_metab.columns[1:]].astype(float)
+    
+    
     # activator calculations
     iM_to_cActs = {}
     KdArg = input_constants.loc['kd_act_metab'].values[0]
     for iM, group in act_kd_df.groupby('iM'):
-        bby_kd_df = 10**(group.drop(columns = 'iM').astype(float))
-        bby_metab_df = 10**(act_metab[act_metab['iM'] == iM].drop(columns = 'iM').astype(float))
+        bby_kd_df = group.drop(columns = 'iM')
+        bby_metab_df = act_metab[act_metab['iM'] == iM].drop(columns = 'iM')
         
         calc_cAct = pd.DataFrame(index = bby_kd_df.index, columns = bby_metab_df.index)
         for sample in calc_cAct.columns:
+            
             ArgTotal = bby_metab_df.loc[sample].values[0]
             try:
                 TFTotal = act_TF_concs.loc[iM][sample]
@@ -744,11 +753,13 @@ def read_multi_GAMs(GAMs_run_dir):
                 TFTotal = 1 # generally this means there is no activator, so setting this isn't important
             for gene in calc_cAct.index:
                 KdTF = bby_kd_df.loc[gene].values[0]
-
-                calc_cAct.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
-                    ( -36 * ArgTotal * KdTF**2 * TFTotal + \
-                     (3 * ArgTotal * KdTF + KdArg * KdTF + 3 * KdTF * TFTotal)**2)**.5 \
-                    ) / (18 * KdTF**2)
+                if cAct_mapping.loc[gene, iM] == 0:
+                    calc_cAct.at[gene, sample] = 0
+                else:
+                    calc_cAct.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
+                        ( -36 * ArgTotal * KdTF**2 * TFTotal + \
+                         (3 * ArgTotal * KdTF + KdArg * KdTF + 3 * KdTF * TFTotal)**2)**.5 \
+                        ) / (18 * KdTF**2)
         calc_cAct = calc_cAct.T
         
         iM_to_cActs.update({iM : calc_cAct})
@@ -758,8 +769,10 @@ def read_multi_GAMs(GAMs_run_dir):
     iM_to_cInhs = {}
     KdArg = input_constants.loc['kd_inh_metab'].values[0]
     for iM, group in inh_kd_df.groupby('iM'):
-        bby_kd_df = 10**(group.drop(columns = 'iM').astype(float))
-        bby_metab_df = 10**(inh_metab[inh_metab['iM'] == iM].drop(columns = 'iM').astype(float))
+        bby_kd_df = group.drop(columns = 'iM')
+        bby_metab_df = inh_metab[inh_metab['iM'] == iM].drop(columns = 'iM')
+        
+        
         
         calc_cInh = pd.DataFrame(index = bby_kd_df.index, columns = bby_metab_df.index)
         for sample in calc_cInh.columns:
@@ -767,15 +780,17 @@ def read_multi_GAMs(GAMs_run_dir):
             TFTotal = inh_TF_concs.loc[iM][sample]
             for gene in calc_cInh.index:
                 KdTF = bby_kd_df.loc[gene].values[0]
-                
-                calc_cInh.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
-                    ( -36 * ArgTotal * KdTF**2 * TFTotal + \
-                     (3 * ArgTotal * KdTF + KdArg * KdTF + 3 * KdTF * TFTotal)**2)**.5 \
-                    ) / (18 * KdTF**2)
+                if cInh_mapping.loc[gene, iM] == 0:
+                    calc_cInh.at[gene, sample] = 0
+                else:
+                    calc_cInh.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
+                        ( -36 * ArgTotal * KdTF**2 * TFTotal + \
+                         (3 * ArgTotal * KdTF + KdArg * KdTF + 3 * KdTF * TFTotal)**2)**.5 \
+                        ) / (18 * KdTF**2)
         calc_cInh = calc_cInh.T
         
-        iM_to_cInhs.update({iM : calc_cInh})
-
+        iM_to_cInhs.update({iM : calc_cInh})  
+     
     # return
     return(iM_to_cActs, act_kd_df, act_metab, iM_to_cInhs, inh_kd_df, inh_metab)
     
