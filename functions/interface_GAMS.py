@@ -333,7 +333,7 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
     ############################################################
     # save input parameters
     ############################################################
-    if not parameter_flags:
+    if parameter_flags is None:
         parameter_flags = stable_flags
         baby_dict = {
             'act_TF_conc_lo' : parameter_flags['act_TF_conc_lo'],
@@ -777,7 +777,10 @@ def read_multi_GAMs(GAMs_run_dir):
         calc_cInh = pd.DataFrame(index = bby_kd_df.index, columns = bby_metab_df.index)
         for sample in calc_cInh.columns:
             ArgTotal = bby_metab_df.loc[sample].values[0]
-            TFTotal = inh_TF_concs.loc[iM][sample]
+            try:
+                TFTotal = inh_TF_concs.loc[iM][sample]
+            except:
+                TFTotal = 1 # generally this means there is no inhibitor, so setting this isn't important
             for gene in calc_cInh.index:
                 KdTF = bby_kd_df.loc[gene].values[0]
                 if cInh_mapping.loc[gene, iM] == 0:
