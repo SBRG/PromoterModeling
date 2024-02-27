@@ -348,6 +348,9 @@ def greedy_algorithm(base_individual: object,
     :param int max_steps: Maximum number of steps the greedy algorithm can take
         at a time before moving on to a different condition
     """
+    n_iterations = int(n_iterations)
+    max_steps = int(max_steps)
+    n_rounds = int(n_rounds)
     
     # Create population to hold the individuals we are trying out
     population = []

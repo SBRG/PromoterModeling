@@ -93,7 +93,7 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, lambdas_df, fla
     
 
     # setup
-    rng = np.random.default_rng(seed = flags['seed'])
+    rng = np.random.default_rng(seed = int(flags['seed']))
     
     # DataFrame to hold the Grid
     grid = pd.DataFrame(columns = ['mRNA_ratio','grid'], index = ratios_df.index)
@@ -104,13 +104,15 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, lambdas_df, fla
     equation = sympify(eq_str)
 
 
-    # Create lambda functions that we can plug in to
-    lambda_df = ps.create_lambdas(equation, grid_constants)
-
+    # If both exist, need to get GA going    
     cAct_range = {'cActivator': flags['cActivator']} # Use a log10 range
     cInh_range = {'cInhibitor': flags['cInhibitor']} # Use a log10 range and convert back after creating grid
 
     for i, condition in enumerate(grid.index):
+        lambda_df = gene_lambda_df.loc[condition].values[0]
+        lambda_df['lambda'] = [lambdify([lambda_df.loc[index,'order']], lambda_df.loc[index,'equation']) for index in lambda_df.index]
+
+        
         # Create a working grid based on cActivator, we will add cInhibitor values 
         # to it to ensure they always result in mRNA ratio
         cAct_grid = ps.create_parameter_grid(num_steps = 101, **cAct_range)
@@ -119,11 +121,10 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, lambdas_df, fla
         cInh_grid = [[10**x[0]] for x in cInh_grid]
 
         # Use a dict just in case order of tuple to sub into lambda function ever changes
-        values = {'mRNARatio': grid.loc[condition,'mRNA_ratio']}
+        values = grid_constants.copy()
+        values.update({'mRNARatio': grid.loc[condition,'mRNA_ratio']})
         for ii, pair in enumerate(cAct_grid):
             # this is untested, likely will cause issues, I'm trying to intergate the sample-specific RNAP values, but this isn't in use currently
-            lambda_df = lambdas_df.loc[index][flags['central_gene']]
-            
             values['cActivator'] = pair[0] # Add cAct to values dict
 
             # Create a tuple in the correct order to pass into the lambda function
@@ -132,11 +133,8 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, lambdas_df, fla
             # Evaluate the lambda function
             cAct_grid[ii] = (cAct_grid[ii][0], (lambda_df.loc['cInhibitor','lambda'](values_tuple))[0])
 
-        values = {'mRNARatio': grid.loc[condition,'mRNA_ratio']}
         for ii, pair in enumerate(cInh_grid):
             # this is untested, likely will cause issues, I'm trying to intergate the sample-specific RNAP values, but this isn't in use currently
-            lambda_df = lambdas_df.loc[index][flags['central_gene']]
-            
             values['cInhibitor'] = pair[0] # Add cInh to values dict
 
             # Create a tuple in the correct order to pass into the lambda function
@@ -293,14 +291,14 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, lambdas_df, fla
                                                          ind.fitness.values[1]))
 
     # Run the GA
-    pop, logbook = ga.mu_plus_lambda(pop = toolbox.population(n = flags['n_ind']), 
+    pop, logbook = ga.mu_plus_lambda(pop = toolbox.population(n = int(flags['n_ind'])), 
                                      toolbox = toolbox, 
                                      rng = rng, 
-                                     mu = flags['mu'], 
-                                     lambda_ = flags['lambda_'], 
+                                     mu = int(flags['mu']), 
+                                     lambda_ = int(flags['lambda_']), 
                                      cxpb = flags['cxpb'], 
                                      mutpb = flags['mutpb'], 
-                                     n_gen = flags['n_gen'], 
+                                     n_gen = int(flags['n_gen']), 
                                      stats = stats, 
                                      verbose = flags['verbose'])
 
