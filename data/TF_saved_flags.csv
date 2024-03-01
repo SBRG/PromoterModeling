@@ -1,4 +1,6 @@
-﻿TF,kd_act_metab,kd_inh_metab
-b3237,0,0.000020423
-b1187,0.000100362,0
-b1658,0,0.00002896534
+﻿TF,name,kd_act_metab,kd_inh_metab,cAct_no_effector_form,cAct_multi_effector_binding,cInh_no_effector_form,cInh_multi_effector_binding,cInh_multi_co_effector_binding
+b3237,argR,0,0.000020423,0,0,0,1,0
+b1187,fadR,0.000100362,0,0,0,0,1,0
+b1658,purR,0,2.89653E-05,0,0,0,0,1
+b3357,crp,0.000100363,0,0,1,0,0,0
+b1594,mlc,0,0,0,0,1,0,0

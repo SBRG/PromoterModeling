@@ -500,8 +500,8 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
         act_mapping_df.at[gene, iM] = 1
     for gene, iM in inh_gene_iM_pairs:
         inh_mapping_df.at[gene, iM] = 1
-    act_mapping_df.to_csv(GAMs_run_dir+'./input_files/cAct_mapping.csv')
-    inh_mapping_df.to_csv(GAMs_run_dir+'./input_files/cInh_mapping.csv')
+    act_mapping_df.to_csv(GAMs_run_dir+'/input_files/cAct_mapping.csv')
+    inh_mapping_df.to_csv(GAMs_run_dir+'/input_files/cInh_mapping.csv')
     
     # need to save off dummy dimensional dataframe
     all_samples = list(set(act_df.columns).union(inh_df.columns))
@@ -512,7 +512,7 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
     dummy_df = pd.DataFrame(index = new_row_indices, columns = all_samples)
     dummy_df['iM'] = new_iMs
     dummy_df = dummy_df.fillna(1)
-    dummy_df.to_csv(GAMs_run_dir+'./input_files/dimensions.csv')
+    dummy_df.to_csv(GAMs_run_dir+'/input_files/dimensions.csv')
     
     
     ############################################################
