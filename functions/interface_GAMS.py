@@ -366,17 +366,11 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
     df = pd.DataFrame(list(baby_dict.items()), columns=['Parameter', 'Value']).set_index('Parameter')
     df.to_csv(GAMs_run_dir+'/input_files/parameters.csv')
     
-    # now pull in TF specific parameters zzz need to set up proplery TODO
-    baby_dict = {
-        'kd_act_metab' : 0,
-        'kd_inh_metab' : 0,
-    }
-    if True:#promoter:
-        baby_dict.update({'kd_act_metab' : TF_flags_df.iloc[0].values[0]})
-    if True:#inhibitor:
-        baby_dict.update({'kd_inh_metab' : TF_flags_df.iloc[0].values[1]})
-    df = pd.DataFrame(list(baby_dict.items()), columns=['Parameter', 'Value']).set_index('Parameter')
-    df.to_csv(GAMs_run_dir+'/input_files/input_constants.csv')
+    
+    ############################################################
+    # TF specific parameters
+    ############################################################
+    TF_flags_df.to_csv(GAMs_run_dir+'/input_files/TF_constants.csv')
     
     
     ############################################################

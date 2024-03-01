@@ -1,4 +1,4 @@
-$title No Activator, metaboltie binding inhibitor
+$title merged model
 Option Seed=42;
 
 * Load in cEffector Matrix
@@ -7,8 +7,10 @@ Set
    iM 'iModulons'
    gene 'genes'
    sample 'samples'
-   TF_constants 'constant across an iM'
-       / kd_act_metab,
+   TF_inputs 'constant across an iM'
+       / TF,
+         name,
+         kd_act_metab,
          kd_inh_metab,
          cAct_no_effector_form, 
          cAct_multi_effector_binding, 
@@ -110,10 +112,10 @@ Parameter sample_constants(sample_constant, sample) 'sample constants';
 $load sample_constants
 $gdxIn
 
-$call csv2gdx ./input_files/input_constants.csv id=input_constants index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_constants.gdx
-$gdxIn ./input_GDX/input_constants.gdx
-Parameter input_constants(TF_constants, iM) 'input constants';
-$load input_constants
+$call csv2gdx ./input_files/TF_constants.csv id=TF_constants index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/TF_constants.gdx
+$gdxIn ./input_GDX/TF_constants.gdx
+Parameter TF_constants(iM, TF_inputs) 'TF constants';
+$load TF_constants
 $gdxIn
 
 $call csv2gdx ./input_files/actual_mRNA_ratio.csv id=actual_mRNA index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/actual_mRNA.gdx
@@ -217,17 +219,18 @@ weight_mRNA_match = input_parameters('weight_mRNA_match');
 * create equations
 total_obj .. total_diff =e= weight_balance3 * weight_mRNA_match * match_diff + weight_act_obj1 * act_diff1 + weight_inh_obj1 * inh_diff1;
 
+Display TF_constants;
 
 * equations for cInhibitor and cActivator (cActivator is basically null and unused right now)
-eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= sum(iM, TF_constants('cAct_multi_effector_binding', iM) * cAct_mapping(gene, iM) * (
+eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= sum(iM, TF_constants(iM, 'cAct_multi_effector_binding') * cAct_mapping(gene, iM) * (
         3 * 10**act_metab_Total(sample, iM) * 10**act_Kd(gene, iM) + 
-        input_constants('kd_act_metab') * 10**act_Kd(gene, iM) + 
+        TF_constants(iM, 'kd_act_metab') * 10**act_Kd(gene, iM) + 
         3 * 10**act_Kd(gene ,iM) * meas_act_TF(sample, iM) + 
         (
             -36 * 10**act_metab_Total(sample, iM) * (10**act_Kd(gene, iM))**2 * meas_act_TF(sample, iM) + 
              (
                  3 * 10**act_metab_Total(sample, iM) * 10**act_Kd(gene, iM) + 
-                  input_constants('kd_act_metab') * 10**act_Kd(gene, iM) + 
+                  TF_constants(iM, 'kd_act_metab') * 10**act_Kd(gene, iM) + 
                   3 * 10**act_Kd(gene, iM) * meas_act_TF(sample, iM)
              )**2
         )**(.5)
@@ -235,21 +238,21 @@ eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= sum(iM, TF_constants('
     / (18 * (10**act_Kd(gene, iM))**2)
 )
 +
-sum(iM, TF_constants('cAct_no_effector_form', iM) * cAct_mapping(gene, iM) * (
-        (10**act_TF_conc(sample) / 10**act_Kd(gene, iM))
+sum(iM, TF_constants(iM, 'cAct_no_effector_form') * cAct_mapping(gene, iM) * (
+        (10**act_TF_conc(sample, iM) / 10**act_Kd(gene, iM))
     )
 )
 ;
 
-eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= sum(iM, TF_constants('cInh_multi_effector_binding', iM) * cInh_mapping(gene, iM) * (
+eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= sum(iM, TF_constants(iM, 'cInh_multi_effector_binding') * cInh_mapping(gene, iM) * (
         3 * 10**inh_metab_Total(sample, iM) * 10**inh_Kd(gene, iM) + 
-        input_constants('kd_inh_metab') * 10**inh_Kd(gene, iM) + 
+        TF_constants(iM, 'kd_inh_metab') * 10**inh_Kd(gene, iM) + 
         3 * 10**inh_Kd(gene ,iM) * meas_inh_TF(sample, iM) + 
         (
             -36 * 10**inh_metab_Total(sample, iM) * (10**inh_Kd(gene, iM))**2 * meas_inh_TF(sample, iM) + 
              (
                  3 * 10**inh_metab_Total(sample, iM) * 10**inh_Kd(gene, iM) + 
-                  input_constants('kd_inh_metab') * 10**inh_Kd(gene, iM) + 
+                  TF_constants(iM, 'kd_inh_metab') * 10**inh_Kd(gene, iM) + 
                   3 * 10**inh_Kd(gene, iM) * meas_inh_TF(sample, iM)
              )**2
         )**(.5)
@@ -257,20 +260,20 @@ eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= sum(iM, TF_constants('
     / (18 * (10**inh_Kd(gene, iM))**2)
 )
 +
-sum(iM, TF_constants('cInh_no_effector_form', iM) * cInh_mapping(gene, iM) * (
-        (10**inh_TF_conc(sample) / 10**inh_Kd(gene, iM))
+sum(iM, TF_constants(iM, 'cInh_no_effector_form') * cInh_mapping(gene, iM) * (
+        (10**inh_TF_conc(sample, iM) / 10**inh_Kd(gene, iM))
     )
 )
 +
-sum(iM, TF_constants('cInh_multi_co_effector_binding', iM) * cInh_mapping(gene, iM) * (
+sum(iM, TF_constants(iM, 'cInh_multi_co_effector_binding') * cInh_mapping(gene, iM) * (
         (
-            input_constants('kd_inh_metab', iM) + 10**inh_metab_Total(sample, iM) + meas_inh_TF(sample, iM) + 
+            TF_constants(iM, 'kd_inh_metab') + 10**inh_metab_Total(sample, iM) + meas_inh_TF(sample, iM) + 
             (
-                input_constants('kd_inh_metab', iM)**2 + 
+                TF_constants(iM, 'kd_inh_metab')**2 + 
                 (
                     (10**inh_metab_Total(sample, iM) - meas_inh_TF(sample, iM))**2
                 ) +
-                2 * input_constants('kd_inh_metab', iM) * (10**inh_metab_Total(sample, iM) + meas_inh_TF(sample, iM))
+                2 * TF_constants(iM, 'kd_inh_metab') * (10**inh_metab_Total(sample, iM) + meas_inh_TF(sample, iM))
             )**.5
         )         
         / (4 * 10**inh_Kd(gene, iM))
