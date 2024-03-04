@@ -708,7 +708,7 @@ def read_multi_GAMs(GAMs_run_dir):
     saved_cInhibitors = pd.read_csv(GAMs_run_dir+'/input_files/composite_cInh_vals.csv', index_col = 0)
     act_TF_concs = pd.read_csv(GAMs_run_dir+'/input_files/exported_act_TF_conc.csv', index_col = 0)
     inh_TF_concs = pd.read_csv(GAMs_run_dir+'/input_files/exported_inh_TF_conc.csv', index_col = 0)
-    input_constants = pd.read_csv(GAMs_run_dir+'/input_files/input_constants.csv', index_col = 0)
+    input_constants = pd.read_csv(GAMs_run_dir+'/input_files/TF_constants.csv', index_col = 0)
     cAct_mapping = pd.read_csv(GAMs_run_dir+'/input_files/cAct_mapping.csv', index_col = 0)
     cInh_mapping = pd.read_csv(GAMs_run_dir+'/input_files/cInh_mapping.csv', index_col = 0)
     
@@ -732,8 +732,8 @@ def read_multi_GAMs(GAMs_run_dir):
     
     # activator calculations
     iM_to_cActs = {}
-    KdArg = input_constants.loc['kd_act_metab'].values[0]
     for iM, group in act_kd_df.groupby('iM'):
+        KdArg = input_constants.loc[iM]['kd_act_metab']
         bby_kd_df = group.drop(columns = 'iM')
         bby_metab_df = act_metab[act_metab['iM'] == iM].drop(columns = 'iM')
         
@@ -761,8 +761,8 @@ def read_multi_GAMs(GAMs_run_dir):
     
     # inhibitor calculations
     iM_to_cInhs = {}
-    KdArg = input_constants.loc['kd_inh_metab'].values[0]
     for iM, group in inh_kd_df.groupby('iM'):
+        KdArg = input_constants.loc[iM]['kd_act_metab']
         bby_kd_df = group.drop(columns = 'iM')
         bby_metab_df = inh_metab[inh_metab['iM'] == iM].drop(columns = 'iM')
         
