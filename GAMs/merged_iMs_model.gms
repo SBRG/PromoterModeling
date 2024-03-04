@@ -9,7 +9,8 @@ Set
    sample 'samples'
    TF_inputs 'constant across an iM'
        / TF,
-         name,
+         gene_name,
+         effectors,
          kd_act_metab,
          kd_inh_metab,
          cAct_no_effector_form, 
