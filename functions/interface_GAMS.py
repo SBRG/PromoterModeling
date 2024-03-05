@@ -730,64 +730,19 @@ def read_multi_GAMs(GAMs_run_dir):
     inh_metab[inh_metab.columns[1:]] = 10**inh_metab[inh_metab.columns[1:]].astype(float)
     
     
-    # activator calculations
-    iM_to_cActs = {}
-    for iM, group in act_kd_df.groupby('iM'):
-        KdArg = input_constants.loc[iM]['kd_act_metab']
-        bby_kd_df = group.drop(columns = 'iM')
-        bby_metab_df = act_metab[act_metab['iM'] == iM].drop(columns = 'iM')
-        
-        calc_cAct = pd.DataFrame(index = bby_kd_df.index, columns = bby_metab_df.index)
-        for sample in calc_cAct.columns:
-            
-            ArgTotal = bby_metab_df.loc[sample].values[0]
-            try:
-                TFTotal = act_TF_concs.loc[iM][sample]
-            except:
-                TFTotal = 1 # generally this means there is no activator, so setting this isn't important
-            for gene in calc_cAct.index:
-                KdTF = bby_kd_df.loc[gene].values[0]
-                if cAct_mapping.loc[gene, iM] == 0:
-                    calc_cAct.at[gene, sample] = 0
-                else:
-                    calc_cAct.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
-                        ( -36 * ArgTotal * KdTF**2 * TFTotal + \
-                         (3 * ArgTotal * KdTF + KdArg * KdTF + 3 * KdTF * TFTotal)**2)**.5 \
-                        ) / (18 * KdTF**2)
-        calc_cAct = calc_cAct.T
-        
-        iM_to_cActs.update({iM : calc_cAct})
-
+    # activator read in
+    temp = pd.read_csv(GAMs_run_dir+'/output_files/GAMS_cAct.csv', index_col = 0)
+    GAMS_cAct = pd.DataFrame(index = list(set(temp.index)), columns = list(set(temp.gene)))
+    for index in GAMS_cAct.index:
+        for col in GAMS_cAct.columns:
+            GAMS_cAct.at[index, col] = temp.loc[temp.gene == col].loc[index].Val
     
-    # inhibitor calculations
-    iM_to_cInhs = {}
-    for iM, group in inh_kd_df.groupby('iM'):
-        KdArg = input_constants.loc[iM]['kd_act_metab']
-        bby_kd_df = group.drop(columns = 'iM')
-        bby_metab_df = inh_metab[inh_metab['iM'] == iM].drop(columns = 'iM')
-        
-        
-        
-        calc_cInh = pd.DataFrame(index = bby_kd_df.index, columns = bby_metab_df.index)
-        for sample in calc_cInh.columns:
-            ArgTotal = bby_metab_df.loc[sample].values[0]
-            try:
-                TFTotal = inh_TF_concs.loc[iM][sample]
-            except:
-                TFTotal = 1 # generally this means there is no inhibitor, so setting this isn't important
-            for gene in calc_cInh.index:
-                KdTF = bby_kd_df.loc[gene].values[0]
-                if cInh_mapping.loc[gene, iM] == 0:
-                    calc_cInh.at[gene, sample] = 0
-                else:
-                    calc_cInh.at[gene, sample] = (3 * ArgTotal * KdTF + KdArg * KdTF +  3 * KdTF * TFTotal + \
-                        ( -36 * ArgTotal * KdTF**2 * TFTotal + \
-                         (3 * ArgTotal * KdTF + KdArg * KdTF + 3 * KdTF * TFTotal)**2)**.5 \
-                        ) / (18 * KdTF**2)
-        calc_cInh = calc_cInh.T
-        
-        iM_to_cInhs.update({iM : calc_cInh})  
+    # inhibitor read in
+    temp = pd.read_csv(GAMs_run_dir+'/output_files/GAMS_cInh.csv', index_col = 0)
+    GAMS_cInh = pd.DataFrame(index = list(set(temp.index)), columns = list(set(temp.gene)))
+    for index in GAMS_cInh.index:
+        for col in GAMS_cInh.columns:
+            GAMS_cInh.at[index, col] = temp.loc[temp.gene == col].loc[index].Val
      
     # return
-    return(iM_to_cActs, act_kd_df, act_metab, iM_to_cInhs, inh_kd_df, inh_metab)
-    
+    return(GAMS_cAct, act_kd_df, act_metab, GAMS_cInh, inh_kd_df, inh_metab)

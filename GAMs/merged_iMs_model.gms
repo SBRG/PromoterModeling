@@ -317,3 +317,9 @@ execute 'gdxdump ./output_GDX/cInh_Kd_results.gdx noData > ./output_files/cInh_K
 
 execute_unload "./output_GDX/inh_metab_Total.gdx" inh_metab_Total.L inh_metab_Total.M
 execute 'gdxdump ./output_GDX/inh_metab_Total.gdx noData > ./output_files/inh_metab_Total.csv symb=inh_metab_Total format=csv';
+
+execute_unload "./output_GDX/GAMS_cAct.gdx" cAct_calc.L cAct_calc.M
+execute 'gdxdump ./output_GDX/GAMS_cAct.gdx noData > ./output_files/GAMS_cAct.csv symb=cAct_calc format=csv';
+
+execute_unload "./output_GDX/GAMS_cInh.gdx" cInh_calc.L cInh_calc.M
+execute 'gdxdump ./output_GDX/GAMS_cInh.gdx noData > ./output_files/GAMS_cInh.csv symb=cInh_calc format=csv';
