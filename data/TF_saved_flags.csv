@@ -1,6 +1,6 @@
-iM,TF,gene_name,effectors,kd_act_metab,kd_inh_metab,cAct_no_effector_form,cAct_multi_effector_binding,cInh_no_effector_form,cInh_multi_effector_binding,cInh_multi_co_effector_binding
-ArgR,b3237,argR,['Arginine'],0.0,2.1241666666666667e-05,0,0,0,1,0
-FadR/IclR,b1187,fadR,['AcetylN/ACoA'],0.000100362,0.00010036266666666667,0,0,0,1,0
-PurR-1,b1658,purR,"['Guanine', 'Hypoxanthine']",0.0,3.205066666666667e-05,0,0,0,0,1
-Crp-1,b3357,crp,['AcetylN/ACoA'],0.00010036266666666667,0.0,0,1,0,0,0
-DhaR/Mlc,b1594,mlc,[],0.0,0.0,0,0,1,0,0
+iM,TF,gene_name,effectors,kd_act_metab_lo,kd_act_metab_up,kd_inh_metab_lo,kd_inh_metab_up,cAct_no_effector_form,cAct_multi_effector_binding,cInh_no_effector_form,cInh_multi_effector_binding,cInh_multi_co_effector_binding
+ArgR,b3237,argR,['Arginine'],0,0,3.18625e-05,3.18625e-05,0,0,0,1,0
+FadR/IclR,b1187,fadR,['AcetylN/ACoA'],0.000100362,0.000100362,0.000150544,0.000150544,0,0,0,1,0
+PurR-1,b1658,purR,"['Guanine', 'Hypoxanthine']",0,0,4.3448e-05,4.3448e-05,0,0,0,0,1
+Crp-1,b3357,crp,['AcetylN/ACoA'],0.000150544,0.000150544,0,0,0,1,0,0,0
+DhaR/Mlc,b1594,mlc,[],0,0,0,0,0,0,1,0,0
