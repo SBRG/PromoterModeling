@@ -13,7 +13,8 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
     # loading
     if input_parameters['include_Amy_samples']:
         # merge together log_tpm_df files
-        log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
+        #log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
+        log_tpm_df = pd.read_csv('../data/precise_1k/corrected/PRECISE_1K_log_tpm_basal.csv', index_col = 0)
         starve_log_tpm = pd.read_csv('../data/validation_data_sets/stationary_phase/cleaned_log_tpm_qc.csv', index_col = 0)
         to_blank_inds = list(set(log_tpm_df.index) - set(starve_log_tpm.index))
         # need to create zero rows for missing values
@@ -23,11 +24,11 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
         starve_log_tpm = starve_log_tpm.loc[log_tpm_df.index]
         log_tpm_df = pd.concat([starve_log_tpm, log_tpm_df], axis = 1)
     else:
-        log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
+        log_tpm_df = pd.read_csv('../data/precise_1k/corrected/PRECISE_1K_log_tpm_basal.csv', index_col = 0)
     
-    M_df = pd.read_csv('../data/precise_1.0/M.csv', index_col = 0)
-    iM_table = pd.read_csv('../data/precise_1.0/iM_table.csv', index_col = 0)
-    M_df = M_df.rename(columns = {str(index) : row['name'] for index, row in iM_table.iterrows()})
+    M_df = pd.read_csv('../data/precise_1k/corrected/PRECISE_1K_M_basal.csv', index_col = 0)
+    #iM_table = pd.read_csv('../data/precise_1.0/iM_table.csv', index_col = 0)
+    #M_df = M_df.rename(columns = {str(index) : row['name'] for index, row in iM_table.iterrows()})
     
     # filter out samples
     if input_parameters['remove_outliers']:
@@ -43,7 +44,7 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
     
     # creates zerod matrices
     if use_zerod_A_matrix:
-        gene_iMs_df = pd.read_csv('../data/precise_1.0/gene_presence_matrix.csv', index_col = 0)
+        gene_iMs_df = pd.read_csv('../data/precise_1k/corrected/gene_presence_matrix.csv', index_col = 0)
         gene_iMs_df.columns = M_df.columns
         if type(iM_act) == float:
             genes_to_zero = list(gene_iMs_df.index[[val for val in gene_iMs_df[[iM_inh]].T.any()]])
