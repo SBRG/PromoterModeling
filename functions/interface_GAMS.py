@@ -233,27 +233,6 @@ def run_GAMs(flags_df, TF_flags_df, stable_flags, promoter, inhibitor, cell_cons
                 f_name = sample+'.pkl'
             if os.path.exists('../data/cAct_cInh_vals/'+f_name):
                 files_use.append(f_name)
-    if False: # old way
-        if stable_flags['run_on_all']:
-            files = os.listdir('../data/save_for_GAMs/')
-            for f in files:
-                gene_name = file.split('_')[0]
-                use_zerod_A = flags_df.loc[gene_name]['use_zerod_A_matrix']
-                if 'composite' in f: continue
-                if 'zerod'+str(use_zerod_A) not in f: continue
-                if stable_flags['use_greedy'] and 'non_greed' in f: continue
-                if not stable_flags['use_greedy'] and 'non_greed' not in f: continue
-                files_use.append(f)
-        else:
-            for sample in stable_flags['limit_samples']:
-                use_zerod_A = flags_df.loc[sample]['use_zerod_A_matrix']
-                if stable_flags['use_greedy']:
-                    f_name = sample+'_zerod'+str(use_zerod_A)+'_cAct_cInh_vals.csv'
-                else:
-                    f_name = sample+'_non_greed_zerod'+str(use_zerod_A)+'_cAct_cInh_vals.csv'
-                if os.path.exists('../data/save_for_GAMs/'+f_name):
-                    files_use.append(f_name)
-             
                 
     for f in files_use:
         shared_indices = []
