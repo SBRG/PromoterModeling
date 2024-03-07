@@ -75,7 +75,7 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
 
         A_df = zerod_A_df
         M_df = zerod_M
-
+    
     # create data matrix
     act_MAs = []
     inh_MAs = []
@@ -105,7 +105,7 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
     values_df['MA_activator'] = act_MAs
     values_df['MA_inhibitor'] = inh_MAs
     values_df['actual_mRNA_ratio'] = actual_counts
-
+    
     # if set, remove basal conditions from sample to not weight results towards them
     if input_parameters['drop_basal_conds']:
         new_group = list(values_df.index)
@@ -113,4 +113,5 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
             new_group.remove(cond)
         values_df = values_df.loc[new_group]
     
+
     return(values_df)

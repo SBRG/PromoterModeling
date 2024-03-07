@@ -231,8 +231,6 @@ weight_mRNA_match = input_parameters('weight_mRNA_match');
 * create equations
 total_obj .. total_diff =e= weight_balance3 * weight_mRNA_match * match_diff + weight_act_obj1 * act_diff1 + weight_inh_obj1 * inh_diff1;
 
-Display TF_constants;
-
 * equations for cInhibitor and cActivator (cActivator is basically null and unused right now)
 eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= sum(iM, TF_constants(iM, 'cAct_multi_effector_binding') * cAct_mapping(gene, iM) * (
         3 * 10**act_metab_Total(sample, iM) * 10**act_Kd(gene, iM) + 
