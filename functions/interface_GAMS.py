@@ -70,6 +70,7 @@ if False: # PRECISE 1.0 version
         'RbsR' : ['b3753']
     }
 iM_to_b_regulator = {
+    'Purine' : ['b1658'], 
     'Sugar Diacid': ['b0162'],
     'Translation': ['b0145'],
     'OxyR': ['b3961'],
