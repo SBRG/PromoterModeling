@@ -1,0 +1,39 @@
+,TF,gene_name,effectors,cAct_no_effector_form,cAct_multi_effector_binding,cInh_no_effector_form,cInh_multi_effector_binding,cInh_multi_co_effector_binding,kd_inh_metab_up,kd_inh_metab_lo,kd_act_metab_up,kd_act_metab_lo
+Fnr-1,fnr,b1334,[],0,0,0,0,0,0,0,0,0
+FlhDC-2,flhD,b1892,[],0,0,0,0,0,0,0,0,0
+Methionine,metJ,b3938,[],0,0,0,0,0,0,0,0,0
+Pyruvate-2,pyrR,b2381,[],0,0,0,0,0,0,0,0,0
+Lrp,lrp,b0889,[],0,0,0,0,0,0,0,0,0
+Purine,purR,b1658,[],0,0,0,0,0,0,0,0,0
+OxyR,oxyR,b3961,[],0,0,0,0,0,0,0,0,0
+Biotin,birA,b3973,[],0,0,0,0,0,0,0,0,0
+Phosphate-2,phoB,b0399,[],0,0,0,0,0,0,0,0,0
+Glutamine,ntrC,b3868,[],0,0,0,0,0,0,0,0,0
+CpxR,cpxR,b3912,[],0,0,0,0,0,0,0,0,0
+Crp-2,crp,b3357,[],0,0,0,0,0,0,0,0,0
+YcjW,ycjW,b1320,[],0,0,0,0,0,0,0,0,0
+Lysine/T2SS,argP,b2916,[],0,0,0,0,0,0,0,0,0
+Cysteine-1,cysB,b1275,[],0,0,0,0,0,0,0,0,0
+Fur-2,fur,b0683,[],0,0,0,0,0,0,0,0,0
+Maltose,malT,b3418,[],0,0,0,0,0,0,0,0,0
+Fnr-2,fnr,b1334,[],0,0,0,0,0,0,0,0,0
+Nickel/Cobalt,rcnR,b2105,[],0,0,0,0,0,0,0,0,0
+Fur-1,fur,b0683,[],0,0,0,0,0,0,0,0,0
+ArcA,arcA,b4401,[],0,0,0,0,0,0,0,0,0
+Fatty Acid,fadR,b1187,[],0,0,0,0,0,0,0,0,0
+Crp-1,crp,b3357,[],0,0,0,0,0,0,0,0,0
+Sulfoquinovose,csqR,b3884,[],0,0,0,0,0,0,0,0,0
+NRZ,ompR,b3405,[],0,0,0,0,0,0,0,0,0
+Phosphate-1,phoB,b0399,[],0,0,0,0,0,0,0,0,0
+SoxS,soxS,b4062,[],0,0,0,0,0,0,0,0,0
+Nitrogen,nac,b1988,[],0,0,0,0,0,0,0,0,0
+Capsule,rcsA,b1951,[],0,0,0,0,0,0,0,0,0
+Sugar Diacid,cdaR,b0162,[],0,0,0,0,0,0,0,0,0
+Cra,cra,b0080,[],0,0,0,0,0,0,0,0,0
+Pyruvate-1,btsR,b2125,[],0,0,0,0,0,0,0,0,0
+Potassium,kdpE,b0694,[],0,0,0,0,0,0,0,0,0
+Arginine,argR,b3237,[],0,0,0,0,0,0,0,0,0
+DNA Damage,lexA,b4043,[],0,0,0,0,0,0,0,0,0
+Magnesium,phoP,b1130,[],0,0,0,0,0,0,0,0,0
+BasR,basR,b4113,[],0,0,0,0,0,0,0,0,0
+EvgA,evgA,b2369,[],0,0,0,0,0,0,0,0,0
