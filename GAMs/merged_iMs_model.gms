@@ -13,10 +13,10 @@ Set
          effectors,
          cAct_no_effector_form, 
          cAct_multi_effector_binding,
-         cInh_multi_co_effector_binding,
+         cAct_multi_co_effector_binding,
          cInh_no_effector_form, 
          cInh_multi_effector_binding, 
-         cInh_multi_co_effector_binding
+         cInh_multi_co_effector_binding,
          kd_inh_metab_lo,
          kd_inh_metab_up,
          kd_act_metab_lo,
