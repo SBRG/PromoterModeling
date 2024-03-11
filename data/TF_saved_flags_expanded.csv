@@ -1,0 +1,39 @@
+,TF,gene_name,effectors,cAct_no_effector_form,cAct_multi_effector_binding,cAct_multi_co_effector_binding,cInh_no_effector_form,cInh_multi_effector_binding,cInh_multi_co_effector_binding,kd_inh_metab_up,kd_inh_metab_lo,kd_act_metab_up,kd_act_metab_lo
+ArcA,arcA,b4401,['revisit],1,0,0,1,0,0,0,0,0,0
+Lysine/T2SS,argP,b2916,"['Aginine', 'Leucine/Isoleucine']",0,0,1,0,0,1,0,0,0,0
+Arginine,argR,b3237,['Arginine'],0,1,0,0,1,0,0,0,0,0
+BasR,basR,b4113,['Phosphate'],0,1,0,0,1,0,0,0,0,0
+Biotin,birA,b3973,['revisit],1,0,0,1,0,0,0,0,0,0
+Pyruvate-1,btsR,b2125,['Phosphate'],0,1,0,0,1,0,0,0,0,0
+Sugar Diacid,cdaR,b0162,[],1,0,0,1,0,0,0,0,0,0
+CpxR,cpxR,b3912,['Phosphate'],0,1,0,0,1,0,0,0,0,0
+Cra,cra,b0080,"['FructoseN/A1,6N/ABisphosphate']",0,1,0,0,1,0,0,0,0,0
+Crp-1,crp,b3357,['AcetylN/ACoA'],0,1,0,0,1,0,0,0,0,0
+Crp-2,crp,b3357,['AcetylN/ACoA'],0,1,0,0,1,0,0,0,0,0
+Sulfoquinovose,csqR,b3884,['6-sulfo-D-quinovose'],0,1,0,0,1,0,0,0,0,0
+Cysteine-1,cysB,b1275,['Serine'],0,1,0,0,1,0,0,0,0,0
+EvgA,evgA,b2369,['Phosphate'],0,1,0,0,1,0,0,0,0,0
+Fatty Acid,fadR,b1187,['AcetylN/ACoA'],0,1,0,0,1,0,0,0,0,0
+FlhDC-2,flhC,b1892,[],1,0,0,1,0,0,0,0,0,0
+Fnr-1,fnr,b1334,['Fe-S Cluster'],0,1,0,0,1,0,0,0,0,0
+Fnr-2,fnr,b1334,['Fe-S Cluster'],0,1,0,0,1,0,0,0,0,0
+Fur-1,fur,b0683,['Fe-S Cluster'],0,1,0,0,1,0,0,0,0,0
+Fur-2,fur,b0683,['Fe-S Cluster'],0,1,0,0,1,0,0,0,0,0
+Potassium,kdpE,b0694,['Potassium'],0,1,0,0,1,0,0,0,0,0
+DNA Damage,lexA,b4043,[],1,0,0,1,0,0,0,0,0,0
+Lrp,lrp,b0889,['Leucine/Isoleucine'],0,1,0,0,1,0,0,0,0,0
+Maltose,malT,b3418,['Maltose'],0,1,0,0,1,0,0,0,0,0
+Methionine,metJ,b3938,['Fe-S Cluster'],0,1,0,0,1,0,0,0,0,0
+Nitrogen,nac,b1988,[],1,0,0,1,0,0,0,0,0,0
+Glutamine,ntrC,b3868,['Phosphate'],0,1,0,0,1,0,0,0,0,0
+NRZ,ompR,b3405,['Phosphate'],0,1,0,0,1,0,0,0,0,0
+OxyR,oxyR,b3961,['revisit],1,0,0,1,0,0,0,0,0,0
+Phosphate-1,phoB,b0399,['Phosphate'],0,1,0,0,1,0,0,0,0,0
+Phosphate-2,phoB,b0399,['Phosphate'],0,1,0,0,1,0,0,0,0,0
+Magnesium,phoP,b1130,['Phosphate'],0,1,0,0,1,0,0,0,0,0
+Purine,purR,b1658,"['Guanine', 'Hypoxanthine]",0,0,1,0,0,1,0,0,0,0
+Pyruvate-2,pyrR,b2381,['Phosphoenolpyruvate'],0,1,0,0,1,0,0,0,0,0
+Nickel/Cobalt,rcnR,b2105,['Nickel'],0,1,0,0,1,0,0,0,0,0
+Capsule,rcsA,b1951,[],1,0,0,1,0,0,0,0,0,0
+SoxS,soxS,b4062,[],1,0,0,1,0,0,0,0,0,0
+YcjW,ycjW,b1320,[],1,0,0,1,0,0,0,0,0,0
