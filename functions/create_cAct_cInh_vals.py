@@ -8,15 +8,18 @@ sys.path.insert(0, '../functions/')
 import promoter_solving_core as ps
 import GA_core as ga
 import matplotlib.pyplot as plt
+import dill as pickle
 
-
-def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, lambdas_df, flags):
+def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
     return_figs = []
     
     # now setting RNAP concentration specific to sample
     RNAP_conc_df = pd.read_csv('../data/RNAP_conc.csv', index_col = 0)
-    gene_lambda_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
-    
+    #gene_lambda_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
+    f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'rb')
+    gene_lambda_df = pickle.load(f)
+    f.close()
+
     # first let's handle edge cases
     if type(flags['act_iM']) == float:
         # there is no need to run GA, solve for cInh with cAct = 0 and save those results

@@ -1,6 +1,6 @@
 # import statements
 import os
-import pickle
+import dill as pickle
 import math
 import numpy as np
 import pandas as pd
@@ -72,7 +72,10 @@ def create_data_for_gene(flags):
     # create lambda dfs for various calculations --- very slow
     ############################################################
     if not flags['run_basal_calculations'] and os.path.exists('../data/lambda_dfs/'+flags['central_gene']+'.pkl'):
-        lambdas_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
+        pass # this used to be passed to other functions, but is now just loaded directly 
+        #f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'rb')
+        #lambdas_df = pickle.load(f)
+        #f.close()
     else:
         # load in
         if os.path.exists('../data/lambdas_df.pkl'):
@@ -93,9 +96,19 @@ def create_data_for_gene(flags):
             
             # create lambdas_df and put it in dataframe
             lambda_df = po.create_lambdas(eq_str, gene_grid_constants)
-            new_col.append(lambda_df[['equation', 'order']])
+            
+            # add lambda func
+            for parameter in lambda_df.index:
+                lambda_df.loc[parameter,'lambda'] = lambdify([lambda_df.loc[parameter,'order']],
+                                                    lambda_df.loc[parameter,'equation'])
+            
+            new_col.append(lambda_df[['equation', 'order', 'lambda']])
         lambdas_df[flags['central_gene']] = new_col
-        lambdas_df.to_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
+        
+        # save it
+        f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'wb')
+        pickle.dump(lambdas_df, f)
+        f.close()
     
     
     ############################################################
@@ -230,7 +243,7 @@ def create_data_for_gene(flags):
     greedy_path = '../data/cAct_cInh_vals/'+flags['central_gene']+'_greedy.pkl'
     norm_path = '../data/cAct_cInh_vals/'+flags['central_gene']+'.pkl'
     if flags['force_rerun']:
-        return_figs, greedy_cAct_cInh_df, cAct_cInh_df = cv.create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, lambdas_df, flags)
+        return_figs, greedy_cAct_cInh_df, cAct_cInh_df = cv.create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags)
         if flags['run_greedy']:
             pickle_out = open(greedy_path, 'wb')
             pickle.dump(greedy_cAct_cInh_df, pickle_out)

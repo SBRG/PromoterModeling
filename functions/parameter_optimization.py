@@ -78,7 +78,7 @@ def evaluate_lambda(
 
     # Create a tuple in the correct order to pass into the lambda function
     values_tuple = tuple([values[p] for p in lambda_df.loc[solve,'order']])
-    
+
     # Evaluate the lambda function
     return((lambda_df.loc[solve,'lambda'](values_tuple))[0])
 
@@ -99,19 +99,19 @@ def create_shared_lambda_df(equation_string, grid):
     RNAP = our_grid['RNAP']
 
 def mRNA_cInhibitor_to_cActivator(mRNA, cInhibitor, KdRNAPCrp, lambda_df_input = None):
-    if not lambda_df_input:
+    if type(lambda_df_input) == type(None):
         lambda_df_input = lambda_df
     cActivator = evaluate_lambda('cActivator', lambda_df_input, {'cInhibitor': cInhibitor, 'mRNARatio' : mRNA, 'KdRNAPCrp' : KdRNAPCrp})
     return(cActivator)
 
 def mRNA_cActivator_to_cInhibitor(mRNA, cActivator, KdRNAPCrp, lambda_df_input = None):
-    if not lambda_df_input:
+    if type(lambda_df_input) == type(None):
         lambda_df_input = lambda_df
     cInhibitor = evaluate_lambda('cInhibitor', lambda_df_input, {'cActivator': cActivator, 'mRNARatio' : mRNA, 'KdRNAPCrp' : KdRNAPCrp})
     return(cInhibitor)
 
 def cActivator_cInhibitor_to_mRNA(cActivator, cInhibitor, KdRNAPCrp, lambda_df_input = None):
-    if not lambda_df_input:
+    if type(lambda_df_input) == type(None):
         lambda_df_input = lambda_df
     mRNA = evaluate_lambda('mRNARatio', lambda_df_input, {'cActivator': cActivator, 'cInhibitor' : cInhibitor, 'KdRNAPCrp' : KdRNAPCrp})
     return(mRNA)

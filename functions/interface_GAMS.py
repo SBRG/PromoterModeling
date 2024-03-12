@@ -772,16 +772,14 @@ def read_multi_GAMs(GAMs_run_dir):
     # activator read in
     temp = pd.read_csv(GAMs_run_dir+'/output_files/GAMS_cAct.csv', index_col = 0)
     GAMS_cAct = pd.DataFrame(index = list(set(temp.index)), columns = list(set(temp.gene)))
-    for index in GAMS_cAct.index:
-        for col in GAMS_cAct.columns:
-            GAMS_cAct.at[index, col] = temp.loc[temp.gene == col].loc[index].Val
+    for col in GAMS_cAct.columns:
+        GAMS_cAct[col] = temp[temp.gene == col].loc[GAMS_cAct.index]['Val']
     
     # inhibitor read in
     temp = pd.read_csv(GAMs_run_dir+'/output_files/GAMS_cInh.csv', index_col = 0)
     GAMS_cInh = pd.DataFrame(index = list(set(temp.index)), columns = list(set(temp.gene)))
-    for index in GAMS_cInh.index:
-        for col in GAMS_cInh.columns:
-            GAMS_cInh.at[index, col] = temp.loc[temp.gene == col].loc[index].Val
+    for col in GAMS_cInh.columns:
+        GAMS_cInh[col] = temp[temp.gene == col].loc[GAMS_cInh.index]['Val']
             
     # read in activator and inhibitor metabolite Kd's
     act_kd_metab_df = pd.read_csv(GAMs_run_dir+'/output_files/act_Kd_metab.csv', index_col = 0)
