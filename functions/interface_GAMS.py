@@ -536,6 +536,19 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
     act_mapping_df.to_csv(GAMs_run_dir+'/input_files/cAct_mapping.csv')
     inh_mapping_df.to_csv(GAMs_run_dir+'/input_files/cInh_mapping.csv')
     
+    # if the legnth of iMs is 1, we need to add a comma to get it to run here
+    if len(all_iMs) == 1:
+        with open(GAMs_run_dir+'/input_files/cAct_mapping.csv', 'r') as f:
+            lines = f.readlines()
+        lines[0] = lines[0].rstrip('\n')+','+'\n'
+        with open(GAMs_run_dir+'/input_files/cAct_mapping.csv', 'w') as f:
+            f.writelines(lines)
+        with open(GAMs_run_dir+'/input_files/cInh_mapping.csv', 'r') as f:
+            lines = f.readlines()
+        lines[0] = lines[0].rstrip('\n')+','+'\n'
+        with open(GAMs_run_dir+'/input_files/cInh_mapping.csv', 'w') as f:
+            f.writelines(lines)
+    
     # need to save off dummy dimensional dataframe
     all_samples = list(set(act_df.columns).union(inh_df.columns))
     all_samples.remove('iM')
