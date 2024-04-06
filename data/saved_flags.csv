@@ -29,3 +29,11 @@ b2313,TRUE,TRUE,TRUE,,Purine,['starve_series__t26_growth2'],7,FALSE,basal,10,TRU
 b2312,TRUE,TRUE,TRUE,,Purine,['starve_series__t26_growth2'],7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
 b2500,TRUE,TRUE,TRUE,,Purine,['starve_series__t26_growth2'],7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
 b1131,FALSE,TRUE,TRUE,,Purine,['starve_series__t26_growth2'],7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+b2253,FALSE,TRUE,TRUE,BasR,,"['p1k_00365', 'p1k_00366']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b2254,FALSE,TRUE,TRUE,BasR,,"['p1k_00365', 'p1k_00366']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b2255,TRUE,TRUE,TRUE,BasR,,"['p1k_00365', 'p1k_00366']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b2256,TRUE,TRUE,TRUE,BasR,,"['p1k_00365', 'p1k_00366']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b2257,TRUE,TRUE,TRUE,BasR,,"['p1k_00365', 'p1k_00366']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b4114,TRUE,TRUE,TRUE,BasR,,"['p1k_00365', 'p1k_00366']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
+b4544,TRUE,TRUE,TRUE,BasR,,"['p1k_00365', 'p1k_00366']",7,FALSE,basal,10,TRUE,0.3,FALSE,"[-1, 3]",0.2,0.2,TRUE,0.2,"[-4, 2]","[-4, 2]",TRUE,toss,42,100,100,100,0.6,0.6,0.4,0.1,100,FALSE,5,30,100
