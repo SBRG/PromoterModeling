@@ -19,7 +19,7 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
     f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'rb')
     gene_lambda_df = pickle.load(f)
     f.close()
-
+    
     # first let's handle edge cases
     if type(flags['act_iM']) == float:
         # there is no need to run GA, solve for cInh with cAct = 0 and save those results

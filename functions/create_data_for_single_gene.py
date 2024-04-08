@@ -85,12 +85,13 @@ def create_data_for_gene(flags):
         RNAP_conc_df = pd.read_csv('../data/RNAP_conc.csv', index_col = 0)
         
         # calculate gene specific grid constants
-        num_grid_steps = 3
+        num_grid_steps = 3 
         if 'grid_steps' in flags:
             num_grid_steps = flags['grid_steps']
         gene_grid_constants = bmc.basal_values(eq_str, flags, num_steps = num_grid_steps)
         new_col = []
         for sample in ratios_df.index:
+            print(sample)
             # adjust constants
             gene_grid_constants.update({'RNAP' : RNAP_conc_df.loc[sample]['RNAP']})
             
@@ -109,7 +110,9 @@ def create_data_for_gene(flags):
         f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'wb')
         pickle.dump(lambdas_df, f)
         f.close()
-    
+    # parse down lambdas_df and ratios_df to match
+    #samples = set(lambdas_df.index).intersection(ratios_df.index)
+    #ratios_df = ratios_df.loc[samples]
     
     ############################################################
     # pick KdRNAPCrp value, limit cActivator and cInhibitor based on it
