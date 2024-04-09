@@ -20,7 +20,11 @@ Set
          kd_inh_metab_lo,
          kd_inh_metab_up,
          kd_act_metab_lo,
-         kd_act_metab_up /
+         kd_act_metab_up,
+         act_TF_conc_lo,
+         act_TF_conc_up,
+         inh_TF_conc_lo,
+         inh_TF_conc_up /
    gene_constant 'grid basal constants'
        / KdRNAP,
          KdRNAPCrp,
@@ -177,7 +181,10 @@ act_Kd_metab.lo(iM) = log10(TF_constants(iM, 'kd_act_metab_lo'));
 act_Kd_metab.up(iM) = log10(TF_constants(iM, 'kd_act_metab_up'));
 inh_Kd_metab.lo(iM) = log10(TF_constants(iM, 'kd_inh_metab_lo'));
 inh_Kd_metab.up(iM) = log10(TF_constants(iM, 'kd_inh_metab_up'));
-
+act_TF_conc.lo(sample, iM) = log10(input_parameters('act_TF_conc_lo'));
+act_TF_conc.up(sample, iM) = log10(input_parameters('act_TF_conc_up'));
+inh_TF_conc.lo(sample, iM) = log10(input_parameters('inh_TF_conc_lo'));
+inh_TF_conc.up(sample, iM) = log10(input_parameters('inh_TF_conc_up'));
 
 * initialize matrices
 act_Kd.l(gene, iM) = uniformInt(-10, -3);
