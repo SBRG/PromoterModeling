@@ -91,7 +91,6 @@ def create_data_for_gene(flags):
         gene_grid_constants = bmc.basal_values(eq_str, flags, num_steps = num_grid_steps)
         new_col = []
         for sample in ratios_df.index:
-            print(sample)
             # adjust constants
             gene_grid_constants.update({'RNAP' : RNAP_conc_df.loc[sample]['RNAP']})
             
