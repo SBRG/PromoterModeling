@@ -38,6 +38,10 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
         iM_table = pd.read_csv('../data/precise_1k/iM_table.csv', index_col = 0)
         k_to_iM = {index : name for index, name in zip(iM_table.index, iM_table.name)}
         M_df = pd.read_csv('../data/precise_1k/M.csv', index_col = 0).rename(columns = {str(k) : v for k, v in k_to_iM.items()})
+    overlap = list(set(M_df.index).intersection(log_tpm_df.index))
+    M_df = M_df.loc[overlap]
+    log_tpm_df = log_tpm_df.loc[overlap]
+        
 
     #iM_table = pd.read_csv('../data/precise_1.0/iM_table.csv', index_col = 0)
     #M_df = M_df.rename(columns = {str(index) : row['name'] for index, row in iM_table.iterrows()})
