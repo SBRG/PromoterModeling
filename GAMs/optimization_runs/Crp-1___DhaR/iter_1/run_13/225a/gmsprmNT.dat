@@ -1,0 +1,15 @@
+Input=C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\optimization_runs\Crp-1___DhaR\iter_1\run_13\combined_model.gms
+Output=C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\optimization_runs\Crp-1___DhaR\iter_1\run_13\combined_model.lst
+Action=R
+SubSys=C:\GAMS\win64\28.2\gmscmpnt.txt
+ScrDir=C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\optimization_runs\Crp-1___DhaR\iter_1\run_13\225a\
+SysDir=C:\GAMS\win64\28.2\
+CurDir=C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\optimization_runs\Crp-1___DhaR\iter_1\run_13\
+WorkDir=C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\optimization_runs\Crp-1___DhaR\iter_1\run_13\
+PutDir=C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\optimization_runs\Crp-1___DhaR\iter_1\run_13\
+GridDir=C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\optimization_runs\Crp-1___DhaR\iter_1\run_13\225a\
+ScriptNext=225a\gamsnext.cmd
+ScriptFrst="@echo off"
+AppendOut=1
+LibIncDir=C:\GAMS\win64\28.2\inclib\
+SysIncDir=C:\GAMS\win64\28.2\
