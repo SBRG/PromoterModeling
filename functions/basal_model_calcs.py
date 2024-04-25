@@ -31,11 +31,17 @@ def basal_values(eq_str, flags, num_steps = 3):
     parameter_equation = sympify('Eq((KeqOpening*kEscape*promoterConcVal)/((KdRNAP/RNAP+1+KeqOpening+KdRNAP/RNAP*TF/k_d_TF)*(u+kDeg)),mRNA)')
 
     # Load in the precise data for gene expression
-    # NOTE: In the basal model I'm building, I am using the Precise1k data, but in this cell I will try to use the Precise1.0
-    # loading
-    if flags['include_Amy_samples']:
+    
+    
+    
+     # loading
+    if input_parameters['include_Amy_samples']:
         # merge together log_tpm_df files
-        log_tpm_df = pd.read_csv('../data/precise_1k/corrected/PRECISE_1K_log_tpm_basal.csv', index_col = 0)
+        #log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
+        if input_parameters['use_Gabes_corrected_p1k']:
+            log_tpm_df = pd.read_csv('../data/precise_1k/corrected/PRECISE_1K_log_tpm_basal.csv', index_col = 0)
+        else:
+            log_tpm_df = pd.read_csv('../data/precise_1k/log_tpm.csv', index_col = 0)
         starve_log_tpm = pd.read_csv('../data/validation_data_sets/stationary_phase/cleaned_log_tpm_qc.csv', index_col = 0)
         to_blank_inds = list(set(log_tpm_df.index) - set(starve_log_tpm.index))
         # need to create zero rows for missing values
@@ -45,7 +51,10 @@ def basal_values(eq_str, flags, num_steps = 3):
         starve_log_tpm = starve_log_tpm.loc[log_tpm_df.index]
         log_tpm_df = pd.concat([starve_log_tpm, log_tpm_df], axis = 1)
     else:
-        log_tpm_df = pd.read_csv('../data/precise_1k/corrected/PRECISE_1K_log_tpm_basal.csv', index_col = 0)
+        if input_parameters['use_Gabes_corrected_p1k']:
+            log_tpm_df = pd.read_csv('../data/precise_1k/corrected/PRECISE_1K_log_tpm_basal.csv', index_col = 0)
+        else:
+            log_tpm_df = pd.read_csv('../data/precise_1k/log_tpm.csv', index_col = 0)
     precise_data = log_tpm_df
         
     gene_exp = [2**precise_data.loc[flags['central_gene'], flags['basal_conditions']].mean(axis = 0)]

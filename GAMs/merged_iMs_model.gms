@@ -206,10 +206,12 @@ Variables
 
 * calculated sub variables
 Variables
+    mRNA_calc(sample, gene)
     cAct_calc(sample, gene)
     cInh_calc(sample, gene);
 
 Equations
+    eq_mRNA_calc(sample, gene)
     eq_cAct_calc(sample, gene)
     eq_cInh_calc(sample, gene);
 
@@ -314,8 +316,7 @@ sum(iM, TF_constants(iM, 'cInh_multi_co_effector_binding') * cInh_mapping(gene, 
 )
 ;
 
-
-
+eq_mRNA_calc(sample, gene) .. mRNA_calc(sample, gene) =e= ((cAct_calc(sample, gene)*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + sample_constants('RNAP', sample) +  basal_constants('KeqOpening', gene)*sample_constants('RNAP', sample))) / (((1 + cAct_calc(sample, gene) + cInh_calc(sample, gene))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + cAct_calc(sample, gene)*basal_constants('KdRNAP', gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample)));
 
 * objective equations
 act_obj1 .. act_diff1 =e= sum((gene, sample), (abs((cAct_calc(sample, gene) - sum(iM, cAct(gene, iM, sample)))) / max_cAct(gene) )**2);
@@ -338,6 +339,9 @@ Solve ElementWiseOptimization using dnlp minimizing total_diff;
 
 
 * Export results
+execute_unload "./output_GDX/actual_mRNA.gdx" mRNA_calc.L mRNA_calc.M
+execute 'gdxdump ./output_GDX/actual_mRNA.gdx noData > ./output_files/actual_mRNA.csv symb=actual_mRNA format=csv';
+
 execute_unload "./output_GDX/act_metab_Total.gdx" act_metab_Total.L act_metab_Total.M
 execute 'gdxdump ./output_GDX/act_metab_Total.gdx noData > ./output_files/act_metab_Total.csv symb=act_metab_Total format=csv';
 
