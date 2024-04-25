@@ -35,10 +35,10 @@ def basal_values(eq_str, flags, num_steps = 3):
     
     
      # loading
-    if input_parameters['include_Amy_samples']:
+    if flags['include_Amy_samples']:
         # merge together log_tpm_df files
         #log_tpm_df = pd.read_csv('../data/precise_1.0/log_tpm.csv', index_col = 0)
-        if input_parameters['use_Gabes_corrected_p1k']:
+        if flags['use_Gabes_corrected_p1k']:
             log_tpm_df = pd.read_csv('../data/precise_1k/corrected/PRECISE_1K_log_tpm_basal.csv', index_col = 0)
         else:
             log_tpm_df = pd.read_csv('../data/precise_1k/log_tpm.csv', index_col = 0)
@@ -51,7 +51,7 @@ def basal_values(eq_str, flags, num_steps = 3):
         starve_log_tpm = starve_log_tpm.loc[log_tpm_df.index]
         log_tpm_df = pd.concat([starve_log_tpm, log_tpm_df], axis = 1)
     else:
-        if input_parameters['use_Gabes_corrected_p1k']:
+        if flags['use_Gabes_corrected_p1k']:
             log_tpm_df = pd.read_csv('../data/precise_1k/corrected/PRECISE_1K_log_tpm_basal.csv', index_col = 0)
         else:
             log_tpm_df = pd.read_csv('../data/precise_1k/log_tpm.csv', index_col = 0)
