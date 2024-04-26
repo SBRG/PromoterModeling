@@ -5,6 +5,7 @@ import math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import shutil
 from sympy import *
 
 import sys
@@ -288,7 +289,12 @@ def create_data_for_gene(flags):
     # potentially save off results
     if flags['save_results']:
         # let's create our gene specific folder within runs
-        save_folder = flags['save_results_folder']+'/'+flags['central_gene']
+        if flags['save_gene_specific_results']:
+            save_folder = '../data/save_gene_results/'+flags['central_gene']
+            if os.path.exists(save_folder):
+                shutil.rmtree(save_folder)
+        else:
+            save_folder = flags['save_results_folder']+'/'+flags['central_gene']
         os.mkdir(save_folder)
         
         # save off constants used
