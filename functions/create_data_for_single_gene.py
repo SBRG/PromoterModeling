@@ -115,9 +115,6 @@ def create_data_for_gene(flags):
         f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'wb')
         pickle.dump(lambdas_df, f)
         f.close()
-    # parse down lambdas_df and ratios_df to match
-    #samples = set(lambdas_df.index).intersection(ratios_df.index)
-    #ratios_df = ratios_df.loc[samples]
     
     ############################################################
     # pick KdRNAPCrp value, limit cActivator and cInhibitor based on it
