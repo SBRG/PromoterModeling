@@ -110,7 +110,6 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
     # If both exist, need to get GA going    
     cAct_range = {'cActivator': flags['cActivator']} # Use a log10 range
     cInh_range = {'cInhibitor': flags['cInhibitor']} # Use a log10 range and convert back after creating grid
-    print('testing on '+flags['central_gene'])
     for i, condition in enumerate(grid.index):
         lambda_df = gene_lambda_df.loc[condition].values[0]
         lambda_df['lambda'] = [lambdify([lambda_df.loc[index,'order']], lambda_df.loc[index,'equation']) for index in lambda_df.index]
