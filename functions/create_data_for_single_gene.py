@@ -83,7 +83,6 @@ def create_data_for_gene(flags):
         #lambdas_df = pickle.load(f)
         #f.close()
     else:
-        fawefe= ewfwefw
         # load in
         if os.path.exists('../data/lambdas_df.pkl'):
             lambdas_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
@@ -119,14 +118,13 @@ def create_data_for_gene(flags):
     # parse down lambdas_df and ratios_df to match
     #samples = set(lambdas_df.index).intersection(ratios_df.index)
     #ratios_df = ratios_df.loc[samples]
-    print('farts')
     
     ############################################################
     # pick KdRNAPCrp value, limit cActivator and cInhibitor based on it
     ############################################################
     # load in calculator
     gene_grid_name = '../data/gene_grid_constants/'+flags['central_gene']+'.pkl'
-    if flags['force_rerun'] or not os.path.exists(gene_grid_name):  
+    if flags['only_check_KdRNAPCrp'] or flags['force_rerun'] or not os.path.exists(gene_grid_name):  
         # basal model calculations
         num_grid_steps = 3
         if 'grid_steps' in flags:
@@ -151,10 +149,7 @@ def create_data_for_gene(flags):
         # sanity check plot
         
         # loading / setup
-        #po.create_shared_lambda_df(eq_str, grid_constants)
-        f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'rb')
-        lambdas_df = pickle.load(f)
-        f.close()
+        po.create_shared_lambda_df(eq_str, grid_constants)
 
         # if you get weird results here, look at egulonML/parameter_optimization/0_framework.ipynb
         # it does the same thing as the function with plots along the way
@@ -164,14 +159,8 @@ def create_data_for_gene(flags):
         # however, it is a sanity check to see if these values are near-correct
         rat_vals = np.linspace(min(ratios_df['actual_mRNA_ratio'].values.flatten()), max(ratios_df['actual_mRNA_ratio'].values.flatten()), 1000)
         # calculate cInh and cAct
-        cInh_vals = []
-        cAct_vals = []
-        for index, row in ratios_df.iterrows():
-            print(index)
-            print(row)
-            fa = fo
-        #cInh_vals = [po.mRNA_cActivator_to_cInhibitor(rat_val, flags['base_cActivator_val'], grid_constants['KdRNAPCrp'], lambda_df_input = lambda_df) for rat_val in rat_vals]
-        #cAct_vals = [po.mRNA_cInhibitor_to_cActivator(rat_val, flags['base_cInhibitor_val'], grid_constants['KdRNAPCrp'], lambda_df_input = lambda_df) for rat_val in rat_vals]
+        cInh_vals = [po.mRNA_cActivator_to_cInhibitor(rat_val, flags['base_cActivator_val'], grid_constants['KdRNAPCrp']) for rat_val in rat_vals]
+        cAct_vals = [po.mRNA_cInhibitor_to_cActivator(rat_val, flags['base_cInhibitor_val'], grid_constants['KdRNAPCrp']) for rat_val in rat_vals]
 
         fig, axs = plt.subplots(1, 2, figsize = (8, 3))
         ax1 = axs[0]
@@ -259,7 +248,6 @@ def create_data_for_gene(flags):
             pickle.dump(ratios_df, pickle_out)
             pickle_out.close()
         return(gene_figs)
-   
     
     ############################################################
     # determine cActivator and cInhibior values, and greedy
