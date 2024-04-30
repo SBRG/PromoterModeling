@@ -254,6 +254,7 @@ def create_data_for_gene(flags):
     ############################################################
     greedy_path = '../data/cAct_cInh_vals/'+flags['central_gene']+'_greedy.pkl'
     norm_path = '../data/cAct_cInh_vals/'+flags['central_gene']+'.pkl'
+    return_figs = []
     if flags['force_rerun']:
         return_figs, greedy_cAct_cInh_df, cAct_cInh_df = cv.create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags)
         if flags['run_greedy']:
@@ -298,36 +299,37 @@ def create_data_for_gene(flags):
     # potentially save off results
     if flags['save_results']:
         # let's create our gene specific folder within runs
+        exists = False
         if flags['save_gene_specific_results']:
             save_folder = '../data/saved_gene_results/'+flags['central_gene']
-            if os.path.exists(save_folder):
-                shutil.rmtree(save_folder)
         else:
             save_folder = flags['save_results_folder']+'/'+flags['central_gene']
-        os.mkdir(save_folder)
-        
-        # save off constants used
-        pickle_out = open(save_folder+'/constants.pkl', 'wb')
-        pickle.dump(grid_constants, pickle_out)
-        pickle_out.close()
-        
-        # let's save off the relevant things in pickle
-        pickle_out = open(save_folder+'/figures.pkl', 'wb')
-        pickle.dump(gene_figs, pickle_out)
-        pickle_out.close()
-        
-        pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
-        pickle.dump(ratios_df, pickle_out)
-        pickle_out.close()
-        
-        pickle_out = open(save_folder+'/cAct_cInh.pkl', 'wb')
-        pickle.dump(cAct_cInh_df, pickle_out)
-        pickle_out.close()
-        
-        if flags['run_greedy']:
-            pickle_out = open(save_folder+'/greedy_cAct_cInh.pkl', 'wb')
-            pickle.dump(greedy_cAct_cInh_df, pickle_out)
+            
+        # don't overwrite zzz - probably shouldn't set like this, but I won't use this much
+        if not os.path.exists(save_folder):
+            os.mkdir(save_folder)
+            # save off constants used
+            pickle_out = open(save_folder+'/constants.pkl', 'wb')
+            pickle.dump(grid_constants, pickle_out)
             pickle_out.close()
+
+            # let's save off the relevant things in pickle
+            pickle_out = open(save_folder+'/figures.pkl', 'wb')
+            pickle.dump(gene_figs, pickle_out)
+            pickle_out.close()
+
+            pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
+            pickle.dump(ratios_df, pickle_out)
+            pickle_out.close()
+
+            pickle_out = open(save_folder+'/cAct_cInh.pkl', 'wb')
+            pickle.dump(cAct_cInh_df, pickle_out)
+            pickle_out.close()
+
+            if flags['run_greedy']:
+                pickle_out = open(save_folder+'/greedy_cAct_cInh.pkl', 'wb')
+                pickle.dump(greedy_cAct_cInh_df, pickle_out)
+                pickle_out.close()
         
 
     return(gene_figs)
