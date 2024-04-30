@@ -54,8 +54,13 @@ def create_data_for_gene(flags):
     if flags['only_create_ratios']:
         # potentially save off results
         if flags['save_results']:
-            # let's create our gene specific folder within runs
-            save_folder = flags['save_results_folder']+'/'+flags['central_gene']
+            # make save directory
+            if flags['save_gene_specific_results']:
+                save_folder = '../data/saved_gene_results/'+flags['central_gene']
+                if os.path.exists(save_folder):
+                    shutil.rmtree(save_folder)
+            else:
+                save_folder = flags['save_results_folder']+'/'+flags['central_gene']
             os.mkdir(save_folder)
 
             # let's save off the relevant things in pickle
@@ -72,12 +77,17 @@ def create_data_for_gene(flags):
     ############################################################
     # create lambda dfs for various calculations --- very slow
     ############################################################
+    print('hi')
+    print(flags['run_basal_calculations'])
+    print(os.path.exists('../data/lambda_dfs/'+flags['central_gene']+'.pkl'))
     if not flags['run_basal_calculations'] and os.path.exists('../data/lambda_dfs/'+flags['central_gene']+'.pkl'):
+        print('penis')
         pass # this used to be passed to other functions, but is now just loaded directly 
         #f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'rb')
         #lambdas_df = pickle.load(f)
         #f.close()
     else:
+        fawefe= ewfwefw
         # load in
         if os.path.exists('../data/lambdas_df.pkl'):
             lambdas_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
@@ -113,6 +123,7 @@ def create_data_for_gene(flags):
     # parse down lambdas_df and ratios_df to match
     #samples = set(lambdas_df.index).intersection(ratios_df.index)
     #ratios_df = ratios_df.loc[samples]
+    print('farts')
     
     ############################################################
     # pick KdRNAPCrp value, limit cActivator and cInhibitor based on it
@@ -144,7 +155,10 @@ def create_data_for_gene(flags):
         # sanity check plot
         
         # loading / setup
-        po.create_shared_lambda_df(eq_str, grid_constants)
+        #po.create_shared_lambda_df(eq_str, grid_constants)
+        f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'rb')
+        lambdas_df = pickle.load(f)
+        f.close()
 
         # if you get weird results here, look at egulonML/parameter_optimization/0_framework.ipynb
         # it does the same thing as the function with plots along the way
@@ -153,9 +167,15 @@ def create_data_for_gene(flags):
 
         # however, it is a sanity check to see if these values are near-correct
         rat_vals = np.linspace(min(ratios_df['actual_mRNA_ratio'].values.flatten()), max(ratios_df['actual_mRNA_ratio'].values.flatten()), 1000)
-
-        cInh_vals = [po.mRNA_cActivator_to_cInhibitor(rat_val, flags['base_cActivator_val'], grid_constants['KdRNAPCrp']) for rat_val in rat_vals]
-        cAct_vals = [po.mRNA_cInhibitor_to_cActivator(rat_val, flags['base_cInhibitor_val'], grid_constants['KdRNAPCrp']) for rat_val in rat_vals]
+        # calculate cInh and cAct
+        cInh_vals = []
+        cAct_vals = []
+        for index, row in ratios_df.iterrows():
+            print(index)
+            print(row)
+            fa = fo
+        #cInh_vals = [po.mRNA_cActivator_to_cInhibitor(rat_val, flags['base_cActivator_val'], grid_constants['KdRNAPCrp'], lambda_df_input = lambda_df) for rat_val in rat_vals]
+        #cAct_vals = [po.mRNA_cInhibitor_to_cActivator(rat_val, flags['base_cInhibitor_val'], grid_constants['KdRNAPCrp'], lambda_df_input = lambda_df) for rat_val in rat_vals]
 
         fig, axs = plt.subplots(1, 2, figsize = (8, 3))
         ax1 = axs[0]
@@ -221,7 +241,12 @@ def create_data_for_gene(flags):
         # potentially save off results
         if flags['save_results']:
             # let's create our gene specific folder within runs
-            save_folder = flags['save_results_folder']+'/'+flags['central_gene']
+            if flags['save_gene_specific_results']:
+                save_folder = '../data/saved_gene_results/'+flags['central_gene']
+                if os.path.exists(save_folder):
+                    shutil.rmtree(save_folder)
+            else:
+                save_folder = flags['save_results_folder']+'/'+flags['central_gene']
             os.mkdir(save_folder)
             
             # save off constants used
@@ -290,7 +315,7 @@ def create_data_for_gene(flags):
     if flags['save_results']:
         # let's create our gene specific folder within runs
         if flags['save_gene_specific_results']:
-            save_folder = '../data/save_gene_results/'+flags['central_gene']
+            save_folder = '../data/saved_gene_results/'+flags['central_gene']
             if os.path.exists(save_folder):
                 shutil.rmtree(save_folder)
         else:
