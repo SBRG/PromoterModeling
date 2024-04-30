@@ -77,11 +77,7 @@ def create_data_for_gene(flags):
     ############################################################
     # create lambda dfs for various calculations --- very slow
     ############################################################
-    print('hi')
-    print(flags['run_basal_calculations'])
-    print(os.path.exists('../data/lambda_dfs/'+flags['central_gene']+'.pkl'))
     if not flags['run_basal_calculations'] and os.path.exists('../data/lambda_dfs/'+flags['central_gene']+'.pkl'):
-        print('penis')
         pass # this used to be passed to other functions, but is now just loaded directly 
         #f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'rb')
         #lambdas_df = pickle.load(f)
