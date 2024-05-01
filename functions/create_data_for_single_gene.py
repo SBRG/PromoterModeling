@@ -210,14 +210,18 @@ def create_data_for_gene(flags):
         cInh, cAct = np.meshgrid(cInh_range, cAct_range)
 
         # Create the heatmap
-        heatmap = axs[1].pcolormesh(cInh, cAct, mRNA_vals.values, shading='auto', cmap='viridis')
-        plt.colorbar(heatmap, label='mRNA values')
-        axs[1].set_xlabel('cInhibitor')
-        axs[1].set_ylabel('cActivator')
-        axs[1].set_title('2D Heatmap of mRNA values')
-        plt.tight_layout()
-        gene_figs.append(fig)
-        plt.close(fig)
+        try:
+            heatmap = axs[1].pcolormesh(cInh, cAct, mRNA_vals.values, shading='auto', cmap='viridis')
+            plt.colorbar(heatmap, label='mRNA values')
+            axs[1].set_xlabel('cInhibitor')
+            axs[1].set_ylabel('cActivator')
+            axs[1].set_title('2D Heatmap of mRNA values')
+            plt.tight_layout()
+            gene_figs.append(fig)
+            plt.close(fig)
+        except:
+            pass
+            # this means something went wrong in creating the range, presumably because cInh or cAct contains non-finite values
     if flags['only_check_KdRNAPCrp']:
         # potentially save off results
         if flags['save_results']:
