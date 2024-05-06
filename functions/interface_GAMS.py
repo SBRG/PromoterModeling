@@ -800,5 +800,11 @@ def read_multi_GAMs(GAMs_run_dir):
     act_kd_metab_df[act_kd_metab_df.columns[1:]] = 10**act_kd_metab_df[act_kd_metab_df.columns[1:]].astype(float)
     inh_kd_metab_df[inh_kd_metab_df.columns[1:]] = 10**inh_kd_metab_df[inh_kd_metab_df.columns[1:]].astype(float)
     
+    # read in mRNA, convert to log tpm, output both
+    input_df = pd.read_csv(GAMs_run_dir+'/output_files/calculated_mRNA.csv', index_col = 0)
+    mRNA_ratio_df = pd.DataFrame(index = list(set(input_df.index)), columns = list(set(input_df.gene)))
+    for index, row in input_df.iterrows():
+        mRNA_ratio_df.at[index, row['gene']] = row['Val']
+    
     # return
-    return(GAMS_cAct, act_kd_df, act_metab, act_kd_metab_df, GAMS_cInh, inh_kd_df, inh_metab, inh_kd_metab_df)
+    return(mRNA_ratio_df, GAMS_cAct, act_kd_df, act_metab, act_kd_metab_df, GAMS_cInh, inh_kd_df, inh_metab, inh_kd_metab_df)

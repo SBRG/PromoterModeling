@@ -1,4 +1,4 @@
-GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 03/05/24 16:30:29 Page 1
+GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 05/05/24 22:19:04 Page 1
 merged model
 C o m p i l a t i o n
 
@@ -17,255 +17,260 @@ C o m p i l a t i o n
   13           effectors,
   14           cAct_no_effector_form,
   15           cAct_multi_effector_binding,
-  16           cInh_no_effector_form,
-  17           cInh_multi_effector_binding,
-  18           cInh_multi_co_effector_binding
-  19           kd_inh_metab_lo,
-  20           kd_inh_metab_up,
-  21           kd_act_metab_lo,
-  22           kd_act_metab_up /
-  23     gene_constant 'grid basal constants'
-  24         / KdRNAP,
-  25           KdRNAPCrp,
-  26           mRNA_total,
-  27           cell_volume,
-  28           k_d_TF,
-  29           kDeg,
-  30           promoterConcVal,
-  31           TF,
-  32           u,
-  33           kEscape,
-  34           KeqOpening /
-  35      sample_constant 'grid basal constants'
-  36         / RNAP /
-  37      limits 'input parameters'
-  38         / act_TF_conc_lo,
-  39           act_TF_conc_up,
-  40           act_Kd_lo,
-  41           act_Kd_up,
-  42           inh_TF_conc_lo,
-  43           inh_TF_conc_up,
-  44           inh_Kd_lo,
-  45           inh_Kd_up,
-  46           weight_act_obj1,
-  47           weight_inh_obj1,
-  48           weight_act_obj2,
-  49           weight_inh_obj2,
-  50           weight_mRNA_match,
-  51           weight_act_corr,
-  52           weight_inh_corr,
-  53           act_metab_Total_lo,
-  54           act_metab_Total_up,
-  55           inh_metab_Total_lo,
-  56           inh_metab_Total_up /
-  57   
-  58  * Load in saved values
-  59  * Load in saved values
+  16           cAct_multi_co_effector_binding,
+  17           cInh_no_effector_form,
+  18           cInh_multi_effector_binding,
+  19           cInh_multi_co_effector_binding,
+  20           kd_inh_metab_lo,
+  21           kd_inh_metab_up,
+  22           kd_act_metab_lo,
+  23           kd_act_metab_up,
+  24           act_TF_conc_lo,
+  25           act_TF_conc_up,
+  26           inh_TF_conc_lo,
+  27           inh_TF_conc_up /
+  28     gene_constant 'grid basal constants'
+  29         / KdRNAP,
+  30           KdRNAPCrp,
+  31           mRNA_total,
+  32           cell_volume,
+  33           k_d_TF,
+  34           kDeg,
+  35           promoterConcVal,
+  36           TF,
+  37           u,
+  38           kEscape,
+  39           KeqOpening /
+  40      sample_constant 'grid basal constants'
+  41         / RNAP /
+  42      limits 'input parameters'
+  43         / act_TF_conc_lo,
+  44           act_TF_conc_up,
+  45           act_Kd_lo,
+  46           act_Kd_up,
+  47           inh_TF_conc_lo,
+  48           inh_TF_conc_up,
+  49           inh_Kd_lo,
+  50           inh_Kd_up,
+  51           weight_act_obj1,
+  52           weight_inh_obj1,
+  53           weight_act_obj2,
+  54           weight_inh_obj2,
+  55           weight_mRNA_match,
+  56           weight_act_corr,
+  57           weight_inh_corr,
+  58           act_metab_Total_lo,
+  59           act_metab_Total_up,
+  60           inh_metab_Total_lo,
+  61           inh_metab_Total_up /
+  62   
+  63  * Load in saved values
+  64  * Load in saved values
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/dimensions.gdx
 **** Msg : No such file or directory
-  62  $gdxIn ./input_GDX/dimensions.gdx
+  67  $gdxIn ./input_GDX/dimensions.gdx
 ****                                  $510
 **** 510  Unable to open gdx file for $GDXIN
-  63  $load gene = dim1
+  68  $load gene = dim1
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
-  64  $load iM = dim2
+  69  $load iM = dim2
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
-  65  $load sample = dim3
+  70  $load sample = dim3
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
-  66  Parameter dims(gene, iM, sample) 'dummy dimensions';
-  67  $load dims
+  71  Parameter dims(gene, iM, sample) 'dummy dimensions';
+  72  $load dims
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
-  69   
+  74   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/input_cAct.gdx
 **** Msg : No such file or directory
-  71  $gdxIn ./input_GDX/input_cAct.gdx
+  76  $gdxIn ./input_GDX/input_cAct.gdx
 ****                                  $510
 **** 510  Unable to open gdx file for $GDXIN
-  72  Parameter cAct(gene, iM, sample) 'cAct values';
-  73  $load cAct
+  77  Parameter cAct(gene, iM, sample) 'cAct values';
+  78  $load cAct
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
-  75   
+  80   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/cAct_mapping.gdx
 **** Msg : No such file or directory
-  77  $gdxIn ./input_GDX/cAct_mapping.gdx
+  82  $gdxIn ./input_GDX/cAct_mapping.gdx
 ****                                    $510
 **** 510  Unable to open gdx file for $GDXIN
-  78  Parameter cAct_mapping(gene, iM) 'cAct_mapping';
-  79  $load cAct_mapping
+  83  Parameter cAct_mapping(gene, iM) 'cAct_mapping';
+  84  $load cAct_mapping
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
-  81   
+  86   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/input_cInh.gdx
 **** Msg : No such file or directory
-  83  $gdxIn ./input_GDX/input_cInh.gdx
+  88  $gdxIn ./input_GDX/input_cInh.gdx
 ****                                  $510
 **** 510  Unable to open gdx file for $GDXIN
-  84  Parameter cInh(gene, iM, sample) 'cInh values';
-  85  $load cInh
+  89  Parameter cInh(gene, iM, sample) 'cInh values';
+  90  $load cInh
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
-  87   
+  92   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/cInh_mapping.gdx
 **** Msg : No such file or directory
-  89  $gdxIn ./input_GDX/cInh_mapping.gdx
+  94  $gdxIn ./input_GDX/cInh_mapping.gdx
 ****                                    $510
 **** 510  Unable to open gdx file for $GDXIN
-  90  Parameter cInh_mapping(gene, iM) 'cInh_mapping';
-  91  $load cInh_mapping
+  95  Parameter cInh_mapping(gene, iM) 'cInh_mapping';
+  96  $load cInh_mapping
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
-  93   
+  98   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/input_act_TF_conc.gdx
 **** Msg : No such file or directory
-  95  $gdxIn ./input_GDX/input_act_TF_conc.gdx
+ 100  $gdxIn ./input_GDX/input_act_TF_conc.gdx
 ****                                         $510
 **** 510  Unable to open gdx file for $GDXIN
-  96  Parameter meas_act_TF(sample, iM) 'actual act TF values';
-  97  $load meas_act_TF
+ 101  Parameter meas_act_TF(sample, iM) 'actual act TF values';
+ 102  $load meas_act_TF
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
-  99   
+ 104   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/input_inh_TF_conc.gdx
 **** Msg : No such file or directory
- 101  $gdxIn ./input_GDX/input_inh_TF_conc.gdx
+ 106  $gdxIn ./input_GDX/input_inh_TF_conc.gdx
 ****                                         $510
 **** 510  Unable to open gdx file for $GDXIN
- 102  Parameter meas_inh_TF(sample, iM) 'actual inh TF values';
- 103  $load meas_inh_TF
+ 107  Parameter meas_inh_TF(sample, iM) 'actual inh TF values';
+ 108  $load meas_inh_TF
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
- 105   
+ 110   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/basal.gdx
 **** Msg : No such file or directory
- 107  $gdxIn ./input_GDX/basal.gdx
+ 112  $gdxIn ./input_GDX/basal.gdx
 ****                             $510
 **** 510  Unable to open gdx file for $GDXIN
- 108  Parameter basal_constants(gene_constant, gene) 'basal constants';
- 109  $load basal_constants
+ 113  Parameter basal_constants(gene_constant, gene) 'basal constants';
+ 114  $load basal_constants
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
- 111   
+ 116   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/sample_basal.gdx
 **** Msg : No such file or directory
- 113  $gdxIn ./input_GDX/sample_basal.gdx
+ 118  $gdxIn ./input_GDX/sample_basal.gdx
 ****                                    $510
 **** 510  Unable to open gdx file for $GDXIN
- 114  Parameter sample_constants(sample_constant, sample) 'sample constants';
- 115  $load sample_constants
+ 119  Parameter sample_constants(sample_constant, sample) 'sample constants';
+ 120  $load sample_constants
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
- 117   
+ 122   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/TF_constants.gdx
 **** Msg : No such file or directory
- 119  $gdxIn ./input_GDX/TF_constants.gdx
+ 124  $gdxIn ./input_GDX/TF_constants.gdx
 ****                                    $510
 **** 510  Unable to open gdx file for $GDXIN
- 120  Parameter TF_constants(iM, TF_inputs) 'TF constants';
- 121  $load TF_constants
+ 125  Parameter TF_constants(iM, TF_inputs) 'TF constants';
+ 126  $load TF_constants
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
- 123   
+ 128   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/actual_mRNA.gdx
 **** Msg : No such file or directory
- 125  $gdxIn ./input_GDX/actual_mRNA.gdx
+ 130  $gdxIn ./input_GDX/actual_mRNA.gdx
 ****                                   $510
 **** 510  Unable to open gdx file for $GDXIN
- 126  Parameter actual_mRNA(sample, gene) 'actual_mRNA';
- 127  $load actual_mRNA
+ 131  Parameter actual_mRNA(sample, gene) 'actual_mRNA';
+ 132  $load actual_mRNA
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
- 129   
+ 134   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/max_cAct.gdx
 **** Msg : No such file or directory
- 131  $gdxIn ./input_GDX/max_cAct.gdx
+ 136  $gdxIn ./input_GDX/max_cAct.gdx
 ****                                $510
 **** 510  Unable to open gdx file for $GDXIN
- 132  Parameter max_cAct(gene) 'max_cAct';
- 133  $load max_cAct
+ 137  Parameter max_cAct(gene) 'max_cAct';
+ 138  $load max_cAct
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
- 135   
+ 140   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/max_cInh.gdx
 **** Msg : No such file or directory
- 137  $gdxIn ./input_GDX/max_cInh.gdx
+ 142  $gdxIn ./input_GDX/max_cInh.gdx
 ****                                $510
 **** 510  Unable to open gdx file for $GDXIN
- 138  Parameter max_cInh(gene) 'max_cInh';
- 139  $load max_cInh
+ 143  Parameter max_cInh(gene) 'max_cInh';
+ 144  $load max_cInh
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
- 141   
+ 146   
 **** File: C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\./input_GDX/input_parameters.gdx
 **** Msg : No such file or directory
- 143  $gdxIn ./input_GDX/input_parameters.gdx
+ 148  $gdxIn ./input_GDX/input_parameters.gdx
 ****                                        $510
 **** 510  Unable to open gdx file for $GDXIN
- 144  Parameter input_parameters(limits) 'input_paras';
- 145  $load input_parameters
+ 149  Parameter input_parameters(limits) 'input_paras';
+ 150  $load input_parameters
 ****      $502
 **** 502  GDXIN  file not open - ignore rest of line
- 147   
- 148   
- 149  ***
- 150  * Set up other matrices
- 151  * note that for every sample some of these may be blank, need to pay attention when reading out using the TF_flags matrix
- 152  Variables
- 153      act_Kd(gene, iM) 'Kd Values'
- 154      inh_Kd(gene, iM) 'Kd Values'
- 155      act_metab_Total(sample, iM)
- 156      inh_metab_Total(sample, iM)
- 157      act_TF_conc(sample, iM)
- 158      inh_TF_conc(sample, iM)
- 159      act_Kd_metab(iM)
- 160      inh_Kd_metab(iM);
- 161   
- 162  Display input_parameters;
+ 152   
+ 153   
+ 154  ***
+ 155  * Set up other matrices
+ 156  * note that for every sample some of these may be blank, need to pay attention when reading out using the TF_flags matrix
+ 157  Variables
+ 158      act_Kd(gene, iM) 'Kd Values'
+ 159      inh_Kd(gene, iM) 'Kd Values'
+ 160      act_metab_Total(sample, iM)
+ 161      inh_metab_Total(sample, iM)
+ 162      act_TF_conc(sample, iM)
+ 163      inh_TF_conc(sample, iM)
+ 164      act_Kd_metab(iM)
+ 165      inh_Kd_metab(iM);
+ 166   
+ 167  Display input_parameters;
 ****                         $141
 **** 141  Symbol declared but no values have been assigned. Check for missing
 ****         data definition, assignment, data loading or implicit assignment
 ****         via a solve statement.
 ****         A wild shot: You may have spurious commas in the explanatory
 ****         text of a declaration. Check symbol reference list.
- 163  Display sample_constants;
+ 168  Display sample_constants;
 ****                         $141
 **** 141  Symbol declared but no values have been assigned. Check for missing
 ****         data definition, assignment, data loading or implicit assignment
 ****         via a solve statement.
 ****         A wild shot: You may have spurious commas in the explanatory
 ****         text of a declaration. Check symbol reference list.
- 164   
- 165   
- 166  * constrain matrices
- 167  act_Kd.lo(gene, iM) = log10(input_parameters('act_Kd_lo'));
+ 169   
+ 170   
+ 171  * constrain matrices
+ 172  act_Kd.lo(gene, iM) = log10(input_parameters('act_Kd_lo'));
 ****               $352$352
 **** 352  Set has not been initialized
- 168  act_Kd.up(gene, iM) = log10(input_parameters('act_Kd_up'));
+ 173  act_Kd.up(gene, iM) = log10(input_parameters('act_Kd_up'));
 ****               $352$352
 **** 352  Set has not been initialized
- 169  inh_Kd.lo(gene, iM) = log10(input_parameters('inh_Kd_lo'));
+ 174  inh_Kd.lo(gene, iM) = log10(input_parameters('inh_Kd_lo'));
 ****               $352$352
 **** 352  Set has not been initialized
- 170  inh_Kd.up(gene, iM) = log10(input_parameters('inh_Kd_up'));
+ 175  inh_Kd.up(gene, iM) = log10(input_parameters('inh_Kd_up'));
 ****               $352$352
 **** 352  Set has not been initialized
- 171  act_metab_Total.lo(sample, iM) = log10(input_parameters('act_metab_Total_lo'));
+ 176  act_metab_Total.lo(sample, iM) = log10(input_parameters('act_metab_Total_lo'));
 ****                          $352$352
 **** 352  Set has not been initialized
- 172  act_metab_Total.up(sample, iM) = log10(input_parameters('act_metab_Total_up'));
+ 177  act_metab_Total.up(sample, iM) = log10(input_parameters('act_metab_Total_up'));
 ****                          $352$352
 **** 352  Set has not been initialized
- 173  inh_metab_Total.lo(sample, iM) = log10(input_parameters('inh_metab_Total_lo'));
+ 178  inh_metab_Total.lo(sample, iM) = log10(input_parameters('inh_metab_Total_lo'));
 ****                          $352$352
 **** 352  Set has not been initialized
- 174  inh_metab_Total.up(sample, iM) = log10(input_parameters('inh_metab_Total_up'));
+ 179  inh_metab_Total.up(sample, iM) = log10(input_parameters('inh_metab_Total_up'));
 ****                          $352$352
 **** 352  Set has not been initialized
- 175  act_Kd_metab.lo(iM) = log10(TF_constants(iM, 'kd_act_metab_lo'));
+ 180  act_Kd_metab.lo(iM) = log10(TF_constants(iM, 'kd_act_metab_lo'));
 ****                   $352                  $141,352
 **** 141  Symbol declared but no values have been assigned. Check for missing
 ****         data definition, assignment, data loading or implicit assignment
@@ -273,208 +278,238 @@ C o m p i l a t i o n
 ****         A wild shot: You may have spurious commas in the explanatory
 ****         text of a declaration. Check symbol reference list.
 **** 352  Set has not been initialized
- 176  act_Kd_metab.up(iM) = log10(TF_constants(iM, 'kd_act_metab_up'));
+ 181  act_Kd_metab.up(iM) = log10(TF_constants(iM, 'kd_act_metab_up'));
 ****                   $352                     $352
 **** 352  Set has not been initialized
- 177  inh_Kd_metab.lo(iM) = log10(TF_constants(iM, 'kd_inh_metab_lo'));
+ 182  inh_Kd_metab.lo(iM) = log10(TF_constants(iM, 'kd_inh_metab_lo'));
 ****                   $352                     $352
 **** 352  Set has not been initialized
- 178  inh_Kd_metab.up(iM) = log10(TF_constants(iM, 'kd_inh_metab_up'));
+ 183  inh_Kd_metab.up(iM) = log10(TF_constants(iM, 'kd_inh_metab_up'));
 ****                   $352                     $352
 **** 352  Set has not been initialized
- 179   
- 180   
- 181  * initialize matrices
- 182  act_Kd.l(gene, iM) = uniformInt(-10, -3);
+ 184  act_TF_conc.lo(sample, iM) = log10(input_parameters('act_TF_conc_lo'));
+****                      $352$352
+**** 352  Set has not been initialized
+ 185  act_TF_conc.up(sample, iM) = log10(input_parameters('act_TF_conc_up'));
+****                      $352$352
+**** 352  Set has not been initialized
+ 186  inh_TF_conc.lo(sample, iM) = log10(input_parameters('inh_TF_conc_lo'));
+****                      $352$352
+**** 352  Set has not been initialized
+ 187  inh_TF_conc.up(sample, iM) = log10(input_parameters('inh_TF_conc_up'));
+****                      $352$352
+**** 352  Set has not been initialized
+ 188   
+ 189  * initialize matrices
+ 190  act_Kd.l(gene, iM) = uniformInt(-10, -3);
 ****              $352$352
 **** 352  Set has not been initialized
- 183  inh_Kd.l(gene, iM) = uniformInt(-10, -3);
+ 191  inh_Kd.l(gene, iM) = uniformInt(-10, -3);
 ****              $352$352
 **** 352  Set has not been initialized
- 184  act_metab_Total.l(sample, iM) = uniformInt(-10, -3);
+ 192  act_metab_Total.l(sample, iM) = uniformInt(-10, -3);
 ****                         $352$352
 **** 352  Set has not been initialized
- 185  inh_metab_Total.l(sample, iM) = uniformInt(-10, -3);
+ 193  inh_metab_Total.l(sample, iM) = uniformInt(-10, -3);
 ****                         $352$352
 **** 352  Set has not been initialized
- 186  act_TF_conc.l(sample, iM) = uniformInt(-10, -3);
+ 194  act_TF_conc.l(sample, iM) = uniformInt(-10, -3);
 ****                     $352$352
 **** 352  Set has not been initialized
- 187  inh_TF_conc.l(sample, iM) = uniformInt(-10, -3);
+ 195  inh_TF_conc.l(sample, iM) = uniformInt(-10, -3);
 ****                     $352$352
 **** 352  Set has not been initialized
- 188  act_Kd_metab.l(iM) = uniformInt(-10, -3);
+ 196  act_Kd_metab.l(iM) = uniformInt(-10, -3);
 ****                  $352
 **** 352  Set has not been initialized
- 189  inh_Kd_metab.l(iM) = uniformInt(-10, -3);
+ 197  inh_Kd_metab.l(iM) = uniformInt(-10, -3);
 ****                  $352
 **** 352  Set has not been initialized
- 190   
- 191  * Now set up the optimization
- 192  Variables
- 193      act_diff1   difference between TF_conc div Kd and Ceff
- 194      inh_diff1   similar
- 195      match_diff
- 196      total_diff;
- 197   
  198   
- 199  * calculated sub variables
+ 199  * Now set up the optimization
  200  Variables
- 201      cAct_calc(sample, gene)
- 202      cInh_calc(sample, gene);
- 203   
- 204  Equations
- 205      eq_cAct_calc(sample, gene)
- 206      eq_cInh_calc(sample, gene);
- 207   
- 208  Equations
- 209      act_obj1   difference between TF_conc div Kd and cEff
- 210      inh_obj1   difference between TF_conc div Kd and cEff
- 211      match_obj  difference between predicted and actual mRNA
- 212      total_obj;
- 213   
- 214   
- 215  * Set weights for the two objectives (you can adjust these weights as needed)
- 216  * mRNA weighting
- 217  Scalar weight_balance3 /195260.5676/;
- 218  * TF conenctration correlation matching
- 219  Scalar weight_balance4 /1953.70798879785/;
- 220  Scalar weight_act_obj1 /1/;
- 221  Scalar weight_inh_obj1 /1/;
- 222  Scalar weight_mRNA_match /0/;
+ 201      act_diff1   difference between TF_conc div Kd and Ceff
+ 202      inh_diff1   similar
+ 203      match_diff
+ 204      total_diff;
+ 205   
+ 206   
+ 207  * calculated sub variables
+ 208  Variables
+ 209      mRNA_calc(sample, gene)
+ 210      cAct_calc(sample, gene)
+ 211      cInh_calc(sample, gene);
+ 212   
+ 213  Equations
+ 214      eq_mRNA_calc(sample, gene)
+ 215      eq_cAct_calc(sample, gene)
+ 216      eq_cInh_calc(sample, gene);
+ 217   
+ 218  Equations
+ 219      act_obj1   difference between TF_conc div Kd and cEff
+ 220      inh_obj1   difference between TF_conc div Kd and cEff
+ 221      match_obj  difference between predicted and actual mRNA
+ 222      total_obj;
  223   
  224   
- 225  * set them from parameters file
- 226  weight_act_obj1 = input_parameters('weight_act_obj1');
- 227  weight_inh_obj1 = input_parameters('weight_inh_obj1');
- 228  weight_mRNA_match = input_parameters('weight_mRNA_match');
- 229   
- 230   
- 231  * create equations
- 232  total_obj .. total_diff =e= weight_balance3 * weight_mRNA_match * match_diff + weight_act_obj1 * act_diff1 + weight_inh_obj1 * inh_diff1;
+ 225  * Set weights for the two objectives (you can adjust these weights as needed)
+ 226  * mRNA weighting
+ 227  Scalar weight_balance3 /195260.5676/;
+ 228  * TF conenctration correlation matching
+ 229  Scalar weight_balance4 /1953.70798879785/;
+ 230  Scalar weight_act_obj1 /1/;
+ 231  Scalar weight_inh_obj1 /1/;
+ 232  Scalar weight_mRNA_match /0/;
  233   
- 234  Display TF_constants;
- 235   
- 236  * equations for cInhibitor and cActivator (cActivator is basically null and unused right now)
- 237  eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= sum(iM, TF_constants(iM, 'cAct_multi_effector_binding') * cAct_mapping(gene, iM) * (
- 238          3 * 10**act_metab_Total(sample, iM) * 10**act_Kd(gene, iM) +
- 239          10**act_Kd_metab(iM) * 10**act_Kd(gene, iM) +
- 240          3 * 10**act_Kd(gene ,iM) * meas_act_TF(sample, iM) +
- 241          (
- 242              -36 * 10**act_metab_Total(sample, iM) * (10**act_Kd(gene, iM))**2 * meas_act_TF(sample, iM) +
- 243               (
- 244                   3 * 10**act_metab_Total(sample, iM) * 10**act_Kd(gene, iM) +
- 245                    10**act_Kd_metab(iM) * 10**act_Kd(gene, iM) +
- 246                    3 * 10**act_Kd(gene, iM) * meas_act_TF(sample, iM)
- 247               )**2
- 248          )**(.5)
- 249      )
- 250      / (18 * (10**act_Kd(gene, iM))**2)
- 251  )
- 252  +
- 253  sum(iM, TF_constants(iM, 'cAct_no_effector_form') * cAct_mapping(gene, iM) * (
- 254          (10**act_TF_conc(sample, iM) / 10**act_Kd(gene, iM))
- 255      )
- 256  )
- 257  ;
- 258   
- 259  eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= sum(iM, TF_constants(iM, 'cInh_multi_effector_binding') * cInh_mapping(gene, iM) * (
- 260          3 * 10**inh_metab_Total(sample, iM) * 10**inh_Kd(gene, iM) +
- 261          10**inh_Kd_metab(iM) * 10**inh_Kd(gene, iM) +
- 262          3 * 10**inh_Kd(gene ,iM) * meas_inh_TF(sample, iM) +
- 263          (
- 264              -36 * 10**inh_metab_Total(sample, iM) * (10**inh_Kd(gene, iM))**2 * meas_inh_TF(sample, iM) +
- 265               (
- 266                   3 * 10**inh_metab_Total(sample, iM) * 10**inh_Kd(gene, iM) +
- 267                    10**inh_Kd_metab(iM) * 10**inh_Kd(gene, iM) +
- 268                    3 * 10**inh_Kd(gene, iM) * meas_inh_TF(sample, iM)
- 269               )**2
- 270          )**(.5)
- 271      )
- 272      / (18 * (10**inh_Kd(gene, iM))**2)
- 273  )
- 274  +
- 275  sum(iM, TF_constants(iM, 'cInh_no_effector_form') * cInh_mapping(gene, iM) * (
- 276          (10**inh_TF_conc(sample, iM) / 10**inh_Kd(gene, iM))
- 277      )
- 278  )
- 279  +
- 280  sum(iM, TF_constants(iM, 'cInh_multi_co_effector_binding') * cInh_mapping(gene, iM) * (
- 281          (
- 282              10**inh_Kd_metab(iM) + 10**inh_metab_Total(sample, iM) + meas_inh_TF(sample, iM) +
- 283              (
- 284                  10**inh_Kd_metab(iM) +
- 285                  (
- 286                      (10**inh_metab_Total(sample, iM) - meas_inh_TF(sample, iM))**2
- 287                  ) +
- 288                  2 * 10**inh_Kd_metab(iM) * (10**inh_metab_Total(sample, iM) + meas_inh_TF(sample, iM))
- 289              )**.5
- 290          )
- 291          / (4 * 10**inh_Kd(gene, iM))
- 292      )
- 293  )
- 294  ;
- 295   
- 296   
- 297   
- 298   
- 299  * objective equations
- 300  act_obj1 .. act_diff1 =e= sum((gene, sample), (abs((cAct_calc(sample, gene) - sum(iM, cAct(gene, iM, sample)))) / max_cAct(gene) )**2);
- 301   
- 302  inh_obj1 .. inh_diff1 =e= sum((gene, sample), (abs((cInh_calc(sample, gene) - sum(iM, cInh(gene, iM, sample)))) / max_cInh(gene) )**2);
- 303   
- 304  match_obj .. match_diff =e= sum((gene, sample), (abs(actual_mRNA(sample, gene) - ((cAct_calc(sample, gene)*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + sample_constants('RNAP', sample) +  b
+ 234   
+ 235  * set them from parameters file
+ 236  weight_act_obj1 = input_parameters('weight_act_obj1');
+ 237  weight_inh_obj1 = input_parameters('weight_inh_obj1');
+ 238  weight_mRNA_match = input_parameters('weight_mRNA_match');
+ 239   
+ 240   
+ 241  * create equations
+ 242  total_obj .. total_diff =e= weight_balance3 * weight_mRNA_match * match_diff + weight_act_obj1 * act_diff1 + weight_inh_obj1 * inh_diff1;
+ 243   
+ 244  * equations for cInhibitor and cActivator (cActivator is basically null and unused right now)
+ 245  eq_cAct_calc(sample, gene) .. cAct_calc(sample, gene) =e= sum(iM, TF_constants(iM, 'cAct_multi_effector_binding') * cAct_mapping(gene, iM) * (
+ 246          3 * 10**act_metab_Total(sample, iM) * 10**act_Kd(gene, iM) +
+ 247          10**act_Kd_metab(iM) * 10**act_Kd(gene, iM) +
+ 248          3 * 10**act_Kd(gene ,iM) * meas_act_TF(sample, iM) +
+ 249          (
+ 250              -36 * 10**act_metab_Total(sample, iM) * (10**act_Kd(gene, iM))**2 * meas_act_TF(sample, iM) +
+ 251               (
+ 252                   3 * 10**act_metab_Total(sample, iM) * 10**act_Kd(gene, iM) +
+ 253                    10**act_Kd_metab(iM) * 10**act_Kd(gene, iM) +
+ 254                    3 * 10**act_Kd(gene, iM) * meas_act_TF(sample, iM)
+ 255               )**2
+ 256          )**(.5)
+ 257      )
+ 258      / (18 * (10**act_Kd(gene, iM))**2)
+ 259  )
+ 260  +
+ 261  sum(iM, TF_constants(iM, 'cAct_no_effector_form') * cAct_mapping(gene, iM) * (
+ 262          (10**act_TF_conc(sample, iM) / 10**act_Kd(gene, iM))
+ 263      )
+ 264  )
+ 265  +
+ 266  sum(iM, TF_constants(iM, 'cAct_multi_co_effector_binding') * cAct_mapping(gene, iM) * (
+ 267          (
+ 268              10**act_Kd_metab(iM) + 10**act_metab_Total(sample, iM) + meas_act_TF(sample, iM) +
+ 269              (
+ 270                  10**act_Kd_metab(iM) +
+ 271                  (
+ 272                      (10**act_metab_Total(sample, iM) - meas_act_TF(sample, iM))**2
+ 273                  ) +
+ 274                  2 * 10**act_Kd_metab(iM) * (10**act_metab_Total(sample, iM) + meas_act_TF(sample, iM))
+ 275              )**.5
+ 276          )
+ 277          / (4 * 10**act_Kd(gene, iM))
+ 278      )
+ 279  )
+ 280  ;
+ 281   
+ 282  eq_cInh_calc(sample, gene) .. cInh_calc(sample, gene) =e= sum(iM, TF_constants(iM, 'cInh_multi_effector_binding') * cInh_mapping(gene, iM) * (
+ 283          3 * 10**inh_metab_Total(sample, iM) * 10**inh_Kd(gene, iM) +
+ 284          10**inh_Kd_metab(iM) * 10**inh_Kd(gene, iM) +
+ 285          3 * 10**inh_Kd(gene ,iM) * meas_inh_TF(sample, iM) +
+ 286          (
+ 287              -36 * 10**inh_metab_Total(sample, iM) * (10**inh_Kd(gene, iM))**2 * meas_inh_TF(sample, iM) +
+ 288               (
+ 289                   3 * 10**inh_metab_Total(sample, iM) * 10**inh_Kd(gene, iM) +
+ 290                    10**inh_Kd_metab(iM) * 10**inh_Kd(gene, iM) +
+ 291                    3 * 10**inh_Kd(gene, iM) * meas_inh_TF(sample, iM)
+ 292               )**2
+ 293          )**(.5)
+ 294      )
+ 295      / (18 * (10**inh_Kd(gene, iM))**2)
+ 296  )
+ 297  +
+ 298  sum(iM, TF_constants(iM, 'cInh_no_effector_form') * cInh_mapping(gene, iM) * (
+ 299          (10**inh_TF_conc(sample, iM) / 10**inh_Kd(gene, iM))
+ 300      )
+ 301  )
+ 302  +
+ 303  sum(iM, TF_constants(iM, 'cInh_multi_co_effector_binding') * cInh_mapping(gene, iM) * (
+ 304          (
+ 305              10**inh_Kd_metab(iM) + 10**inh_metab_Total(sample, iM) + meas_inh_TF(sample, iM) +
+ 306              (
+ 307                  10**inh_Kd_metab(iM) +
+ 308                  (
+ 309                      (10**inh_metab_Total(sample, iM) - meas_inh_TF(sample, iM))**2
+ 310                  ) +
+ 311                  2 * 10**inh_Kd_metab(iM) * (10**inh_metab_Total(sample, iM) + meas_inh_TF(sample, iM))
+ 312              )**.5
+ 313          )
+ 314          / (4 * 10**inh_Kd(gene, iM))
+ 315      )
+ 316  )
+ 317  ;
+ 318   
+ 319  eq_mRNA_calc(sample, gene) .. mRNA_calc(sample, gene) =e= ((cAct_calc(sample, gene)*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + sample_constants('RNAP', sample) +  basal_constants('KeqOpen
+      ing', gene)*sample_constants('RNAP', sample))) / (((1 + cAct_calc(sample, gene) + cInh_calc(sample, gene))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + cAct_calc(sample, gene)*basal_constants('KdRNAP', gene)*(1 + basal_consta
+      nts('KeqOpening', gene))*sample_constants('RNAP', sample) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample)));
+ 320   
+ 321  * objective equations
+ 322  act_obj1 .. act_diff1 =e= sum((gene, sample), (abs((cAct_calc(sample, gene) - sum(iM, cAct(gene, iM, sample)))) / max_cAct(gene) )**2);
+ 323   
+ 324  inh_obj1 .. inh_diff1 =e= sum((gene, sample), (abs((cInh_calc(sample, gene) - sum(iM, cInh(gene, iM, sample)))) / max_cInh(gene) )**2);
+ 325   
+ 326  match_obj .. match_diff =e= sum((gene, sample), (abs(actual_mRNA(sample, gene) - ((cAct_calc(sample, gene)*basal_constants('KdRNAP', gene) + basal_constants('KdRNAPCrp', gene))*(basal_constants('KdRNAP', gene) + sample_constants('RNAP', sample) +  b
       asal_constants('KeqOpening', gene)*sample_constants('RNAP', sample))) / (((1 + cAct_calc(sample, gene) + cInh_calc(sample, gene))*basal_constants('KdRNAP', gene)*basal_constants('KdRNAPCrp', gene) + cAct_calc(sample, gene)*basal_constants('KdRNAP', 
       gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample) + basal_constants('KdRNAPCrp', gene)*(1 + basal_constants('KeqOpening', gene))*sample_constants('RNAP', sample)))))**2 );
- 305   
- 306   
- 307  * modify model parameters
- 308  Option Iterlim=10000;
- 309  *$set dnlp acc=1e-15  // Set the accuracy or tolerance level
- 310  *$set dnlp step=1e-15  // Set the step size
- 311   
- 312   
- 313  * run the model
- 314  Model ElementWiseOptimization /all/;
- 315  ElementWiseOptimization.optfile = 1;
- 316  Solve ElementWiseOptimization using dnlp minimizing total_diff;
+ 327   
+ 328   
+ 329  * modify model parameters
+ 330  Option Iterlim=10000;
+ 331  *$set dnlp acc=1e-15  // Set the accuracy or tolerance level
+ 332  *$set dnlp step=1e-15  // Set the step size
+ 333   
+ 334   
+ 335  * run the model
+ 336  Model ElementWiseOptimization /all/;
+ 337  ElementWiseOptimization.optfile = 1;
+ 338  Solve ElementWiseOptimization using dnlp minimizing total_diff;
 ****                                                                $257
 **** 257  Solve statement not checked because of previous errors
- 317   
- 318   
- 319  * Export results
- 320  execute_unload "./output_GDX/act_metab_Total.gdx" act_metab_Total.L act_metab_Total.M
- 321  execute 'gdxdump ./output_GDX/act_metab_Total.gdx noData > ./output_files/act_metab_Total.csv symb=act_metab_Total format=csv';
- 322   
- 323  execute_unload "./output_GDX/cAct_Kd_results.gdx" act_Kd.L act_Kd.M
- 324  execute 'gdxdump ./output_GDX/cAct_Kd_results.gdx noData > ./output_files/cAct_Kd_results.csv symb=act_Kd format=csv';
- 325   
- 326  execute_unload "./output_GDX/cInh_Kd_results.gdx" inh_Kd.L inh_Kd.M
- 327  execute 'gdxdump ./output_GDX/cInh_Kd_results.gdx noData > ./output_files/cInh_Kd_results.csv symb=inh_Kd format=csv';
- 328   
- 329  execute_unload "./output_GDX/inh_metab_Total.gdx" inh_metab_Total.L inh_metab_Total.M
- 330  execute 'gdxdump ./output_GDX/inh_metab_Total.gdx noData > ./output_files/inh_metab_Total.csv symb=inh_metab_Total format=csv';
- 331   
- 332  execute_unload "./output_GDX/GAMS_cAct.gdx" cAct_calc.L cAct_calc.M
- 333  execute 'gdxdump ./output_GDX/GAMS_cAct.gdx noData > ./output_files/GAMS_cAct.csv symb=cAct_calc format=csv';
- 334   
- 335  execute_unload "./output_GDX/GAMS_cInh.gdx" cInh_calc.L cInh_calc.M
- 336  execute 'gdxdump ./output_GDX/GAMS_cInh.gdx noData > ./output_files/GAMS_cInh.csv symb=cInh_calc format=csv';
- 337   
- 338  execute_unload "./output_GDX/act_Kd_metab.gdx" act_Kd_metab.L act_Kd_metab.M
- 339  execute 'gdxdump ./output_GDX/act_Kd_metab.gdx noData > ./output_files/act_Kd_metab.csv symb=act_Kd_metab format=csv';
+ 339   
  340   
- 341  execute_unload "./output_GDX/inh_Kd_metab.gdx" inh_Kd_metab.L inh_Kd_metab.M
- 342  execute 'gdxdump ./output_GDX/inh_Kd_metab.gdx noData > ./output_files/inh_Kd_metab.csv symb=inh_Kd_metab format=csv';
- 343   
- 344  execute_unload "./output_GDX/inh_TF_conc.gdx" inh_TF_conc.L inh_TF_conc.M
- 345  execute 'gdxdump ./output_GDX/inh_TF_conc.gdx noData > ./output_files/inh_TF_conc.csv symb=inh_TF_conc format=csv';
- 346   
- 347  execute_unload "./output_GDX/act_TF_conc.gdx" act_TF_conc.L act_TF_conc.M
- 348  execute 'gdxdump ./output_GDX/act_TF_conc.gdx noData > ./output_files/act_TF_conc.csv symb=act_TF_conc format=csv';
+ 341  * Export results
+ 342  execute_unload "./output_GDX/calculated_mRNA.gdx" mRNA_calc.L mRNA_calc.M
+ 343  execute 'gdxdump ./output_GDX/calculated_mRNA.gdx noData > ./output_files/calculated_mRNA.csv symb=mRNA_calc format=csv';
+ 344   
+ 345  execute_unload "./output_GDX/act_metab_Total.gdx" act_metab_Total.L act_metab_Total.M
+ 346  execute 'gdxdump ./output_GDX/act_metab_Total.gdx noData > ./output_files/act_metab_Total.csv symb=act_metab_Total format=csv';
+ 347   
+ 348  execute_unload "./output_GDX/cAct_Kd_results.gdx" act_Kd.L act_Kd.M
+ 349  execute 'gdxdump ./output_GDX/cAct_Kd_results.gdx noData > ./output_files/cAct_Kd_results.csv symb=act_Kd format=csv';
+ 350   
+ 351  execute_unload "./output_GDX/cInh_Kd_results.gdx" inh_Kd.L inh_Kd.M
+ 352  execute 'gdxdump ./output_GDX/cInh_Kd_results.gdx noData > ./output_files/cInh_Kd_results.csv symb=inh_Kd format=csv';
+ 353   
+ 354  execute_unload "./output_GDX/inh_metab_Total.gdx" inh_metab_Total.L inh_metab_Total.M
+ 355  execute 'gdxdump ./output_GDX/inh_metab_Total.gdx noData > ./output_files/inh_metab_Total.csv symb=inh_metab_Total format=csv';
+ 356   
+ 357  execute_unload "./output_GDX/GAMS_cAct.gdx" cAct_calc.L cAct_calc.M
+ 358  execute 'gdxdump ./output_GDX/GAMS_cAct.gdx noData > ./output_files/GAMS_cAct.csv symb=cAct_calc format=csv';
+ 359   
+ 360  execute_unload "./output_GDX/GAMS_cInh.gdx" cInh_calc.L cInh_calc.M
+ 361  execute 'gdxdump ./output_GDX/GAMS_cInh.gdx noData > ./output_files/GAMS_cInh.csv symb=cInh_calc format=csv';
+ 362   
+ 363  execute_unload "./output_GDX/act_Kd_metab.gdx" act_Kd_metab.L act_Kd_metab.M
+ 364  execute 'gdxdump ./output_GDX/act_Kd_metab.gdx noData > ./output_files/act_Kd_metab.csv symb=act_Kd_metab format=csv';
+ 365   
+ 366  execute_unload "./output_GDX/inh_Kd_metab.gdx" inh_Kd_metab.L inh_Kd_metab.M
+ 367  execute 'gdxdump ./output_GDX/inh_Kd_metab.gdx noData > ./output_files/inh_Kd_metab.csv symb=inh_Kd_metab format=csv';
+ 368   
+ 369  execute_unload "./output_GDX/inh_TF_conc.gdx" inh_TF_conc.L inh_TF_conc.M
+ 370  execute 'gdxdump ./output_GDX/inh_TF_conc.gdx noData > ./output_files/inh_TF_conc.csv symb=inh_TF_conc format=csv';
+ 371   
+ 372  execute_unload "./output_GDX/act_TF_conc.gdx" act_TF_conc.L act_TF_conc.M
+ 373  execute 'gdxdump ./output_GDX/act_TF_conc.gdx noData > ./output_files/act_TF_conc.csv symb=act_TF_conc format=csv';
 
-**** 73 ERROR(S)   0 WARNING(S)
-GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 03/05/24 16:30:29 Page 2
+**** 81 ERROR(S)   0 WARNING(S)
+GAMS 28.2.0  r750fa45 Released Aug 19, 2019 WEX-WEI x86 64bit/MS Windows - 05/05/24 22:19:04 Page 2
 merged model
 Include File Summary
 
@@ -482,23 +517,23 @@ Include File Summary
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
      1        1 INPUT          0       0  C:\Users\SBRG_2024\Documents\GitHub\regulonML\GAMs\merged_iMs_model.gms
-     2       61 CALL           1      61  csv2gdx ./input_files/dimensions.csv id=dims index=1,2 values=3..lastCol useHeader=y trace=0 output=./input_GDX/dimensions.gdx
-     3       70 CALL           1      70  csv2gdx ./input_files/composite_cAct_vals.csv id=cAct index=1,2 values=3..lastCol useHeader=y trace=0 output=./input_GDX/input_cAct.gdx
-     4       76 CALL           1      76  csv2gdx ./input_files/cAct_mapping.csv id=cAct_mapping index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/cAct_mapping.gdx
-     5       82 CALL           1      82  csv2gdx ./input_files/composite_cInh_vals.csv id=cInh index=1,2 values=3..lastCol useHeader=y trace=0 output=./input_GDX/input_cInh.gdx
-     6       88 CALL           1      88  csv2gdx ./input_files/cInh_mapping.csv id=cInh_mapping index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/cInh_mapping.gdx
-     7       94 CALL           1      94  csv2gdx ./input_files/exported_act_TF_conc.csv id=meas_act_TF index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_act_TF_conc.gdx
-     8      100 CALL           1     100  csv2gdx ./input_files/exported_inh_TF_conc.csv id=meas_inh_TF index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_inh_TF_conc.gdx
-     9      106 CALL           1     106  csv2gdx ./input_files/grid_constants.csv id=basal_constants index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/basal.gdx
-    10      112 CALL           1     112  csv2gdx ./input_files/sample_constants.csv id=sample_constants index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/sample_basal.gdx
-    11      118 CALL           1     118  csv2gdx ./input_files/TF_constants.csv id=TF_constants index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/TF_constants.gdx
-    12      124 CALL           1     124  csv2gdx ./input_files/actual_mRNA_ratio.csv id=actual_mRNA index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/actual_mRNA.gdx
-    13      130 CALL           1     130  csv2gdx ./input_files/max_cActs.csv id=max_cAct index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/max_cAct.gdx
-    14      136 CALL           1     136  csv2gdx ./input_files/max_cInhs.csv id=max_cInh index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/max_cInh.gdx
-    15      142 CALL           1     142  csv2gdx ./input_files/parameters.csv id=input_parameters index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_parameters.gdx
+     2       66 CALL           1      66  csv2gdx ./input_files/dimensions.csv id=dims index=1,2 values=3..lastCol useHeader=y trace=0 output=./input_GDX/dimensions.gdx
+     3       75 CALL           1      75  csv2gdx ./input_files/composite_cAct_vals.csv id=cAct index=1,2 values=3..lastCol useHeader=y trace=0 output=./input_GDX/input_cAct.gdx
+     4       81 CALL           1      81  csv2gdx ./input_files/cAct_mapping.csv id=cAct_mapping index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/cAct_mapping.gdx
+     5       87 CALL           1      87  csv2gdx ./input_files/composite_cInh_vals.csv id=cInh index=1,2 values=3..lastCol useHeader=y trace=0 output=./input_GDX/input_cInh.gdx
+     6       93 CALL           1      93  csv2gdx ./input_files/cInh_mapping.csv id=cInh_mapping index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/cInh_mapping.gdx
+     7       99 CALL           1      99  csv2gdx ./input_files/exported_act_TF_conc.csv id=meas_act_TF index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_act_TF_conc.gdx
+     8      105 CALL           1     105  csv2gdx ./input_files/exported_inh_TF_conc.csv id=meas_inh_TF index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_inh_TF_conc.gdx
+     9      111 CALL           1     111  csv2gdx ./input_files/grid_constants.csv id=basal_constants index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/basal.gdx
+    10      117 CALL           1     117  csv2gdx ./input_files/sample_constants.csv id=sample_constants index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/sample_basal.gdx
+    11      123 CALL           1     123  csv2gdx ./input_files/TF_constants.csv id=TF_constants index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/TF_constants.gdx
+    12      129 CALL           1     129  csv2gdx ./input_files/actual_mRNA_ratio.csv id=actual_mRNA index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/actual_mRNA.gdx
+    13      135 CALL           1     135  csv2gdx ./input_files/max_cActs.csv id=max_cAct index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/max_cAct.gdx
+    14      141 CALL           1     141  csv2gdx ./input_files/max_cInhs.csv id=max_cInh index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/max_cInh.gdx
+    15      147 CALL           1     147  csv2gdx ./input_files/parameters.csv id=input_parameters index=1 values=2..lastCol useHeader=y trace=0 output=./input_GDX/input_parameters.gdx
 
 
-COMPILATION TIME     =       11.750 SECONDS      3 MB  28.2.0 r750fa45 WEX-WEI
+COMPILATION TIME     =       13.343 SECONDS      3 MB  28.2.0 r750fa45 WEX-WEI
 
 
 USER: Bernhard Palsson, Single User License          G190618/0001AO-GEN

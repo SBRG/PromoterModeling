@@ -1,3 +1,0 @@
-,TF,gene_name,effectors,cAct_no_effector_form,cAct_multi_effector_binding,cAct_multi_co_effector_binding,cInh_no_effector_form,cInh_multi_effector_binding,cInh_multi_co_effector_binding,kd_inh_metab_up,kd_inh_metab_lo,kd_act_metab_up,kd_act_metab_lo
-Fur-2,fur,b0683,['Fe-S Cluster'],0.0,1.0,0.0,0.0,1.0,0.0,0.3807889999999999,4.7950000000000016e-08,0.3807889999999999,4.7950000000000016e-08
-Fur-1,fur,b0683,['Fe-S Cluster'],0.0,1.0,0.0,0.0,1.0,0.0,0.3807889999999999,4.7950000000000016e-08,0.3807889999999999,4.7950000000000016e-08
