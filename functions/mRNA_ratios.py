@@ -46,17 +46,17 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
     #iM_table = pd.read_csv('../data/precise_1.0/iM_table.csv', index_col = 0)
     #M_df = M_df.rename(columns = {str(index) : row['name'] for index, row in iM_table.iterrows()})
     
-    # filter out samples
+    # filter out samples set by paramater_optimization/6_find_outliers_to_drop.ipynb
     if input_parameters['remove_outliers']:
         pickle_in = open('../data/case_to_mRNA_passed.pkl', 'rb')
         case_to_mRNA_passed = pickle.load(pickle_in)
         pickle_in.close()
         
-        if input_parameters['case']: # ZZZ, not yet implemented for multi-iM case
-            passed = case_to_mRNA_passed[input_parameters['case']]
-            for cond in basal_conditions:
-                passed.append(cond)
-            log_tpm_df = log_tpm_df[list(set(passed).intersection(set(log_tpm_df.columns)))]
+        case = '___'.join([str(iM) for iM in [iM_act, iM_inh]]).replace(' ', '_').replace('/', '_')
+        passed = case_to_mRNA_passed[case]
+        for cond in basal_conditions:
+            passed.append(cond)
+        log_tpm_df = log_tpm_df[list(set(passed).intersection(set(log_tpm_df.columns)))]
     
     # creates zerod matrices
     if use_zerod_A_matrix:
