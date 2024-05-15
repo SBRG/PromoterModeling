@@ -95,12 +95,15 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
     # create data matrix
     act_MAs = []
     inh_MAs = []
+    ratio_act_MAs = []
+    ratio_inh_MAs = []
     index = []
     actual_counts = []
     if input_parameters['basal_or_hard_val'] == 'basal':
         log_x_c = log_tpm_df.loc[gene][basal_conditions].mean()
     else:
         log_x_c = input_parameters['hard_val']
+    p1k_center = log_tpm_df.loc[gene][['p1k_00001', 'p1k_00002']].mean()
     
     # predict mRNA values
     for key, _ in (A_df.loc[A_df.index[0]].T*(M_df[M_df.columns[0]].loc[gene])).items():
@@ -108,19 +111,25 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
         actual_counts.append(2**(log_tpm_df.loc[gene][key]) / 2**(log_x_c))
     if type(iM_act) == float:
         act_MAs = [0 for _ in index]
+        ratio_act_MAs = [0 for _ in index]
     else:
         for key, val in (A_df.loc[iM_act].T*(M_df[iM_act].loc[gene])).items():
             act_MAs.append(val)
+            ratio_act_MAs.append(2**(val+p1k_center) / 2**log_x_c)
     if type(iM_inh) == float:
         inh_MAs = [0 for _ in index]
+        ratio_inh_MAs = [0 for _ in index]
     else:
         for key, val in (A_df.loc[iM_inh].T*(M_df[iM_inh].loc[gene])).items():
             inh_MAs.append(val)
+            ratio_inh_MAs.append(2**(val+p1k_center) / 2**log_x_c)
 
     values_df = pd.DataFrame(index = index)
     values_df['MA_activator'] = act_MAs
     values_df['MA_inhibitor'] = inh_MAs
     values_df['actual_mRNA_ratio'] = actual_counts
+    values_df['ratio_MA_activator'] = ratio_act_MAs
+    values_df['ratio_MA_inhibitor'] = ratio_inh_MAs
     
     # if set, remove basal conditions from sample to not weight results towards them
     if input_parameters['drop_basal_conds']:
@@ -128,6 +137,6 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
         for cond in basal_conditions:
             new_group.remove(cond)
         values_df = values_df.loc[new_group]
-    
 
+        
     return(values_df)
