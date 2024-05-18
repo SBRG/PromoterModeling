@@ -1,0 +1,16 @@
+Parameter,Value
+act_TF_conc_lo,4.2381142158694304e-13
+act_TF_conc_up,1.1081205358452432e-09
+act_Kd_lo,9.793141063899003e-13
+act_Kd_up,1.202785054607563e-07
+inh_TF_conc_lo,4.2381142158694304e-13
+inh_TF_conc_up,1.1081205358452432e-09
+inh_Kd_lo,9.793141063899003e-13
+inh_Kd_up,1.202785054607563e-07
+weight_act_obj1,8.192636589173368
+weight_inh_obj1,8.192636589173368
+weight_mRNA_match,9.862239019990572e-08
+inh_metab_Total_lo,3.8e-14
+inh_metab_Total_up,408000.0
+act_metab_Total_lo,3.8e-14
+act_metab_Total_up,408000.0
