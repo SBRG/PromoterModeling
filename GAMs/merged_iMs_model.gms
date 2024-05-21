@@ -61,7 +61,6 @@ Set
          inh_metab_Total_up /
 
 * Load in saved values
-* Load in saved values
 $onUNDF
 $call csv2gdx ./input_files/dimensions.csv id=dims index=1,2 values=3..lastCol useHeader=y trace=0 output=./input_GDX/dimensions.gdx
 $gdxIn ./input_GDX/dimensions.gdx
@@ -163,9 +162,6 @@ Variables
     inh_TF_conc(sample, iM)
     act_Kd_metab(iM)
     inh_Kd_metab(iM);
-
-Display input_parameters;
-Display sample_constants;
 
 
 * constrain matrices
