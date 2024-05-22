@@ -424,7 +424,7 @@ def run_multi_GAMs(flags_df, TF_flags_df, stable_flags, cell_constants, GAMs_run
             f_name = sample+'.pkl'
         if os.path.exists('../data/cAct_cInh_vals/'+f_name):
             files_use.append(f_name)
-     
+    
     for f in files_use:
         shared_indices = []
         first = True
