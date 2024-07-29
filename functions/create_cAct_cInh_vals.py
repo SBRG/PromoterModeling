@@ -14,9 +14,8 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
     return_figs = []
     
     # now setting RNAP concentration specific to sample
-    RNAP_conc_df = pd.read_csv('../data/RNAP_conc.csv', index_col = 0)
-    #gene_lambda_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
-    f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'rb')
+    RNAP_conc_df = pd.read_csv('../data/interim/sample_constants/RNAP_conc.csv', index_col = 0)
+    f = open('../data/interim/lambda_dfs/'+flags['central_gene']+'.pkl', 'rb')
     gene_lambda_df = pickle.load(f)
     f.close()
     

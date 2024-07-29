@@ -21,16 +21,17 @@ def create_data_for_gene(flags):
     # setup
     gene_figs = []
     eq_str = flags['eq_str']
+    save_folder = '../data/output/saved_gene_results/'+flags['central_gene']
     
     ############################################################
     # create mRNA ratios and MA values
     ############################################################
     df_name = flags['central_gene']+'_zerod'+str(flags['use_zerod_A_matrix'])+'_mRNA_ratios_and_MA_vals.csv'
     if not flags['force_rerun'] and os.path.exists('../data/saved_mRNA_ratios_MA_vals/'+df_name):
-        ratios_df = pd.read_csv('../data/saved_mRNA_ratios_MA_vals/'+df_name, index_col = 0)
+        ratios_df = pd.read_csv('../data/processed/saved_mRNA_ratios_MA_vals/'+df_name, index_col = 0)
     else:
         ratios_df = mr.calculate_mRNA_ratios_and_MA_values(flags['act_iM'], flags['inh_iM'], flags)
-        ratios_df.to_csv('../data/saved_mRNA_ratios_MA_vals/'+df_name)
+        ratios_df.to_csv('../data/processed/saved_mRNA_ratios_MA_vals/'+df_name)
     if flags['sanity_plots']:
         # sanity check plot
         fig, axs = plt.subplots(1, 3, figsize = (10, 3))
@@ -51,42 +52,33 @@ def create_data_for_gene(flags):
         gene_figs.append(fig)
         plt.close(fig)
     if flags['only_create_ratios']:
-        # potentially save off results
-        if flags['save_results']:
-            # make save directory
-            if flags['save_gene_specific_results']:
-                save_folder = '../data/saved_gene_results/'+flags['central_gene']
-                if os.path.exists(save_folder):
-                    shutil.rmtree(save_folder)
-            else:
-                save_folder = flags['save_results_folder']+'/'+flags['central_gene']
-            os.mkdir(save_folder)
+        # save off results
+        if os.path.exists(save_folder):
+            shutil.rmtree(save_folder)
+        os.mkdir(save_folder)
 
-            # let's save off the relevant things in pickle
-            pickle_out = open(save_folder+'/figures.pkl', 'wb')
-            pickle.dump(gene_figs, pickle_out)
-            pickle_out.close()
+        # let's save off the relevant things in pickle
+        pickle_out = open(save_folder+'/figures.pkl', 'wb')
+        pickle.dump(gene_figs, pickle_out)
+        pickle_out.close()
 
-            pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
-            pickle.dump(ratios_df, pickle_out)
-            pickle_out.close()
+        pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
+        pickle.dump(ratios_df, pickle_out)
+        pickle_out.close()
+        
         return(gene_figs)
     
     ############################################################
     # create lambda dfs for various calculations --- very slow
     ############################################################
-    if not flags['force_basal_rerun'] and (not flags['run_basal_calculations'] and os.path.exists('../data/lambda_dfs/'+flags['central_gene']+'.pkl')):
-        pass # this used to be passed to other functions, but is now just loaded directly 
-        #f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'rb')
-        #lambdas_df = pickle.load(f)
-        #f.close()
-    else:
+    lambda_df_path = '../data/interim/lambda_dfs/'+flags['central_gene']+'.pkl'
+    if flags['force_basal_rerun'] or not os.path.exists(lambda_df_path):
         # load in
-        if os.path.exists('../data/lambdas_df.pkl'):
-            lambdas_df = pd.read_pickle('../data/lambda_dfs/'+flags['central_gene']+'.pkl')
+        if os.path.exists(lambda_df_path):
+            lambdas_df = pd.read_pickle(lambda_df_path)
         else:
             lambdas_df = pd.DataFrame(index = ratios_df.index)
-        RNAP_conc_df = pd.read_csv('../data/RNAP_conc.csv', index_col = 0)
+        RNAP_conc_df = pd.read_csv('../data/interim/sample_constants/RNAP_conc.csv', index_col = 0)
         
         # calculate gene specific grid constants
         num_grid_steps = 3 
@@ -110,7 +102,7 @@ def create_data_for_gene(flags):
         lambdas_df[flags['central_gene']] = new_col
         
         # save it
-        f = open('../data/lambda_dfs/'+flags['central_gene']+'.pkl', 'wb')
+        f = open(lambda_df_path, 'wb')
         pickle.dump(lambdas_df, f)
         f.close()
     
@@ -118,7 +110,7 @@ def create_data_for_gene(flags):
     # pick KdRNAPCrp value, limit cActivator and cInhibitor based on it
     ############################################################
     # load in calculator
-    gene_grid_name = '../data/gene_grid_constants/'+flags['central_gene']+'.pkl'
+    gene_grid_name = '../data/interim/gene_grid_constants/'+flags['central_gene']+'.pkl'
     if flags['only_check_KdRNAPCrp'] or flags['force_rerun'] or not os.path.exists(gene_grid_name):  
         # basal model calculations
         num_grid_steps = 3
@@ -222,30 +214,25 @@ def create_data_for_gene(flags):
             pass
             # this means something went wrong in creating the range, presumably because cInh or cAct contains non-finite values
     if flags['only_check_KdRNAPCrp']:
-        # potentially save off results
-        if flags['save_results']:
-            # let's create our gene specific folder within runs
-            if flags['save_gene_specific_results']:
-                save_folder = '../data/saved_gene_results/'+flags['central_gene']
-                if os.path.exists(save_folder):
-                    shutil.rmtree(save_folder)
-            else:
-                save_folder = flags['save_results_folder']+'/'+flags['central_gene']
-            os.mkdir(save_folder)
-            
-            # save off constants used
-            pickle_out = open(save_folder+'/constants.pkl', 'wb')
-            pickle.dump(grid_constants, pickle_out)
-            pickle_out.close()
+        # save off results
+        if os.path.exists(save_folder):
+            shutil.rmtree(save_folder)
+        os.mkdir(save_folder)
 
-            # let's save off the relevant things in pickle
-            pickle_out = open(save_folder+'/figures.pkl', 'wb')
-            pickle.dump(gene_figs, pickle_out)
-            pickle_out.close()
+        # save off constants used
+        pickle_out = open(save_folder+'/constants.pkl', 'wb')
+        pickle.dump(grid_constants, pickle_out)
+        pickle_out.close()
 
-            pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
-            pickle.dump(ratios_df, pickle_out)
-            pickle_out.close()
+        # let's save off the relevant things in pickle
+        pickle_out = open(save_folder+'/figures.pkl', 'wb')
+        pickle.dump(gene_figs, pickle_out)
+        pickle_out.close()
+
+        pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
+        pickle.dump(ratios_df, pickle_out)
+        pickle_out.close()
+        
         return(gene_figs)
     
     ############################################################
@@ -295,43 +282,38 @@ def create_data_for_gene(flags):
     for fig in return_figs:
         gene_figs.append(fig)
     
-    # potentially save off results
-    if flags['save_results']:
-        # let's create our gene specific folder within runs
-        if flags['save_gene_specific_results']:
-            save_folder = '../data/saved_gene_results/'+flags['central_gene']
-        else:
-            save_folder = flags['save_results_folder']+'/'+flags['central_gene']
-            
-        # create folder if need be
-        if not os.path.exists(save_folder):
-            os.mkdir(save_folder)
-            
-        # save off constants used
-        pickle_out = open(save_folder+'/constants.pkl', 'wb')
-        pickle.dump(grid_constants, pickle_out)
-        pickle_out.close()
+    ############################################################
+    # save off results
+    ############################################################
+    if os.path.exists(save_folder):
+        shutil.rmtree(save_folder)
+    os.mkdir(save_folder)
 
-        # let's save off the relevant things in pickle
-        pickle_out = open(save_folder+'/figures.pkl', 'wb')
-        pickle.dump(gene_figs, pickle_out)
-        pickle_out.close()
+    # save off constants used
+    pickle_out = open(save_folder+'/constants.pkl', 'wb')
+    pickle.dump(grid_constants, pickle_out)
+    pickle_out.close()
 
-        pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
-        pickle.dump(ratios_df, pickle_out)
-        pickle_out.close()
+    # let's save off the relevant things in pickle
+    pickle_out = open(save_folder+'/figures.pkl', 'wb')
+    pickle.dump(gene_figs, pickle_out)
+    pickle_out.close()
 
-        pickle_out = open(save_folder+'/cAct_cInh.pkl', 'wb')
-        pickle.dump(cAct_cInh_df, pickle_out)
-        pickle_out.close()
+    pickle_out = open(save_folder+'/ratios_df.pkl', 'wb')
+    pickle.dump(ratios_df, pickle_out)
+    pickle_out.close()
 
-        if flags['run_greedy']:
-            try:
-                pickle_out = open(save_folder+'/greedy_cAct_cInh.pkl', 'wb')
-                pickle.dump(greedy_cAct_cInh_df, pickle_out)
-                pickle_out.close()
-            except:
-                pass # Greedy sometimes not run, just don't save if the case
-        
+    pickle_out = open(save_folder+'/cAct_cInh.pkl', 'wb')
+    pickle.dump(cAct_cInh_df, pickle_out)
+    pickle_out.close()
 
+    if flags['run_greedy']:
+        try:
+            pickle_out = open(save_folder+'/greedy_cAct_cInh.pkl', 'wb')
+            pickle.dump(greedy_cAct_cInh_df, pickle_out)
+            pickle_out.close()
+        except:
+            pass # Greedy sometimes not run, just don't save if the case
+    
+    
     return(gene_figs)
