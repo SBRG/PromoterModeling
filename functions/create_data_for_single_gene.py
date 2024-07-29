@@ -238,8 +238,8 @@ def create_data_for_gene(flags):
     ############################################################
     # determine cActivator and cInhibior values, and greedy
     ############################################################
-    greedy_path = '../data/cAct_cInh_vals/'+flags['central_gene']+'_greedy.pkl'
-    norm_path = '../data/cAct_cInh_vals/'+flags['central_gene']+'.pkl'
+    greedy_path = '../data/processed/cAct_cInh_vals/'+flags['central_gene']+'_greedy.pkl'
+    norm_path = '../data/processed/cAct_cInh_vals/'+flags['central_gene']+'.pkl'
     return_figs = []
     if flags['force_rerun']:
         return_figs, greedy_cAct_cInh_df, cAct_cInh_df = cv.create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags)
