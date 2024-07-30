@@ -6,7 +6,7 @@ data/saved_run_results/*
 #data/lambda_dfs/*
 #data/gene_grid_constants/*
 #data/cAct_cInh_vals/*
-figures/*/*.gif
+figures/*
 *.lst
 
 # Byte-compiled / optimized / DLL files
