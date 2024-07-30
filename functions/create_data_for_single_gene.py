@@ -21,7 +21,10 @@ def create_data_for_gene(flags):
     # setup
     gene_figs = []
     eq_str = flags['eq_str']
-    save_folder = '../data/output/saved_gene_results/'+flags['central_gene']
+    if 'hard_set_save_folder' in flags:
+        save_folder = flags['hard_set_save_folder']
+    else:
+        save_folder = '../data/output/saved_gene_results/'+flags['central_gene']
     
     ############################################################
     # create mRNA ratios and MA values

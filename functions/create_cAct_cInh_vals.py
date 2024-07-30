@@ -32,10 +32,7 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
             lambda_df = gene_lambda_df.loc[index].values[0]
             lambda_df['lambda'] = [lambdify([lambda_df.loc[index,'order']], lambda_df.loc[index,'equation']) for index in lambda_df.index]
             indices.append(index)
-            if flags['use_actual_mRNA']:
-                mRNA = row['actual_mRNA_ratio']
-            else:
-                mRNA = row['ratio_MA_inhibitor']
+            mRNA = row['ratio_MA_inhibitor']
             temp2 = temp.copy()
             temp2.update({'mRNARatio' : mRNA})
             inputs = tuple([temp2[p] for p in lambda_df.loc['cInhibitor','order']])
@@ -70,10 +67,7 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
             lambda_df = gene_lambda_df.loc[index].values[0]
             lambda_df['lambda'] = [lambdify([lambda_df.loc[index,'order']], lambda_df.loc[index,'equation']) for index in lambda_df.index]
             indices.append(index)
-            if flags['use_actual_mRNA']:
-                mRNA = row['actual_mRNA_ratio']
-            else:
-                mRNA = row['ratio_MA_activator']
+            mRNA = row['ratio_MA_activator']
             temp2 = temp.copy()
             temp2.update({'mRNARatio' : mRNA})
             inputs = tuple([temp2[p] for p in lambda_df.loc['cActivator','order']])
