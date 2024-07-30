@@ -1,11 +1,10 @@
 # Project specific
 GAMs/runs/*r*
 GAMs/225a/
-data/saved_run_results/*
-#data/saved_mRNA_ratios_MA_vals/*
-#data/lambda_dfs/*
-#data/gene_grid_constants/*
-#data/cAct_cInh_vals/*
+data/processed/saved_mRNA_ratios_MA_vals/*
+data/processed/cAct_cInh_vals/*
+data/interim/lambda_dfs/*
+data/interim/gene_grid_constants/*
 figures/*
 *.lst
 
