@@ -1,6 +1,6 @@
 # Project specific
-GAMs/runs/*r*
-GAMs/225a/
+GAMS/runs/*
+GAMS/225a/
 data/processed/saved_mRNA_ratios_MA_vals/*
 data/processed/cAct_cInh_vals/*
 data/interim/lambda_dfs/*
