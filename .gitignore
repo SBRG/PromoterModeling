@@ -1,11 +1,5 @@
 # Project specific
-GAMS/runs/*
 GAMS/225a/
-data/processed/saved_mRNA_ratios_MA_vals/*
-data/processed/cAct_cInh_vals/*
-data/interim/lambda_dfs/*
-data/interim/gene_grid_constants/*
-figures/*
 *.lst
 
 # Byte-compiled / optimized / DLL files
