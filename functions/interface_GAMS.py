@@ -146,6 +146,13 @@ def run_multi_GAMS(flags_df, TF_flags_df, stable_flags, cell_constants, GAMS_run
             act_df[gene_name] = pd.read_pickle('../data/processed/cAct_cInh_vals/'+file)['cAct'].loc[act_df.index].values
             inh_df[gene_name] = pd.read_pickle('../data/processed/cAct_cInh_vals/'+file)['cInh'].loc[inh_df.index].values
     
+    # pick samples to use
+    samples_use = act_df.index.to_list()
+    if 'small_dataset' in stable_flags and stable_flags['small_dataset'] == True:
+        samples_use = samples_use[::-1][0:50]
+    act_df = act_df.loc[samples_use]
+    inh_df = inh_df.loc[samples_use]
+    
     # save off max values for scaling objective functions
     vals = []
     for col in act_df.columns:
@@ -327,15 +334,15 @@ def run_multi_GAMS(flags_df, TF_flags_df, stable_flags, cell_constants, GAMS_run
     # run GAMS
     ############################################################
     # call GAMS
-    shutil.copyfile('../GAMs/conopt.opt', GAMS_run_dir+'/conopt.opt')
+    shutil.copyfile('../GAMS/conopt.opt', GAMS_run_dir+'/conopt.opt')
     if platform.system() == 'Windows':
         gams_loc =  r'"C:\GAMS\win64\28.2\gams.exe"' # zzz shouldn't be hard set like this, but for now this is fine
 
-        shutil.copyfile('../GAMs/merged_iMs_model.gms', GAMS_run_dir+'/combined_model.gms')
+        shutil.copyfile('../GAMS/merged_iMs_model.gms', GAMS_run_dir+'/combined_model.gms')
         _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMS_run_dir, shell=True)
     else:
 
-        shutil.copyfile('../GAMs/merged_iMs_model.gms', GAMS_run_dir+'/combined_model.gms')
+        shutil.copyfile('../GAMS/merged_iMs_model.gms', GAMS_run_dir+'/combined_model.gms')
         if stable_flags['supress_output']:
             _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMS_run_dir)
         else:
