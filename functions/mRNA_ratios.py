@@ -41,13 +41,13 @@ def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
     if input_parameters['remove_outliers']:
         dict_path = '../data/interim/misc_dictionaries/case_to_mRNA_passed.pkl'
         if os.path.exists(dict_path):
-            pickle_in = open('../data/case_to_mRNA_passed.pkl', 'rb')
+            pickle_in = open(dict_path, 'rb')
             case_to_mRNA_passed = pickle.load(pickle_in)
             pickle_in.close()
         else:
             case_to_mRNA_passed = {}
         
-        case = '___'.join([str(iM) for iM in [iM_act, iM_inh]]).replace(' ', '_').replace('/', '_')
+        case = '__'.join([str(iM) for iM in [iM_act, iM_inh]]).replace(' ', '_').replace('/', '_')
         if case in case_to_mRNA_passed:
             passed = case_to_mRNA_passed[case]
             for cond in basal_conditions:

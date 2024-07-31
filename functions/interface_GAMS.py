@@ -1,4 +1,4 @@
-# run GAMs, need to test, move to outside .py file
+# run GAMs
 import subprocess
 import os
 import pandas as pd
@@ -149,7 +149,23 @@ def run_multi_GAMS(flags_df, TF_flags_df, stable_flags, cell_constants, GAMS_run
     # pick samples to use
     samples_use = act_df.index.to_list()
     if 'small_dataset' in stable_flags and stable_flags['small_dataset'] == True:
-        samples_use = samples_use[::-1][0:50]
+        stationary_samples = ['starve_series__t00_growth1',
+            'starve_series__t01_starve',
+            'starve_series__t22_growth2',
+            'starve_series__t23_growth2',
+            'starve_series__t27_growth2',
+            'starve_series__t28_growth2',
+            'starve_series__t06_starve',
+            'starve_series__t08_starve',
+            'starve_series__t09_starve',
+            'starve_series__t10_starve',
+            'starve_series__t11_starve',
+            'starve_series__t12_starve',
+            'starve_series__t16_starve',
+            'starve_series__t17_starve',
+            'starve_series__t18_starve',]
+    
+        samples_use = samples_use[::-1][0:35]+stationary_samples
     act_df = act_df.loc[samples_use]
     inh_df = inh_df.loc[samples_use]
     
