@@ -2,7 +2,7 @@
 Sequence-based ML models of gene regulation
 
 # How to get started
-1. Install necessary packages - XXX figure out a way to list them all
+1. Install necessary packages - requirements.txt contains all packages used in a functioning environment, although many of these are possibly unnecessary.
 *Note - All files are already included for utilizing P1K (E. coli iModulons). If wanting to use these, skip to step 3.
 
 2. Download external data files, move to data/external/. These include:
