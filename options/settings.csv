@@ -1,4 +1,4 @@
 Option,Setting,Notes
 TF_flags_filepath,../options/TF_flags/test_TF_flags.csv,
-gene_flags_filepath,../options/gene_flags/test_gene_flags.csv',
+gene_flags_filepath,../options/gene_flags/test_gene_flags.csv,
 GAMS_executable_path,,"If empty, assumes callable from command line as ""gams"""
