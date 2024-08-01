@@ -1,9 +1,30 @@
+"""
+Creates mRNA ratio values and MA values for a specific gene
+
+Functions:
+calculate_mRNA_ratios_and_MA_values - Inputs iModulons and flags to create mRNA ratio values and MA values for a specific gene
+
+"""
+
+# imports
 import pandas as pd
 import numpy as np
 import pickle
 import os
 
 def calculate_mRNA_ratios_and_MA_values(iM_act, iM_inh, input_parameters):
+    """
+    Inputs an equation string, settings flags, and number of steps, outputs various possible basal solutions
+    
+    Inputs:
+        iM_act (string) : activating iModulon
+        iM_inh (string) : inhibiting iModulon
+        input_parameters (int) : dictionary of settings flags and constants values, contains central gene to run on
+    
+    Returns:
+        values_df (dataframe) : contains mRNA ratios and MA values for a specific gene
+    """
+        
     # unload flags
     gene = input_parameters['central_gene']
     use_zerod_A_matrix = input_parameters['use_zerod_A_matrix']

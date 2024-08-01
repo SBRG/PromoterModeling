@@ -1,4 +1,12 @@
-# import statements
+"""
+Contains a function which creates all necessary data files for GAMS for a specific gene
+
+Functions:
+create_data_for_gene - Inputs flags to generate all necessary data files to run GAMS for a specific gene
+
+"""
+
+# imports
 import os
 import dill as pickle
 import math
@@ -7,7 +15,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import shutil
 from sympy import *
-
 import sys
 sys.path.insert(0, '../functions/')
 import basal_model_calcs as bmc
@@ -18,6 +25,16 @@ import interface_GAMS as iG
 
 
 def create_data_for_gene(flags):
+    """
+    Inputs flags to generate all necessary data files to run GAMS for a specific gene. Generates mRNA ratios, lambda_dfs, calculates KdRNAPActivator, creates greedy and standard cActivator and cInhibitor values, saves off to various data folders
+    
+    Inputs:
+        flags (dict) : dictionary of settings flags and constants values
+    
+    Returns:
+        gene_figs (array) : set of figures used as sanity check on production of necessary values for GAMS
+    """
+        
     # setup
     gene_figs = []
     eq_str = flags['eq_str']
@@ -110,20 +127,20 @@ def create_data_for_gene(flags):
         f.close()
     
     ############################################################
-    # pick KdRNAPCrp value, limit cActivator and cInhibitor based on it
+    # pick KdRNAPActivator value, limit cActivator and cInhibitor based on it
     ############################################################
     # load in calculator
     gene_grid_name = '../data/interim/gene_grid_constants/'+flags['central_gene']+'.pkl'
-    if flags['only_check_KdRNAPCrp'] or flags['force_rerun'] or not os.path.exists(gene_grid_name):  
+    if flags['only_check_KdRNAPAct'] or flags['force_rerun'] or not os.path.exists(gene_grid_name):  
         # basal model calculations
         num_grid_steps = 3
         if 'grid_steps' in flags:
             num_grid_steps = flags['grid_steps']
         grid_constants = bmc.basal_values(eq_str, flags, num_steps = num_grid_steps)
 
-        # pick KdRNAPCrp
+        # pick KdRNAPAct
         po.create_shared_lambda_df(eq_str, grid_constants)
-        grid_constants['KdRNAPCrp'], ret_figs = po.pick_KdRNAPCrp(ratios_df, flags)
+        grid_constants['KdRNAPAct'], ret_figs = po.pick_KdRNAPActivator(ratios_df, flags)
         for temp in ret_figs:
             gene_figs.append(temp)
 
@@ -149,8 +166,8 @@ def create_data_for_gene(flags):
         # however, it is a sanity check to see if these values are near-correct
         rat_vals = np.linspace(min(ratios_df['actual_mRNA_ratio'].values.flatten()), max(ratios_df['actual_mRNA_ratio'].values.flatten()), 1000)
         # calculate cInh and cAct
-        cInh_vals = [po.mRNA_cActivator_to_cInhibitor(rat_val, flags['base_cActivator_val'], grid_constants['KdRNAPCrp']) for rat_val in rat_vals]
-        cAct_vals = [po.mRNA_cInhibitor_to_cActivator(rat_val, flags['base_cInhibitor_val'], grid_constants['KdRNAPCrp']) for rat_val in rat_vals]
+        cInh_vals = [po.mRNA_cActivator_to_cInhibitor(rat_val, flags['base_cActivator_val'], grid_constants['KdRNAPAct']) for rat_val in rat_vals]
+        cAct_vals = [po.mRNA_cInhibitor_to_cActivator(rat_val, flags['base_cInhibitor_val'], grid_constants['KdRNAPAct']) for rat_val in rat_vals]
 
         fig, axs = plt.subplots(1, 2, figsize = (8, 3))
         ax1 = axs[0]
@@ -197,7 +214,7 @@ def create_data_for_gene(flags):
         mRNA_vals = pd.DataFrame(index = cInh_range, columns = cAct_range)
         for cInh in mRNA_vals.index:
             for cAct in mRNA_vals.columns:
-                mRNA_vals.loc[cInh][cAct] = po.cActivator_cInhibitor_to_mRNA(cAct, cInh, grid_constants['KdRNAPCrp'])
+                mRNA_vals.loc[cInh][cAct] = po.cActivator_cInhibitor_to_mRNA(cAct, cInh, grid_constants['KdRNAPAct'])
         mRNA_vals = mRNA_vals.T.astype(float)
 
         # Convert the cInh_range and cAct_range to meshgrids for plotting
@@ -216,7 +233,7 @@ def create_data_for_gene(flags):
         except:
             pass
             # this means something went wrong in creating the range, presumably because cInh or cAct contains non-finite values
-    if flags['only_check_KdRNAPCrp']:
+    if flags['only_check_KdRNAPAct']:
         # save off results
         if os.path.exists(save_folder):
             shutil.rmtree(save_folder)
@@ -245,7 +262,7 @@ def create_data_for_gene(flags):
     norm_path = '../data/processed/cAct_cInh_vals/'+flags['central_gene']+'.pkl'
     return_figs = []
     if flags['force_rerun']:
-        return_figs, greedy_cAct_cInh_df, cAct_cInh_df = cv.create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags)
+        return_figs, greedy_cAct_cInh_df, cAct_cInh_df = cv.create_cAct_cInh_for_gene(ratios_df, grid_constants, flags)
         if flags['run_greedy']:
             pickle_out = open(greedy_path, 'wb')
             pickle.dump(greedy_cAct_cInh_df, pickle_out)
@@ -270,7 +287,7 @@ def create_data_for_gene(flags):
             greedy_cAct_cInh_df = pickle.load(pickle_in)
             pickle_in.close()
         else: # need to rerun
-            return_figs, greedy_cAct_cInh_df, cAct_cInh_df = cv.create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags)
+            return_figs, greedy_cAct_cInh_df, cAct_cInh_df = cv.create_cAct_cInh_for_gene(ratios_df, grid_constants, flags)
             if flags['run_greedy']:
                 pickle_out = open(greedy_path, 'wb')
                 pickle.dump(greedy_cAct_cInh_df, pickle_out)

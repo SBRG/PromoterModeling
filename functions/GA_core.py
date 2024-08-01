@@ -1,3 +1,11 @@
+"""
+Contains functions pertaining to the genetic alogirithm which calculates cActivator and cInhibitor values when both an activator and inhibitor exists.
+
+Functions:
+Well described in their various definitions, Griff Hughes made these functions and I don't feel qualified to write his descriptions for him.
+
+"""
+
 # Modules
 import numpy as np
 import pandas as pd

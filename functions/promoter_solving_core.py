@@ -1,3 +1,11 @@
+"""
+Contains functions pertaining to the solvoing and evaluating lambda functions utilizing sympy
+
+Functions:
+Well described in their various definitions, Griff Hughes made these functions and I don't feel qualified to write his descriptions for him.
+
+"""
+
 # Modules
 import numpy as np
 import pandas as pd
@@ -112,7 +120,6 @@ def calculate_minimum_escape(
         'KdRNAP': input_range['KdRNAP'][1], # Max k_d_RNAP
         'mRNA': mRNA_target,
         #'cActivator': input_range['cActivator'][1],
-        #'KdRNAPCrp': input_range['KdRNAPCrp'][1],
     }
 
     min_k_escape = evaluate_lambda('kEscape',lambda_df,values)

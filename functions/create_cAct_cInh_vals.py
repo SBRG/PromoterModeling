@@ -1,4 +1,12 @@
-# determine cActivator and cInhibior values
+"""
+Contains a function which creates cActivator and cInhibitor values for a specific gene
+
+Functions:
+create_cAct_cInh_for_gene - Inputs mRNA ratios, basal constants, an equation string, and flags to generate cActivator and cInhibitor values for a gene
+
+"""
+
+# imports
 import pandas as pd
 import numpy as np
 from sympy import *
@@ -10,7 +18,21 @@ import GA_core as ga
 import matplotlib.pyplot as plt
 import dill as pickle
 
-def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
+def create_cAct_cInh_for_gene(ratios_df, grid_constants, flags):
+    """
+    Inputs mRNA ratios, basal constants, an equation string, and flags to generate cActivator and cInhibitor values for a gene
+    
+    Inputs:
+        ratios_df (dataframe) : mRNA ratio values for a specific gene across samples modeled
+        grid_constants (dict) : dictionary of returned basal constants
+        flags (dict) : dictionary of settings flags and constants values
+    
+    Returns:
+        return_figs (array) : set of figures generated to use as sanity checks
+        greed_vals_for_GAMs (dataframe) : cAct and cInh values optimized by the greedy optimization
+        vals_for_GAMs (dataframe) : cAct and cInh values not optimized by the greedy optimization
+    """
+        
     return_figs = []
     
     # now setting RNAP concentration specific to sample
@@ -58,7 +80,6 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
         return(return_figs, vals_for_GAMs, vals_for_GAMs)
     if type(flags['inh_iM']) == float:
         # very similar to above just flipped
-        #lambda_df = ps.create_lambdas(eq_str, grid_constants)
         temp = grid_constants.copy()
         temp.update({'cInhibitor' : flags['base_cInhibitor_val']})
         cActivators = []
@@ -100,10 +121,6 @@ def create_cAct_cInh_for_gene(ratios_df, grid_constants, eq_str, flags):
     # DataFrame to hold the Grid
     grid = pd.DataFrame(columns = ['mRNA_ratio','grid'], index = ratios_df.index)
     grid.loc[:,'mRNA_ratio'] = ratios_df.loc[:,'actual_mRNA_ratio']
-
-    # Load the equation
-    # NOTE: This equation was generated using Mathematica and Dan's Mathematica to Python converter function
-    equation = sympify(eq_str)
 
 
     # If both exist, need to get GA going    

@@ -1,4 +1,12 @@
-# run GAMs
+"""
+Contains functions pertaining to the running and reading of GAMS
+
+Functions:
+run_multi_GAMS - Runs GAMS on all genes at once of a specific regulatory case
+read_multi_GAMs - Reads GAMS results on all genes at once of a specific regulatory case
+"""
+
+# imports
 import subprocess
 import os
 import pandas as pd
@@ -9,6 +17,7 @@ import platform
 import itertools
 
 
+# something that likely needs to be changed if moving away from E. coli
 iM_to_b_regulator = {
     'Purine' : ['b1658'], 
     'Sugar Diacid': ['b0162'],
@@ -69,7 +78,23 @@ iM_to_b_regulator = {
 }
 
 
-def run_multi_GAMS(flags_df, TF_flags_df, stable_flags, cell_constants, GAMS_run_dir, parameter_flags = None):
+def run_multi_GAMS(flags_df, TF_flags_df, stable_flags, cell_constants, GAMS_run_dir, GAMS_exec = 'gams', parameter_flags = None):
+    """
+    Inputs various flags and constants, runs GAMS, saves to directed folder.
+    
+    Inputs:
+        flags_df (dict) : settings flags specific to the genes
+        TF_flags_df (dict) : settings flags specific to the regulators
+        stable_flags (dict) : dictionary of settings flags
+        cell_constants (dict) : set of biological constants
+        GAMS_run_dir (string) : output location for GAMS run
+        GAMS_exec (string) : path to GAMS executable, if not set defaults to assume GAMS can be called from command line by "gams"
+        parameter_flags (dict) : overwrites default parameters if set
+    
+    Returns:
+        None
+    """
+    
     ############################################################
     # save input parameters
     ############################################################
@@ -357,14 +382,31 @@ def run_multi_GAMS(flags_df, TF_flags_df, stable_flags, cell_constants, GAMS_run
         shutil.copyfile('../GAMS/merged_iMs_model.gms', GAMS_run_dir+'/combined_model.gms')
         _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMS_run_dir, shell=True)
     else:
-
         shutil.copyfile('../GAMS/merged_iMs_model.gms', GAMS_run_dir+'/combined_model.gms')
         if stable_flags['supress_output']:
-            _ = subprocess.call('gams combined_model > /dev/null', shell = True, cwd = GAMS_run_dir)
+            _ = subprocess.call(GAMS_exec+' combined_model > /dev/null', shell = True, cwd = GAMS_run_dir)
         else:
-            _ = subprocess.call('gams combined_model', shell = True, cwd = GAMS_run_dir)
+            _ = subprocess.call(GAMS_exec+' combined_model', shell = True, cwd = GAMS_run_dir)
 
 def read_multi_GAMs(GAMS_run_dir):
+    """
+    Reads GAMS results from specific folder
+    
+    Inputs:
+        GAMS_run_dir (string) : output location from a past GAMS run
+    
+    Returns:
+        mRNA_ratio_df (dataframe) : mRNA ratio dataframe used as input for GAMS
+        GAMS_cAct (dataframe) : cActivator values output from GAMS
+        act_kd_df (dataframe) : activator Kd values output from GAMS
+        act_metab (dataframe) : activator metabolite concentrations output from GAMS
+        act_kd_metab_df (dataframe) : activator metabolite Kd values output from GAMS
+        GAMS_cInh (dataframe) : cInhibitor values output from GAMS
+        inh_kd_df (dataframe) : inhibitor Kd values output from GAMS
+        inh_metab (dataframe) : inhibitor metabolite concentrations output from GAMS
+        inh_kd_metab_df (dataframe) : inhibitor metabolite Kd values output from GAMS
+        
+    """
     # look at GAMs results
     
     # inputs

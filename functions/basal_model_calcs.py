@@ -1,4 +1,12 @@
-# basal model calculations
+"""
+Contains functions pertaining to the calculation of basal constants for the transcriptomic model.
+
+Functions:
+basal_values - Inputs an equation string, settings flags, and number of steps, outputs various possible basal solutions
+
+"""
+
+# imports
 import sys
 sys.path.insert(0, '../functions/')
 from sympy import *
@@ -8,6 +16,17 @@ import numpy as np
 
 # In the future, when we move towards a promoter based model, this code will need to be replaced with promoter specific calculations
 def basal_values(eq_str, flags, num_steps = 3):
+    """
+    Inputs an equation string, settings flags, and number of steps, outputs various possible basal solutions
+    
+    Inputs:
+        eq_str (string) : sypmy-friendly equation
+        flags (dict) : dictionary of settings flags and constants values
+        num_steps (int) : number of iterations of solutions for the basal values, total number of solutions will be equal to num_steps**2
+    
+    Returns:
+        grid_constants (dict) : dictionary of returned basal constants
+    """
 
     # Define constants
     log_test = {
