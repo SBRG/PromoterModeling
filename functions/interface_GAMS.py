@@ -191,6 +191,7 @@ def run_multi_GAMS(flags_df, TF_flags_df, stable_flags, cell_constants, GAMS_run
             'starve_series__t18_starve',]
     
         samples_use = samples_use[::-1][0:35]+stationary_samples
+        samples_use = list(set(samples_use).intersection(act_df.index).intersection(inh_df.index))
     act_df = act_df.loc[samples_use]
     inh_df = inh_df.loc[samples_use]
     
