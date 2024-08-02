@@ -1,5 +1,5 @@
 # regulonML
-Sequence-based ML models of gene regulation
+Constraint-based mathematical models of gene regulation. See biorxiv for details - https://doi.org/10.1101/2024.05.30.596718
 
 # How to get started
 1. Install necessary packages - requirements.txt contains all packages used in a functioning environment, although many of these are possibly unnecessary.
