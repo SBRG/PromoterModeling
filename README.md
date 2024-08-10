@@ -83,10 +83,10 @@ conda create --name PromoterModeling --file ./requirements.txt
 
 # Notes
 - Test flags exist in the options/ folders and are the default to run, they will not generate good models but will validate that the code is working.
-- Full flags also exist in the options/ folder to create models for the all of the best cases of P1K.
+- More complete flags exist in the **options/** folder to create models for the all of the best cases of P1K.
 - A full GAMS license is likely required for any models of notable scale (more than ~100 samples).
-- **4_various_tools** contains a few niche use conversion programs, primarily for interfacing between mathematica, GAMS, and python.
-- This code and pipeline were developed for analysis of the P1K dataset and *E. coli*. Additional modifications will likely be necessary to adapt this model to other species.
+- **4_various_tools** contains a few niche use conversion functions, primarily for interfacing between mathematica, GAMS, and python.
+- This code and pipeline were developed for analysis of the P1K dataset and *E. coli*. Additional modifications may be necessary to adapt this model to other species.
 
 
 # Terminology
