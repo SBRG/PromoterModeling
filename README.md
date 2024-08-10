@@ -8,6 +8,7 @@ conda create --name PromoterModeling --file ./requirements.txt
 ```
 
 > [!NOTE] All files are already included for utilizing P1K (*E. coli* iModulons). If wanting to use these, skip to step 3.
+
 > [!NOTE] I first suggest using the small test set to make sure the code functions properly on your setup. The default settings are for this small test set, which can be started at step 4.
 
 2. Download external data files, move to **data/external/**. These include:
