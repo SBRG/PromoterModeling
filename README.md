@@ -7,9 +7,11 @@ Constraint-based mathematical models of gene regulation. This package predicts e
 conda create --name PromoterModeling --file ./requirements.txt
 ```
 
-> [!NOTE] All files are already included for utilizing P1K (*E. coli* iModulons). If wanting to use these, skip to step 3.
+> **Note**
+> All files are already included for utilizing P1K (*E. coli* iModulons). If wanting to use these, skip to step 3.
 
-> [!NOTE] I first suggest using the small test set to make sure the code functions properly on your setup. The default settings are for this small test set, which can be started at step 4.
+> [!NOTE]
+> I first suggest using the small test set to make sure the code functions properly on your setup. The default settings are for this small test set, which can be started at step 4.
 
 2. Download external data files, move to **data/external/**. These include:
       1. **data/imodulon_info/** - Needs to contain **A.csv**, **M.csv**, **iM_table.csv**, **log_tpm.csv**. Optionally can include **sample_table.csv** and **gene_info.csv** for use in some troubleshooting. Necessary files can most easily be found on https://imodulondb.org.
