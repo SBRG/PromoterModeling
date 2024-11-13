@@ -4,7 +4,7 @@ Constraint-based mathematical models of gene regulation. This package predicts e
 # How to use this package
 1. Install necessary packages - requirements.txt contains all packages used in a functioning environment.
 ```sh
-conda create --name PromoterModeling --file ./requirements.txt
+conda create --name PromoterModeling --file ./requirements.txt --channel bioconda
 ```
 
 > [!NOTE]
