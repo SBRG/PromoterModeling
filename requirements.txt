@@ -7,8 +7,6 @@ adjusttext=0.7.3.1=py_1
 aiofiles=22.1.0=pyhd8ed1ab_0
 aiosqlite=0.18.0=pyhd8ed1ab_0
 alsa-lib=1.2.8=h166bdaf_0
-altair=4.2.2=pypi_0
-anndata=0.8.0=pypi_0
 anyio=3.6.2=pyhd8ed1ab_0
 appdirs=1.4.4=pyh9f0ad1d_0
 argon2-cffi=21.3.0=pyhd3eb1b0_0
@@ -72,8 +70,6 @@ freetype=2.12.1=hca18f0e_1
 fribidi=1.0.10=h36c2ea0_0
 future=0.18.3=pyhd8ed1ab_0
 gdk-pixbuf=2.42.10=h05c8ddd_0
-gdxcc=8.33.2.post1=pypi_0
-gdxpds=1.4.0=pypi_0
 gettext=0.21.1=h27087fc_0
 gf2x=1.3.0=ha476b99_2
 giflib=5.2.1=h0b41bf4_3
@@ -91,7 +87,6 @@ gtk2=2.24.33=h90689f9_2
 gts=0.7.6=h64030ff_2
 h11=0.14.0=pyhd8ed1ab_0
 h2=4.1.0=pyhd8ed1ab_0
-h5py=3.8.0=pypi_0
 harfbuzz=6.0.0=h8e241bc_0
 hpack=4.0.0=pyh9f0ad1d_0
 httpcore=0.17.0=pyhd8ed1ab_0
@@ -205,9 +200,7 @@ libxkbcommon=1.5.0=h79f4944_1
 libxml2=2.10.3=hca2bb57_4
 libxslt=1.1.37=h873f0b0_0
 libzlib=1.2.13=h166bdaf_4
-line-profiler=4.1.2=pypi_0
 llvmlite=0.42.0=py310h1b8f574_1
-logomaker=0.8=pypi_0
 lxml=4.9.2=py310hbdc0903_0
 lz4-c=1.9.4=hcb278e6_0
 lzo=2.10=h516909a_1000
@@ -227,7 +220,6 @@ mpmath=1.3.0=pyhd8ed1ab_0
 munkres=1.1.4=pyh9f0ad1d_0
 mysql-common=8.0.32=ha901b37_1
 mysql-libs=8.0.32=hd7da12d_1
-natsort=8.3.1=pypi_0
 nbclassic=0.5.5=pyhb4ecaf3_1
 nbclient=0.7.3=pyhd8ed1ab_0
 nbconvert=7.3.1=pyhd8ed1ab_0
@@ -268,7 +260,6 @@ platformdirs=3.2.0=pyhd8ed1ab_0
 pluggy=1.0.0=pyhd8ed1ab_5
 ply=3.11=py_1
 pooch=1.7.0=pyha770c72_3
-prince=0.10.4=pypi_0
 prometheus_client=0.16.0=pyhd8ed1ab_0
 prompt-toolkit=3.0.38=pyha770c72_0
 prompt_toolkit=3.0.38=hd8ed1ab_0
@@ -283,7 +274,6 @@ pybind11-abi=4=hd8ed1ab_3
 pycosat=0.6.4=py310h5764c6d_1
 pycparser=2.21=pyhd8ed1ab_0
 pydantic=1.10.7=py310h1fa729e_0
-pydeseq2=0.3.1=pypi_0
 pygments=2.15.1=pyhd8ed1ab_0
 pymodulon=0.2.1=pyhd8ed1ab_0
 pyopenssl=23.1.1=pyhd8ed1ab_0
@@ -293,7 +283,6 @@ pyqt5-sip=12.11.0=py310heca2aa9_3
 pyrsistent=0.19.3=py310h1fa729e_0
 pysocks=1.7.1=pyha2e5f31_6
 python=3.10.10=he550d4f_0_cpython
-python-circos=0.3.0=pypi_0
 python-dateutil=2.8.2=pyhd8ed1ab_0
 python-fastjsonschema=2.16.3=pyhd8ed1ab_0
 python-graphviz=0.20.1=pyh22cad53_0
