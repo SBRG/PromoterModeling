@@ -1,0 +1,10 @@
+Query_ID	Target_ID	Optimal_offset	p-value	E-value	q-value	Overlap	Query_consensus	Target_consensus	Orientation
+STRGGTCAN	GlpR_20-5	-2	0.00038296	0.0371471	0.0726028	14	GAAATTTGAGCAAAAG	AATATGAGCAAAAACGAACA	+
+STRGGTCAN	FNR_17-11	-2	0.00170191	0.165086	0.161327	14	GAAATTTGAGCAAAAG	AAATTGATTTACATCAA	+
+STRGGTCAN	Fis_26-104	3	0.0041851	0.405955	0.264475	16	GAAATTTGAGCAAAAG	TCACAAAATTAATCAAAATTTTCAAT	-
+STRGGTCAN	Fis_26-32	12	0.00850619	0.825101	0.36038	14	GAAATTTGAGCAAAAG	GTTCTGTTGCTGAAAAAATAGCCAAA	+
+STRGGTCAN	Fis_26-109	-9	0.00950454	0.92194	0.36038	7	GAAATTTGAGCAAAAG	GCAATAAATTAGATTTAAAAGACGTT	+
+
+# Tomtom (Motif Comparison Tool): Version 5.3.3 compiled on Feb 21 2021 at 14:52:43
+# The format of this file is described at https://meme-suite.org/meme/doc/tomtom-output-format.html.
+# tomtom -no-ssc -oc . -verbosity 1 -min-overlap 5 -mi 1 -dist pearson -evalue -thresh 1.0 -xalph -incomplete-scores -time 300 Fnr-1_motif.txt db/ECOLI/SwissRegulon_e_coli.meme

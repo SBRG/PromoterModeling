@@ -1,0 +1,942 @@
+GLAM2: Gapped Local Alignment of Motifs
+Version 1056
+
+/home/meme/meme-5.1.1/bin/glam2 -Q -O . -M -2 -z 2 -a 2 -b 50 -w 20 -r 10 -n 2000 -D 0.1 -E 2.0 -I 0.02 -J 1.0 n nac.fasta
+Sequences: 42
+Greatest sequence length: 81
+Residue counts: a=2025 c=1377 g=1377 t=2025 N=0
+
+Score: 418.981  Columns: 21  Sequences: 40
+
+                **********..***********
+codB_TU_0    31 tttt.tatcttcag.atgaatag 51 + 3.79
+cynR_TU_0    33 aagtct.cat..tt.atg.atga 50 + 3.63
+feaR_TU_0    34 ttatgtctcta.tgcctg.acaa 54 + 17.2
+feaR_TU_1    16 ttatgtctcta.tgcctg.acaa 36 + 17.2
+feaR_TU_2    61 attt.t.tat..tg.ttgcattt 44 - 3.45
+feaR_TU_3    61 ttatgtctcta.tgcctg.acaa 81 + 17.2
+ydcS_TU_2    66 atatct.cct..tg.tttaacca 48 - 15.6
+ydcT_TU_2    66 atatct.cct..tg.tttaacca 48 - 15.6
+ydcU_TU_2    66 atatct.cct..tg.tttaacca 48 - 15.6
+ydcV_TU_2    66 atatct.cct..tg.tttaacca 48 - 15.6
+patD_TU_3    66 atatct.cct..tg.tttaacca 48 - 15.6
+shiA_TU_0    28 aaatga.ttttatggctg.atta  8 - 2.62
+nac_TU_0     29 attt.t.ggtg.ttgatgtacaa 10 - 9.09
+gabD_TU_0    54 gtttgtacct..tg.ctg.acaa 36 - 16.3
+gabD_TU_1    51 atatctacat..tt.ctgaaaaa 32 - 18.3
+gabD_TU_2    22 attcgccggg..tg.ctgcaaaa 41 + 9.26
+gabT_TU_0    54 gtttgtacct..tg.ctg.acaa 36 - 16.3
+gabT_TU_1    51 atatctacat..tt.ctgaaaaa 32 - 18.3
+gabT_TU_2    22 attcgccggg..tg.ctgcaaaa 41 + 9.26
+gabP_TU_0    54 gtttgtacct..tg.ctg.acaa 36 - 16.3
+gabP_TU_1    51 atatctacat..tt.ctgaaaaa 32 - 18.3
+gabP_TU_2    22 attcgccggg..tg.ctgcaaaa 41 + 9.26
+serA_TU_0    21 aattgtcgat..tgctctaaata 41 + 11.4
+serA_TU_1    42 tttt.t.gata.tg.ttgaaagg 60 + 5.97
+gltB_TU_0    35 gtat.cagct..ttcccg.ataa 53 + 10.8
+gltD_TU_0    35 gtat.cagct..ttcccg.ataa 53 + 10.8
+nanA_TU_0     9 ttat.aagct..tt.ctgtatgg 27 + 10.8
+nanA_TU_1     9 ttat.aagct..tt.ctgtatgg 27 + 10.8
+gspC_TU_0    46 taatgccgct..tgcatgaatca 26 - 20.5
+gspC_TU_1    50 taatgccgct..tgcatgaatca 30 - 20.5
+gspC_TU_2    21 taatgtatgtattt.attaatta 42 + 10.2
+gspE_TU_0    46 taatgccgct..tgcatgaatca 26 - 20.5
+gspE_TU_1    50 taatgccgct..tgcatgaatca 30 - 20.5
+gspE_TU_2    21 taatgtatgta.tttattaatta 42 + 10.6
+dppF_TU_0     7 aaatcccggt..tggctgtattg 27 + 16.7
+dppD_TU_0     7 aaatcccggt..tggctgtattg 27 + 16.7
+dppB_TU_0     7 aaatcccggt..tggctgtattg 27 + 16.7
+dppA_TU_0     7 aaatcccggt..tggctgtattg 27 + 16.7
+yieE_TU_0     8 taat.aagct..tgtctgaatcg 27 + 12.6
+asnA_TU_0    41 gttt.t.tgt..tg.cttaatca 58 + 11.0
+
+                atatgtcgct  tgcctgaataa
+                tat ccacg    tga tt ccg
+                       t       t    at 
+
+ a  c  g  t Del Ins Score
+20  0  6 14   0      14.0
+                  0 -0.123
+14  0  0 26   0      34.3
+                  0 -0.123
+27  0  1 12   0      30.3
+                  0 -0.123
+ 0  3  0 37   0      56.4
+                  0 -0.123
+ 0 13 17  0  10     -13.7
+                  0 -0.123
+ 4 13  0 23   0      18.9
+                  0 -0.123
+14 15  0  0  11     -16.7
+                  0 -0.123
+ 0 12 19  9   0      11.0
+                  0 -0.123
+ 7 21 11  1   0      8.80
+                  0 -0.123
+ 0  0  3 37   0      56.4
+                 12 -46.9
+ 1  0  0 39   0      65.2
+                  0 -0.123
+ 0  0 29 11   0      37.7
+                  0 -0.123
+ 0 10  6  2  22     -40.2
+                  0 -0.123
+ 9 23  0  8   0      15.3
+                  0 -0.123
+ 0  3  0 37   0      56.4
+                  0 -0.123
+ 0  0 31  9   0      40.9
+                  0 -0.123
+19  4  0  7  10     -22.9
+                  0 -0.123
+40  0  0  0   0      71.8
+                  0 -0.123
+ 8 12  0 20   0      12.2
+                  0 -0.123
+16 11  4  9   0     -2.71
+                  0 -0.123
+30  0  9  1   0      34.7
+
+Score: 415.273  Columns: 22  Sequences: 41
+
+                **********************
+codB_TU_0    41 ca.gatgaatagaatgcggcgg 61 + 6.17
+cynR_TU_0    39 ga.gacttttaccttatgacaa 19 - 7.93
+ompF_TU_0    30 gaa.acgttagtttgaatggaa 50 + 1.99
+feaR_TU_0    22 gac.aataaccgcttatgtctc 42 + 12.6
+feaR_TU_1     4 gac.aataaccgcttatgtctc 24 + 12.6
+feaR_TU_2    68 ga..aatgtatttttattgttg 49 - 12.1
+feaR_TU_3    49 gac.aataaccgcttatgtctc 69 + 12.6
+ydcS_TU_2    56 caaggagatatttttacggcac 77 + 19.8
+ydcT_TU_2    56 caaggagatatttttacggcac 77 + 19.8
+ydcU_TU_2    56 caaggagatatttttacggcac 77 + 19.8
+ydcV_TU_2    56 caaggagatatttttacggcac 77 + 19.8
+patD_TU_3    56 caaggagatatttttacggcac 77 + 19.8
+shiA_TU_0    55 ca.taaggttcgtttatagatc 75 + 12.3
+nac_TU_0     36 ca..gttttattttggtgttga 17 - 6.92
+gabD_TU_0    26 caataggaattgctgatgtcgc  5 - 16.4
+gabD_TU_1    47 ga.tatttttagattatggcta 67 + 13.4
+gabD_TU_2    81 ca..gcgagtttttcatctcgc 62 - 6.90
+gabT_TU_0    26 caataggaattgctgatgtcgc  5 - 16.4
+gabT_TU_1    47 ga.tatttttagattatggcta 67 + 13.4
+gabT_TU_2    81 ca..gcgagtttttcatctcgc 62 - 6.90
+gabP_TU_0    26 caataggaattgctgatgtcgc  5 - 16.4
+gabP_TU_1    47 ga.tatttttagattatggcta 67 + 13.4
+gabP_TU_2    81 ca..gcgagtttttcatctcgc 62 - 6.90
+serA_TU_0    81 caa.aggtaattcttggatgaa 61 - 5.62
+serA_TU_1    47 caa.aaaataatattgcggcaa 27 - 11.0
+gltB_TU_0    30 caa.atggcaagcttattggta 10 - 13.0
+gltD_TU_0    30 caa.atggcaagcttattggta 10 - 13.0
+nanA_TU_0    26 ca.tacagaaagcttataatgc  6 - 6.46
+nanA_TU_1    26 ca.tacagaaagcttataatgc  6 - 6.46
+gspC_TU_0    23 caa.aatttatttatattagta  3 - 17.1
+gspC_TU_1    27 caa.aatttatttatattagta  7 - 17.1
+gspC_TU_2    72 caa.aatttatttatattagta 52 - 17.1
+gspE_TU_0    23 caa.aatttatttatattagta  3 - 17.1
+gspE_TU_1    27 caa.aatttatttatattagta  7 - 17.1
+gspE_TU_2    72 caa.aatttatttatattagta 52 - 17.1
+dppF_TU_0    60 cacgaggggcattttatggagg 81 + 12.9
+dppD_TU_0    60 cacgaggggcattttatggagg 81 + 12.9
+dppB_TU_0    60 cacgaggggcattttatggagg 81 + 12.9
+dppA_TU_0    60 cacgaggggcattttatggagg 81 + 12.9
+yieE_TU_0    78 caagagtaatcatttactggaa 57 - 8.85
+asnA_TU_0    18 gaatgattattgcatgtgtgtc 39 + 10.7
+
+                caagaagatatttttatggctc
+                g ctggttatagc    ttgga
+                       g          a a 
+
+ a  c  g  t Del Ins Score
+ 0 31 10  0   0      40.8
+                  0 -0.124
+41  0  0  0   0      73.8
+                  0 -0.124
+21  7  0  0  13     -15.5
+                  0 -0.124
+ 0  0 12 10  19     -30.9
+                  0 -0.124
+31  0 10  0   0      40.8
+                  0 -0.124
+18  7  9  7   0     -3.26
+                  0 -0.124
+ 3  0 21 17   0      20.4
+                  0 -0.124
+17  0 10 14   0      9.87
+                  0 -0.124
+12  2  7 20   0      5.07
+                  0 -0.124
+20  7  0 14   0      13.3
+                  0 -0.124
+14  5  1 21   0      11.2
+                  0 -0.124
+ 1  1 16 23   0      22.2
+                  0 -0.124
+ 5 13  0 23   0      17.7
+                  0 -0.124
+ 8  0  0 33   0      44.5
+                  0 -0.124
+ 0  3  5 33   0      36.9
+                  0 -0.124
+36  0  5  0   0      51.8
+                  0 -0.124
+ 1  8  1 31   0      31.8
+                  0 -0.124
+ 4  3 23 11   0      8.82
+                  0 -0.124
+ 9  0 20 12   0      11.9
+                  0 -0.124
+ 5 20 12  4   0      2.98
+                  0 -0.124
+10  0 14 17   0      9.87
+                  0 -0.124
+17 18  6  0   0      13.9
+
+Score: 412.000  Columns: 22  Sequences: 41
+
+                *****.....*****************
+codB_TU_0     1 aaaaa.....tatatttccccacgaaa 22 + 7.70
+cynR_TU_0    40 tgagac....ttt.tacctt.atgaca 20 - 7.66
+ompF_TU_0    43 caaactaacgtttcgctacc.gtgaaa 18 - 2.70
+feaR_TU_0    52 caaga.....cttatttcctatagtca 73 + 16.6
+feaR_TU_1    34 caaga.....cttatttcctatagtca 55 + 16.6
+feaR_TU_2    49 caaca.....a.taaaaatacatttca 69 + 4.65
+feaR_TU_3    46 cgtgac....aataaccgcttatgtct 68 + 5.81
+ydcS_TU_2    71 taaaa.....a.tatctccttgtttaa 51 - 17.5
+ydcT_TU_2    71 taaaa.....a.tatctccttgtttaa 51 - 17.5
+ydcU_TU_2    71 taaaa.....a.tatctccttgtttaa 51 - 17.5
+ydcV_TU_2    71 taaaa.....a.tatctccttgtttaa 51 - 17.5
+patD_TU_3    71 taaaa.....a.tatctccttgtttaa 51 - 17.5
+nac_TU_0     48 caaga.....t.gcttgccagttttat 28 - 1.60
+gabD_TU_0    61 caacagcg..tttgtaccttgctgaca 37 - 11.4
+gabD_TU_1    56 taaaaa....tatctacatttctgaaa 34 - 19.3
+gabD_TU_2    37 caaaac....catctacgctcaggact 59 + 12.1
+gabT_TU_0    61 caacagcg..tttgtaccttgctgaca 37 - 11.4
+gabT_TU_1    56 taaaaa....tatctacatttctgaaa 34 - 19.3
+gabT_TU_2    37 caaaac....catctacgctcaggact 59 + 12.1
+gabP_TU_0    61 caacagcg..tttgtaccttgctgaca 37 - 11.4
+gabP_TU_1    56 taaaaa....tatctacatttctgaaa 34 - 19.3
+gabP_TU_2    37 caaaac....catctacgctcaggact 59 + 12.1
+serA_TU_0    49 taaaccag..catattcatccaagaat 73 + 7.58
+serA_TU_1    47 caaaa.....aat.aatattgcggcaa 27 - 5.72
+gltB_TU_0    23 caagc.....t.tattggta.cagaaa  4 - 7.47
+gltD_TU_0    23 caagc.....t.tattggta.cagaaa  4 - 7.47
+nanA_TU_0    76 taaacg....a.tatacctt.tatacc 56 - 8.74
+nanA_TU_1    76 taaacg....a.tatacctt.tatacc 56 - 8.74
+gspC_TU_0    23 caaaa.....tttatttatattagtaa  2 - 21.5
+gspC_TU_1    27 caaaa.....tttatttatattagtaa  6 - 21.5
+gspC_TU_2    72 caaaa.....tttatttatattagtaa 51 - 21.5
+gspE_TU_0    23 caaaa.....tttatttatattagtaa  2 - 21.5
+gspE_TU_1    27 caaaa.....tttatttatattagtaa  6 - 21.5
+gspE_TU_2    72 caaaa.....tttatttatattagtaa 51 - 21.5
+dppF_TU_0    77 cataa.....aat.gcccctcgtgacc 57 - 10.8
+dppD_TU_0    77 cataa.....aat.gcccctcgtgacc 57 - 10.8
+dppB_TU_0    77 cataa.....aat.gcccctcgtgacc 57 - 10.8
+dppA_TU_0    77 cataa.....aat.gcccctcgtgacc 57 - 10.8
+yieE_TU_0    26 cgaact....tttagccgctttagtct 48 + 9.53
+asnA_TU_0    33 catgc.....aataatcattcaataaa 12 - 10.8
+cycA_TU_0    24 taaga.....tttagatctaatgttaa  3 - 11.3
+
+                caaaa     tatatacctttttgaaa
+                t  g      at c ttacacgattc 
+                               c     a     
+                                     c     
+
+ a  c  g  t Del Ins Score
+ 1 27  0 13   0      30.6
+                  0 -0.124
+38  0  3  0   0      58.3
+                  0 -0.124
+35  0  0  6   0      49.1
+                  0 -0.124
+28  4  9  0   0      25.1
+                  0 -0.124
+33  8  0  0   0      44.5
+                 28 -74.3
+15  6  0 20   0      14.4
+                  0 -0.124
+15  0  0 15  11     -16.2
+                  0 -0.124
+ 0  0  1 40   0      67.1
+                  0 -0.124
+24  8  3  0   6     -6.69
+                  0 -0.124
+ 4  0  7 30   0      28.9
+                  0 -0.124
+15 12  0 14   0      8.78
+                  0 -0.124
+ 1 20  3 17   0      14.8
+                  0 -0.124
+14 20  7  0   0      13.3
+                  0 -0.124
+ 0 19  0 22   0      32.8
+                  0 -0.124
+11  3  0 27   0      25.2
+                  0 -0.124
+ 3 11  5 16   6     -27.1
+                  0 -0.124
+ 9  9 10 13   0     -7.80
+                  0 -0.124
+15  1  5 20   0      10.7
+                  0 -0.124
+ 0  0 30 11   0      39.2
+                  0 -0.124
+22  1  0 18   0      27.2
+                  0 -0.124
+23 18  0  0   0      33.0
+                  0 -0.124
+28  6  0  7   0      23.7
+
+Score: 402.536  Columns: 20  Sequences: 42
+
+                ******.****.**********
+codB_TU_0    53 atgcggcggat.tttt.tgggt 72 + 6.57
+cynR_TU_0    29 gtaaaa.gtctcatttatgatg 49 + 2.87
+ompF_TU_0    60 gcaggc.atct.ttccattcaa 41 - 5.87
+feaR_TU_0    63 aaataa.gtct.tgtca.ggca 45 - 11.9
+feaR_TU_1    45 aaataa.gtct.tgtca.ggca 27 - 11.9
+feaR_TU_2    70 gtgaaatgtat.ttttattgtt 50 - 11.2
+feaR_TU_3    62 aagcgg.ttat.tgtcacgatt 43 - 7.03
+ydcS_TU_2    57 aaggag.atat.ttttacggca 76 + 18.8
+ydcT_TU_2    57 aaggag.atat.ttttacggca 76 + 18.8
+ydcU_TU_2    57 aaggag.atat.ttttacggca 76 + 18.8
+ydcV_TU_2    57 aaggag.atat.ttttacggca 76 + 18.8
+patD_TU_3    57 aaggag.atat.ttttacggca 76 + 18.8
+shiA_TU_0    32 ctgcaa.atga.ttttatggct 13 - 11.3
+nac_TU_0     22 accaaa.ataa.aact..ggca 39 + 2.34
+gabD_TU_0    27 gtgcgc.atat.tgtca.gcaa 45 + 9.66
+gabD_TU_1    42 atgtag.atat.tttta.gatt 60 + 19.1
+gabD_TU_2    51 gcgtag.atgg.tttt..gcag 34 - 8.48
+gabT_TU_0    27 gtgcgc.atat.tgtca.gcaa 45 + 9.66
+gabT_TU_1    42 atgtag.atat.tttta.gatt 60 + 19.1
+gabT_TU_2    51 gcgtag.atgg.tttt..gcag 34 - 8.48
+gabP_TU_0    27 gtgcgc.atat.tgtca.gcaa 45 + 9.66
+gabP_TU_1    42 atgtag.atat.tttta.gatt 60 + 19.1
+gabP_TU_2    51 gcgtag.atgg.tttt..gcag 34 - 8.48
+serA_TU_0    81 .caaag.gtaa.ttct.tggat 64 - 1.88
+serA_TU_1    32 gcaata.ttat.tttt.tgata 50 + 8.18
+gltB_TU_0    27 atggca.agct.tatt..ggta 10 - 8.63
+gltD_TU_0    27 atggca.agct.tatt..ggta 10 - 8.63
+nanA_TU_0    23 acagaa.agct.tataatgcga  4 - 9.63
+nanA_TU_1    23 acagaa.agct.tataatgcga  4 - 9.63
+gspC_TU_0     8 atataa.ataa.attt.tgctt 26 + 16.5
+gspC_TU_1    12 atataa.ataa.attt.tgctt 30 + 16.5
+gspC_TU_2    57 atataa.ataa.attt.tgctt 75 + 16.5
+gspE_TU_0     8 atataa.ataa.attt.tgctt 26 + 16.5
+gspE_TU_1    12 atataa.ataa.attt.tgctt 30 + 16.5
+gspE_TU_2    57 atataa.ataa.attt.tgctt 75 + 16.5
+dppF_TU_0    61 acgagg.ggca.ttttatggag 80 + 14.8
+dppD_TU_0    61 acgagg.ggca.ttttatggag 80 + 14.8
+dppB_TU_0    61 acgagg.ggca.ttttatggag 80 + 14.8
+dppA_TU_0    61 acgagg.ggca.ttttatggag 80 + 14.8
+yieE_TU_0     7 gtaata.agct.tgtc.tgaat 25 + 6.57
+asnA_TU_0     1 gagtta.ggct.ttttattgaa 20 + 10.6
+cycA_TU_0    13 atctaa.atct.tagtattcat 32 + 6.07
+
+                atgtaa atat ttttatggaa
+                gcaagg ggca      c ctt
+                 a g                c 
+
+ a  c  g  t Del Ins Score
+28  1 12  0   1      23.0
+                  0 -0.124
+ 9 13  0 20   0      12.1
+                  0 -0.124
+15  2 25  0   0      25.8
+                  0 -0.124
+10  6 10 16   0     -5.09
+                  0 -0.124
+27  2 10  3   0      17.5
+                  0 -0.124
+20  4 18  0   0      18.6
+                  2 -16.6
+29  0 11  2   0      30.1
+                  0 -0.124
+ 0  0 11 31   0      40.7
+                  0 -0.124
+23 15  4  0   0      19.7
+                  0 -0.124
+13  0  3 26   0      24.2
+                  1 -11.2
+ 8  0  0 34   0      46.1
+                  0 -0.124
+ 6  0  7 29   0      25.1
+                  0 -0.124
+ 0  3  1 38   0      53.6
+                  0 -0.124
+ 2  8  0 32   0      35.2
+                  0 -0.124
+26  0  0  0  16     -0.266
+                  0 -0.124
+ 0  6  0 22  14     -15.5
+                  0 -0.124
+ 0  0 38  4   0      56.6
+                  0 -0.124
+ 7 16 19  0   0      13.4
+                  0 -0.124
+15  9  3 15   0     -0.487
+                  0 -0.124
+18  0  8 16   0      12.1
+
+Score: 374.172  Columns: 24  Sequences: 42
+
+                ************************
+codB_TU_0    45 atct.gaa.gataaaaagc.aatc 25 - 7.44
+cynR_TU_0    30 acct.tat.gacaatcggc.gagt 10 - 4.59
+ompF_TU_0    54 atctttccattcaaactaacgttt 31 - 14.6
+feaR_TU_0    17 atcgtgac.aataacc.gc.ttat 37 + 10.5
+feaR_TU_1    62 atga.gcctgactatagga.aata 41 - 4.50
+feaR_TU_2    46 atgc.aacaataaaaatac.attt 67 + 9.04
+feaR_TU_3    44 atcgtgac.aataacc.gc.ttat 64 + 10.5
+ydcS_TU_2    80 gccgtgcc.gtaaaaatatctcct 58 - 16.2
+ydcT_TU_2    80 gccgtgcc.gtaaaaatatctcct 58 - 16.2
+ydcU_TU_2    80 gccgtgcc.gtaaaaatatctcct 58 - 16.2
+ydcV_TU_2    80 gccgtgcc.gtaaaaatatctcct 58 - 16.2
+patD_TU_3    80 gccgtgcc.gtaaaaatatctcct 58 - 16.2
+shiA_TU_0    10 atca.gccataaaatc.at.ttgc 30 + 8.80
+nac_TU_0     70 gccattacttacaaccaga.ttgc 48 - 2.95
+gabD_TU_0    48 accttgct.gacaatatgc.gcac 27 - 14.9
+gabD_TU_1     1 ataa.gaa.aacaatatgtcgctt 22 + 14.9
+gabD_TU_2    31 gtgctgcaaaaccatctac.gctc 53 + 10.8
+gabT_TU_0    48 accttgct.gacaatatgc.gcac 27 - 14.9
+gabT_TU_1     1 ataa.gaa.aacaatatgtcgctt 22 + 14.9
+gabT_TU_2    31 gtgctgcaaaaccatctac.gctc 53 + 10.8
+gabP_TU_0    48 accttgct.gacaatatgc.gcac 27 - 14.9
+gabP_TU_1     1 ataa.gaa.aacaatatgtcgctt 22 + 14.9
+gabP_TU_2    31 gtgctgcaaaaccatctac.gctc 53 + 10.8
+serA_TU_0    52 acca.gcatattcatccaa.gaat 73 + 0.211
+serA_TU_1    65 atcc.gcctttcaacatatcaaaa 43 - 14.9
+gltB_TU_0    18 agcttgccatttgacctgt.atca 40 + 7.31
+gltD_TU_0    18 agcttgccatttgacctgt.atca 40 + 7.31
+nanA_TU_0    70 atat.acctttatacctgt.tata 49 - 6.53
+nanA_TU_1    70 atat.acctttatacctgt.tata 49 - 6.53
+gspC_TU_0    56 atactaac.gtcaatatac.aacc 77 + 16.4
+gspC_TU_1    60 atactaac.gtcaatatac.aacc 81 + 16.4
+gspC_TU_2    11 atcataaa.aataatgtat.gtat 32 + 11.8
+gspE_TU_0    56 atactaac.gtcaatatac.aacc 77 + 16.4
+gspE_TU_1    60 atactaac.gtcaatatac.aacc 81 + 16.4
+gspE_TU_2    11 atcataaa.aataatgtat.gtat 32 + 11.8
+dppF_TU_0    65 ctcgtgacctacaatctgtcaaca 42 - 17.9
+dppD_TU_0    65 ctcgtgacctacaatctgtcaaca 42 - 17.9
+dppB_TU_0    65 ctcgtgacctacaatctgtcaaca 42 - 17.9
+dppA_TU_0    65 ctcgtgacctacaatctgtcaaca 42 - 17.9
+yieE_TU_0    53 atcattccagtaaatg.at.tact 74 + 10.5
+asnA_TU_0    24 atcattca.ataaaaa.gcctaac  3 - 9.21
+cycA_TU_0    40 attgttacctaatatcgat.gagt 62 + 2.47
+
+                atcgtgccagacaatatatcgact
+                gcaa aaatata  ac gc actc
+                   t    ct          ttaa
+                   c                    
+
+ a  c  g  t Del Ins Score
+29  4  9  0   0      26.5
+                  0 -0.124
+ 0 11  2 29   0      30.1
+                  0 -0.124
+ 9 27  5  1   0      17.7
+                  0 -0.124
+11  9 12 10   0     -8.24
+                  0 -0.124
+ 0  0  0 30  12      12.0
+                  0 -0.124
+ 9  0 27  6   0      21.5
+                  0 -0.124
+20 22  0  0   0      33.6
+                  0 -0.124
+11 27  0  4   0      23.5
+                  0 -0.124
+ 9  5  0  6  22     -45.1
+                  0 -0.124
+13  0 16 13   0      9.19
+                  0 -0.124
+23  0  0 19   0      33.8
+                  0 -0.124
+12 22  0  8   0      14.1
+                  0 -0.124
+32  4  2  4   0      27.3
+                  0 -0.124
+42  0  0  0   0      75.7
+                  0 -0.124
+ 9  8  0 25   0      17.7
+                  0 -0.124
+20 19  3  0   0      21.0
+                  0 -0.124
+ 2  1  3 31   5      8.48
+                  0 -0.124
+21  0 21  0   0      33.6
+                  0 -0.124
+ 4 16  0 22   0      19.2
+                  0 -0.124
+ 0 15  0  0  27     -22.0
+                  0 -0.124
+14  0 15 13   0      8.99
+                  0 -0.124
+18 14  0 10   0      10.6
+                  0 -0.124
+10 16  4 12   0     -2.77
+                  0 -0.124
+10 14  0 18   0      10.6
+
+Score: 360.754  Columns: 21  Sequences: 42
+
+                *********************
+codB_TU_0    62 a.tttttt..gggt.ttcaaa 78 + 5.50
+cynR_TU_0    38 a.gacttttacctt.atgaca 20 - 10.1
+ompF_TU_0     5 atctttgt.agcactttcacg 24 + 0.131
+feaR_TU_0    29 t.tattgtcacgat.ttgcgg 11 - 9.26
+feaR_TU_1    61 a.ttagctt.cgtttattgca 79 + 10.3
+feaR_TU_2    21 a.ttagctt.cgtttattgca 39 + 10.3
+feaR_TU_3    56 t.tattgtcacgat.ttgcgg 38 - 9.26
+ydcS_TU_2    63 a.tatttttacggc.acggcg 81 + 19.4
+ydcT_TU_2    63 a.tatttttacggc.acggcg 81 + 19.4
+ydcU_TU_2    63 a.tatttttacggc.acggcg 81 + 19.4
+ydcV_TU_2    63 a.tatttttacggc.acggcg 81 + 19.4
+patD_TU_3    63 a.tatttttacggc.acggcg 81 + 19.4
+shiA_TU_0    56 a.taaggtt.cgtt.tataga 73 + 8.23
+nac_TU_0     32 tttatttt..ggtg.ttgatg 15 - 6.54
+gabD_TU_0    33 a.tattgt..cagc.aaggta 49 + 9.58
+gabD_TU_1    48 a.tatttttagatt.atggct 66 + 18.0
+gabD_TU_2     2 a.gatttt..gggc.tcgtcg 18 + 8.89
+gabT_TU_0    33 a.tattgt..cagc.aaggta 49 + 9.58
+gabT_TU_1    48 a.tatttttagatt.atggct 66 + 18.0
+gabT_TU_2     2 a.gatttt..gggc.tcgtcg 18 + 8.89
+gabP_TU_0    33 a.tattgt..cagc.aaggta 49 + 9.58
+gabP_TU_1    48 a.tatttttagatt.atggct 66 + 18.0
+gabP_TU_2     2 a.gatttt..gggc.tcgtcg 18 + 8.89
+serA_TU_0    61 a.tatgct..ggtt.tagagg 45 - 11.4
+serA_TU_1    37 attattttt.tgat.atgttg 55 + 12.7
+gltB_TU_0    15 a.taagcttgccat.ttgacc 33 + 6.40
+gltD_TU_0    15 a.taagcttgccat.ttgacc 33 + 6.40
+nanA_TU_0    11 a.taagctt.tctgtatgggg 29 + 9.63
+nanA_TU_1    11 a.taagctt.tctgtatgggg 29 + 9.63
+gspC_TU_0    18 attttgctt.gattcatgcaa 37 + 11.4
+gspC_TU_1    22 attttgctt.gattcatgcaa 41 + 11.4
+gspC_TU_2    24 attatttttatgattaaggat  4 - 14.5
+gspE_TU_0    18 attttgctt.gattcatgcaa 37 + 11.4
+gspE_TU_1    22 attttgctt.gattcatgcaa 41 + 11.4
+gspE_TU_2    24 attatttttatgattaaggat  4 - 14.5
+dppF_TU_0    49 a.gattgt.aggtc.acgagg 66 + 13.8
+dppD_TU_0    49 a.gattgt.aggtc.acgagg 66 + 13.8
+dppB_TU_0    49 a.gattgt.aggtc.acgagg 66 + 13.8
+dppA_TU_0    49 a.gattgt.aggtc.acgagg 66 + 13.8
+yieE_TU_0    10 a.taagcttgtctg.aatcga 28 + 2.51
+asnA_TU_0    67 t.gttgcttatgattaagcaa 48 - 6.63
+cycA_TU_0    52 a.ttaggtaacaat.acgcgg 34 - 5.95
+
+                attatttttaggtttatggcg
+                  gtagc   cagcctc aga
+                      g     a   a c  
+
+ a  c  g  t Del Ins Score
+38  0  0  4   0      56.6
+                  0 -0.124
+ 0  0  0  9  33     -26.3
+                  0 -0.124
+ 0  1  9 32   0      37.8
+                  0 -0.124
+32  0  0 10   0      42.3
+                  0 -0.124
+ 9  1  0 32   0      37.8
+                  0 -0.124
+ 0  0 15 27   0      36.1
+                  0 -0.124
+ 0 13 12 17   0      9.60
+                  0 -0.124
+ 0  0  0 42   0      75.7
+                  0 -0.124
+ 1  2  0 25  14     -10.8
+                  0 -0.124
+20  0  3  0  19     -20.7
+                  0 -0.124
+ 0 17 18  7   0      13.2
+                  0 -0.124
+11  7 24  0   0      16.8
+                  0 -0.124
+10  0 12 20   0      11.7
+                  0 -0.124
+ 0 16  4 22   0      19.2
+                  0 -0.124
+ 0  4  0  8  30     -35.9
+                  0 -0.124
+30  0  0 12   0      39.3
+                  0 -0.124
+ 9 13  0 20   0      12.1
+                  0 -0.124
+ 0  2 36  4   0      45.4
+                  0 -0.124
+12  9 17  4   0     -1.97
+                  0 -0.124
+ 8 17 12  5   0     -2.90
+                  0 -0.124
+14  2 21  5   0      8.26
+
+Score: 348.977  Columns: 19  Sequences: 42
+
+                ***********....********
+codB_TU_0    26 attgcttttta....tcttcaga 44 + 5.68
+cynR_TU_0    34 ttt.tacctta....tgacaatc 17 - 15.0
+ompF_TU_0    54 atc.tttccat....tcaaacta 37 - 2.80
+feaR_TU_0    35 tatgtctctatgcc.tgacaaga 56 + 9.27
+feaR_TU_1    17 tatgtctctatgcc.tgacaaga 38 + 9.27
+feaR_TU_2    45 aatgcaacaa.....taaaaata 62 + 8.35
+feaR_TU_3    18 tttgtcagctg....tgacaagc 36 + 8.91
+ydcS_TU_2    65 tat.ctccttgtt..taaccata 46 - 12.3
+ydcT_TU_2    65 tat.ctccttgtt..taaccata 46 - 12.3
+ydcU_TU_2    65 tat.ctccttgtt..taaccata 46 - 12.3
+ydcV_TU_2    65 tat.ctccttgtt..taaccata 46 - 12.3
+patD_TU_3    65 tat.ctccttgtt..taaccata 46 - 12.3
+shiA_TU_0    67 aacgaacctta....tgagacta 49 - 8.62
+nac_TU_0     33 ttt.tattttgg...tgttgatg 15 - 2.77
+gabD_TU_0    53 tttgtaccttgc...tgacaata 34 - 19.8
+gabD_TU_1    71 ttcgtagccataatctaaaaata 49 - 9.89
+gabD_TU_2    23 ttcgccgggtgc...tgcaaaac 42 + 4.39
+gabT_TU_0    53 tttgtaccttgc...tgacaata 34 - 19.8
+gabT_TU_1    71 ttcgtagccataatctaaaaata 49 - 9.89
+gabT_TU_2    23 ttcgccgggtgc...tgcaaaac 42 + 4.39
+gabP_TU_0    53 tttgtaccttgc...tgacaata 34 - 19.8
+gabP_TU_1    71 ttcgtagccataatctaaaaata 49 - 9.89
+gabP_TU_2    23 ttcgccgggtgc...tgcaaaac 42 + 4.39
+serA_TU_0    22 attgtcgattgc...tctaaata 41 + 12.5
+serA_TU_1    58 ttt.caacata....tcaaaaaa 41 - 6.77
+gltB_TU_0    36 tat.cagctt.....tcccgata 52 + 8.40
+gltD_TU_0    36 tat.cagctt.....tcccgata 52 + 8.40
+nanA_TU_0    10 tat.aagctt.....tctgtatg 26 + 2.98
+nanA_TU_1    10 tat.aagctt.....tctgtatg 26 + 2.98
+gspC_TU_0    69 attgacgttag....tataaata 51 - 17.1
+gspC_TU_1    73 attgacgttag....tataaata 55 - 17.1
+gspC_TU_2     1 att.atccttaatcataaaaata 22 + 11.6
+gspE_TU_0    69 attgacgttag....tataaata 51 - 17.1
+gspE_TU_1    73 attgacgttag....tataaata 55 - 17.1
+gspE_TU_2     1 att.atccttaatcataaaaata 22 + 11.6
+dppF_TU_0    24 attgacgttt.....tcacattc 41 + 11.9
+dppD_TU_0    24 attgacgttt.....tcacattc 41 + 11.9
+dppB_TU_0    24 attgacgttt.....tcacattc 41 + 11.9
+dppA_TU_0    24 attgacgttt.....tcacattc 41 + 11.9
+yieE_TU_0     9 aat.aagcttg....tctgaatc 26 + 12.2
+asnA_TU_0    44 tttgttgcttaa...tcataagc 63 + 11.5
+cycA_TU_0    58 atcgatattagg...taacaata 39 - 12.9
+
+                tttgaagcttg    taacaata
+                aac tcct aa     cta   c
+                    ct          g      
+
+ a  c  g  t Del Ins Score
+17  0  0 25   0      34.7
+                  0 -0.124
+14  0  0 28   0      37.0
+                  0 -0.124
+ 0  9  0 33   0      44.1
+                  0 -0.124
+ 0  0 26  0  16     -0.266
+                  0 -0.124
+15 13  0 14   0      8.99
+                  0 -0.124
+16 15  0 11   0      9.64
+                  0 -0.124
+ 4 12 21  5   0      3.92
+                  0 -0.124
+ 1 26  4 11   0      17.5
+                  0 -0.124
+ 2  5  3 32   0      27.6
+                  0 -0.124
+12  0  0 30   0      39.3
+                  0 -0.124
+ 7  0 20  6   9     -22.0
+                 46 -95.5
+ 0  0  0 42   0      75.7
+                  0 -0.124
+16 14 12  0   0      9.31
+                  0 -0.124
+27  5  0 10   0      22.3
+                  0 -0.124
+16 19  4  3   0      6.55
+                  0 -0.124
+31  6  3  2   0      25.1
+                  0 -0.124
+36  2  0  4   0      45.4
+                  0 -0.124
+ 4  0  5 33   0      35.2
+                  0 -0.124
+28 11  3  0   0      26.5
+
+Score: 345.275  Columns: 23  Sequences: 41
+
+                **************..*********
+codB_TU_0    73 aaccca.aa.aaatc.cgccgcatt 52 - 6.32
+cynR_TU_0    53 aactcatcataaatg.agactttta 30 - 7.94
+feaR_TU_0    60 atttcctat.agtc..aggctcatt 81 + 13.6
+feaR_TU_1    42 atttcctat.agtc..aggctcatt 63 + 13.6
+feaR_TU_2     2 atttcctat.agtc..aggctcatt 23 + 13.6
+feaR_TU_3    42 aaatcgtgacaataa.ccgcttatg 65 + 0.954
+ydcS_TU_2    53 taaccatag.acgg..cggcttgca 32 - 15.4
+ydcT_TU_2    53 taaccatag.acgg..cggcttgca 32 - 15.4
+ydcU_TU_2    53 taaccatag.acgg..cggcttgca 32 - 15.4
+ydcV_TU_2    53 taaccatag.acgg..cggcttgca 32 - 15.4
+patD_TU_3    53 taaccatag.acgg..cggcttgca 32 - 15.4
+shiA_TU_0    76 cgatct.at.aaacg.aaccttatg 55 - 7.15
+nac_TU_0     26 aaataa.aactggca.agcatcttg 48 + 6.57
+gabD_TU_0    16 aattcctat.tggtg.cgcatattg 38 + 12.7
+gabD_TU_1     6 aaaaca.at.atgt..cg.cttttg 25 + 11.9
+gabD_TU_2    39 aaaccatct.acgctcaggactggg 62 + 7.91
+gabT_TU_0    16 aattcctat.tggtg.cgcatattg 38 + 12.7
+gabT_TU_1     6 aaaaca.at.atgt..cg.cttttg 25 + 11.9
+gabT_TU_2    39 aaaccatct.acgctcaggactggg 62 + 7.91
+gabP_TU_0    16 aattcctat.tggtg.cgcatattg 38 + 12.7
+gabP_TU_1     6 aaaaca.at.atgt..cg.cttttg 25 + 11.9
+gabP_TU_2    39 aaaccatct.acgctcaggactggg 62 + 7.91
+serA_TU_0    41 aaatcctct.aaac..cagcatatt 62 + 12.0
+serA_TU_1    51 atatca.aa.aaat..aatattgcg 31 - 7.93
+gltB_TU_0    34 aggtca.aa.tggc..aagcttatt 14 - 7.88
+gltD_TU_0    34 aggtca.aa.tggc..aagcttatt 14 - 7.88
+nanA_TU_0    31 cacccc.at.acaga.aagcttata 10 - 11.8
+nanA_TU_1    31 cacccc.at.acaga.aagcttata 10 - 11.8
+gspC_TU_0     3 tactaatat.aaat..aa.attttg 23 + 15.8
+gspC_TU_1     7 tactaatat.aaat..aa.attttg 27 + 15.8
+gspC_TU_2    52 tactaatat.aaat..aa.attttg 72 + 15.8
+gspE_TU_0     3 tactaatat.aaat..aa.attttg 23 + 15.8
+gspE_TU_1     7 tactaatat.aaat..aa.attttg 27 + 15.8
+gspE_TU_2    52 tactaatat.aaat..aa.attttg 72 + 15.8
+dppF_TU_0    81 cctccataa.aatg..cccctcgtg 60 - 11.5
+dppD_TU_0    81 cctccataa.aatg..cccctcgtg 60 - 11.5
+dppB_TU_0    81 cctccataa.aatg..cccctcgtg 60 - 11.5
+dppA_TU_0    81 cctccataa.aatg..cccctcgtg 60 - 11.5
+yieE_TU_0    31 agttcg.at.tcagacaagcttatt  9 - 4.31
+asnA_TU_0    22 cattca.at.aaaa..agcctaact  2 - 8.95
+cycA_TU_0    59 catcgatattaggt..aacaatacg 37 - 4.24
+
+                aaatcatatcaagt  aggcttatg
+                t tc c  at cag  caca ct t
+                c c        g c        g  
+
+ a  c  g  t Del Ins Score
+21  9  0 11   0      12.7
+                  0 -0.124
+29  4  4  4   0      18.9
+                  0 -0.124
+16 10  2 13   0      1.25
+                  0 -0.124
+ 3 16  0 22   0      20.8
+                  0 -0.124
+ 7 33  1  0   0      40.3
+                  0 -0.124
+29  9  2  1   0      25.6
+                  0 -0.124
+ 0  0  0 28  13      7.26
+                  0 -0.124
+35  5  1  0   0      45.3
+                  0 -0.124
+11  0  5 25   0      19.7
+                  0 -0.124
+ 0  2  0  2  37     -27.9
+                  0 -0.124
+34  0  0  7   0      46.6
+                  0 -0.124
+17 11 10  3   0     -0.593
+                  0 -0.124
+15  0 18  8   0      11.5
+                  0 -0.124
+ 2 11 12 16   0      0.998
+                 18 -59.1
+23 18  0  0   0      33.0
+                  0 -0.124
+15  5 21  0   0      16.4
+                  0 -0.124
+ 1 12 18  1   9     -20.4
+                  0 -0.124
+15 26  0  0   0      34.8
+                  0 -0.124
+ 2  3  1 35   0      40.6
+                  0 -0.124
+ 4  9  0 28   0      25.1
+                  0 -0.124
+14  0 13 14   0      8.56
+                  0 -0.124
+ 0  8  3 30   0      30.0
+                  0 -0.124
+ 8  0 24  9   0      16.5
+
+Score: 341.221  Columns: 22  Sequences: 41
+
+                **********************
+codB_TU_0    19 cgtggggaaa.tat.a.ttttt  1 - 3.26
+cynR_TU_0    52 actcatcata.aatgagacttt 32 - 12.1
+ompF_TU_0     1 ctttatctttgtag.c.acttt 20 + 5.34
+feaR_TU_0    42 ctatgcctgacaag.acttatt 62 + 9.01
+feaR_TU_1    24 ctatgcctgacaag.acttatt 44 + 9.01
+feaR_TU_2    76 cgctctgtga.aatgt.atttt 57 - 6.71
+ydcS_TU_2    66 atatctccttgtttaa.ccata 46 - 12.2
+ydcT_TU_2    66 atatctccttgtttaa.ccata 46 - 12.2
+ydcU_TU_2    66 atatctccttgtttaa.ccata 46 - 12.2
+ydcV_TU_2    66 atatctccttgtttaa.ccata 46 - 12.2
+patD_TU_3    66 atatctccttgtttaa.ccata 46 - 12.2
+shiA_TU_0    36 gcatctgcaa.atg.a.tttta 18 - 3.91
+nac_TU_0     42 gcttgccagt.ttt.a.ttttg 24 - 4.30
+gabD_TU_0     6 cgacatcagc.aat.tcctatt 25 + 12.1
+gabD_TU_1    31 atttttcagaaatgtagatatt 52 + 13.0
+gabD_TU_2    59 agtcctgagcgtagatggtttt 38 - 12.1
+gabT_TU_0     6 cgacatcagc.aat.tcctatt 25 + 12.1
+gabT_TU_1    31 atttttcagaaatgtagatatt 52 + 13.0
+gabT_TU_2    59 agtcctgagcgtagatggtttt 38 - 12.1
+gabP_TU_0     6 cgacatcagc.aat.tcctatt 25 + 12.1
+gabP_TU_1    31 atttttcagaaatgtagatatt 52 + 13.0
+gabP_TU_2    59 agtcctgagcgtagatggtttt 38 - 12.1
+serA_TU_0    60 attcatccaagaatta.ccttt 80 + 11.3
+serA_TU_1    53 acatatcaaaaaat.a.atatt 34 - 13.2
+gltB_TU_0     3 atttctgtaccaataa.gcttg 23 + 8.98
+gltD_TU_0     3 atttctgtaccaataa.gcttg 23 + 8.98
+nanA_TU_0     1 agatcgcatt.ata.a.gcttt 19 + 10.3
+nanA_TU_1     1 agatcgcatt.ata.a.gcttt 19 + 10.3
+gspC_TU_0    64 cgttagtata.aat.a.gtatt 46 - 14.1
+gspC_TU_1    68 cgttagtata.aat.a.gtatt 50 - 14.1
+gspC_TU_2    62 ttatattagt.aatat.gtatt 43 - 12.2
+gspE_TU_0    64 cgttagtata.aat.a.gtatt 46 - 14.1
+gspE_TU_1    68 cgttagtata.aat.a.gtatt 50 - 14.1
+gspE_TU_2    62 ttatattagt.aatat.gtatt 43 - 12.2
+dppF_TU_0    14 ggttggctgt.attgacgtttt 34 + 14.9
+dppD_TU_0    14 ggttggctgt.attgacgtttt 34 + 14.9
+dppB_TU_0    14 ggttggctgt.attgacgtttt 34 + 14.9
+dppA_TU_0    14 ggttggctgt.attgacgtttt 34 + 14.9
+yieE_TU_0    14 gcttgtctgaatcgaa.ctttt 34 + 5.80
+asnA_TU_0     8 gctttttattgaatga.ttatt 28 + 11.4
+cycA_TU_0    11 agatctaaat.ctt.a.gtatt 29 + 4.42
+
+                agttctcagtgaataacgtatt
+                cta ag ttaattggtgcct  
+                    g     c           
+
+ a  c  g  t Del Ins Score
+19 12  8  2   0      3.67
+                  0 -0.124
+ 0  6 19 16   0      14.1
+                  0 -0.124
+17  1  0 23   0      27.6
+                  0 -0.124
+ 0  8  1 32   0      38.1
+                  0 -0.124
+13 15  9  4   0     -2.90
+                  0 -0.124
+ 0  3 11 27   0      25.2
+                  0 -0.124
+ 1 25  8  7   0      13.8
+                  0 -0.124
+23  7  0 11   0      15.6
+                  0 -0.124
+ 7  0 20 14   0      13.3
+                  0 -0.124
+16  8  0 17   0      11.4
+                  0 -0.124
+ 5  4 11  0  21     -42.0
+                  0 -0.124
+28  1  0 12   0      31.7
+                  0 -0.124
+23  1  0 17   0      27.6
+                  0 -0.124
+ 2  0 11 28   0      28.7
+                  0 -0.124
+13  0  7  4  17     -38.5
+                  0 -0.124
+31  1  0  9   0      36.2
+                  0 -0.124
+ 0  9  7  0  25     -35.8
+                  0 -0.124
+ 7 10 18  6   0     -2.70
+                  0 -0.124
+ 0 12  0 29   0      37.9
+                  0 -0.124
+22  0  0 19   0      32.8
+                  0 -0.124
+ 0  0  0 41   0      73.8
+                  0 -0.124
+ 6  0  3 32   0      34.3
+
+Score: 333.059  Columns: 20  Sequences: 42
+
+                *******..******..*******
+codB_TU_0    62 atttt.t..tgggtttcaa.acag 81 + 5.31
+cynR_TU_0    65 actta.t..a.ggtt..gc.gaat 81 + 3.91
+ompF_TU_0    16 acttt.c..acggta..gc.gaaa 33 + 7.98
+feaR_TU_0    27 attgt.c..acgattt.gcgga.g  9 - 7.41
+feaR_TU_1    61 attag.c..ttcgttt.attgcaa 80 + 10.7
+feaR_TU_2    21 attag.c..ttcgttt.attgcaa 40 + 10.7
+feaR_TU_3    54 attgt.c..acgattt.gcgga.g 36 - 7.41
+ydcS_TU_2    65 atttt.t..acggc...acggc.g 81 + 12.3
+ydcT_TU_2    65 atttt.t..acggc...acggc.g 81 + 12.3
+ydcU_TU_2    65 atttt.t..acggc...acggc.g 81 + 12.3
+ydcV_TU_2    65 atttt.t..acggc...acggc.g 81 + 12.3
+patD_TU_3    65 atttt.t..acggc...acggc.g 81 + 12.3
+shiA_TU_0    23 attttatggctgatta.gcggcaa  1 - 7.35
+nac_TU_0     32 tttat.t..ttggt...gttgatg 15 - 10.1
+gabD_TU_0    17 attcc.ta.ttggt...gc.gcat 34 + 8.19
+gabD_TU_1    50 atttt.t..a.gatt..atggcta 67 + 18.1
+gabD_TU_2    22 attcg.c..cgggt...gctgcaa 39 + 9.49
+gabT_TU_0    17 attcc.ta.ttggt...gc.gcat 34 + 8.19
+gabT_TU_1    50 atttt.t..a.gatt..atggcta 67 + 18.1
+gabT_TU_2    22 attcg.c..cgggt...gctgcaa 39 + 9.49
+gabP_TU_0    17 attcc.ta.ttggt...gc.gcat 34 + 8.19
+gabP_TU_1    50 atttt.t..a.gatt..atggcta 67 + 18.1
+gabP_TU_2    22 attcg.c..cgggt...gctgcaa 39 + 9.49
+serA_TU_0    73 attct.tggatgaat..at.gctg 54 - 11.1
+serA_TU_1    40 atttt.t..t.gatat.gttgaaa 58 + 12.5
+gltB_TU_0     4 tttctgt..accaat..aa.gctt 22 + 7.24
+gltD_TU_0     4 tttctgt..accaat..aa.gctt 22 + 7.24
+nanA_TU_0    17 tttctgta.tggggt..gttgctt 37 + 8.64
+nanA_TU_1    17 tttctgta.tggggt..gttgctt 37 + 8.64
+gspC_TU_0    18 attttgc..ttgattc.at.gcaa 37 + 17.5
+gspC_TU_1    22 attttgc..ttgattc.at.gcaa 41 + 17.5
+gspC_TU_2    21 atttt.t..atgatt..aaggata  3 - 16.7
+gspE_TU_0    18 attttgc..ttgattc.at.gcaa 37 + 17.5
+gspE_TU_1    22 attttgc..ttgattc.at.gcaa 41 + 17.5
+gspE_TU_2    21 atttt.t..atgatt..aaggata  3 - 16.7
+dppF_TU_0    38 attctgt..t.gacag.attgtag 57 + 10.8
+dppD_TU_0    38 attctgt..t.gacag.attgtag 57 + 10.8
+dppB_TU_0    38 attctgt..t.gacag.attgtag 57 + 10.8
+dppA_TU_0    38 attctgt..t.gacag.attgtag 57 + 10.8
+yieE_TU_0    67 attta.c..t.gga...at.gatg 52 - 3.18
+asnA_TU_0    12 tttat.tgaatgatt..attgcat 32 + 11.2
+cycA_TU_0    52 attaggta.a.caat..ac.gc.g 35 - 1.64
+
+                attttgt  atgatt  attgcaa
+                   c  c  tc gca  gcg atg
+                                       t
+
+ a  c  g  t Del Ins Score
+36  0  0  6   0      50.8
+                  0 -0.124
+ 0  2  0 40   0      64.2
+                  0 -0.124
+ 0  0  0 42   0      75.7
+                  0 -0.124
+ 5 15  2 20   0      7.76
+                  0 -0.124
+ 2  3  6 31   0      25.1
+                  0 -0.124
+ 1  0 13  0  28     -28.2
+                  0 -0.124
+ 0 13  0 29   0      38.1
+                 12 -47.6
+19  4  0 19   0      18.5
+                  0 -0.124
+ 0 10  6 15  11     -31.0
+                  0 -0.124
+ 0  5 37  0   0      53.6
+                  0 -0.124
+22  0 20  0   0      33.6
+                  0 -0.124
+ 5  9  2 26   0      13.5
+                  0 -0.124
+ 6  0  0 23  13     -12.7
+                 16 -55.9
+27  0 15  0   0      36.1
+                  0 -0.124
+ 5 17  0 20   0      16.6
+                  0 -0.124
+ 0  0 13 14  15     -24.5
+                  0 -0.124
+ 1  0 41  0   0      69.0
+                  0 -0.124
+ 9 29  0  4   0      26.5
+                  0 -0.124
+22  0  0 12   8     -4.96
+                  0 -0.124
+17  0 16  9   0      11.0
+

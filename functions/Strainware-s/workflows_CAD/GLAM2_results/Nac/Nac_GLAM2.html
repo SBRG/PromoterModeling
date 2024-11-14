@@ -1,0 +1,2174 @@
+<html>
+<head>
+<title>GLAM2</title>
+<style type="text/css">
+body {background: #D5F0FF}
+th {text-align: left}
+td.kk {font-family: monospace; font-weight: bold}
+td.jj {font-family: monospace; color: gray}
+td.a {color: red}
+td.c {color: blue}
+td.g {color: orange}
+td.t {color: green}
+</style>
+</head>
+<body>
+<h1>GLAM2: Gapped Local Alignment of Motifs</h1>
+<p style="font-family: monospace"> Version 1056
+<br> /home/meme/meme-5.1.1/bin/glam2 -Q -O . -M -2 -z 2 -a 2 -b 50 -w 20 -r 10 -n 2000 -D 0.1 -E 2.0 -I 0.02 -J 1.0 n nac.fasta
+</p>
+<p>If you use this program in your research, please cite:<b> MC Frith, NFW Saunders, B Kobe, TL Bailey, &quot;Discovering sequence motifs with arbitrary insertions and deletions&quot;, PLoS Computational Biology, <b>4</b>(5):e1000071, 2008.<a href="http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1000071">[full text]</a></b></p>
+<form enctype="application/x-www-form-urlencoded" method="POST" target="_new" action="http://meme-suite.org//utilities/process_request">
+<ul>
+</ul>
+<input type="hidden" name="-Q" value="1">
+<input type="hidden" name="-O" value=".">
+<input type="hidden" name="-2" value="1">
+<input type="hidden" name="-z" value="2">
+<input type="hidden" name="-a" value="2">
+<input type="hidden" name="-b" value="50">
+<input type="hidden" name="-w" value="20">
+<input type="hidden" name="-r" value="10">
+<input type="hidden" name="-n" value="2000">
+<input type="hidden" name="-D" value="0.1">
+<input type="hidden" name="-E" value="2.0">
+<input type="hidden" name="-I" value="0.02">
+<input type="hidden" name="-J" value="1.0">
+<input type="hidden" name="alphabet" value="n">
+<input type="hidden" name="seq_file" value="nac.fasta">
+<h2>Best Motif Found:</h2>
+<table>
+<tr>
+<th style="padding-right: 1em">NAME</th>
+<th style="padding-right: 1em">START</th>
+<th style="text-align: center" colspan=" 23 ">SITES</th>
+<th style="padding-left: 1em">END</th>
+<th style="padding-left: 1em">STRAND</th>
+<th style="padding-left: 1em">MARGINAL SCORE</th>
+</tr>
+<tbody>
+<tr>
+<td style="padding-right: 1em"> codB_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 31 </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> t </td>
+<td class="jj"> c </td>
+<td class="kk a "> a </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk g "> g </td>
+<td style="padding-left: 1em;text-align: right"> 51 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 3.79 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> cynR_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 33 </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 50 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 3.63 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> feaR_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 34 </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> a </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 54 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 17.2 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> feaR_TU_1 </td>
+<td style="padding-right: 1em;text-align: right"> 16 </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> a </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 36 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 17.2 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> feaR_TU_2 </td>
+<td style="padding-right: 1em;text-align: right"> 61 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td style="padding-left: 1em;text-align: right"> 44 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 3.45 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> feaR_TU_3 </td>
+<td style="padding-right: 1em;text-align: right"> 61 </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> a </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 81 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 17.2 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> ydcS_TU_2 </td>
+<td style="padding-right: 1em;text-align: right"> 66 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 48 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 15.6 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> ydcT_TU_2 </td>
+<td style="padding-right: 1em;text-align: right"> 66 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 48 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 15.6 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> ydcU_TU_2 </td>
+<td style="padding-right: 1em;text-align: right"> 66 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 48 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 15.6 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> ydcV_TU_2 </td>
+<td style="padding-right: 1em;text-align: right"> 66 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 48 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 15.6 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> patD_TU_3 </td>
+<td style="padding-right: 1em;text-align: right"> 66 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 48 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 15.6 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> shiA_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 28 </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="jj"> t </td>
+<td class="jj"> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 8 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 2.62 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> nac_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 29 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="jj"> g </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 10 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 9.09 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gabD_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 54 </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 36 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 16.3 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gabD_TU_1 </td>
+<td style="padding-right: 1em;text-align: right"> 51 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 32 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 18.3 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gabD_TU_2 </td>
+<td style="padding-right: 1em;text-align: right"> 22 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 41 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 9.26 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gabT_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 54 </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 36 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 16.3 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gabT_TU_1 </td>
+<td style="padding-right: 1em;text-align: right"> 51 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 32 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 18.3 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gabT_TU_2 </td>
+<td style="padding-right: 1em;text-align: right"> 22 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 41 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 9.26 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gabP_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 54 </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 36 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 16.3 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gabP_TU_1 </td>
+<td style="padding-right: 1em;text-align: right"> 51 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 32 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 18.3 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gabP_TU_2 </td>
+<td style="padding-right: 1em;text-align: right"> 22 </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 41 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 9.26 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> serA_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 21 </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 41 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 11.4 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> serA_TU_1 </td>
+<td style="padding-right: 1em;text-align: right"> 42 </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="jj"> a </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td style="padding-left: 1em;text-align: right"> 60 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 5.97 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gltB_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 35 </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 53 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 10.8 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gltD_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 35 </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 53 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 10.8 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> nanA_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 9 </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td style="padding-left: 1em;text-align: right"> 27 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 10.8 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> nanA_TU_1 </td>
+<td style="padding-right: 1em;text-align: right"> 9 </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td style="padding-left: 1em;text-align: right"> 27 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 10.8 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gspC_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 46 </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 26 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 20.5 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gspC_TU_1 </td>
+<td style="padding-right: 1em;text-align: right"> 50 </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 30 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 20.5 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gspC_TU_2 </td>
+<td style="padding-right: 1em;text-align: right"> 21 </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="jj"> a </td>
+<td class="jj"> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 42 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 10.2 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gspE_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 46 </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 26 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 20.5 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gspE_TU_1 </td>
+<td style="padding-right: 1em;text-align: right"> 50 </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 30 </td>
+<td style="padding-left: 1em;text-align: center"> - </td>
+<td style="padding-left: 1em"> 20.5 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> gspE_TU_2 </td>
+<td style="padding-right: 1em;text-align: right"> 21 </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="jj"> a </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 42 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 10.6 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> dppF_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 7 </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td style="padding-left: 1em;text-align: right"> 27 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 16.7 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> dppD_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 7 </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td style="padding-left: 1em;text-align: right"> 27 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 16.7 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> dppB_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 7 </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td style="padding-left: 1em;text-align: right"> 27 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 16.7 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> dppA_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 7 </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td style="padding-left: 1em;text-align: right"> 27 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 16.7 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> yieE_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 8 </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk g "> g </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk g "> g </td>
+<td style="padding-left: 1em;text-align: right"> 27 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 12.6 </td>
+</tr>
+<tr>
+<td style="padding-right: 1em"> asnA_TU_0 </td>
+<td style="padding-right: 1em;text-align: right"> 41 </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk . "> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk t "> t </td>
+<td class="jj"> . </td>
+<td class="jj"> . </td>
+<td class="kk t "> t </td>
+<td class="kk g "> g </td>
+<td class="kk . "> . </td>
+<td class="kk c "> c </td>
+<td class="kk t "> t </td>
+<td class="kk t "> t </td>
+<td class="kk a "> a </td>
+<td class="kk a "> a </td>
+<td class="kk t "> t </td>
+<td class="kk c "> c </td>
+<td class="kk a "> a </td>
+<td style="padding-left: 1em;text-align: right"> 58 </td>
+<td style="padding-left: 1em;text-align: center"> + </td>
+<td style="padding-left: 1em"> 11.0 </td>
+</tr>
+</tbody>
+</table>
+<table> <tr> <td> Score: <b> 418.981 </b></td>
+<td rowspan=2><img src="logo1.png"></td></tr>
+<tr><th><a href="logo_ssc1.png">logo with ssc</a></td></tr></table>
+<input type="submit" name="action" value="Scan alignment 1"><b> against sequence databases using <a href="http://meme-suite.org//doc/glam2scan.html">GLAM2SCAN.</a></b>
+<input type="hidden" name="aln1" value=".
+                **********..***********
+codB_TU_0    31 tttt.tatcttcag.atgaatag 51 + 3.79
+cynR_TU_0    33 aagtct.cat..tt.atg.atga 50 + 3.63
+feaR_TU_0    34 ttatgtctcta.tgcctg.acaa 54 + 17.2
+feaR_TU_1    16 ttatgtctcta.tgcctg.acaa 36 + 17.2
+feaR_TU_2    61 attt.t.tat..tg.ttgcattt 44 - 3.45
+feaR_TU_3    61 ttatgtctcta.tgcctg.acaa 81 + 17.2
+ydcS_TU_2    66 atatct.cct..tg.tttaacca 48 - 15.6
+ydcT_TU_2    66 atatct.cct..tg.tttaacca 48 - 15.6
+ydcU_TU_2    66 atatct.cct..tg.tttaacca 48 - 15.6
+ydcV_TU_2    66 atatct.cct..tg.tttaacca 48 - 15.6
+patD_TU_3    66 atatct.cct..tg.tttaacca 48 - 15.6
+shiA_TU_0    28 aaatga.ttttatggctg.atta  8 - 2.62
+nac_TU_0     29 attt.t.ggtg.ttgatgtacaa 10 - 9.09
+gabD_TU_0    54 gtttgtacct..tg.ctg.acaa 36 - 16.3
+gabD_TU_1    51 atatctacat..tt.ctgaaaaa 32 - 18.3
+gabD_TU_2    22 attcgccggg..tg.ctgcaaaa 41 + 9.26
+gabT_TU_0    54 gtttgtacct..tg.ctg.acaa 36 - 16.3
+gabT_TU_1    51 atatctacat..tt.ctgaaaaa 32 - 18.3
+gabT_TU_2    22 attcgccggg..tg.ctgcaaaa 41 + 9.26
+gabP_TU_0    54 gtttgtacct..tg.ctg.acaa 36 - 16.3
+gabP_TU_1    51 atatctacat..tt.ctgaaaaa 32 - 18.3
+gabP_TU_2    22 attcgccggg..tg.ctgcaaaa 41 + 9.26
+serA_TU_0    21 aattgtcgat..tgctctaaata 41 + 11.4
+serA_TU_1    42 tttt.t.gata.tg.ttgaaagg 60 + 5.97
+gltB_TU_0    35 gtat.cagct..ttcccg.ataa 53 + 10.8
+gltD_TU_0    35 gtat.cagct..ttcccg.ataa 53 + 10.8
+nanA_TU_0     9 ttat.aagct..tt.ctgtatgg 27 + 10.8
+nanA_TU_1     9 ttat.aagct..tt.ctgtatgg 27 + 10.8
+gspC_TU_0    46 taatgccgct..tgcatgaatca 26 - 20.5
+gspC_TU_1    50 taatgccgct..tgcatgaatca 30 - 20.5
+gspC_TU_2    21 taatgtatgtattt.attaatta 42 + 10.2
+gspE_TU_0    46 taatgccgct..tgcatgaatca 26 - 20.5
+gspE_TU_1    50 taatgccgct..tgcatgaatca 30 - 20.5
+gspE_TU_2    21 taatgtatgta.tttattaatta 42 + 10.6
+dppF_TU_0     7 aaatcccggt..tggctgtattg 27 + 16.7
+dppD_TU_0     7 aaatcccggt..tggctgtattg 27 + 16.7
+dppB_TU_0     7 aaatcccggt..tggctgtattg 27 + 16.7
+dppA_TU_0     7 aaatcccggt..tggctgtattg 27 + 16.7
+yieE_TU_0     8 taat.aagct..tgtctgaatcg 27 + 12.6
+asnA_TU_0    41 gttt.t.tgt..tg.cttaatca 58 + 11.0
+.">
+<br><input type="submit" name="action" value="View alignment 1">
+<input type="hidden" name="pspm1" value="
+letter-probability matrix: alength= 4  w= 21 nsites= 40 E= 1
+0.5  0.0  0.15  0.35 
+0.35  0.0  0.0  0.65 
+0.675  0.0  0.025  0.3 
+0.0  0.075  0.0  0.925 
+0.0  0.433333333333  0.566666666667  0.0 
+0.1  0.325  0.0  0.575 
+0.48275862069  0.51724137931  0.0  0.0 
+0.0  0.3  0.475  0.225 
+0.175  0.525  0.275  0.025 
+0.0  0.0  0.075  0.925 
+0.025  0.0  0.0  0.975 
+0.0  0.0  0.725  0.275 
+0.0  0.555555555556  0.333333333333  0.111111111111 
+0.225  0.575  0.0  0.2 
+0.0  0.075  0.0  0.925 
+0.0  0.0  0.775  0.225 
+0.633333333333  0.133333333333  0.0  0.233333333333 
+1.0  0.0  0.0  0.0 
+0.2  0.3  0.0  0.5 
+0.4  0.275  0.1  0.225 
+0.75  0.0  0.225  0.025 
+">
+<input type="submit" name="action" value="View PSPM 1">
+<br><input type="submit" name="action" value="Compare PSPM 1"><b> to known motifs in motif databases using <a href="http://meme-suite.org//doc/tomtom.html">Tomtom</a>.</b>
+<br><i>Regular Expression for Motif: </i>
+<b> [at][at][at]t[cg]?[ct][ac]?[ctg][cg]t.{0,2}t[tg][cg]?[act]t[tg][at]?a[act][act][ag] </b>
+<br>
+<h2>Replicates:</h2>
+<p>Check that at least some of these are similar to the best motif found.<br>If not, there may well be an even better motif.<BR>Click here to 
+<input type="submit" name="action" value="re-run GLAM2">
+with double the "maximum number of iterations without improvement" to find it.</p>
+<p>
+<table> <tr> <td> Score: <b> 415.273 </b></td>
+<td rowspan=2><img src="logo2.png"></td></tr>
+<tr><th><a href="logo_ssc2.png">logo with ssc</a></td></tr></table>
+<input type="submit" name="action" value="Scan alignment 2"><b> against sequence databases using <a href="http://meme-suite.org//doc/glam2scan.html">GLAM2SCAN.</a></b>
+<input type="hidden" name="aln2" value=".
+                **********************
+codB_TU_0    41 ca.gatgaatagaatgcggcgg 61 + 6.17
+cynR_TU_0    39 ga.gacttttaccttatgacaa 19 - 7.93
+ompF_TU_0    30 gaa.acgttagtttgaatggaa 50 + 1.99
+feaR_TU_0    22 gac.aataaccgcttatgtctc 42 + 12.6
+feaR_TU_1     4 gac.aataaccgcttatgtctc 24 + 12.6
+feaR_TU_2    68 ga..aatgtatttttattgttg 49 - 12.1
+feaR_TU_3    49 gac.aataaccgcttatgtctc 69 + 12.6
+ydcS_TU_2    56 caaggagatatttttacggcac 77 + 19.8
+ydcT_TU_2    56 caaggagatatttttacggcac 77 + 19.8
+ydcU_TU_2    56 caaggagatatttttacggcac 77 + 19.8
+ydcV_TU_2    56 caaggagatatttttacggcac 77 + 19.8
+patD_TU_3    56 caaggagatatttttacggcac 77 + 19.8
+shiA_TU_0    55 ca.taaggttcgtttatagatc 75 + 12.3
+nac_TU_0     36 ca..gttttattttggtgttga 17 - 6.92
+gabD_TU_0    26 caataggaattgctgatgtcgc  5 - 16.4
+gabD_TU_1    47 ga.tatttttagattatggcta 67 + 13.4
+gabD_TU_2    81 ca..gcgagtttttcatctcgc 62 - 6.90
+gabT_TU_0    26 caataggaattgctgatgtcgc  5 - 16.4
+gabT_TU_1    47 ga.tatttttagattatggcta 67 + 13.4
+gabT_TU_2    81 ca..gcgagtttttcatctcgc 62 - 6.90
+gabP_TU_0    26 caataggaattgctgatgtcgc  5 - 16.4
+gabP_TU_1    47 ga.tatttttagattatggcta 67 + 13.4
+gabP_TU_2    81 ca..gcgagtttttcatctcgc 62 - 6.90
+serA_TU_0    81 caa.aggtaattcttggatgaa 61 - 5.62
+serA_TU_1    47 caa.aaaataatattgcggcaa 27 - 11.0
+gltB_TU_0    30 caa.atggcaagcttattggta 10 - 13.0
+gltD_TU_0    30 caa.atggcaagcttattggta 10 - 13.0
+nanA_TU_0    26 ca.tacagaaagcttataatgc  6 - 6.46
+nanA_TU_1    26 ca.tacagaaagcttataatgc  6 - 6.46
+gspC_TU_0    23 caa.aatttatttatattagta  3 - 17.1
+gspC_TU_1    27 caa.aatttatttatattagta  7 - 17.1
+gspC_TU_2    72 caa.aatttatttatattagta 52 - 17.1
+gspE_TU_0    23 caa.aatttatttatattagta  3 - 17.1
+gspE_TU_1    27 caa.aatttatttatattagta  7 - 17.1
+gspE_TU_2    72 caa.aatttatttatattagta 52 - 17.1
+dppF_TU_0    60 cacgaggggcattttatggagg 81 + 12.9
+dppD_TU_0    60 cacgaggggcattttatggagg 81 + 12.9
+dppB_TU_0    60 cacgaggggcattttatggagg 81 + 12.9
+dppA_TU_0    60 cacgaggggcattttatggagg 81 + 12.9
+yieE_TU_0    78 caagagtaatcatttactggaa 57 - 8.85
+asnA_TU_0    18 gaatgattattgcatgtgtgtc 39 + 10.7
+.">
+<br><input type="submit" name="action" value="View alignment 2">
+<input type="hidden" name="pspm2" value="
+letter-probability matrix: alength= 4  w= 22 nsites= 41 E= 1
+0.0  0.756097560976  0.243902439024  0.0 
+1.0  0.0  0.0  0.0 
+0.75  0.25  0.0  0.0 
+0.0  0.0  0.545454545455  0.454545454545 
+0.756097560976  0.0  0.243902439024  0.0 
+0.439024390244  0.170731707317  0.219512195122  0.170731707317 
+0.0731707317073  0.0  0.512195121951  0.414634146341 
+0.414634146341  0.0  0.243902439024  0.341463414634 
+0.292682926829  0.0487804878049  0.170731707317  0.487804878049 
+0.487804878049  0.170731707317  0.0  0.341463414634 
+0.341463414634  0.121951219512  0.0243902439024  0.512195121951 
+0.0243902439024  0.0243902439024  0.390243902439  0.560975609756 
+0.121951219512  0.317073170732  0.0  0.560975609756 
+0.19512195122  0.0  0.0  0.80487804878 
+0.0  0.0731707317073  0.121951219512  0.80487804878 
+0.878048780488  0.0  0.121951219512  0.0 
+0.0243902439024  0.19512195122  0.0243902439024  0.756097560976 
+0.0975609756098  0.0731707317073  0.560975609756  0.268292682927 
+0.219512195122  0.0  0.487804878049  0.292682926829 
+0.121951219512  0.487804878049  0.292682926829  0.0975609756098 
+0.243902439024  0.0  0.341463414634  0.414634146341 
+0.414634146341  0.439024390244  0.146341463415  0.0 
+">
+<input type="submit" name="action" value="View PSPM 2">
+<br><input type="submit" name="action" value="Compare PSPM 2"><b> to known motifs in motif databases using <a href="http://meme-suite.org//doc/tomtom.html">Tomtom</a>.</b>
+<br><i>Regular Expression for Motif: </i>
+<b> [cg]a[ac]?[tg]?[ag][ag][tg][atg][at][at][at][tg][ct]ttat[tg][atg][cg][atg][ac] </b>
+<br>
+<table> <tr> <td> Score: <b> 412.000 </b></td>
+<td rowspan=2><img src="logo3.png"></td></tr>
+<tr><th><a href="logo_ssc3.png">logo with ssc</a></td></tr></table>
+<input type="submit" name="action" value="Scan alignment 3"><b> against sequence databases using <a href="http://meme-suite.org//doc/glam2scan.html">GLAM2SCAN.</a></b>
+<input type="hidden" name="aln3" value=".
+                *****.....*****************
+codB_TU_0     1 aaaaa.....tatatttccccacgaaa 22 + 7.70
+cynR_TU_0    40 tgagac....ttt.tacctt.atgaca 20 - 7.66
+ompF_TU_0    43 caaactaacgtttcgctacc.gtgaaa 18 - 2.70
+feaR_TU_0    52 caaga.....cttatttcctatagtca 73 + 16.6
+feaR_TU_1    34 caaga.....cttatttcctatagtca 55 + 16.6
+feaR_TU_2    49 caaca.....a.taaaaatacatttca 69 + 4.65
+feaR_TU_3    46 cgtgac....aataaccgcttatgtct 68 + 5.81
+ydcS_TU_2    71 taaaa.....a.tatctccttgtttaa 51 - 17.5
+ydcT_TU_2    71 taaaa.....a.tatctccttgtttaa 51 - 17.5
+ydcU_TU_2    71 taaaa.....a.tatctccttgtttaa 51 - 17.5
+ydcV_TU_2    71 taaaa.....a.tatctccttgtttaa 51 - 17.5
+patD_TU_3    71 taaaa.....a.tatctccttgtttaa 51 - 17.5
+nac_TU_0     48 caaga.....t.gcttgccagttttat 28 - 1.60
+gabD_TU_0    61 caacagcg..tttgtaccttgctgaca 37 - 11.4
+gabD_TU_1    56 taaaaa....tatctacatttctgaaa 34 - 19.3
+gabD_TU_2    37 caaaac....catctacgctcaggact 59 + 12.1
+gabT_TU_0    61 caacagcg..tttgtaccttgctgaca 37 - 11.4
+gabT_TU_1    56 taaaaa....tatctacatttctgaaa 34 - 19.3
+gabT_TU_2    37 caaaac....catctacgctcaggact 59 + 12.1
+gabP_TU_0    61 caacagcg..tttgtaccttgctgaca 37 - 11.4
+gabP_TU_1    56 taaaaa....tatctacatttctgaaa 34 - 19.3
+gabP_TU_2    37 caaaac....catctacgctcaggact 59 + 12.1
+serA_TU_0    49 taaaccag..catattcatccaagaat 73 + 7.58
+serA_TU_1    47 caaaa.....aat.aatattgcggcaa 27 - 5.72
+gltB_TU_0    23 caagc.....t.tattggta.cagaaa  4 - 7.47
+gltD_TU_0    23 caagc.....t.tattggta.cagaaa  4 - 7.47
+nanA_TU_0    76 taaacg....a.tatacctt.tatacc 56 - 8.74
+nanA_TU_1    76 taaacg....a.tatacctt.tatacc 56 - 8.74
+gspC_TU_0    23 caaaa.....tttatttatattagtaa  2 - 21.5
+gspC_TU_1    27 caaaa.....tttatttatattagtaa  6 - 21.5
+gspC_TU_2    72 caaaa.....tttatttatattagtaa 51 - 21.5
+gspE_TU_0    23 caaaa.....tttatttatattagtaa  2 - 21.5
+gspE_TU_1    27 caaaa.....tttatttatattagtaa  6 - 21.5
+gspE_TU_2    72 caaaa.....tttatttatattagtaa 51 - 21.5
+dppF_TU_0    77 cataa.....aat.gcccctcgtgacc 57 - 10.8
+dppD_TU_0    77 cataa.....aat.gcccctcgtgacc 57 - 10.8
+dppB_TU_0    77 cataa.....aat.gcccctcgtgacc 57 - 10.8
+dppA_TU_0    77 cataa.....aat.gcccctcgtgacc 57 - 10.8
+yieE_TU_0    26 cgaact....tttagccgctttagtct 48 + 9.53
+asnA_TU_0    33 catgc.....aataatcattcaataaa 12 - 10.8
+cycA_TU_0    24 taaga.....tttagatctaatgttaa  3 - 11.3
+.">
+<br><input type="submit" name="action" value="View alignment 3">
+<input type="hidden" name="pspm3" value="
+letter-probability matrix: alength= 4  w= 22 nsites= 41 E= 1
+0.0243902439024  0.658536585366  0.0  0.317073170732 
+0.926829268293  0.0  0.0731707317073  0.0 
+0.853658536585  0.0  0.0  0.146341463415 
+0.682926829268  0.0975609756098  0.219512195122  0.0 
+0.80487804878  0.19512195122  0.0  0.0 
+0.365853658537  0.146341463415  0.0  0.487804878049 
+0.5  0.0  0.0  0.5 
+0.0  0.0  0.0243902439024  0.975609756098 
+0.685714285714  0.228571428571  0.0857142857143  0.0 
+0.0975609756098  0.0  0.170731707317  0.731707317073 
+0.365853658537  0.292682926829  0.0  0.341463414634 
+0.0243902439024  0.487804878049  0.0731707317073  0.414634146341 
+0.341463414634  0.487804878049  0.170731707317  0.0 
+0.0  0.463414634146  0.0  0.536585365854 
+0.268292682927  0.0731707317073  0.0  0.658536585366 
+0.0857142857143  0.314285714286  0.142857142857  0.457142857143 
+0.219512195122  0.219512195122  0.243902439024  0.317073170732 
+0.365853658537  0.0243902439024  0.121951219512  0.487804878049 
+0.0  0.0  0.731707317073  0.268292682927 
+0.536585365854  0.0243902439024  0.0  0.439024390244 
+0.560975609756  0.439024390244  0.0  0.0 
+0.682926829268  0.146341463415  0.0  0.170731707317 
+">
+<input type="submit" name="action" value="View PSPM 3">
+<br><input type="submit" name="action" value="Compare PSPM 3"><b> to known motifs in motif databases using <a href="http://meme-suite.org//doc/tomtom.html">Tomtom</a>.</b>
+<br><i>Regular Expression for Motif: </i>
+<b> [ct]aa[ag]a.{0,5}[at][at]?t[ac]?t[act][ct][ac][ct][at][ct]?[actg][at][tg][at][ac]a </b>
+<br>
+<table> <tr> <td> Score: <b> 402.536 </b></td>
+<td rowspan=2><img src="logo4.png"></td></tr>
+<tr><th><a href="logo_ssc4.png">logo with ssc</a></td></tr></table>
+<input type="submit" name="action" value="Scan alignment 4"><b> against sequence databases using <a href="http://meme-suite.org//doc/glam2scan.html">GLAM2SCAN.</a></b>
+<input type="hidden" name="aln4" value=".
+                ******.****.**********
+codB_TU_0    53 atgcggcggat.tttt.tgggt 72 + 6.57
+cynR_TU_0    29 gtaaaa.gtctcatttatgatg 49 + 2.87
+ompF_TU_0    60 gcaggc.atct.ttccattcaa 41 - 5.87
+feaR_TU_0    63 aaataa.gtct.tgtca.ggca 45 - 11.9
+feaR_TU_1    45 aaataa.gtct.tgtca.ggca 27 - 11.9
+feaR_TU_2    70 gtgaaatgtat.ttttattgtt 50 - 11.2
+feaR_TU_3    62 aagcgg.ttat.tgtcacgatt 43 - 7.03
+ydcS_TU_2    57 aaggag.atat.ttttacggca 76 + 18.8
+ydcT_TU_2    57 aaggag.atat.ttttacggca 76 + 18.8
+ydcU_TU_2    57 aaggag.atat.ttttacggca 76 + 18.8
+ydcV_TU_2    57 aaggag.atat.ttttacggca 76 + 18.8
+patD_TU_3    57 aaggag.atat.ttttacggca 76 + 18.8
+shiA_TU_0    32 ctgcaa.atga.ttttatggct 13 - 11.3
+nac_TU_0     22 accaaa.ataa.aact..ggca 39 + 2.34
+gabD_TU_0    27 gtgcgc.atat.tgtca.gcaa 45 + 9.66
+gabD_TU_1    42 atgtag.atat.tttta.gatt 60 + 19.1
+gabD_TU_2    51 gcgtag.atgg.tttt..gcag 34 - 8.48
+gabT_TU_0    27 gtgcgc.atat.tgtca.gcaa 45 + 9.66
+gabT_TU_1    42 atgtag.atat.tttta.gatt 60 + 19.1
+gabT_TU_2    51 gcgtag.atgg.tttt..gcag 34 - 8.48
+gabP_TU_0    27 gtgcgc.atat.tgtca.gcaa 45 + 9.66
+gabP_TU_1    42 atgtag.atat.tttta.gatt 60 + 19.1
+gabP_TU_2    51 gcgtag.atgg.tttt..gcag 34 - 8.48
+serA_TU_0    81 .caaag.gtaa.ttct.tggat 64 - 1.88
+serA_TU_1    32 gcaata.ttat.tttt.tgata 50 + 8.18
+gltB_TU_0    27 atggca.agct.tatt..ggta 10 - 8.63
+gltD_TU_0    27 atggca.agct.tatt..ggta 10 - 8.63
+nanA_TU_0    23 acagaa.agct.tataatgcga  4 - 9.63
+nanA_TU_1    23 acagaa.agct.tataatgcga  4 - 9.63
+gspC_TU_0     8 atataa.ataa.attt.tgctt 26 + 16.5
+gspC_TU_1    12 atataa.ataa.attt.tgctt 30 + 16.5
+gspC_TU_2    57 atataa.ataa.attt.tgctt 75 + 16.5
+gspE_TU_0     8 atataa.ataa.attt.tgctt 26 + 16.5
+gspE_TU_1    12 atataa.ataa.attt.tgctt 30 + 16.5
+gspE_TU_2    57 atataa.ataa.attt.tgctt 75 + 16.5
+dppF_TU_0    61 acgagg.ggca.ttttatggag 80 + 14.8
+dppD_TU_0    61 acgagg.ggca.ttttatggag 80 + 14.8
+dppB_TU_0    61 acgagg.ggca.ttttatggag 80 + 14.8
+dppA_TU_0    61 acgagg.ggca.ttttatggag 80 + 14.8
+yieE_TU_0     7 gtaata.agct.tgtc.tgaat 25 + 6.57
+asnA_TU_0     1 gagtta.ggct.ttttattgaa 20 + 10.6
+cycA_TU_0    13 atctaa.atct.tagtattcat 32 + 6.07
+.">
+<br><input type="submit" name="action" value="View alignment 4">
+<input type="hidden" name="pspm4" value="
+letter-probability matrix: alength= 4  w= 20 nsites= 42 E= 1
+0.682926829268  0.0243902439024  0.292682926829  0.0 
+0.214285714286  0.309523809524  0.0  0.47619047619 
+0.357142857143  0.047619047619  0.595238095238  0.0 
+0.238095238095  0.142857142857  0.238095238095  0.380952380952 
+0.642857142857  0.047619047619  0.238095238095  0.0714285714286 
+0.47619047619  0.0952380952381  0.428571428571  0.0 
+0.690476190476  0.0  0.261904761905  0.047619047619 
+0.0  0.0  0.261904761905  0.738095238095 
+0.547619047619  0.357142857143  0.0952380952381  0.0 
+0.309523809524  0.0  0.0714285714286  0.619047619048 
+0.190476190476  0.0  0.0  0.809523809524 
+0.142857142857  0.0  0.166666666667  0.690476190476 
+0.0  0.0714285714286  0.0238095238095  0.904761904762 
+0.047619047619  0.190476190476  0.0  0.761904761905 
+1.0  0.0  0.0  0.0 
+0.0  0.214285714286  0.0  0.785714285714 
+0.0  0.0  0.904761904762  0.0952380952381 
+0.166666666667  0.380952380952  0.452380952381  0.0 
+0.357142857143  0.214285714286  0.0714285714286  0.357142857143 
+0.428571428571  0.0  0.190476190476  0.380952380952 
+">
+<input type="submit" name="action" value="View PSPM 4">
+<br><input type="submit" name="action" value="Compare PSPM 4"><b> to known motifs in motif databases using <a href="http://meme-suite.org//doc/tomtom.html">Tomtom</a>.</b>
+<br><i>Regular Expression for Motif: </i>
+<b> [ag]?[act][ag][atg][ag][ag].{0,1}[ag][tg][ac][at].{0,1}tttta?[ct]?g[cg][act][at] </b>
+<br>
+<table> <tr> <td> Score: <b> 374.172 </b></td>
+<td rowspan=2><img src="logo5.png"></td></tr>
+<tr><th><a href="logo_ssc5.png">logo with ssc</a></td></tr></table>
+<input type="submit" name="action" value="Scan alignment 5"><b> against sequence databases using <a href="http://meme-suite.org//doc/glam2scan.html">GLAM2SCAN.</a></b>
+<input type="hidden" name="aln5" value=".
+                ************************
+codB_TU_0    45 atct.gaa.gataaaaagc.aatc 25 - 7.44
+cynR_TU_0    30 acct.tat.gacaatcggc.gagt 10 - 4.59
+ompF_TU_0    54 atctttccattcaaactaacgttt 31 - 14.6
+feaR_TU_0    17 atcgtgac.aataacc.gc.ttat 37 + 10.5
+feaR_TU_1    62 atga.gcctgactatagga.aata 41 - 4.50
+feaR_TU_2    46 atgc.aacaataaaaatac.attt 67 + 9.04
+feaR_TU_3    44 atcgtgac.aataacc.gc.ttat 64 + 10.5
+ydcS_TU_2    80 gccgtgcc.gtaaaaatatctcct 58 - 16.2
+ydcT_TU_2    80 gccgtgcc.gtaaaaatatctcct 58 - 16.2
+ydcU_TU_2    80 gccgtgcc.gtaaaaatatctcct 58 - 16.2
+ydcV_TU_2    80 gccgtgcc.gtaaaaatatctcct 58 - 16.2
+patD_TU_3    80 gccgtgcc.gtaaaaatatctcct 58 - 16.2
+shiA_TU_0    10 atca.gccataaaatc.at.ttgc 30 + 8.80
+nac_TU_0     70 gccattacttacaaccaga.ttgc 48 - 2.95
+gabD_TU_0    48 accttgct.gacaatatgc.gcac 27 - 14.9
+gabD_TU_1     1 ataa.gaa.aacaatatgtcgctt 22 + 14.9
+gabD_TU_2    31 gtgctgcaaaaccatctac.gctc 53 + 10.8
+gabT_TU_0    48 accttgct.gacaatatgc.gcac 27 - 14.9
+gabT_TU_1     1 ataa.gaa.aacaatatgtcgctt 22 + 14.9
+gabT_TU_2    31 gtgctgcaaaaccatctac.gctc 53 + 10.8
+gabP_TU_0    48 accttgct.gacaatatgc.gcac 27 - 14.9
+gabP_TU_1     1 ataa.gaa.aacaatatgtcgctt 22 + 14.9
+gabP_TU_2    31 gtgctgcaaaaccatctac.gctc 53 + 10.8
+serA_TU_0    52 acca.gcatattcatccaa.gaat 73 + 0.211
+serA_TU_1    65 atcc.gcctttcaacatatcaaaa 43 - 14.9
+gltB_TU_0    18 agcttgccatttgacctgt.atca 40 + 7.31
+gltD_TU_0    18 agcttgccatttgacctgt.atca 40 + 7.31
+nanA_TU_0    70 atat.acctttatacctgt.tata 49 - 6.53
+nanA_TU_1    70 atat.acctttatacctgt.tata 49 - 6.53
+gspC_TU_0    56 atactaac.gtcaatatac.aacc 77 + 16.4
+gspC_TU_1    60 atactaac.gtcaatatac.aacc 81 + 16.4
+gspC_TU_2    11 atcataaa.aataatgtat.gtat 32 + 11.8
+gspE_TU_0    56 atactaac.gtcaatatac.aacc 77 + 16.4
+gspE_TU_1    60 atactaac.gtcaatatac.aacc 81 + 16.4
+gspE_TU_2    11 atcataaa.aataatgtat.gtat 32 + 11.8
+dppF_TU_0    65 ctcgtgacctacaatctgtcaaca 42 - 17.9
+dppD_TU_0    65 ctcgtgacctacaatctgtcaaca 42 - 17.9
+dppB_TU_0    65 ctcgtgacctacaatctgtcaaca 42 - 17.9
+dppA_TU_0    65 ctcgtgacctacaatctgtcaaca 42 - 17.9
+yieE_TU_0    53 atcattccagtaaatg.at.tact 74 + 10.5
+asnA_TU_0    24 atcattca.ataaaaa.gcctaac  3 - 9.21
+cycA_TU_0    40 attgttacctaatatcgat.gagt 62 + 2.47
+.">
+<br><input type="submit" name="action" value="View alignment 5">
+<input type="hidden" name="pspm5" value="
+letter-probability matrix: alength= 4  w= 24 nsites= 42 E= 1
+0.690476190476  0.0952380952381  0.214285714286  0.0 
+0.0  0.261904761905  0.047619047619  0.690476190476 
+0.214285714286  0.642857142857  0.119047619048  0.0238095238095 
+0.261904761905  0.214285714286  0.285714285714  0.238095238095 
+0.0  0.0  0.0  1.0 
+0.214285714286  0.0  0.642857142857  0.142857142857 
+0.47619047619  0.52380952381  0.0  0.0 
+0.261904761905  0.642857142857  0.0  0.0952380952381 
+0.45  0.25  0.0  0.3 
+0.309523809524  0.0  0.380952380952  0.309523809524 
+0.547619047619  0.0  0.0  0.452380952381 
+0.285714285714  0.52380952381  0.0  0.190476190476 
+0.761904761905  0.0952380952381  0.047619047619  0.0952380952381 
+1.0  0.0  0.0  0.0 
+0.214285714286  0.190476190476  0.0  0.595238095238 
+0.47619047619  0.452380952381  0.0714285714286  0.0 
+0.0540540540541  0.027027027027  0.0810810810811  0.837837837838 
+0.5  0.0  0.5  0.0 
+0.0952380952381  0.380952380952  0.0  0.52380952381 
+0.0  1.0  0.0  0.0 
+0.333333333333  0.0  0.357142857143  0.309523809524 
+0.428571428571  0.333333333333  0.0  0.238095238095 
+0.238095238095  0.380952380952  0.0952380952381  0.285714285714 
+0.238095238095  0.333333333333  0.0  0.428571428571 
+">
+<input type="submit" name="action" value="View PSPM 5">
+<br><input type="submit" name="action" value="Compare PSPM 5"><b> to known motifs in motif databases using <a href="http://meme-suite.org//doc/tomtom.html">Tomtom</a>.</b>
+<br><i>Regular Expression for Motif: </i>
+<b> [ag][ct][ac][actg]t?[ag][ac][ac][act]?[atg][at][ac]aa[at][ac]t?[ag][ct]c?[atg][act][act][act] </b>
+<br>
+<table> <tr> <td> Score: <b> 360.754 </b></td>
+<td rowspan=2><img src="logo6.png"></td></tr>
+<tr><th><a href="logo_ssc6.png">logo with ssc</a></td></tr></table>
+<input type="submit" name="action" value="Scan alignment 6"><b> against sequence databases using <a href="http://meme-suite.org//doc/glam2scan.html">GLAM2SCAN.</a></b>
+<input type="hidden" name="aln6" value=".
+                *********************
+codB_TU_0    62 a.tttttt..gggt.ttcaaa 78 + 5.50
+cynR_TU_0    38 a.gacttttacctt.atgaca 20 - 10.1
+ompF_TU_0     5 atctttgt.agcactttcacg 24 + 0.131
+feaR_TU_0    29 t.tattgtcacgat.ttgcgg 11 - 9.26
+feaR_TU_1    61 a.ttagctt.cgtttattgca 79 + 10.3
+feaR_TU_2    21 a.ttagctt.cgtttattgca 39 + 10.3
+feaR_TU_3    56 t.tattgtcacgat.ttgcgg 38 - 9.26
+ydcS_TU_2    63 a.tatttttacggc.acggcg 81 + 19.4
+ydcT_TU_2    63 a.tatttttacggc.acggcg 81 + 19.4
+ydcU_TU_2    63 a.tatttttacggc.acggcg 81 + 19.4
+ydcV_TU_2    63 a.tatttttacggc.acggcg 81 + 19.4
+patD_TU_3    63 a.tatttttacggc.acggcg 81 + 19.4
+shiA_TU_0    56 a.taaggtt.cgtt.tataga 73 + 8.23
+nac_TU_0     32 tttatttt..ggtg.ttgatg 15 - 6.54
+gabD_TU_0    33 a.tattgt..cagc.aaggta 49 + 9.58
+gabD_TU_1    48 a.tatttttagatt.atggct 66 + 18.0
+gabD_TU_2     2 a.gatttt..gggc.tcgtcg 18 + 8.89
+gabT_TU_0    33 a.tattgt..cagc.aaggta 49 + 9.58
+gabT_TU_1    48 a.tatttttagatt.atggct 66 + 18.0
+gabT_TU_2     2 a.gatttt..gggc.tcgtcg 18 + 8.89
+gabP_TU_0    33 a.tattgt..cagc.aaggta 49 + 9.58
+gabP_TU_1    48 a.tatttttagatt.atggct 66 + 18.0
+gabP_TU_2     2 a.gatttt..gggc.tcgtcg 18 + 8.89
+serA_TU_0    61 a.tatgct..ggtt.tagagg 45 - 11.4
+serA_TU_1    37 attattttt.tgat.atgttg 55 + 12.7
+gltB_TU_0    15 a.taagcttgccat.ttgacc 33 + 6.40
+gltD_TU_0    15 a.taagcttgccat.ttgacc 33 + 6.40
+nanA_TU_0    11 a.taagctt.tctgtatgggg 29 + 9.63
+nanA_TU_1    11 a.taagctt.tctgtatgggg 29 + 9.63
+gspC_TU_0    18 attttgctt.gattcatgcaa 37 + 11.4
+gspC_TU_1    22 attttgctt.gattcatgcaa 41 + 11.4
+gspC_TU_2    24 attatttttatgattaaggat  4 - 14.5
+gspE_TU_0    18 attttgctt.gattcatgcaa 37 + 11.4
+gspE_TU_1    22 attttgctt.gattcatgcaa 41 + 11.4
+gspE_TU_2    24 attatttttatgattaaggat  4 - 14.5
+dppF_TU_0    49 a.gattgt.aggtc.acgagg 66 + 13.8
+dppD_TU_0    49 a.gattgt.aggtc.acgagg 66 + 13.8
+dppB_TU_0    49 a.gattgt.aggtc.acgagg 66 + 13.8
+dppA_TU_0    49 a.gattgt.aggtc.acgagg 66 + 13.8
+yieE_TU_0    10 a.taagcttgtctg.aatcga 28 + 2.51
+asnA_TU_0    67 t.gttgcttatgattaagcaa 48 - 6.63
+cycA_TU_0    52 a.ttaggtaacaat.acgcgg 34 - 5.95
+.">
+<br><input type="submit" name="action" value="View alignment 6">
+<input type="hidden" name="pspm6" value="
+letter-probability matrix: alength= 4  w= 21 nsites= 42 E= 1
+0.904761904762  0.0  0.0  0.0952380952381 
+0.0  0.0  0.0  1.0 
+0.0  0.0238095238095  0.214285714286  0.761904761905 
+0.761904761905  0.0  0.0  0.238095238095 
+0.214285714286  0.0238095238095  0.0  0.761904761905 
+0.0  0.0  0.357142857143  0.642857142857 
+0.0  0.309523809524  0.285714285714  0.404761904762 
+0.0  0.0  0.0  1.0 
+0.0357142857143  0.0714285714286  0.0  0.892857142857 
+0.869565217391  0.0  0.130434782609  0.0 
+0.0  0.404761904762  0.428571428571  0.166666666667 
+0.261904761905  0.166666666667  0.571428571429  0.0 
+0.238095238095  0.0  0.285714285714  0.47619047619 
+0.0  0.380952380952  0.0952380952381  0.52380952381 
+0.0  0.333333333333  0.0  0.666666666667 
+0.714285714286  0.0  0.0  0.285714285714 
+0.214285714286  0.309523809524  0.0  0.47619047619 
+0.0  0.047619047619  0.857142857143  0.0952380952381 
+0.285714285714  0.214285714286  0.404761904762  0.0952380952381 
+0.190476190476  0.404761904762  0.285714285714  0.119047619048 
+0.333333333333  0.047619047619  0.5  0.119047619048 
+">
+<input type="submit" name="action" value="View PSPM 6">
+<br><input type="submit" name="action" value="Compare PSPM 6"><b> to known motifs in motif databases using <a href="http://meme-suite.org//doc/tomtom.html">Tomtom</a>.</b>
+<br><i>Regular Expression for Motif: </i>
+<b> at?[tg][at][at][tg][ctg]tt?a?[cg][ag][atg][ct][ct]?[at][act]g[acg][cg][ag] </b>
+<br>
+<table> <tr> <td> Score: <b> 348.977 </b></td>
+<td rowspan=2><img src="logo7.png"></td></tr>
+<tr><th><a href="logo_ssc7.png">logo with ssc</a></td></tr></table>
+<input type="submit" name="action" value="Scan alignment 7"><b> against sequence databases using <a href="http://meme-suite.org//doc/glam2scan.html">GLAM2SCAN.</a></b>
+<input type="hidden" name="aln7" value=".
+                ***********....********
+codB_TU_0    26 attgcttttta....tcttcaga 44 + 5.68
+cynR_TU_0    34 ttt.tacctta....tgacaatc 17 - 15.0
+ompF_TU_0    54 atc.tttccat....tcaaacta 37 - 2.80
+feaR_TU_0    35 tatgtctctatgcc.tgacaaga 56 + 9.27
+feaR_TU_1    17 tatgtctctatgcc.tgacaaga 38 + 9.27
+feaR_TU_2    45 aatgcaacaa.....taaaaata 62 + 8.35
+feaR_TU_3    18 tttgtcagctg....tgacaagc 36 + 8.91
+ydcS_TU_2    65 tat.ctccttgtt..taaccata 46 - 12.3
+ydcT_TU_2    65 tat.ctccttgtt..taaccata 46 - 12.3
+ydcU_TU_2    65 tat.ctccttgtt..taaccata 46 - 12.3
+ydcV_TU_2    65 tat.ctccttgtt..taaccata 46 - 12.3
+patD_TU_3    65 tat.ctccttgtt..taaccata 46 - 12.3
+shiA_TU_0    67 aacgaacctta....tgagacta 49 - 8.62
+nac_TU_0     33 ttt.tattttgg...tgttgatg 15 - 2.77
+gabD_TU_0    53 tttgtaccttgc...tgacaata 34 - 19.8
+gabD_TU_1    71 ttcgtagccataatctaaaaata 49 - 9.89
+gabD_TU_2    23 ttcgccgggtgc...tgcaaaac 42 + 4.39
+gabT_TU_0    53 tttgtaccttgc...tgacaata 34 - 19.8
+gabT_TU_1    71 ttcgtagccataatctaaaaata 49 - 9.89
+gabT_TU_2    23 ttcgccgggtgc...tgcaaaac 42 + 4.39
+gabP_TU_0    53 tttgtaccttgc...tgacaata 34 - 19.8
+gabP_TU_1    71 ttcgtagccataatctaaaaata 49 - 9.89
+gabP_TU_2    23 ttcgccgggtgc...tgcaaaac 42 + 4.39
+serA_TU_0    22 attgtcgattgc...tctaaata 41 + 12.5
+serA_TU_1    58 ttt.caacata....tcaaaaaa 41 - 6.77
+gltB_TU_0    36 tat.cagctt.....tcccgata 52 + 8.40
+gltD_TU_0    36 tat.cagctt.....tcccgata 52 + 8.40
+nanA_TU_0    10 tat.aagctt.....tctgtatg 26 + 2.98
+nanA_TU_1    10 tat.aagctt.....tctgtatg 26 + 2.98
+gspC_TU_0    69 attgacgttag....tataaata 51 - 17.1
+gspC_TU_1    73 attgacgttag....tataaata 55 - 17.1
+gspC_TU_2     1 att.atccttaatcataaaaata 22 + 11.6
+gspE_TU_0    69 attgacgttag....tataaata 51 - 17.1
+gspE_TU_1    73 attgacgttag....tataaata 55 - 17.1
+gspE_TU_2     1 att.atccttaatcataaaaata 22 + 11.6
+dppF_TU_0    24 attgacgttt.....tcacattc 41 + 11.9
+dppD_TU_0    24 attgacgttt.....tcacattc 41 + 11.9
+dppB_TU_0    24 attgacgttt.....tcacattc 41 + 11.9
+dppA_TU_0    24 attgacgttt.....tcacattc 41 + 11.9
+yieE_TU_0     9 aat.aagcttg....tctgaatc 26 + 12.2
+asnA_TU_0    44 tttgttgcttaa...tcataagc 63 + 11.5
+cycA_TU_0    58 atcgatattagg...taacaata 39 - 12.9
+.">
+<br><input type="submit" name="action" value="View alignment 7">
+<input type="hidden" name="pspm7" value="
+letter-probability matrix: alength= 4  w= 19 nsites= 42 E= 1
+0.404761904762  0.0  0.0  0.595238095238 
+0.333333333333  0.0  0.0  0.666666666667 
+0.0  0.214285714286  0.0  0.785714285714 
+0.0  0.0  1.0  0.0 
+0.357142857143  0.309523809524  0.0  0.333333333333 
+0.380952380952  0.357142857143  0.0  0.261904761905 
+0.0952380952381  0.285714285714  0.5  0.119047619048 
+0.0238095238095  0.619047619048  0.0952380952381  0.261904761905 
+0.047619047619  0.119047619048  0.0714285714286  0.761904761905 
+0.285714285714  0.0  0.0  0.714285714286 
+0.212121212121  0.0  0.606060606061  0.181818181818 
+0.0  0.0  0.0  1.0 
+0.380952380952  0.333333333333  0.285714285714  0.0 
+0.642857142857  0.119047619048  0.0  0.238095238095 
+0.380952380952  0.452380952381  0.0952380952381  0.0714285714286 
+0.738095238095  0.142857142857  0.0714285714286  0.047619047619 
+0.857142857143  0.047619047619  0.0  0.0952380952381 
+0.0952380952381  0.0  0.119047619048  0.785714285714 
+0.666666666667  0.261904761905  0.0714285714286  0.0 
+">
+<input type="submit" name="action" value="View PSPM 7">
+<br><input type="submit" name="action" value="Compare PSPM 7"><b> to known motifs in motif databases using <a href="http://meme-suite.org//doc/tomtom.html">Tomtom</a>.</b>
+<br><i>Regular Expression for Motif: </i>
+<b> [at][at][ct]g?[act][act][cg][ct]t[at][ag]?.{0,4}t[acg][at][ac]aat[ac] </b>
+<br>
+<table> <tr> <td> Score: <b> 345.275 </b></td>
+<td rowspan=2><img src="logo8.png"></td></tr>
+<tr><th><a href="logo_ssc8.png">logo with ssc</a></td></tr></table>
+<input type="submit" name="action" value="Scan alignment 8"><b> against sequence databases using <a href="http://meme-suite.org//doc/glam2scan.html">GLAM2SCAN.</a></b>
+<input type="hidden" name="aln8" value=".
+                **************..*********
+codB_TU_0    73 aaccca.aa.aaatc.cgccgcatt 52 - 6.32
+cynR_TU_0    53 aactcatcataaatg.agactttta 30 - 7.94
+feaR_TU_0    60 atttcctat.agtc..aggctcatt 81 + 13.6
+feaR_TU_1    42 atttcctat.agtc..aggctcatt 63 + 13.6
+feaR_TU_2     2 atttcctat.agtc..aggctcatt 23 + 13.6
+feaR_TU_3    42 aaatcgtgacaataa.ccgcttatg 65 + 0.954
+ydcS_TU_2    53 taaccatag.acgg..cggcttgca 32 - 15.4
+ydcT_TU_2    53 taaccatag.acgg..cggcttgca 32 - 15.4
+ydcU_TU_2    53 taaccatag.acgg..cggcttgca 32 - 15.4
+ydcV_TU_2    53 taaccatag.acgg..cggcttgca 32 - 15.4
+patD_TU_3    53 taaccatag.acgg..cggcttgca 32 - 15.4
+shiA_TU_0    76 cgatct.at.aaacg.aaccttatg 55 - 7.15
+nac_TU_0     26 aaataa.aactggca.agcatcttg 48 + 6.57
+gabD_TU_0    16 aattcctat.tggtg.cgcatattg 38 + 12.7
+gabD_TU_1     6 aaaaca.at.atgt..cg.cttttg 25 + 11.9
+gabD_TU_2    39 aaaccatct.acgctcaggactggg 62 + 7.91
+gabT_TU_0    16 aattcctat.tggtg.cgcatattg 38 + 12.7
+gabT_TU_1     6 aaaaca.at.atgt..cg.cttttg 25 + 11.9
+gabT_TU_2    39 aaaccatct.acgctcaggactggg 62 + 7.91
+gabP_TU_0    16 aattcctat.tggtg.cgcatattg 38 + 12.7
+gabP_TU_1     6 aaaaca.at.atgt..cg.cttttg 25 + 11.9
+gabP_TU_2    39 aaaccatct.acgctcaggactggg 62 + 7.91
+serA_TU_0    41 aaatcctct.aaac..cagcatatt 62 + 12.0
+serA_TU_1    51 atatca.aa.aaat..aatattgcg 31 - 7.93
+gltB_TU_0    34 aggtca.aa.tggc..aagcttatt 14 - 7.88
+gltD_TU_0    34 aggtca.aa.tggc..aagcttatt 14 - 7.88
+nanA_TU_0    31 cacccc.at.acaga.aagcttata 10 - 11.8
+nanA_TU_1    31 cacccc.at.acaga.aagcttata 10 - 11.8
+gspC_TU_0     3 tactaatat.aaat..aa.attttg 23 + 15.8
+gspC_TU_1     7 tactaatat.aaat..aa.attttg 27 + 15.8
+gspC_TU_2    52 tactaatat.aaat..aa.attttg 72 + 15.8
+gspE_TU_0     3 tactaatat.aaat..aa.attttg 23 + 15.8
+gspE_TU_1     7 tactaatat.aaat..aa.attttg 27 + 15.8
+gspE_TU_2    52 tactaatat.aaat..aa.attttg 72 + 15.8
+dppF_TU_0    81 cctccataa.aatg..cccctcgtg 60 - 11.5
+dppD_TU_0    81 cctccataa.aatg..cccctcgtg 60 - 11.5
+dppB_TU_0    81 cctccataa.aatg..cccctcgtg 60 - 11.5
+dppA_TU_0    81 cctccataa.aatg..cccctcgtg 60 - 11.5
+yieE_TU_0    31 agttcg.at.tcagacaagcttatt  9 - 4.31
+asnA_TU_0    22 cattca.at.aaaa..agcctaact  2 - 8.95
+cycA_TU_0    59 catcgatattaggt..aacaatacg 37 - 4.24
+.">
+<br><input type="submit" name="action" value="View alignment 8">
+<input type="hidden" name="pspm8" value="
+letter-probability matrix: alength= 4  w= 23 nsites= 41 E= 1
+0.512195121951  0.219512195122  0.0  0.268292682927 
+0.707317073171  0.0975609756098  0.0975609756098  0.0975609756098 
+0.390243902439  0.243902439024  0.0487804878049  0.317073170732 
+0.0731707317073  0.390243902439  0.0  0.536585365854 
+0.170731707317  0.80487804878  0.0243902439024  0.0 
+0.707317073171  0.219512195122  0.0487804878049  0.0243902439024 
+0.0  0.0  0.0  1.0 
+0.853658536585  0.121951219512  0.0243902439024  0.0 
+0.268292682927  0.0  0.121951219512  0.609756097561 
+0.0  0.5  0.0  0.5 
+0.829268292683  0.0  0.0  0.170731707317 
+0.414634146341  0.268292682927  0.243902439024  0.0731707317073 
+0.365853658537  0.0  0.439024390244  0.19512195122 
+0.0487804878049  0.268292682927  0.292682926829  0.390243902439 
+0.560975609756  0.439024390244  0.0  0.0 
+0.365853658537  0.121951219512  0.512195121951  0.0 
+0.03125  0.375  0.5625  0.03125 
+0.365853658537  0.634146341463  0.0  0.0 
+0.0487804878049  0.0731707317073  0.0243902439024  0.853658536585 
+0.0975609756098  0.219512195122  0.0  0.682926829268 
+0.341463414634  0.0  0.317073170732  0.341463414634 
+0.0  0.19512195122  0.0731707317073  0.731707317073 
+0.19512195122  0.0  0.585365853659  0.219512195122 
+">
+<input type="submit" name="action" value="View PSPM 8">
+<br><input type="submit" name="action" value="Compare PSPM 8"><b> to known motifs in motif databases using <a href="http://meme-suite.org//doc/tomtom.html">Tomtom</a>.</b>
+<br><i>Regular Expression for Motif: </i>
+<b> [act]a[act][ct]c[ac]t?a[at][ct]?a[acg][ag][ctg].{0,2}[ac][ag][cg]?[ac]t[ct][atg]t[tg] </b>
+<br>
+<table> <tr> <td> Score: <b> 341.221 </b></td>
+<td rowspan=2><img src="logo9.png"></td></tr>
+<tr><th><a href="logo_ssc9.png">logo with ssc</a></td></tr></table>
+<input type="submit" name="action" value="Scan alignment 9"><b> against sequence databases using <a href="http://meme-suite.org//doc/glam2scan.html">GLAM2SCAN.</a></b>
+<input type="hidden" name="aln9" value=".
+                **********************
+codB_TU_0    19 cgtggggaaa.tat.a.ttttt  1 - 3.26
+cynR_TU_0    52 actcatcata.aatgagacttt 32 - 12.1
+ompF_TU_0     1 ctttatctttgtag.c.acttt 20 + 5.34
+feaR_TU_0    42 ctatgcctgacaag.acttatt 62 + 9.01
+feaR_TU_1    24 ctatgcctgacaag.acttatt 44 + 9.01
+feaR_TU_2    76 cgctctgtga.aatgt.atttt 57 - 6.71
+ydcS_TU_2    66 atatctccttgtttaa.ccata 46 - 12.2
+ydcT_TU_2    66 atatctccttgtttaa.ccata 46 - 12.2
+ydcU_TU_2    66 atatctccttgtttaa.ccata 46 - 12.2
+ydcV_TU_2    66 atatctccttgtttaa.ccata 46 - 12.2
+patD_TU_3    66 atatctccttgtttaa.ccata 46 - 12.2
+shiA_TU_0    36 gcatctgcaa.atg.a.tttta 18 - 3.91
+nac_TU_0     42 gcttgccagt.ttt.a.ttttg 24 - 4.30
+gabD_TU_0     6 cgacatcagc.aat.tcctatt 25 + 12.1
+gabD_TU_1    31 atttttcagaaatgtagatatt 52 + 13.0
+gabD_TU_2    59 agtcctgagcgtagatggtttt 38 - 12.1
+gabT_TU_0     6 cgacatcagc.aat.tcctatt 25 + 12.1
+gabT_TU_1    31 atttttcagaaatgtagatatt 52 + 13.0
+gabT_TU_2    59 agtcctgagcgtagatggtttt 38 - 12.1
+gabP_TU_0     6 cgacatcagc.aat.tcctatt 25 + 12.1
+gabP_TU_1    31 atttttcagaaatgtagatatt 52 + 13.0
+gabP_TU_2    59 agtcctgagcgtagatggtttt 38 - 12.1
+serA_TU_0    60 attcatccaagaatta.ccttt 80 + 11.3
+serA_TU_1    53 acatatcaaaaaat.a.atatt 34 - 13.2
+gltB_TU_0     3 atttctgtaccaataa.gcttg 23 + 8.98
+gltD_TU_0     3 atttctgtaccaataa.gcttg 23 + 8.98
+nanA_TU_0     1 agatcgcatt.ata.a.gcttt 19 + 10.3
+nanA_TU_1     1 agatcgcatt.ata.a.gcttt 19 + 10.3
+gspC_TU_0    64 cgttagtata.aat.a.gtatt 46 - 14.1
+gspC_TU_1    68 cgttagtata.aat.a.gtatt 50 - 14.1
+gspC_TU_2    62 ttatattagt.aatat.gtatt 43 - 12.2
+gspE_TU_0    64 cgttagtata.aat.a.gtatt 46 - 14.1
+gspE_TU_1    68 cgttagtata.aat.a.gtatt 50 - 14.1
+gspE_TU_2    62 ttatattagt.aatat.gtatt 43 - 12.2
+dppF_TU_0    14 ggttggctgt.attgacgtttt 34 + 14.9
+dppD_TU_0    14 ggttggctgt.attgacgtttt 34 + 14.9
+dppB_TU_0    14 ggttggctgt.attgacgtttt 34 + 14.9
+dppA_TU_0    14 ggttggctgt.attgacgtttt 34 + 14.9
+yieE_TU_0    14 gcttgtctgaatcgaa.ctttt 34 + 5.80
+asnA_TU_0     8 gctttttattgaatga.ttatt 28 + 11.4
+cycA_TU_0    11 agatctaaat.ctt.a.gtatt 29 + 4.42
+.">
+<br><input type="submit" name="action" value="View alignment 9">
+<input type="hidden" name="pspm9" value="
+letter-probability matrix: alength= 4  w= 22 nsites= 41 E= 1
+0.463414634146  0.292682926829  0.19512195122  0.0487804878049 
+0.0  0.146341463415  0.463414634146  0.390243902439 
+0.414634146341  0.0243902439024  0.0  0.560975609756 
+0.0  0.19512195122  0.0243902439024  0.780487804878 
+0.317073170732  0.365853658537  0.219512195122  0.0975609756098 
+0.0  0.0731707317073  0.268292682927  0.658536585366 
+0.0243902439024  0.609756097561  0.19512195122  0.170731707317 
+0.560975609756  0.170731707317  0.0  0.268292682927 
+0.170731707317  0.0  0.487804878049  0.341463414634 
+0.390243902439  0.19512195122  0.0  0.414634146341 
+0.25  0.2  0.55  0.0 
+0.682926829268  0.0243902439024  0.0  0.292682926829 
+0.560975609756  0.0243902439024  0.0  0.414634146341 
+0.0487804878049  0.0  0.268292682927  0.682926829268 
+0.541666666667  0.0  0.291666666667  0.166666666667 
+0.756097560976  0.0243902439024  0.0  0.219512195122 
+0.0  0.5625  0.4375  0.0 
+0.170731707317  0.243902439024  0.439024390244  0.146341463415 
+0.0  0.292682926829  0.0  0.707317073171 
+0.536585365854  0.0  0.0  0.463414634146 
+0.0  0.0  0.0  1.0 
+0.146341463415  0.0  0.0731707317073  0.780487804878 
+">
+<input type="submit" name="action" value="View PSPM 9">
+<br><input type="submit" name="action" value="Compare PSPM 9"><b> to known motifs in motif databases using <a href="http://meme-suite.org//doc/tomtom.html">Tomtom</a>.</b>
+<br><i>Regular Expression for Motif: </i>
+<b> [ac][tg][at]t[acg][tg]c[at][tg][at][acg]?[at][at][tg][ag]?[at][cg]?[cg][ct][at]tt </b>
+<br>
+<table> <tr> <td> Score: <b> 333.059 </b></td>
+<td rowspan=2><img src="logo10.png"></td></tr>
+<tr><th><a href="logo_ssc10.png">logo with ssc</a></td></tr></table>
+<input type="submit" name="action" value="Scan alignment 10"><b> against sequence databases using <a href="http://meme-suite.org//doc/glam2scan.html">GLAM2SCAN.</a></b>
+<input type="hidden" name="aln10" value=".
+                *******..******..*******
+codB_TU_0    62 atttt.t..tgggtttcaa.acag 81 + 5.31
+cynR_TU_0    65 actta.t..a.ggtt..gc.gaat 81 + 3.91
+ompF_TU_0    16 acttt.c..acggta..gc.gaaa 33 + 7.98
+feaR_TU_0    27 attgt.c..acgattt.gcgga.g  9 - 7.41
+feaR_TU_1    61 attag.c..ttcgttt.attgcaa 80 + 10.7
+feaR_TU_2    21 attag.c..ttcgttt.attgcaa 40 + 10.7
+feaR_TU_3    54 attgt.c..acgattt.gcgga.g 36 - 7.41
+ydcS_TU_2    65 atttt.t..acggc...acggc.g 81 + 12.3
+ydcT_TU_2    65 atttt.t..acggc...acggc.g 81 + 12.3
+ydcU_TU_2    65 atttt.t..acggc...acggc.g 81 + 12.3
+ydcV_TU_2    65 atttt.t..acggc...acggc.g 81 + 12.3
+patD_TU_3    65 atttt.t..acggc...acggc.g 81 + 12.3
+shiA_TU_0    23 attttatggctgatta.gcggcaa  1 - 7.35
+nac_TU_0     32 tttat.t..ttggt...gttgatg 15 - 10.1
+gabD_TU_0    17 attcc.ta.ttggt...gc.gcat 34 + 8.19
+gabD_TU_1    50 atttt.t..a.gatt..atggcta 67 + 18.1
+gabD_TU_2    22 attcg.c..cgggt...gctgcaa 39 + 9.49
+gabT_TU_0    17 attcc.ta.ttggt...gc.gcat 34 + 8.19
+gabT_TU_1    50 atttt.t..a.gatt..atggcta 67 + 18.1
+gabT_TU_2    22 attcg.c..cgggt...gctgcaa 39 + 9.49
+gabP_TU_0    17 attcc.ta.ttggt...gc.gcat 34 + 8.19
+gabP_TU_1    50 atttt.t..a.gatt..atggcta 67 + 18.1
+gabP_TU_2    22 attcg.c..cgggt...gctgcaa 39 + 9.49
+serA_TU_0    73 attct.tggatgaat..at.gctg 54 - 11.1
+serA_TU_1    40 atttt.t..t.gatat.gttgaaa 58 + 12.5
+gltB_TU_0     4 tttctgt..accaat..aa.gctt 22 + 7.24
+gltD_TU_0     4 tttctgt..accaat..aa.gctt 22 + 7.24
+nanA_TU_0    17 tttctgta.tggggt..gttgctt 37 + 8.64
+nanA_TU_1    17 tttctgta.tggggt..gttgctt 37 + 8.64
+gspC_TU_0    18 attttgc..ttgattc.at.gcaa 37 + 17.5
+gspC_TU_1    22 attttgc..ttgattc.at.gcaa 41 + 17.5
+gspC_TU_2    21 atttt.t..atgatt..aaggata  3 - 16.7
+gspE_TU_0    18 attttgc..ttgattc.at.gcaa 37 + 17.5
+gspE_TU_1    22 attttgc..ttgattc.at.gcaa 41 + 17.5
+gspE_TU_2    21 atttt.t..atgatt..aaggata  3 - 16.7
+dppF_TU_0    38 attctgt..t.gacag.attgtag 57 + 10.8
+dppD_TU_0    38 attctgt..t.gacag.attgtag 57 + 10.8
+dppB_TU_0    38 attctgt..t.gacag.attgtag 57 + 10.8
+dppA_TU_0    38 attctgt..t.gacag.attgtag 57 + 10.8
+yieE_TU_0    67 attta.c..t.gga...at.gatg 52 - 3.18
+asnA_TU_0    12 tttat.tgaatgatt..attgcat 32 + 11.2
+cycA_TU_0    52 attaggta.a.caat..ac.gc.g 35 - 1.64
+.">
+<br><input type="submit" name="action" value="View alignment 10">
+<input type="hidden" name="pspm10" value="
+letter-probability matrix: alength= 4  w= 20 nsites= 42 E= 1
+0.857142857143  0.0  0.0  0.142857142857 
+0.0  0.047619047619  0.0  0.952380952381 
+0.0  0.0  0.0  1.0 
+0.119047619048  0.357142857143  0.047619047619  0.47619047619 
+0.047619047619  0.0714285714286  0.142857142857  0.738095238095 
+0.0714285714286  0.0  0.928571428571  0.0 
+0.0  0.309523809524  0.0  0.690476190476 
+0.452380952381  0.0952380952381  0.0  0.452380952381 
+0.0  0.322580645161  0.193548387097  0.483870967742 
+0.0  0.119047619048  0.880952380952  0.0 
+0.52380952381  0.0  0.47619047619  0.0 
+0.119047619048  0.214285714286  0.047619047619  0.619047619048 
+0.206896551724  0.0  0.0  0.793103448276 
+0.642857142857  0.0  0.357142857143  0.0 
+0.119047619048  0.404761904762  0.0  0.47619047619 
+0.0  0.0  0.481481481481  0.518518518519 
+0.0238095238095  0.0  0.97619047619  0.0 
+0.214285714286  0.690476190476  0.0  0.0952380952381 
+0.647058823529  0.0  0.0  0.352941176471 
+0.404761904762  0.0  0.380952380952  0.214285714286 
+">
+<input type="submit" name="action" value="View PSPM 10">
+<br><input type="submit" name="action" value="Compare PSPM 10"><b> to known motifs in motif databases using <a href="http://meme-suite.org//doc/tomtom.html">Tomtom</a>.</b>
+<br><i>Regular Expression for Motif: </i>
+<b> att[ct]tg?[ct].{0,2}[at][ct]?g[ag][ct][at]?.{0,2}[ag][ct][tg]?g[ac][at]?[atg] </b>
+<br>
+</p>
+<input type="hidden" name="data" value="
+>codB_TU_0
+AAAAATATATTTCCCCACGAAAACGATTGCTTTTTATCTTCAGATGAATAGAATGCGGCGGATTTTTTGGGTTTCAAACAG
+
+>cynR_TU_0
+AGGCAGACTACTCGCCGATTGTCATAAGGTAAAAGTCTCATTTATGATGAGTTCCATTGGATTTACTTATAGGTTGCGAAT
+
+>ompF_TU_0
+CTTTATCTTTGTAGCACTTTCACGGTAGCGAAACGTTAGTTTGAATGGAAAGATGCCTGCAGACACATAAAGACACCAAAC
+
+>feaR_TU_0
+GTGACAAGCTCCGCAAATCGTGACAATAACCGCTTATGTCTCTATGCCTGACAAGACTTATTTCCTATAGTCAGGCTCATT
+
+>feaR_TU_1
+CGTGACAATAACCGCTTATGTCTCTATGCCTGACAAGACTTATTTCCTATAGTCAGGCTCATTAGCTTCGTTTATTGCAAC
+
+>feaR_TU_2
+TATTTCCTATAGTCAGGCTCATTAGCTTCGTTTATTGCAACACAAATGCAACAATAAAAATACATTTCACAGAGCGAAAAC
+
+>feaR_TU_3
+TTCGCTGTGACATTCGCTTTGTCAGCTGTGACAAGCTCCGCAAATCGTGACAATAACCGCTTATGTCTCTATGCCTGACAA
+
+>ydcS_TU_2
+GAATAAATTTTCTCAGGGGCGAAGGTGTGCCTGCAAGCCGCCGTCTATGGTTAAACAAGGAGATATTTTTACGGCACGGCG
+
+>ydcT_TU_2
+GAATAAATTTTCTCAGGGGCGAAGGTGTGCCTGCAAGCCGCCGTCTATGGTTAAACAAGGAGATATTTTTACGGCACGGCG
+
+>ydcU_TU_2
+GAATAAATTTTCTCAGGGGCGAAGGTGTGCCTGCAAGCCGCCGTCTATGGTTAAACAAGGAGATATTTTTACGGCACGGCG
+
+>ydcV_TU_2
+GAATAAATTTTCTCAGGGGCGAAGGTGTGCCTGCAAGCCGCCGTCTATGGTTAAACAAGGAGATATTTTTACGGCACGGCG
+
+>patD_TU_3
+GAATAAATTTTCTCAGGGGCGAAGGTGTGCCTGCAAGCCGCCGTCTATGGTTAAACAAGGAGATATTTTTACGGCACGGCG
+
+>shiA_TU_0
+TTGCCGCTAATCAGCCATAAAATCATTTGCAGATGCGCTCTGTCGAGGTAGTCTCATAAGGTTCGTTTATAGATCGACGGC
+
+>nac_TU_0
+TTGGTTAGCTTGTACATCAACACCAAAATAAAACTGGCAAGCATCTTGCAATCTGGTTGTAAGTAATGGCGGCACTTGGGC
+
+>gabD_TU_0
+GGCAGCGACATCAGCAATTCCTATTGGTGCGCATATTGTCAGCAAGGTACAAACGCTGTTGGCAAGCCAGAGTAACCCCGG
+
+>gabD_TU_1
+ATAAGAAAACAATATGTCGCTTTTGTGCGCATTTTTCAGAAATGTAGATATTTTTAGATTATGGCTACGAAATGAGCATCG
+
+>gabD_TU_2
+GAGATTTTGGGCTCGTCGGGGATTCGCCGGGTGCTGCAAAACCATCTACGCTCAGGACTGGGCGAGATGAAAAACTCGCTG
+
+>gabT_TU_0
+GGCAGCGACATCAGCAATTCCTATTGGTGCGCATATTGTCAGCAAGGTACAAACGCTGTTGGCAAGCCAGAGTAACCCCGG
+
+>gabT_TU_1
+ATAAGAAAACAATATGTCGCTTTTGTGCGCATTTTTCAGAAATGTAGATATTTTTAGATTATGGCTACGAAATGAGCATCG
+
+>gabT_TU_2
+GAGATTTTGGGCTCGTCGGGGATTCGCCGGGTGCTGCAAAACCATCTACGCTCAGGACTGGGCGAGATGAAAAACTCGCTG
+
+>gabP_TU_0
+GGCAGCGACATCAGCAATTCCTATTGGTGCGCATATTGTCAGCAAGGTACAAACGCTGTTGGCAAGCCAGAGTAACCCCGG
+
+>gabP_TU_1
+ATAAGAAAACAATATGTCGCTTTTGTGCGCATTTTTCAGAAATGTAGATATTTTTAGATTATGGCTACGAAATGAGCATCG
+
+>gabP_TU_2
+GAGATTTTGGGCTCGTCGGGGATTCGCCGGGTGCTGCAAAACCATCTACGCTCAGGACTGGGCGAGATGAAAAACTCGCTG
+
+>serA_TU_0
+GTGTCACGCTTTTACCAGGCAATTGTCGATTGCTCTAAATAAATCCTCTAAACCAGCATATTCATCCAAGAATTACCTTTG
+
+>serA_TU_1
+TCAACATCGCGACGCAAACGTTCATATTGCCGCAATATTATTTTTTGATATGTTGAAAGGCGGATGCAAATCCGCACACAA
+
+>gltB_TU_0
+ACATTTCTGTACCAATAAGCTTGCCATTTGACCTGTATCAGCTTTCCCGATAAGTTGGAAATCCGCTGGAAGCTTTCTGGA
+
+>gltD_TU_0
+ACATTTCTGTACCAATAAGCTTGCCATTTGACCTGTATCAGCTTTCCCGATAAGTTGGAAATCCGCTGGAAGCTTTCTGGA
+
+>nanA_TU_0
+AGATCGCATTATAAGCTTTCTGTATGGGGTGTTGCTTAATTGATCTGGTATAACAGGTATAAAGGTATATCGTTTATCAGA
+
+>nanA_TU_1
+AGATCGCATTATAAGCTTTCTGTATGGGGTGTTGCTTAATTGATCTGGTATAACAGGTATAAAGGTATATCGTTTATCAGA
+
+>gspC_TU_0
+ATTACTAATATAAATAAATTTTGCTTGATTCATGCAAGCGGCATTAATACTATTTATACTAACGTCAATATACAACCCACC
+
+>gspC_TU_1
+ACATATTACTAATATAAATAAATTTTGCTTGATTCATGCAAGCGGCATTAATACTATTTATACTAACGTCAATATACAACC
+
+>gspC_TU_2
+ATTATCCTTAATCATAAAAATAATGTATGTATTTATTAATTAAATACATATTACTAATATAAATAAATTTTGCTTGATTCA
+
+>gspE_TU_0
+ATTACTAATATAAATAAATTTTGCTTGATTCATGCAAGCGGCATTAATACTATTTATACTAACGTCAATATACAACCCACC
+
+>gspE_TU_1
+ACATATTACTAATATAAATAAATTTTGCTTGATTCATGCAAGCGGCATTAATACTATTTATACTAACGTCAATATACAACC
+
+>gspE_TU_2
+ATTATCCTTAATCATAAAAATAATGTATGTATTTATTAATTAAATACATATTACTAATATAAATAAATTTTGCTTGATTCA
+
+>dppF_TU_0
+TGGTGTAAATCCCGGTTGGCTGTATTGACGTTTTCACATTCTGTTGACAGATTGTAGGTCACGAGGGGCATTTTATGGAGG
+
+>dppD_TU_0
+TGGTGTAAATCCCGGTTGGCTGTATTGACGTTTTCACATTCTGTTGACAGATTGTAGGTCACGAGGGGCATTTTATGGAGG
+
+>dppB_TU_0
+TGGTGTAAATCCCGGTTGGCTGTATTGACGTTTTCACATTCTGTTGACAGATTGTAGGTCACGAGGGGCATTTTATGGAGG
+
+>dppA_TU_0
+TGGTGTAAATCCCGGTTGGCTGTATTGACGTTTTCACATTCTGTTGACAGATTGTAGGTCACGAGGGGCATTTTATGGAGG
+
+>yieE_TU_0
+AAAGTTGTAATAAGCTTGTCTGAATCGAACTTTTAGCCGCTTTAGTCTGTCCATCATTCCAGTAAATGATTACTCTTGTAT
+
+>asnA_TU_0
+GAGTTAGGCTTTTTATTGAATGATTATTGCATGTGTGTCGGTTTTTGTTGCTTAATCATAAGCAACAGGACGCAGGAGTAT
+
+>cycA_TU_0
+AATTAACATTAGATCTAAATCTTAGTATTCATCCCGCGTATTGTTACCTAATATCGATGAGTCCCGATACAGATTCGTCGT
+">
+</form></body>
+</html>

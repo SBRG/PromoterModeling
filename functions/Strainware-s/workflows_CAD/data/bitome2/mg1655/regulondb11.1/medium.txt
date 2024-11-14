@@ -1,0 +1,401 @@
+# # Copies and Copyright-Notice
+#
+#      RegulonDB is free for academic/noncommercial use
+#
+#      User is not entitled to change or erase data sets of the RegulonDB
+#      database or to eliminate copyright notices from RegulonDB. Furthermore,
+#      User is not entitled to expand RegulonDB or to integrate RegulonDB partly
+#      or as a whole into other databank systems, without prior written consent
+#      from CCG-UNAM.
+#
+#      Please check the license at http://regulondb.ccg.unam.mx/menu/download/full_version/terms_and_conditions.jsp
+#
+# Citation
+#
+#      Tierrafría, V. H. et al. (2022). RegulonDB 11.0: Comprehensive high-throughput datasets on transcriptional regulation in Escherichia coli K-12,
+#      Microb Genom. 2022 May;8(5). doi: 10.1099/mgen.0.000833. PMID: 35584008. https://doi.org/10.1099/mgen.0.000833
+#
+#
+# Contact
+#
+#      Person: RegulonDB Team
+#      Web Page: http://regulondb.ccg.unam.mx/menu/about_regulondb/contact_us/index.jsp
+#          (regulondb@ccg.unam.mx)
+#
+#
+ # RegulonDB: 11.1 Date: 12/12/2022
+# Created: 12/12/2022 11:48:35
+# Table: MEDIUM
+# Columns:
+# 1) MEDIUM_ID
+# 2) MEDIUM_NAME
+# 3) MEDIUM_DESCRIPTION
+GID000012488	Rich Medium	-
+GID000012489	Rich Medium	-
+GID000012490	Rich Medium	-
+GID000012491	Rich Medium	-
+GID000012492	Rich Medium	-
+GID000012493	Rich Medium	-
+GID000012494	Rich Medium	-
+GID000012495	Rich Medium	-
+GID000012496	Rich Medium	-
+GID000012497	Rich Medium	-
+GID000012498	Rich Medium	-
+GID000012499	LB Medium	-
+GID000012500	LB Medium	-
+GID000012501	LB Medium	-
+GID000012502	LB Medium	-
+GID000012503	LB Medium	-
+GID000012504	LB Medium	-
+GID000012505	LB Medium	-
+GID000012506	LB Medium	-
+GID000012507	LB Medium	-
+GID000012508	LB Medium	-
+GID000012509	LB Medium	-
+GID000012510	LB Medium	-
+GID000012511	LB Medium	-
+GID000012512	LB Medium	-
+GID000012513	LB Medium	-
+GID000012514	LB Medium	-
+GID000012515	LB Medium	-
+GID000012516	LB Medium	-
+GID000012517	LB Medium	-
+GID000012518	LB Medium	-
+GID000012519	LB Medium	-
+GID000012520	LB Medium	-
+GID000012521	LB Medium	-
+GID000012522	LB Medium	-
+GID000012523	LB Medium	-
+GID000012524	LB Medium	-
+GID000012525	LB Medium	-
+GID000012526	LB Medium	-
+GID000012527	LB Medium	-
+GID000012528	LB Medium	-
+GID000012529	LB Medium	-
+GID000012530	LB Medium	-
+GID000012531	LB Medium	-
+GID000012532	LB Medium	-
+GID000012533	LB Medium	-
+GID000012534	LB Medium	-
+GID000012535	LB Medium	-
+GID000012536	LB Medium	-
+GID000012537	LB Medium	-
+GID000012538	LB Medium	-
+GID000012539	LB Medium	-
+GID000012540	LB Medium	-
+GID000012541	LB Medium	-
+GID000012542	LB Medium	-
+GID000012543	LB Medium	-
+GID000012544	LB Medium	-
+GID000012545	LB Medium	-
+GID000012546	LB Medium	-
+GID000012547	LB Medium	-
+GID000012548	LB Medium	-
+GID000012549	LB Medium	-
+GID000012550	LB Medium	-
+GID000012551	LB Medium	-
+GID000012552	LB Medium	-
+GID000012553	LB Medium	-
+GID000012554	M9 Medium	-
+GID000012555	Minimal Medium	-
+GID000012556	Rich Medium	-
+GID000012557	Rich Medium	-
+GID000012558	Rich Medium	-
+GID000012559	Rich Medium	-
+GID000012560	Rich Medium	-
+GID000012561	Rich Medium	-
+GID000012562	1 uM of hydrogen peroxide	-
+GID000012563	1 uM of hydrogen peroxide	-
+GID000012564	1 uM of hydrogen peroxide	-
+GID000012565	1 uM of hydrogen peroxide	-
+GID000012566	1 uM of hydrogen peroxide	-
+GID000012567	1 uM of hydrogen peroxide	-
+GID000012568	1 uM of hydrogen peroxide	-
+GID000012569	1 uM of hydrogen peroxide	-
+GID000012570	1 uM of hydrogen peroxide	-
+GID000012571	1 uM of hydrogen peroxide	-
+GID000012572	1 uM of hydrogen peroxide	-
+GID000012573	1 uM of hydrogen peroxide	-
+GID000012574	1 uM of hydrogen peroxide	-
+GID000012575	1 uM of hydrogen peroxide	-
+GID000012576	It is expressed in exponential growth and is affected by cya and crp mutations	-
+GID000012577	It is expressed in exponential growth and is affected by cya and crp mutations	-
+GID000012578	It is expressed in exponential growth and is affected by cya and crp mutations	-
+GID000012579	Growth on Defined Medium with ammonia	-
+GID000012580	Growth on Defined Medium with ammonia	-
+GID000012581	Growth on Defined Medium with ammonia	-
+GID000012582	Rich Medium	-
+GID000012583	Rich Medium	-
+GID000012584	Rich Medium	-
+GID000012585	Rich Medium	-
+GID000012586	Rich Medium	-
+GID000012587	Rich Medium	-
+GID000012588	Rich Medium	-
+GID000012589	Rich Medium	-
+GID000012590	Rich Medium	-
+GID000012591	Rich Medium	-
+GID000012592	Rich Medium	-
+GID000012593	Rich Medium	-
+GID000012594	Rich Medium	-
+GID000012595	Rich Medium	-
+GID000012596	Rich Medium	-
+GID000012597	Rich Medium	-
+GID000012598	Rich Medium	-
+GID000012599	Rich Medium	-
+GID000012600	LB Medium	-
+GID000012601	LB Medium	-
+GID000012602	LB Medium	-
+GID000012603	LB Medium	-
+GID000012604	LB Medium	-
+GID000012605	LB Medium	-
+GID000012606	LB Medium	-
+GID000012607	LB Medium	-
+GID000012608	LB Medium	-
+GID000012609	LB Medium	-
+GID000012610	LB Medium	-
+GID000012611	LB Medium	-
+GID000012612	LB Medium	-
+GID000012613	LB Medium	-
+GID000012614	Overproduction of OsmB or Lpp or Pal or lipoprotein-28 or NlpD or Tra protein	-
+GID000012615	Overproduction of OsmB or Lpp or Pal or lipoprotein-28 or NlpD or Tra protein	-
+GID000012616	Overproduction of OsmB or Lpp or Pal or lipoprotein-28 or NlpD or Tra protein	-
+GID000012617	Overproduction of OsmB or Lpp or Pal or lipoprotein-28 or NlpD or Tra protein	-
+GID000012618	Overproduction of OsmB or Lpp or Pal or lipoprotein-28 or NlpD or Tra protein	-
+GID000012619	Overproduction of OsmB or Lpp or Pal or lipoprotein-28 or NlpD or Tra protein	-
+GID000012620	Overproduction of OsmB or Lpp or Pal or lipoprotein-28 or NlpD or Tra protein	-
+GID000012621	Growth on Defined Medium with m-chlorophenylhidrazone	-
+GID000012622	Growth on Defined Medium with m-chlorophenylhidrazone	-
+GID000012623	Growth on Defined Medium with m-chlorophenylhidrazone	-
+GID000012624	Growth on Defined Medium with m-chlorophenylhidrazone	-
+GID000012625	LB Medium	-
+GID000012626	LB Medium	-
+GID000012627	LB Medium	-
+GID000012628	LB Medium	-
+GID000012629	LB Medium	-
+GID000012630	LB Medium	-
+GID000012631	LB Medium	-
+GID000012632	LB Medium	-
+GID000012633	LB Medium	-
+GID000012634	LB Medium	-
+GID000012635	LB Medium	-
+GID000012636	LB Medium	-
+GID000012637	without medium	-
+GID000012638	without medium	-
+GID000012639	without medium	-
+GID000012640	without medium	-
+GID000012641	without medium	-
+GID000012642	without medium	-
+GID000012643	without medium	-
+GID000012644	without medium	-
+GID000012645	without medium	-
+GID000012646	without medium	-
+GID000012647	without medium	-
+GID000012648	without medium	-
+GID000012649	without medium	-
+GID000012650	without medium	-
+GID000012651	without medium	-
+GID000012652	without medium	-
+GID000012653	without medium	-
+GID000012654	without medium	-
+GID000012655	without medium	-
+GID000012656	without medium	-
+GID000012657	without medium	-
+GID000012658	without medium	-
+GID000012659	without medium	-
+GID000012660	without medium	-
+GID000012661	without medium	-
+GID000012662	without medium	-
+GID000012663	without medium	-
+GID000012664	without medium	-
+GID000012665	without medium	-
+GID000012666	without medium	-
+GID000012667	without medium	-
+GID000012668	without medium	-
+GID000012669	without medium	-
+GID000012670	without medium	-
+GID000012671	without medium	-
+GID000012672	without medium	-
+GID000012673	without medium	-
+GID000012674	without medium	-
+GID000012675	without medium	-
+GID000012676	without medium	-
+GID000012677	without medium	-
+GID000012678	without medium	-
+GID000012679	without medium	-
+GID000012680	without medium	-
+GID000012681	without medium	-
+GID000012682	without medium	-
+GID000012683	without medium	-
+GID000012684	without medium	-
+GID000012685	without medium	-
+GID000012686	without medium	-
+GID000012687	without medium	-
+GID000012688	without medium	-
+GID000012689	without medium	-
+GID000012690	without medium	-
+GID000012691	without medium	-
+GID000012692	without medium	-
+GID000012693	without medium	-
+GID000012694	without medium	-
+GID000012695	without medium	-
+GID000012696	without medium	-
+GID000012697	without medium	-
+GID000012698	without medium	-
+GID000012699	without medium	-
+GID000012700	without medium	-
+GID000012701	without medium	-
+GID000012702	without medium	-
+GID000012703	without medium	-
+GID000012704	without medium	-
+GID000012705	without medium	-
+GID000012706	without medium	-
+GID000012707	without medium	-
+GID000012708	without medium	-
+GID000012709	without medium	-
+GID000012710	without medium	-
+GID000012711	without medium	-
+GID000012712	without medium	-
+GID000012713	without medium	-
+GID000012714	without medium	-
+GID000012715	without medium	-
+GID000012716	without medium	-
+GID000012717	without medium	-
+GID000012718	without medium	-
+GID000012719	without medium	-
+GID000012720	LB Medium	-
+GID000012721	LB Medium	-
+GID000012722	LB Medium	-
+GID000012723	LB Medium	-
+GID000012724	LB Medium	-
+GID000012725	LB Medium	-
+GID000012726	LB Medium	-
+GID000012727	LB Medium	-
+GID000012728	LB Medium	-
+GID000012729	LB Medium	-
+GID000012730	GM	-
+GID000012731	ppGpp added to the medium	-
+GID000012732	ppGpp added to the medium	-
+GID000012733	ppGpp added to the medium	-
+GID000012734	ppGpp added to the medium	-
+GID000012735	ppGpp added to the medium	-
+GID000012736	ppGpp added to the medium	-
+GID000012737	ppGpp added to the medium	-
+GID000012738	ppGpp added to the medium	-
+GID000012739	ppGpp added to the medium	-
+GID000012740	ppGpp added to the medium	-
+GID000012741	ppGpp added to the medium	-
+GID000012742	ppGpp added to the medium	-
+GID000012743	50 oC	-
+GID000012744	50 oC	-
+GID000012745	50 oC	-
+GID000012746	50 oC	-
+GID000012747	50 oC	-
+GID000012748	50 oC	-
+GID000012749	50 oC	-
+GID000012750	50 oC	-
+GID000012751	50 oC	-
+GID000012752	50 oC	-
+GID000012753	50 oC	-
+GID000012754	50 oC	-
+GID000012755	50 oC	-
+GID000012756	50 oC	-
+GID000012757	50 oC	-
+GID000012758	50 oC	-
+GID000012759	50 oC	-
+GID000012760	50 oC	-
+GID000012761	50 oC	-
+GID000012762	50 oC	-
+GID000012763	50 oC	-
+GID000012764	50 oC	-
+GID000012765	50 oC	-
+GID000012766	50 oC	-
+GID000012767	50 oC	-
+GID000012768	50 oC	-
+GID000012769	50 oC	-
+GID000012770	50 oC	-
+GID000012771	50 oC	-
+GID000012772	50 oC	-
+GID000012773	50 oC	-
+GID000012774	50 oC	-
+GID000012775	50 oC	-
+GID000012776	50 oC	-
+GID000012777	50 oC	-
+GID000012778	50 oC	-
+GID000012779	50 oC	-
+GID000012780	50 oC	-
+GID000012781	without medium	-
+GID000012782	without medium	-
+GID000012783	without medium	-
+GID000012784	without medium	-
+GID000012785	without medium	-
+GID000012786	without medium	-
+GID000012787	without medium	-
+GID000012788	without medium	-
+GID000012789	without medium	-
+GID000012790	without medium	-
+GID000012791	without medium	-
+GID000012792	without medium	-
+GID000012793	without medium	-
+GID000012794	without medium	-
+GID000012795	without medium	-
+GID000012796	without medium	-
+GID000012797	without medium	-
+GID000012798	without medium	-
+GID000012799	Shift down pH to 5	-
+GID000012800	Shift down pH to 5	-
+GID000012801	Shift down pH to 5	-
+GID000012802	Shift down pH to 5	-
+GID000012803	Shift down pH to 5	-
+GID000012804	Shift down pH to 5	-
+GID000012805	Shift down pH to 5	-
+GID000012806	Shift down pH to 5	-
+GID000012807	Growth on Defined Medium with ppGpp	-
+GID000012808	Growth on Defined Medium with ppGpp	-
+GID000012809	Growth on Defined Medium with ppGpp	-
+GID000012810	Growth on Defined Medium with ppGpp	-
+GID000012811	Growth on Defined Medium with ppGpp	-
+GID000012812	Growth on Defined Medium with ppGpp	-
+GID000012813	without medium	-
+GID000012814	without medium	-
+GID000012815	without medium	-
+GID000012816	without medium	-
+GID000012817	without medium	-
+GID000012818	without medium	-
+GID000012819	without medium	-
+GID000012820	without medium	-
+GID000012821	without medium	-
+GID000012822	0.1 uM of hydrogen peroxide	-
+GID000012823	0.1 uM of hydrogen peroxide	-
+GID000012824	0.1 uM of hydrogen peroxide	-
+GID000012825	Medium that previously supported the E .coli growth	-
+GID000012826	Medium that previously supported the E .coli growth	-
+GID000012827	Medium that previously supported the E .coli growth	-
+GID000012828	Medium that previously supported the E .coli growth	-
+GID000012829	Medium that previously supported the E .coli growth	-
+GID000012830	Medium that previously supported the E .coli growth	-
+GID000012831	without medium	-
+GID000012832	without medium	-
+GID000012833	without medium	-
+GID000012834	without medium	-
+GID000012835	without medium	-
+GID000012836	without medium	-
+GID000012837	Growth of Defined Medium with potassium glutamate	-
+GID000012838	Growth of Defined Medium with potassium glutamate	-
+GID000012839	Growth of Defined Medium with potassium glutamate	-
+GID000012840	Growth of Defined Medium with potassium glutamate	-
+GID000012841	Growth of Defined Medium with potassium glutamate	-
+GID000012842	Growth of Defined Medium with potassium glutamate	-
+GID000012843	Growth of Defined Medium with potassium glutamate	-
+GID000012844	without medium	-
+GID000012845	without medium	-
+GID000012846	without medium	-
+GID000012847	without medium	-
+GID000012848	without medium	-
+GID000012849	pta and ackA genes are required	-
+GID000012850	pta and ackA genes are required	-
+GID000012851	without medium	-
+GID000012852	Growth in restricted medium, the induction of bolA beggining in late exponential and is more induced on stationary phase	-
+GID000012853	Growth in restricted medium, the induction of bolA beggining in late exponential and is more induced on stationary phase	-
+GID000012854	Growth in restricted medium, the induction of bolA beggining in late exponential and is more induced on stationary phase	-
+GID000012855	Growth in restricted medium, the induction of bolA beggining in late exponential and is more induced on stationary phase	-
+GID000054851	Unknown medium	-

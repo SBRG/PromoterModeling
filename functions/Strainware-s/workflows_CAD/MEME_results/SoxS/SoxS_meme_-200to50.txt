@@ -1,0 +1,438 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.1.1 (Release date: Wed Jan 29 15:00:42 2020 -0800)
+
+For further information on how to interpret please access http://meme-suite.org/.
+To get a copy of the MEME software please access http://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to discover
+motifs in biopolymers", Proceedings of the Second International
+Conference on Intelligent Systems for Molecular Biology, pp. 28-36,
+AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= soxs.fasta
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+lpxC_TU_0                1.0000    250  lpxC_TU_1                1.0000    250  
+lpxC_TU_2                1.0000    250  lpxC_TU_3                1.0000    250  
+lpxC_TU_4                1.0000    250  lpxC_TU_5                1.0000    250  
+yaiA_TU_0                1.0000    250  yaiA_TU_2                1.0000    250  
+ybaO_TU_0                1.0000    250  lipA_TU_0                1.0000    250  
+fldA_TU_0                1.0000    250  ybjC_TU_0                1.0000    250  
+nfsA_TU_0                1.0000    250  rimK_TU_0                1.0000    250  
+rimK_TU_1                1.0000    250  poxB_TU_0                1.0000    250  
+poxB_TU_2                1.0000    250  ymgA_TU_1                1.0000    250  
+ariR_TU_1                1.0000    250  ribA_TU_0                1.0000    250  
+ribA_TU_1                1.0000    250  pfo_TU_0                 1.0000    250  
+pfo_TU_1                 1.0000    250  pfo_TU_2                 1.0000    250  
+fumC_TU_0                1.0000    250  fumC_TU_1                1.0000    250  
+fumC_TU_2                1.0000    250  zwf_TU_0                 1.0000    250  
+nfo_TU_0                 1.0000    250  inaA_TU_0                1.0000    250  
+fldB_TU_0                1.0000    250  ygfZ_TU_0                1.0000    250  
+yggX_TU_0                1.0000    250  yggX_TU_1                1.0000    250  
+yggX_TU_2                1.0000    250  yggX_TU_3                1.0000    250  
+yggX_TU_4                1.0000    250  yggX_TU_5                1.0000    250  
+yggX_TU_6                1.0000    250  yggX_TU_7                1.0000    250  
+yggX_TU_8                1.0000    250  mltC_TU_0                1.0000    250  
+mltC_TU_1                1.0000    250  mltC_TU_2                1.0000    250  
+mltC_TU_3                1.0000    250  mltC_TU_4                1.0000    250  
+mltC_TU_5                1.0000    250  treF_TU_0                1.0000    250  
+nepI_TU_0                1.0000    250  sodA_TU_0                1.0000    250  
+fpr_TU_0                 1.0000    250  oxyR_TU_0                1.0000    250  
+soxS_TU_0                1.0000    250  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme soxs.fasta -dna -oc . -nostatus -time 18000 -mod oops -nmotifs 1 -minw 6 -maxw 50 -objfun classic -revcomp -markov_order 0 
+
+model:  mod=          oops    nmotifs=         1    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+strands: + -
+width:  minw=            6    maxw=           50
+nsites: minsites=       53    maxsites=       53    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=           13250    N=              53
+sample: seed=            0    hsfrac=          0
+        searchsize=  13250    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.265 C 0.235 G 0.235 T 0.265 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.266 C 0.234 G 0.234 T 0.266 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF TTCAKCMAWTTCCRKTKAR MEME-1	width =  19  sites =  53  llr = 518  E-value = 1.4e-035
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif TTCAKCMAWTTCCRKTKAR MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  2::62:473:2:35:::54
+pos.-specific     C  :182:83112:76122:2:
+probability       G  ::::4:2:1::213315:5
+matrix            T  892242125881:157421
+
+         bits    2.1                    
+                 1.9                    
+                 1.7                    
+                 1.5  *   *             
+Relative         1.3 **   *   *         
+Entropy          1.0 ***  *   *         
+(14.1 bits)      0.8 ***  *   ***   **  
+                 0.6 ***  * * ****  **  
+                 0.4 ****** * **** *****
+                 0.2 *******************
+                 0.0 -------------------
+
+Multilevel           TTCAGCAATTTCCATTGAG
+consensus               TT CTA   AGG TCA
+sequence                           C  T 
+                                        
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTCAKCMAWTTCCRKTKAR MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name            Strand  Start   P-value                   Site      
+-------------            ------  ----- ---------            -------------------
+mltC_TU_5                    +    106  1.19e-09 GGCGGCCGTT TTCATCAAATTCCGGTGAA ATGACGTCGT
+mltC_TU_4                    +     99  1.19e-09 TCGGCATACC TTCAGCCATTTCCACTTAG ATATTGTGCC
+mltC_TU_3                    +     29  1.19e-09 GGCGGCCGTT TTCATCAAATTCCGGTGAA ATGACGTCGT
+mltC_TU_2                    +     99  1.19e-09 TCGGCATACC TTCAGCCATTTCCACTTAG ATATTGTGCC
+mltC_TU_1                    +    106  1.19e-09 GGCGGCCGTT TTCATCAAATTCCGGTGAA ATGACGTCGT
+mltC_TU_0                    +     29  1.19e-09 GGCGGCCGTT TTCATCAAATTCCGGTGAA ATGACGTCGT
+yggX_TU_8                    +    106  1.19e-09 GGCGGCCGTT TTCATCAAATTCCGGTGAA ATGACGTCGT
+yggX_TU_7                    +    106  1.19e-09 GGCGGCCGTT TTCATCAAATTCCGGTGAA ATGACGTCGT
+yggX_TU_6                    +     99  1.19e-09 TCGGCATACC TTCAGCCATTTCCACTTAG ATATTGTGCC
+yggX_TU_5                    +     99  1.19e-09 TCGGCATACC TTCAGCCATTTCCACTTAG ATATTGTGCC
+yggX_TU_4                    +     29  1.19e-09 GGCGGCCGTT TTCATCAAATTCCGGTGAA ATGACGTCGT
+yggX_TU_3                    +     29  1.19e-09 GGCGGCCGTT TTCATCAAATTCCGGTGAA ATGACGTCGT
+yggX_TU_2                    +     99  1.19e-09 TCGGCATACC TTCAGCCATTTCCACTTAG ATATTGTGCC
+yggX_TU_1                    +    106  1.19e-09 GGCGGCCGTT TTCATCAAATTCCGGTGAA ATGACGTCGT
+yggX_TU_0                    +     29  1.19e-09 GGCGGCCGTT TTCATCAAATTCCGGTGAA ATGACGTCGT
+rimK_TU_0                    -    101  9.29e-07 TAAACCTACT TTCAGCGAATACATTTTAG CGTGATCATT
+nfsA_TU_0                    -    101  9.29e-07 TAAACCTACT TTCAGCGAATACATTTTAG CGTGATCATT
+ybjC_TU_0                    -    101  9.29e-07 TAAACCTACT TTCAGCGAATACATTTTAG CGTGATCATT
+pfo_TU_2                     -    143  4.64e-06 AATGGCTTTC TTCTGCATTTTCGCTTTTG TGTCCCCCAC
+pfo_TU_1                     -    158  4.64e-06 AATGGCTTTC TTCTGCATTTTCGCTTTTG TGTCCCCCAC
+pfo_TU_0                     -    143  4.64e-06 AATGGCTTTC TTCTGCATTTTCGCTTTTG TGTCCCCCAC
+poxB_TU_0                    -     23  4.64e-06 GTACGTAACC TTCAGCGATTTCGGCGTCG GTCAGCGTCA
+zwf_TU_0                     -     80  7.02e-06 TGATAAAAAA ATCATCGTTTTCCATTGGG TAAAAATCTG
+ariR_TU_1                    -     28  8.59e-06 CCAACTAGTG TTCAACTTTTTCCATTTTT TATCAATGTA
+ymgA_TU_1                    -     28  8.59e-06 CCAACTAGTG TTCAACTTTTTCCATTTTT TATCAATGTA
+treF_TU_0                    +     89  1.84e-05 AAATCGGTAT TTTTATAAATTCCATTGAT ATTAGTGCGT
+lpxC_TU_4                    +    192  1.84e-05 CGTAGTTCAG TTCTGCGTATTGCAGAGAG GACGAATGCA
+lipA_TU_0                    -    100  2.02e-05 ATTGTGCCAT TTTATCGTTCTGCGCTGTG ATCTGGCTGT
+soxS_TU_0                    -    168  2.64e-05 GGGAGTATAA TTCCTCAAGTTAACTTGAG GTAAAGCGAT
+ygfZ_TU_0                    +     59  4.06e-05 TTACGGGAAT ATCAGTAAACACCATCGCG ATCGCGAAAT
+fumC_TU_2                    +      3  4.42e-05         AG TTCAGTCAACGCCGTTTTG CTGCCCCAGG
+nfo_TU_0                     -     39  7.17e-05 CCCAGCTTTT TTCAGCGCGCTGACGTGAG TGGTCAGACC
+rimK_TU_1                    -     83  7.17e-05 TGAGGTAATA TTCCGCCAGTTGCTCGTCA TACTGCGCCA
+fumC_TU_1                    -     19  7.75e-05 ACGCCGGGAA ATCTTCCACTTCAATTTTC CAGATGGCTT
+fumC_TU_0                    -     74  7.75e-05 ACGCCGGGAA ATCTTCCACTTCAATTTTC CAGATGGCTT
+lpxC_TU_5                    -     57  7.75e-05 AATCCGGCTC TTTCGCAGTTTGCGGCGCA TTGTCATTCA
+lpxC_TU_1                    -     79  7.75e-05 AATCCGGCTC TTTCGCAGTTTGCGGCGCA TTGTCATTCA
+yaiA_TU_2                    +    150  1.05e-04 TTAAGTGGAA TTTTTTCTTTACAATCGAA ATTGTACTAG
+yaiA_TU_0                    +    225  1.05e-04 TTAAGTGGAA TTTTTTCTTTACAATCGAA ATTGTAC   
+oxyR_TU_0                    +     64  1.22e-04 TCACGTTGGC TTTAGTTATTCGAGTTGAG AAACTCTCGA
+lpxC_TU_3                    -    142  1.63e-04 CAGCCACGAC TTCCGCCAGTTCTTTGGTG CGGGTCATCG
+ribA_TU_1                    +    126  2.01e-04 TTTTGATAAG TCCCACAATCATAACTGAA AACGCCAGTT
+ribA_TU_0                    +     82  2.01e-04 TTTTGATAAG TCCCACAATCATAACTGAA AACGCCAGTT
+sodA_TU_0                    +    159  2.46e-04 TACGGCATTG ATAATCATTTTCAATATCA TTTAATTAAC
+ybaO_TU_0                    -    193  2.46e-04 ACAGAGAATT TTTTTCTCTTTTAATTTTA TTTTAAAGGT
+inaA_TU_0                    -     88  2.63e-04 CACCGCTTTT ACCCTTCATTTGCAGCGCA TAGATTCCAC
+fldB_TU_0                    -     28  3.41e-04 TGAAAATACG TTGAACGCTTACCGTCGCG ATCTGTCAAT
+nepI_TU_0                    +    101  3.86e-04 TCCGGTAATC TTTGCCCTGTTCCGTTTCG ATCTTAACTC
+fldA_TU_0                    +    212  4.37e-04 TCCGTGGGCA ATTTTCCACCCCCATTTCA ATAAGTTTCA
+fpr_TU_0                     +     81  4.94e-04 CATTCAGTCC ATCCACTATCTGGATCGCA AAGACCCGGA
+lpxC_TU_0                    +    176  7.43e-04 TTTTCCTCAG CTCCGTAAACTCCTTTCAG TGGGAAATTG
+poxB_TU_2                    -    137  9.78e-04 AAGGGATTTT TCATGCAACTTTAAGGGAG ATTGATTTAG
+lpxC_TU_2                    -    141  9.78e-04 TGTTGAACTG TCCAACCAGCATCACTTCT TTTGTCAGCC
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTCAKCMAWTTCCRKTKAR MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+mltC_TU_5                         1.2e-09  105_[+1]_126
+mltC_TU_4                         1.2e-09  98_[+1]_133
+mltC_TU_3                         1.2e-09  28_[+1]_203
+mltC_TU_2                         1.2e-09  98_[+1]_133
+mltC_TU_1                         1.2e-09  105_[+1]_126
+mltC_TU_0                         1.2e-09  28_[+1]_203
+yggX_TU_8                         1.2e-09  105_[+1]_126
+yggX_TU_7                         1.2e-09  105_[+1]_126
+yggX_TU_6                         1.2e-09  98_[+1]_133
+yggX_TU_5                         1.2e-09  98_[+1]_133
+yggX_TU_4                         1.2e-09  28_[+1]_203
+yggX_TU_3                         1.2e-09  28_[+1]_203
+yggX_TU_2                         1.2e-09  98_[+1]_133
+yggX_TU_1                         1.2e-09  105_[+1]_126
+yggX_TU_0                         1.2e-09  28_[+1]_203
+rimK_TU_0                         9.3e-07  100_[-1]_131
+nfsA_TU_0                         9.3e-07  100_[-1]_131
+ybjC_TU_0                         9.3e-07  100_[-1]_131
+pfo_TU_2                          4.6e-06  142_[-1]_89
+pfo_TU_1                          4.6e-06  157_[-1]_74
+pfo_TU_0                          4.6e-06  142_[-1]_89
+poxB_TU_0                         4.6e-06  22_[-1]_209
+zwf_TU_0                            7e-06  79_[-1]_152
+ariR_TU_1                         8.6e-06  27_[-1]_204
+ymgA_TU_1                         8.6e-06  27_[-1]_204
+treF_TU_0                         1.8e-05  88_[+1]_143
+lpxC_TU_4                         1.8e-05  191_[+1]_40
+lipA_TU_0                           2e-05  99_[-1]_132
+soxS_TU_0                         2.6e-05  167_[-1]_64
+ygfZ_TU_0                         4.1e-05  58_[+1]_173
+fumC_TU_2                         4.4e-05  2_[+1]_229
+nfo_TU_0                          7.2e-05  38_[-1]_193
+rimK_TU_1                         7.2e-05  82_[-1]_149
+fumC_TU_1                         7.8e-05  18_[-1]_213
+fumC_TU_0                         7.8e-05  73_[-1]_158
+lpxC_TU_5                         7.8e-05  56_[-1]_175
+lpxC_TU_1                         7.8e-05  78_[-1]_153
+yaiA_TU_2                         0.00011  149_[+1]_82
+yaiA_TU_0                         0.00011  224_[+1]_7
+oxyR_TU_0                         0.00012  63_[+1]_168
+lpxC_TU_3                         0.00016  141_[-1]_90
+ribA_TU_1                          0.0002  125_[+1]_106
+ribA_TU_0                          0.0002  81_[+1]_150
+sodA_TU_0                         0.00025  158_[+1]_73
+ybaO_TU_0                         0.00025  192_[-1]_39
+inaA_TU_0                         0.00026  87_[-1]_144
+fldB_TU_0                         0.00034  27_[-1]_204
+nepI_TU_0                         0.00039  100_[+1]_131
+fldA_TU_0                         0.00044  211_[+1]_20
+fpr_TU_0                          0.00049  80_[+1]_151
+lpxC_TU_0                         0.00074  175_[+1]_56
+poxB_TU_2                         0.00098  136_[-1]_95
+lpxC_TU_2                         0.00098  140_[-1]_91
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTCAKCMAWTTCCRKTKAR MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF TTCAKCMAWTTCCRKTKAR width=19 seqs=53
+mltC_TU_5                (  106) TTCATCAAATTCCGGTGAA  1 
+mltC_TU_4                (   99) TTCAGCCATTTCCACTTAG  1 
+mltC_TU_3                (   29) TTCATCAAATTCCGGTGAA  1 
+mltC_TU_2                (   99) TTCAGCCATTTCCACTTAG  1 
+mltC_TU_1                (  106) TTCATCAAATTCCGGTGAA  1 
+mltC_TU_0                (   29) TTCATCAAATTCCGGTGAA  1 
+yggX_TU_8                (  106) TTCATCAAATTCCGGTGAA  1 
+yggX_TU_7                (  106) TTCATCAAATTCCGGTGAA  1 
+yggX_TU_6                (   99) TTCAGCCATTTCCACTTAG  1 
+yggX_TU_5                (   99) TTCAGCCATTTCCACTTAG  1 
+yggX_TU_4                (   29) TTCATCAAATTCCGGTGAA  1 
+yggX_TU_3                (   29) TTCATCAAATTCCGGTGAA  1 
+yggX_TU_2                (   99) TTCAGCCATTTCCACTTAG  1 
+yggX_TU_1                (  106) TTCATCAAATTCCGGTGAA  1 
+yggX_TU_0                (   29) TTCATCAAATTCCGGTGAA  1 
+rimK_TU_0                (  101) TTCAGCGAATACATTTTAG  1 
+nfsA_TU_0                (  101) TTCAGCGAATACATTTTAG  1 
+ybjC_TU_0                (  101) TTCAGCGAATACATTTTAG  1 
+pfo_TU_2                 (  143) TTCTGCATTTTCGCTTTTG  1 
+pfo_TU_1                 (  158) TTCTGCATTTTCGCTTTTG  1 
+pfo_TU_0                 (  143) TTCTGCATTTTCGCTTTTG  1 
+poxB_TU_0                (   23) TTCAGCGATTTCGGCGTCG  1 
+zwf_TU_0                 (   80) ATCATCGTTTTCCATTGGG  1 
+ariR_TU_1                (   28) TTCAACTTTTTCCATTTTT  1 
+ymgA_TU_1                (   28) TTCAACTTTTTCCATTTTT  1 
+treF_TU_0                (   89) TTTTATAAATTCCATTGAT  1 
+lpxC_TU_4                (  192) TTCTGCGTATTGCAGAGAG  1 
+lipA_TU_0                (  100) TTTATCGTTCTGCGCTGTG  1 
+soxS_TU_0                (  168) TTCCTCAAGTTAACTTGAG  1 
+ygfZ_TU_0                (   59) ATCAGTAAACACCATCGCG  1 
+fumC_TU_2                (    3) TTCAGTCAACGCCGTTTTG  1 
+nfo_TU_0                 (   39) TTCAGCGCGCTGACGTGAG  1 
+rimK_TU_1                (   83) TTCCGCCAGTTGCTCGTCA  1 
+fumC_TU_1                (   19) ATCTTCCACTTCAATTTTC  1 
+fumC_TU_0                (   74) ATCTTCCACTTCAATTTTC  1 
+lpxC_TU_5                (   57) TTTCGCAGTTTGCGGCGCA  1 
+lpxC_TU_1                (   79) TTTCGCAGTTTGCGGCGCA  1 
+yaiA_TU_2                (  150) TTTTTTCTTTACAATCGAA  1 
+yaiA_TU_0                (  225) TTTTTTCTTTACAATCGAA  1 
+oxyR_TU_0                (   64) TTTAGTTATTCGAGTTGAG  1 
+lpxC_TU_3                (  142) TTCCGCCAGTTCTTTGGTG  1 
+ribA_TU_1                (  126) TCCCACAATCATAACTGAA  1 
+ribA_TU_0                (   82) TCCCACAATCATAACTGAA  1 
+sodA_TU_0                (  159) ATAATCATTTTCAATATCA  1 
+ybaO_TU_0                (  193) TTTTTCTCTTTTAATTTTA  1 
+inaA_TU_0                (   88) ACCCTTCATTTGCAGCGCA  1 
+fldB_TU_0                (   28) TTGAACGCTTACCGTCGCG  1 
+nepI_TU_0                (  101) TTTGCCCTGTTCCGTTTCG  1 
+fldA_TU_0                (  212) ATTTTCCACCCCCATTTCA  1 
+fpr_TU_0                 (   81) ATCCACTATCTGGATCGCA  1 
+lpxC_TU_0                (  176) CTCCGTAAACTCCTTTCAG  1 
+poxB_TU_2                (  137) TCATGCAACTTTAAGGGAG  1 
+lpxC_TU_2                (  141) TCCAACCAGCATCACTTCT  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTCAKCMAWTTCCRKTKAR MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 19 n= 12296 bayes= 7.85175 E= 1.4e-035 
+   -81   -363  -1237    164 
+ -1237   -131  -1237    177 
+  -281    169   -363    -49 
+   109    -31   -363    -23 
+   -81   -363     89     58 
+ -1237    186  -1237    -81 
+    71     36    -47   -149 
+   136   -205   -263    -23 
+    36   -164   -105     83 
+ -1237    -31  -1237    161 
+   -49   -263   -363    151 
+  -381    161    -47   -149 
+     9    136   -131   -381 
+    77   -131     53   -123 
+ -1237    -18     36     89 
+  -281    -64   -164    147 
+ -1237   -363    122     71 
+   104     -5   -363    -36 
+    64   -263    101   -181 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTCAKCMAWTTCCRKTKAR MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 19 nsites= 53 E= 1.4e-035 
+ 0.150943  0.018868  0.000000  0.830189 
+ 0.000000  0.094340  0.000000  0.905660 
+ 0.037736  0.754717  0.018868  0.188679 
+ 0.566038  0.188679  0.018868  0.226415 
+ 0.150943  0.018868  0.433962  0.396226 
+ 0.000000  0.849057  0.000000  0.150943 
+ 0.433962  0.301887  0.169811  0.094340 
+ 0.679245  0.056604  0.037736  0.226415 
+ 0.339623  0.075472  0.113208  0.471698 
+ 0.000000  0.188679  0.000000  0.811321 
+ 0.188679  0.037736  0.018868  0.754717 
+ 0.018868  0.716981  0.169811  0.094340 
+ 0.283019  0.603774  0.094340  0.018868 
+ 0.452830  0.094340  0.339623  0.113208 
+ 0.000000  0.207547  0.301887  0.490566 
+ 0.037736  0.150943  0.075472  0.735849 
+ 0.000000  0.018868  0.547170  0.433962 
+ 0.547170  0.226415  0.018868  0.207547 
+ 0.415094  0.037736  0.471698  0.075472 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTCAKCMAWTTCCRKTKAR MEME-1 regular expression
+--------------------------------------------------------------------------------
+TTC[AT][GT]C[AC][AT][TA]TTC[CA][AG][TGC]T[GT][ACT][GA]
+--------------------------------------------------------------------------------
+
+
+
+
+Time 17.22 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+lpxC_TU_0                        2.92e-01  250
+lpxC_TU_1                        3.53e-02  78_[-1(7.75e-05)]_153
+lpxC_TU_2                        3.65e-01  250
+lpxC_TU_3                        7.27e-02  250
+lpxC_TU_4                        8.52e-03  191_[+1(1.84e-05)]_40
+lpxC_TU_5                        3.53e-02  56_[-1(7.75e-05)]_175
+yaiA_TU_0                        4.76e-02  250
+yaiA_TU_2                        4.76e-02  250
+ybaO_TU_0                        1.08e-01  250
+lipA_TU_0                        9.33e-03  99_[-1(2.02e-05)]_132
+fldA_TU_0                        1.84e-01  250
+ybjC_TU_0                        4.31e-04  100_[-1(9.29e-07)]_131
+nfsA_TU_0                        4.31e-04  100_[-1(9.29e-07)]_131
+rimK_TU_0                        4.31e-04  100_[-1(9.29e-07)]_131
+rimK_TU_1                        3.27e-02  82_[-1(7.17e-05)]_149
+poxB_TU_0                        2.15e-03  22_[-1(4.64e-06)]_209
+poxB_TU_2                        3.65e-01  250
+ymgA_TU_1                        3.98e-03  27_[-1(8.59e-06)]_204
+ariR_TU_1                        3.98e-03  27_[-1(8.59e-06)]_204
+ribA_TU_0                        8.89e-02  250
+ribA_TU_1                        8.89e-02  250
+pfo_TU_0                         2.15e-03  142_[-1(4.64e-06)]_89
+pfo_TU_1                         2.15e-03  157_[-1(4.64e-06)]_74
+pfo_TU_2                         2.15e-03  142_[-1(4.64e-06)]_89
+fumC_TU_0                        3.53e-02  73_[-1(7.75e-05)]_158
+fumC_TU_1                        3.53e-02  18_[-1(7.75e-05)]_213
+fumC_TU_2                        2.03e-02  2_[+1(4.42e-05)]_229
+zwf_TU_0                         3.25e-03  79_[-1(7.02e-06)]_152
+nfo_TU_0                         3.27e-02  38_[-1(7.17e-05)]_193
+inaA_TU_0                        1.15e-01  250
+fldB_TU_0                        1.46e-01  250
+ygfZ_TU_0                        1.87e-02  58_[+1(4.06e-05)]_173
+yggX_TU_0                        5.51e-07  28_[+1(1.19e-09)]_203
+yggX_TU_1                        5.51e-07  105_[+1(1.19e-09)]_126
+yggX_TU_2                        5.51e-07  98_[+1(1.19e-09)]_133
+yggX_TU_3                        5.51e-07  28_[+1(1.19e-09)]_203
+yggX_TU_4                        5.51e-07  28_[+1(1.19e-09)]_203
+yggX_TU_5                        5.51e-07  98_[+1(1.19e-09)]_133
+yggX_TU_6                        5.51e-07  98_[+1(1.19e-09)]_133
+yggX_TU_7                        5.51e-07  105_[+1(1.19e-09)]_126
+yggX_TU_8                        5.51e-07  105_[+1(1.19e-09)]_126
+mltC_TU_0                        5.51e-07  28_[+1(1.19e-09)]_203
+mltC_TU_1                        5.51e-07  105_[+1(1.19e-09)]_126
+mltC_TU_2                        5.51e-07  98_[+1(1.19e-09)]_133
+mltC_TU_3                        5.51e-07  28_[+1(1.19e-09)]_203
+mltC_TU_4                        5.51e-07  98_[+1(1.19e-09)]_133
+mltC_TU_5                        5.51e-07  105_[+1(1.19e-09)]_126
+treF_TU_0                        8.52e-03  88_[+1(1.84e-05)]_143
+nepI_TU_0                        1.64e-01  250
+sodA_TU_0                        1.08e-01  250
+fpr_TU_0                         2.05e-01  250
+oxyR_TU_0                        5.50e-02  250
+soxS_TU_0                        1.22e-02  167_[-1(2.64e-05)]_64
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (1) found.
+********************************************************************************
+
+CPU: ip-172-31-15-185
+
+********************************************************************************

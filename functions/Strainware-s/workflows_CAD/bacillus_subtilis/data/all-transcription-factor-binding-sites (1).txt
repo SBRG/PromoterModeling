@@ -1,0 +1,836 @@
+Site	Left	Right	Strand	Transcription-Units
+Abh DNA-binding-site regulating sunAp	2269836	2269871	-	sunAT-bdbA-yolJ-bdbB
+AbrB DNA-binding-site 1.5 bases downstream of PM8J2-735	1360366	1360366	+	dppABCDE
+AbrB DNA-binding-site 100.0 bases upstream of PM8J2-595	3701279	3701279	+	rbsRKDACB
+AbrB DNA-binding-site 11.0 bases upstream of PM8J2-772	1926601	1926601	+	citB
+AbrB DNA-binding-site 123.5 bases upstream of tapAp	2555403	2555458	-	tapA-sipW-tasA
+AbrB DNA-binding-site 13.0 bases downstream of PM8J2-595	3701391	3701391	+	rbsRKDACB
+AbrB DNA-binding-site 15.5 bases upstream of PM8J2-565	116560	116560	+	sigH
+AbrB DNA-binding-site 182 bases upstream of tapAp	2555469	2555509	-	tapA-sipW-tasA
+AbrB DNA-binding-site 20.0 bases upstream of PM8J2-676	3230019	3230019	+	kinB-kapB
+AbrB DNA-binding-site 21.0 bases upstream of PM8J2-792	1105647	1105647	-	aprE
+AbrB DNA-binding-site 21.5 bases upstream of PM8J2-756	1117052	1117052	+	comK
+AbrB DNA-binding-site 210.0 bases downstream of PM8J2-684	4041660	4041660	+	hut
+AbrB DNA-binding-site 22.0 bases upstream of PM8J2-555	1430614	1430614	+	spo0E
+AbrB DNA-binding-site 25.0 bases upstream of liaIp	3398981	3398981	-	liaIH // liaIHGFSR
+AbrB DNA-binding-site 27.5 bases downstream of PM8J2-63	194848	194848	+	sigW-ybbM
+AbrB DNA-binding-site 35.0 bases upstream of sinI-P2 (RNAII)	2552358	2552358	+	sinIR // sinIR
+AbrB DNA-binding-site 37.5 bases upstream of PM8J2-52	1503520	1503520	+	yknWXYZ
+AbrB DNA-binding-site 39.5 bases upstream of PM8J2-66	3535526	3535526	-	pbpE-racX
+AbrB DNA-binding-site 4.5 bases downstream of PM8J2-34	3982951	3982951	+	yxzE
+AbrB DNA-binding-site 40.5 bases upstream of spoVG-P1	55790	55790	+	spoVG
+AbrB DNA-binding-site 44.5 bases upstream of PM8J2-483	4113306	4113306	-	yxaAB
+AbrB DNA-binding-site 67.0 bases upstream of PM8J2-40	3608896	3608896	-	yvlABCD
+AbrB DNA-binding-site 68.5 bases upstream of sboAp	3835914	3835975	+	sboAX-albABCDEFG
+AbrB DNA-binding-site 72.0 bases upstream of PM8J2-66	3535558	3535558	-	pbpE-racX
+AbrB DNA-binding-site regulating abrB-P2			-	abrB // abrB
+AbrB DNA-binding-site regulating fatRp			-	yrhIJ
+AbrB DNA-binding-site regulating G4			-	yoaW
+AbrB DNA-binding-site regulating PM8J2-1073			-	ycnK
+AbrB DNA-binding-site regulating PM8J2-503			-	yocH
+AbrB DNA-binding-site regulating PM8J2-527			+	skf
+AbrB DNA-binding-site regulating PM8J2-568			-	sdpRI
+AbrB DNA-binding-site regulating PM8J2-786			+	argCJBD-carAB-argF
+AbrB DNA-binding-site regulating PM8J2-822			-	yxbCD
+AbrB DNA-binding-site regulating PM8J2-860			+	senS
+AbrB DNA-binding-site regulating PM8J2-921			+	rok
+AbrB DNA-binding-site regulating PM8J2-970			+	sdp
+AbrB DNA-binding-site regulating scoCp			-	scoC
+AbrB DNA-binding-site regulating sunAp	2269833	2269907	-	sunAT-bdbA-yolJ-bdbB
+AbrB DNA-binding-site regulating yxbBp			+	yxbBA-yxnB-asnH-yxaM
+AcoR DNA-binding-site 91.5 bases upstream of PM8J2-100	878883	878883	+	acoABCL
+AdaA DNA-binding-site 35.5 bases upstream of PM8J2-798	203543	203543	-	alkA
+AdaA DNA-binding-site regulating PM8J2-802			+	adaAB
+AdeR DNA-binding-site 74 bases upstream of aldp	3278210	3278242	+	ald
+AdhR DNA-binding-site 24.5 bases upstream of adhAp	2756206	2756224	+	adhA-yraA
+AdhR DNA-binding-site 24.5 bases upstream of adhRp	2755844	2755862	-	adhR
+AdhR DNA-binding-site 25.5 bases upstream of yrzPp	2755919	2755937	+	yrzP
+AhrC DNA-binding-site 124.5 bases downstream of PM8J2-786	1195126	1195126	+	argCJBD-carAB-argF
+AhrC DNA-binding-site 22.5 bases upstream of PM8J2-786	1194980	1194980	+	argCJBD-carAB-argF
+AhrC DNA-binding-site 52.5 bases upstream of PM8J2-786	1194950	1194950	+	argCJBD-carAB-argF
+AhrC DNA-binding-site 9.0 bases upstream of PM8J2-96	4145562	4145562	-	rocDEF
+AhrC DNA-binding-site 9.0 bases upstream of PM8J2-97	3880559	3880559	-	rocABC
+AlsR DNA-binding-site regulating PM8J2-674			+	ldh-lctP
+AlsR DNA-binding-site regulating PM8J2-797			-	alsSD
+AnsR DNA-binding-site regulating PM8J2-1071			+	ansR
+AnsR DNA-binding-site regulating PM8J2-794			-	ansAB
+AraR DNA-binding-site 22.5 bases upstream of PM8J2-533	2915270	2915270	-	xsa
+AraR DNA-binding-site 34.0 bases upstream of PM8J2-808	2950173	2950173	-	abnA
+AraR DNA-binding-site 4.5 bases downstream of PM8J2-789	3485566	3485566	-	araE
+AraR DNA-binding-site 48.0 bases downstream of PM8J2-789	3485522	3485522	-	araE
+AraR DNA-binding-site 48.0 bases downstream of PM8J2-790	2948925	2948925	-	araABDLMNPQ-abfA
+AraR DNA-binding-site 5.5 bases downstream of PM8J2-790	2948968	2948968	-	araABDLMNPQ-abfA
+AraR DNA-binding-site 61.5 bases upstream of PM8J2-533	2915309	2915309	-	xsa
+AraR DNA-binding-site regulating PM8J2-788	3485647	3485647	+	araR
+ArfM DNA-binding-site regulating PM8J2-674			+	ldh-lctP
+ArfM DNA-binding-site regulating PM8J2-688			+	hemZ
+ArfM DNA-binding-site regulating PM8J2-787			-	arfM
+ArfM DNA-binding-site regulating PM8J2-797			-	alsSD
+ArfM DNA-binding-site regulating PM8J2-83			+	hmp
+ArsR DNA-binding-site regulating PM8J2-785	2657732	2657732	-	arsR-yqcK-arsBC
+AscR DNA-binding-site 53.5 bases upstream of PM8J2-9	3008896	3008896	-	ytmIJKLMNO-ytnIJ-ribR-ytnLM
+AzlB DNA-binding-site regulating PM8J2-1070			-	azlBCD-brnQ-yrdK
+BirA DNA-binding-site regulating PM8J2-1069	3095564	3095564	-	bioWAFDBI-ytbQ
+BkdR DNA-binding-site 111.5 bases upstream of PM8J2-98	2504804	2504804	-	ptb-bcd-buk-lpdV-bkdAABB
+BkdR DNA-binding-site 76.5 bases upstream of PM8J2-98	2504769	2504769	-	ptb-bcd-buk-lpdV-bkdAABB
+BkdR DNA-binding-site 97.5 bases upstream of PM8J2-98	2504790	2504790	-	ptb-bcd-buk-lpdV-bkdAABB
+BltR DNA-binding-site 22.0 bases upstream of PM8J2-780	2716882	2716882	+	blt-bltD
+BmrR DNA-binding-site 24 bases upstream of bmrp	2494593	2494615	+	bmr-bmrR
+Btr DNA-binding-site 53.0 bases upstream of feuAp	183411	183411	-	feuABC-ybbA // feuABC-ybbA
+CatR DNA-binding-site regulating catDp			+	catDE
+CcpA DNA-binding-site 117.0 bases upstream of PM8J2-805	3016507	3016507	-	ackA
+CcpA DNA-binding-site 146.5 bases downstream of PM8J2-532	1891950	1891950	+	xylAB
+CcpA DNA-binding-site 149.0 bases downstream of gntR-P1	4113531	4113531	+	gntRKPZ
+CcpA DNA-binding-site 17.5 bases upstream of PM8J2-672	3961939	3961939	-	licBCAH
+CcpA DNA-binding-site 2 bases downstream of rhaEWp	3203950	3203978	-	rhaEWRBMA
+CcpA DNA-binding-site 209.5 bases downstream of PM8J2-684	4041660	4041660	+	hut
+CcpA DNA-binding-site 21.5 bases downstream of PM8J2-355	2514072	2514072	-	mmgABCDE-yqiQ
+CcpA DNA-binding-site 22.5 bases upstream of bglPp	4035839	4035839	-	bglPH-yxiE
+CcpA DNA-binding-site 22.5 bases upstream of cydAp	3979413	3979413	-	cydABCD
+CcpA DNA-binding-site 229.0 bases downstream of exuP1	1300625	1300625	+	uxaC-yjmBCD-uxuA-yjmF-exuTR-uxaBA
+CcpA DNA-binding-site 230.5 bases downstream of PM8J2-530	1887261	1887261	+	xynPB
+CcpA DNA-binding-site 26.5 bases upstream of PM8J2-803	3040025	3040025	+	acuABC
+CcpA DNA-binding-site 28.0 bases upstream of PM8J2-709	1002326	1002326	+	glpFK
+CcpA DNA-binding-site 373.0 bases downstream of PM8J2-544	850693	850693	+	trePAR
+CcpA DNA-binding-site 43.0 bases downstream of PM8J2-284	4004167	4004167	-	yxjC-scoAB-yxjF
+CcpA DNA-binding-site 43.0 bases upstream of PM8J2-99	2762905	2762905	-	levDEFG-sacC
+CcpA DNA-binding-site 44.5 bases downstream of PM8J2-804	3039918	3039918	-	acsA
+CcpA DNA-binding-site 470.0 bases downstream of PM8J2-100	879443	879443	+	acoABCL
+CcpA DNA-binding-site 48.0 bases downstream of PM8J2-769	834359	834359	+	citM-yflN
+CcpA DNA-binding-site 5 bases downstream of rosAp	1056389	1056400	+	rosA
+CcpA DNA-binding-site 5.5 bases downstream of PM8J2-795	327502	327502	+	amyE
+CcpA DNA-binding-site 52.5 bases upstream of PM8J2-614	3866416	3866416	-	pta
+CcpA DNA-binding-site 57.5 bases upstream of PM8J2-805	3016448	3016448	-	ackA
+CcpA DNA-binding-site 6.5 bases downstream of PM8J2-595	3701385	3701385	+	rbsRKDACB
+CcpA DNA-binding-site 64 bases downstream of deoCp	4052241	4052241	-	deoC-nupC-pdp
+CcpA DNA-binding-site 66.5 bases downstream of PM8J2-790	2948907	2948907	-	araABDLMNPQ-abfA
+CcpA DNA-binding-site 7.0 bases downstream of PM8J2-662	890002	890002	+	malA-yfiA-malP
+CcpA DNA-binding-site 73.5 bases downstream of PM8J2-789	3485497	3485497	-	araE
+CcpA DNA-binding-site 79.5 bases upstream of PM8J2-682	2897534	2897534	-	ilvBHC-leuABCD
+CcpA DNA-binding-site 8.5 bases downstream of PM8J2-684	4041459	4041459	+	hut
+CcpA DNA-binding-site 88.5 bases downstream of PM8J2-767	2982376	2982376	-	citZ-icd-mdh
+CcpA DNA-binding-site 9.5 bases downstream of PM8J2-614	3866355	3866355	-	pta
+CcpA DNA-binding-site 96.5 bases downstream of PM8J2-655	4084479	4084479	-	mmsA-iolBCDEF-idh-iolHI-fbaB
+CcpA DNA-binding-site regulating pchRp			+	pchR-yvmA
+CcpA DNA-binding-site regulating PM8J2-1			+	gmuBACDREFG
+CcpA DNA-binding-site regulating PM8J2-1053	3979788	3979788	+	yxkJ
+CcpA DNA-binding-site regulating PM8J2-1054	2077391	2077391	+	yobO
+CcpA DNA-binding-site regulating PM8J2-1055	627950	627950	+	ydhO
+CcpA DNA-binding-site regulating PM8J2-1056	3513250	3513250	-	sigL
+CcpA DNA-binding-site regulating PM8J2-1060	2919923	2919923	-	lcfA-ysiAB-etfBA
+CcpA DNA-binding-site regulating PM8J2-1068	883699	883699	+	acoR-sspH
+CcpA DNA-binding-site regulating PM8J2-797			-	alsSD
+CcpB DNA-binding-site regulating gntR-P1			+	gntRKPZ
+CcpB DNA-binding-site regulating PM8J2-532			+	xylAB
+CcpC DNA-binding-site 28.5 bases upstream of PM8J2-772	1926584	1926584	+	citB
+CcpC DNA-binding-site 3.5 bases upstream of PM8J2-767	2982467	2982467	-	citZ-icd-mdh
+CcpC DNA-binding-site 32.5 bases downstream of PM8J2-767	2982432	2982432	-	citZ-icd-mdh
+CcpC DNA-binding-site 63.5 bases upstream of PM8J2-772	1926549	1926549	+	citB
+CcpN DNA-binding-site 1.5 bases downstream of PM8J2-719	2968100	2968100	-	gapB-speD
+CcpN DNA-binding-site 20.0 bases upstream of PM8J2-635	3129471	3129471	+	pckA
+CggR DNA-binding-site 49.5 bases downstream of PM8J2-774	3483822	3483822	-	cggR-gapA-pgk-tpiA-pgm-eno
+CitR DNA-binding-site regulating PM8J2-773			+	citA
+CitT DNA-binding-site 182.0 bases upstream of PM8J2-769	834130	834130	+	citM-yflN
+CitT DNA-binding-site 60.5 bases upstream of PM8J2-769	834252	834252	+	citM-yflN
+CodY DNA-binding-site 10.5 bases downstream of PM8J2-684	4041461	4041461	+	hut
+CodY DNA-binding-site 12.5 bases downstream of PM8J2-735	1360377	1360377	+	dppABCDE
+CodY DNA-binding-site 17.5 bases downstream of ylmAp	1606506	1606539	+	ylmA
+CodY DNA-binding-site 184.5 bases downstream of nupNp	3239823	3239864	+	nupNOPQ // nupN
+CodY DNA-binding-site 318.5 bases upstream of PM8J2-1076	2078759	2078795	+	bsrF
+CodY DNA-binding-site 45 bases upstream of bcaPp	1023163	1023193	+	bcaP
+CodY DNA-binding-site 45.0 bases upstream of PM8J2-756	1117028	1117028	+	comK
+CodY DNA-binding-site 49 bases upstream of putBp	344444	344480	+	putBCP
+CodY DNA-binding-site 53 bases upstream of frlBp	3352185	3352208	-	frlBONMD
+CodY DNA-binding-site 6.0 bases downstream of PM8J2-550	376683	376683	+	srfAA-srfAB-comS-srfAC-srfAD
+CodY DNA-binding-site 62.5 bases upstream of nupNp	3239574	3239621	+	nupNOPQ // nupN
+CodY DNA-binding-site 79 bases downstream of bcaPp	1023287	1023315	+	bcaP
+CodY DNA-binding-site 9.5 bases downstream of ilvEp	258885	258911	+	ybgE
+CodY DNA-binding-site 99.5 bases downstream of P_D-6	3635895	3635895	-	hag
+CodY DNA-binding-site 99.5 bases upstream of PM8J2-682	2897554	2897554	-	ilvBHC-leuABCD
+CodY DNA-binding-site regulating gabP-P1			-	gabP
+CodY DNA-binding-site regulating mprp			+	mpr
+CodY DNA-binding-site regulating PM8J2-1048			-	ilvD
+CodY DNA-binding-site regulating PM8J2-1049			-	ilvA-ypmP
+CodY DNA-binding-site regulating PM8J2-772 (BS8J2-598)			+	citB
+CodY DNA-binding-site regulating PM8J2-772 (BS8J2-599)			+	citB
+CodY DNA-binding-site regulating PM8J2-804			-	acsA
+CodY DNA-binding-site regulating PM8J2-873			+	vpr
+CodY DNA-binding-site regulating PM8J2-98			-	ptb-bcd-buk-lpdV-bkdAABB
+CodY DNA-binding-site regulating rapCp			+	rapC-phrC
+CodY DNA-binding-site regulating scoCp			-	scoC
+CodY DNA-binding-site regulating ureA-P3			-	ureABC
+CodY DNA-binding-site regulating ykfAp			+	ykfABCD
+ComA DNA-binding-site 33.0 bases upstream of rapCp	428766	428766	+	rapC-phrC
+ComA DNA-binding-site 53.0 bases upstream of PM8J2-742	3257360	3257360	-	degQ
+ComA DNA-binding-site 55.5 bases upstream of PM8J2-550	376623	376623	+	srfAA-srfAB-comS-srfAC-srfAD
+ComA DNA-binding-site 55.5 bases upstream of PM8J2-601	1315783	1315783	+	rapA-phrA
+ComA DNA-binding-site 99.5 bases upstream of PM8J2-550	376579	376579	+	srfAA-srfAB-comS-srfAC-srfAD
+ComA DNA-binding-site regulating PM8J2-914			+	rapF-phrF
+ComA DNA-binding-site regulating PM8J2-915			+	rapE-phrE
+ComA DNA-binding-site regulating PM8J2-916	827876	827876	+	pel
+ComK DNA-binding-site 100.5 bases upstream of PM8J2-756	1116973	1116973	+	comK
+ComK DNA-binding-site 107.5 bases upstream of PM8J2-594	1764507	1764507	+	recA
+ComK DNA-binding-site 140.0 bases upstream of PM8J2-594	1764474	1764474	+	recA
+ComK DNA-binding-site 45.0 bases upstream of PM8J2-759	2642078	2642078	-	comEABC
+ComK DNA-binding-site 50.0 bases upstream of PM8J2-594	1764564	1764564	+	recA
+ComK DNA-binding-site 50.5 bases upstream of PM8J2-757	2560147	2560147	-	comGABCDEFG-yqzE
+ComK DNA-binding-site 50.5 bases upstream of PM8J2-760	2865251	2865251	-	comC
+ComK DNA-binding-site 54.0 bases upstream of PM8J2-801	1136238	1136238	+	addBA
+ComK DNA-binding-site 58.5 bases upstream of rapHp	750870	750870	+	rapH-phrH
+ComK DNA-binding-site 69.0 bases upstream of PM8J2-756	1117004	1117004	+	comK
+ComK DNA-binding-site 70.0 bases upstream of PM8J2-759	2642103	2642103	-	comEABC
+ComK DNA-binding-site 78.5 bases upstream of PM8J2-801	1136214	1136214	+	addBA
+ComK DNA-binding-site 79.5 bases upstream of PM8J2-760	2865280	2865280	-	comC
+ComK DNA-binding-site 85.0 bases upstream of PM8J2-594	1764529	1764529	+	recA
+ComK DNA-binding-site 86.5 bases upstream of PM8J2-757	2560183	2560183	-	comGABCDEFG-yqzE
+ComK DNA-binding-site regulating comF-P1 (BS8J2-227)	3643633	3643633	-	comFABC-yvyF-flgM-yvyG-flgKL
+ComK DNA-binding-site regulating comF-P1 (BS8J2-228)	3643664	3643664	-	comFABC-yvyF-flgM-yvyG-flgKL
+ComK DNA-binding-site regulating engDp			-	engD-rpsF-ssbA-rpsR
+ComK DNA-binding-site regulating mafp			-	maf
+ComK DNA-binding-site regulating PM8J2-366			-	bdbDC
+ComK DNA-binding-site regulating PM8J2-397			-	degR
+ComK DNA-binding-site regulating PM8J2-89 (BS8J2-206)	2862755	2862755	-	radC
+ComK DNA-binding-site regulating PM8J2-89 (BS8J2-207)	2862786	2862786	-	radC
+ComK DNA-binding-site regulating PM8J2-899 (BS8J2-202)	3740684	3740684	-	ywpH-glcR
+ComK DNA-binding-site regulating PM8J2-899 (BS8J2-203)	3740715	3740715	-	ywpH-glcR
+ComK DNA-binding-site regulating PM8J2-900 (BS8J2-204)	3415390	3415390	-	yvrPON
+ComK DNA-binding-site regulating PM8J2-900 (BS8J2-205)	3415434	3415434	-	yvrPON
+ComK DNA-binding-site regulating PM8J2-903			+	yneAB-ynzC
+ComK DNA-binding-site regulating PM8J2-909 (BS8J2-209)	221769	221769	+	ybdK
+ComK DNA-binding-site regulating PM8J2-909 (BS8J2-210)	221725	221725	+	ybdK
+ComK DNA-binding-site regulating PM8J2-910 (BS8J2-211)	4212943	4212943	-	thdF-gidAB-yyaA
+ComK DNA-binding-site regulating PM8J2-910 (BS8J2-212)	4212974	4212974	-	thdF-gidAB-yyaA
+ComK DNA-binding-site regulating PM8J2-911 (BS8J2-213)	1682513	1682513	+	smf
+ComK DNA-binding-site regulating PM8J2-911 (BS8J2-214)	1682492	1682492	+	smf
+ComK DNA-binding-site regulating PM8J2-912			+	sbcD-yirY-yisB
+ComK DNA-binding-site regulating PM8J2-913 (BS8J2-221)	372711	372711	-	nucA-nin
+ComK DNA-binding-site regulating PM8J2-913 (BS8J2-222)	372732	372732	-	nucA-nin
+ComK DNA-binding-site regulating PM8J2-921 (BS8J2-580)	1493670	1493670	+	rok
+ComK DNA-binding-site regulating PM8J2-921 (BS8J2-581)	1493649	1493649	+	rok
+ComZ DNA-binding-site regulating PM8J2-757			-	comGABCDEFG-yqzE
+CsoR DNA-binding-site 22.5 bases upstream of copZp	3443855	3443880	-	copZA
+CssR DNA-binding-site 57.5 bases upstream of cssR-S2	3385649	3385649	+	cssRS
+CssR DNA-binding-site regulating PM8J2-685			-	htrA
+CssR DNA-binding-site regulating PM8J2-896			-	yvtA
+CtsR DNA-binding-site 112.0 bases upstream of clpE-s2	1437920	1437920	-	clpE // clpE
+CtsR DNA-binding-site 112.5 bases upstream of clpE-s2	1437921	1437921	-	clpE // clpE
+CtsR DNA-binding-site 140.0 bases upstream of clpE-s2	1437948	1437948	-	clpE // clpE
+CtsR DNA-binding-site 15.0 bases downstream of PM8J2-749	101423	101423	+	ctsR-mcsAB-clpC-radA-yacK
+CtsR DNA-binding-site 28.0 bases upstream of clpP-S1	3546173	3546173	+	clpP
+CtsR DNA-binding-site 66.0 bases upstream of clpE-s2	1437874	1437874	-	clpE // clpE
+CtsR DNA-binding-site 68.5 bases upstream of clpE-s2	1437877	1437877	-	clpE // clpE
+CtsR DNA-binding-site regulating lonS2			-	lonA-ysxC // lonA-ysxC
+CtsR DNA-binding-site regulating PM8J2-763			-	clpX
+CueR DNA-binding-site regulating copZp			-	copZA
+CymR DNA-binding-site 15.5 bases downstream of PM8J2-746	81746	81746	+	cysK
+CymR DNA-binding-site 16.5 bases downstream of PM8J2-9	3008827	3008827	-	ytmIJKLMNO-ytnIJ-ribR-ytnLM
+CymR DNA-binding-site 23.0 bases downstream of scmKp	4062201	4062201	-	scmKL-yxeMNO-sndB-yxeQ
+CymR DNA-binding-site 25.5 bases downstream of PM8J2-481	2788522	2788522	-	yrrT-mtn-yrhABC
+CymR DNA-binding-site 30.0 bases upstream of PM8J2-480	986929	986929	+	yhcL
+CymR DNA-binding-site 30.5 bases upstream of PM8J2-479	961241	961241	+	ssuBACD-ygaN
+CymR DNA-binding-site 32.0 bases upstream of PM8J2-7	3008825	3008825	+	ytlI // ytlI
+CymR DNA-binding-site regulating PM8J2-940	505120	505120	+	ydbM
+CysL DNA-binding-site 18.5 bases downstream of PM8J2-489	3865237	3865237	-	ywfK
+CysL DNA-binding-site 62.5 bases upstream of PM8J2-492	3434263	3434263	-	yvgRQ
+DegU DNA-binding-site 13.0 bases downstream of wapAp	4030571	4030571	-	wapA-yxxG
+DegU DNA-binding-site 289.5 bases upstream of PM8J2-742	3257597	3257597	-	degQ
+DegU DNA-binding-site 30.5 bases upstream of wapAp	4030614	4030614	-	wapA-yxxG
+DegU DNA-binding-site 53.5 bases upstream of PM8J2-792	1105680	1105680	-	aprE
+DegU DNA-binding-site 84.0 bases upstream of PM8J2-574	3941863	3941863	+	sacXY
+DegU DNA-binding-site 87.5 bases upstream of PM8J2-756	1116986	1116986	+	comK
+DegU DNA-binding-site regulating PM8J2-1044			+	yxjJI
+DegU DNA-binding-site regulating PM8J2-576			+	sacB-yveBA
+DegU DNA-binding-site regulating PM8J2-795			+	amyE
+DegU DNA-binding-site regulating PM8J2-890	1511256	1511256	+	sipT
+DegU DNA-binding-site regulating PM8J2-892			-	nprE
+DegU-P DNA-binding-site 129 bases upstream of flgMp	3640712	3640729	-	flgM-yvyG-flgKL
+DegU-P DNA-binding-site 33 bases upstream of degUp3	3645305	3645384	-	degU
+DegU-P DNA-binding-site 62.5 bases upstream of flgMp	3640646	3640662	-	flgM-yvyG-flgKL
+DeoR DNA-binding-site 39 bases upstream of deoCp	4052324	4052362	-	deoC-nupC-pdp
+DesR DNA-binding-site 53.0 bases upstream of PM8J2-740	2089315	2089315	+	des
+DNA-binding-site (BS8J2-15)				
+DNA-binding-site (BS8J2-17774)	1270486	1270530		
+DNA-binding-site (BS8J2-17792)				
+DNA-binding-site (BS8J2-17794)				
+DNA-binding-site (BS8J2-17796)				
+DNA-binding-site (BS8J2-17798)				
+DNA-binding-site (BS8J2-17800)				
+DNA-binding-site (BS8J2-17802)				
+DNA-binding-site (BS8J2-17804)				
+DNA-binding-site (BS8J2-17806)				
+DNA-binding-site (BS8J2-17808)				
+DNA-binding-site (BS8J2-17810)				
+DNA-binding-site (BS8J2-17812)				
+DNA-binding-site (BS8J2-17814)				
+DNA-binding-site (BS8J2-17816)				
+DNA-binding-site (BS8J2-17818)				
+DNA-binding-site (BS8J2-17820)				
+DNA-binding-site (BS8J2-17822)				
+DNA-binding-site (BS8J2-17824)				
+DNA-binding-site (BS8J2-17826)				
+DNA-binding-site (BS8J2-17828)				
+DNA-binding-site (BS8J2-17830)				
+DNA-binding-site (BS8J2-17832)				
+DNA-binding-site (BS8J2-185)				
+DNA-binding-site (BS8J2-268)				
+DNA-binding-site (BS8J2-288)				
+DNA-binding-site (BS8J2-345)				
+DNA-binding-site (BS8J2-346)				
+DNA-binding-site (BS8J2-347)				
+DNA-binding-site (BS8J2-740)	3640712	3640729		
+DnaA DNA-binding-site 120.0 bases upstream of dnaA-TR3	37	37	+	dnaAN
+DnaA DNA-binding-site 133.0 bases upstream of dnaA-TR3	24	24	+	dnaAN
+DnaA DNA-binding-site 158.5 bases upstream of dnaA-TR3	-1	-1	+	dnaAN
+DnaA DNA-binding-site 46.5 bases downstream of dnaA-TR3	203	203	+	dnaAN
+DnaA DNA-binding-site 50.0 bases upstream of dnaA-TR3	107	107	+	dnaAN
+DnaA DNA-binding-site 88.5 bases downstream of dnaA-TR3	245	245	+	dnaAN
+DnaA DNA-binding-site 89.5 bases upstream of dnaA-TR3	68	68	+	dnaAN
+DnaA DNA-binding-site 93.5 bases upstream of sdap	2647279	2647279	+	sda
+DnaA DNA-binding-site regulating dnaA-TR3 (BS8J2-513)			+	dnaAN
+DnaA DNA-binding-site regulating dnaA-TR3 (BS8J2-514)			+	dnaAN
+ExuR DNA-binding-site 17.5 bases downstream of exuP1	1300414	1300414	+	uxaC-yjmBCD-uxuA-yjmF-exuTR-uxaBA
+FadR DNA-binding-site 16.0 bases upstream of PM8J2-488	3816578	3816578	-	ywjF-acdA-rpoE
+FadR DNA-binding-site 3.5 bases downstream of PM8J2-516	1100929	1100929	+	yhfL
+FadR DNA-binding-site 5.0 bases upstream of PM8J2-511	1478029	1478029	+	ykuFG
+FapR DNA-binding-site 13.5 bases upstream of PM8J2-731	1208141	1208141	+	fabHAF
+FapR DNA-binding-site 14.0 bases upstream of PM8J2-728	1661923	1661923	+	fapR-plsX-fabDG
+FapR DNA-binding-site regulating fabIp	1247724	1247724	+	fabI
+FapR DNA-binding-site regulating PM8J2-943	1093809	1093809	-	fabHB
+FatR DNA-binding-site 65 bases downstream of fatRp	2777683	2777701	-	yrhIJ
+Fnr DNA-binding-site 38.5 bases upstream of PM8J2-649	3830017	3830017	-	narGHJI
+Fnr DNA-binding-site 40.5 bases upstream of PM8J2-787	3830683	3830683	-	arfM
+Fnr DNA-binding-site 41.5 bases upstream of PM8J2-81	3833587	3833587	-	narK-fnr
+Fnr DNA-binding-site regulating PM8J2-688			+	hemZ
+FrlR DNA-binding-site 12.5 bases downstream of frlBp	3352127	3352137	-	frlBONMD
+FrlR DNA-binding-site regulating frlRp			+	frlR
+FruR DNA-binding-site regulating PM8J2-927			+	fruRKA
+FtsR DNA-binding-site regulating PM8J2-824			+	ftsW-pycA
+Fur DNA-binding-site 11.5 bases downstream of feuAp	183348	183348	-	feuABC-ybbA // feuABC-ybbA
+Fur DNA-binding-site 11.5 bases downstream of ykuNp	1487008	1487008	+	ykuNOP
+Fur DNA-binding-site 14.5 bases downstream of dhbAp	3292392	3292392	-	dhbACEBF
+Fur DNA-binding-site 26.5 bases upstream of hmoAp	785482	785501	-	hmoA
+Fur DNA-binding-site 26.5 bases upstream of ykuNp	1486971	1486971	+	ykuNOP
+Fur DNA-binding-site regulating dynAp			-	mrgC
+Fur DNA-binding-site regulating fbpAp	506671	506671	-	fbpAB
+Fur DNA-binding-site regulating fpiBp	432286	432286	+	fpiBCDA
+Fur DNA-binding-site regulating PM8J2-1001	2033683	2033683	-	yoaJ
+Fur DNA-binding-site regulating PM8J2-1002	1107663	1107663	+	yhfQ
+Fur DNA-binding-site regulating PM8J2-1003	826786	826786	-	yfmCDEF
+Fur DNA-binding-site regulating PM8J2-1004	859431	859431	+	yfkM
+Fur DNA-binding-site regulating PM8J2-1005 (BS8J2-498)	920365	920365	+	yfiZ-yfhA
+Fur DNA-binding-site regulating PM8J2-1005 (BS8J2-499)	920428	920428	+	yfiZ-yfhA
+Fur DNA-binding-site regulating PM8J2-1006			-	yfiY
+Fur DNA-binding-site regulating PM8J2-1007	923553	923553	+	yfhC
+Fur DNA-binding-site regulating PM8J2-1011	352810	352810	+	ycgT
+Fur DNA-binding-site regulating PM8J2-1012	185062	185062	-	ybbB
+Fur DNA-binding-site regulating PM8J2-1014	3418435	3418435	+	fhuD
+Fur DNA-binding-site regulating PM8J2-995	4067140	4067140	+	yxeB
+Fur DNA-binding-site regulating PM8J2-996	3821538	3821538	-	ywjA
+Fur DNA-binding-site regulating PM8J2-997	3930596	3930596	-	ywbLMN
+Fur DNA-binding-site regulating PM8J2-998 (BS8J2-488)	3380051	3380051	-	yusV
+Fur DNA-binding-site regulating PM8J2-998 (BS8J2-489)	3380116	3380116	-	yusV
+Fur DNA-binding-site regulating PM8J2-999	3293428	3293428	-	yuiI
+Fur DNA-binding-site regulating ydhUp			-	ydhU
+GabR DNA-binding-site 40 bases upstream of PM8J2-715	441478	441529	+	gabTD // gabR
+GamR DNA-binding-site regulating gamAp			-	gamAP
+GanR DNA-binding-site 46.5 bases upstream of ganSp	3508570	3508636	-	ganSPQAB
+GbsR DNA-binding-site 26 bases downstream of opuBAp	3463286	3463302	-	opuBABCD
+GbsR DNA-binding-site regulating gbsAB	3186594	3186610	-	gbsAB
+GbsR DNA-binding-site regulating gbsR			+	gbsR
+GerE DNA-binding-site 110.5 bases upstream of PM8J2-160	2148609	2148609	-	cgeCDE
+GerE DNA-binding-site 110.5 bases upstream of PM8J2-161	2148536	2148536	+	cgeAB
+GerE DNA-binding-site 132.5 bases upstream of PM8J2-161	2148514	2148514	+	cgeAB
+GerE DNA-binding-site 133.5 bases upstream of PM8J2-157	1905355	1905355	-	cotC
+GerE DNA-binding-site 15.5 bases downstream of PM8J2-137	2652969	2652969	+	spoIVCB-spoIIIC // spoIVCB-spoIIIC
+GerE DNA-binding-site 150.0 bases upstream of PM8J2-141	2649819	2649819	-	cwlH
+GerE DNA-binding-site 41.0 bases upstream of PM8J2-143	1250584	1250584	-	cotYZ
+GerE DNA-binding-site 42.5 bases upstream of PM8J2-145	1252084	1252084	-	cotVWX
+GerE DNA-binding-site 45.5 bases upstream of PM8J2-143	1250589	1250589	-	cotYZ
+GerE DNA-binding-site 47.0 bases upstream of PM8J2-133	3353996	3353996	+	sspG-yurS
+GerE DNA-binding-site 56.0 bases upstream of PM8J2-158	3715977	3715977	-	cotB
+GerE DNA-binding-site 56.5 bases upstream of PM8J2-161	2148590	2148590	+	cgeAB
+GerE DNA-binding-site 66.5 bases upstream of PM8J2-157	1905288	1905288	-	cotC
+GerE DNA-binding-site 67.5 bases upstream of PM8J2-161	2148579	2148579	+	cgeAB
+GerE DNA-binding-site 69.5 bases upstream of PM8J2-153	3717122	3717122	+	cotG
+GerE DNA-binding-site 7.0 bases downstream of PM8J2-137	2652960	2652960	+	spoIVCB-spoIIIC // spoIVCB-spoIIIC
+GerE DNA-binding-site 71.5 bases upstream of PM8J2-158	3715993	3715993	-	cotB
+GerE DNA-binding-site 74.5 bases downstream of PM8J2-152	3717123	3717123	-	cotH
+GerE DNA-binding-site 74.5 bases upstream of sscAp	1071299	1071310	+	sscA-yhzE-2
+GerE DNA-binding-site 83.5 bases upstream of PM8J2-133	3353960	3353960	+	sspG-yurS
+GerE DNA-binding-site 84.5 bases upstream of PM8J2-161	2148562	2148562	+	cgeAB
+GerE DNA-binding-site regulating cotM-P1	1926100	1926100	-	cotM
+GerE DNA-binding-site regulating oxdDp			-	oxdD
+GerE DNA-binding-site regulating PM8J2-101			+	yxeE
+GerE DNA-binding-site regulating PM8J2-138			-	gerPABCDEF
+GerE DNA-binding-site regulating PM8J2-148	602773	602773	-	ydgBA-cotP
+GerE DNA-binding-site regulating PM8J2-149			+	yozR
+GerE DNA-binding-site regulating PM8J2-159			-	cotA
+GerE DNA-binding-site regulating yjcZp			+	yjcZ // yjcZ-spoVIF
+GerR DNA-binding-site regulating PM8J2-143			-	cotYZ
+GerR DNA-binding-site regulating PM8J2-153			+	cotG
+GerR DNA-binding-site regulating PM8J2-161			+	cgeAB
+GerR DNA-binding-site regulating PM8J2-345			-	spoIIP-yqxA
+GerR DNA-binding-site regulating PM8J2-346			-	spoIIM
+GerR DNA-binding-site regulating PM8J2-944			-	yqhV-spoIIIAABCDEFGH
+GlcR DNA-binding-site 33.5 bases upstream of glcRp	3740005	3740087	-	glcR-phoC
+GlcT DNA-binding-site regulating ptsGp			+	ptsGHI
+GlnK DNA-binding-site 34.5 bases upstream of PM8J2-706	265304	265304	-	ybgJ-ybgH
+GlnR DNA-binding-site 15.0 bases downstream of ureA-P3	3769933	3769933	-	ureABC
+GlnR DNA-binding-site 27.0 bases upstream of PM8J2-711	1877908	1877908	+	glnRA
+GlnR DNA-binding-site 50.0 bases upstream of nasBp	362847	362847	-	nasBCDEF
+GlnR DNA-binding-site 50.0 bases upstream of PM8J2-648	362847	362847	+	nasA
+GlnR DNA-binding-site 50.0 bases upstream of PM8J2-711	1877885	1877885	+	glnRA
+GlnR DNA-binding-site 91.0 bases upstream of ureA-P3	3770038	3770038	-	ureABC
+GlpP DNA-binding-site 24.0 bases downstream of PM8J2-709	1002377	1002377	+	glpFK
+GlpP DNA-binding-site 25.5 bases downstream of PM8J2-710	1004885	1004885	+	glpD
+GlpP DNA-binding-site 38.0 bases downstream of PM8J2-707	235446	235446	-	glpTQ
+GltC DNA-binding-site 12.0 bases downstream of PM8J2-703	2014750	2014750	+	gltC
+GltC DNA-binding-site 35.5 bases upstream of PM8J2-705	2014724	2014724	-	gltAB
+GltR DNA-binding-site 20.0 bases downstream of PM8J2-704	2725810	2725810	+	gltR
+GltR DNA-binding-site 3.0 bases upstream of PM8J2-704	2725788	2725788	+	gltR
+GltR DNA-binding-site 42.0 bases upstream of PM8J2-705	2014730	2014730	-	gltAB
+GltR DNA-binding-site 64.0 bases upstream of PM8J2-705	2014752	2014752	-	gltAB
+GntR DNA-binding-site 1.5 bases downstream of gntR-P1	4113384	4113384	+	gntRKPZ
+GutR DNA-binding-site 64.0 bases upstream of PM8J2-693	667338	667338	+	gutBP
+Hbs DNA-binding-site regulating hbs-P3			-	hbs
+HrcA DNA-binding-site 18.0 bases downstream of PM8J2-698	649854	649854	+	groESL
+HtrA DNA-binding-site 51.0 bases upstream of PM8J2-685	1359396	1359396	-	htrA
+HxlR DNA-binding-site regulating PM8J2-835			-	hxlAB
+ImmR DNA-binding-site 13 bases downstream of xisp	531750	531770	+	xis-ydzL-devI-helP-conQ-nicK-ydcST-yddA-conBCDE-yddF-conG-cwlT-yddIJ
+ImmR DNA-binding-site 19 bases upstream of xisp	531719	531739	+	xis-ydzL-devI-helP-conQ-nicK-ydcST-yddA-conBCDE-yddF-conG-cwlT-yddIJ
+ImmR DNA-binding-site 48 bases upstream of xisp	531690	531710	+	xis-ydzL-devI-helP-conQ-nicK-ydcST-yddA-conBCDE-yddF-conG-cwlT-yddIJ
+ImmR DNA-binding-site regulating immRp	531616	531636	-	immRA-int
+IolR DNA-binding-site 29.5 bases upstream of PM8J2-680	4084741	4084741	+	iolRS
+IolR DNA-binding-site 43.0 bases downstream of PM8J2-678	676196	676196	+	ydjK
+IolR DNA-binding-site 6.5 bases downstream of PM8J2-655	4084569	4084569	-	mmsA-iolBCDEF-idh-iolHI-fbaB
+IolR DNA-binding-site 68.5 bases upstream of PM8J2-680	4084702	4084702	+	iolRS
+IolR DNA-binding-site 76.0 bases upstream of PM8J2-655	4084650	4084650	-	mmsA-iolBCDEF-idh-iolHI-fbaB
+KdgR DNA-binding-site regulating PM8J2-677			-	kdgRKAT
+LevR DNA-binding-site 127.0 bases upstream of PM8J2-99	2762989	2762989	-	levDEFG-sacC
+LevR DNA-binding-site 80.5 bases upstream of PM8J2-99	2762943	2762943	-	levDEFG-sacC
+LexA DNA-binding-site 112.5 bases upstream of PM8J2-218	155977	155977	+	ybaK-cwlD
+LexA DNA-binding-site 145.5 bases upstream of PM8J2-791	1862884	1862884	-	aprX
+LexA DNA-binding-site 35.5 bases upstream of sdap	2647337	2647337	+	sda
+LexA DNA-binding-site 48.5 bases upstream of PM8J2-594	1764566	1764566	+	recA
+LexA DNA-binding-site regulating PM8J2-1016 (BS8J2-522)	2465822	2465822	+	yqzH
+LexA DNA-binding-site regulating PM8J2-1016 (BS8J2-523)	2465850	2465850	+	yqzH
+LexA DNA-binding-site regulating PM8J2-1017 (BS8J2-525)	2465835	2465835	-	yqjWX
+LexA DNA-binding-site regulating PM8J2-1017 (BS8J2-526)	2465863	2465863	-	yqjWX
+LexA DNA-binding-site regulating PM8J2-1018	2561462	2561462	+	yqhB
+LexA DNA-binding-site regulating PM8J2-1019	2432258	2432258	-	ypuD
+LexA DNA-binding-site regulating PM8J2-1020 (BS8J2-529)	2064939	2064939	+	yozM
+LexA DNA-binding-site regulating PM8J2-1020 (BS8J2-530)	2064909	2064909	+	yozM
+LexA DNA-binding-site regulating PM8J2-1021 (BS8J2-531)	2064922	2064922	-	yozLK-yobH
+LexA DNA-binding-site regulating PM8J2-1021 (BS8J2-532)	2064952	2064952	-	yozLK-yobH
+LexA DNA-binding-site regulating PM8J2-1022	2188197	2188197	-	yorBC
+LexA DNA-binding-site regulating PM8J2-1023 (BS8J2-534)	2272036	2272036	-	yolD-uvrX
+LexA DNA-binding-site regulating PM8J2-1023 (BS8J2-535)	2272066	2272066	-	yolD-uvrX
+LexA DNA-binding-site regulating PM8J2-1024 (BS8J2-536)	2272053	2272053	+	yolC
+LexA DNA-binding-site regulating PM8J2-1024 (BS8J2-537)	2272023	2272023	+	yolC
+LexA DNA-binding-site regulating PM8J2-1025	1447134	1447134	+	ykvR
+LexA DNA-binding-site regulating PM8J2-1026	1121426	1121426	+	yhjE-sipV
+LexA DNA-binding-site regulating PM8J2-1027	1121439	1121439	-	yhjD
+LexA DNA-binding-site regulating PM8J2-1028	1056275	1056275	-	yhaZ
+LexA DNA-binding-site regulating PM8J2-1029	1064790	1064790	+	yhaONM
+LexA DNA-binding-site regulating PM8J2-1030	655166	655166	+	ydiOP
+LexA DNA-binding-site regulating PM8J2-1031	608813	608813	+	ydgGH
+LexA DNA-binding-site regulating PM8J2-1032			-	xkdA
+LexA DNA-binding-site regulating PM8J2-1033	2912953	2912953	-	uvrC
+LexA DNA-binding-site regulating PM8J2-1034	3615029	3615029	-	uvrBA
+LexA DNA-binding-site regulating PM8J2-1035	2836855	2836855	-	ruvAB
+LexA DNA-binding-site regulating PM8J2-1037	1933265	1933265	+	parEC
+LexA DNA-binding-site regulating PM8J2-1038 (BS8J2-557)	1918401	1918401	-	lexA
+LexA DNA-binding-site regulating PM8J2-1038 (BS8J2-558)	1918364	1918364	-	lexA
+LexA DNA-binding-site regulating PM8J2-1038 (BS8J2-559)	1918335	1918335	-	lexA
+LexA DNA-binding-site regulating PM8J2-1040	2994698	2994698	-	dnaE
+LexA DNA-binding-site regulating PM8J2-1041 (BS8J2-561)	3683377	3683377	+	tagC
+LexA DNA-binding-site regulating PM8J2-1041 (BS8J2-562)	3683347	3683347	+	tagC
+LexA DNA-binding-site regulating PM8J2-1042	608826	608826	-	dinB
+LexA DNA-binding-site regulating PM8J2-412	2561475	2561475	-	yqxL
+LexA DNA-binding-site regulating PM8J2-873	3907661	3907661	+	vpr
+LexA DNA-binding-site regulating PM8J2-903 (BS8J2-538)	1918388	1918388	+	yneAB-ynzC
+LexA DNA-binding-site regulating PM8J2-903 (BS8J2-539)	1918351	1918351	+	yneAB-ynzC
+LexA DNA-binding-site regulating PM8J2-903 (BS8J2-540)	1918322	1918322	+	yneAB-ynzC
+LiaR DNA-binding-site 65.0 bases upstream of liaIp	3399021	3399021	-	liaIH // liaIHGFSR
+LiaR DNA-binding-site 65.5 bases upstream of yhcYp	1008577	1008577	+	yhcYZ-yhdA
+LiaR DNA-binding-site 66.5 bases upstream of ydhEp	617971	617987	+	ydhE
+LicR DNA-binding-site regulating PM8J2-672			-	licBCAH
+LicT DNA-binding-site 41.0 bases downstream of bglPp	4035776	4035776	-	bglPH-yxiE
+LmrA DNA-binding-site 0.5 bases upstream of lmrAp	290741	290741	-	lmrAB
+LmrA DNA-binding-site 26.5 bases upstream of qdoIp	4107300	4107332	-	qdoI-yxaH
+LmrA DNA-binding-site 6 bases downstream of qdoIp	4107269	4107300	-	qdoI-yxaH
+LrpA DNA-binding-site regulating PM8J2-701			-	glyA
+LrpB DNA-binding-site regulating PM8J2-701			-	glyA
+LrpC DNA-binding-site 127.0 bases upstream of lrpC-P1	475906	475906	+	lrpC
+MalR DNA-binding-site 34.0 bases upstream of yflSp	829309	829309	+	yflS
+MalR DNA-binding-site 54.5 bases upstream of PM8J2-663	3244689	3244689	+	maeN
+MalR DNA-binding-site 59.0 bases upstream of PM8J2-16	3802304	3802304	-	ywkAB
+MalR DNA-binding-site regulating PM8J2-662			+	malA-yfiA-malP
+Med DNA-binding-site regulating PM8J2-756			+	comK
+MelR DNA-binding-site 24 bases downstream of melRp	3096741	3096768	+	melREDCA
+MelR DNA-binding-site 73 bases upstream of melRp	3096644	3096673	+	melREDCA
+MhqR DNA-binding-site 10.5 bases downstream of PM8J2-470	2130016	2130016	-	mhqED
+MhqR DNA-binding-site 40.0 bases downstream of PM8J2-469	1353050	1353050	+	mhqA
+MhqR DNA-binding-site 45.0 bases upstream of PM8J2-471	3446203	3446203	-	yvaB
+MhqR DNA-binding-site 73.0 bases downstream of PM8J2-468	596392	596392	+	mhqNOP
+MntR DNA-binding-site 35 bases upstream of mnePp	596107	596124	-	mneP
+MntR DNA-binding-site 35 bases upstream of mneSp	686890	686907	+	mneS
+MntR DNA-binding-site 54 bases upstream of mnePp	596126	596143	-	mneP
+MntR DNA-binding-site 54 bases upstream of mneSp	686871	686888	+	mneS
+MntR DNA-binding-site 92 bases upstream of mnePp	596164	596181	-	mneP
+MntR DNA-binding-site 92 bases upstream of mneSp	686833	686850	+	mneS
+Mta DNA-binding-site 24.0 bases upstream of PM8J2-653	3764945	3764945	-	mta
+Mta DNA-binding-site 24.5 bases upstream of PM8J2-780	2716880	2716880	+	blt-bltD
+Mta DNA-binding-site regulating PM8J2-520			-	ydfK
+NadR DNA-binding-site 14.5 bases upstream of PM8J2-645	2849518	2849518	+	nifS-yrxA
+NadR DNA-binding-site 20.5 bases upstream of PM8J2-651	2849518	2849518	-	nadBCA
+NagR DNA-binding-site 28.5 bases upstream of nagPp	840590	840606	+	nagP
+NagR DNA-binding-site 33.5 bases upstream of nagAp	3595286	3595302	+	nagABR
+NrdR DNA-binding-site regulating PM8J2-506			+	nrdIEF-ymaB
+NsrR DNA-binding-site 31 bases upstream of nasDp	358234	358251	-	nasDEF
+NtdR DNA-binding-site regulating ntdAp			-	ntdABC-glcP
+OhrR DNA-binding-site 12.5 bases upstream of PM8J2-513	1380939	1380939	+	yklA
+OpcR DNA-binding-site 34 bases upstream of opuBAp	3463342	3463364	-	opuBABCD
+OpcR DNA-binding-site regulating opuCABCD	3471069	3471091	-	opuCABCD
+PadR DNA-binding-site 1 bases downstream of padCp	3533309	3533351	-	yveFG-padC
+PamR DNA-binding-site 15.5 bases upstream of ydcFp	524303	524321	+	ydcFGH
+PamR DNA-binding-site 7.5 bases downstream of ydcFp	524325	524343	+	ydcFGH
+PchR DNA-binding-site regulating pchRp (BS8J2-17807)	3604906	3604957	+	pchR-yvmA
+PchR DNA-binding-site regulating pchRp (BS8J2-17809)			+	pchR-yvmA
+PchR DNA-binding-site regulating yisIp			-	yisI
+PchR DNA-binding-site regulating yvmCp	3604716	3604758	-	yvmC-cypX
+PchR DNA-binding-site regulating yvnB			-	yvnB
+PerR DNA-binding-site 0.5 bases upstream of PM8J2-630	944440	944440	+	perR
+PerR DNA-binding-site 138.0 bases upstream of PM8J2-550	376540	376540	+	srfAA-srfAB-comS-srfAC-srfAD
+PerR DNA-binding-site 17.5 bases downstream of spxAp	1227617	1227654	+	spxA
+PerR DNA-binding-site 33.5 bases upstream of PM8J2-654	3383504	3383504	+	mrgA
+PerR DNA-binding-site 45.0 bases upstream of PM8J2-720	2450362	2450362	-	fur
+PerR DNA-binding-site 5.5 bases upstream of PM8J2-800	4118881	4118881	+	ahpCF
+PerR DNA-binding-site 50.0 bases upstream of PM8J2-509	1451214	1451214	+	ykvW
+PerR DNA-binding-site 8.0 bases downstream of PM8J2-630	944447	944447	+	perR
+PerR DNA-binding-site regulating PM8J2-689 (BS8J2-434)	2879189	2879189	-	hemAXCDBL
+PerR DNA-binding-site regulating PM8J2-689 (BS8J2-435)	2879219	2879219	-	hemAXCDBL
+PerR DNA-binding-site regulating PM8J2-985	961071	961071	-	katA
+PhoP DNA-binding-site 145.0 bases downstream of PM8J2-548	3680947	3680947	-	tagDEF
+PhoP DNA-binding-site 25.5 bases upstream of tuaAp	3658959	3658965	-	tuaABCDEFGH
+PhoP DNA-binding-site 27.5 bases upstream of PM8J2-549	3681268	3681268	+	tagAB
+PhoP DNA-binding-site 36.5 bases upstream of tuaAp	3658970	3658976	-	tuaABCDEFGH
+PhoP DNA-binding-site 39.0 bases upstream of PM8J2-593	2421413	2421413	-	resABCDE
+PhoP DNA-binding-site 40.5 bases upstream of PM8J2-615	2581699	2581699	-	pst
+PhoP DNA-binding-site 41.5 bases upstream of PM8J2-79	283943	283943	+	phoD
+PhoP DNA-binding-site 42.5 bases downstream of PM8J2-549	3681337	3681337	+	tagAB
+PhoP DNA-binding-site 46.5 bases upstream of PM8J2-548	3681138	3681138	-	tagDEF
+PhoP DNA-binding-site 47.5 bases upstream of tuaAp	3658981	3658987	-	tuaABCDEFGH
+PhoP DNA-binding-site 53.5 bases upstream of PM8J2-627	1018541	1018541	-	phoA
+PhoP DNA-binding-site 57.5 bases upstream of tuaAp	3658991	3658997	-	tuaABCDEFGH
+PhoP DNA-binding-site 92.5 bases downstream of PM8J2-548	3681000	3681000	-	tagDEF
+PhoP DNA-binding-site 97.0 bases downstream of PM8J2-549	3681391	3681391	+	tagAB
+PhoP DNA-binding-site regulating PM8J2-320			+	yhbH
+PhoP DNA-binding-site regulating PM8J2-527			+	skf
+PhoP DNA-binding-site regulating PM8J2-819			-	yttP
+PhoP DNA-binding-site regulating PM8J2-869			+	yurI
+PhoP DNA-binding-site regulating PM8J2-871	1270170	1270170	-	yjdB
+PhoP DNA-binding-site regulating PM8J2-872	859571	859571	-	yfkN
+PhoP DNA-binding-site regulating PM8J2-873			+	vpr
+phosphorylated ManR transcription activator DNA-binding-site 53.5 bases upstream of manPp	1272614	1272658	+	manPA-yjdF
+phosphorylated ManR transcription activator DNA-binding-site 53.5 bases upstream of manRp	1270486	1270530	+	manR
+PsdR DNA-binding-site regulating psdAp	3566355	3566375	-	psdAB
+PucR DNA-binding-site 54.5 bases upstream of PM8J2-695	1383226	1383226	-	guaD
+PucR DNA-binding-site 63.5 bases upstream of pucFp	3343761	3343761	-	pucFG
+PucR DNA-binding-site 66.0 bases upstream of ureA-P3	3770013	3770013	-	ureABC
+PucR DNA-binding-site 71.0 bases upstream of PM8J2-608	3753885	3753885	-	ywoE
+PucR DNA-binding-site 72.0 bases upstream of PM8J2-609	3328726	3328726	-	pucH
+PucR DNA-binding-site regulating PM8J2-611			-	pucABCDE
+PurR DNA-binding-site 59.5 bases upstream of PM8J2-605	698311	698311	+	purEKBCSQLFMNHD
+PurR DNA-binding-site 61.5 bases upstream of PM8J2-606	4156831	4156831	-	purA
+PurR DNA-binding-site 71.0 bases upstream of xptp	2320281	2320281	-	xpt-pbuX
+PurR DNA-binding-site 77.5 bases upstream of pyrRp	1618077	1618077	+	pyrRPBCAAABKDFE
+PurR DNA-binding-site 90.5 bases upstream of PM8J2-701	3790571	3790571	-	glyA
+PurR DNA-binding-site regulating PM8J2-978	3068874	3068874	+	ytiP
+PurR DNA-binding-site regulating PM8J2-979	54405	54405	+	purR-yabJ
+PurR DNA-binding-site regulating PM8J2-980	694363	694363	+	pbuG
+PurR DNA-binding-site regulating PM8J2-981	2529832	2529832	-	nusB-folD
+PurR DNA-binding-site regulating PM8J2-982	3303006	3303006	+	guaC
+PutR-Pro DNA-binding-site 68 bases upstream of putBp	344418	344468	+	putBCP
+PxpR DNA-binding-site regulating PM8J2-845			+	ycsFGI-kipIAR-ycsK
+QdoR DNA-binding-site 29.5 bases upstream of qdoIp	4107310	4107328	-	qdoI-yxaH
+QdoR DNA-binding-site 3.5 bases downstream of qdoIp	4107278	4107296	-	qdoI-yxaH
+QdoR DNA-binding-site 3.5 bases downstream of qdoRp	4107952	4107970	-	qdoR
+RemA DNA-binding-site 115 bases upstream of opuAp	320851	320898	+	opuAABC
+RemA DNA-binding-site 80 bases upstream of epsp	3529963	3530020	-	eps
+RemA DNA-binding-site 82 bases upstream of tapAp	2555360	2555419	-	tapA-sipW-tasA
+ResD DNA-binding-site 56.5 bases upstream of PM8J2-506	1868513	1868513	+	nrdIEF-ymaB
+ResD DNA-binding-site 59.0 bases upstream of PM8J2-83	1372694	1372694	+	hmp
+ResD DNA-binding-site 7.0 bases downstream of ctaA-Ps	1558976	1558976	-	ctaA // ctaA
+ResD DNA-binding-site 82.5 bases upstream of cydAp	3979473	3979473	-	cydABCD
+ResD DNA-binding-site 95.5 bases upstream of ctaA-Ps	1559078	1559078	-	ctaA // ctaA
+ResD DNA-binding-site regulating nasDp			-	nasDEF
+ResD DNA-binding-site regulating PM8J2-593			-	resABCDE
+ResD DNA-binding-site regulating PM8J2-602			-	qcrABC
+ResD DNA-binding-site regulating PM8J2-674			+	ldh-lctP
+ResD DNA-binding-site regulating PM8J2-688			+	hemZ
+ResD DNA-binding-site regulating PM8J2-867	1559177	1559177	+	ctaBCDEFG
+ResD DNA-binding-site regulating roxSp			+	roxS
+ResD DNA-binding-site regulating sboAp			+	sboAX-albABCDEFG
+ResD-P DNA-binding-site 84 bases upstream of yclJp	426453	426474	+	yclJK-rapC-phrC
+Rex DNA-binding-site 119.5 bases downstream of cydAp	3979272	3979272	-	cydABCD
+Rex DNA-binding-site 15.5 bases upstream of PM8J2-674	329700	329700	+	ldh-lctP
+Rex DNA-binding-site 151.5 bases downstream of cydAp	3979240	3979240	-	cydABCD
+Rex DNA-binding-site 156 bases downstream of yjlCp	1298499	1298521	+	yjlC-ndh
+Rex DNA-binding-site 19.5 bases downstream of PM8J2-674	329734	329734	+	ldh-lctP
+Rex DNA-binding-site 31.5 bases downstream of roxSp	1233427	1233445	+	roxS
+Rex DNA-binding-site 41.5 bases upstream of PM8J2-797	3711436	3711436	-	alsSD
+Rex DNA-binding-site 84.5 bases downstream of cydAp	3979307	3979307	-	cydABCD
+Rex DNA-binding-site regulating PM8J2-490	3905278	3905278	+	ywcJ
+RghR DNA-binding-site 134.5 bases upstream of rapHp	750794	750794	+	rapH-phrH
+RghR DNA-binding-site 41.0 bases upstream of PM8J2-597	4140174	4140174	+	rapG-phrG
+RghR DNA-binding-site 61.0 bases upstream of rapHp	750867	750867	+	rapH-phrH
+RghR DNA-binding-site regulating PM8J2-26			+	rapD // rapD
+RghR DNA-binding-site regulating PM8J2-975			+	yvaM
+RhaR DNA-binding-site 7 bases upstream of rhaEWp	3203945	3204000	-	rhaEWRBMA
+Rho DNA-binding-site regulating trpEp			-	trpEDCFBA-hisC-tyrA-aroE
+RocR DNA-binding-site 120.0 bases upstream of PM8J2-96	4145673	4145673	-	rocDEF
+RocR DNA-binding-site 159.0 bases upstream of PM8J2-97	3880709	3880709	-	rocABC
+RocR DNA-binding-site 205.5 bases upstream of PM8J2-97	3880756	3880756	-	rocABC
+RocR DNA-binding-site 40.0 bases upstream of PM8J2-589	4145673	4145673	+	rocR
+RocR DNA-binding-site 79.0 bases upstream of PM8J2-96	4145632	4145632	-	rocDEF
+RocR DNA-binding-site regulating PM8J2-95 (BS8J2-113)			-	rocG
+RocR DNA-binding-site regulating PM8J2-95 (BS8J2-114)			-	rocG
+Rok DNA-binding-site regulating PM8J2-756			+	comK
+Rok DNA-binding-site regulating PM8J2-831			-	sunT-bdbA-yolJ-bdbB
+Rok DNA-binding-site regulating PM8J2-921			+	rok
+Rok DNA-binding-site regulating PM8J2-970			+	sdp
+Rok DNA-binding-site regulating PM8J2-971			-	yxaJL
+Rok DNA-binding-site regulating PM8J2-972			+	yjcN
+Rok DNA-binding-site regulating PM8J2-973			+	yybNMLKJ
+Rok DNA-binding-site regulating sboAp			+	sboAX-albABCDEFG
+Rok DNA-binding-site regulating sunAp			-	sunAT-bdbA-yolJ-bdbB
+RsfA DNA-binding-site regulating PM8J2-270			-	spoIIR
+RsfA DNA-binding-site regulating PM8J2-273			+	rsfA
+RsfA DNA-binding-site regulating PM8J2-275			+	katX
+RsfA DNA-binding-site regulating PM8J2-276			-	gpr
+SacT DNA-binding-site 40.0 bases downstream of PM8J2-574	3941986	3941986	+	sacXY
+SacT DNA-binding-site 42.0 bases downstream of PM8J2-575	3905138	3905138	-	sacPA-ywdA
+SacT DNA-binding-site 75.0 bases downstream of PM8J2-576	3535887	3535887	+	sacB-yveBA
+SacY DNA-binding-site 40.0 bases downstream of PM8J2-574	3941986	3941986	+	sacXY
+SacY DNA-binding-site 42.0 bases downstream of PM8J2-575	3905138	3905138	-	sacPA-ywdA
+SacY DNA-binding-site 75.0 bases downstream of PM8J2-576	3535887	3535887	+	sacB-yveBA
+SalA DNA-binding-site regulating scoCp			-	scoC
+ScoC DNA-binding-site 140.5 bases upstream of sinI-P2 (RNAII)	2552253	2552253	+	sinIR // sinIR
+ScoC DNA-binding-site 24.5 bases upstream of PM8J2-792	1105651	1105651	-	aprE
+ScoC DNA-binding-site 279.5 bases upstream of PM8J2-792	1105906	1105906	-	aprE
+ScoC DNA-binding-site 309.5 bases upstream of PM8J2-792	1105936	1105936	-	aprE
+ScoC DNA-binding-site 318.0 bases upstream of eprp	3939523	3939523	+	epr
+ScoC DNA-binding-site 68.5 bases upstream of sinI-P2 (RNAII)	2552325	2552325	+	sinIR // sinIR
+ScoC DNA-binding-site 69.0 bases upstream of PM8J2-792	1105695	1105695	-	aprE
+ScoC DNA-binding-site regulating appDFABC			+	appDFABC
+ScoC DNA-binding-site regulating PM8J2-848			+	oppABCDF
+ScoC DNA-binding-site regulating PM8J2-884 (BS8J2-155)	417763	417763	-	yclF
+ScoC DNA-binding-site regulating PM8J2-884 (BS8J2-156)	417791	417791	-	yclF
+SdpR DNA-binding-site 1.5 bases downstream of PM8J2-568	3467384	3467384	-	sdpRI
+SenS DNA-binding-site regulating PM8J2-860			+	senS
+SenS DNA-binding-site regulating scoCp			-	scoC
+SinR DNA-binding-site 12 bases upstream of degUp3	3645320	3645327	-	degU
+SinR DNA-binding-site 12.0 bases downstream of tapAp	2555296	2555296	-	tapA-sipW-tasA
+SinR DNA-binding-site 143.5 bases upstream of epsp	3530055	3530055	-	eps
+SinR DNA-binding-site 242.5 bases upstream of PM8J2-792	1105869	1105869	-	aprE
+SinR DNA-binding-site 391.0 bases upstream of eprp	3939450	3939450	+	epr
+SinR DNA-binding-site 60.5 bases upstream of epsp	3529972	3529972	-	eps
+SinR DNA-binding-site 66.0 bases upstream of tapAp	2555373	2555373	-	tapA-sipW-tasA
+SinR DNA-binding-site regulating mstXp			+	mstX-yugO
+SinR DNA-binding-site regulating PM8J2-921			+	rok
+SplA DNA-binding-site regulating splA-P1			+	splAB
+Spo0A DNA-binding-site 107.0 bases upstream of sinI-P2 (RNAII)	2552286	2552286	+	sinIR // sinIR
+Spo0A DNA-binding-site 11.0 bases downstream of PM8J2-30	3952081	3952081	+	dltABCDE
+Spo0A DNA-binding-site 11.5 bases upstream of spo0A-P2	2518883	2518883	-	spo0A
+Spo0A DNA-binding-site 121.0 bases upstream of PM8J2-553	70388	70388	+	spoIIE
+Spo0A DNA-binding-site 15.5 bases upstream of PM8J2-675	1518293	1518293	+	kinC
+Spo0A DNA-binding-site 16.5 bases upstream of yuxHp	3259316	3259316	-	yuxH
+Spo0A DNA-binding-site 20.5 bases downstream of abrB-P2	45188	45188	-	abrB
+Spo0A DNA-binding-site 23.0 bases downstream of kinAp	1469991	1469991	+	kinA
+Spo0A DNA-binding-site 30.5 bases upstream of PM8J2-527	213858	213858	+	skf
+Spo0A DNA-binding-site 32.0 bases downstream of spo0F-P2	3809935	3809935	-	spo0F
+Spo0A DNA-binding-site 32.5 bases upstream of PM8J2-552	1603702	1603702	+	spoIIGA-sigE-sigG
+Spo0A DNA-binding-site 38.0 bases upstream of PM8J2-553	70471	70471	+	spoIIE
+Spo0A DNA-binding-site 46.5 bases upstream of PM8J2-552	1603688	1603688	+	spoIIGA-sigE-sigG
+Spo0A DNA-binding-site 55.0 bases downstream of PM8J2-557	2518976	2518976	-	spo0A
+Spo0A DNA-binding-site 67.5 bases upstream of spo0F-P2	3810034	3810034	-	spo0F
+Spo0A DNA-binding-site 74.0 bases upstream of PM8J2-553	70435	70435	+	spoIIE
+Spo0A DNA-binding-site 77.5 bases upstream of PM8J2-552	1603657	1603657	+	spoIIGA-sigE-sigG
+Spo0A DNA-binding-site 8.0 bases downstream of PM8J2-557	2519023	2519023	-	spo0A
+Spo0A DNA-binding-site 93.0 bases upstream of PM8J2-552	1603641	1603641	+	spoIIGA-sigE-sigG
+Spo0A DNA-binding-site 95.0 bases upstream of PM8J2-553	70414	70414	+	spoIIE
+Spo0A DNA-binding-site regulating dnaA-TR3			+	dnaAN
+Spo0A DNA-binding-site regulating eprp			+	epr
+Spo0A DNA-binding-site regulating PM8J2-1046			+	metS
+Spo0A DNA-binding-site regulating PM8J2-156			-	cotD
+Spo0A DNA-binding-site regulating PM8J2-163			+	racA
+Spo0A DNA-binding-site regulating PM8J2-503			-	yocH
+Spo0A DNA-binding-site regulating PM8J2-601			+	rapA-phrA
+Spo0A DNA-binding-site regulating PM8J2-811	2989682	2989690	-	accDA
+Spo0A DNA-binding-site regulating PM8J2-812			+	yerBC
+Spo0A DNA-binding-site regulating PM8J2-813			-	yqxIJ
+Spo0A DNA-binding-site regulating PM8J2-814			+	yqcGF
+Spo0A DNA-binding-site regulating PM8J2-815			+	ycgMN
+Spo0A DNA-binding-site regulating PM8J2-816			-	yusED
+Spo0A DNA-binding-site regulating PM8J2-817			-	yfmIJ
+Spo0A DNA-binding-site regulating PM8J2-818			+	yneEF
+Spo0A DNA-binding-site regulating PM8J2-819			-	yttP
+Spo0A DNA-binding-site regulating PM8J2-820			+	yppF
+Spo0A DNA-binding-site regulating PM8J2-821			-	yppDE
+Spo0A DNA-binding-site regulating PM8J2-822			-	yxbCD
+Spo0A DNA-binding-site regulating PM8J2-918			+	ylmDEFGH
+Spo0A DNA-binding-site regulating PM8J2-919			+	yaaDE
+Spo0A DNA-binding-site regulating PM8J2-921			+	rok
+Spo0A DNA-binding-site regulating PM8J2-922			-	soj-spo0J
+Spo0A DNA-binding-site regulating PM8J2-925			+	yvyE-yvhJ
+Spo0A DNA-binding-site regulating PM8J2-926			+	divIVA
+Spo0A DNA-binding-site regulating PM8J2-927			+	fruRKA
+Spo0A DNA-binding-site regulating PM8J2-928			-	ykaA-pit
+Spo0A DNA-binding-site regulating PM8J2-931			-	ftsEX
+Spo0A DNA-binding-site regulating PM8J2-932			-	yrrL
+Spo0A DNA-binding-site regulating PM8J2-934			+	yqzDC
+Spo0A DNA-binding-site regulating PM8J2-935			+	tkt
+Spo0A DNA-binding-site regulating PM8J2-96			-	rocDEF
+Spo0A DNA-binding-site regulating PM8J2-970			+	sdp
+Spo0A DNA-binding-site regulating tapAp			-	tapA-sipW-tasA
+SpoIIID DNA-binding-site 1.0 bases upstream of spoVDp	1584185	1584185	+	spoVD
+SpoIIID DNA-binding-site 121.0 bases downstream of PM8J2-341	2653074	2653074	+	spoIVCB-spoIIIC
+SpoIIID DNA-binding-site 145.5 bases downstream of PM8J2-342	2654840	2654840	-	spoIVCA
+SpoIIID DNA-binding-site 2.5 bases upstream of PM8J2-365	29742	29742	+	bofA
+SpoIIID DNA-binding-site 26.0 bases upstream of PM8J2-341	2652928	2652928	+	spoIVCB-spoIIIC
+SpoIIID DNA-binding-site 27.0 bases upstream of spoVDp	1584159	1584159	+	spoVD
+SpoIIID DNA-binding-site 29.5 bases upstream of PM8J2-342	2655014	2655014	-	spoIVCA
+SpoIIID DNA-binding-site 30.0 bases upstream of PM8J2-349	3777814	3777814	-	spoIID
+SpoIIID DNA-binding-site 30.5 bases upstream of PM8J2-156	2333073	2333073	-	cotD
+SpoIIID DNA-binding-site 33.5 bases upstream of PM8J2-363	755844	755844	+	cotJABC-yesJK
+SpoIIID DNA-binding-site 51.0 bases upstream of PM8J2-157	1905272	1905272	-	cotC
+SpoIIID DNA-binding-site 64.0 bases downstream of PM8J2-365	29807	29807	+	bofA
+SpoIIID DNA-binding-site 66.5 bases downstream of PM8J2-156	2332977	2332977	-	cotD
+SpoIIID DNA-binding-site 69.0 bases upstream of PM8J2-156	2333111	2333111	-	cotD
+SpoIIID DNA-binding-site 89.0 bases downstream of PM8J2-341	2653042	2653042	+	spoIVCB-spoIIIC
+SpoIIID DNA-binding-site regulating asnOp			+	asnO
+SpoIIID DNA-binding-site regulating PM8J2-139			-	gerE
+SpoIIID DNA-binding-site regulating PM8J2-146			-	cotT
+SpoIIID DNA-binding-site regulating PM8J2-154			+	cotF
+SpoIIID DNA-binding-site regulating PM8J2-159			-	cotA
+SpoIIID DNA-binding-site regulating PM8J2-295			+	yqfZY
+SpoIIID DNA-binding-site regulating PM8J2-296			-	yqfCD
+SpoIIID DNA-binding-site regulating PM8J2-298			-	ypjB
+SpoIIID DNA-binding-site regulating PM8J2-305			-	ylbJ
+SpoIIID DNA-binding-site regulating PM8J2-306			+	ykvUV
+SpoIIID DNA-binding-site regulating PM8J2-327			+	ycgFG
+SpoIIID DNA-binding-site regulating PM8J2-328			-	ybaN
+SpoIIID DNA-binding-site regulating PM8J2-333			+	spoVM
+SpoIIID DNA-binding-site regulating PM8J2-339			+	spoVB
+SpoIIID DNA-binding-site regulating PM8J2-340			-	spoIVFAB
+SpoIIID DNA-binding-site regulating PM8J2-358			-	gerM
+SpoIIID DNA-binding-site regulating PM8J2-963			-	yitE
+SpoIIID DNA-binding-site regulating spoIVA-P1			-	spoIVA // spoIVA
+SpoIIID DNA-binding-site regulating spoVK-P1			+	spoVK
+SpoVT DNA-binding-site regulating gerAAp			+	gerAABC // gerAABC
+SpoVT DNA-binding-site regulating gerDp			-	gerD
+SpoVT DNA-binding-site regulating gerKAp			+	gerKACB
+SpoVT DNA-binding-site regulating glcUp			+	glcU-gdh
+SpoVT DNA-binding-site regulating PM8J2-230			-	sspD
+SpoVT DNA-binding-site regulating PM8J2-232			-	sspB
+SpoVT DNA-binding-site regulating PM8J2-233			-	sspA
+SpoVT DNA-binding-site regulating PM8J2-234			+	spoVT
+SpoVT DNA-binding-site regulating PM8J2-236			-	spoIVB
+SpoVT DNA-binding-site regulating PM8J2-242			-	gpr
+SpoVT DNA-binding-site regulating PM8J2-246			+	gerBABC
+SpoVT DNA-binding-site regulating PM8J2-249			-	dacF-spoIIAAB-sigF
+SpoVT DNA-binding-site regulating PM8J2-250			+	csgA-ybxH
+SpoVT DNA-binding-site regulating spoVAAp			-	spoVAABCDEBEAF
+SpxA DNA-binding-site regulating bshCp			+	bshC
+SpxA DNA-binding-site regulating yoyCp			-	yoyC-yojF-bshB2
+SpxA DNA-binding-site regulating ypjDp			-	ypjD-dapB-mgsA-bshB1-bshA-cca-birA
+SpxA DNA-binding-site regulating ytpPp			-	ytpPQR
+TagU DNA-binding-site regulating PD			-	lytABC
+TagU DNA-binding-site regulating PX			+	lytR
+TenA DNA-binding-site regulating PM8J2-576			+	sacB-yveBA
+TenA DNA-binding-site regulating PM8J2-627			-	phoA
+TenA DNA-binding-site regulating PM8J2-792			-	aprE
+TenA DNA-binding-site regulating PM8J2-851			-	nprE
+TenI DNA-binding-site regulating PM8J2-958			+	tenAI-goxB-thiSGF-yjbV
+ThrR DNA-binding-site 29 bases downstream of homp	3316152	3316193	-	hom-thrCB
+TnrA DNA-binding-site 13.5 bases downstream of PM8J2-705	2014676	2014676	-	gltAB
+TnrA DNA-binding-site 201.5 bases upstream of PM8J2-682	2897656	2897656	-	ilvBHC-leuABCD
+TnrA DNA-binding-site 27.0 bases upstream of PM8J2-711	1877908	1877908	+	glnRA
+TnrA DNA-binding-site 48.5 bases upstream of PM8J2-526	290840	290840	+	yccC
+TnrA DNA-binding-site 49 bases upstream of degUp2	3645439	3645456	-	degU
+TnrA DNA-binding-site 49.0 bases upstream of PM8J2-644	3756696	3756696	+	nrgAB
+TnrA DNA-binding-site 49.0 bases upstream of ykzBp	1397860	1397860	+	ykzB-ykoL
+TnrA DNA-binding-site 50.0 bases upstream of nasBp	362847	362847	-	nasBCDEF
+TnrA DNA-binding-site 50.0 bases upstream of PM8J2-648	362847	362847	+	nasA
+TnrA DNA-binding-site 50.0 bases upstream of PM8J2-711	1877885	1877885	+	glnRA
+TnrA DNA-binding-site 52.0 bases upstream of gabP-P2	686660	686660	-	gabP
+TnrA DNA-binding-site regulating PM8J2-368	3989210	3989210	+	yxkC
+TnrA DNA-binding-site regulating PM8J2-772			+	citB
+TnrA DNA-binding-site regulating PM8J2-844	3720803	3720803	-	ywrD
+TnrA DNA-binding-site regulating PM8J2-845			+	ycsFGI-kipIAR-ycsK
+TnrA DNA-binding-site regulating PM8J2-846	1397832	1397832	-	tnrA
+TnrA DNA-binding-site regulating PM8J2-848	1219627	1219627	+	oppABCDF
+TnrA DNA-binding-site regulating PM8J2-850	2801888	2801888	+	glnQHMP
+TnrA DNA-binding-site regulating PM8J2-916	827959	827959	+	pel
+TnrA DNA-binding-site regulating PM8J2-951	4159520	4159520	+	yycCB
+TnrA DNA-binding-site regulating PM8J2-952	3791811	3791811	-	ywlFG
+TnrA DNA-binding-site regulating PM8J2-953	3896223	3896223	-	ywdIJK
+TnrA DNA-binding-site regulating PM8J2-954	3108560	3108560	+	yttA
+TnrA DNA-binding-site regulating PM8J2-955	2130125	2130125	+	yodF
+TnrA DNA-binding-site regulating PM8J2-957	1938873	1938873	+	alsT
+TnrA DNA-binding-site regulating PM8J2-98			-	ptb-bcd-buk-lpdV-bkdAABB
+TreR DNA-binding-site 11.5 bases downstream of PM8J2-544	850332	850332	+	trePAR
+TreR DNA-binding-site 21.5 bases upstream of PM8J2-544	850300	850300	+	trePAR
+TRNA_24 DNA-binding-site (BS8J2-45)				
+TRNA_30 DNA-binding-site (BS8J2-46)	20797	20797		
+TRNA_35 DNA-binding-site (BS8J2-47)				
+TRNA_51 DNA-binding-site (BS8J2-50)				
+TRNA_66 DNA-binding-site (BS8J2-48)				
+WalR DNA-binding-site 162.0 bases upstream of PM8J2-548	3681253	3681253	-	tagDEF
+WalR DNA-binding-site 21 bases upstream of wapAp	4030596	4030613	-	wapA-yxxG
+WalR DNA-binding-site 54.0 bases upstream of ftsA-P3	1596134	1596134	+	ftsAZ
+WalR DNA-binding-site 65.5 bases upstream of PM8J2-503	2093868	2093868	-	yocH
+WalR DNA-binding-site regulating PM8J2-826	1448292	1448292	+	ykvT
+WalR-P DNA-binding-site 2 bases downstream of sigI-S2	1411777	1411777	+	sigI-rsgI // sigI-rsgI
+WalR-P DNA-binding-site 60 bases upstream of mreBH-Pi	1517672	1517689	-	mreBH-ykpC
+WalR-P DNA-binding-site 63 bases upstream of sigI-S2	1411705	1411722	+	sigI-rsgI
+WalR-P DNA-binding-site 71 bases upstream of sigIp	1411792	1411807	+	sigI-rsgI
+WalR-P DNA-binding-site regulating cwlOp			-	cwlO
+WalR-P DNA-binding-site regulating iseAp			+	iseAp // iseA
+WalR-P DNA-binding-site regulating lytE-Pi	1018817	1018834	+	lytE
+WalR-P DNA-binding-site regulating pdaCp			+	pdaCp // pdaC
+WalR-P DNA-binding-site regulating ydjMp			+	ydjM
+Xpf DNA-binding-site regulating PM8J2-836			+	xtmAB-xkdEFGHIJKM
+Xre DNA-binding-site regulating PM8J2-947 (BS8J2-323)	1321766	1321766	-	xre
+Xre DNA-binding-site regulating PM8J2-947 (BS8J2-324)	1321830	1321830	-	xre
+Xre DNA-binding-site regulating PM8J2-948 (BS8J2-325)	1321724	1321724	+	xkdBCD-xtrA
+Xre DNA-binding-site regulating PM8J2-948 (BS8J2-326)	1321781	1321781	+	xkdBCD-xtrA
+XylR DNA-binding-site 15.5 bases downstream of PM8J2-532	1891819	1891819	+	xylAB
+XylR DNA-binding-site 16.5 bases downstream of PM8J2-530	1887047	1887047	+	xynPB
+YclJ DNA-binding-site 39 bases upstream of yclIp	426446	426523	-	yclIH
+YclJ DNA-binding-site 42 bases upstream of ykcBp	1354208	1354242	+	ykcBC
+YclJ DNA-binding-site 43 bases upstream of yngAp	1946170	1946220	+	yngABC
+YclJ DNA-binding-site regulating yycAp	4161034	4161066	+	yycA
+YdfI DNA-binding-site 49.5 bases upstream of PM8J2-4	589632	589632	+	ydfJ
+YfhP DNA-binding-site regulating yfhQ-P2			+	yfhQ-fabL-sspE
+YodB DNA-binding-site 17 bases upstream of spxAp	1227587	1227617	+	spxA
+YodB DNA-binding-site regulating catDp			+	catDE
+YodB DNA-binding-site regulating yocJp	2097007	2097022	-	yocJ // yocJ-ssrSA
+YqfL DNA-binding-site regulating PM8J2-939			-	ccpN-yqfL
+YtrA DNA-binding-site 1 bases downstream of ywoBp	3756522	3756560	-	ywoBCD
+YtrA DNA-binding-site 12 bases downstream of ytrGp	3119450	3119494	-	ytrGABCDEF
+YvrH DNA-binding-site regulating PD			-	lytABC // lytABC
+YvrH DNA-binding-site regulating PM8J2-25			-	sigX-rsiX // sigX-rsiX
+YvrH DNA-binding-site regulating PM8J2-830			+	wprA
+YvrH DNA-binding-site regulating PM8J2-831			-	sunT-bdbA-yolJ-bdbB
+YvrH DNA-binding-site regulating sigOp			-	yvrI-yvrHa
+YvrH DNA-binding-site regulating sunAp			-	sunAT-bdbA-yolJ-bdbB
+YvrH DNA-binding-site regulating wapAp			-	wapA-yxxG
+YwaE DNA-binding-site regulating ywaEp	3946353	3946366	+	ywaEp // tyrZ // tboYB // ywaE
+Zur-Zinc DNA-binding-site 16.5 bases downstream of ycdHp	308288	308288	+	ycdHI-yceA
+Zur-Zinc DNA-binding-site 4.5 bases downstream of yciAp	364225	364225	+	yciABC
+Zur-Zinc DNA-binding-site 5 bases downstream of rpmEBp	3139244	3139265	-	rpmEB
+Zur-Zinc DNA-binding-site 5 bases downstream of yciCp	365792	365820	+	yczL-yciC
+Zur-Zinc DNA-binding-site 6 bases downstream of rpsNBp	965870	965891	+	rpsNB
+Zur-Zinc DNA-binding-site regulating zinTp			-	zinT

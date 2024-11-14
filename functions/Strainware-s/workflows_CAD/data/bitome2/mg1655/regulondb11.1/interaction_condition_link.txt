@@ -1,0 +1,312 @@
+# # Copies and Copyright-Notice
+#
+#      RegulonDB is free for academic/noncommercial use
+#
+#      User is not entitled to change or erase data sets of the RegulonDB
+#      database or to eliminate copyright notices from RegulonDB. Furthermore,
+#      User is not entitled to expand RegulonDB or to integrate RegulonDB partly
+#      or as a whole into other databank systems, without prior written consent
+#      from CCG-UNAM.
+#
+#      Please check the license at http://regulondb.ccg.unam.mx/menu/download/full_version/terms_and_conditions.jsp
+#
+# Citation
+#
+#      Tierrafría, V. H. et al. (2022). RegulonDB 11.0: Comprehensive high-throughput datasets on transcriptional regulation in Escherichia coli K-12,
+#      Microb Genom. 2022 May;8(5). doi: 10.1099/mgen.0.000833. PMID: 35584008. https://doi.org/10.1099/mgen.0.000833
+#
+#
+# Contact
+#
+#      Person: RegulonDB Team
+#      Web Page: http://regulondb.ccg.unam.mx/menu/about_regulondb/contact_us/index.jsp
+#          (regulondb@ccg.unam.mx)
+#
+#
+ # RegulonDB: 11.1 Date: 12/12/2022
+# Created: 12/12/2022 11:48:35
+# Table: INTERACTION_CONDITION_LINK
+# Columns:
+# 1) INTERACTION_ID
+# 2) CONDITION_ID
+# 3) EXP_CONDITION
+ECK125160713		Amino acid starvation
+ECK125160714		amino acid starvation
+ECK125160715		stationary phase
+ECK125160715		amino acid starvation
+ECK125160716		amino acid starvation
+ECK125160716		changes in the growth rate
+ECK125160716		stationary phase
+ECK125160717		steady-state growth
+ECK125160719		stationary phase
+ECK125160720		stringent condition and changes in the growth rate
+ECK125160721		stationary phase
+ECK125160721		amino acid starvation
+ECK125160722		stationary phase
+ECK125160722		amino acid starvation
+ECK125160723		stationary phase
+ECK125160723		amino acid starvation
+ECK125160724		stationary phase
+ECK125160724		amino acid starvation
+ECK125160725		amino acid starvation
+ECK125160725		stationary phase
+ECK125160726		amino acid starvation
+ECK125160726		stationary phase
+ECK125160727		amino acid starvation
+ECK125160727		stationary phase
+ECK125160728		amino acid starvation
+ECK125160728		stationary phase
+ECK125160729		amino acid starvation
+ECK125160729		stationary phase
+ECK125160730		stationary phase
+ECK125160730		amino acid starvation
+ECK125160731		amino acid starvation
+ECK125160731		stationary phase
+ECK125160732		amino acid starvation
+ECK125160732		stationary phase
+ECK125160733		stationary phase
+ECK125160733		amino acid starvation
+ECK125160734		stationary phase
+ECK125160734		amino acid starvation
+ECK125160735		amino acid starvation
+ECK125160735		stationary phase
+ECK125160736		stationary phase
+ECK125160736		amino acid starvation
+ECK125160737		stationary phase
+ECK125160737		amino acid starvation
+ECK125160737		changes in the growth rate
+ECK125160738		amino acid starvation
+ECK125160738		changes in the growth rate
+ECK125160738		stationary phase
+ECK125160739		amino acid starvation
+ECK125160739		stationary phase
+ECK125160739		changes in the growth rate
+ECK125160740		changes in the growth rate
+ECK125160740		amino acid starvation
+ECK125160740		stationary phase
+ECK125160741		stationary phase
+ECK125160741		amino acid starvation
+ECK125160741		changes in the growth rate
+ECK125160742		growth in arabinose
+ECK125160742		stationary phase
+ECK125160742		amino acid starvation
+ECK125160742		changes in the growth rate
+ECK125160743		amino acid starvation
+ECK125160743		stationary phase
+ECK125160743		changes in the growth rate
+ECK125160744		stationary phase
+ECK125160744		amino acid starvation
+ECK125160744		changes in the growth rate
+ECK125160745		amino acid starvation
+ECK125160745		changes in the growth rate
+ECK125160745		stationary phase
+ECK125160746		stationary phase
+ECK125160746		changes in the growth rate
+ECK125160746		amino acid starvation
+ECK125160747		stationary phase
+ECK125160747		amino acid starvation
+ECK125160747		changes in the growth rate
+ECK125160748		amino acid starvation
+ECK125160748		changes in the growth rate
+ECK125160748		stationary phase
+ECK125160749		amino acid starvation
+ECK125160749		changes in the growth rate
+ECK125160749		stationary phase
+ECK125160750		steady-state growth
+ECK125160751		stringent conditions
+ECK125160752		stationary phase
+ECK125160754		amino acid starvation
+ECK125160755		amino acid starvation
+ECK125160756		stationary phase
+ECK125160758		changes in the growth rate
+ECK125160758		stationary phase
+ECK125160758		amino acid starvation
+ECK125160759		changes in the growth rate
+ECK125160759		amino acid starvation
+ECK125160759		stationary phase
+ECK125160760		stationary phase
+ECK125160760		amino acid starvation
+ECK125160760		changes in the growth rate
+ECK125160761		stationary phase
+ECK125160761		changes in the growth rate
+ECK125160761		amino acid starvation
+ECK125160762		amino acid starvation
+ECK125160762		stationary phase
+ECK125160762		changes in the growth rate
+ECK125160763		amino acid starvation
+ECK125160763		stationary phase
+ECK125160763		changes in the growth rate
+ECK125160764		stationary phase
+ECK125160764		changes in the growth rate
+ECK125160764		amino acid starvation
+ECK125160765		phosphate starvation
+ECK125160766		stringent response
+ECK125160766		Transition from exponential phase to stationary phase
+ECK125160768		amino acid starvation
+ECK125160769		amino acid starvation
+ECK125160770		stationary phase
+ECK125160771		Transition from exponential phase to Stationary phase
+ECK125160772		Transition from exponential phase to Stationary phase
+ECK125160773		Transition from exponential phase to Stationary phase
+ECK125160774		stringent response
+ECK125160775		stringent response
+ECK125160777		stringent condition and changes in the growth rate
+ECK125160778		stringent condition and changes in the growth rate
+ECK125162254		amino acid starvation
+ECK125162256		amino acid starvation
+ECK125162257		stationary phase
+ECK125162260		stringent response
+ECK125162261		stringent response
+ECK125228876		Amino acid starvation
+ECK125240688		Transition from exponential phase to Stationary phase
+ECK125240690		amino acid starvation
+ECK125240691		amino acid starvation
+ECK125240692		amino acid starvation
+ECK125258879		growth rate-dependent
+ECK125258879		stringent response induced by serine hydroxamate
+ECK125258880		stationary phase
+ECK125258882		stationary phase
+ECK125258883		change in the growth rate
+ECK125258884		stringent response
+ECK125258885		stationary phase
+ECK125258886		stationary phase
+ECK125258887		stringent response induced by serine hydroxamate
+ECK125258887		growth rate-dependent
+ECK125258888		stationary phase
+ECK125258889		stationary growth phase
+ECK125258889		isoleucine starvation
+ECK125258890		stationary phase
+ECK125258891		stringent response induced by serine hydroxamate
+ECK125258892		stringent response
+ECK125258892		leucine starvation
+ECK125258894		growth rate-dependent
+ECK125258894		amino acid  starvation
+ECK125258895		stringent condition
+ECK125258901		stationary phase
+ECK125258902		stringent response
+ECK125258903		stringent response
+ECK125258904		stationary phase
+ECK125258906		stationary phase
+ECK125258907		stationary phase
+ECK125258908		amino acid starvation
+ECK125258908		growth rate-dependent
+ECK125258909		stationary phase
+ECK125258910		Stationary phase
+ECK125285764		stringent response
+ECK125285765		stationary phase
+ECK125285766		isoleucine starvation
+ECK125285768		isoleucine starvation
+ECK125285769		isoleucine starvation
+ECK125285770		stationary phase
+ECK125285771		stationary phase
+ECK125285772		stationary phase
+ECK125285773		glucose phosphate stress conditions
+ECK125285774		amino acid starvation
+ECK125285775		isoleucine starvation
+ECK125285777		stationary phase
+ECK125285778		growth rate
+ECK125285778		stationary phase
+ECK125285779		isoleucine starvation
+ECK125285780		stringent response
+ECK125285781		isoleucine starvation
+ECK125285782		glucose starvation
+ECK125285782		stationary phase
+ECK125285783		isoleucine starvation
+ECK125285785		glucose phosphate stress conditions
+ECK125285786		stationary phase
+ECK125285787		isoleucine starvation
+ECK125285788		stationary phase
+ECK125285789		stationary phase
+ECK125285792		stringent response
+ECK125285792		isoleucine starvation
+ECK125302522		amino acid starvation
+ECK125302522		changes in the growth rate
+ECK125302522		stationary phase
+ECK125302523		changes in the growth rate
+ECK125302523		amino acid starvation
+ECK125302523		stationary phase
+ECK125302524		stationary phase
+ECK125302524		amino acid starvation
+ECK125302524		changes in the growth rate
+ECK125302525		stationary phase
+ECK125302526		amino acid starvation
+ECK125302526		changes in the growth rate
+ECK125302526		stationary phase
+ECK125302527		amino acid starvation
+ECK125302527		changes in the growth rate
+ECK125302527		stationary phase
+ECK125302528		stationary phase
+ECK125302528		amino acid starvation
+ECK125302528		changes in the growth rate
+ECK125302529		stationary phase
+ECK125302529		isoleucine starvation
+ECK125302530		amino acid starvation
+ECK125302530		changes in the growth rate
+ECK125302530		stationary phase
+ECK125302531		stationary phase
+ECK125302531		amino acid starvation
+ECK125302531		changes in the growth rate
+ECK125302532		stationary phase
+ECK125302532		changes in the growth rate
+ECK125302532		amino acid starvation
+ECK125302533		stationary phase
+ECK125302533		changes in the growth rate
+ECK125302533		amino acid starvation
+ECK125302534		stringent response
+ECK125302535		Escherichia coli - MG1655|relA256, spoT203  mutant|LB medium| 37&deg;C|OD600 of 2.0|exponential phase|. CONTROL: Escherichia coli - MG1655| Wild type|LB medium| 37&deg;C| OD600 of 0.4|exponential phase|
+ECK125302535		Escherichia coli - MG1655| Wild type| LB medium| 37&deg; C| OD600 of 2.0| early stationary phase|. CONTROL: Escherichia coli - MG1655| Wild type|LB medium| 37&deg;C| OD600 of 0.4|exponential phase|
+ECK125302536		stationary phase
+ECK125302537		carbon starvation
+ECK125302537		stationary phase
+ECK125302538		amino acid starvation
+ECK125302538		stationary phase
+ECK125302538		changes in the growth rate
+ECK125302539		stationary phase
+ECK125302539		changes in the growth rate
+ECK125302539		amino acid starvation
+ECK125302540		stationary phase
+ECK125302541		changes in the growth rate
+ECK125302541		amino acid starvation
+ECK125302541		stationary phase
+ECK125302542		changes in the growth rate
+ECK125302542		stationary phase
+ECK125302542		amino acid starvation
+ECK125302543		changes in the growth rate
+ECK125302543		stationary phase
+ECK125302543		amino acid starvation
+ECK125302544		changes in the growth rate
+ECK125302544		amino acid starvation
+ECK125302544		stationary phase
+ECK125302545		Escherichia coli str. K-12 substr. MG1655|wild type|LB medium|||30.0 C|||||||
+CONTROL2  Escherichia coli str. K-12 substr. MG1655|slyA overexpression mutant;relA knockout mutant; spoT knockout mutant|LB medium|||30.0 C|||||||
+
+ECK125302545		Escherichia coli str. K-12 substr. MG1655|wild type|LB medium|||30.0 C|||||||
+CONTROL: Escherichia coli str. K-12 substr. MG1655|slyA overexpression mutant;dksA knockout mutant;|LB medium|||30.0 C|||||||
+ECK125302546		stationary phase
+ECK125302546		amino acid starvation
+ECK125302546		changes in the growth rate
+ECK125302546		growth in arabinose
+ECK125302547		exponential phase
+ECK125302548		exponential phase
+ECK125302549		stringent response
+ECK125302550		glucose phosphate stress conditions
+ECK125302551		amino acid starvation
+ECK125302551		changes in the growth rate
+ECK125302551		stationary phase
+ECK125302552		stationary phase
+ECK125302553		stationary phase
+ECK125302553		changes in the growth rate
+ECK125302553		amino acid starvation
+ECK125302554		glucose phosphate stress conditions
+ECK125302555		isoleucine starvation
+ECK125302556		stationary phase
+ECK125302557		Escherichia coli - MG1655| Wild type| LB medium| 37&deg;C| OD600 of 2.0| early stationary phase|. CONTROL: Escherichia coli - MG1655|dksA knockout mutant|LB medium| 37&deg;C| OD600 of 2.0|early stationary phase|
+
+ECK125302558		stationary phase
+ECK125302559		stationary phase
+ECK125302559		amino acid starvation
+ECK125302559		changes in the growth rate
+ECK125302560		stationary phase
+ECK125302560		changes in the growth rate
+ECK125302560		amino acid starvation
+ECK125302651		Stringent response

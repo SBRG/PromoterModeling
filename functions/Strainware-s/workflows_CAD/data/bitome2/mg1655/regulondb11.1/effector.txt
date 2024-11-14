@@ -1,0 +1,175 @@
+# # Copies and Copyright-Notice
+#
+#      RegulonDB is free for academic/noncommercial use
+#
+#      User is not entitled to change or erase data sets of the RegulonDB
+#      database or to eliminate copyright notices from RegulonDB. Furthermore,
+#      User is not entitled to expand RegulonDB or to integrate RegulonDB partly
+#      or as a whole into other databank systems, without prior written consent
+#      from CCG-UNAM.
+#
+#      Please check the license at http://regulondb.ccg.unam.mx/menu/download/full_version/terms_and_conditions.jsp
+#
+# Citation
+#
+#      Tierrafría, V. H. et al. (2022). RegulonDB 11.0: Comprehensive high-throughput datasets on transcriptional regulation in Escherichia coli K-12,
+#      Microb Genom. 2022 May;8(5). doi: 10.1099/mgen.0.000833. PMID: 35584008. https://doi.org/10.1099/mgen.0.000833
+#
+#
+# Contact
+#
+#      Person: RegulonDB Team
+#      Web Page: http://regulondb.ccg.unam.mx/menu/about_regulondb/contact_us/index.jsp
+#          (regulondb@ccg.unam.mx)
+#
+#
+ # RegulonDB: 11.1 Date: 12/12/2022
+# Created: 12/12/2022 11:48:35
+# Table: EFFECTOR
+# Columns:
+# 1) EFFECTOR_ID
+# 2) EFFECTOR_NAME
+# 3) CATEGORY
+# 4) EFFECTOR_TYPE
+# 5) EFFECTOR_NOTE
+# 6) EFFECTOR_INTERNAL_COMMENT
+# 7) KEY_ID_ORG
+# 8) EFFECTOR_NOTE_WEB
+ECK120011271	Phosphate		positive			ECK12	
+ECK120011905	ATP		positive			ECK12	
+ECK120012879	L-rhamnose			This compound class represents a reducing sugar that exists in solution in multiple configurations. The open-chain structure shown here is provided only as a schematic illustration of chirality. Consult the appropriate class instances for information on specific ring structures and their anomeric configuration.		ECK12	
+ECK120028000	TorI		negative			ECK12	
+ECK125145904	Ag		positive			ECK12	
+ECK125145905	Au		positive			ECK12	
+ECK125145910	Hg		positive			ECK12	
+ECK125147230	Cd<sup>2+</sup>		positive			ECK12	
+ECK125147286	Proflavin		negative			ECK12	
+ECK125147287	R6G		negative			ECK12	
+ECK125147288	Methyl		positive			ECK12	
+ECK125147291	D-fucose		negative			ECK12	
+ECK125147294	Thiosulphate		negative			ECK12	
+ECK125147295	N-acetyl-L-serine		positive			ECK12	
+ECK125147296	Sulphide		negative			ECK12	
+ECK125147298	Deoxyribose-5-phosphate		negative			ECK12	
+ECK125147299	EIIGlc		negative			ECK12	
+ECK125147300	DhaK		negative			ECK12	
+ECK125147305	Purine		negative			ECK12	
+ECK125147306	Acetate		positive			ECK12	
+ECK125147308	Idonate		positive			ECK12	
+ECK125147309	Alfa-acetohydroxybutirate		positive			ECK12	
+ECK125147313	ADP		positive			ECK12	
+ECK125147314	Aes		negative			ECK12	
+ECK125147315	MalY		negative			ECK12	
+ECK125147316	Benzoate		negative			ECK12	
+ECK125147317	Menadione		negative			ECK12	
+ECK125147318	Paraquat		negative			ECK12	
+ECK125147319	Phenazine methosulfate		negative			ECK12	
+ECK125147320	Plumbagin		negative			ECK12	
+ECK125147321	Sodium salicylate		negative			ECK12	
+ECK125147322	3-(2,3-dihydroxyphenyl)propionate [DHPP]		positive			ECK12	
+ECK125147324	Carbonyl cyanide p-(trifluoro-methoxy)phenylhydrazone		negative			ECK12	
+ECK125147328	[2Fe-2S] reduced		positive			ECK12	
+ECK125147331	Guanine		positive			ECK12	
+ECK125147334	[2Fe-2S]<sup>3+</sup> oxydized		positive			ECK12	
+ECK125147335	[2Fe-2S]<sup>2+</sup> reduced		negative			ECK12	
+ECK125147336	Trehalose		negative			ECK12	
+ECK125147364	[4Fe-4S]<sup>2+</sup> reduced		positive			ECK12	
+ECK125147366	[2Fe-2S]<sup>2+</sup> oxidized		negative			ECK12	
+ECK125147375	dATP		positive			ECK12	
+ECK125147395	MalK		negative			ECK12	
+ECK125161300	Met-oxidized					ECK12	
+ECK125257206	cyclic-AMP		positive			ECK12	
+ECK125257207	Fe<sup>2+</sup>		negative			ECK12	
+ECK125257208	L-leucine		positive			ECK12	
+ECK125257209	D-serine		positive			ECK12	
+ECK125257210	formate		positive			ECK12	
+ECK125257211	hypoxanthine		positive			ECK12	
+ECK125257212	L-arginine		positive			ECK12	
+ECK125257213	<i>S</i>-adenosyl-L-methionine			|FRAME: S-ADENOSYLMETHIONINE| (AdoMet, SAM) is a sulfonium compound in which each of the carbons attached to the sulfur is activated toward nucleophilic attack. It is the most common methyl group donor for methyltransferase enzymes. In addition, AdoMet is cleaved reductively by a large number of iron-sulfur cluster-containing enzymes (known as radical SAM or radical AdoMet enzymes) to produce |FRAME: CPD-15400|, which they use to activate their substrates.<br>Another major role of AdoMet is in polyamine biosynthesis, where it is decarboxylated by |FRAME: EC-4.1.1.50|, to form |FRAME: S-ADENOSYLMETHIONINAMINE|, which serves as a propylamine group donor.<br>AdoMet is formed by |FRAME: EC-2.5.1.6| and bears an <i>S</i> configuration at the sulfur atom. The chiral sulfonium of AdoMet spontaneously racemizes under physiological conditions to form a mixture of <i>S</i> and <i>R</i> isomers. This results in reduced activity, as the |FRAME: CPD0-2554 <i>R</i> isomer| is not accepted as a substrate for AdoMet-dependent methyltransferases |CITS: [12419350]|.		ECK12	|FRAME: S-ADENOSYLMETHIONINE| (AdoMet, SAM) is a sulfonium compound in which each of the carbons attached to the sulfur is activated toward nucleophilic attack. It is the most common methyl group donor for methyltransferase enzymes. In addition, AdoMet is cleaved reductively by a large number of iron-sulfur cluster-containing enzymes (known as radical SAM or radical AdoMet enzymes) to produce |FRAME: CPD-15400|, which they use to activate their substrates.<br>Another major role of AdoMet is in polyamine biosynthesis, where it is decarboxylated by |FRAME: EC-4.1.1.50|, to form |FRAME: S-ADENOSYLMETHIONINAMINE|, which serves as a propylamine group donor.<br>AdoMet is formed by |FRAME: EC-2.5.1.6| and bears an <i>S</i> configuration at the sulfur atom. The chiral sulfonium of AdoMet spontaneously racemizes under physiological conditions to form a mixture of <i>S</i> and <i>R</i> isomers. This results in reduced activity, as the |FRAME: CPD0-2554 <i>R</i> isomer| is not accepted as a substrate for AdoMet-dependent methyltransferases <a href="#myRef" class="linkBlue">12419350</a>.
+ECK125257214	pyruvate		negative			ECK12	
+ECK125257215	L-tyrosine		positive			ECK12	
+ECK125257216	&alpha;-L-arabinopyranose		positive			ECK12	
+ECK125257217	biotinyl-5'-adenylate		positive			ECK12	
+ECK125257218	maltotriose		positive			ECK12	
+ECK125257219	glycolate		positive	GlcC (for glycolate utilization) negatively controls the expression of genes involved in the utilization of glycolate as the sole source of carbon |CITS:[9880556][8606183]|. It is negatively autoregulated and coordinately activated by transcription of the divergent operon <i>glc</i>, which is related to the transport and metabolism of glycolate |CITS:[9880556]|. Synthesis of <i>glc</i> genes is induced when <i>Escherichia coli</i> is grown on glycolate  |CITS:[9880556]|. <br>GlcC features an N-terminal domain containing a helix-turn-helix motif |CITS:[8606183]| and a putative C-terminal domain that includes the key residues involved in coinducer recognition and oligomerization. <br>Although little is known about the mechanism of regulation of the GlcC transcription factor, Pellicer et al. demonstrated that it is a regulator that acts as a repressor by binding to <i>cis</i>-acting elements, inverted repeat sequences that are not well-little conserved, that overlap the ATG sequence |CITS:[9880556]|.		ECK12	GlcC (for glycolate utilization) negatively controls the expression of genes involved in the utilization of glycolate as the sole source of carbon <a href="#myRef" class="linkBlue">Pellicer MT,1999. Pellicer MT,1996</a> It is negatively autoregulated and coordinately activated by transcription of the divergent operon <i>glc</i>, which is related to the transport and metabolism of glycolate <a href="#myRef" class="linkBlue">Pellicer MT,1999</a> Synthesis of <i>glc</i> genes is induced when <i>Escherichia coli</i> is grown on glycolate  <a href="#myRef" class="linkBlue">Pellicer MT,1999</a> <br>GlcC features an N-terminal domain containing a helix-turn-helix motif <a href="#myRef" class="linkBlue">Pellicer MT,1996</a>and a putative C-terminal domain that includes the key residues involved in coinducer recognition and oligomerization. <br>Although little is known about the mechanism of regulation of the GlcC transcription factor, Pellicer et al. demonstrated that it is a regulator that acts as a repressor by binding to <i>cis</i>-acting elements, inverted repeat sequences that are not well-little conserved, that overlap the ATG sequence <a href="#myRef" class="linkBlue">Pellicer MT,1999</a>
+ECK125257220	melibiose		positive			ECK12	
+ECK125257221	Cu<SUP>+</SUP>					ECK12	
+ECK125257222	Na<SUP>+</SUP>		positive			ECK12	
+ECK125257223	<i>O</i>-acetyl-L-serine		positive			ECK12	
+ECK125257224	Zn<SUP>2+</SUP>		positive			ECK12	
+ECK125257226	xanthosine		positive			ECK12	
+ECK125257227	L-tartrate					ECK12	
+ECK125257228	D-ribose		negative	This compound class represents a reducing sugar that exists in solution in multiple configurations. The open-chain structure shown here is provided only as a schematic illustration of chirality. Consult the appropriate class instances for information on specific ring structures and their anomeric configuration.<br>In decreasing order of frequency, the species of D-ribose in solution are |FRAME: CPD0-1110| (58.5%), |FRAME: CPD-15829| (21.5%), |FRAME: CPD0-1108| (13.5%), |FRAME: CPD-10330| (6.5%) and |FRAME: CPD-15818 open chain| (0.05%) |CITS: [Drew98]|.		ECK12	This compound class represents a reducing sugar that exists in solution in multiple configurations. The open-chain structure shown here is provided only as a schematic illustration of chirality. Consult the appropriate class instances for information on specific ring structures and their anomeric configuration.<br>In decreasing order of frequency, the species of D-ribose in solution are |FRAME: CPD0-1110| (58.5%), |FRAME: CPD-15829| (21.5%), |FRAME: CPD0-1108| (13.5%), |FRAME: CPD-10330| (6.5%) and |FRAME: CPD-15818 open chain| (0.05%) <a href="#myRef" class="linkBlue">Drew98</a>.
+ECK125257229	L-homocysteine		positive			ECK12	
+ECK125257231	Mn<SUP>2+</SUP>					ECK12	
+ECK125257232	molybdate		positive			ECK12	
+ECK125257233	allantoin		positive			ECK12	
+ECK125257234	cyanate		positive			ECK12	
+ECK125257235	&alpha;-D-galacturonate					ECK12	
+ECK125257236	L-alanine		positive			ECK12	
+ECK125257237	D-xylonate					ECK12	
+ECK125257238	5-dehydro-D-gluconate		positive			ECK12	
+ECK125257239	L-carnitine					ECK12	
+ECK125257240	(<i>S</i>)-lactate		positive	Lactate, or 2-hydroxypropanoate, was discovered in 1780 by a Swedish chemist, Scheele,<br>who isolated it from sour milk. It is the simplest hydroxycarboxylic acid and exists as 2 stereoisomers.<br>Lactate has a pK of 3.86 and dissociates freely at physiological pH, yielding a lactate ion:lactic acid ratio<br>of 3000:1|CITS: [15987839]|.		ECK12	Lactate, or 2-hydroxypropanoate, was discovered in 1780 by a Swedish chemist, Scheele,<br>who isolated it from sour milk. It is the simplest hydroxycarboxylic acid and exists as 2 stereoisomers.<br>Lactate has a pK of 3.86 and dissociates freely at physiological pH, yielding a lactate ion:lactic acid ratio<br>of 3000:1<a href="#myRef" class="linkBlue">Ewaschuk JB, Naylor JM, Zello GA,2005</a>.
+ECK125257241	3-(3-hydroxyphenyl)propanoate		positive			ECK12	
+ECK125257242	L-tryptophan		positive			ECK12	
+ECK125257243	L-fuculose 1-phosphate		positive			ECK12	
+ECK125257244	(2<i>S</i>,3<i>S</i>)-2-methylcitrate		positive			ECK12	
+ECK125257245	3-phenylpropanoate					ECK12	
+ECK125257247	L-phenylalanine		positive			ECK12	
+ECK125257248	Ni<sup>2+</sup>		negative			ECK12	
+ECK125257249	a [2Fe-2S] iron-sulfur cluster		positive	|FRAME: FeS-Centers Iron-sulfur clusters| consist of nonheme iron complexed to sulfur in several ways. They serve as prosthetic groups of many proteins, which function as intracellular electron carriers with a low reduction potential.<br>In addition to their roles in electron transfer reactions, iron-sulfur clusters are also known to participate in the activation of substrates, the stabilization of radicals and structures, the protection of proteins from enzymes and the storage of iron and sulfur. They act as sensors of iron, dioxygen, the superoxide ion, and possibly nitric oxide, and participate in gene expression regulation |CITS: [16466637]|.<br>In |FRAME: CPD-6| the irons are coordinated to the sulfurs of 4 cysteine side chains.		ECK12	|FRAME: FeS-Centers Iron-sulfur clusters| consist of nonheme iron complexed to sulfur in several ways. They serve as prosthetic groups of many proteins, which function as intracellular electron carriers with a low reduction potential.<br>In addition to their roles in electron transfer reactions, iron-sulfur clusters are also known to participate in the activation of substrates, the stabilization of radicals and structures, the protection of proteins from enzymes and the storage of iron and sulfur. They act as sensors of iron, dioxygen, the superoxide ion, and possibly nitric oxide, and participate in gene expression regulation <a href="#myRef" class="linkBlue">Park YJ, Yoo CB, Choi SY, Lee HB,2006</a>.<br>In |FRAME: CPD-6| the irons are coordinated to the sulfurs of 4 cysteine side chains.
+ECK125257251	(<i>S</i>)-2-acetolactate		positive			ECK12	
+ECK125257252	an acyl-CoA		negative	|FRAME:ACYL-COA Acyl-CoAs| are oxoacids that have been activated by |FRAME: CO-A|. They are often classified by the length of their acyl moiety.		ECK12	
+ECK125272593	allolactose		negative			ECK12	
+ECK125272594	antimonite		negative			ECK12	
+ECK125272595	glyoxylate		negative			ECK12	
+ECK125272596	<i>N</i>-acetyl-D-glucosamine 6-phosphate		negative			ECK12	
+ECK125272597	adenosine 5'-phosphosulfate		negative			ECK12	
+ECK125272598	phenylacetyl-CoA					ECK12	
+ECK125272599	L-asparagine		negative			ECK12	
+ECK125272600	formaldehyde					ECK12	
+ECK125272601	glycerol					ECK12	
+ECK125272602	D-sorbitol		negative			ECK12	
+ECK125272603	autoinducer 2		negative			ECK12	
+ECK125272604	carbonylcyanide <i>m</i>-chlorophenylhydrazone		negative			ECK12	
+ECK125272605	<i>sn</i>-glycerol 3-phosphate		negative			ECK12	
+ECK125272606	putrescine					ECK12	
+ECK125272607	2,4-dinitrophenol		negative			ECK12	
+ECK125272609	2-dehydro-3-deoxy-D-gluconate 6-phosphate					ECK12	
+ECK125272610	choline		negative			ECK12	
+ECK125272611	&alpha;-D-glucuronate			|FRAME: GLUCURONATE| is a carboxylic acid that often forms a hexapyranose ring structure.<br>		ECK12	
+ECK125272612	D-gluconate		negative			ECK12	
+ECK125272613	ethidium		negative			ECK12	
+ECK125272614	nitric oxide					ECK12	
+ECK125272615	D-fructuronate		negative			ECK12	
+ECK125272616	(2<i>S</i>)-2-hydroxy-3,4-dioxopentyl phosphate		negative	This compound is a C5-phosphorylated derivative of the open form of |FRAME: DIHYDROXYPENTANEDIONE|<br>|CITS: [17274596]|.		ECK12	This compound is a C5-phosphorylated derivative of the open form of |FRAME: DIHYDROXYPENTANEDIONE|<br><a href="#myRef" class="linkBlue">Xavier KB, Miller ST, Lu W, Kim JH, Rabinowitz J, Pelczer I, Semmelhack MF, Bassler BL,2007</a>.
+ECK125272617	L-ascorbate 6-phosphate					ECK12	
+ECK125272618	cytidine		negative			ECK12	
+ECK125272619	glycine		negative			ECK12	
+ECK125272620	thymine		negative			ECK12	
+ECK125272621	arsenite		negative			ECK12	
+ECK125272622	&beta;-D-fructofuranose 1-phosphate		negative			ECK12	
+ECK125272624	(2R,4S)-2-methyl-2,3,3,4-tetrahydroxytetrahydrofuran					ECK12	
+ECK125272625	Co<SUP>2+</SUP>		negative			ECK12	
+ECK125272627	salicylate		negative			ECK12	
+ECK125272628	L-lysine		negative			ECK12	
+ECK125272629	methylglyoxal			Methylglyoxal is the aldehyde form of |FRAME: PYRUVATE|.<br>It is both an aldehyde and a ketone, or a ketal.<br>Methylglyoxal is produced in small amounts during glycolysis, by the enzyme<br>|FRAME:METHGLYSYN-CPLX| that converts |FRAME:DIHYDROXY-ACETONE-PHOSPHATE| to<br>methylglyoxal.<br>It is also a byproduct of fatty acid metabolism (via |FRAME:ACETONE|) and of protein metabolism<br>(via |FRAME:AMINO-ACETONE|, which is formed by the degradation of |FRAME: THR|).<br>|FRAME: METHYL-GLYOXAL| is highly toxic, and is detoxified by several pathways (see<br>|FRAME:Methylglyoxal-Detoxification|).		ECK12	
+ECK125272630	uracil		negative			ECK12	
+ECK125272631	<i>N</i>-acetyl-D-muramate 6-phosphate		negative			ECK12	
+ECK125272633	<i>N</i>-acetylneuraminate		negative	Sialic acids are an important family of related 9-carbon sugars acids, present on the surface of many different cells and functioning in a wide range of different biological processes.<br><i>N</i>-acetylneuraminate, the most ubiquitous species amongst the sialic acids, is widely distributed in the<br>animal kingdom as a component of oligosaccharides, glycoproteins, and glycolipids.<br><i>N</i>-acetylneuraminate carries out various biological functions by acting as receptors for<br>microorganisms, viruses, toxins, and hormones, by masking receptors, and by regulation of the immune<br>system.<br>N-acetylneuraminic acid is the predominant form of sialic acid present in humans. It can be found as a terminal sugar on a wide range of surface glycoconjugates |CITS: [11841250]|. The &alpha;-anomer is the form that is found when sialic acid is bound to glycans, but in solution it exists mainly (over 90%) in the &beta;-anomeric form |CITS: [18063573]|. <br>A number of bacteria that can colonize humans make use of N-acetylneuraminic acid as a nutrient source. In addition, some pathogens such as |FRAME: TAX-727| use sialic acid in an immune evasion mechanism by adding N-acetylneuraminic acid to their lipopolysaccharide |CITS: [12180977][10447878]|, which provides increased survival in human serum. Most of these organisms are not capable of synthesizing N-acetylneuraminic acid and import it into the cells |CITS: [16262798]| after conversion (either spontaneous or enzymatic) to the &beta;-anomer |CITS: [18063573]| .		ECK12	Sialic acids are an important family of related 9-carbon sugars acids, present on the surface of many different cells and functioning in a wide range of different biological processes.<br><i>N</i>-acetylneuraminate, the most ubiquitous species amongst the sialic acids, is widely distributed in the<br>animal kingdom as a component of oligosaccharides, glycoproteins, and glycolipids.<br><i>N</i>-acetylneuraminate carries out various biological functions by acting as receptors for<br>microorganisms, viruses, toxins, and hormones, by masking receptors, and by regulation of the immune<br>system.<br>N-acetylneuraminic acid is the predominant form of sialic acid present in humans. It can be found as a terminal sugar on a wide range of surface glycoconjugates <a href="#myRef" class="linkBlue">Angata T, Varki A,2002</a>. The &alpha;-anomer is the form that is found when sialic acid is bound to glycans, but in solution it exists mainly (over 90%) in the &beta;-anomeric form <a href="#myRef" class="linkBlue">Severi E, Müller A, Potts JR, Leech A, Williamson D, Wilson KS, Thomas GH,2008</a>. <br>A number of bacteria that can colonize humans make use of N-acetylneuraminic acid as a nutrient source. In addition, some pathogens such as |FRAME: TAX-727| use sialic acid in an immune evasion mechanism by adding N-acetylneuraminic acid to their lipopolysaccharide <a href="#myRef" class="linkBlue">Cox AD, Hood DW, Martin A, Makepeace KM, Deadman ME, Li J, Brisson JR, Moxon ER, Richards JC,2002. Hood DW, Makepeace K, Deadman ME, Rest RF, Thibault P, Martin A, Richards JC, Moxon ER,1999</a>, which provides increased survival in human serum. Most of these organisms are not capable of synthesizing N-acetylneuraminic acid and import it into the cells <a href="#myRef" class="linkBlue">Severi E, Randle G, Kivlin P, Whitfield K, Young R, Moxon R, Kelly D, Hood D, Thomas GH,2005</a> after conversion (either spontaneous or enzymatic) to the &beta;-anomer <a href="#myRef" class="linkBlue">Severi E, Müller A, Potts JR, Leech A, Williamson D, Wilson KS, Thomas GH,2008</a> .
+ECK125285351	glutarate					ECK12	
+ECK125285352	D-trehalose 6-phosphate					ECK12	
+ECK125285353	6-sulfo-D-quinovose					ECK12	
+ECK125285354	D-galactose			This compound class represents a reducing sugar that exists in solution in multiple configurations. The open-chain structure shown here is provided only as a schematic illustration of chirality. Consult the appropriate class instances for information on specific ring structures and their anomeric configuration.<br>The distribution of galactose anomeric configurations at 20&deg;C is as follows:<br><br>|FRAME: GALACTOSE|    64%<br><br>|FRAME: ALPHA-D-GALACTOSE|    32%<br><br>|FRAME: CPD0-2485|    3%<br><br>|FRAME: CPD0-2486|    1%<br>		ECK12	
+ECK125285355	D-galactonate					ECK12	
+ECK125285803	&alpha;-L-rhamnopyranose		positive			ECK12	
+ECK125285917	adenine					ECK12	
+ECK125285918	<i>S</i>-methyl-5'-thioadenosine					ECK12	
+ECK125302603	<i>N</i><sup>6</sup>-(1-deoxy-6-<i>O</i>-phospho-D-fructos-1-yl)-L-lysine					ECK12	
+ECK125303662	6-phospho-&beta;-D-glucosaminyl-(1->4)-<i>N</i>-acetyl-D-glucosamine					ECK12	
+ECK125303689	acetyl					ECK12	
+ECK125328146	tris					ECK12	
+ECK125328147	trimethylamine <i>N</i>-oxide					ECK12	
+ECK125336167	D-allose			Each aldopentose or aldohexose exists as a mixture of at least six compounds: the aldehyde, the hydrated aldehyde<br>(gem-diol), the two pyranoses, and the two furanoses. The open-chain structure shown here is provided only as a schematic illustration of chirality. Consult the appropriate class instances for information on specific ring structures and their anomeric configuration. The relative ratios of the different allose tautomers was reported to be as follows (in |CITS: [Kopper03]|:<br><br><br>Pyranose form: |FRAME: CPD-15627|/|FRAME: CPD-15628|    15%/85%<br><br>Furanose form: |FRAME: CPD-16933|/|FRAME: CPD-16934|    41%/59%		ECK12	Each aldopentose or aldohexose exists as a mixture of at least six compounds: the aldehyde, the hydrated aldehyde<br>(gem-diol), the two pyranoses, and the two furanoses. The open-chain structure shown here is provided only as a schematic illustration of chirality. Consult the appropriate class instances for information on specific ring structures and their anomeric configuration. The relative ratios of the different allose tautomers was reported to be as follows (in <a href="#myRef" class="linkBlue">Kopper03</a>:<br><br><br>Pyranose form: |FRAME: CPD-15627|/|FRAME: CPD-15628|    15%/85%<br><br>Furanose form: |FRAME: CPD-16933|/|FRAME: CPD-16934|    41%/59%
+ECK125336168	&alpha;-D-xylopyranose					ECK12	

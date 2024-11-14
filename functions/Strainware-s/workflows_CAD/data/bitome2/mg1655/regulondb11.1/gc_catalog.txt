@@ -1,0 +1,416 @@
+# # Copies and Copyright-Notice
+#
+#      RegulonDB is free for academic/noncommercial use
+#
+#      User is not entitled to change or erase data sets of the RegulonDB
+#      database or to eliminate copyright notices from RegulonDB. Furthermore,
+#      User is not entitled to expand RegulonDB or to integrate RegulonDB partly
+#      or as a whole into other databank systems, without prior written consent
+#      from CCG-UNAM.
+#
+#      Please check the license at http://regulondb.ccg.unam.mx/menu/download/full_version/terms_and_conditions.jsp
+#
+# Citation
+#
+#      Tierrafría, V. H. et al. (2022). RegulonDB 11.0: Comprehensive high-throughput datasets on transcriptional regulation in Escherichia coli K-12,
+#      Microb Genom. 2022 May;8(5). doi: 10.1099/mgen.0.000833. PMID: 35584008. https://doi.org/10.1099/mgen.0.000833
+#
+#
+# Contact
+#
+#      Person: RegulonDB Team
+#      Web Page: http://regulondb.ccg.unam.mx/menu/about_regulondb/contact_us/index.jsp
+#          (regulondb@ccg.unam.mx)
+#
+#
+ # RegulonDB: 11.1 Date: 12/12/2022
+# Created: 12/12/2022 11:48:35
+# Table: GC_CATALOG
+# Columns:
+# 1) GC_ID
+# 2) GC_NAME
+# 3) GC_DESCRIPTION
+MCO000003344	Escherichia coli| L broth| fumarate 50 mM; glycerol 0.4%	
+MCO000003345	Escherichia coli| L broth| fumarate 50 mM; glycerol 0.4%| mid exponential phase	
+MCO000003348	Escherichia coli| 0.1 MPa	
+MCO000003349	Escherichia coli| maltose 0.2%| 0.1 MPa	
+MCO000003356	Escherichia coli| L broth| glucose 11 mM| OD650 of 0.4	
+MCO000003389	Escherichia coli| MOPS| acetate 4 g/L| exponential phase	
+MCO000003390	Escherichia coli| MOPS| glucose 4 g/L| exponential phase	
+MCO000003392	Escherichia coli| arcA knockout mutant| L broth| glucose 11 mM| OD650 of 0.4	
+MCO000003397	Escherichia coli| exponential phase	
+MCO000003398	Escherichia coli| paraquat 0.25 mM| exponential phase	
+MCO000003405	Escherichia coli| maltose 0.2%| 10 to 40 MPa	
+MCO000003408	Escherichia coli| multicopy plasmid pGS623 (pdhR-lpd) mutant| L broth| OD650 of 0.2	
+MCO000003409	Escherichia coli| multicopy plasmid pGS623 (pdhR-lpd) mutant| L broth| glucose 10 mM| OD650 of 0.2	
+MCO000003420	Escherichia coli| protox assay	
+MCO000003421	Escherichia coli| chenodeoxycholate; protox assay	
+MCO000003422	Escherichia coli| deoxycholate; protox assay	
+MCO000003423	Escherichia coli| glycocholate; protox assay	
+MCO000003424	Escherichia coli| protox assay; ursodeoxycholate	
+MCO000003425	Escherichia coli| sodium salicylate 5 mM	
+MCO000003627	Escherichia coli| TGYEP| nickel chloride 5 µM; sodium molybdate 1 µM; sodium selenite 1 µM| pH 6.5| OD600 from 0.4 to 0.6	
+MCO000003628	Escherichia coli| TGYEP| nickel chloride 5 µM; sodium formate 30 mM; sodium molybdate 1 µM; sodium selenite 1 µM| pH 6.5| OD600 from 0.4 to 0.6	
+MCO000003653	Escherichia coli| fhlA knockout mutant; plasmid pSU2719 mutant| TGYEP| nickel chloride 5 µM; sodium molybdate 1 µM; sodium selenite 1 µM| pH 6.5| OD600 from 0.4 to 0.6	
+MCO000003654	Escherichia coli| fhlA knockout mutant; plasmid pSKOG (K. oxytoca hydG) mutant| TGYEP| nickel chloride 5 µM; sodium molybdate 1 µM; sodium selenite 1 µM| pH 6.5| OD600 from 0.4 to 0.6	
+MCO000003725	Escherichia coli| paraquat 500 µM; sodium salicylate 5 mM	
+MCO000003741	Escherichia coli| soxR knockout mutant; soxS knockout mutant; λ(soxR)| exponential phase	
+MCO000003742	Escherichia coli| soxR knockout mutant; soxS knockout mutant; λ(soxR)| paraquat 0.25 mM| exponential phase	
+MCO000003743	Escherichia coli| soxR knockout mutant; soxS knockout mutant; λ(truncated soxR)| exponential phase	
+MCO000007299	Escherichia coli| chloroacetic acid| OD650 of 0.5	
+MCO000007300	Escherichia coli| L broth| fumarate 50 mM; glycerol 0.4%| oxygen atom| mid exponential phase	
+MCO000007301	Escherichia coli| yiaJ knockout mutant| chloroacetic acid| OD650 of 0.5	
+MCO000007302	Escherichia coli| 37.0 C| exponential phase	
+MCO000007303	Escherichia coli| 37.0 C| stationary phase	
+MCO000007304	Escherichia coli| rpoS knockout mutant| 37.0 C| stationary phase	
+MCO000007305	Escherichia coli| ATP; CTP 800 µM; GTP 800 µM; UTP 800 µM| 37.0 C	
+MCO000007306	Escherichia coli| ATP; CTP 800 µM; GTP 800 µM; UTP 50 µM| 37.0 C	
+MCO000007307	Escherichia coli| multicopy plasmid pBA11 (birA) mutant; C-T transition at nt -10 from bioA translational start site| M56 medium| T-broth 0.02%	
+MCO000007308	Escherichia coli| multicopy plasmid pBA11 (birA) mutant; C-T transition at nt -10 from bioA translational start site| M56 medium| T-broth 0.02%; biotin 4 µM	
+MCO000007309	Escherichia coli| chloroacetic acid| oxygen atom| OD600 of 0.5	
+MCO000007310	Escherichia coli| chloroacetic acid| L-ascorbate 60 mM| oxygen atom| OD600 of 0.5	
+MCO000007311	Escherichia coli| chloroacetic acid| L-fucose 60 mM| oxygen atom| OD600 of 0.5	
+MCO000007312	Escherichia coli| chloroacetic acid| glucose 60 mM| oxygen atom| OD600 of 0.5	
+MCO000007313	Escherichia coli| yiaJ knockout mutant| chloroacetic acid| oxygen atom| OD600 of 0.5	
+MCO000007314	Escherichia coli| copper(II) sulfate 3 mM| 37.0 C	
+MCO000007315	Escherichia coli| soxR knockout mutant| copper(II) sulfate 3 mM| 37.0 C	
+MCO000007316	Escherichia coli| copper(II) sulfate 3 mM| oxygen atom| 37.0 C	
+MCO000007317	Escherichia coli| L broth| oxygen atom| OD650 of 0.8	
+MCO000007318	Escherichia coli| L broth| pyruvate 40 mM| OD650 of 0.8	
+MCO000007319	Escherichia coli| pdhR knockout mutant| L broth| pyruvate 40 mM| OD650 of 0.8	
+MCO000007320	Escherichia coli| L broth| OD650 of 0.8	
+MCO000007321	Escherichia coli| pdhR knockout mutant; multicopy plasmid pGS613 (pdhR) mutant| L broth| OD650 of 0.8	
+MCO000007322	Escherichia coli| LB medium	
+MCO000007323	Escherichia coli| crp knockout mutant| LB medium	
+MCO000007324	Escherichia coli| cyaA knockout mutant| LB medium	
+MCO000007325	Escherichia coli| relA knockout mutant; spoT knockout mutant| LB medium	
+MCO000007326	Escherichia coli| LB broth| 37.0 C	
+MCO000007327	Escherichia coli| LB broth| paraquat 0.25 mM| 37.0 C	
+MCO000007328	Escherichia coli| soxR knockout mutant; soxS knockout mutant| LB broth| 37.0 C	
+MCO000007329	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSE380 mutant| LB broth| 37.0 C	
+MCO000007330	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSE380 mutant| LB broth| paraquat 0.25 mM| 37.0 C	
+MCO000007331	Escherichia coli| soxR knockout mutant; soxS knockout mutant| LB broth| paraquat 0.25 mM| 37.0 C	
+MCO000007332	Escherichia coli| LB medium| 28.0 C	
+MCO000007333	Escherichia coli| rpoS knockout mutant| LB medium| 28.0 C	
+MCO000007334	Escherichia coli| LB medium| 28.0 C| OD600 of 0.4	
+MCO000007335	Escherichia coli| LB medium; conditioned culture medium| 28.0 C| OD600 of 0.4	
+MCO000007336	Escherichia coli| LB medium| 28.0 C| mid to late exponential phase	
+MCO000007337	Escherichia coli| conditioned culture medium| 28.0 C| mid to late exponential phase	
+MCO000007338	Escherichia coli| LB medium| 28.0 C| mid exponential phase	
+MCO000007339	Escherichia coli| LB medium| 28.0 C| stationary phase	
+MCO000007340	Escherichia coli| LB medium| 37.0 C	
+MCO000007341	Escherichia coli| LB medium| homoserine lactone 10 mM| 37.0 C	
+MCO000007342	Escherichia coli| LB medium| sodium arsenite 50 µM| 37.0 C	
+MCO000007343	Escherichia coli| LB medium| 37.0 C| OD600 from 0.4 to 0.5	
+MCO000007344	Escherichia coli| M9 minimal medium| acetate 0.4%| 37.0 C| OD600 from 0.4 to 0.5	
+MCO000007345	Escherichia coli| M9 minimal medium| casamino acids 0.4%; glucose 0.4%| 37.0 C| OD600 from 0.4 to 0.5	
+MCO000007346	Escherichia coli| M9 minimal medium| glycerol 0.4%| 37.0 C| OD600 from 0.4 to 0.5	
+MCO000007347	Escherichia coli| M9 minimal medium| casamino acids 0.4%; glycerol 0.4%| 37.0 C| OD600 from 0.4 to 0.5	
+MCO000007348	Escherichia coli| LB medium| 37.0 C| OD600 of 0.3	
+MCO000007349	Escherichia coli| LB medium| paraquat 0.5 mM| 37.0 C| OD600 of 0.3	
+MCO000007350	Escherichia coli| LB medium| 37.0 C| early stationary phase	
+MCO000007351	Escherichia coli| rpoS knockout mutant| LB medium| 37.0 C| early stationary phase	
+MCO000007352	Escherichia coli| LB medium| 37.0 C| exponential phase	
+MCO000007353	Escherichia coli| LB medium| 37.0 C| stationary phase	
+MCO000007354	Escherichia coli| crp knockout mutant; lrp knockout mutant| LB medium| 37.0 C| exponential phase	
+MCO000007355	Escherichia coli| crp knockout mutant| LB medium| 37.0 C| exponential phase	
+MCO000007356	Escherichia coli| cyaA knockout mutant| LB medium| 37.0 C| exponential phase	
+MCO000007357	Escherichia coli| LB medium| 37.0 C| mid to late exponential phase	
+MCO000007358	Escherichia coli| conditioned culture medium| 37.0 C| mid to late exponential phase	
+MCO000007359	Escherichia coli| sdiA knockout mutant| LB medium| 37.0 C| mid to late exponential phase	
+MCO000007360	Escherichia coli| LB medium| iron(2+) sulfate (anhydrous) 20 µM; sodium citrate 10 mM| early exponential phase	
+MCO000007361	Escherichia coli| LB medium| 2,2’-bipyridine 200 µM| early exponential phase	
+MCO000007362	Escherichia coli| LB medium| hydrogen peroxide 100 µM| mid exponential phase	
+MCO000007363	Escherichia coli| oxyR knockout mutant| LB medium| hydrogen peroxide 100 µM| mid exponential phase	
+MCO000007364	Escherichia coli| LB medium| exponential phase	
+MCO000007365	Escherichia coli| LB medium| CCCP 10 µM| exponential phase	
+MCO000007366	Escherichia coli| LB medium| DNP 0.5 mM| exponential phase	
+MCO000007367	Escherichia coli| LB medium| tetrachlorosalicylanilide 10 µM| exponential phase	
+MCO000007368	Escherichia coli| LB medium| ethidium bromide 250 µM| exponential phase	
+MCO000007369	Escherichia coli| LB medium| nalidixic acid 160 µM| exponential phase	
+MCO000007370	Escherichia coli| LB medium| salicylate 5 mM| exponential phase	
+MCO000007371	Escherichia coli| LB medium| ZnCl2 1 mM; glucose 0.4%| oxygen atom| OD600 from 0.4 to 0.6	
+MCO000007372	Escherichia coli| hydG knockout mutant| LB medium| ZnCl2 1 mM; glucose 0.4%| oxygen atom| OD600 from 0.4 to 0.6	
+MCO000007373	Escherichia coli| hydH knockout mutant| LB medium| ZnCl2 1 mM; glucose 0.4%| oxygen atom| OD600 from 0.4 to 0.6	
+MCO000007374	Escherichia coli| LB medium| glucose 0.4%| oxygen atom| OD600 from 0.4 to 0.6	
+MCO000007375	Escherichia coli| LB medium| cadmium dichloride 0.5 mM; glucose 0.4%| oxygen atom| OD600 from 0.4 to 0.6	
+MCO000007376	Escherichia coli| LB medium| PbCl2 1 mM; glucose 0.4%| oxygen atom| OD600 from 0.4 to 0.6	
+MCO000007377	Escherichia coli| LB medium| ZnCl2 0.2 to 1 mM; glucose 0.4%| oxygen atom| OD600 from 0.4 to 0.6	
+MCO000007378	Escherichia coli| LB medium| glucose 0.5%	
+MCO000007379	Escherichia coli| LB medium| glucose 10 mM; thiamine 5 µg/mL| 37.0 C| exponential phase	
+MCO000007380	Escherichia coli| LB medium| glucose 10 mM; thiamine 5 µg/mL| 37.0 C| stationary phase	
+MCO000007381	Escherichia coli| LB medium| glucose 2 mg/mL| 37.0 C| OD600 of 0.3	
+MCO000007382	Escherichia coli| LB medium| glucose 2 mg/mL; paraquat 0.5 mM| 37.0 C| OD600 of 0.3	
+MCO000007383	Escherichia coli| LB medium| glucose| 37.0 C	
+MCO000007384	Escherichia coli| LB medium| mid exponential phase	
+MCO000007385	Escherichia coli| LB medium| pH 7.0| 37.0 C| exponential phase	
+MCO000007386	Escherichia coli| himA knockout mutant| LB medium| pH 7.0| 37.0 C| exponential phase	
+MCO000007387	Escherichia coli| LB medium| pH 7.0| 37.0 C| stationary phase	
+MCO000007388	Escherichia coli| himA knockout mutant| LB medium| pH 7.0| 37.0 C| stationary phase	
+MCO000007389	Escherichia coli| Luria broth| 30.0 C	
+MCO000007390	Escherichia coli| Luria broth| Cd(II) 1 to 100 µM| 30.0 C	
+MCO000007391	Escherichia coli| Luria broth| Hg(II) 1 to 10 µM| 30.0 C	
+MCO000007392	Escherichia coli| Luria broth| Pb(II) 0.5 mM| 30.0 C	
+MCO000007393	Escherichia coli| Luria broth| Zn(II) 1.1 mM| 30.0 C	
+MCO000007394	Escherichia coli| Luria broth| Zn(II) 1 mM| 30.0 C	
+MCO000007395	Escherichia coli| zntR knockout mutant| Luria broth| Zn(II) 1 mM| 30.0 C	
+MCO000007396	Escherichia coli| M9 minimal medium| glucose 0.4%| 37.0 C| exponential phase	
+MCO000007397	Escherichia coli| M9 minimal medium| hydrogen peroxide 120 µM; glucose 0.4%| 37.0 C| exponential phase	
+MCO000007398	Escherichia coli| M9 minimal medium| glucose 0.4%; sodium chloride 0.35 M| 37.0 C| exponential phase	
+MCO000007399	Escherichia coli| M9 minimal medium| casamino acids 0.05%; glucose 0.4%| 37.0 C	
+MCO000007400	Escherichia coli| M9 minimal medium| casamino acids 0.05%; fumarate 50 mM; glucose 0.4%| 37.0 C	
+MCO000007401	Escherichia coli| M9 minimal medium| casamino acids 0.05%; fumarate 50 mM; glycerol 0.4%| 37.0 C	
+MCO000007402	Escherichia coli| M9 minimal medium| fumarate 50 mM; glucose 0.4%| 37.0 C	
+MCO000007403	Escherichia coli| crp knockout mutant| M9 minimal medium| fumarate 50 mM; glucose 0.4%| 37.0 C	
+MCO000007404	Escherichia coli| rpoS knockout mutant| M9 minimal medium| glucose 0.4%; sodium chloride 0.35 M| 37.0 C| exponential phase	
+MCO000007405	Escherichia coli| M9 minimal medium| TMAO 50 mM; glycerol 0.4%| 37.0 C	
+MCO000007406	Escherichia coli| M9 minimal medium| TMAO 50 mM; aspartate 50 mM; glycerol 0.4%| 37.0 C	
+MCO000007407	Escherichia coli| M9 minimal medium| TMAO 50 mM; fumarate 50 mM; glycerol 0.4%| 37.0 C	
+MCO000007408	Escherichia coli| M9 minimal medium| TMAO 50 mM; glycerol 0.4%; malate 50 mM| 37.0 C	
+MCO000007409	Escherichia coli| M9 minimal medium| TMAO 50 mM; glycerol 0.4%; maleate 50 mM| 37.0 C	
+MCO000007410	Escherichia coli| M9 minimal medium| TMAO 50 mM; glycerol 0.4%; succinate 50 mM| 37.0 C	
+MCO000007411	Escherichia coli| M9 minimal medium| TMAO 50 mM; casamino acids 0.05%; glycerol 0.4%| 37.0 C	
+MCO000007412	Escherichia coli| M9 minimal medium| TMAO 50 mM; casamino acids 0.05%; fumarate 50 mM; glycerol 0.4%| 37.0 C	
+MCO000007413	Escherichia coli| M9 minimal medium| TMAO 50 mM; casamino acids 0.05%; fumarate 50 mM; glycerol 0.4%; nitrate| 37.0 C	
+MCO000007414	Escherichia coli| narL knockout mutant| M9 minimal medium| TMAO 50 mM; casamino acids 0.05%; fumarate 50 mM; glycerol 0.4%| 37.0 C	
+MCO000007415	Escherichia coli| fnr knockout mutant| M9 minimal medium| TMAO 50 mM; casamino acids 0.05%; fumarate 50 mM; glycerol 0.4%| 37.0 C	
+MCO000007416	Escherichia coli| M9 minimal medium| TMAO 50 mM; casamino acids 0.05%; glycerol 0.4%| oxygen atom| 37.0 C	
+MCO000007417	Escherichia coli| M9 minimal medium| casamino acids 0.05%; glycerol 0.4%; nitrate 50 mM| 37.0 C	
+MCO000007418	Escherichia coli| M9 minimal medium| casamino acids 0.05%; fumarate 50 mM; glycerol 0.4%| oxygen atom| 37.0 C	
+MCO000007419	Escherichia coli| M9 minimal medium| casamino acids 0.05%; glycerol 0.4%; nitrate 50 mM| oxygen atom| 37.0 C	
+MCO000007420	Escherichia coli| M9 minimal medium| TMAO 50 mM; casamino acids 0.5%; glycerol 0.4%| 37.0 C	
+MCO000007421	Escherichia coli| M9 minimal medium| fumarate 50 mM; glycerol 0.4%| 37.0 C	
+MCO000007422	Escherichia coli| arcA knockout mutant| M9 minimal medium| fumarate 50 mM; glycerol 0.4%| 37.0 C	
+MCO000007423	Escherichia coli| crp knockout mutant| M9 minimal medium| fumarate 50 mM; glycerol 0.4%| 37.0 C	
+MCO000007424	Escherichia coli| M9 minimal medium| fumarate 50 mM; glycerol 0.4%| oxygen atom| 37.0 C	
+MCO000007425	Escherichia coli| arcA knockout mutant| M9 minimal medium| fumarate 50 mM; glycerol 0.4%| oxygen atom| 37.0 C	
+MCO000007426	Escherichia coli| M9 minimal medium| oxygen atom| 37.0 C	
+MCO000007427	Escherichia coli| M9 minimal medium| copper(II) sulfate 3 mM| oxygen atom| 37.0 C	
+MCO000007428	Escherichia coli| M9 minimal medium| paraquat 50 µM| oxygen atom| 37.0 C	
+MCO000007429	Escherichia coli| M9 minimal medium| pH 7.0| 37.0 C| stationary phase	
+MCO000007430	Escherichia coli| relA knockout mutant; spoT knockout mutant| M9 minimal medium| pH 7.0| 37.0 C| stationary phase	
+MCO000007431	Escherichia coli| M9 minimal medium| glucose 0.5%; thiamine 10 µg/mL| oxygen atom| 37.0 C	
+MCO000007432	Escherichia coli| M9 minimal medium| succinate 0.5%; thiamine 10 µg/mL| oxygen atom| 37.0 C	
+MCO000007433	Escherichia coli| M9 minimal medium| succinate 0.5%; thiamine 10 µg/mL; tyramine 3 mM| oxygen atom| 37.0 C	
+MCO000007434	Escherichia coli| M9 minimal medium| glucose 0.5%; thiamine 10 µg/mL; tyramine 3 mM| oxygen atom| 37.0 C	
+MCO000007435	Escherichia coli| minimal medium| D-xylose 120 µM; L-glutamine 0.2%| mid exponential phase	
+MCO000007436	Escherichia coli| minimal medium| D-xylose 120 µM; L-glutamine 0.2%; glyoxylate| mid exponential phase	
+MCO000007437	Escherichia coli| minimal medium| D-xylose 120 µM; allantoin 60 mM| mid exponential phase	
+MCO000007438	Escherichia coli| minimal medium| D-xylose 120 µM; allantoin| mid exponential phase	
+MCO000007439	Escherichia coli| allS knockout mutant| minimal medium| D-xylose 120 µM; L-glutamine 0.2%; allantoin| mid exponential phase	
+MCO000007440	Escherichia coli| minimal medium| D-xylose 120 µM; ammonium sulfate 0.5 mM| mid exponential phase	
+MCO000007441	Escherichia coli| minimal medium| D-xylose 120 µM; ammonium sulfate 0.5 mM; glyoxylate| mid exponential phase	
+MCO000007442	Escherichia coli| minimal medium| D-xylose 120 µM; ammonium sulfate 20 mM; glyoxylate| mid exponential phase	
+MCO000007443	Escherichia coli| allS knockout mutant| minimal medium| D-xylose 120 µM; ammonium sulfate 20 mM; glyoxylate| mid exponential phase	
+MCO000007444	Escherichia coli| minimal medium| D-xylose 120 µM; ammonium sulfate 20 mM| mid exponential phase	
+MCO000007445	Escherichia coli| minimal medium| amino acids 50 µg; glucose 0.2%; thiamine 1 µg/mL| 32.0 C| exponential phase	
+MCO000007446	Escherichia coli| minimal medium| amino acids 50 µg; glucose 0.2%; methionine 200 µg/mL; thiamine 1 µg/mL| 32.0 C| exponential phase	
+MCO000007447	Escherichia coli| minimal medium| glucose 0.4%| 37.0 C| early to mid exponential phase	
+MCO000007448	Escherichia coli| minimal medium| cAMP 1 mM; glucose 0.4%| 37.0 C| early to mid exponential phase	
+MCO000007449	Escherichia coli| minimal medium| glucose 0.4%; leucine 0.76 mM| 37.0 C| early to mid exponential phase	
+MCO000007450	Escherichia coli| minimal medium| glucose 0.4%| 37.0 C| exponential phase	
+MCO000007451	Escherichia coli| minimal medium| glucose 0.4%; vitamin assay casamino acids 0.5%| 37.0 C| exponential phase	
+MCO000007452	Escherichia coli| minimal medium| glycerol 1%| 37.0 C| exponential phase	
+MCO000007453	Escherichia coli| crp knockout mutant| minimal medium| glucose 0.4%| 37.0 C| exponential phase	
+MCO000007454	Escherichia coli| lrp knockout mutant| minimal medium| glucose 0.4%| 37.0 C| exponential phase	
+MCO000007455	Escherichia coli| crp knockout mutant; lrp knockout mutant| minimal medium| glucose 0.4%| 37.0 C| exponential phase	
+MCO000007456	Escherichia coli| minimal medium| casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL	
+MCO000007457	Escherichia coli| rpoS knockout mutant| minimal medium| casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL	
+MCO000007458	Escherichia coli| minimal medium| acetate 50 mM; casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL| pH 6.5| oxygen atom	
+MCO000007459	Escherichia coli| rpoS knockout mutant| minimal medium| acetate 50 mM; casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL| pH 6.5| oxygen atom	
+MCO000007460	Escherichia coli| minimal medium| casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL| oxygen atom	
+MCO000007461	Escherichia coli| minimal medium| methyl methanesulfonate 0.05%; casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL| oxygen atom	
+MCO000007462	Escherichia coli| rpoS knockout mutant| minimal medium| casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL| oxygen atom	
+MCO000007463	Escherichia coli| minimal medium| casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL| oxygen atom| exponential phase	
+MCO000007464	Escherichia coli| minimal medium| casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL| exponential phase	
+MCO000007465	Escherichia coli| minimal medium| casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL| oxygen atom| stationary phase	
+MCO000007466	Escherichia coli| minimal medium| glucose 11 mM| OD650 of 0.2	
+MCO000007467	Escherichia coli| pdhR knockout mutant| minimal medium| glucose 11 mM| OD650 of 0.2	
+MCO000007468	Escherichia coli| minimal medium| glucose 2%| mid exponential phase	
+MCO000007469	Escherichia coli| minimal medium| sodium acetate 2%| mid exponential phase	
+MCO000007470	Escherichia coli| minimal medium| glucose| 37.0 C| mid exponential phase	
+MCO000007471	Escherichia coli| minimal medium| glucose; novobiocin 12.5 µg/mL| 37.0 C| mid exponential phase	
+MCO000007472	Escherichia coli| minimal medium| pyruvate 40 mM| OD650 of 0.2	
+MCO000007473	Escherichia coli| pdhR knockout mutant| minimal medium| pyruvate 40 mM| OD650 of 0.2	
+MCO000007474	Escherichia coli| minimal medium| succinate 40 mM	
+MCO000007475	Escherichia coli| minimal medium| pyruvate 40 mM	
+MCO000007476	Escherichia coli| MOPS| 37.0 C	
+MCO000007477	Escherichia coli| MOPS| acetate 0.009%| 37.0 C	
+MCO000007478	Escherichia coli| MOPS| glucose 0.05%| 37.0 C	
+MCO000007479	Escherichia coli| MOPS| N-acetylglucosamine| exponential phase	
+MCO000007480	Escherichia coli| MOPS| N-acetyl-D-mannosamine| exponential phase	
+MCO000007481	Escherichia coli| MOPS| N-acetyl-D-mannosamine| 30.0 C| exponential phase	
+MCO000007482	Escherichia coli| MOPS| acetate 4 g/L; rifampicin 500 µg/mL| exponential phase	
+MCO000007483	Escherichia coli| MOPS| amino acids 50 µg; glucose 0.2%; thiamine 1 µg/mL| 32.0 C| exponential phase	
+MCO000007484	Escherichia coli| MOPS| amino acids 50 µg; cadmium dichloride 600 µM; glucose 0.2%; thiamine 1 µg/mL| 32.0 C| exponential phase	
+MCO000007485	Escherichia coli| MOPS| glucose 4 g/L; rifampicin 500 µg/mL| exponential phase	
+MCO000007486	Escherichia coli| MOPS| glucose| 37.0 C	
+MCO000007487	Escherichia coli| MOPS| S-nitrosoglutathione 50 µM; glucose| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007488	Escherichia coli| MOPS| S-nitrosoglutathione 50 µM; glucose; homocysteine 1 mM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007489	Escherichia coli| metR knockout mutant| MOPS| S-nitrosoglutathione 50 µM; glucose| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007490	Escherichia coli| MOPS| glucose| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007491	Escherichia coli| MOPS| glucose; homocysteine 1 mM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007492	Escherichia coli| MOPS| glucose; sodium nitroprusside 50 µM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007493	Escherichia coli| metC knockout mutant| MOPS| glucose| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007494	Escherichia coli| metE knockout mutant| MOPS| glucose| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007495	Escherichia coli| metR knockout mutant| MOPS| glucose| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007496	Escherichia coli| MOPS| glucose; homocysteine 1 mM; sodium nitroprusside 50 µM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007497	Escherichia coli| metR knockout mutant| MOPS| glucose; sodium nitroprusside 50 µM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007498	Escherichia coli| MacConkey agar| (NH4)2Fe(SO4)2 30 µM| 30.0 C	
+MCO000007499	Escherichia coli| MacConkey agar| (NH4)2Fe(SO4)2 30 µM; 2,2’-bipyridine 20 mM| 30.0 C	
+MCO000007500	Escherichia coli| MacConkey agar| (NH4)2Fe(SO4)2 30 µM; desferrioxamine B mesylate 20 mM| 30.0 C	
+MCO000007501	Escherichia coli| N-C- medium| ammonium chloride 10 mM; arginine 1 mM; glucose 0.4%; thiamine hydrochloride 0.015 mM; uracil 1 mM| 37.0 C| OD650 of 0.5	
+MCO000007502	Escherichia coli| N-C- medium| ammonium chloride 10 mM; UMP 0.25 mM; arginine 1 mM; glucose 0.4%; thiamine hydrochloride 0.015 mM| 37.0 C| OD650 of 0.5	
+MCO000007503	Escherichia coli| TGYEP| nickel chloride 5 µM; sodium molybdate 1 µM; sodium selenite 1 µM| pH 6.5| oxygen atom| OD600 from 0.4 to 0.6	
+MCO000007504	Escherichia coli| TGYEP| nickel chloride 5 µM; sodium formate 30 mM; sodium molybdate 1 µM; sodium selenite 1 µM| pH 6.5| oxygen atom| OD600 from 0.4 to 0.6	
+MCO000007505	Escherichia coli| rpoS knockout mutant; plasmid pUBAD::rpoS (arabinose-induced rpoS) mutant| minimal medium| acetate 50 mM; casamino acids 0.2%; glucose 0.4%; thiamine 0.2 µg/mL| pH 6.5| oxygen atom	
+MCO000007506	Escherichia coli| allR knockout mutant| minimal medium| D-xylose 120 µM; ammonium sulfate 20 mM; glyoxylate| mid exponential phase	
+MCO000007507	Escherichia coli| allR knockout mutant| minimal medium| D-xylose 120 µM; L-glutamine 0.2%; glyoxylate| mid exponential phase	
+MCO000007508	Escherichia coli| allR knockout mutant| minimal medium| D-xylose 120 µM; ammonium sulfate 0.5 mM; glyoxylate| mid exponential phase	
+MCO000007509	Escherichia coli| allR knockout mutant| minimal medium| D-xylose 120 µM; ammonium sulfate 20 mM| mid exponential phase	
+MCO000007510	Escherichia coli| allR knockout mutant| minimal medium| D-xylose 120 µM; L-glutamine 0.2%| mid exponential phase	
+MCO000007511	Escherichia coli| allR knockout mutant| minimal medium| D-xylose 120 µM; allantoin 60 mM| mid exponential phase	
+MCO000007512	Escherichia coli| allR knockout mutant| minimal medium| D-xylose 120 µM; ammonium sulfate 0.5 mM| mid exponential phase	
+MCO000007513	Escherichia coli| allS knockout mutant| minimal medium| D-xylose 120 µM; L-glutamine zwitterion| mid exponential phase	
+MCO000007514	Escherichia coli| allS knockout mutant| minimal medium| D-xylose 120 µM; L-glutamine zwitterion; glyoxylate| mid exponential phase	
+MCO000007515	Escherichia coli| allS knockout mutant| minimal medium| D-xylose 120 µM; ammonium sulfate 0.5 mM| mid exponential phase	
+MCO000007516	Escherichia coli| allS knockout mutant| minimal medium| D-xylose 120 µM; ammonium sulfate 0.5 mM; glyoxylate| mid exponential phase	
+MCO000007517	Escherichia coli| allS knockout mutant| minimal medium| D-xylose 120 µM; L-glutamine 0.2%; glyoxylate| mid exponential phase	
+MCO000007518	Escherichia coli| allS knockout mutant| minimal medium| D-xylose 120 µM; ammonium sulfate 20 mM| mid exponential phase	
+MCO000007519	Escherichia coli| arcA knockout mutant; multicopy plasmid pRB38 (arcA) mutant| L broth| glucose 11 mM| OD650 of 0.4	
+MCO000007520	Escherichia coli| conditioned culture medium| tryptone 10 g/L; yeast extract 5 g/L| 37.0 C| mid to late exponential phase	
+MCO000007521	Escherichia coli| sdiA knockout mutant| conditioned culture medium| tryptone 10 g/L; yeast extract 5 g/L| 37.0 C| mid to late exponential phase	
+MCO000007522	Escherichia coli| ethyl acetate extract of LB| 37.0 C| OD600 of 1.5	
+MCO000007523	Escherichia coli| ethyl acetate extract of conditioned medium| 37.0 C| OD600 of 1.5	
+MCO000007524	Escherichia coli| fnr knockout mutant| M9 minimal medium| TMAO 50 mM; casamino acids 0.05%; fumarate 50 mM; glycerol 0.4%| oxygen atom| 37.0 C	
+MCO000007525	Escherichia coli| ihfB knockout mutant| minimal medium| glucose 2%| mid exponential phase	
+MCO000007526	Escherichia coli| ihfB knockout mutant| minimal medium| sodium acetate 2%| mid exponential phase	
+MCO000007527	Escherichia coli| iclR knockout mutant; ihfB knockout mutant| minimal medium| sodium acetate 2%| mid exponential phase	
+MCO000007528	Escherichia coli| lrp knockout mutant| LB medium| 37.0 C| exponential phase	
+MCO000007529	Escherichia coli| marA knockout mutant; marB knockout mutant; marR knockout mutant	
+MCO000007530	Escherichia coli| marA knockout mutant; marB knockout mutant; marR knockout mutant| sodium salicylate 5 mM	
+MCO000007531	Escherichia coli| metC knockout mutant| MOPS| S-nitrosoglutathione 50 µM; glucose| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007532	Escherichia coli| metC knockout mutant| MOPS| S-nitrosoglutathione 50 µM; glucose; homocysteine 1 mM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007533	Escherichia coli| metC knockout mutant| MOPS| glucose; homocysteine 1 mM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007534	Escherichia coli| metC knockout mutant| MOPS| glucose; sodium nitroprusside 50 µM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007535	Escherichia coli| metC knockout mutant| MOPS| glucose; homocysteine 1 mM; sodium nitroprusside 50 µM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007536	Escherichia coli| metE knockout mutant| MOPS| S-nitrosoglutathione 50 µM; glucose| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007537	Escherichia coli| metE knockout mutant| MOPS| S-nitrosoglutathione 50 µM; glucose; homocysteine 1 mM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007538	Escherichia coli| metE knockout mutant| MOPS| glucose; homocysteine 1 mM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007539	Escherichia coli| metE knockout mutant| MOPS| glucose; sodium nitroprusside 50 µM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007540	Escherichia coli| metE knockout mutant| MOPS| glucose; homocysteine 1 mM; sodium nitroprusside 50 µM| pH 7.0| 37.0 C| OD600 below 0.7	
+MCO000007541	Escherichia coli| multicopy plasmid pAMC35 (pexB) mutant| LB medium| 37.0 C| stationary phase	
+MCO000007542	Escherichia coli| rpoS knockout mutant; multicopy plasmid pAMC35 (pexB) mutant| LB medium| 37.0 C| stationary phase	
+MCO000007543	Escherichia coli| multicopy plasmid pAMC35 (pexB) mutant| minimal medium| glucose| 37.0 C| stationary phase	
+MCO000007544	Escherichia coli| rpoS knockout mutant; multicopy plasmid pAMC35 (pexB) mutant| minimal medium| glucose| 37.0 C| stationary phase	
+MCO000007545	Escherichia coli| multicopy plasmid pDEL15 (maoB) mutant| M9 minimal medium| glucose 0.5%; thiamine 10 µg/mL| oxygen atom| 37.0 C	
+MCO000007546	Escherichia coli| multicopy plasmid pDEL15 (maoB) mutant| M9 minimal medium| glucose 0.5%; thiamine 10 µg/mL; tyramine 3 mM| oxygen atom| 37.0 C	
+MCO000007547	Escherichia coli| multicopy plasmid pGS623 (pdhR-lpd) mutant| L broth| pyruvate 40 mM| OD650 of 0.2	
+MCO000007548	Escherichia coli| narL knockout mutant| M9 minimal medium| TMAO 50 mM; casamino acids 0.05%; fumarate 50 mM; glycerol 0.4%; nitrate| 37.0 C	
+MCO000007549	Escherichia coli| nrdA knockout mutant; nrdB knockout mutant| rich medium| oxygen atom| 37.0 C| OD600 of 0.5	
+MCO000007550	Escherichia coli| pH 7.0| 37.0 C| stationary phase	
+MCO000007551	Escherichia coli| rpoS knockout mutant| pH 7.0| 37.0 C| stationary phase	
+MCO000007552	Escherichia coli| paraquat 50 µM| oxygen atom| 37.0 C	
+MCO000007553	Escherichia coli| paraquat 50 µM| 37.0 C	
+MCO000007554	Escherichia coli| pdhR knockout mutant; multicopy plasmid pGS613 (pdhR) mutant| minimal medium| glucose 11 mM| OD650 of 0.2	
+MCO000007555	Escherichia coli| pdhR knockout mutant; multicopy plasmid pGS613 (pdhR) mutant| minimal medium| pyruvate 40 mM| OD650 of 0.2	
+MCO000007556	Escherichia coli| pdhR knockout mutant; multicopy plasmid pGS613 (pdhR) mutant| L broth| pyruvate 40 mM| OD650 of 0.8	
+MCO000007557	Escherichia coli| plasmid pALS13 (not induced truncated relA) mutant| LB medium| 37.0 C| mid exponential phase	
+MCO000007558	Escherichia coli| plasmid pALS13 (IPTG-induced truncated relA) mutant| LB medium| 37.0 C| mid exponential phase	
+MCO000007559	Escherichia coli| plasmid pBAD/Myc-HisA mutant| LB medium| 37.0 C| mid exponential phase	
+MCO000007560	Escherichia coli| plasmid pBADBaeR (arabinose-induced baeR) mutant| LB medium| 37.0 C| mid exponential phase	
+MCO000007561	Escherichia coli| plasmid pRL48 (from nt -1398 to nt +70 relative to rpoS translational start site) mutant| LB medium| exponential phase	
+MCO000007562	Escherichia coli| plasmid pRL48 (from nt -1398 to nt +70 relative to rpoS translational start site) mutant| LB medium| stationary phase	
+MCO000007563	Escherichia coli| poor medium| 37.0 C| OD650 from 0.5 to 0.7	
+MCO000007564	Escherichia coli| poor medium| sodium nitrate 20 mM| 37.0 C| OD650 from 0.5 to 0.7	
+MCO000007565	Escherichia coli| poor medium| sodium nitrite 2.5 mM| 37.0 C| OD650 from 0.5 to 0.7	
+MCO000007566	Escherichia coli| cra knockout mutant| poor medium| 37.0 C| OD650 from 0.5 to 0.7	
+MCO000007567	Escherichia coli| cra knockout mutant| poor medium| sodium nitrate 20 mM| 37.0 C| OD650 from 0.5 to 0.7	
+MCO000007568	Escherichia coli| cra knockout mutant| poor medium| sodium nitrite 2.5 mM| 37.0 C| OD650 from 0.5 to 0.7	
+MCO000007569	Escherichia coli| rich medium| 37.0 C| OD650 from 0.5 to 0.7	
+MCO000007570	Escherichia coli| rich medium| sodium nitrate 20 mM| 37.0 C| OD650 from 0.5 to 0.7	
+MCO000007571	Escherichia coli| rich medium| sodium nitrite 2.5 mM| 37.0 C| OD650 from 0.5 to 0.7	
+MCO000007572	Escherichia coli| rich medium| hydroxyurea 50 mM| oxygen atom| 37.0 C| OD600 of 0.5	
+MCO000007573	Escherichia coli| rich medium| oxygen atom| 37.0 C| OD600 of 0.5	
+MCO000007574	Escherichia coli| rich medium| pH 7.0| dioxygen 10 µM	
+MCO000007575	Escherichia coli| rich medium| pH 7.0| dioxygen < 10 µM	
+MCO000007576	Escherichia coli| rich medium| pH 7.0| dioxygen > 10 µM	
+MCO000007577	Escherichia coli| rpoS knockout mutant| LE392 conditioned medium| 28.0 C	
+MCO000007578	Escherichia coli| rpoS knockout mutant| LB medium| 37.0 C| exponential phase	
+MCO000007579	Escherichia coli| rpoS knockout mutant| LB medium| 37.0 C| stationary phase	
+MCO000007580	Escherichia coli| rpoS knockout mutant| M9 minimal medium| glucose 0.4%| 37.0 C| exponential phase	
+MCO000007581	Escherichia coli| rpoS knockout mutant| M9 minimal medium| hydrogen peroxide 120 µM; glucose 0.4%| 37.0 C| exponential phase	
+MCO000007582	Escherichia coli| sdiA knockout mutant| LB medium| 37.0 C	
+MCO000007583	Escherichia coli| sdiA knockout mutant| conditioned culture medium| 37.0 C	
+MCO000007584	Escherichia coli| sdiA knockout mutant; plasmid pCX16 (sdiA) mutant| LB medium| 28.0 C| OD600 of 0.65	
+MCO000007585	Escherichia coli| sdiA knockout mutant; plasmid pCX16 (sdiA) mutant| LB medium| N-Decanoyl-DL-homoserine lactone 1 µM| 28.0 C| OD600 of 0.65	
+MCO000007586	Escherichia coli| sdiA knockout mutant; plasmid pCX16 (sdiA) mutant| LB medium| N-(3-oxohexanoyl)-L-homoserine lactone 1 µM| 28.0 C| OD600 of 0.65	
+MCO000007587	Escherichia coli| sdiA knockout mutant; plasmid pCX16 (sdiA) mutant| LB medium| V. harveyi autoinducer 1 µM| 28.0 C| OD600 of 0.65	
+MCO000007588	Escherichia coli| sdiA knockout mutant; plasmid pGB2 mutant| LB medium| 28.0 C| OD600 of 0.65	
+MCO000007589	Escherichia coli| soxR knockout mutant; soxS knockout mutant| LB medium| 37.0 C	
+MCO000007590	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSXR (IPTG-induced soxR) mutant| LB medium| 37.0 C	
+MCO000007591	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSXR (IPTG-induced soxR) mutant| LB medium| 2,2'-bipyridine 150 μm| 37.0 C	
+MCO000007592	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSXR (not induced soxR) mutant| LB medium| 37.0 C	
+MCO000007593	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSXR (not induced soxR) mutant| LB medium| 2,2'-bipyridine 150 μm| 37.0 C	
+MCO000007594	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSXR (IPTG-induced soxR) mutant| LB broth| 37.0 C	
+MCO000007595	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSXR (IPTG-induced soxR) mutant| LB broth| paraquat 0.25 mM| 37.0 C	
+MCO000007596	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSE380 mutant| LB medium| 2,2'-bipyridine 150 μm| 37.0 C	
+MCO000007597	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSXS (IPTG-induced soxS) mutant| LB medium| 2,2'-bipyridine 150 μm| 37.0 C	
+MCO000007598	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSE380 mutant| LB medium| paraquat 50 µM| 37.0 C	
+MCO000007599	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSXS (IPTG-induced soxS) mutant| LB medium| paraquat 50 µM| 37.0 C	
+MCO000007600	Escherichia coli| soxR knockout mutant; soxS knockout mutant; plasmid pSXR (IPTG-induced soxR) mutant| LB medium| paraquat 50 µM| 37.0 C	
+MCO000007601	Escherichia coli| soxR knockout mutant; soxS knockout mutant; Φ(soxR)| LB medium| 37.0 C	
+MCO000007602	Escherichia coli| soxR knockout mutant; soxS knockout mutant; Φ(soxR)| LB medium| paraquat 50 µM| 37.0 C	
+MCO000007603	Escherichia coli| yiaJ knockout mutant| chloroacetic acid| OD600 of 0.25	
+MCO000007604	Escherichia coli| yiaJ knockout mutant| chloroacetic acid| glucose 120 mM| OD600 of 0.25	
+MCO000007605	Escherichia coli| yiaJ knockout mutant| chloroacetic acid| cAMP 5 mM; glucose 120 mM| OD600 of 0.25	
+MCO000007606	Escherichia coli| yiaJ knockout mutant| chloroacetic acid| glucose 60 mM| oxygen atom| OD600 of 0.5	
+MCO000007607	Escherichia coli| yiaJ knockout mutant| chloroacetic acid| cAMP 5 mM; glucose 60 mM| oxygen atom| OD600 of 0.5	
+MCO000007608	Escherichia coli| yiaJ knockout mutant| succinate 60 mM| oxygen atom| OD600 of 0.5	
+MCO000007609	Escherichia coli| znuA knockout mutant| M9 minimal medium| (NH4)2Fe(SO4)2 30 µM; glucose 0.2%; p-aminobenzoic acid 40 µM; p-hydroxybenzoic acid 40 µM; phenylalanine 0.1 mg/mL; tryptophan; tyrosine 0.1 mg/mL	
+MCO000007610	Escherichia coli| znuA knockout mutant| M9 minimal medium| (NH4)2Fe(SO4)2 30 µM; N,N,N',N'-tetrakis(2-pyridylmethyl)ethylenediamine 1.5 µM; glucose 0.2%; p-aminobenzoic acid 40 µM; p-hydroxybenzoic acid 40 µM; phenylalanine 0.1 mg/mL; tryptophan; tyrosine 0.1 mg/mL	
+MCO000007611	Escherichia coli| znuA knockout mutant| M9 minimal medium| (NH4)2Fe(SO4)2 30 µM; zinc sulfate 5 µM; glucose 0.2%; p-aminobenzoic acid 40 µM; p-hydroxybenzoic acid 40 µM; phenylalanine 0.1 mg/mL; tryptophan; tyrosine 0.1 mg/mL	
+MCO000007612	Escherichia coli| znuA knockout mutant| M9 minimal medium| desferrioxamine B mesylate 5 µM; ferri-desferal 10 µM; glucose 0.2%; p-aminobenzoic acid 40 µM; p-hydroxybenzoic acid 40 µM; phenylalanine 0.1 mg/mL; tryptophan; tyrosine 0.1 mg/mL	
+MCO000007613	Escherichia coli| znuA knockout mutant| MacConkey agar| (NH4)2Fe(SO4)2 30 µM| 30.0 C	
+MCO000007614	Escherichia coli| znuA knockout mutant| MacConkey agar| (NH4)2Fe(SO4)2 30 µM; zinc sulfate 1 mM| 30.0 C	
+MCO000007615	Escherichia coli| znuA knockout mutant| MacConkey agar| (NH4)2Fe(SO4)2 30 µM; desferrioxamine B mesylate 20 mM| 30.0 C	
+MCO000007616	Escherichia coli| znuA knockout mutant| MacConkey agar| 30.0 C	
+MCO000007617	Escherichia coli| znuA knockout mutant| MacConkey agar| (NH4)2Fe(SO4)2 10 mM| 30.0 C	
+MCO000007618	Escherichia coli| znuA knockout mutant| MacConkey agar| EGTA 50 mM| 30.0 C	
+MCO000007619	Escherichia coli| znuA knockout mutant| MacConkey agar| MnCl2 1 mM| 30.0 C	
+MCO000007620	Escherichia coli| znuB knockout mutant| MacConkey agar| (NH4)2Fe(SO4)2 30 µM| 30.0 C	
+MCO000007621	Escherichia coli| znuB knockout mutant| MacConkey agar| (NH4)2Fe(SO4)2 30 µM; zinc sulfate 1 mM| 30.0 C	
+MCO000007622	Escherichia coli| znuB knockout mutant| MacConkey agar| (NH4)2Fe(SO4)2 30 µM; desferrioxamine B mesylate 20 mM| 30.0 C	
+MCO000007623	Escherichia coli| znuB knockout mutant| MacConkey agar| 30.0 C	
+MCO000007624	Escherichia coli| znuB knockout mutant| MacConkey agar| (NH4)2Fe(SO4)2 10 mM| 30.0 C	
+MCO000007625	Escherichia coli| znuB knockout mutant| MacConkey agar| EGTA 50 mM| 30.0 C	
+MCO000007626	Escherichia coli| znuB knockout mutant| MacConkey agar| MnCl2 1 mM| 30.0 C	
+MCO000011953	Escherichia coli str. K-12 substr. MG1655| wild type| M9 minimal medium| acetate 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000011954	Escherichia coli str. K-12 substr. MG1655| cra knockout mutant| M9 minimal medium| acetate 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000012484	Escherichia coli str. K-12 substr. MG1655| cra-8myc| M9 minimal medium| fructose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000012485	Escherichia coli str. K-12 substr. MG1655| cra knockout mutant| M9 minimal medium| fructose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000012820	Escherichia coli str. K-12 substr. MG1655| wild type| M9 minimal medium| glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000012821	Escherichia coli str. K-12 substr. MG1655| cra knockout mutant| M9 minimal medium| glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000012824	Escherichia coli str. K-12 substr. MG1655| cra-8myc| M9 minimal medium| glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000013001	Escherichia coli str. K-12 substr. MG1655| wild type| M9 minimal medium| 2,2’-bipyridine 200 µM; glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000013002	Escherichia coli str. K-12 substr. MG1655| fur knockout mutant| M9 minimal medium| 2,2’-bipyridine 200 µM; glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000013462	Escherichia coli str. K-12 substr. MG1655| wild type| M9 minimal medium| iron dichloride 0.1 mM; glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000013463	Escherichia coli str. K-12 substr. MG1655| fur knockout mutant| M9 minimal medium| iron dichloride 0.1 mM; glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000013492	Escherichia coli str. K-12 substr. MG1655| fur-8myc| M9 minimal medium| iron dichloride 0.1 mM; glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000013579	Escherichia coli str. K-12 substr. MG1655| wild type| M9 minimal medium| glucose 0.2%| aerobiosis| 37.0 C| pH 5.5| OD600 of 0.3| mid exponential phase	GC related to RI-HT
+MCO000013580	Escherichia coli str. K-12 substr. MG1655| gadE knockout mutant| M9 minimal medium| glucose 0.2%| aerobiosis| 37.0 C| pH 5.5| OD600 of 0.3| mid exponential phase	GC related to RI-HT
+MCO000013590	Escherichia coli str. K-12 substr. MG1655| gadX knockout mutant| M9 minimal medium| glucose 0.2%| aerobiosis| 37.0 C| pH 5.5| OD600 of 0.3| mid exponential phase	GC related to RI-HT
+MCO000013600	Escherichia coli str. K-12 substr. MG1655| wild type| M9 minimal medium| sodium chloride 0.3 M; glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000013601	Escherichia coli str. K-12 substr. MG1655| ompR knockout mutant| M9 minimal medium| sodium chloride 0.3 M; glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000013617	Escherichia coli str. K-12 substr. MG1655| wild type| M9 minimal medium| paraquat 0.25 mM; glucose 0.2%| mid exponential phase	GC related to RI-HT
+MCO000013618	Escherichia coli str. K-12 substr. MG1655| oxyR knockout mutant| M9 minimal medium| paraquat 0.25 mM; glucose 0.2%| mid exponential phase	GC related to RI-HT
+MCO000013638	Escherichia coli str. K-12 substr. MG1655| soxS knockout mutant| M9 minimal medium| paraquat 0.25 mM; glucose 0.2%| mid exponential phase	GC related to RI-HT
+MCO000016362	Escherichia coli str. K-12 substr. MG1655| gadW knockout mutant| M9 minimal medium| glucose 0.2%| aerobiosis| 37.0 C| pH 5.5| OD600 of 0.3| mid exponential phase	GC related to RI-HT
+MCO000017685	Escherichia coli str. K-12 substr. MG1655| fur-8myc| M9 minimal medium| 2,2’-bipyridine 200 µM; glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000022184	Escherichia coli str. K-12 substr. MG1655| cra-8myc| M9 minimal medium| acetate 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000022582	Escherichia coli str. K-12 substr. MG1655| gadW-8myc| M9 minimal medium| glucose 0.2%| aerobiosis| 37.0 C| pH 5.5| OD600 of 0.3| mid exponential phase	GC related to RI-HT
+MCO000022588	Escherichia coli str. K-12 substr. MG1655| gadE-8myc| M9 minimal medium| glucose 0.2%| aerobiosis| 37.0 C| pH 5.5| OD600 of 0.3| mid exponential phase	GC related to RI-HT
+MCO000022603	Escherichia coli str. K-12 substr. MG1655| ompR-8myc| M9 minimal medium| sodium chloride 0.3 M; glucose 0.2%| aerobiosis| 37.0 C| mid exponential phase	GC related to RI-HT
+MCO000023284	Escherichia coli str. K-12 substr. MG1655| gadX-8myc| M9 minimal medium| glucose 0.2%| aerobiosis| 37.0 C| pH 5.5| OD600 of 0.3| mid exponential phase	GC related to RI-HT
+MCO000023309	Escherichia coli str. K-12 substr. MG1655| oxyR-8myc| M9 minimal medium| paraquat 0.25 mM; glucose 0.2%| mid exponential phase	GC related to RI-HT
+MCO000023356	Escherichia coli str. K-12 substr. MG1655| soxS-8myc| M9 minimal medium| paraquat 0.25 mM; glucose 0.2%| mid exponential phase	GC related to RI-HT

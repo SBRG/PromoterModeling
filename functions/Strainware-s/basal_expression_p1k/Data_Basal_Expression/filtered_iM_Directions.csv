@@ -1,0 +1,33 @@
+name,regulator_readable,0_direction
+RpoS,RpoS,-
+FlhDC-2,FlhDC,-
+FliA,FliA,-
+ppGpp,ppGpp,+
+GadXW,GadX and GadW,-
+Pyrimidine,PurR or UTP,-
+Fnr-3,Fnr,-
+Fnr-1,Fnr,-
+ArcA,ArcA,+
+Putrescine,RpoS and ArcA and PuuR,-
+Lrp,Lrp,+
+Crp-1,Crp,-
+Copper,CusR or CueR or HprR,-
+Zinc-1,Zur or ZntR or CueR,-
+Fur-1,Fur,+
+Fnr-2,Fnr,-
+Thiamine-1,Thiamine diphosphate,+
+Purine,PurR and ppGpp,+
+Crp-2,Crp,-
+Arginine,ArgR,+
+Translation,DksA,-
+Glycerol,Crp and GlpR,-
+Cysteine-1,CysB,+
+Maltose,MalT,-
+Methionine,MetJ,-
+FlhDC-1,FlhDC,+
+Fur-2,Fur,-
+Glycolate,IHF and ArcA and PdhR and GlcC,-
+gcvB,gcvB,-
+Capsule,RcsAB,-
+NtrC-1,RpoN and RpoS and NtrC,-
+Glutamine,NtrC,-

@@ -1,0 +1,11 @@
+locus_tag,left,end,strand,name
+b0001,190,255,1,thr operon leader peptide
+b0002,337,2799,1,fused aspartate kinase/homoserine dehydrogenase 1
+b0003,2801,3733,1,homoserine kinase
+b0004,3734,5020,1,threonine synthase
+b0005,5234,5530,1,DUF2502 domain-containing protein YaaX
+b0006,5683,6459,-1,peroxide stress resistance protein YaaA
+b0007,6529,7959,-1,putative transporter YaaJ
+b0008,8238,9191,1,transaldolase B
+b0009,9306,9893,1,molybdopterin adenylyltransferase
+b0010,9928,10494,-1,acetate/succinate:H(+) symporter

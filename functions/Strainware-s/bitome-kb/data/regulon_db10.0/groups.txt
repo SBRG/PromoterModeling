@@ -1,0 +1,10 @@
+# Table: GROUPS
+# Columns:
+# 1) GROUP_ID
+# 2) GROUP_NAME
+ECK12T656901	GUs related to the two-component system
+ECK12T656902	GUs related to the signal transduction of the sigma factors
+ECK12T656903	GUs related to carbon source utilization
+ECK12T656904	GUs related to the metabolism of amino acids
+ECK12T656905	GUs related to metal utilization
+ECK12T656906	Unclassified Gensor Units

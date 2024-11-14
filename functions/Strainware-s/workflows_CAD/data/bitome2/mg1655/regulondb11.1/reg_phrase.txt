@@ -1,0 +1,352 @@
+# # Copies and Copyright-Notice
+#
+#      RegulonDB is free for academic/noncommercial use
+#
+#      User is not entitled to change or erase data sets of the RegulonDB
+#      database or to eliminate copyright notices from RegulonDB. Furthermore,
+#      User is not entitled to expand RegulonDB or to integrate RegulonDB partly
+#      or as a whole into other databank systems, without prior written consent
+#      from CCG-UNAM.
+#
+#      Please check the license at http://regulondb.ccg.unam.mx/menu/download/full_version/terms_and_conditions.jsp
+#
+# Citation
+#
+#      Tierrafría, V. H. et al. (2022). RegulonDB 11.0: Comprehensive high-throughput datasets on transcriptional regulation in Escherichia coli K-12,
+#      Microb Genom. 2022 May;8(5). doi: 10.1099/mgen.0.000833. PMID: 35584008. https://doi.org/10.1099/mgen.0.000833
+#
+#
+# Contact
+#
+#      Person: RegulonDB Team
+#      Web Page: http://regulondb.ccg.unam.mx/menu/about_regulondb/contact_us/index.jsp
+#          (regulondb@ccg.unam.mx)
+#
+#
+# RegulonDB: 11.1 Date: 12/12/2022
+# Created: 12/12/2022 11:48:35
+# Table: REG_PHRASE
+# Columns:
+# 1) REG_PHRASE_ID
+# 2) REG_PHRASE_DESCRIPTION
+# 3) REGULATION_RATIO
+# 4) ON_HALF_LIFE
+# 5) OFF_HALF_LIFE
+# 6) PHRASE
+# 7) REG_PHRASE_FUNCTION
+# 8) REG_PHRASE_NOTE
+# 9) REG_PHRASE_INTERNAL_COMMENT
+# 10) KEY_ID_ORG
+ECK12T352842					[GalR,-]	repressor			ECK12
+ECK12T352843					[GalS,-]	repressor			ECK12
+ECK12T352844					[MraZ,-]	repressor			ECK12
+ECK12T352845					[PdhR,-]	repressor			ECK12
+ECK12T352846					[CRP,-]	repressor			ECK12
+ECK12T352847					[Cra,-]	repressor			ECK12
+ECK12T352848					[CRP,+]	activator			ECK12
+ECK12T352849					[NtrC,+]	activator			ECK12
+ECK12T352850					[ArgR,+]	activator			ECK12
+ECK12T352851					[Fur,-]	repressor			ECK12
+ECK12T352852					[IscR,+]	activator			ECK12
+ECK12T352853					[NrdR,-]	repressor			ECK12
+ECK12T352854					[CpxR,+]	activator			ECK12
+ECK12T352855					[IHF,-]	repressor			ECK12
+ECK12T352856					[ModE,-]	repressor			ECK12
+ECK12T352857					[FNR,+]	activator			ECK12
+ECK12T352858					[CueR,-]	repressor			ECK12
+ECK12T352859					[ModE,+]	activator			ECK12
+ECK12T352860					[Fis,-]	repressor			ECK12
+ECK12T352861					[Fis,+]	activator			ECK12
+ECK12T352862					[ArcA,-]	repressor			ECK12
+ECK12T352863					[Mlc,-]	repressor			ECK12
+ECK12T352864					[SoxS,+]	activator			ECK12
+ECK12T352865					[ArcA,+]	activator			ECK12
+ECK12T352866					[FNR,-]	repressor			ECK12
+ECK12T352867					[Lrp,-]	repressor			ECK12
+ECK12T352868					[H-NS,-]	repressor			ECK12
+ECK12T352869					[OxyR,+]	activator			ECK12
+ECK12T352870					[ArgP,-]	repressor			ECK12
+ECK12T352871					[PhoB,+]	activator			ECK12
+ECK12T352872					[RcsB,+]	activator			ECK12
+ECK12T352873					[DcuR,+]	activator			ECK12
+ECK12T352874					[H-NS,+]	activator			ECK12
+ECK12T352875					[GadE,+]	activator			ECK12
+ECK12T352876					[MatA,-]	repressor			ECK12
+ECK12T352877					[CpxR,-]	repressor			ECK12
+ECK12T352878					[CsgD,-]	repressor			ECK12
+ECK12T352879					[FlhDC,+]	activator			ECK12
+ECK12T352880					[NanR,-]	repressor			ECK12
+ECK12T352881					[RstA,+]	activator			ECK12
+ECK12T352882					[RcdA,+]	activator			ECK12
+ECK12T352883					[OxyR,-]	repressor			ECK12
+ECK12T352884					[MetJ,-]	repressor			ECK12
+ECK12T352885					[PspF,+]	activator			ECK12
+ECK12T352886					[IHF,+]	activator			ECK12
+ECK12T352887					[PspF,-]	repressor			ECK12
+ECK12T352888					[HprR,+]	activator			ECK12
+ECK12T352889					[CusR,+]	activator			ECK12
+ECK12T352890					[Rob,+]	activator			ECK12
+ECK12T352891					[MarA,+]	activator			ECK12
+ECK12T352892					[IscR,-]	repressor			ECK12
+ECK12T352893					[PhoP,-]	repressor			ECK12
+ECK12T352894					[Nac,+]	activator			ECK12
+ECK12T352895					[GadW,-]	repressor			ECK12
+ECK12T352896					[RutR,-]	repressor			ECK12
+ECK12T352897					[GadX,+]	activator			ECK12
+ECK12T352898					[HypT,+]	activator			ECK12
+ECK12T352899					[MhpR,+]	activator			ECK12
+ECK12T352900					[NsrR,-]	repressor			ECK12
+ECK12T352901					[YdcI,+]	activator			ECK12
+ECK12T352902					[EvgA,+]	activator			ECK12
+ECK12T352903					[CueR,+]	activator			ECK12
+ECK12T352904					[Cra,+]	activator			ECK12
+ECK12T352905					[IHF,?]	unknown			ECK12
+ECK12T352906					[Fis,?]	unknown			ECK12
+ECK12T352907					[YdeO,+]	activator			ECK12
+ECK12T352908					[PrpR,+]	activator			ECK12
+ECK12T352909					[PhoP,+]	activator			ECK12
+ECK12T352910					[OmpR,-]	repressor			ECK12
+ECK12T352911					[Fur,+]	activator			ECK12
+ECK12T352912					[GlaR,-]	repressor			ECK12
+ECK12T352913					[Lrp,+]	activator			ECK12
+ECK12T352914					[FliZ,-]	repressor			ECK12
+ECK12T352915					[NarL,+]	activator			ECK12
+ECK12T352916					[NsrR,+]	activator			ECK12
+ECK12T352917					[FadR,-]	repressor			ECK12
+ECK12T352918					[FadR,+]	activator			ECK12
+ECK12T352919					[IclR,-]	repressor			ECK12
+ECK12T352920					[NagC,-]	repressor			ECK12
+ECK12T352921					[NorR,+]	activator			ECK12
+ECK12T352922					[NarL,-]	repressor			ECK12
+ECK12T352923					[NarP,-]	repressor			ECK12
+ECK12T352924					[HU,-]	repressor			ECK12
+ECK12T352925					[CdaR,+]	activator			ECK12
+ECK12T352926					[MngR,-]	repressor			ECK12
+ECK12T352927					[AlsR,-]	repressor			ECK12
+ECK12T352928					[Zur,-]	repressor			ECK12
+ECK12T352929					[ZntR,+]	activator			ECK12
+ECK12T352930					[IdnR,+]	activator			ECK12
+ECK12T352931					[GntR,-]	repressor			ECK12
+ECK12T352932					[UvrY,+]	activator			ECK12
+ECK12T352933					[LeuO,+]	activator			ECK12
+ECK12T352934					[StpA,-]	repressor			ECK12
+ECK12T352935					[RcsB-BglJ,+]	activator			ECK12
+ECK12T352936					[UxuR,-]	repressor			ECK12
+ECK12T352937					[ExuR,-]	repressor			ECK12
+ECK12T352938					[UidR,-]	repressor			ECK12
+ECK12T352939					[UlaR,-]	repressor			ECK12
+ECK12T352940					[MalT,+]	activator			ECK12
+ECK12T352941					[ArgR,-]	repressor			ECK12
+ECK12T352942					[GadW,+]	activator			ECK12
+ECK12T352943					[SdiA,+]	activator			ECK12
+ECK12T352944					[GcvA,+]	activator			ECK12
+ECK12T352945					[LexA,-]	repressor			ECK12
+ECK12T352946					[AgaR,-]	repressor			ECK12
+ECK12T352947					[BasR,+]	activator			ECK12
+ECK12T352948					[NarP,+]	activator			ECK12
+ECK12T352949					[Ada,+]	activator			ECK12
+ECK12T352950					[AraC,-]	repressor			ECK12
+ECK12T352951					[AraC,+]	activator			ECK12
+ECK12T352952					[DeoR,-]	repressor			ECK12
+ECK12T352953					[CytR,-]	repressor			ECK12
+ECK12T352954					[GalS,+]	activator			ECK12
+ECK12T352955					[GalR,+]	activator			ECK12
+ECK12T352956					[NtrC,-]	repressor			ECK12
+ECK12T352957					[GlpR,-]	repressor			ECK12
+ECK12T352958					[IlvY,-]	repressor			ECK12
+ECK12T352959					[KdpE,+]	activator			ECK12
+ECK12T352960					[MarA,-]	repressor			ECK12
+ECK12T352961					[LacI,-]	repressor			ECK12
+ECK12T352962					[CreB,-]	repressor			ECK12
+ECK12T352963					[StpA,+]	activator			ECK12
+ECK12T352964					[MelR,+]	activator			ECK12
+ECK12T352965					[MelR,-]	repressor			ECK12
+ECK12T352966					[ArgP,+]	activator			ECK12
+ECK12T352967					[DnaA,+]	activator			ECK12
+ECK12T352968					[DnaA,-]	repressor			ECK12
+ECK12T352969					[OmpR,+]	activator			ECK12
+ECK12T352970					[EnvY,+]	activator			ECK12
+ECK12T352971					[YjjQ,-]	repressor			ECK12
+ECK12T352972					[RhaS,?]	unknown			ECK12
+ECK12T352973					[RhaS,+]	activator			ECK12
+ECK12T352974					[RhaR,+]	activator			ECK12
+ECK12T352975					[RcdA,-]	repressor			ECK12
+ECK12T352976					[TrpR,-]	repressor			ECK12
+ECK12T352977					[TyrR,-]	repressor			ECK12
+ECK12T352978					[PgrR,-]	repressor			ECK12
+ECK12T352979					[CysB,-]	repressor			ECK12
+ECK12T352980					[CysB,+]	activator			ECK12
+ECK12T352981					[Rob,-]	repressor			ECK12
+ECK12T352982					[PurR,-]	repressor			ECK12
+ECK12T352983					[TorR,+]	activator			ECK12
+ECK12T352984					[TyrR,+]	activator			ECK12
+ECK12T352985					[IlvY,+]	activator			ECK12
+ECK12T352986					[AidB,-]	repressor			ECK12
+ECK12T352987					[GadE-RcsB,+]	activator			ECK12
+ECK12T352988					[AppY,+]	activator			ECK12
+ECK12T352989					[HprR,-]	repressor			ECK12
+ECK12T352990					[CRP,?]	unknown			ECK12
+ECK12T352991					[SoxR,+]	activator			ECK12
+ECK12T352992					[DpiA,+]	activator			ECK12
+ECK12T352993					[BtsR,-]	repressor			ECK12
+ECK12T352994					[FlhDC,-]	repressor			ECK12
+ECK12T352995					[PepA,-]	repressor			ECK12
+ECK12T352996					[RutR,+]	activator			ECK12
+ECK12T352997					[AsnC,+]	activator			ECK12
+ECK12T352998					[Nac,-]	repressor			ECK12
+ECK12T352999					[AsnC,-]	repressor			ECK12
+ECK12T353000					[AtoC,+]	activator			ECK12
+ECK12T353001					[BetI,-]	repressor			ECK12
+ECK12T353002					[LeuO,-]	repressor			ECK12
+ECK12T353003					[MlrA,+]	activator			ECK12
+ECK12T353004					[CadC,+]	activator			ECK12
+ECK12T353005					[TdcA,+]	activator			ECK12
+ECK12T353006					[TdcR,+]	activator			ECK12
+ECK12T353007					[FucR,+]	activator			ECK12
+ECK12T353008					[UhpA,+]	activator			ECK12
+ECK12T353009					[MalI,-]	repressor			ECK12
+ECK12T353010					[SrlR,-]	repressor			ECK12
+ECK12T353011					[GutM,+]	activator			ECK12
+ECK12T353012					[RcsAB,-]	repressor			ECK12
+ECK12T353013					[HdfR,-]	repressor			ECK12
+ECK12T353014					[LrhA,-]	repressor			ECK12
+ECK12T353015					[AcrR,-]	repressor			ECK12
+ECK12T353016					[QseB,+]	activator			ECK12
+ECK12T353017					[CspA,+]	activator			ECK12
+ECK12T353018					[CynR,+]	activator			ECK12
+ECK12T353019					[CynR,-]	repressor			ECK12
+ECK12T353020					[DsdC,+]	activator			ECK12
+ECK12T353021					[SlyA,-]	repressor			ECK12
+ECK12T353022					[FhlA,+]	activator			ECK12
+ECK12T353023					[GatR,-]	repressor			ECK12
+ECK12T353024					[GcvA,-]	repressor			ECK12
+ECK12T353025					[MntR,-]	repressor			ECK12
+ECK12T353026					[HdfR,+]	activator			ECK12
+ECK12T353027					[AdiY,+]	activator			ECK12
+ECK12T353028					[MarR,-]	repressor			ECK12
+ECK12T353029					[NhaR,+]	activator			ECK12
+ECK12T353030					[RbsR,-]	repressor			ECK12
+ECK12T353031					[RcsAB,+]	activator			ECK12
+ECK12T353032					[SdiA,-]	repressor			ECK12
+ECK12T353033					[SoxS,-]	repressor			ECK12
+ECK12T353034					[TreR,-]	repressor			ECK12
+ECK12T353035					[KdgR,-]	repressor			ECK12
+ECK12T353036					[IdnR,-]	repressor			ECK12
+ECK12T353037					[AscG,-]	repressor			ECK12
+ECK12T353038					[PhoB,-]	repressor			ECK12
+ECK12T353039					[HU,+]	activator			ECK12
+ECK12T353040					[FabR,-]	repressor			ECK12
+ECK12T353041					[MetR,+]	activator			ECK12
+ECK12T353042					[AlaS,-]	repressor			ECK12
+ECK12T353043					[HipB,-]	repressor			ECK12
+ECK12T353044					[HipAB,-]	repressor			ECK12
+ECK12T353045					[SutR,-]	repressor			ECK12
+ECK12T353046					[GadX,-]	repressor			ECK12
+ECK12T353047					[BolA,+]	activator			ECK12
+ECK12T353048					[BolA,-]	repressor			ECK12
+ECK12T353049					[AccB,-]	repressor			ECK12
+ECK12T353050					[CaiF,+]	activator			ECK12
+ECK12T353051					[CsgD,+]	activator			ECK12
+ECK12T353052					[MqsA,-]	repressor			ECK12
+ECK12T353053					[RstA,-]	repressor			ECK12
+ECK12T353054					[NanR,+]	activator			ECK12
+ECK12T353055					[NagC,+]	activator			ECK12
+ECK12T353056					[LrhA,+]	activator			ECK12
+ECK12T353057					[HypT,-]	repressor			ECK12
+ECK12T353058					[PdhR,+]	activator			ECK12
+ECK12T353059					[OxyR,?]	unknown			ECK12
+ECK12T353060					[SoxR,-]	repressor			ECK12
+ECK12T353061					[MprA,-]	repressor			ECK12
+ECK12T353062					[YeiL,+]	activator			ECK12
+ECK12T353063					[PutA,-]	repressor			ECK12
+ECK12T353064					[GlcC,+]	activator			ECK12
+ECK12T353065					[GlcC,-]	repressor			ECK12
+ECK12T353066					[TorR,-]	repressor			ECK12
+ECK12T353067					[Cbl,+]	activator			ECK12
+ECK12T353068					[ChbR,-]	repressor			ECK12
+ECK12T353069					[ChbR,+]	activator			ECK12
+ECK12T353070					[BasR,-]	repressor			ECK12
+ECK12T353071					[LldR,-]	repressor			ECK12
+ECK12T353072					[LldR,+]	activator			ECK12
+ECK12T353073					[RtcR,+]	activator			ECK12
+ECK12T353074					[ArsR,-]	repressor			ECK12
+ECK12T353075					[PaaX,-]	repressor			ECK12
+ECK12T353076					[PlaR,-]	repressor			ECK12
+ECK12T353077					[RcsB,-]	repressor			ECK12
+ECK12T353078					[SlyA,+]	activator			ECK12
+ECK12T353079					[XapR,+]	activator			ECK12
+ECK12T353080					[MazE-MazF,-]	repressor			ECK12
+ECK12T353081					[MazE,-]	repressor			ECK12
+ECK12T353082					[EnvR,-]	repressor			ECK12
+ECK12T353083					[XylR,+]	activator			ECK12
+ECK12T353084					[HyfR,+]	activator			ECK12
+ECK12T353085					[NikR,-]	repressor			ECK12
+ECK12T353086					[ZraR,+]	activator			ECK12
+ECK12T353087					[McbR,+]	activator			ECK12
+ECK12T353088					[XylR,-]	repressor			ECK12
+ECK12T353089					[BirA,-]	repressor			ECK12
+ECK12T353090					[AlpA,-]	repressor			ECK12
+ECK12T353091					[Ada,-]	repressor			ECK12
+ECK12T353092					[EbgR,-]	repressor			ECK12
+ECK12T353093					[DsdC,-]	repressor			ECK12
+ECK12T353094					[LysR,+]	activator			ECK12
+ECK12T353095					[LysR,-]	repressor			ECK12
+ECK12T353096					[MetR,-]	repressor			ECK12
+ECK12T353097					[NadR,-]	repressor			ECK12
+ECK12T353098					[HcaR,-]	repressor			ECK12
+ECK12T353099					[HcaR,+]	activator			ECK12
+ECK12T353100					[PrpR,-]	repressor			ECK12
+ECK12T353101					[AllR,-]	repressor			ECK12
+ECK12T353102					[LsrR,-]	repressor			ECK12
+ECK12T353103					[AllS,+]	activator			ECK12
+ECK12T353104					[BaeR,+]	activator			ECK12
+ECK12T353105					[DhaR,-]	repressor			ECK12
+ECK12T353106					[DhaR,+]	activator			ECK12
+ECK12T353107					[YhaJ,+]	activator			ECK12
+ECK12T353108					[PdeL,-]	repressor			ECK12
+ECK12T353109					[NagC,?]	unknown			ECK12
+ECK12T353110					[DpiA,-]	repressor			ECK12
+ECK12T353111					[NfeR,-]	repressor			ECK12
+ECK12T353112					[DicA,-]	repressor			ECK12
+ECK12T353113					[NorR,-]	repressor			ECK12
+ECK12T353114					[RelB-RelE,-]	repressor			ECK12
+ECK12T353115					[RelB,-]	repressor			ECK12
+ECK12T353116					[PdeL,+]	activator			ECK12
+ECK12T353117					[SgrR,+]	activator			ECK12
+ECK12T353118					[SgrR,-]	repressor			ECK12
+ECK12T353119					[GlrR,+]	activator			ECK12
+ECK12T353120					[RcnR,-]	repressor			ECK12
+ECK12T353121					[YdeO,-]	repressor			ECK12
+ECK12T353122					[PuuR,-]	repressor			ECK12
+ECK12T353123					[CreB,+]	activator			ECK12
+ECK12T353124					[DinJ-YafQ,-]	repressor			ECK12
+ECK12T353125					[NemR,-]	repressor			ECK12
+ECK12T353126					[MurR,-]	repressor			ECK12
+ECK12T353127					[MurR,+]	activator			ECK12
+ECK12T353128					[YefM-YoeB,-]	repressor			ECK12
+ECK12T353129					[YefM,-]	repressor			ECK12
+ECK12T353130					[FeaR,+]	activator			ECK12
+ECK12T353131					[Dan,+]	activator			ECK12
+ECK12T353132					[BluR,-]	repressor			ECK12
+ECK12T353133					[YqhC,+]	activator			ECK12
+ECK12T353134					[ComR,-]	repressor			ECK12
+ECK12T353135					[AaeR,+]	activator			ECK12
+ECK12T353136					[MatA,+]	activator			ECK12
+ECK12T353137					[RclR,+]	activator			ECK12
+ECK12T353138					[McbR,-]	repressor			ECK12
+ECK12T353139					[RbsR,+]	activator			ECK12
+ECK12T353140					[FrlR,-]	repressor			ECK12
+ECK12T353141					[CsqR,-]	repressor			ECK12
+ECK12T353142					[MntR,+]	activator			ECK12
+ECK12T353143					[HigB-HigA,-]	repressor			ECK12
+ECK12T353144					[HigA,-]	repressor			ECK12
+ECK12T353145					[BtsR,+]	activator			ECK12
+ECK12T353146					[PyrR,+]	activator			ECK12
+ECK12T353147					[QseB,-]	repressor			ECK12
+ECK12T353148					[SutR,+]	activator			ECK12
+ECK12T353149					[CRP-Sxy,+]	activator			ECK12
+ECK12T353150					[NimR,-]	repressor			ECK12
+ECK12T353151					[CecR,-]	repressor			ECK12
+ECK12T353152					[DgoR,-]	repressor			ECK12
+ECK12T353153					[HicB,-]	repressor			ECK12
+ECK12T353154					[RspR,-]	repressor			ECK12

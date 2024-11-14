@@ -1,0 +1,43 @@
+# # Copies and Copyright-Notice
+#
+#      RegulonDB is free for academic/noncommercial use
+#
+#      User is not entitled to change or erase data sets of the RegulonDB
+#      database or to eliminate copyright notices from RegulonDB. Furthermore,
+#      User is not entitled to expand RegulonDB or to integrate RegulonDB partly
+#      or as a whole into other databank systems, without prior written consent
+#      from CCG-UNAM.
+#
+#      Please check the license at http://regulondb.ccg.unam.mx/menu/download/full_version/terms_and_conditions.jsp
+#
+# Citation
+#
+#      Tierrafría, V. H. et al. (2022). RegulonDB 11.0: Comprehensive high-throughput datasets on transcriptional regulation in Escherichia coli K-12,
+#      Microb Genom. 2022 May;8(5). doi: 10.1099/mgen.0.000833. PMID: 35584008. https://doi.org/10.1099/mgen.0.000833
+#
+#
+# Contact
+#
+#      Person: RegulonDB Team
+#      Web Page: http://regulondb.ccg.unam.mx/menu/about_regulondb/contact_us/index.jsp
+#          (regulondb@ccg.unam.mx)
+#
+#
+ # RegulonDB: 11.1 Date: 12/12/2022
+# Created: 12/12/2022 11:48:35
+# Table: METHOD
+# Columns:
+# 1) METHOD_ID
+# 2) METHOD_NAME
+# 3) METHOD_DESCRIPTION
+# 4) PARAMETER_USED
+# 5) METHOD_NOTE
+# 6) METHOD_INTERNAL_COMMENT
+# 7) KEY_ID_ORG
+GID000054855	Northern Blot	Northern Blot				ECK12
+GID000054856	Primer Extension	Primer Extension				ECK12
+GID000064146	transcriptional fusion	transcriptional fusion	null	null		ECK12
+GID000064147	in vitro transcription	in vitro transcription	null	null		ECK12
+GID000064148	translational fusion	translational fusion	null	null		ECK12
+GID000064149	Microdensitometry	Microdensitometry	null	null		ECK12
+GID000064150	RT-PCR	RT-PCR	null	null		ECK12

@@ -1,0 +1,686 @@
+,left,right,strand,locus_tag,KO,category,subcategory,subsubcategory,product_name,name,fpkm,primary_tu
+0,1.0,1332.0,1,peg.1,K02313,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"dnaA, chromosomal replication initiator protein",dnaA,192.79307673126848,
+1,1560.0,2681.0,1,peg.2,K02338,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"dnaN, DNA polymerase III subunit beta [EC:2.7.7.7]",dnaN,642.95237332695,TU_002
+2,2708.0,3682.0,-1,peg.3,K03569,Cellular Processes,Cytoskeleton,Cytoskeleton proteins,"mreB, rod shape-determining protein MreB and related proteins",mreB,2046.205311375282,TU_004
+3,3751.0,4278.0,1,peg.4,K05985,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"rnmV, ribonuclease M5 [EC:3.1.26.8]",rnmV,8.156474955475586,TU_005
+4,4280.0,5083.0,1,peg.5,K02528,Genetic Information Processing,Translation,Ribosome biogenesis,"ksgA, 16S rRNA (adenine1518-N6/adenine1519-N6)-dimethyltransferase [EC:2.1.1.182]",ksgA,215.8625830703543,TU_005
+5,5302.0,7209.0,1,peg.6,K02470,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"gyrB, DNA gyrase subunit B [EC:5.6.2.2]",gyrB,2103.1079878455507,TU_006
+6,7236.0,9713.0,1,peg.7,K02469,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"gyrA, DNA gyrase subunit A [EC:5.6.2.2]",gyrA,2394.372847608302,TU_006
+7,9837.0,12362.0,1,peg.8,K02755; K02756; K02757,Metabolism,Membrane Transport,PTS system,"PTS-Bgl-EIIA, PTS system, beta-glucoside-specific IIA component [EC:2.7.1.-]; PTS-Bgl-EIIB, PTS system, beta-glucoside-specific IIB component [EC:2.7.1.-]; PTS-Bgl-EIIC, PTS system, beta-glucoside-specific IIC component",PTS-Bgl-EIIA,475.90083176929073,TU_007
+8,12376.0,13839.0,1,peg.9,K01223,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"bglA, 6-phospho-beta-glucosidase [EC:3.2.1.86]",bglA,258.0638446826093,TU_007
+9,13898.0,14632.0,1,peg.10,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,925.9526379944033,TU_008
+10,14854.0,16248.0,1,peg.11,K01223,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"bglA, 6-phospho-beta-glucosidase [EC:3.2.1.86]",bglA,616.5115011559269,TU_009
+11,16264.0,17718.0,1,peg.12,K01223,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"bglA, 6-phospho-beta-glucosidase [EC:3.2.1.86]",bglA,452.4841590867077,TU_009
+12,17728.0,18645.0,1,peg.13,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,225.4169816573545,TU_009
+13,18681.0,20039.0,-1,peg.14,K03650,Genetic Information Processing,Translation,tRNA loading and maturation,"mnmE, tRNA modification GTPase [EC:3.6.-.-]",mnmE,277.8815609286557,TU_010
+14,20111.0,21676.0,-1,peg.15,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,219.75077693760144,TU_011
+15,21759.0,23372.0,-1,peg.16,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,48.804638202989764,TU_012
+16,23458.0,24726.0,-1,peg.17,K01875,Genetic Information Processing,Translation,tRNA loading and maturation,"SARS, seryl-tRNA synthetase [EC:6.1.1.11]",SARS,1229.4065593123958,TU_013
+17,24875.0,25738.0,1,peg.18,K04083,Genetic Information Processing,"Folding, Sorting and Degradation",Chaperones and folding catalysts,"hslO, molecular chaperone Hsp33",hslO,180.27037156563458,TU_015
+18,25861.0,27675.0,1,peg.19,K02003,Metabolism,Membrane Transport,Transport,"ABC.CD.A, putative ABC transport system ATP-binding protein",ABC.CD.A,2563.886883926788,TU_016
+19,27767.0,29887.0,1,peg.20,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,753.5617075295319,TU_017
+20,30126.0,30965.0,1,peg.21,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,3248.7442238115623,TU_018
+21,31149.0,31826.0,1,peg.22,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,680.8950997817938,TU_022
+22,32116.0,34194.0,1,peg.23,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,3519.2949302086963,TU_023
+23,34226.0,36583.0,1,peg.24,K10112,Metabolism,Membrane Transport,Transport,"msmX, multiple sugar transport system ATP-binding protein",msmX,2873.2032490995994,TU_023
+24,36576.0,37565.0,1,peg.25,K02025,Metabolism,Membrane Transport,Transport,"ABC.MS.P, multiple sugar transport system permease protein",ABC.MS.P,5504.94252681681,TU_023
+25,37574.0,38899.0,1,peg.26,K02026,Metabolism,Membrane Transport,Transport,"ABC.MS.P1, multiple sugar transport system permease protein",ABC.MS.P1,1273.6594051596999,TU_023
+26,38899.0,40035.0,1,peg.27,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,4917.886216307736,TU_023
+27,40145.0,40462.0,1,peg.28,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1118.9684202442547,TU_025
+28,40465.0,41442.0,1,peg.29,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,723.8784513005876,TU_025
+29,41444.0,42943.0,1,peg.30,K04567,Genetic Information Processing,Translation,tRNA loading and maturation,"KARS, lysyl-tRNA synthetase, class II [EC:6.1.1.6]",KARS,1465.640546027229,TU_025
+30,42979.0,43698.0,-1,peg.31,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,579.2991379612906,TU_026
+31,43810.0,44535.0,1,peg.32,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,57.421607601246954,TU_027
+32,44649.0,47225.0,1,peg.33,K02809; K02810,Metabolism,Membrane Transport,PTS system,"PTS-Scr-EIIB, PTS system, sucrose-specific IIB component [EC:2.7.1.211]; PTS-Scr-EIIC, PTS system, sucrose-specific IIC component",PTS-Scr-EIIB,40.95478940076871,
+33,47227.0,48678.0,1,peg.34,K01223,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"bglA, 6-phospho-beta-glucosidase [EC:3.2.1.86]",bglA,16.43433950410598,TU_028
+34,48712.0,49365.0,-1,peg.35,K16789,Metabolism,Membrane Transport,Transport,"thiT, thiamine transporter",thiT,67.12883231393003,TU_029
+35,49572.0,51101.0,1,peg.36,K01874,Genetic Information Processing,Translation,tRNA loading and maturation,"MARS, methionyl-tRNA synthetase [EC:6.1.1.10]",MARS,367.34423831194107,TU_030
+36,51298.0,52656.0,1,peg.37,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,4714.167410064465,TU_031
+37,52658.0,53662.0,1,peg.38,K03800,Metabolism,Biosynthesis,Cofactor biosynthesis,"lplA, lipoate---protein ligase [EC:6.3.1.20]",lplA,1744.9901432372444,TU_031
+38,53676.0,54788.0,1,peg.39,K00161,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"PDHA, pyruvate dehydrogenase E1 component alpha subunit [EC:1.2.4.1]",PDHA,3206.4715494222733,TU_031
+39,54788.0,55777.0,1,peg.40,K00162,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"PDHB, pyruvate dehydrogenase E1 component beta subunit [EC:1.2.4.1]",PDHB,4506.454196072333,TU_031
+40,55798.0,57066.0,1,peg.41,K00627,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"DLAT, pyruvate dehydrogenase E2 component (dihydrolipoamide acetyltransferase) [EC:2.3.1.12]",DLAT,1827.8476657797448,TU_031
+41,57082.0,58890.0,1,peg.42,K00382,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"DLD, dihydrolipoamide dehydrogenase [EC:1.8.1.4]",DLD,4456.621933880501,TU_031
+42,58892.0,59860.0,1,peg.43,K00625,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"pta, phosphate acetyltransferase [EC:2.3.1.8]",pta,3094.030650796891,TU_031
+43,59862.0,61052.0,1,peg.44,K00925,Metabolism,Central Carbon Metabolism,Other central metabolism enzymes,"ackA, acetate kinase [EC:2.7.2.1]",ackA,2221.453354102519,TU_031
+44,61126.0,61926.0,1,peg.45,K00286,Metabolism,Biosynthesis,Amino acid metabolism,"proC, pyrroline-5-carboxylate reductase [EC:1.5.1.2]",proC,204.77133664384692,TU_032
+45,61953.0,62552.0,-1,peg.46,K01118,Metabolism,Other Enzymes,Other enzymes,"acpD, FMN-dependent NADH-azoreductase [EC:1.7.1.17]",acpD,2858.0644324385553,TU_033
+46,62639.0,63439.0,1,peg.47,K03424,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"tatD, TatD DNase family protein [EC:3.1.21.-]",tatD,178.79775778976355,TU_034
+47,63482.0,64273.0,1,peg.48,K03424,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"tatD, TatD DNase family protein [EC:3.1.21.-]",tatD,3446.573282517391,TU_035
+48,64526.0,64846.0,1,peg.49,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,95.81336489842114,TU_036
+49,64863.0,65354.0,-1,peg.50,K07304,Metabolism,Other Enzymes,Other enzymes,"msrA, peptide-methionine (S)-S-oxide reductase [EC:1.8.4.11]",msrA,25.042904306919652,
+50,65344.0,65649.0,-1,peg.51,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.08958180631066524,
+51,65768.0,66367.0,1,peg.52,K01118,Metabolism,Other Enzymes,Other enzymes,"acpD, FMN-dependent NADH-azoreductase [EC:1.7.1.17]",acpD,229.62095659708055,TU_037
+52,66405.0,67943.0,-1,peg.53,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,647.4279686273561,TU_038
+53,68213.0,68800.0,-1,peg.54,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,392.9265575282606,
+54,68965.0,69918.0,-1,peg.55,K02335,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"polA, DNA polymerase I [EC:2.7.7.7]",polA,476.09544598026423,TU_039
+55,69977.0,70537.0,-1,peg.56,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,19.38982259064451,TU_041
+56,70615.0,73446.0,1,peg.57,K03070,Genetic Information Processing,"Folding, Sorting and Degradation",Protein export,"secA, preprotein translocase subunit SecA [EC:7.4.2.8]",secA,1106.7025897604208,TU_042
+57,73507.0,75510.0,1,peg.58,K03702,Genetic Information Processing,DNA Maintenance,DNA repair,"uvrB, excinuclease ABC subunit B",uvrB,244.93325493282873,
+58,75510.0,78359.0,1,peg.59,K03701,Genetic Information Processing,DNA Maintenance,DNA repair,"uvrA, excinuclease ABC subunit A",uvrA,535.1486038573643,
+59,78343.0,79449.0,1,peg.60,K11754,Metabolism,Biosynthesis,Cofactor biosynthesis,"folC, dihydrofolate synthase / folylpolyglutamate synthase [EC:6.3.2.12 6.3.2.17]",folC,956.9143002336551,
+60,79465.0,80139.0,1,peg.61,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,595.1140828265721,
+61,80225.0,81157.0,1,peg.62,K06023,Metabolism,Other Enzymes,Other enzymes,"hprK, HPr kinase/phosphorylase [EC:2.7.11.- 2.7.4.-]",hprK,989.7448120324035,TU_043
+62,81165.0,82763.0,1,peg.63,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,60.02193865158978,TU_043
+63,82747.0,83682.0,1,peg.64,K00384,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"trxB, thioredoxin reductase (NADPH) [EC:1.8.1.9]",trxB,265.38563112336436,TU_043
+64,83711.0,85105.0,1,peg.65,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,437.8351227451153,TU_043
+65,85127.0,86080.0,1,peg.66,K09762,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,162.37471780459396,TU_043
+66,86140.0,86376.0,1,peg.67,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1140.67723811082,TU_043
+67,86448.0,86714.0,1,peg.68,K03075,Genetic Information Processing,"Folding, Sorting and Degradation",Protein export,"secG, preprotein translocase subunit SecG",secG,101.1308986003934,TU_047
+68,86739.0,90299.0,1,peg.69,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1239.7930876269963,TU_047
+69,90315.0,91661.0,1,peg.70,K01255,Metabolism,Biosynthesis,Cofactor biosynthesis,"CARP, leucyl aminopeptidase [EC:3.4.11.1]",CARP,638.8221136388864,TU_047
+70,91753.0,93096.0,1,peg.71,K01255,Metabolism,Biosynthesis,Cofactor biosynthesis,"CARP, leucyl aminopeptidase [EC:3.4.11.1]",CARP,5415.092871363013,TU_048
+71,93151.0,94500.0,1,peg.72,K01255,Metabolism,Biosynthesis,Cofactor biosynthesis,"CARP, leucyl aminopeptidase [EC:3.4.11.1]",CARP,1233.0150505453178,
+72,94551.0,95225.0,1,peg.73,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,9836.925546798482,TU_049
+73,95430.0,96719.0,1,peg.74,K01939,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"purA, adenylosuccinate synthase [EC:6.3.4.4]",purA,3645.8728360283662,TU_050
+74,96737.0,98035.0,1,peg.75,K01756,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"purB, adenylosuccinate lyase [EC:4.3.2.2]",purB,683.6648837856369,TU_050
+75,98070.0,99113.0,1,peg.76,K00948,Metabolism,Central Carbon Metabolism,Pentose phosphate metabolism,"PRPS, ribose-phosphate pyrophosphokinase [EC:2.7.6.1]",PRPS,1053.8235025546753,TU_050
+76,99130.0,99690.0,1,peg.77,K01056,Metabolism,Other Enzymes,Other enzymes,"PTH1, peptidyl-tRNA hydrolase, PTH1 family [EC:3.1.1.29]",PTH1,384.070609871477,TU_050
+77,99704.0,100627.0,-1,peg.78,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,251.17658847810011,TU_052
+78,100698.0,102107.0,1,peg.79,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,176.3021387387864,
+79,102230.0,102403.0,1,peg.80,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,124.4083209388441,
+80,102862.0,103734.0,1,peg.81,K02990,Genetic Information Processing,Translation,Ribosome,"RP-S6, small subunit ribosomal protein S6",RP-S6,4940.076657048997,TU_053
+81,103797.0,104252.0,1,peg.82,K03111,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"ssb, single-strand DNA-binding protein",ssb,7860.982166451174,TU_053
+82,104279.0,104509.0,1,peg.83,K02963,Genetic Information Processing,Translation,Ribosome,"RP-S18, small subunit ribosomal protein S18",RP-S18,678.8195009655143,TU_053
+83,104645.0,105088.0,1,peg.84,K02939,Genetic Information Processing,Translation,Ribosome,"RP-L9, large subunit ribosomal protein L9",RP-L9,2998.2966634544414,TU_055
+84,105090.0,106436.0,1,peg.85,K02314,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"dnaB, replicative DNA helicase [EC:3.6.4.12]",dnaB,2523.0556958375846,TU_055
+85,106502.0,107935.0,1,peg.86,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,2281.188857142371,TU_056
+86,108044.0,108958.0,1,peg.87,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,433.9937411747621,TU_057
+87,108974.0,110299.0,1,peg.88,K01883,Genetic Information Processing,Translation,tRNA loading and maturation,"CARS, cysteinyl-tRNA synthetase [EC:6.1.1.16]",CARS,1229.7984655725747,TU_057
+88,110301.0,111029.0,1,peg.89,K03218,Genetic Information Processing,Translation,Ribosome biogenesis,"rlmB, 23S rRNA (guanosine2251-2'-O)-methyltransferase [EC:2.1.1.185]",rlmB,238.09648605823782,TU_057
+89,111271.0,111609.0,1,peg.90,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,907.5477418009809,TU_058
+90,111621.0,112250.0,1,peg.91,K02601,Genetic Information Processing,Translation,Ribosome biogenesis,"nusG, transcription termination/antitermination protein NusG",nusG,4791.003426765801,TU_058
+91,112385.0,114139.0,1,peg.92,K12574,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"rnj, ribonuclease J [EC:3.1.-.-]",rnj,831.7195797733875,TU_059
+92,114152.0,114658.0,-1,peg.93,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,96.37522039588778,TU_060
+93,114737.0,116071.0,1,peg.94,K15581,Metabolism,Membrane Transport,Transport,"oppB, oligopeptide transport system permease protein",oppB,3317.4487297934324,TU_061
+94,116087.0,117058.0,1,peg.95,K15582,Metabolism,Membrane Transport,Transport,"oppC, oligopeptide transport system permease protein",oppC,3740.7401985517276,TU_061
+95,117070.0,118638.0,1,peg.96,K15583,Metabolism,Membrane Transport,Transport,"oppD, oligopeptide transport system ATP-binding protein",oppD,1943.7141104596437,TU_061
+96,118640.0,120493.0,1,peg.97,K10823,Metabolism,Other Enzymes,Other enzymes,"oppF, oligopeptide transport system ATP-binding protein",oppF,4171.992464603529,TU_061
+97,120496.0,123477.0,1,peg.98,K15580,Metabolism,Membrane Transport,Transport,"oppA, oligopeptide transport system substrate-binding protein",oppA,5727.664398451281,TU_061
+98,123545.0,124474.0,1,peg.99,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,77.42605065243852,
+99,124565.0,127426.0,1,peg.100,K03466,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"ftsK, DNA segregation ATPase FtsK/SpoIIIE, S-DNA-T family",ftsK,1043.1900955182355,TU_062
+100,127478.0,129244.0,1,peg.101,K03703,Genetic Information Processing,DNA Maintenance,DNA repair,"uvrC, excinuclease ABC subunit C",uvrC,875.0557841145769,
+101,129303.0,129773.0,1,peg.102,K03624,Genetic Information Processing,Transcription,Transcription factors,"greA, transcription elongation factor GreA",greA,461.8479051344177,TU_063
+102,129812.0,130684.0,1,peg.103,K07056,Genetic Information Processing,Translation,Ribosome biogenesis,"rsmI, 16S rRNA (cytidine1402-2'-O)-methyltransferase [EC:2.1.1.198]",rsmI,267.5559077701941,
+103,130854.0,131153.0,-1,peg.104,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,524.2220539499298,TU_065
+104,131227.0,131667.0,1,peg.105,K01808,Metabolism,Central Carbon Metabolism,Pentose phosphate metabolism,"rpiB, ribose 5-phosphate isomerase B [EC:5.3.1.6]",rpiB,252.87762405812703,TU_066
+105,131651.0,132889.0,1,peg.106,K00600,Metabolism,Central Carbon Metabolism,Other central metabolism enzymes,"glyA, glycine hydroxymethyltransferase [EC:2.1.2.1]",glyA,1696.0301035050552,TU_066
+106,132935.0,133558.0,1,peg.107,K00761,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"upp, uracil phosphoribosyltransferase [EC:2.4.2.9]",upp,1716.883776911408,TU_066
+107,134098.0,134961.0,1,peg.108,K02108,Metabolism,Energy Metabolism,Oxidative phosphorylation,"ATPF0A, F-type H+-transporting ATPase subunit a",ATPF0A,5353.60844528686,TU_068
+108,134979.0,135293.0,1,peg.109,K02110,Metabolism,Energy Metabolism,Oxidative phosphorylation,"ATPF0C, F-type H+-transporting ATPase subunit c",ATPF0C,2612.7127311509134,TU_068
+109,135322.0,135855.0,1,peg.110,K02109,Metabolism,Energy Metabolism,Oxidative phosphorylation,"ATPF0B, F-type H+-transporting ATPase subunit b",ATPF0B,10339.081951566763,TU_068
+110,135860.0,136411.0,1,peg.111,K02113,Metabolism,Energy Metabolism,Oxidative phosphorylation,"ATPF1D, F-type H+-transporting ATPase subunit delta",ATPF1D,2349.291301690218,TU_068
+111,136424.0,138001.0,1,peg.112,K02111,Metabolism,Energy Metabolism,Oxidative phosphorylation,"ATPF1A, F-type H+/Na+-transporting ATPase subunit alpha [EC:7.1.2.2 7.2.2.1]",ATPF1A,3785.5798914410047,TU_068
+112,138001.0,138846.0,1,peg.113,K02115,Metabolism,Energy Metabolism,Oxidative phosphorylation,"ATPF1G, F-type H+-transporting ATPase subunit gamma",ATPF1G,2134.62604045384,TU_068
+113,138856.0,140295.0,1,peg.114,K02112,Metabolism,Energy Metabolism,Oxidative phosphorylation,"ATPF1B, F-type H+/Na+-transporting ATPase subunit beta [EC:7.1.2.2 7.2.2.1]",ATPF1B,4958.084237736766,TU_068
+114,140306.0,140605.0,1,peg.115,K02114,Metabolism,Energy Metabolism,Oxidative phosphorylation,"ATPF1E, F-type H+-transporting ATPase subunit epsilon",ATPF1E,1102.8396973505073,TU_068
+115,140686.0,141090.0,1,peg.116,K04063,Metabolism,Other Enzymes,Other enzymes,"osmC, lipoyl-dependent peroxidase",osmC,618.4958013780869,TU_069
+116,141291.0,142880.0,1,peg.117,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,329.6737255483055,TU_069
+117,142941.0,144245.0,-1,peg.118,K00756,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"pdp, pyrimidine-nucleoside phosphorylase [EC:2.4.2.2]",pdp,311.5829034803311,TU_070
+118,144340.0,146025.0,1,peg.119,K01835,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"pgm, phosphoglucomutase [EC:5.4.2.2]",pgm,399.7052784970819,TU_071
+119,146034.0,146696.0,1,peg.120,K01619,Metabolism,Central Carbon Metabolism,Pentose phosphate metabolism,"deoC, deoxyribose-phosphate aldolase [EC:4.1.2.4]",deoC,522.8985782257879,TU_071
+120,146887.0,147225.0,1,peg.121,K02946,Genetic Information Processing,Translation,Ribosome,"RP-S10, small subunit ribosomal protein S10",RP-S10,2544.247880661011,TU_072
+121,147290.0,148006.0,1,peg.122,K02906,Genetic Information Processing,Translation,Ribosome,"RP-L3, large subunit ribosomal protein L3",RP-L3,4461.906920313763,TU_072
+122,148019.0,148645.0,1,peg.123,K02926,Genetic Information Processing,Translation,Ribosome,"RP-L4, large subunit ribosomal protein L4",RP-L4,3385.4864691168696,TU_072
+123,148645.0,148929.0,1,peg.124,K02892,Genetic Information Processing,Translation,Ribosome,"RP-L23, large subunit ribosomal protein L23",RP-L23,2145.542636557373,TU_072
+124,148996.0,149841.0,1,peg.125,K02886,Genetic Information Processing,Translation,Ribosome,"RP-L2, large subunit ribosomal protein L2",RP-L2,3079.730232675325,TU_072
+125,149860.0,150123.0,1,peg.126,K02965,Genetic Information Processing,Translation,Ribosome,"RP-S19, small subunit ribosomal protein S19",RP-S19,2253.786901177067,TU_072
+126,150142.0,150480.0,1,peg.127,K02890,Genetic Information Processing,Translation,Ribosome,"RP-L22, large subunit ribosomal protein L22",RP-L22,3331.6533369145177,TU_072
+127,150499.0,151224.0,1,peg.128,K02982,Genetic Information Processing,Translation,Ribosome,"RP-S3, small subunit ribosomal protein S3",RP-S3,3647.3196427840944,TU_072
+128,151224.0,151637.0,1,peg.129,K02878,Genetic Information Processing,Translation,Ribosome,"RP-L16, large subunit ribosomal protein L16",RP-L16,2740.929220446254,TU_072
+129,151637.0,152056.0,1,peg.130,K02904,Genetic Information Processing,Translation,Ribosome,"RP-L29, large subunit ribosomal protein L29",RP-L29,5285.808132589974,TU_072
+130,152056.0,152313.0,1,peg.131,K02961,Genetic Information Processing,Translation,Ribosome,"RP-S17, small subunit ribosomal protein S17",RP-S17,3471.3642544187483,TU_072
+131,152327.0,152695.0,1,peg.132,K02874,Genetic Information Processing,Translation,Ribosome,"RP-L14, large subunit ribosomal protein L14",RP-L14,3392.7024696398003,TU_072
+132,152709.0,153038.0,1,peg.133,K02895,Genetic Information Processing,Translation,Ribosome,"RP-L24, large subunit ribosomal protein L24",RP-L24,5365.798437255777,TU_072
+133,153056.0,153598.0,1,peg.134,K02931,Genetic Information Processing,Translation,Ribosome,"RP-L5, large subunit ribosomal protein L5",RP-L5,4279.284454655891,TU_072
+134,153618.0,153803.0,1,peg.135,K02954,Genetic Information Processing,Translation,Ribosome,"RP-S14, small subunit ribosomal protein S14",RP-S14,6982.965796614352,TU_072
+135,153835.0,154224.0,1,peg.136,K02994,Genetic Information Processing,Translation,Ribosome,"RP-S8, small subunit ribosomal protein S8",RP-S8,6783.313984130098,TU_072
+136,154244.0,154786.0,1,peg.137,K02933,Genetic Information Processing,Translation,Ribosome,"RP-L6, large subunit ribosomal protein L6",RP-L6,4088.7930348730465,TU_072
+137,154812.0,155159.0,1,peg.138,K02881,Genetic Information Processing,Translation,Ribosome,"RP-L18, large subunit ribosomal protein L18",RP-L18,2844.024576229922,TU_072
+138,155180.0,155800.0,1,peg.139,K02988,Genetic Information Processing,Translation,Ribosome,"RP-S5, small subunit ribosomal protein S5",RP-S5,6041.99649978221,TU_072
+139,155819.0,156256.0,1,peg.140,K02876,Genetic Information Processing,Translation,Ribosome,"RP-L15, large subunit ribosomal protein L15",RP-L15,2812.359079338465,TU_072
+140,156258.0,157718.0,1,peg.141,K03076,Genetic Information Processing,"Folding, Sorting and Degradation",Protein export,"secY, preprotein translocase subunit SecY",secY,2902.8677983851526,TU_072
+141,157796.0,158203.0,1,peg.142,K01489,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"cdd, cytidine deaminase [EC:3.5.4.5]",cdd,55.6184313595165,TU_074
+142,158217.0,158855.0,1,peg.143,K00939,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"adk, adenylate kinase [EC:2.7.4.3]",adk,477.5888750223265,TU_074
+143,158856.0,159614.0,1,peg.144,K01265,Genetic Information Processing,"Folding, Sorting and Degradation",Peptidases,"map, methionyl aminopeptidase [EC:3.4.11.18]",map,3199.4454477112945,TU_074
+144,159627.0,159863.0,1,peg.145,K02518,Genetic Information Processing,Translation,Translation factors,"infA, translation initiation factor IF-1",infA,466.6113140209255,TU_075
+145,159933.0,160046.0,1,peg.146,K02919,Genetic Information Processing,Translation,Ribosome,"RP-L36, large subunit ribosomal protein L36",RP-L36,249.7684255609139,TU_075
+146,160104.0,160469.0,1,peg.147,K02952,Genetic Information Processing,Translation,Ribosome,"RP-S13, small subunit ribosomal protein S13",RP-S13,2402.170378363073,TU_075
+147,160492.0,160884.0,1,peg.148,K02948,Genetic Information Processing,Translation,Ribosome,"RP-S11, small subunit ribosomal protein S11",RP-S11,2608.96899091315,TU_075
+148,160910.0,161863.0,1,peg.149,K03040,Genetic Information Processing,Transcription,RNA polymerase,"rpoA, DNA-directed RNA polymerase subunit alpha [EC:2.7.7.6]",rpoA,2253.7472552947825,TU_075
+149,161884.0,162243.0,1,peg.150,K02879,Genetic Information Processing,Translation,Ribosome,"RP-L17, large subunit ribosomal protein L17",RP-L17,2303.379196276787,TU_075
+150,162345.0,163565.0,1,peg.151,K16786,Metabolism,Membrane Transport,Transport,"ecfA1, energy-coupling factor transport system ATP-binding protein [EC:3.6.3.-]",ecfA1,1083.74092576342,TU_076
+151,163556.0,164503.0,1,peg.152,K16787,Metabolism,Membrane Transport,Transport,"ecfA2, energy-coupling factor transport system ATP-binding protein [EC:3.6.3.-]",ecfA2,325.38186919643596,TU_076
+152,164505.0,165503.0,1,peg.153,K16785,Metabolism,Membrane Transport,Transport,"ecfT, energy-coupling factor transport system permease protein",ecfT,567.9369234950776,TU_076
+153,165513.0,166268.0,1,peg.154,K06173,Metabolism,Other Enzymes,Other enzymes,"truA, tRNA pseudouridine38-40 synthase [EC:5.4.99.12]",truA,197.7079158229111,TU_076
+154,166496.0,170785.0,1,peg.155,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1403.9242298571673,TU_077
+155,170806.0,173346.0,1,peg.156,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,2007.280774213863,TU_077
+156,173373.0,175871.0,-1,peg.157,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1024.237552913627,TU_078
+157,176079.0,181418.0,1,peg.158,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,446.15347380424055,TU_079
+158,181534.0,183534.0,1,peg.159,K01972,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"ligA, ligB, DNA ligase (NAD+) [EC:6.5.1.2]",ligA,302.5287531637888,TU_080
+159,183536.0,183823.0,1,peg.160,K02435,Genetic Information Processing,Translation,tRNA loading and maturation,"gatC, aspartyl-tRNA(Asn)/glutamyl-tRNA(Gln) amidotransferase subunit C [EC:6.3.5.6 6.3.5.7]",gatC,55.4060167360502,TU_080
+160,183823.0,185271.0,1,peg.161,K02433,Genetic Information Processing,Translation,tRNA loading and maturation,"gatA, aspartyl-tRNA(Asn)/glutamyl-tRNA(Gln) amidotransferase subunit A [EC:6.3.5.6 6.3.5.7]",gatA,428.17105130216424,TU_080
+161,185273.0,186712.0,1,peg.162,K02434,Genetic Information Processing,Translation,tRNA loading and maturation,"gatB, aspartyl-tRNA(Asn)/glutamyl-tRNA(Gln) amidotransferase subunit B [EC:6.3.5.6 6.3.5.7]",gatB,618.2978435947637,TU_080
+162,186749.0,187198.0,-1,peg.163,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,2357.0529424279202,TU_082
+163,187276.0,188190.0,-1,peg.164,K03499,Metabolism,Membrane Transport,Transport,"trkA, trk system potassium uptake protein",trkA,1754.8843546853032,TU_083
+164,188278.0,189954.0,1,peg.165,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,201.93531923328894,TU_086
+165,189963.0,190823.0,1,peg.166,K01491,Metabolism,Central Carbon Metabolism,Other central metabolism enzymes,"folD, methylenetetrahydrofolate dehydrogenase (NADP+) / methenyltetrahydrofolate cyclohydrolase [EC:1.5.1.5 3.5.4.9]",folD,261.33144927130377,TU_086
+166,196766.0,198358.0,1,peg.167,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,592.7719379683468,TU_091
+167,198431.0,199270.0,1,peg.168,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,974.9026111626525,TU_092
+168,199471.0,200433.0,1,peg.169,K00364,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"guaC, GMP reductase [EC:1.7.1.7]",guaC,820.581957190434,TU_093
+169,200442.0,200921.0,1,peg.170,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,554.8255473986438,TU_093
+170,200994.0,201833.0,1,peg.171,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,982.457269988014,TU_095
+171,201851.0,202687.0,1,peg.172,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1178.7987734398146,TU_095
+172,202812.0,203783.0,1,peg.173,K00850,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"pfkA, 6-phosphofructokinase 1 [EC:2.7.1.11]",pfkA,4745.585378117145,TU_096
+173,203834.0,205270.0,1,peg.174,K00873,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"PK, pyruvate kinase [EC:2.7.1.40]",PK,5347.901948179735,TU_096
+174,205316.0,205768.0,-1,peg.175,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1997.0030672556034,TU_098
+175,206087.0,208021.0,1,peg.176,K01868,Genetic Information Processing,Translation,tRNA loading and maturation,"TARS, threonyl-tRNA synthetase [EC:6.1.1.3]",TARS,1272.4834578416724,TU_099
+176,208059.0,208367.0,1,peg.177,K03671,Genetic Information Processing,"Folding, Sorting and Degradation",Chaperones and folding catalysts,"trxA, thioredoxin 1",trxA,1164.1691519976441,TU_099
+177,208508.0,209200.0,1,peg.178,K03436,Genetic Information Processing,Transcription,Transcription factors,"fruR2, DeoR family transcriptional regulator, fructose operon transcriptional repressor",fruR2,1413.1169975547762,TU_101
+178,209217.0,210152.0,1,peg.179,K00882,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"fruK, 1-phosphofructokinase [EC:2.7.1.56]",fruK,800.4413027414997,TU_101
+179,210162.0,212309.0,1,peg.180,K02768; K02769; K02770,Metabolism,Membrane Transport,PTS system,"PTS-Fru-EIIA, PTS system, fructose-specific IIA component [EC:2.7.1.202]; PTS-Fru-EIIB, PTS system, fructose-specific IIB component [EC:2.7.1.202]; PTS-Fru-EIIC, PTS system, fructose-specific IIC component",PTS-Fru-EIIA,1382.5121914346144,TU_101
+180,212439.0,213734.0,1,peg.181,K01990,Metabolism,Membrane Transport,Transport,"ABC-2.A, ABC-2 type transport system ATP-binding protein",ABC-2.A,727.0073106128237,TU_102
+181,213721.0,214737.0,1,peg.182,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,145.60367958379416,TU_102
+182,214737.0,215678.0,1,peg.183,K01992,Metabolism,Membrane Transport,Transport,"ABC-2.P, ABC-2 type transport system permease protein",ABC-2.P,912.9526333444609,TU_102
+183,215683.0,215868.0,1,peg.184,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,298.5023303220058,TU_103
+184,215879.0,216934.0,-1,peg.185,K06212,Metabolism,Membrane Transport,Transport,"focA, formate transporter",focA,1862.7353867420525,TU_104
+185,217111.0,217584.0,1,peg.186,K02777,Metabolism,Membrane Transport,PTS system,"PTS-Glc-EIIA, PTS system, sugar-specific IIA component [EC:2.7.1.-]",PTS-Glc-EIIA,1704.0475778205757,TU_105
+186,217758.0,218300.0,1,peg.187,K02520,Genetic Information Processing,Translation,Translation factors,"infC, translation initiation factor IF-3",infC,1963.2869426949885,TU_106
+187,218332.0,218526.0,1,peg.188,K02916,Genetic Information Processing,Translation,Ribosome,"RP-L35, large subunit ribosomal protein L35",RP-L35,1508.9019910121576,TU_106
+188,218550.0,218912.0,1,peg.189,K02887,Genetic Information Processing,Translation,Ribosome,"RP-L20, large subunit ribosomal protein L20",RP-L20,763.9487314947673,TU_106
+189,218922.0,219254.0,1,peg.190,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,925.3665191610991,TU_106
+190,219318.0,220328.0,-1,peg.191,K01867,Genetic Information Processing,Translation,tRNA loading and maturation,"WARS, tryptophanyl-tRNA synthetase [EC:6.1.1.2]",WARS,368.90716758091304,TU_107
+191,220421.0,221200.0,1,peg.192,K00858,Metabolism,Biosynthesis,Cofactor biosynthesis,"ppnK, NAD+ kinase [EC:2.7.1.23]",ppnK,249.35812768423375,TU_109
+192,221258.0,221827.0,1,peg.193,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,243.60546530718952,TU_109
+193,221817.0,222710.0,1,peg.194,K00942,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"gmk, guanylate kinase [EC:2.7.4.8]",gmk,31.841928802130813,TU_109
+194,222700.0,223968.0,1,peg.195,K03500,Genetic Information Processing,Translation,Ribosome biogenesis,"rsmB, 16S rRNA (cytosine967-C5)-methyltransferase [EC:2.1.1.176]",rsmB,167.14668222469223,TU_109
+195,224050.0,224751.0,1,peg.196,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,45.1551934011485,TU_111
+196,224763.0,225422.0,1,peg.197,K00945,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"cmk, CMP/dCMP kinase [EC:2.7.4.25]",cmk,207.43812715813786,TU_111
+197,225425.0,226732.0,1,peg.198,K03977,Genetic Information Processing,Translation,Ribosome biogenesis,"engA, GTPase",engA,453.05084901930564,TU_111
+198,226738.0,227742.0,1,peg.199,K00057,Metabolism,Biosynthesis,Lipid and steroid metabolism,"gpsA, glycerol-3-phosphate dehydrogenase (NAD(P)+) [EC:1.1.1.94]",gpsA,453.23594508529237,TU_111
+199,227763.0,228035.0,1,peg.200,K03530,Genetic Information Processing,Transcription,Transcription factors,"hupB, DNA-binding protein HU-beta",hupB,681.240863667926,TU_112
+200,228110.0,228649.0,1,peg.201,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,79.67372468265124,TU_113
+201,228630.0,229130.0,-1,peg.202,K03700,Genetic Information Processing,DNA Maintenance,DNA repair,"recU, recombination protein U",recU,0.04890270664206684,
+202,229213.0,229569.0,1,peg.203,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,129.01075163582183,TU_114
+203,229985.0,230452.0,1,peg.204,K03743,Metabolism,Biosynthesis,Cofactor biosynthesis,"pncC, nicotinamide-nucleotide amidase [EC:3.5.1.42]",pncC,667.5645281099813,TU_115
+204,230495.0,231535.0,1,peg.205,K03553,Genetic Information Processing,DNA Maintenance,DNA repair,"recA, recombination protein RecA",recA,273.9276790162251,TU_115
+205,231625.0,233136.0,1,peg.206,K18682,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"rny, ribonucrease Y [EC:3.1.-.-]",rny,600.1576515632202,TU_115
+206,233209.0,234171.0,1,peg.207,K22230,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"iolU, scyllo-inositol 2-dehydrogenase (NADP+) [EC:1.1.1.-]",iolU,334.1365497588786,TU_117
+207,234224.0,236338.0,1,peg.208,K12573,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"rnr, ribonuclease R [EC:3.1.13.1]",rnr,389.4025944601956,TU_117
+208,236358.0,236807.0,1,peg.209,K03664,Genetic Information Processing,Translation,Translation factors,"smpB, SsrA-binding protein",smpB,180.5414520447168,TU_117
+209,236817.0,237047.0,1,peg.210,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,155.19336752931721,TU_117
+210,237057.0,237545.0,1,peg.211,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,376.79036209005443,TU_117
+211,237624.0,237857.0,1,peg.212,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,514.489021703037,TU_120
+212,237897.0,240026.0,1,peg.213,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1893.5554137746976,TU_120
+213,240069.0,241073.0,-1,peg.214,K21053,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"ade, adenine deaminase [EC:3.5.4.2]",ade,729.5135587555768,TU_121
+214,241250.0,242368.0,1,peg.215,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,28.371051505152465,
+215,242866.0,244272.0,1,peg.216,K06213,Metabolism,Membrane Transport,Transport,"mgtE, magnesium transporter",mgtE,162.19571818462796,TU_122
+216,244281.0,244952.0,1,peg.217,K03439,Metabolism,Other Enzymes,Other enzymes,"trmB, tRNA (guanine-N7-)-methyltransferase [EC:2.1.1.33]",trmB,349.29559652898075,TU_122
+217,245006.0,246349.0,1,peg.218,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.0950911405966104,
+218,246376.0,247140.0,1,peg.219,K20074,Metabolism,Other Enzymes,Other enzymes,"prpC, PPM family protein phosphatase [EC:3.1.3.16]",prpC,239.66493933788695,TU_124
+219,247142.0,248302.0,1,peg.220,K12132,Metabolism,Other Enzymes,Other enzymes,"prkC, eukaryotic-like serine/threonine-protein kinase [EC:2.7.11.1]",prkC,351.13262444106414,TU_124
+220,248312.0,249208.0,1,peg.221,K06949,Genetic Information Processing,Translation,Ribosome biogenesis,"rsgA, ribosome biogenesis GTPase / thiamine phosphate phosphatase [EC:3.6.1.- 3.1.3.100]",rsgA,213.75949749927727,TU_124
+221,249208.0,249879.0,1,peg.222,K01783,Metabolism,Central Carbon Metabolism,Pentose phosphate metabolism,"rpe, ribulose-phosphate 3-epimerase [EC:5.1.3.1]",rpe,334.5229653781674,TU_124
+222,249872.0,250495.0,1,peg.223,K00949,Metabolism,Biosynthesis,Cofactor biosynthesis,"thiN, thiamine pyrophosphokinase [EC:2.7.6.2]",thiN,182.09948887720626,TU_124
+223,250504.0,250941.0,-1,peg.224,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,357.57101319412214,TU_125
+224,251190.0,251933.0,1,peg.225,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,208.48585847655966,TU_127
+225,251971.0,252171.0,-1,peg.226,K02902,Genetic Information Processing,Translation,Ribosome,"RP-L28, large subunit ribosomal protein L28",RP-L28,1885.3990675106072,TU_128
+226,252327.0,252638.0,1,peg.227,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,675.477102626846,TU_129
+227,252667.0,254313.0,1,peg.228,K07030,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,806.5557783188334,TU_129
+228,254377.0,255372.0,1,peg.229,K03621,Metabolism,Biosynthesis,Lipid and steroid metabolism,"plsX, phosphate acyltransferase [EC:2.3.1.274]",plsX,605.2248518454331,TU_131
+229,255374.0,256069.0,1,peg.230,K03685,Genetic Information Processing,Translation,Ribosome biogenesis,"rnc, ribonuclease III [EC:3.1.26.3]",rnc,2352.6313358179964,TU_131
+230,256219.0,259206.0,1,peg.231,K03529,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"smc, chromosome segregation protein",smc,1129.72047902095,TU_132
+231,259350.0,260489.0,1,peg.232,K02040,Environmental Information Processing,Signal Transduction,Two-component system,"pstS, phosphate transport system substrate-binding protein",pstS,126.55407562099204,TU_133
+232,260518.0,262665.0,1,peg.233,K02037; K02038,Metabolism,Membrane Transport,Transport,"pstC, phosphate transport system permease protein; pstA, phosphate transport system permease protein",pstC,617.1348033178095,TU_133
+233,262658.0,263518.0,1,peg.234,K02036,Metabolism,Membrane Transport,Transport,"pstB, phosphate transport system ATP-binding protein [EC:7.3.2.1]",pstB,380.4362132762694,TU_133
+234,263522.0,264208.0,1,peg.235,K02039,Metabolism,Membrane Transport,Transport,"phoU, phosphate transport system protein",phoU,743.3351019173095,TU_133
+235,264288.0,265391.0,1,peg.236,K03110,Genetic Information Processing,"Folding, Sorting and Degradation",Protein export,"ftsY, fused signal recognition particle receptor",ftsY,339.1860522295112,TU_135
+236,265384.0,265710.0,1,peg.237,K09787,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,120.08131140495652,TU_135
+237,265710.0,266474.0,1,peg.238,K09769,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,552.80687573668,TU_135
+238,266561.0,267694.0,1,peg.239,K00789,Metabolism,Biosynthesis,Amino acid metabolism,"metK, S-adenosylmethionine synthetase [EC:2.5.1.6]",metK,723.0531427161936,TU_136
+239,267761.0,269659.0,1,peg.240,K07386,Genetic Information Processing,"Folding, Sorting and Degradation",Peptidases,"pepO, putative endopeptidase [EC:3.4.24.-]",pepO,2547.9255087985307,TU_137
+240,269739.0,271067.0,1,peg.241,K04094,Genetic Information Processing,Translation,tRNA loading and maturation,"trmFO, methylenetetrahydrofolate--tRNA-(uracil-5-)-methyltransferase [EC:2.1.1.74]",trmFO,106.85100759683523,TU_138
+241,271060.0,271710.0,1,peg.242,K03648,Genetic Information Processing,DNA Maintenance,DNA repair,"UNG, uracil-DNA glycosylase [EC:3.2.2.27]",UNG,253.87908485320676,TU_138
+242,271738.0,272718.0,1,peg.243,K03698,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"cbf, 3'-5' exoribonuclease [EC:3.1.-.-]",cbf,350.0183311785823,TU_139
+243,272802.0,273209.0,-1,peg.244,K02503,Unclear,Unclear,Unclear,"HINT1, histidine triad (HIT) family protein",HINT1,1406.3319916603407,TU_140
+244,273209.0,275257.0,-1,peg.245,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1981.8020206382378,TU_140
+245,275257.0,278112.0,-1,peg.246,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,2056.958766824149,TU_140
+246,278264.0,279490.0,1,peg.247,K11717,Metabolism,Biosynthesis,Amino acid metabolism,"sufS, cysteine desulfurase / selenocysteine lyase [EC:2.8.1.7 4.4.1.16]",sufS,133.7723814333916,TU_141
+247,279500.0,279928.0,1,peg.248,K04488,Metabolism,Other Enzymes,Other enzymes,"iscU, nitrogen fixation protein NifU and related proteins",iscU,0.0,TU_141
+248,279986.0,280633.0,1,peg.249,K01934,Metabolism,Central Carbon Metabolism,Other central metabolism enzymes,"MTHFS, 5-formyltetrahydrofolate cyclo-ligase [EC:6.3.3.2]",MTHFS,287.6827886195937,TU_141
+249,280728.0,281084.0,1,peg.250,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,81.04216096196636,TU_143
+250,281158.0,282144.0,1,peg.251,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,461.87752573565814,TU_143
+251,282234.0,282734.0,1,peg.252,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,50.43731915598955,TU_145
+252,282863.0,284143.0,1,peg.253,K01810,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"GPI, glucose-6-phosphate isomerase [EC:5.3.1.9]",GPI,1962.246735583778,TU_146
+253,284258.0,284962.0,1,peg.254,K01990,Metabolism,Membrane Transport,Transport,"ABC-2.A, ABC-2 type transport system ATP-binding protein",ABC-2.A,2235.9408275688274,TU_147
+254,284962.0,285927.0,1,peg.255,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1327.1963184459662,TU_147
+255,286036.0,286539.0,1,peg.256,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,726.6629379794764,TU_148
+256,286541.0,287296.0,1,peg.257,K03437,Genetic Information Processing,Translation,tRNA loading and maturation,"spoU, RNA methyltransferase, TrmH family",spoU,373.4029313142872,TU_148
+257,287377.0,288795.0,1,peg.258,K00131,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"gapN, glyceraldehyde-3-phosphate dehydrogenase (NADP+) [EC:1.2.1.9]",gapN,1535.5715435117243,TU_149
+258,288935.0,291430.0,1,peg.259,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,609.3071048342103,TU_150
+259,291458.0,296539.0,1,peg.260,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1267.0640257963507,TU_150
+260,296634.0,301808.0,1,peg.261,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,506.1745194892833,TU_151
+261,301819.0,302364.0,1,peg.262,K03152,Genetic Information Processing,"Folding, Sorting and Degradation",Peptidases,"thiJ, protein deglycase [EC:3.5.1.124]",thiJ,285.2115758453945,TU_153
+262,302454.0,304217.0,1,peg.263,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.06434360427813313,
+263,304249.0,304758.0,1,peg.264,K07042,Genetic Information Processing,Translation,Ribosome biogenesis,"ybeY, probable rRNA maturation factor",ybeY,25.257399733325414,TU_154
+264,304751.0,305656.0,1,peg.265,K03595,Genetic Information Processing,Translation,Ribosome biogenesis,"era, GTPase",era,173.9919311985943,TU_154
+265,305656.0,306459.0,1,peg.266,K03584,Genetic Information Processing,DNA Maintenance,DNA repair,"recO, DNA repair protein RecO (recombination protein O)",recO,94.42530426527003,TU_154
+266,306551.0,307906.0,1,peg.267,K01880,Genetic Information Processing,Translation,tRNA loading and maturation,"GARS, glycyl-tRNA synthetase [EC:6.1.1.14]",GARS,913.6563978075804,TU_155
+267,307935.0,309806.0,1,peg.268,K02316,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"dnaG, DNA primase [EC:2.7.7.101]",dnaG,607.0633610074325,TU_155
+268,309823.0,311238.0,1,peg.269,K03086,Genetic Information Processing,Transcription,RNA polymerase,"rpoD, RNA polymerase primary sigma factor",rpoD,451.75745940310884,TU_155
+269,311240.0,311929.0,1,peg.270,K06967,Genetic Information Processing,Translation,tRNA loading and maturation,"trmK, tRNA (adenine22-N1)-methyltransferase [EC:2.1.1.217]",trmK,82.58041844752582,TU_155
+270,311907.0,312683.0,1,peg.271,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,111.03441706686003,TU_155
+271,312673.0,314055.0,1,peg.272,K18692,Genetic Information Processing,Translation,Ribosome biogenesis,"cshB, ATP-dependent RNA helicase CshB [EC:3.6.4.13]",cshB,1155.1966391098665,TU_155
+272,314145.0,315689.0,1,peg.273,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,899.7957762367964,TU_156
+273,315752.0,319762.0,1,peg.274,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,808.5884035568521,TU_157
+274,319780.0,320292.0,1,peg.275,K00759,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"APRT, adenine phosphoribosyltransferase [EC:2.4.2.7]",APRT,838.8434836935288,TU_157
+275,320350.0,320913.0,1,peg.276,K01246,Genetic Information Processing,DNA Maintenance,DNA repair,"tag, DNA-3-methyladenine glycosylase I [EC:3.2.2.20]",tag,65.35505947882932,TU_158
+276,320986.0,323283.0,1,peg.277,K00951,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"relA, GTP pyrophosphokinase [EC:2.7.6.5]",relA,240.65588330975137,TU_159
+277,323369.0,323956.0,1,peg.278,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,98.25520889499698,
+278,323983.0,324261.0,1,peg.279,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,574.5725274402788,TU_160
+279,324263.0,324823.0,1,peg.280,K00859,Metabolism,Biosynthesis,Cofactor biosynthesis,"coaE, dephospho-CoA kinase [EC:2.7.1.24]",coaE,462.34916435533995,TU_160
+280,324878.0,325738.0,1,peg.281,K03177,Metabolism,Other Enzymes,Other enzymes,"truB, tRNA pseudouridine55 synthase [EC:5.4.99.25]",truB,155.49724930429258,TU_161
+281,325738.0,326280.0,1,peg.282,K11753,Metabolism,Biosynthesis,Cofactor biosynthesis,"ribF, riboflavin kinase / FMN adenylyltransferase [EC:2.7.1.26 2.7.7.2]",ribF,29.73088446673671,TU_161
+282,326399.0,326665.0,1,peg.283,K02956,Genetic Information Processing,Translation,Ribosome,"RP-S15, small subunit ribosomal protein S15",RP-S15,4351.913663579045,TU_162
+283,326883.0,327599.0,1,peg.284,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,340.39792695206893,TU_163
+284,327675.0,328730.0,1,peg.285,K00981,Metabolism,Biosynthesis,Lipid and steroid metabolism,"cdsA, phosphatidate cytidylyltransferase [EC:2.7.7.41]",cdsA,188.84477421622694,TU_163
+285,328745.0,330013.0,1,peg.286,K11749,Genetic Information Processing,"Folding, Sorting and Degradation",Peptidases,"rseP, regulator of sigma E protease [EC:3.4.24.-]",rseP,602.8622016492997,TU_163
+286,330027.0,334508.0,1,peg.287,K03763,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"polC, DNA polymerase III subunit alpha, Gram-positive type [EC:2.7.7.7]",polC,808.0739609184769,TU_163
+287,334531.0,335160.0,1,peg.288,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,398.86755520190064,TU_163
+288,335194.0,336312.0,1,peg.289,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,238.7014849358915,TU_163
+289,336400.0,336894.0,1,peg.290,K09748,Genetic Information Processing,Translation,Ribosome biogenesis,"rimP, ribosome maturation factor RimP",rimP,409.1314862578594,TU_165
+290,336904.0,338319.0,1,peg.291,K02600,Genetic Information Processing,Translation,Ribosome biogenesis,"nusA, transcription termination/antitermination protein NusA",nusA,1400.211643479106,TU_165
+291,338348.0,338569.0,1,peg.292,K07742,Unclear,Unclear,Unclear,"ylxR, uncharacterized protein",ylxR,236.17834537952422,TU_165
+292,338556.0,338855.0,1,peg.293,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,537.6196938553995,TU_165
+293,338874.0,340763.0,1,peg.294,K02519,Genetic Information Processing,Translation,Translation factors,"infB, translation initiation factor IF-2",infB,616.6987238185758,TU_165
+294,340777.0,342228.0,1,peg.295,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,2071.6792871717266,TU_165
+295,342270.0,342785.0,1,peg.296,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,2185.5487936900395,TU_165
+296,342913.0,344802.0,1,peg.297,K09384,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,994.9898102914149,TU_165
+297,344834.0,345490.0,1,peg.298,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,236.27211187219856,TU_165
+298,345490.0,346398.0,1,peg.299,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,60.52927706362624,TU_165
+299,346423.0,347208.0,1,peg.300,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,84.47498891570636,TU_165
+300,347227.0,347946.0,1,peg.301,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,120.8090314405422,TU_165
+301,347939.0,348655.0,1,peg.302,K09761,Genetic Information Processing,Translation,Ribosome biogenesis,"rsmE, 16S rRNA (uracil1498-N3)-methyltransferase [EC:2.1.1.193]",rsmE,201.1925078123205,TU_165
+302,348849.0,350216.0,1,peg.303,K00558,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"DNMT1, DNA (cytosine-5)-methyltransferase 1 [EC:2.1.1.37]",DNMT1,1089.9397446662708,TU_167
+303,350245.0,352752.0,1,peg.304,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,562.1441490495893,TU_167
+304,352766.0,353392.0,1,peg.305,K00876,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"udk, uridine kinase [EC:2.7.1.48]",udk,1173.4641873212151,TU_167
+305,353411.0,354769.0,-1,peg.306,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,272.994623345385,TU_170
+306,354847.0,356061.0,1,peg.307,K00558,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"DNMT1, DNA (cytosine-5)-methyltransferase 1 [EC:2.1.1.37]",DNMT1,1045.0032630568687,TU_173
+307,356072.0,358015.0,1,peg.308,K02622,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"parE, topoisomerase IV subunit B [EC:5.6.2.2]",parE,639.2456121341062,TU_173
+308,358031.0,360757.0,1,peg.309,K02621,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"parC, topoisomerase IV subunit A [EC:5.6.2.2]",parC,789.8108870632008,TU_173
+309,360767.0,361525.0,1,peg.310,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,159.56400526630986,TU_173
+310,361622.0,364171.0,1,peg.311,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,78.49585273933387,
+311,364183.0,365592.0,1,peg.312,K01223,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"bglA, 6-phospho-beta-glucosidase [EC:3.2.1.86]",bglA,6.2780431780141095,
+312,365694.0,368411.0,1,peg.313,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,54.99503534874188,TU_174
+313,368444.0,369466.0,1,peg.314,K06889,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,380.04647061301324,TU_175
+314,369561.0,370232.0,1,peg.315,K03492,Genetic Information Processing,Transcription,Transcription factors,"ydhQ, GntR family transcriptional regulator",ydhQ,145.51686900696836,TU_176
+315,370298.0,372556.0,1,peg.316,K01811,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"xylS, alpha-D-xyloside xylohydrolase [EC:3.2.1.177]",xylS,166.53175251625728,TU_176
+316,372567.0,375131.0,1,peg.317,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,74.94152722993515,TU_176
+317,375168.0,375722.0,-1,peg.318,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.23931929744808464,TU_179
+318,375817.0,376365.0,1,peg.319,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,435.68244469161846,TU_180
+319,376369.0,377202.0,1,peg.320,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,259.82251045607455,TU_180
+320,377296.0,379527.0,1,peg.321,K03581,Genetic Information Processing,DNA Maintenance,DNA repair,"recD, exodeoxyribonuclease V alpha subunit [EC:3.1.11.5]",recD,93.7803860580406,TU_181
+321,379520.0,380155.0,1,peg.322,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,203.81536549182024,TU_181
+322,380169.0,382187.0,-1,peg.323,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,698.5722916521482,TU_183
+323,382175.0,383482.0,-1,peg.324,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,297.149049618392,TU_183
+324,383484.0,384404.0,-1,peg.325,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,77.7053366006203,TU_183
+325,384972.0,385862.0,1,peg.326,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.4776426317353333,
+326,386130.0,387242.0,-1,peg.327,K02346,Genetic Information Processing,DNA Maintenance,DNA repair,"dinB, DNA polymerase IV [EC:2.7.7.7]",dinB,86.83635677140484,TU_184
+327,387258.0,388061.0,-1,peg.328,K06442,Genetic Information Processing,Translation,Ribosome biogenesis,"tlyA, 23S rRNA (cytidine1920-2'-O)/16S rRNA (cytidine1409-2'-O)-methyltransferase [EC:2.1.1.226 2.1.1.227]",tlyA,207.4118505243782,TU_184
+328,388061.0,388267.0,-1,peg.329,K03602,Genetic Information Processing,DNA Maintenance,DNA repair,"xseB, exodeoxyribonuclease VII small subunit [EC:3.1.11.6]",xseB,35.99304837414858,TU_184
+329,388257.0,389471.0,-1,peg.330,K03601,Genetic Information Processing,DNA Maintenance,DNA repair,"xseA, exodeoxyribonuclease VII large subunit [EC:3.1.11.6]",xseA,508.22898210844033,TU_184
+330,389471.0,389875.0,-1,peg.331,K03625,Genetic Information Processing,Translation,Ribosome biogenesis,"nusB, transcription antitermination protein NusB",nusB,981.3744599911533,TU_184
+331,389915.0,390796.0,-1,peg.332,K01151,Genetic Information Processing,DNA Maintenance,DNA repair,"nfo, deoxyribonuclease IV [EC:3.1.21.2]",nfo,161.43292146472288,TU_185
+332,390800.0,391624.0,-1,peg.333,K11753,Metabolism,Biosynthesis,Cofactor biosynthesis,"ribF, riboflavin kinase / FMN adenylyltransferase [EC:2.7.1.26 2.7.7.2]",ribF,335.36370441974617,TU_185
+333,391735.0,392763.0,1,peg.334,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,5968.288668246944,TU_186
+334,392804.0,393112.0,-1,peg.335,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,155.6122321059955,TU_187
+335,393214.0,393984.0,1,peg.336,K08591,Metabolism,Biosynthesis,Lipid and steroid metabolism,"plsY, acyl phosphate:glycerol-3-phosphate acyltransferase [EC:2.3.1.275]",plsY,1187.2548787292317,TU_188
+336,394011.0,394742.0,-1,peg.337,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,5262.808665714973,TU_189
+337,394744.0,395877.0,-1,peg.338,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,2206.2992013113567,TU_189
+338,396060.0,396551.0,1,peg.339,K08281,Metabolism,Biosynthesis,Cofactor biosynthesis,"pncA, nicotinamidase/pyrazinamidase [EC:3.5.1.19 3.5.1.-]",pncA,127.31562529778849,
+339,396680.0,396916.0,1,peg.340,K07570,Unclear,Unclear,Unclear,"GSP13, general stress protein 13",GSP13,6886.0205977815995,TU_190
+340,397160.0,398701.0,1,peg.341,K01951,Genetic Information Processing,"Folding, Sorting and Degradation",Peptidases,"guaA, GMP synthase (glutamine-hydrolysing) [EC:6.3.5.2]",guaA,83.95888307262764,TU_191
+341,398704.0,399834.0,1,peg.342,K00088,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"IMPDH, IMP dehydrogenase [EC:1.1.1.205]",IMPDH,170.9341127883923,TU_191
+342,399928.0,400548.0,1,peg.343,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,141.8518472214462,TU_192
+343,400583.0,400723.0,1,peg.344,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,131.03948674714545,TU_192
+344,400946.0,401200.0,1,peg.345,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,87.1877544450694,TU_192
+345,401278.0,404604.0,-1,peg.346,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,50.9554306061641,TU_194
+346,404837.0,405088.0,-1,peg.347,K09976,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,317.8655164369967,TU_196
+347,405124.0,407091.0,-1,peg.348,K00615,Metabolism,Central Carbon Metabolism,Pentose phosphate metabolism,"tktA, tktB, transketolase [EC:2.2.1.1]",tktA,1000.1195312347737,TU_196
+348,407075.0,407329.0,-1,peg.349,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,149.15605173384685,TU_196
+349,407358.0,408455.0,-1,peg.350,K06948,Genetic Information Processing,Translation,Ribosome biogenesis,"yqeH, 30S ribosome assembly GTPase",yqeH,278.59840236277154,TU_197
+350,408440.0,409351.0,-1,peg.351,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,32.099087560657985,TU_197
+351,409685.0,410158.0,1,peg.352,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.09863021415066102,
+352,410186.0,412699.0,-1,peg.353,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,629.204774745243,TU_198
+353,412785.0,415406.0,-1,peg.354,K01873,Genetic Information Processing,Translation,tRNA loading and maturation,"VARS, valyl-tRNA synthetase [EC:6.1.1.9]",VARS,573.5767841900582,TU_199
+354,415514.0,418429.0,-1,peg.355,K01537,Metabolism,Membrane Transport,Transport,"ATP2C, P-type Ca2+ transporter type 2C [EC:7.2.2.10]",ATP2C,385.60853276487137,TU_200
+355,418422.0,419018.0,-1,peg.356,K03978,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"engB, GTP-binding protein",engB,664.031599674447,TU_200
+356,419027.0,419563.0,-1,peg.357,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,24.317758776072697,TU_200
+357,419565.0,420173.0,-1,peg.358,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,125.41744605344424,TU_200
+358,420175.0,420846.0,-1,peg.359,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,135.12089239850465,TU_200
+359,420925.0,421635.0,1,peg.360,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,152.66876961886643,
+360,421670.0,422278.0,-1,peg.361,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,447.31948438397654,TU_201
+361,422405.0,422569.0,-1,peg.362,K02970,Genetic Information Processing,Translation,Ribosome,"RP-S21, small subunit ribosomal protein S21",RP-S21,4362.907614484309,TU_202
+362,422689.0,423567.0,-1,peg.363,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,37.61922295961775,TU_203
+363,423567.0,423815.0,-1,peg.364,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,415.937700399616,TU_203
+364,423916.0,425649.0,-1,peg.365,K01876,Genetic Information Processing,Translation,tRNA loading and maturation,"aspS, aspartyl-tRNA synthetase [EC:6.1.1.12]",aspS,763.2625088177646,TU_204
+365,425652.0,426899.0,-1,peg.366,K01892,Genetic Information Processing,Translation,tRNA loading and maturation,"HARS, histidyl-tRNA synthetase [EC:6.1.1.21]",HARS,247.32673585068312,TU_204
+366,427000.0,428433.0,-1,peg.367,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1465.719821382453,TU_206
+367,428426.0,429385.0,-1,peg.368,K02340,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"holA, DNA polymerase III subunit delta [EC:2.7.7.7]",holA,66.20798661802263,TU_206
+368,429523.0,429768.0,1,peg.369,K02968,Genetic Information Processing,Translation,Ribosome,"RP-S20, small subunit ribosomal protein S20",RP-S20,963.6534945009948,TU_207
+369,429811.0,431670.0,-1,peg.370,K02238,Metabolism,Membrane Transport,Secretion system,"comEC, competence protein ComEC",comEC,48.03224660073432,
+370,431806.0,432300.0,-1,peg.371,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,15.847441357399743,
+371,432357.0,432707.0,-1,peg.372,K02834,Genetic Information Processing,Translation,Ribosome biogenesis,"rbfA, ribosome-binding factor A",rbfA,1014.4469638524271,TU_208
+372,432735.0,433385.0,-1,peg.373,K01243,Metabolism,Biosynthesis,Amino acid metabolism,"mtnN, adenosylhomocysteine nucleosidase [EC:3.2.2.9]",mtnN,86.4190804747397,TU_209
+373,433385.0,434494.0,-1,peg.374,K00969,Metabolism,Biosynthesis,Cofactor biosynthesis,"nadD, nicotinate-nucleotide adenylyltransferase [EC:2.7.7.18]",nadD,142.3094804507665,TU_209
+374,434484.0,435023.0,-1,peg.375,K03216,Metabolism,Other Enzymes,Other enzymes,"trmL, tRNA (cytidine/uridine-2'-O-)-methyltransferase [EC:2.1.1.207]",trmL,244.10113246690767,TU_209
+375,435025.0,435621.0,-1,peg.376,K02428,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"rdgB, XTP/dITP diphosphohydrolase [EC:3.6.1.66]",rdgB,123.503825402185,TU_209
+376,435684.0,436445.0,1,peg.377,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,118.0998618144672,TU_210
+377,436450.0,437559.0,-1,peg.378,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,49.89887187674713,TU_211
+378,437652.0,438782.0,-1,peg.379,K07088,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,157.0830166415937,TU_212
+379,438878.0,439951.0,-1,peg.380,K01262,Genetic Information Processing,"Folding, Sorting and Degradation",Peptidases,"pepP, Xaa-Pro aminopeptidase [EC:3.4.11.9]",pepP,1847.5017778693193,TU_213
+380,440015.0,440158.0,-1,peg.381,K02913,Genetic Information Processing,Translation,Ribosome,"RP-L33, large subunit ribosomal protein L33",RP-L33,257.0695285502309,TU_214
+381,440341.0,441396.0,1,peg.382,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,934.7162869537178,TU_215
+382,442022.0,443146.0,-1,peg.383,K00655,Metabolism,Biosynthesis,Lipid and steroid metabolism,"plsC, 1-acyl-sn-glycerol-3-phosphate acyltransferase [EC:2.3.1.51]",plsC,2237.9023218852976,TU_217
+383,443148.0,443633.0,-1,peg.384,K00287,Metabolism,Central Carbon Metabolism,Other central metabolism enzymes,"DHFR, dihydrofolate reductase [EC:1.5.1.3]",DHFR,172.3678231790478,TU_218
+384,443626.0,443961.0,-1,peg.385,K00997,Metabolism,Biosynthesis,Cofactor biosynthesis,"acpS, holo-[acyl-carrier protein] synthase [EC:2.7.8.7]",acpS,175.27982331767714,TU_218
+385,444044.0,444517.0,-1,peg.386,K01493,Metabolism,Membrane Transport,Secretion system,"comEB, dCMP deaminase [EC:3.5.4.12]",comEB,597.7735453050062,TU_222
+386,444517.0,445962.0,-1,peg.387,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,2501.5392366151996,TU_222
+387,445943.0,446878.0,-1,peg.388,K06180,Genetic Information Processing,Translation,Ribosome biogenesis,"rluD, 23S rRNA pseudouridine1911/1915/1917 synthase [EC:5.4.99.23]",rluD,1114.958673750919,TU_222
+388,446862.0,447485.0,-1,peg.389,K03101,Genetic Information Processing,"Folding, Sorting and Degradation",Protein export,"lspA, signal peptidase II [EC:3.4.23.36]",lspA,1504.3880953701635,TU_222
+389,447505.0,450231.0,-1,peg.390,K01870,Genetic Information Processing,Translation,tRNA loading and maturation,"IARS, isoleucyl-tRNA synthetase [EC:6.1.1.5]",IARS,906.0971900861717,TU_222
+390,450510.0,451484.0,-1,peg.391,K06889,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,194.95447029455008,TU_222
+391,451560.0,451958.0,-1,peg.392,K09772,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"sepF, cell division inhibitor SepF",sepF,781.5920438724842,TU_225
+392,451972.0,453162.0,-1,peg.393,K03531,Cellular Processes,Cytoskeleton,Cytoskeleton proteins,"ftsZ, cell division protein FtsZ",ftsZ,2308.478444188676,TU_225
+393,453177.0,454484.0,-1,peg.394,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,666.3559289271377,TU_225
+394,454506.0,455432.0,-1,peg.395,K03438,Metabolism,Other Enzymes,Other enzymes,"mraW, 16S rRNA (cytosine1402-N4)-methyltransferase [EC:2.1.1.199]",mraW,580.3594531177658,TU_225
+395,455432.0,455887.0,-1,peg.396,K03925,Genetic Information Processing,Transcription,Transcription factors,"mraZ, MraZ protein",mraZ,552.7661654600729,TU_225
+396,456012.0,456191.0,-1,peg.397,K02911,Genetic Information Processing,Translation,Ribosome,"RP-L32, large subunit ribosomal protein L32",RP-L32,1397.7333524887401,TU_226
+397,456212.0,456706.0,-1,peg.398,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,919.98966726467,TU_227
+398,456711.0,459092.0,-1,peg.399,K01890,Genetic Information Processing,Translation,tRNA loading and maturation,"FARSB, phenylalanyl-tRNA synthetase beta chain [EC:6.1.1.20]",FARSB,1741.3660363643241,TU_227
+399,459100.0,460152.0,-1,peg.400,K01889,Genetic Information Processing,Translation,tRNA loading and maturation,"FARSA, phenylalanyl-tRNA synthetase alpha chain [EC:6.1.1.20]",FARSA,647.7194263476275,TU_228
+400,460168.0,460788.0,-1,peg.401,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,56.17821583635446,TU_228
+401,460796.0,465022.0,-1,peg.402,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,506.86595856635387,TU_228
+402,470174.0,470854.0,-1,peg.403,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,424.5093741658781,TU_230
+403,470877.0,472109.0,-1,peg.404,K07478,Genetic Information Processing,DNA Maintenance,DNA repair,"ycaJ, putative ATPase",ycaJ,401.7938693113249,TU_230
+404,472161.0,474524.0,-1,peg.405,K01338,Genetic Information Processing,"Folding, Sorting and Degradation",Peptidases,"lon, ATP-dependent Lon protease [EC:3.4.21.53]",lon,928.3416963708605,TU_231
+405,474634.0,475914.0,-1,peg.406,K03545,Genetic Information Processing,"Folding, Sorting and Degradation",Chaperones and folding catalysts,"tig, trigger factor",tig,1951.3861407189863,TU_232
+406,475934.0,476233.0,-1,peg.407,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,795.9495599858283,TU_232
+407,476265.0,476822.0,-1,peg.408,K02356,Genetic Information Processing,Translation,Translation factors,"efp, elongation factor P",efp,2104.5638106621577,TU_232
+408,476884.0,477321.0,-1,peg.409,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,101.47329709764847,TU_233
+409,477395.0,478336.0,-1,peg.410,K00604,Genetic Information Processing,Translation,tRNA loading and maturation,"MTFMT, methionyl-tRNA formyltransferase [EC:2.1.2.9]",MTFMT,306.98325492025106,TU_233
+410,478323.0,480452.0,-1,peg.411,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,278.40410456641797,TU_233
+411,480403.0,480534.0,1,peg.412,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1.9884334886142678,
+412,480560.0,481177.0,-1,peg.413,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1213.7390011792197,TU_234
+413,481235.0,482359.0,-1,peg.414,K00566,Genetic Information Processing,"Folding, Sorting and Degradation",Sulfur relay system,"mnmA, tRNA-uridine 2-sulfurtransferase [EC:2.8.1.13]",mnmA,136.9350716255674,TU_235
+414,482430.0,483788.0,-1,peg.415,K06901,Metabolism,Membrane Transport,Transport,"pbuG, putative MFS transporter, AGZA family, xanthine/uracil permease",pbuG,0.33312682675591304,TU_236
+415,484209.0,485333.0,-1,peg.416,K03686,Genetic Information Processing,"Folding, Sorting and Degradation",Chaperones and folding catalysts,"dnaJ, molecular chaperone DnaJ",dnaJ,1306.3816886980264,
+416,485388.0,487166.0,-1,peg.417,K04043,Genetic Information Processing,"Folding, Sorting and Degradation",Chaperones and folding catalysts,"dnaK, molecular chaperone DnaK",dnaK,1371.3492259140394,TU_237
+417,487188.0,487751.0,-1,peg.418,K03687,Genetic Information Processing,"Folding, Sorting and Degradation",Chaperones and folding catalysts,"GRPE, molecular chaperone GrpE",GRPE,285.50925708200066,TU_237
+418,487744.0,488772.0,-1,peg.419,K03705,Genetic Information Processing,Transcription,Transcription factors,"hrcA, heat-inducible transcriptional repressor",hrcA,720.5307858672044,TU_237
+419,488827.0,490962.0,-1,peg.420,K03695,Genetic Information Processing,"Folding, Sorting and Degradation",Chaperones and folding catalysts,"clpB, ATP-dependent Clp protease ATP-binding subunit ClpB",clpB,471.7333188892039,TU_238
+420,491075.0,491941.0,-1,peg.421,K00560,Metabolism,Central Carbon Metabolism,Other central metabolism enzymes,"thyA, thymidylate synthase [EC:2.1.1.45]",thyA,1341.5602981198504,TU_239
+421,492000.0,492947.0,-1,peg.422,K03551,Genetic Information Processing,DNA Maintenance,DNA repair,"ruvB, holliday junction DNA helicase RuvB [EC:3.6.4.12]",ruvB,0.1156625853631374,
+422,492940.0,493488.0,-1,peg.423,K03550,Genetic Information Processing,DNA Maintenance,DNA repair,"ruvA, holliday junction DNA helicase RuvA [EC:3.6.4.12]",ruvA,0.0,
+423,493558.0,495390.0,-1,peg.424,K06147,Metabolism,Membrane Transport,Transport,"ABCB-BAC, ATP-binding cassette, subfamily B, bacterial",ABCB-BAC,1013.6654052619942,TU_240
+424,495401.0,497245.0,-1,peg.425,K06147,Metabolism,Membrane Transport,Transport,"ABCB-BAC, ATP-binding cassette, subfamily B, bacterial",ABCB-BAC,257.1294915254489,TU_240
+425,497367.0,498116.0,-1,peg.426,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,103.28929562212197,TU_241
+426,498236.0,499594.0,1,peg.427,K01223,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"bglA, 6-phospho-beta-glucosidase [EC:3.2.1.86]",bglA,87.9608784139262,
+427,499598.0,501229.0,1,peg.428,K02818; K02819,Metabolism,Membrane Transport,PTS system,"PTS-Tre-EIIB, PTS system, trehalose-specific IIB component [EC:2.7.1.201]; PTS-Tre-EIIC, PTS system, trehalose-specific IIC component",PTS-Tre-EIIB,38.67871828876142,
+428,501265.0,502704.0,-1,peg.429,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,501.6712286523023,TU_242
+429,502913.0,503728.0,-1,peg.430,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,56.44672748839728,
+430,503732.0,507511.0,-1,peg.431,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,217.19145330567173,
+431,507621.0,509063.0,-1,peg.432,K01223,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"bglA, 6-phospho-beta-glucosidase [EC:3.2.1.86]",bglA,133.22595567500704,
+432,509047.0,510591.0,-1,peg.433,K02818; K02819,Metabolism,Membrane Transport,PTS system,"PTS-Tre-EIIB, PTS system, trehalose-specific IIB component [EC:2.7.1.201]; PTS-Tre-EIIC, PTS system, trehalose-specific IIC component",PTS-Tre-EIIB,28.217820624153187,
+433,510684.0,511436.0,-1,peg.434,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,5.285327729212268,TU_243
+434,511458.0,511925.0,-1,peg.435,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,82.84915271360457,TU_243
+435,512060.0,512758.0,1,peg.436,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,343.479914508388,TU_244
+436,512776.0,513462.0,1,peg.437,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,558.0013960874024,TU_244
+437,513671.0,513859.0,-1,peg.438,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.0,TU_245
+438,513870.0,515222.0,-1,peg.439,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,943.1590273493235,TU_245
+439,515233.0,515976.0,-1,peg.440,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,317.5881440267182,TU_245
+440,516223.0,516510.0,-1,peg.441,K02899,Genetic Information Processing,Translation,Ribosome,"RP-L27, large subunit ribosomal protein L27",RP-L27,1449.363333698434,TU_246
+441,516512.0,516826.0,-1,peg.442,K07584,Unclear,Unclear,Unclear,"ysxB, uncharacterized protein",ysxB,621.0026838958656,TU_246
+442,516829.0,517128.0,-1,peg.443,K02888,Genetic Information Processing,Translation,Ribosome,"RP-L21, large subunit ribosomal protein L21",RP-L21,2022.1395294266313,TU_246
+443,517292.0,517684.0,-1,peg.444,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,283.369315573538,
+444,517751.0,517897.0,-1,peg.445,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.16666840835153393,
+445,517966.0,518388.0,-1,peg.446,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.11584045403156258,
+446,518513.0,522931.0,-1,peg.447,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1248.0312767814028,TU_247
+447,523389.0,523538.0,1,peg.448,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,7.069081744647213,
+448,523546.0,523668.0,1,peg.449,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,6.597611367401325,
+449,524146.0,524274.0,1,peg.450,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,7.060514881388632,
+450,524857.0,527580.0,-1,peg.451,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,130.86392466504245,TU_248
+451,527599.0,528456.0,-1,peg.452,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.27767530594985484,TU_248
+452,529927.0,530652.0,-1,peg.453,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,3.490182907704826,TU_248
+453,530720.0,530953.0,-1,peg.454,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.0,
+454,531354.0,531476.0,-1,peg.455,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,109.75990090701754,
+455,531528.0,532379.0,-1,peg.456,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1886.2315312288972,TU_249
+456,532382.0,533089.0,-1,peg.457,K01990,Metabolism,Membrane Transport,Transport,"ABC-2.A, ABC-2 type transport system ATP-binding protein",ABC-2.A,213.22658032860417,TU_249
+457,533193.0,533795.0,-1,peg.458,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,13914.792144053696,TU_252
+458,533959.0,534711.0,-1,peg.459,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,267.43886350021353,TU_253
+459,534791.0,535627.0,-1,peg.460,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,113.45735853286583,TU_254
+460,535709.0,536476.0,-1,peg.461,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.0,
+461,536623.0,536850.0,-1,peg.462,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,144.30717962050872,
+462,536837.0,537970.0,-1,peg.463,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,310.45004884935287,
+463,538048.0,538284.0,-1,peg.464,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,19.770760938718844,TU_255
+464,538304.0,539896.0,-1,peg.465,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,538.0774289860852,TU_255
+465,539922.0,541943.0,-1,peg.466,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1153.1988742209146,TU_255
+466,541996.0,543810.0,-1,peg.467,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,948.5018941482599,TU_255
+467,543846.0,545717.0,-1,peg.468,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,229.02730685233757,TU_255
+468,545733.0,548600.0,-1,peg.469,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,917.9121982823234,TU_255
+469,548823.0,549392.0,-1,peg.470,K00760,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"hprT, hypoxanthine phosphoribosyltransferase [EC:2.4.2.8]",hprT,205.11036207942405,TU_256
+470,549468.0,549896.0,-1,peg.471,K07447,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"ruvX, putative holliday junction resolvase [EC:3.1.-.-]",ruvX,73.93111342763028,TU_257
+471,549889.0,550788.0,-1,peg.472,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,77.54432064732315,TU_257
+472,550862.0,551266.0,1,peg.473,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.398914616501218,TU_258
+473,551263.0,551835.0,-1,peg.474,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,12.667037420501869,TU_259
+474,551920.0,553281.0,-1,peg.475,K01689,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"ENO, enolase [EC:4.2.1.11]",ENO,6585.9017595675095,TU_261
+475,553412.0,555250.0,1,peg.476,K06207,Unclear,Unclear,Unclear,"typA, GTP-binding protein",typA,2001.9482878164042,TU_262
+476,555287.0,555706.0,-1,peg.477,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,74.622820781849,TU_263
+477,555708.0,556232.0,-1,peg.478,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,22.641738752434406,TU_263
+478,556287.0,557096.0,-1,peg.479,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,607.419368109145,TU_265
+479,557111.0,558913.0,-1,peg.480,K03596,Genetic Information Processing,Translation,Translation factors,"lepA, GTP-binding protein LepA",lepA,385.02913635519957,TU_265
+480,558931.0,559860.0,-1,peg.481,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,345.2329571385587,TU_265
+481,559864.0,560484.0,-1,peg.482,K06993,Genetic Information Processing,DNA Maintenance,DNA repair,"rnhA, ribonuclease H-related protein",rnhA,195.75843000704126,TU_265
+482,560510.0,561931.0,-1,peg.483,K01881,Genetic Information Processing,Translation,tRNA loading and maturation,"PARS, prolyl-tRNA synthetase [EC:6.1.1.15]",PARS,1055.4100240329628,TU_265
+483,561936.0,562562.0,-1,peg.484,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,217.51217355563745,TU_265
+484,562795.0,563262.0,-1,peg.485,K00783,Genetic Information Processing,Translation,Ribosome biogenesis,"rlmH, 23S rRNA (pseudouridine1915-N3)-methyltransferase [EC:2.1.1.177]",rlmH,45.49005821145449,TU_267
+485,563275.0,564627.0,-1,peg.486,K03106,Genetic Information Processing,"Folding, Sorting and Degradation",Protein export,"SRP54, signal recognition particle subunit SRP54 [EC:3.6.5.4]",SRP54,405.99447563039377,TU_267
+486,564720.0,566084.0,-1,peg.487,K01893,Genetic Information Processing,Translation,tRNA loading and maturation,"NARS, asparaginyl-tRNA synthetase [EC:6.1.1.22]",NARS,833.6152865967669,TU_268
+487,566089.0,566937.0,-1,peg.488,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,300.729733943443,TU_268
+488,566942.0,568087.0,-1,peg.489,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,537.8548236139769,TU_268
+489,568100.0,568882.0,-1,peg.490,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,640.3973582710279,TU_268
+490,568949.0,569902.0,-1,peg.491,K01409,Genetic Information Processing,"Folding, Sorting and Degradation",Peptidases,"KAE1, N6-L-threonylcarbamoyladenine synthase [EC:2.3.1.234]",KAE1,291.6579183425773,TU_269
+491,569915.0,570319.0,-1,peg.492,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.12031667162812681,TU_269
+492,570385.0,570774.0,-1,peg.493,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,78.15038712923621,TU_271
+493,570776.0,571255.0,-1,peg.494,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,613.490388989006,TU_271
+494,571307.0,572251.0,-1,peg.495,K06881,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"nrnA, bifunctional oligoribonuclease and PAP phosphatase NrnA [EC:3.1.3.7 3.1.13.3]",nrnA,830.654526860258,TU_271
+495,572366.0,574042.0,-1,peg.496,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,4071.4494112090347,TU_272
+496,574124.0,576529.0,-1,peg.497,K01869,Genetic Information Processing,Translation,tRNA loading and maturation,"LARS, leucyl-tRNA synthetase [EC:6.1.1.4]",LARS,819.0708851469022,TU_273
+497,576775.0,578544.0,-1,peg.498,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,636.0623833679409,TU_276
+498,578642.0,579037.0,-1,peg.499,K02996,Genetic Information Processing,Translation,Ribosome,"RP-S9, small subunit ribosomal protein S9",RP-S9,4096.265483950155,TU_277
+499,579037.0,579489.0,-1,peg.500,K02871,Genetic Information Processing,Translation,Ribosome,"RP-L13, large subunit ribosomal protein L13",RP-L13,3931.349214603113,TU_277
+500,579581.0,580147.0,-1,peg.501,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,54.09318518944439,TU_278
+501,580149.0,580568.0,-1,peg.502,K06925,Genetic Information Processing,Translation,tRNA loading and maturation,"tsaE, tRNA threonylcarbamoyladenosine biosynthesis protein TsaE",tsaE,0.2976165396817208,TU_278
+502,580623.0,583283.0,-1,peg.503,K01531,Metabolism,Other Enzymes,Other enzymes,"mgtA, P-type Mg2+ transporter [EC:7.2.2.14]",mgtA,552.5802645562035,TU_279
+503,583524.0,584462.0,-1,peg.504,K00845,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"glk, glucokinase [EC:2.7.1.2]",glk,4291.689053308155,TU_280
+504,584838.0,586457.0,-1,peg.505,K01226,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"treC, trehalose-6-phosphate hydrolase [EC:3.2.1.93]",treC,3258.429632637833,TU_282
+505,586503.0,588062.0,-1,peg.506,K02817; K02818; K02819,Metabolism,Membrane Transport,PTS system,"PTS-Tre-EIIA, PTS system, trehalose-specific IIA component [EC:2.7.1.201]; PTS-Tre-EIIB, PTS system, trehalose-specific IIB component [EC:2.7.1.201]; PTS-Tre-EIIC, PTS system, trehalose-specific IIC component",PTS-Tre-EIIA,5910.897719903328,TU_282
+506,588125.0,589072.0,-1,peg.507,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,85.65373735944429,TU_283
+507,589161.0,590759.0,-1,peg.508,K15633,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"gpmI, 2,3-bisphosphoglycerate-independent phosphoglycerate mutase [EC:5.4.2.12]",gpmI,4301.895962513074,TU_284
+508,590775.0,591596.0,-1,peg.509,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1577.7256011698792,TU_284
+509,591600.0,592346.0,-1,peg.510,K01803,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"TPI, triosephosphate isomerase (TIM) [EC:5.3.1.1]",TPI,2045.2050525902005,TU_284
+510,592452.0,594968.0,-1,peg.511,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,8226.839153037028,TU_285
+511,595009.0,595701.0,-1,peg.512,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,238.72577402657103,TU_285
+512,596942.0,597961.0,-1,peg.513,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,330.19879966800465,TU_288
+513,597951.0,598898.0,-1,peg.514,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,147.50858824039648,TU_288
+514,598961.0,602203.0,-1,peg.515,K11070,Metabolism,Membrane Transport,Transport,"potC, spermidine/putrescine transport system permease protein",potC,121.65501052804974,TU_289
+515,602167.0,603162.0,-1,peg.516,K11071,Metabolism,Membrane Transport,Transport,"potB, spermidine/putrescine transport system permease protein",potB,140.97479408664918,TU_289
+516,603167.0,604219.0,-1,peg.517,K11072,Metabolism,Membrane Transport,Transport,"potA, spermidine/putrescine transport system ATP-binding protein [EC:7.6.2.11]",potA,405.5353821883084,TU_289
+517,604572.0,605411.0,-1,peg.518,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1071.2462297329985,TU_290
+518,605495.0,606415.0,-1,peg.519,K00847,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"scrK, fructokinase [EC:2.7.1.4]",scrK,963.9884258990963,TU_292
+519,606417.0,607868.0,-1,peg.520,K01193,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"INV, beta-fructofuranosidase [EC:3.2.1.26]",INV,4037.7583678088085,TU_292
+520,607873.0,609591.0,-1,peg.521,K02809; K02810,Metabolism,Membrane Transport,PTS system,"PTS-Scr-EIIB, PTS system, sucrose-specific IIB component [EC:2.7.1.211]; PTS-Scr-EIIC, PTS system, sucrose-specific IIC component",PTS-Scr-EIIB,897.2683675428134,TU_292
+521,609611.0,610309.0,-1,peg.522,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1132.4232992548239,TU_292
+522,610540.0,611010.0,-1,peg.523,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,5748.380876215889,TU_293
+523,611097.0,612818.0,-1,peg.524,K08483,Metabolism,Membrane Transport,PTS system,"PTS-EI.PTSI, phosphotransferase system, enzyme I, PtsI [EC:2.7.3.9]",PTS-EI.PTSI,3683.896310943385,TU_294
+524,612951.0,613091.0,-1,peg.525,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.9495155920325864,
+525,613110.0,613844.0,-1,peg.526,K01916,Metabolism,Biosynthesis,Amino acid metabolism,"nadE, NAD+ synthase [EC:6.3.1.5]",nadE,355.925445263556,
+526,613864.0,615162.0,-1,peg.527,K03979,Genetic Information Processing,Translation,Ribosome biogenesis,"obgE, GTPase [EC:3.6.5.-]",obgE,1087.3943698599908,
+527,615188.0,615496.0,-1,peg.528,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,273.45782177857825,
+528,615486.0,616223.0,-1,peg.529,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,221.63922945263667,
+529,616476.0,618476.0,-1,peg.530,K05592,Genetic Information Processing,Translation,Ribosome biogenesis,"deaD, ATP-dependent RNA helicase DeaD [EC:3.6.4.13]",deaD,2496.6893895730477,TU_298
+530,618620.0,620059.0,-1,peg.531,K01193,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"INV, beta-fructofuranosidase [EC:3.2.1.26]",INV,6372.547250025749,TU_298
+531,620061.0,621593.0,-1,peg.532,K02818; K02819,Metabolism,Membrane Transport,PTS system,"PTS-Tre-EIIB, PTS system, trehalose-specific IIB component [EC:2.7.1.201]; PTS-Tre-EIIC, PTS system, trehalose-specific IIC component",PTS-Tre-EIIB,1893.5347038968778,TU_298
+532,621769.0,623934.0,-1,peg.533,K00525,Genetic Information Processing,DNA Maintenance,DNA repair,"nrdA, nrdE, ribonucleoside-diphosphate reductase alpha chain [EC:1.17.4.1]",nrdA,7592.289700291946,TU_299
+533,623937.0,624392.0,-1,peg.534,K03647,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"nrdI, protein involved in ribonucleotide reduction",nrdI,3481.862765283686,TU_299
+534,624396.0,625418.0,-1,peg.535,K00526,Genetic Information Processing,DNA Maintenance,DNA repair,"nrdB, nrdF, ribonucleoside-diphosphate reductase beta chain [EC:1.17.4.1]",nrdB,8018.403951126605,TU_299
+535,625671.0,627254.0,-1,peg.536,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1743.8567130928686,TU_300
+536,627269.0,628609.0,-1,peg.537,K04094,Genetic Information Processing,Translation,tRNA loading and maturation,"trmFO, methylenetetrahydrofolate--tRNA-(uracil-5-)-methyltransferase [EC:2.1.1.74]",trmFO,2169.6101400467974,TU_300
+537,628609.0,630516.0,-1,peg.538,K06147,Metabolism,Membrane Transport,Transport,"ABCB-BAC, ATP-binding cassette, subfamily B, bacterial",ABCB-BAC,1782.0128517213143,TU_300
+538,630503.0,632482.0,-1,peg.539,K06147,Metabolism,Membrane Transport,Transport,"ABCB-BAC, ATP-binding cassette, subfamily B, bacterial",ABCB-BAC,2101.1603358413668,TU_300
+539,632569.0,633348.0,-1,peg.540,K04096,Genetic Information Processing,DNA Maintenance,DNA repair,"smf, DNA processing protein",smf,0.0,
+540,633353.0,633658.0,-1,peg.541,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.23765612873118677,
+541,633730.0,634356.0,-1,peg.542,K03470,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"rnhB, ribonuclease HII [EC:3.1.26.4]",rnhB,222.6325949992992,TU_302
+542,634350.0,635297.0,-1,peg.543,K14540,Genetic Information Processing,Translation,Ribosome biogenesis,"rbgA, ribosome biogenesis GTPase A",rbgA,429.1553074309433,TU_302
+543,635387.0,635773.0,-1,peg.544,K02884,Genetic Information Processing,Translation,Ribosome,"RP-L19, large subunit ribosomal protein L19",RP-L19,4484.628846399714,TU_303
+544,635775.0,636506.0,-1,peg.545,K00554,Metabolism,Other Enzymes,Other enzymes,"trmD, tRNA (guanine37-N1)-methyltransferase [EC:2.1.1.228]",trmD,1849.7970869787441,TU_303
+545,636506.0,637006.0,-1,peg.546,K02860,Genetic Information Processing,Translation,Ribosome biogenesis,"rimM, 16S rRNA processing protein RimM",rimM,379.8025083133796,TU_303
+546,637064.0,637333.0,-1,peg.547,K02959,Genetic Information Processing,Translation,Ribosome,"RP-S16, small subunit ribosomal protein S16",RP-S16,2044.719645337925,TU_303
+547,637421.0,638290.0,-1,peg.548,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,109.3635372484061,TU_304
+548,638402.0,638965.0,1,peg.549,K01507,Metabolism,Energy Metabolism,Oxidative phosphorylation,"ppa, inorganic pyrophosphatase [EC:3.6.1.1]",ppa,3180.856410546916,TU_305
+549,639022.0,639816.0,-1,peg.550,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,306.78855740688846,TU_306
+550,639879.0,640592.0,-1,peg.551,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,780.5930999910693,TU_308
+551,640594.0,641214.0,-1,peg.552,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,3526.1208700746083,TU_308
+552,641228.0,641983.0,-1,peg.553,K06178,Genetic Information Processing,Translation,Ribosome biogenesis,"rluB, 23S rRNA pseudouridine2605 synthase [EC:5.4.99.22]",rluB,911.9909005606734,TU_308
+553,641983.0,642612.0,-1,peg.554,K06024,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"scpB, segregation and condensation protein B",scpB,1128.5179842819973,TU_308
+554,642605.0,643438.0,-1,peg.555,K05896,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"scpA, segregation and condensation protein A",scpA,1416.9253572322107,TU_308
+555,643489.0,644328.0,-1,peg.556,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,443.9798412571547,
+556,644345.0,644914.0,-1,peg.557,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,133.70432423585888,
+557,644924.0,645607.0,-1,peg.558,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,462.055492514261,
+558,645984.0,646298.0,1,peg.559,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,22.46847312775924,
+559,646410.0,648071.0,-1,peg.560,K01887,Genetic Information Processing,Translation,tRNA loading and maturation,"RARS, arginyl-tRNA synthetase [EC:6.1.1.19]",RARS,1334.2880253117864,TU_309
+560,648123.0,648668.0,-1,peg.561,K02838,Genetic Information Processing,Translation,Translation factors,"frr, ribosome recycling factor",frr,1351.5661484187358,TU_309
+561,648680.0,649396.0,-1,peg.562,K09903,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"pyrH, uridylate kinase [EC:2.7.4.22]",pyrH,3377.1702300735546,TU_309
+562,649794.0,650537.0,-1,peg.563,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1066.806453639668,
+563,650584.0,651144.0,-1,peg.564,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1620.6517021178072,TU_310
+564,651147.0,652040.0,-1,peg.565,K02357,Genetic Information Processing,Translation,Translation factors,"tsf, elongation factor Ts",tsf,2386.9067784700956,TU_310
+565,652065.0,652865.0,-1,peg.566,K02967,Genetic Information Processing,Translation,Ribosome,"RP-S2, small subunit ribosomal protein S2",RP-S2,4532.89938892057,TU_310
+566,653061.0,655121.0,-1,peg.567,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,490.0418471013208,TU_312
+567,655137.0,656045.0,-1,peg.568,K06179,Genetic Information Processing,Translation,Ribosome biogenesis,"rluC, 23S rRNA pseudouridine955/2504/2580 synthase [EC:5.4.99.24]",rluC,230.83638875541894,TU_312
+568,656045.0,657037.0,-1,peg.569,K07052,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,301.22818678567916,TU_312
+569,657113.0,657382.0,-1,peg.570,K11189,Metabolism,Membrane Transport,PTS system,"PTS-HPR, phosphocarrier protein",PTS-HPR,1979.0506431891172,TU_313
+570,657457.0,659628.0,-1,peg.571,K03657,Genetic Information Processing,DNA Maintenance,DNA repair,"uvrD, DNA helicase II / ATP-dependent DNA helicase PcrA [EC:3.6.4.12]",uvrD,630.602088162048,TU_314
+571,659621.0,660457.0,-1,peg.572,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,111.1622892306407,TU_314
+572,660464.0,661423.0,-1,peg.573,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,316.46970390043174,TU_314
+573,661596.0,662198.0,1,peg.574,K01462,Metabolism,Other Enzymes,Other enzymes,"PDF, peptide deformylase [EC:3.5.1.88]",PDF,101.3936353736376,TU_315
+574,662347.0,664113.0,1,peg.575,K12574,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"rnj, ribonuclease J [EC:3.1.-.-]",rnj,2570.1721990679875,TU_315
+575,664136.0,666751.0,-1,peg.576,K02042,Metabolism,Membrane Transport,Transport,"phnE, phosphonate transport system permease protein",phnE,92.92288418626954,TU_317
+576,666751.0,667500.0,-1,peg.577,K02041,Metabolism,Membrane Transport,Transport,"phnC, phosphonate transport system ATP-binding protein [EC:7.3.2.2]",phnC,52.47236693854624,TU_317
+577,667570.0,668787.0,-1,peg.578,K02044,Metabolism,Membrane Transport,Transport,"phnD, phosphonate transport system substrate-binding protein",phnD,643.7401028436602,TU_317
+578,669082.0,670032.0,1,peg.579,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,2081.417221581129,TU_318
+579,670096.0,670602.0,-1,peg.580,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,792.5818233169704,TU_319
+580,670870.0,671556.0,1,peg.581,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,29.15196281018397,TU_320
+581,671596.0,672810.0,-1,peg.582,K00927,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"PGK, phosphoglycerate kinase [EC:2.7.2.3]",PGK,6934.678753553268,TU_322
+582,672923.0,673936.0,-1,peg.583,K00134,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"GAPDH, glyceraldehyde 3-phosphate dehydrogenase [EC:1.2.1.12]",GAPDH,7684.947586471636,TU_324
+583,674029.0,674964.0,-1,peg.584,K11144,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"dnaI, primosomal protein DnaI",dnaI,2575.348395511295,TU_326
+584,674972.0,676156.0,-1,peg.585,K03346,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"dnaB, replication initiation and membrane attachment protein",dnaB,3241.6043822155007,TU_326
+585,676319.0,677146.0,-1,peg.586,K10563,Genetic Information Processing,DNA Maintenance,DNA repair,"mutM, formamidopyrimidine-DNA glycosylase [EC:3.2.2.23 4.2.99.18]",mutM,622.1635826659802,TU_327
+586,677164.0,679851.0,-1,peg.587,K02335,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"polA, DNA polymerase I [EC:2.7.7.7]",polA,465.00575706833666,TU_327
+587,679868.0,682846.0,-1,peg.588,K02337,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"dnaE, DNA polymerase III subunit alpha [EC:2.7.7.7]",dnaE,396.96919687481244,TU_327
+588,682846.0,683991.0,-1,peg.589,K03151,Genetic Information Processing,"Folding, Sorting and Degradation",Sulfur relay system,"thiI, tRNA uracil 4-sulfurtransferase [EC:2.8.1.4]",thiI,868.5746167052788,TU_327
+589,684066.0,685856.0,-1,peg.590,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,690.3098477605813,TU_327
+590,686108.0,686734.0,1,peg.591,K02986,Genetic Information Processing,Translation,Ribosome,"RP-S4, small subunit ribosomal protein S4",RP-S4,12047.150909166265,TU_328
+591,686985.0,688226.0,-1,peg.592,K01866,Genetic Information Processing,Translation,tRNA loading and maturation,"YARS, tyrosyl-tRNA synthetase [EC:6.1.1.1]",YARS,542.2216861781595,TU_329
+592,688237.0,689292.0,-1,peg.593,K00763,Metabolism,Biosynthesis,Cofactor biosynthesis,"pncB, nicotinate phosphoribosyltransferase [EC:6.3.4.21]",pncB,749.2360613261802,TU_329
+593,689297.0,689878.0,-1,peg.594,K06878,Unclear,Unclear,Unclear,tRNA-binding protein,tRNA-binding protein,609.3849124382076,TU_329
+594,689956.0,690786.0,1,peg.595,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,2241.6529667139735,TU_330
+595,690795.0,691646.0,1,peg.596,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,4892.683946110709,TU_330
+596,692415.0,692639.0,-1,peg.597,K02078,Metabolism,Biosynthesis,Lipid and steroid metabolism,"acpP, acyl carrier protein",acpP,3305.7833535082723,TU_333
+597,692671.0,693006.0,-1,peg.598,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.08158343074721298,
+598,692993.0,694123.0,-1,peg.599,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.04332494434602208,
+599,694198.0,695151.0,-1,peg.600,K00016,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"LDH, L-lactate dehydrogenase [EC:1.1.1.27]",LDH,7884.646923824963,TU_334
+600,695300.0,699064.0,-1,peg.601,K03046,Genetic Information Processing,Transcription,RNA polymerase,"rpoC, DNA-directed RNA polymerase subunit beta' [EC:2.7.7.6]",rpoC,3867.9585196371013,TU_335
+601,699074.0,702928.0,-1,peg.602,K03043,Genetic Information Processing,Transcription,RNA polymerase,"rpoB, DNA-directed RNA polymerase subunit beta [EC:2.7.7.6]",rpoB,2874.4203015200196,TU_335
+602,702943.0,704100.0,-1,peg.603,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,465.050461573861,TU_335
+603,704315.0,705424.0,1,peg.604,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,387.0663056986027,TU_336
+604,705469.0,705837.0,-1,peg.605,K02935,Genetic Information Processing,Translation,Ribosome,"RP-L7, large subunit ribosomal protein L7/L12",RP-L7,2378.2511515808405,TU_338
+605,705897.0,706397.0,-1,peg.606,K02864,Genetic Information Processing,Translation,Ribosome,"RP-L10, large subunit ribosomal protein L10",RP-L10,2321.2641225925217,TU_338
+606,706623.0,709076.0,-1,peg.607,K01421,Unclear,Unclear,Unclear,"yhgE, putative membrane protein",yhgE,685.8919388458163,TU_338
+607,709256.0,710644.0,-1,peg.608,K19540,Metabolism,Membrane Transport,Transport,"frlA, fructoselysine transporter",frlA,6738.756881427621,TU_341
+608,710631.0,711641.0,-1,peg.609,K06889,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,1073.4027127191168,TU_341
+609,711728.0,712168.0,-1,peg.610,K02348,Unclear,Unclear,Unclear,"elaA, ElaA protein",elaA,1134.4646052216347,
+610,712217.0,712900.0,-1,peg.611,K02863,Genetic Information Processing,Translation,Ribosome,"RP-L1, large subunit ribosomal protein L1",RP-L1,5569.92616154736,TU_342
+611,712900.0,713328.0,-1,peg.612,K02867,Genetic Information Processing,Translation,Ribosome,"RP-L11, large subunit ribosomal protein L11",RP-L11,1206.1069241556595,TU_342
+612,713823.0,714908.0,1,peg.613,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1852.5231136801265,TU_344
+613,714913.0,715827.0,-1,peg.614,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,155.06417819198174,TU_345
+614,715901.0,716185.0,-1,peg.615,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,160.36189553278987,TU_347
+615,716265.0,718943.0,-1,peg.616,K01872,Genetic Information Processing,Translation,tRNA loading and maturation,"AARS, alanyl-tRNA synthetase [EC:6.1.1.7]",AARS,1109.715107036677,TU_347
+616,719063.0,719914.0,1,peg.617,K21064,Metabolism,Biosynthesis,Cofactor biosynthesis,"ycsE, 5-amino-6-(5-phospho-D-ribitylamino)uracil phosphatase [EC:3.1.3.104]",ycsE,316.45225653136043,TU_348
+617,719951.0,721402.0,-1,peg.618,K01223,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"bglA, 6-phospho-beta-glucosidase [EC:3.2.1.86]",bglA,930.8273341531307,TU_350
+618,721513.0,722445.0,-1,peg.619,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,411.5197965686502,TU_350
+619,722438.0,723838.0,-1,peg.620,K01223,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"bglA, 6-phospho-beta-glucosidase [EC:3.2.1.86]",bglA,1268.5937499737327,TU_350
+620,723919.0,724662.0,-1,peg.621,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,786.6483457983483,TU_351
+621,724728.0,727352.0,-1,peg.622,K02755; K02756; K02757,Metabolism,Membrane Transport,PTS system,"PTS-Bgl-EIIA, PTS system, beta-glucoside-specific IIA component [EC:2.7.1.-]; PTS-Bgl-EIIB, PTS system, beta-glucoside-specific IIB component [EC:2.7.1.-]; PTS-Bgl-EIIC, PTS system, beta-glucoside-specific IIC component",PTS-Bgl-EIIA,607.5563985630281,TU_352
+622,727496.0,727855.0,-1,peg.623,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,114.69063970006529,TU_353
+623,727922.0,729106.0,-1,peg.624,K02358,Genetic Information Processing,Translation,Translation factors,"tuf, elongation factor Tu",tuf,10074.345470369515,TU_355
+624,729247.0,731316.0,-1,peg.625,K02355,Genetic Information Processing,Translation,Translation factors,"fusA, elongation factor G",fusA,7108.485946913269,TU_355
+625,731354.0,731821.0,-1,peg.626,K02992,Genetic Information Processing,Translation,Ribosome,"RP-S7, small subunit ribosomal protein S7",RP-S7,5184.006679640256,TU_355
+626,731902.0,732315.0,-1,peg.627,K02950,Genetic Information Processing,Translation,Ribosome,"RP-S12, small subunit ribosomal protein S12",RP-S12,5426.29565757303,TU_355
+627,732418.0,732963.0,-1,peg.628,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.2900464222825727,TU_356
+628,732972.0,734531.0,-1,peg.629,K06131,Metabolism,Biosynthesis,Lipid and steroid metabolism,"clsA_B, cardiolipin synthase A/B [EC:2.7.8.-]",clsA_B,103.42041631641439,TU_357
+629,734531.0,735256.0,-1,peg.630,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,219.3171759300847,TU_357
+630,735343.0,736257.0,-1,peg.631,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1064.7063258051078,TU_358
+631,736359.0,737018.0,-1,peg.632,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,140.27466609743814,TU_360
+632,737006.0,737512.0,-1,peg.633,K07566,Genetic Information Processing,Translation,Ribosome biogenesis,"tsaC, L-threonylcarbamoyladenylate synthase [EC:2.7.7.87]",tsaC,324.9645025455863,TU_360
+633,737502.0,739010.0,-1,peg.634,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1105.0893808936632,TU_360
+634,739019.0,739879.0,-1,peg.635,K02493,Metabolism,Other Enzymes,Other enzymes,"hemK, release factor glutamine methyltransferase [EC:2.1.1.297]",hemK,212.6948141774541,TU_360
+635,739872.0,740963.0,-1,peg.636,K02835,Genetic Information Processing,Translation,Translation factors,"prfA, peptide chain release factor 1",prfA,802.050432047775,TU_360
+636,740966.0,741577.0,-1,peg.637,K00857,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"tdk, thymidine kinase [EC:2.7.1.21]",tdk,458.2632448875857,TU_360
+637,741580.0,742524.0,-1,peg.638,K06881,Genetic Information Processing,"Folding, Sorting and Degradation",Nucleases,"nrnA, bifunctional oligoribonuclease and PAP phosphatase NrnA [EC:3.1.3.7 3.1.13.3]",nrnA,557.1574074506776,TU_360
+638,742537.0,744414.0,-1,peg.639,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1558.4137836473276,TU_360
+639,744520.0,744798.0,-1,peg.640,K02909,Genetic Information Processing,Translation,Ribosome,"RP-L31, large subunit ribosomal protein L31",RP-L31,16251.16295387545,TU_361
+640,744910.0,745548.0,-1,peg.641,K01619,Metabolism,Central Carbon Metabolism,Pentose phosphate metabolism,"deoC, deoxyribose-phosphate aldolase [EC:4.1.2.4]",deoC,39.30500030399171,TU_362
+641,745535.0,746218.0,-1,peg.642,K01783,Metabolism,Central Carbon Metabolism,Pentose phosphate metabolism,"rpe, ribulose-phosphate 3-epimerase [EC:5.1.3.1]",rpe,1.438441312396619,
+642,746278.0,747093.0,1,peg.643,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,167.05028888365118,TU_363
+643,747090.0,748016.0,-1,peg.644,K00852,Metabolism,Central Carbon Metabolism,Pentose phosphate metabolism,"rbsK, ribokinase [EC:2.7.1.15]",rbsK,129.04619569016657,
+644,748033.0,749541.0,-1,peg.645,K03475,Metabolism,Membrane Transport,PTS system,"PTS-Ula-EIIC, PTS system, ascorbate-specific IIC component",PTS-Ula-EIIC,216.68757229628076,
+645,749713.0,750603.0,-1,peg.646,K01624,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"FBA, fructose-bisphosphate aldolase, class II [EC:4.1.2.13]",FBA,5374.678094067393,TU_364
+646,750674.0,751528.0,-1,peg.647,K01992,Metabolism,Membrane Transport,Transport,"ABC-2.P, ABC-2 type transport system permease protein",ABC-2.P,739.2940156378796,TU_365
+647,751528.0,752232.0,-1,peg.648,K01990,Metabolism,Membrane Transport,Transport,"ABC-2.A, ABC-2 type transport system ATP-binding protein",ABC-2.A,977.1627597576157,TU_365
+648,752337.0,752849.0,1,peg.649,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,66.03498445989392,TU_366
+649,752875.0,754473.0,-1,peg.650,K01937,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"pyrG, CTP synthase [EC:6.3.4.2]",pyrG,1806.6599421190629,
+650,754546.0,754962.0,-1,peg.651,K03048,Genetic Information Processing,Transcription,RNA polymerase,"rpoE, DNA-directed RNA polymerase subunit delta",rpoE,1548.9141872347093,TU_369
+651,754987.0,756195.0,-1,peg.652,K06885,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,601.9738984479625,TU_369
+652,756205.0,757653.0,-1,peg.653,K09698,Genetic Information Processing,Translation,tRNA loading and maturation,"gltX, nondiscriminating glutamyl-tRNA synthetase [EC:6.1.1.24]",gltX,969.0117007145155,TU_369
+653,757701.0,759458.0,-1,peg.654,K06956,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,456.07440797392314,TU_369
+654,759489.0,760817.0,-1,peg.655,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,378.7691415544514,TU_369
+655,760995.0,762911.0,1,peg.656,K03168,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"topA, DNA topoisomerase I [EC:5.6.2.1]",topA,2717.5292528578616,TU_371
+656,762945.0,763628.0,-1,peg.657,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,269.3864257946965,TU_372
+657,763697.0,764392.0,1,peg.658,K01069,Metabolism,Central Carbon Metabolism,Glycolysis and carbohydrate metabolism,"gloB, hydroxyacylglutathione hydrolase [EC:3.1.2.6]",gloB,22.463650585244974,
+658,764438.0,765022.0,-1,peg.659,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1207.9584581296629,TU_374
+659,765064.0,766458.0,-1,peg.660,K02824,Metabolism,Membrane Transport,Transport,"pyrP, uracil permease",pyrP,2009.7109458822542,TU_374
+660,766637.0,767329.0,-1,peg.661,K07043,Unclear,Unclear,Unclear,uncharacterized protein,uncharacterized protein,83.11837272418587,TU_375
+661,767322.0,768416.0,-1,peg.662,K06942,Genetic Information Processing,Translation,Ribosome biogenesis,"ychF, ribosome-binding ATPase",ychF,577.4986347684975,TU_375
+662,768418.0,768615.0,-1,peg.663,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,0.5130039745936387,TU_375
+663,768615.0,769319.0,-1,peg.664,K03501,Genetic Information Processing,Translation,Ribosome biogenesis,"gidB, 16S rRNA (guanine527-N7)-methyltransferase [EC:2.1.1.170]",gidB,22.318866813171734,TU_375
+664,769418.0,770035.0,-1,peg.665,K00995,Metabolism,Biosynthesis,Lipid and steroid metabolism,"pgsA, CDP-diacylglycerol---glycerol-3-phosphate 3-phosphatidyltransferase [EC:2.7.8.5]",pgsA,247.0260230500214,TU_376
+665,770004.0,771650.0,-1,peg.666,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,865.5381330389113,TU_377
+666,771767.0,772474.0,-1,peg.667,K03784,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"deoD, purine-nucleoside phosphorylase [EC:2.4.2.1]",deoD,960.3194838217233,TU_380
+667,772503.0,773402.0,-1,peg.668,K23536,Metabolism,Membrane Transport,Transport,"nupC, general nucleoside transport system permease protein",nupC,573.6290588546995,TU_380
+668,773386.0,775224.0,-1,peg.669,K23535,Metabolism,Membrane Transport,Transport,"nupB, general nucleoside transport system permease protein",nupB,364.91067208537623,TU_380
+669,775228.0,776763.0,-1,peg.670,K23537,Metabolism,Membrane Transport,Transport,"nupA, general nucleoside transport system ATP-binding protein",nupA,356.12612601319387,TU_380
+670,776773.0,778146.0,-1,peg.671,K07335,Metabolism,Membrane Transport,Transport,"bmpA, basic membrane protein A and related proteins",bmpA,119.41126348615627,TU_380
+671,778357.0,779682.0,-1,peg.672,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,1267.7353704032826,TU_382
+672,779747.0,781627.0,-1,peg.673,K03495,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"gidA, tRNA uridine 5-carboxymethylaminomethyl modification enzyme",gidA,799.0951612616527,TU_382
+673,781761.0,783404.0,-1,peg.674,K03798,Genetic Information Processing,"Folding, Sorting and Degradation",Peptidases,"ftsH, cell division protease FtsH [EC:3.4.24.-]",ftsH,3110.920140875341,TU_383
+674,783776.0,784972.0,-1,peg.675,K04075,Metabolism,Other Enzymes,Other enzymes,"tilS, tRNA(Ile)-lysidine synthase [EC:6.3.4.19]",tilS,418.10759942905,TU_384
+675,784976.0,785698.0,-1,peg.676,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,358.04064042887984,TU_384
+676,785698.0,786441.0,-1,peg.677,K02341,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"holB, DNA polymerase III subunit delta' [EC:2.7.7.7]",holB,233.92722537322888,TU_384
+677,786420.0,787055.0,-1,peg.678,K00943,Metabolism,Biosynthesis,Purine and pyrimidine metabolism,"tmk, dTMP kinase [EC:2.7.4.9]",tmk,638.7821443664133,TU_384
+678,787057.0,787647.0,-1,peg.679,K06187,Genetic Information Processing,DNA Maintenance,DNA repair,"recR, recombination protein RecR",recR,240.54788363020717,TU_384
+679,787650.0,789545.0,-1,peg.680,K02343,Genetic Information Processing,DNA Maintenance,DNA replication and partition,"dnaX, DNA polymerase III subunit gamma/tau [EC:2.7.7.7]",dnaX,572.9562564744859,TU_384
+680,789719.0,790147.0,-1,peg.681,K11991,Metabolism,Other Enzymes,Other enzymes,"tadA, tRNA(adenine34) deaminase [EC:3.5.4.33]",tadA,352.61094165055647,TU_385
+681,790281.0,791081.0,-1,peg.682,Not mapped,Not mapped,Unknown,Unknown,Unknown,Unknown,256.94516254286617,TU_386
+682,791181.0,792428.0,-1,peg.683,K03217,Genetic Information Processing,"Folding, Sorting and Degradation",Protein export,"yidC, YidC/Oxa1 family membrane protein insertase",yidC,4882.81536123934,TU_387
+683,792445.0,792777.0,-1,peg.684,K03536,Metabolism,Other Enzymes,Other enzymes,"rnpA, ribonuclease P protein component [EC:3.1.26.5]",rnpA,249.05919960196664,TU_387
+684,792790.0,792924.0,-1,peg.685,K02914,Genetic Information Processing,Translation,Ribosome,"RP-L34, large subunit ribosomal protein L34",RP-L34,515.5201353102225,TU_387

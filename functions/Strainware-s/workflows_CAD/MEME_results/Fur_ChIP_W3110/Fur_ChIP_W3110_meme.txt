@@ -1,0 +1,529 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.3.3 (Release date: Sun Feb 7 15:39:52 2021 -0800)
+
+For further information on how to interpret these results please access https://meme-suite.org/meme.
+To get a copy of the MEME Suite software please access https://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to discover
+motifs in biopolymers", Proceedings of the Second International
+Conference on Intelligent Systems for Molecular Biology, pp. 28-36,
+AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= Fur_ChIP_W3110.fasta
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+ECK120017000             1.0000     73  ECK120009364             1.0000     73  
+ECK120021138             1.0000     73  ECK120049210             1.0000     73  
+ECK120009189             1.0000     73  ECK120009827             1.0000     73  
+ECK120009266             1.0000     73  ECK120034153             1.0000     73  
+ECK120029323             1.0000     73  ECK120009213             1.0000     73  
+ECK120034180             1.0000     73  ECK120015766             1.0000     73  
+ECK120027145             1.0000     73  ECK120011056             1.0000     73  
+ECK120009243             1.0000     73  ECK120015153             1.0000     73  
+ECK120021072             1.0000     73  ECK120011076             1.0000     73  
+ECK120009382             1.0000     73  ECK120016929             1.0000     73  
+ECK120009796             1.0000     73  ECK125230247             1.0000     73  
+ECK120009543             1.0000     73  ECK120009117             1.0000     73  
+ECK125109845             1.0000     73  ECK125165937             1.0000     73  
+ECK120010891             1.0000     73  ECK120015513             1.0000     73  
+ECK120009778             1.0000     73  ECK120026762             1.0000     73  
+ECK120016931             1.0000     73  ECK120009212             1.0000     73  
+ECK120026522             1.0000     73  ECK125146693             1.0000     73  
+ECK120029858             1.0000     73  ECK125109839             1.0000     73  
+ECK120009700             1.0000     73  ECK120009085             1.0000     73  
+ECK120020476             1.0000     73  ECK120009074             1.0000     73  
+ECK120009357             1.0000     73  ECK125140827             1.0000     73  
+ECK120009222             1.0000     73  ECK120015174             1.0000     73  
+ECK120008930             1.0000     73  ECK120027780             1.0000     73  
+ECK120009452             1.0000     73  ECK120009109             1.0000     73  
+ECK120009256             1.0000     73  ECK120027229             1.0000     73  
+ECK120027745             1.0000     73  ECK120009501             1.0000     73  
+ECK120026894             1.0000     73  ECK120009643             1.0000     73  
+ECK125134710             1.0000     73  ECK120008958             1.0000     73  
+ECK120009040             1.0000     73  ECK120026926             1.0000     73  
+ECK120027352             1.0000     73  ECK120011141             1.0000     73  
+ECK120015345             1.0000     73  ECK120029427             1.0000     73  
+ECK120009396             1.0000     73  ECK120008916             1.0000     73  
+ECK120030640             1.0000     73  ECK120015354             1.0000     73  
+ECK120030197             1.0000     73  ECK120009079             1.0000     73  
+ECK120027429             1.0000     73  ECK125135682             1.0000     73  
+ECK120009705             1.0000     73  ECK120027744             1.0000     73  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme Fur_ChIP_W3110.fasta -dna -oc . -nostatus -time 14400 -mod oops -nmotifs 1 -minw 6 -maxw 30 -objfun classic -markov_order 0 
+
+model:  mod=          oops    nmotifs=         1    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+strands: +
+width:  minw=            6    maxw=           30
+nsites: minsites=       72    maxsites=       72    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=            5256    N=              72
+sample: seed=            0    hsfrac=          0
+        searchsize=   5256    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.273 C 0.224 G 0.22 T 0.283 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.273 C 0.224 G 0.22 T 0.283 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF SDRAWTGAKAATNATTMTCATB MEME-1	width =  22  sites =  72  llr = 499  E-value = 1.1e-037
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif SDRAWTGAKAATNATTMTCATB MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  12365:2728712611311721
+pos.-specific     C  4211:1122:133111517:12
+probability       G  335111724:1:3111111212
+matrix            T  232348::31162287262154
+
+         bits    2.2                       
+                 2.0                       
+                 1.7                       
+                 1.5                       
+Relative         1.3                       
+Entropy          1.1          *            
+(10.0 bits)      0.9      *** *            
+                 0.7     **** *    *   **  
+                 0.4     **** *** *** ***  
+                 0.2 * ********** *********
+                 0.0 ----------------------
+
+Multilevel           CTGAATGAGAATCATTCTCATT
+consensus            GGATT   T  CGT  A  G C
+sequence              A          A        G
+                                           
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif SDRAWTGAKAATNATTMTCATB MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                     Site       
+-------------             ----- ---------            ----------------------
+ECK125165937                 43  2.14e-08 GTCGCGGCAA TATAATGAGAATTATTATCATT AAAAGATGA 
+ECK120009079                 35  2.60e-08 TGAATAATGT CTGTTTGACACTCATTATCATT TATTAATACA
+ECK120010891                 24  7.93e-08 TGCATTTATC ATGATTAACAATCATTATCATT TGCGAGTTTT
+ECK125135682                 23  9.48e-08 ATCAATTTTC GCTAATGATAACCATTCCCATT ACGCTTCGTA
+ECK120009382                  3  9.48e-08         GT CGAATTGATAGTCGTTCTCATT ACTATTTGCA
+ECK120020476                 34  1.13e-07 GATTCAACGT GCGATTGACAGTGTTTCTCATT ATCTGGTGCT
+ECK120009256                 15  1.89e-07 TTAATTAAAT GATATTGAAAATGATTATCAAT GCCGTACTTT
+ECK120009213                  1  2.24e-07          . CTTTATAATAATCATTCTCGTT TACGTTATCA
+ECK120030197                 43  5.93e-07 TTTCCGTAAT TGAAATAAGAACTATTTTCATT TATTTTTGA 
+ECK120011141                 35  5.93e-07 ATTTAACATT TGGATTGATAATTGTTATCGTT TGCATTATCG
+ECK120016931                 32  9.42e-07 CCTCACTCGC CTGCGTGAGAACAATCCTCATC CCACCACCGA
+ECK120009074                 13  1.98e-06 TCTCACCGGA GCAATTAAAAACCATTCTCACC CTGTTGCAGG
+ECK120021072                 36  1.98e-06 TAAACCAGTA CTGATTGAGATCTTTTATCAGC ACACCACGGC
+ECK120030640                 36  3.03e-06 TAGTGGCGTC CTGTTTGCGAATATTTTTCACC AGTTGGCGGG
+ECK120008916                 10  3.03e-06  ATTTTAAAC GGAAATACGAATCATGCGCATT ACTATTTACA
+ECK120029427                 29  3.03e-06 TAATAATAAT TGATATAACAATGATTCTTATT ATCAATATTA
+ECK120016929                 34  3.03e-06 GCGGGGGCAG GTGGATGAGAATAAGCATCATG GGGCGCTGTT
+ECK120015766                 33  4.00e-06 TATCGTTCGT GAGCTTGAGATTGATTTTCATA GCGGCATGAC
+ECK120017000                 35  4.00e-06 AAAAGTAAAT CGCAGTGATAGCGATTATCATT ACGGCAAAGA
+ECK120009827                 14  4.58e-06 GATGATCAGC CGAAACAATAATTATCATCATT CTTATTACCC
+ECK120009357                 34  5.25e-06 GACCGAAAAT ATAAATGATAATCATTATTAAA GCCTTTATCA
+ECK120009643                 11  6.00e-06 ATTTCACCAC TGTAAGGAAAATAATTCTTATT TCGATTGTCC
+ECK120015354                 30  7.81e-06 CGCTCTTGTT ATAAATGGGAATGGTAATCATT ATTTTCTCAA
+ECK120027145                 18  1.01e-05 AATTATCATT ATAAATGATACTCACTCTCAGG GGCGTTGCGG
+ECK120009212                 13  1.68e-05 GCCATCGGGC AAAATTGAGATTTATTCGCAGG CGCTGGCTGA
+ECK120009543                 15  1.68e-05 TCATTCACCG CCTGACGATAATCATTCGCGTG CGTGCGGTTG
+ECK120009501                 36  1.90e-05 CGGCAGAACG CGGTTCGAGAATTATTTCTGTT AACGGTGCGG
+ECK120026762                 37  1.90e-05 GAAAATCGCT CCAAGTGATAATGCTTATCAAA ATTATTATCA
+ECK120009796                 37  2.14e-05 AGAGAGTTGT CTGATTGAGAATGATGAACTGG CACTGTCTGT
+ECK125140827                 17  2.42e-05 TCCATACTGG GTAGTGGCGAATAAATCTCATT TGCCTCACCT
+ECK125109839                 33  2.42e-05 AGAAACCACC GGGTTTGATAATTATCCTGGGG AAATCAGCGT
+ECK120015345                 37  3.45e-05 GGAATATGCC CAGAACGAGAATAGCTCCCACC ACCGCCACCA
+ECK120009085                 13  3.87e-05 CAGGGTGTTA TTTTATGACGACGATTCTCAAG CATCTCCCGG
+ECK120009266                 32  4.34e-05 AAAAAAGAAT AAAAATAAGAATTATTATTGCT GTGCGCGCGA
+ECK125109845                 36  5.45e-05 CCGCTGTTGT CTGAATGATAACTTCTACCAGA TGCTCTTTTC
+ECK120026894                 36  6.10e-05 GATTTTAAAT GCAAATAGCAATCATATTCAAT AAGGCAAGAC
+ECK120027744                 13  6.81e-05 AACGCCTCCC CCATATGAAAACTCTTCTTAAG CGATGCCAGC
+ECK120011056                 16  9.45e-05 AGGGGATTTT CGCAATGCGTATCATTCTGCTT GGCGCTCCGG
+ECK120009396                 15  1.05e-04 CATTAACGGC TAATTTTATTATCATTATCATT CTCTGTTGGG
+ECK125146693                 25  1.05e-04 CTGACCAACG CTGCTTGCGAAAGGTTATCGAC CTGGTAACAC
+ECK120009778                 34  1.17e-04 TGCCCATGCA ATGTATGAGAACGATGCCTGCG CCAAAGCGCT
+ECK120009189                 33  1.44e-04 TCGGGAACAG CTGCTTGAGAACGCTGCCGGTC AAATGGTTTG
+ECK120034180                 37  1.60e-04 ATGAGATTTT CTGAATGAGAACAAAGAGAAAT GTATCAGTTC
+ECK120027745                 34  4.25e-04 GGCGCTGGCA GTGATTGAGAATCTGGAGAAGG CATCGACTCA
+ECK120009117                 11  5.60e-04 CCCATAAATG CGGGAGAGGAATCTATCACATT GATGAATGTT
+ECK120029323                 15  6.13e-04 TGCAGGTGCA TTTGTTGCAAATTATTCGCGAA GCGGTGCTGA
+ECK120029858                 21  6.71e-04 TGGCAACCGC TGGAATGCTTCTCAAACTCAAC TCTCAAATGA
+ECK125134710                 23  8.00e-04 TCGTCCATGT CGGCACGGGAGAGCTTCTCAAA CAGACGAACG
+ECK120009222                 32  9.52e-04 ACCGTGTAGG CCGGATAAGACGCATTTGCGTC GCATCCGGCG
+ECK120009705                 31  1.04e-03 GGCACTGACT GTGAATGAGAAAGGCGAAGATG TGGTTGTTCC
+ECK120026522                 37  1.13e-03 CGCGAATGGT GAGATTGAGAATATAACCTTTC ATTCCCAGCG
+ECK120034153                  9  1.45e-03   ACAGCGGC GATATTGAGTCCATTCGCCATT ATCATCCCCA
+ECK120009040                 39  1.57e-03 CATTCTCAAT CAGTATGGTATTGATATGGGTG ATATCACCCA
+ECK120015153                 13  1.84e-03 AGAAAGACGG CAGCATCAAGGCGTTTCTCAAC CAATGCCGCC
+ECK120011076                  6  1.99e-03      AAGAT CAATTCAAAAAGCAGTATCACG GCATTCTCAA
+ECK120027352                  3  2.33e-03         CA GCAAACGCCAGTCAATTTCTTC GGCGTATTTC
+ECK120009243                 35  2.72e-03 GAACCTCGTC ATGTTTGAGAACATTACCGCCG CTCCTGCCGA
+ECK120027429                 19  2.93e-03 CACCGACGCG CAAAAGGGCATTATCATTCATT ACGTCCCTGC
+ECK120049210                 10  3.65e-03  AATGCAACG TGCTTTGCAACTTATTGTTATA CATGGTTTTT
+ECK120008958                 12  3.93e-03 CCGGCAATGC CCGTGCCGCAGCAGTTCTCACT CAGCCAGAAC
+ECK120015174                 19  3.93e-03 AGCTGCCTGA GGGCTGGATTATCATTCATTTA GGGATGTCTG
+ECK120027229                 36  4.53e-03 TGCGGGTACG GTGATTGAGAAAGCGCGTGGGC AAAACGTGCC
+ECK120027780                 20  5.58e-03 CAGCAAACAT CGTTTTCGCATTCTTAATCGCC GCTATTCCCA
+ECK120009452                 43  6.83e-03 CAAAATCGTG CAAATTCAATACATTGCAGAAT TTTCGTAGG 
+ECK120021138                 14  8.30e-03 TTGGTCATAA TAGTGGCGATCTGTTTCTCATT CAGGTTGGCG
+ECK125230247                 16  1.07e-02 AGGCCTACAA GAGAATTGCAATATGTTGAATT TGCACGATTT
+ECK120015513                 42  1.28e-02 CCATGATTGA GAAATCCACAACGCCTCCTGAC GCAACAACTT
+ECK120026926                 32  1.36e-02 AGTAAATGGT TGTAACAAAAGCAATTTTTCCG GCTGTCTGTA
+ECK120009364                  2  1.44e-02          G TTGTATGCGTGAAAGTCACGGA CCTCCACGAT
+ECK120009109                  1  1.71e-02          . GGTATGGCTGAATATCGTCAGC CACGGACGGT
+ECK120008930                 16  2.13e-02 TTATGATGCG TTTAATAATTTCAATATAAATT GTTGTTTTTT
+ECK120009700                 28  2.63e-02 CCTCCCTGCC CCCGGAGGTTCTCATCCTCATG AGCTGCAGAT
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif SDRAWTGAKAATNATTMTCATB MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+ECK125165937                      2.1e-08  42_[+1]_9
+ECK120009079                      2.6e-08  34_[+1]_17
+ECK120010891                      7.9e-08  23_[+1]_28
+ECK125135682                      9.5e-08  22_[+1]_29
+ECK120009382                      9.5e-08  2_[+1]_49
+ECK120020476                      1.1e-07  33_[+1]_18
+ECK120009256                      1.9e-07  14_[+1]_37
+ECK120009213                      2.2e-07  [+1]_51
+ECK120030197                      5.9e-07  42_[+1]_9
+ECK120011141                      5.9e-07  34_[+1]_17
+ECK120016931                      9.4e-07  31_[+1]_20
+ECK120009074                        2e-06  12_[+1]_39
+ECK120021072                        2e-06  35_[+1]_16
+ECK120030640                        3e-06  35_[+1]_16
+ECK120008916                        3e-06  9_[+1]_42
+ECK120029427                        3e-06  28_[+1]_23
+ECK120016929                        3e-06  33_[+1]_18
+ECK120015766                        4e-06  32_[+1]_19
+ECK120017000                        4e-06  34_[+1]_17
+ECK120009827                      4.6e-06  13_[+1]_38
+ECK120009357                      5.2e-06  33_[+1]_18
+ECK120009643                        6e-06  10_[+1]_41
+ECK120015354                      7.8e-06  29_[+1]_22
+ECK120027145                        1e-05  17_[+1]_34
+ECK120009212                      1.7e-05  12_[+1]_39
+ECK120009543                      1.7e-05  14_[+1]_37
+ECK120009501                      1.9e-05  35_[+1]_16
+ECK120026762                      1.9e-05  36_[+1]_15
+ECK120009796                      2.1e-05  36_[+1]_15
+ECK125140827                      2.4e-05  16_[+1]_35
+ECK125109839                      2.4e-05  32_[+1]_19
+ECK120015345                      3.4e-05  36_[+1]_15
+ECK120009085                      3.9e-05  12_[+1]_39
+ECK120009266                      4.3e-05  31_[+1]_20
+ECK125109845                      5.5e-05  35_[+1]_16
+ECK120026894                      6.1e-05  35_[+1]_16
+ECK120027744                      6.8e-05  12_[+1]_39
+ECK120011056                      9.4e-05  15_[+1]_36
+ECK120009396                      0.00011  14_[+1]_37
+ECK125146693                      0.00011  24_[+1]_27
+ECK120009778                      0.00012  33_[+1]_18
+ECK120009189                      0.00014  32_[+1]_19
+ECK120034180                      0.00016  36_[+1]_15
+ECK120027745                      0.00043  33_[+1]_18
+ECK120009117                      0.00056  10_[+1]_41
+ECK120029323                      0.00061  14_[+1]_37
+ECK120029858                      0.00067  20_[+1]_31
+ECK125134710                       0.0008  22_[+1]_29
+ECK120009222                      0.00095  31_[+1]_20
+ECK120009705                        0.001  30_[+1]_21
+ECK120026522                       0.0011  36_[+1]_15
+ECK120034153                       0.0014  8_[+1]_43
+ECK120009040                       0.0016  38_[+1]_13
+ECK120015153                       0.0018  12_[+1]_39
+ECK120011076                        0.002  5_[+1]_46
+ECK120027352                       0.0023  2_[+1]_49
+ECK120009243                       0.0027  34_[+1]_17
+ECK120027429                       0.0029  18_[+1]_33
+ECK120049210                       0.0037  9_[+1]_42
+ECK120008958                       0.0039  11_[+1]_40
+ECK120015174                       0.0039  18_[+1]_33
+ECK120027229                       0.0045  35_[+1]_16
+ECK120027780                       0.0056  19_[+1]_32
+ECK120009452                       0.0068  42_[+1]_9
+ECK120021138                       0.0083  13_[+1]_38
+ECK125230247                        0.011  15_[+1]_36
+ECK120015513                        0.013  41_[+1]_10
+ECK120026926                        0.014  31_[+1]_20
+ECK120009364                        0.014  1_[+1]_50
+ECK120009109                        0.017  [+1]_51
+ECK120008930                        0.021  15_[+1]_36
+ECK120009700                        0.026  27_[+1]_24
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif SDRAWTGAKAATNATTMTCATB MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF SDRAWTGAKAATNATTMTCATB width=22 seqs=72
+ECK125165937             (   43) TATAATGAGAATTATTATCATT  1 
+ECK120009079             (   35) CTGTTTGACACTCATTATCATT  1 
+ECK120010891             (   24) ATGATTAACAATCATTATCATT  1 
+ECK125135682             (   23) GCTAATGATAACCATTCCCATT  1 
+ECK120009382             (    3) CGAATTGATAGTCGTTCTCATT  1 
+ECK120020476             (   34) GCGATTGACAGTGTTTCTCATT  1 
+ECK120009256             (   15) GATATTGAAAATGATTATCAAT  1 
+ECK120009213             (    1) CTTTATAATAATCATTCTCGTT  1 
+ECK120030197             (   43) TGAAATAAGAACTATTTTCATT  1 
+ECK120011141             (   35) TGGATTGATAATTGTTATCGTT  1 
+ECK120016931             (   32) CTGCGTGAGAACAATCCTCATC  1 
+ECK120009074             (   13) GCAATTAAAAACCATTCTCACC  1 
+ECK120021072             (   36) CTGATTGAGATCTTTTATCAGC  1 
+ECK120030640             (   36) CTGTTTGCGAATATTTTTCACC  1 
+ECK120008916             (   10) GGAAATACGAATCATGCGCATT  1 
+ECK120029427             (   29) TGATATAACAATGATTCTTATT  1 
+ECK120016929             (   34) GTGGATGAGAATAAGCATCATG  1 
+ECK120015766             (   33) GAGCTTGAGATTGATTTTCATA  1 
+ECK120017000             (   35) CGCAGTGATAGCGATTATCATT  1 
+ECK120009827             (   14) CGAAACAATAATTATCATCATT  1 
+ECK120009357             (   34) ATAAATGATAATCATTATTAAA  1 
+ECK120009643             (   11) TGTAAGGAAAATAATTCTTATT  1 
+ECK120015354             (   30) ATAAATGGGAATGGTAATCATT  1 
+ECK120027145             (   18) ATAAATGATACTCACTCTCAGG  1 
+ECK120009212             (   13) AAAATTGAGATTTATTCGCAGG  1 
+ECK120009543             (   15) CCTGACGATAATCATTCGCGTG  1 
+ECK120009501             (   36) CGGTTCGAGAATTATTTCTGTT  1 
+ECK120026762             (   37) CCAAGTGATAATGCTTATCAAA  1 
+ECK120009796             (   37) CTGATTGAGAATGATGAACTGG  1 
+ECK125140827             (   17) GTAGTGGCGAATAAATCTCATT  1 
+ECK125109839             (   33) GGGTTTGATAATTATCCTGGGG  1 
+ECK120015345             (   37) CAGAACGAGAATAGCTCCCACC  1 
+ECK120009085             (   13) TTTTATGACGACGATTCTCAAG  1 
+ECK120009266             (   32) AAAAATAAGAATTATTATTGCT  1 
+ECK125109845             (   36) CTGAATGATAACTTCTACCAGA  1 
+ECK120026894             (   36) GCAAATAGCAATCATATTCAAT  1 
+ECK120027744             (   13) CCATATGAAAACTCTTCTTAAG  1 
+ECK120011056             (   16) CGCAATGCGTATCATTCTGCTT  1 
+ECK120009396             (   15) TAATTTTATTATCATTATCATT  1 
+ECK125146693             (   25) CTGCTTGCGAAAGGTTATCGAC  1 
+ECK120009778             (   34) ATGTATGAGAACGATGCCTGCG  1 
+ECK120009189             (   33) CTGCTTGAGAACGCTGCCGGTC  1 
+ECK120034180             (   37) CTGAATGAGAACAAAGAGAAAT  1 
+ECK120027745             (   34) GTGATTGAGAATCTGGAGAAGG  1 
+ECK120009117             (   11) CGGGAGAGGAATCTATCACATT  1 
+ECK120029323             (   15) TTTGTTGCAAATTATTCGCGAA  1 
+ECK120029858             (   21) TGGAATGCTTCTCAAACTCAAC  1 
+ECK125134710             (   23) CGGCACGGGAGAGCTTCTCAAA  1 
+ECK120009222             (   32) CCGGATAAGACGCATTTGCGTC  1 
+ECK120009705             (   31) GTGAATGAGAAAGGCGAAGATG  1 
+ECK120026522             (   37) GAGATTGAGAATATAACCTTTC  1 
+ECK120034153             (    9) GATATTGAGTCCATTCGCCATT  1 
+ECK120009040             (   39) CAGTATGGTATTGATATGGGTG  1 
+ECK120015153             (   13) CAGCATCAAGGCGTTTCTCAAC  1 
+ECK120011076             (    6) CAATTCAAAAAGCAGTATCACG  1 
+ECK120027352             (    3) GCAAACGCCAGTCAATTTCTTC  1 
+ECK120009243             (   35) ATGTTTGAGAACATTACCGCCG  1 
+ECK120027429             (   19) CAAAAGGGCATTATCATTCATT  1 
+ECK120049210             (   10) TGCTTTGCAACTTATTGTTATA  1 
+ECK120008958             (   12) CCGTGCCGCAGCAGTTCTCACT  1 
+ECK120015174             (   19) GGGCTGGATTATCATTCATTTA  1 
+ECK120027229             (   36) GTGATTGAGAAAGCGCGTGGGC  1 
+ECK120027780             (   20) CGTTTTCGCATTCTTAATCGCC  1 
+ECK120009452             (   43) CAAATTCAATACATTGCAGAAT  1 
+ECK120021138             (   14) TAGTGGCGATCTGTTTCTCATT  1 
+ECK125230247             (   16) GAGAATTGCAATATGTTGAATT  1 
+ECK120015513             (   42) GAAATCCACAACGCCTCCTGAC  1 
+ECK120026926             (   32) TGTAACAAAAGCAATTTTTCCG  1 
+ECK120009364             (    2) TTGTATGCGTGAAAGTCACGGA  1 
+ECK120009109             (    1) GGTATGGCTGAATATCGTCAGC  1 
+ECK120008930             (   16) TTTAATAATTTCAATATAAATT  1 
+ECK120009700             (   28) CCCGGAGGTTCTCATCCTCATG  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif SDRAWTGAKAATNATTMTCATB MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 22 n= 3744 bayes= 5.67243 E= 1.1e-037 
+  -129     89     34    -54 
+   -21    -55     26     29 
+    10   -201    110    -65 
+   103   -120   -118    -18 
+    83  -1281   -140     60 
+  -429    -69   -118    140 
+   -49   -143    166   -335 
+   135    -55    -53  -1281 
+   -84    -43     92    -10 
+   159  -1281   -240   -103 
+   129   -101    -81   -154 
+  -171     31   -298    111 
+   -21     45     26    -54 
+   116   -143   -118    -44 
+  -171   -143   -140    140 
+  -112   -101    -98    120 
+    16    108   -198    -77 
+  -149    -69    -81    117 
+  -229    157    -98    -77 
+   132   -243      2   -235 
+   -49    -69    -66     90 
+  -112     -1      2     60 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif SDRAWTGAKAATNATTMTCATB MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 22 nsites= 72 E= 1.1e-037 
+ 0.111111  0.416667  0.277778  0.194444 
+ 0.236111  0.152778  0.263889  0.347222 
+ 0.291667  0.055556  0.472222  0.180556 
+ 0.555556  0.097222  0.097222  0.250000 
+ 0.486111  0.000000  0.083333  0.430556 
+ 0.013889  0.138889  0.097222  0.750000 
+ 0.194444  0.083333  0.694444  0.027778 
+ 0.694444  0.152778  0.152778  0.000000 
+ 0.152778  0.166667  0.416667  0.263889 
+ 0.819444  0.000000  0.041667  0.138889 
+ 0.666667  0.111111  0.125000  0.097222 
+ 0.083333  0.277778  0.027778  0.611111 
+ 0.236111  0.305556  0.263889  0.194444 
+ 0.611111  0.083333  0.097222  0.208333 
+ 0.083333  0.083333  0.083333  0.750000 
+ 0.125000  0.111111  0.111111  0.652778 
+ 0.305556  0.472222  0.055556  0.166667 
+ 0.097222  0.138889  0.125000  0.638889 
+ 0.055556  0.666667  0.111111  0.166667 
+ 0.680556  0.041667  0.222222  0.055556 
+ 0.194444  0.138889  0.138889  0.527778 
+ 0.125000  0.222222  0.222222  0.430556 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif SDRAWTGAKAATNATTMTCATB MEME-1 regular expression
+--------------------------------------------------------------------------------
+[CG][TGA][GA][AT][AT]TGA[GT]AA[TC][CGA][AT]TT[CA]TC[AG]T[TCG]
+--------------------------------------------------------------------------------
+
+
+
+
+Time  1.50 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+ECK120017000                     2.08e-04  34_[+1(4.00e-06)]_17
+ECK120009364                     5.30e-01  73
+ECK120021138                     3.52e-01  73
+ECK120049210                     1.73e-01  73
+ECK120009189                     7.46e-03  73
+ECK120009827                     2.38e-04  13_[+1(4.58e-06)]_38
+ECK120009266                     2.26e-03  31_[+1(4.34e-05)]_20
+ECK120034153                     7.25e-02  73
+ECK120029323                     3.14e-02  73
+ECK120009213                     1.17e-05  [+1(2.24e-07)]_51
+ECK120034180                     8.27e-03  73
+ECK120015766                     2.08e-04  32_[+1(4.00e-06)]_19
+ECK120027145                     5.27e-04  17_[+1(1.01e-05)]_34
+ECK120011056                     4.90e-03  15_[+1(9.45e-05)]_36
+ECK120009243                     1.32e-01  73
+ECK120015153                     9.14e-02  73
+ECK120021072                     1.03e-04  35_[+1(1.98e-06)]_16
+ECK120011076                     9.86e-02  73
+ECK120009382                     4.93e-06  2_[+1(9.48e-08)]_49
+ECK120016929                     1.57e-04  33_[+1(3.03e-06)]_18
+ECK120009796                     1.11e-03  36_[+1(2.14e-05)]_15
+ECK125230247                     4.28e-01  73
+ECK120009543                     8.72e-04  14_[+1(1.68e-05)]_37
+ECK120009117                     2.87e-02  73
+ECK125109845                     2.83e-03  35_[+1(5.45e-05)]_16
+ECK125165937                     1.11e-06  42_[+1(2.14e-08)]_9
+ECK120010891                     4.12e-06  23_[+1(7.93e-08)]_28
+ECK120015513                     4.88e-01  73
+ECK120009778                     6.06e-03  73
+ECK120026762                     9.86e-04  36_[+1(1.90e-05)]_15
+ECK120016931                     4.90e-05  31_[+1(9.42e-07)]_20
+ECK120009212                     8.72e-04  12_[+1(1.68e-05)]_39
+ECK120026522                     5.70e-02  73
+ECK125146693                     5.45e-03  73
+ECK120029858                     3.43e-02  73
+ECK125109839                     1.26e-03  32_[+1(2.42e-05)]_19
+ECK120009700                     7.50e-01  73
+ECK120009085                     2.01e-03  12_[+1(3.87e-05)]_39
+ECK120020476                     5.88e-06  33_[+1(1.13e-07)]_18
+ECK120009074                     1.03e-04  12_[+1(1.98e-06)]_39
+ECK120009357                     2.73e-04  33_[+1(5.25e-06)]_18
+ECK125140827                     1.26e-03  16_[+1(2.42e-05)]_35
+ECK120009222                     4.83e-02  73
+ECK120015174                     1.85e-01  73
+ECK120008930                     6.74e-01  73
+ECK120027780                     2.52e-01  73
+ECK120009452                     3.00e-01  73
+ECK120009109                     4.28e-01  73
+ECK120009256                     9.85e-06  14_[+1(1.89e-07)]_37
+ECK120027229                     2.10e-01  73
+ECK120027745                     2.19e-02  73
+ECK120009501                     9.86e-04  35_[+1(1.90e-05)]_16
+ECK120026894                     3.17e-03  35_[+1(6.10e-05)]_16
+ECK120009643                     3.12e-04  10_[+1(6.00e-06)]_41
+ECK125134710                     4.08e-02  73
+ECK120008958                     1.85e-01  73
+ECK120009040                     7.84e-02  73
+ECK120026926                     5.09e-01  73
+ECK120027352                     1.14e-01  73
+ECK120011141                     3.08e-05  34_[+1(5.93e-07)]_17
+ECK120015345                     1.79e-03  36_[+1(3.45e-05)]_15
+ECK120029427                     1.57e-04  28_[+1(3.03e-06)]_23
+ECK120009396                     5.45e-03  73
+ECK120008916                     1.57e-04  9_[+1(3.03e-06)]_42
+ECK120030640                     1.57e-04  35_[+1(3.03e-06)]_16
+ECK120015354                     4.06e-04  29_[+1(7.81e-06)]_22
+ECK120030197                     3.08e-05  42_[+1(5.93e-07)]_9
+ECK120009079                     1.35e-06  34_[+1(2.60e-08)]_17
+ECK120027429                     1.41e-01  73
+ECK125135682                     4.93e-06  22_[+1(9.48e-08)]_29
+ECK120009705                     5.25e-02  73
+ECK120027744                     3.54e-03  12_[+1(6.81e-05)]_39
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (1) found.
+********************************************************************************
+
+CPU: noble-meme.grid.gs.washington.edu
+
+********************************************************************************

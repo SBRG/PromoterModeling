@@ -1,0 +1,312 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.1.1 (Release date: Wed Jan 29 15:00:42 2020 -0800)
+
+For further information on how to interpret please access http://meme-suite.org/.
+To get a copy of the MEME software please access http://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to discover
+motifs in biopolymers", Proceedings of the Second International
+Conference on Intelligent Systems for Molecular Biology, pp. 28-36,
+AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= LeuIle.fasta
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+leuD_TU_0                1.0000    180  leuD_TU_1                1.0000    180  
+leuC_TU_0                1.0000    180  leuC_TU_1                1.0000    180  
+leuB_TU_0                1.0000    180  leuB_TU_1                1.0000    180  
+leuA_TU_0                1.0000    180  leuA_TU_1                1.0000    180  
+ilvM_TU_0                1.0000    180  ilvM_TU_1                1.0000    180  
+ilvE_TU_0                1.0000    180  ilvE_TU_1                1.0000    180  
+ilvE_TU_2                1.0000    180  ilvD_TU_0                1.0000    180  
+ilvD_TU_1                1.0000    180  ilvD_TU_2                1.0000    180  
+ilvA_TU_0                1.0000    180  ilvA_TU_1                1.0000    180  
+ilvA_TU_2                1.0000    180  ilvA_TU_3                1.0000    180  
+ilvC_TU_0                1.0000    180  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme LeuIle.fasta -dna -oc . -nostatus -time 18000 -mod oops -nmotifs 1 -minw 6 -maxw 30 -objfun classic -markov_order 0 
+
+model:  mod=          oops    nmotifs=         1    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+strands: +
+width:  minw=            6    maxw=           30
+nsites: minsites=       21    maxsites=       21    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=            3780    N=              21
+sample: seed=            0    hsfrac=          0
+        searchsize=   3780    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.35 C 0.187 G 0.165 T 0.298 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.35 C 0.187 G 0.165 T 0.298 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF ATWWATATYGMAWTHATTAWHCRCAKCA MEME-1	width =  28  sites =  21  llr = 393  E-value = 6.9e-068
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif ATWWATATYGMAWTHATTAWHCRCAKCA MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  a:348:a2::685227::77424:8::9
+pos.-specific     C  ::1:::::4:4:::3:212:37192:81
+probability       G  :::::::::a::::1::11::15::4::
+matrix            T  :a662a:86::2584288:33::::62:
+
+         bits    2.6          *                  
+                 2.3          *                  
+                 2.1          *                  
+                 1.8  *   *   *             *    
+Relative         1.6  *   *   *             *    
+Entropy          1.3 **   **  *             *  * 
+(27.0 bits)      1.0 **   ******     *    * *  **
+                 0.8 **   ******  *  ** * *******
+                 0.5 ************** ***** *******
+                 0.3 ************** *************
+                 0.0 ----------------------------
+
+Multilevel           ATTTATATTGAATTTATTAAACGCATCA
+consensus              AA    C C AAC C  TT A  G  
+sequence                                 C       
+                                                 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ATWWATATYGMAWTHATTAWHCRCAKCA MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                        Site          
+-------------             ----- ---------            ----------------------------
+ilvA_TU_2                    63  9.56e-14 AAAAACAACA ATTTATATTGAAATTATTAAACGCATCA TAAAAATCGG
+ilvA_TU_1                   135  9.56e-14 AAAAACAACA ATTTATATTGAAATTATTAAACGCATCA TAAAAATCGG
+ilvD_TU_1                    63  9.56e-14 AAAAACAACA ATTTATATTGAAATTATTAAACGCATCA TAAAAATCGG
+ilvD_TU_0                   135  9.56e-14 AAAAACAACA ATTTATATTGAAATTATTAAACGCATCA TAAAAATCGG
+ilvE_TU_1                    63  9.56e-14 AAAAACAACA ATTTATATTGAAATTATTAAACGCATCA TAAAAATCGG
+ilvE_TU_0                   135  9.56e-14 AAAAACAACA ATTTATATTGAAATTATTAAACGCATCA TAAAAATCGG
+ilvM_TU_1                    63  9.56e-14 AAAAACAACA ATTTATATTGAAATTATTAAACGCATCA TAAAAATCGG
+ilvM_TU_0                   135  9.56e-14 AAAAACAACA ATTTATATTGAAATTATTAAACGCATCA TAAAAATCGG
+leuA_TU_0                    23  3.12e-10 TTAAGCAGAA ATTAATATCGCTTACTTTAACCACCGCA GCACAATTAG
+leuB_TU_0                    23  3.12e-10 TTAAGCAGAA ATTAATATCGCTTACTTTAACCACCGCA GCACAATTAG
+leuC_TU_0                    23  3.12e-10 TTAAGCAGAA ATTAATATCGCTTACTTTAACCACCGCA GCACAATTAG
+leuD_TU_0                    23  3.12e-10 TTAAGCAGAA ATTAATATCGCTTACTTTAACCACCGCA GCACAATTAG
+ilvA_TU_3                    95  1.13e-08 TGCACAAAAT ATAAATATCGAATTGACCGTTGCCAGCC CACGGTCGGT
+ilvD_TU_2                    95  1.13e-08 TGCACAAAAT ATAAATATCGAATTGACCGTTGCCAGCC CACGGTCGGT
+ilvE_TU_2                    95  1.13e-08 TGCACAAAAT ATAAATATCGAATTGACCGTTGCCAGCC CACGGTCGGT
+leuA_TU_1                   103  3.24e-08 ATTAATTTAT ATATTTAATGCATTAATTCTTAACATTA ATTGATCAAT
+leuB_TU_1                   103  3.24e-08 ATTAATTTAT ATATTTAATGCATTAATTCTTAACATTA ATTGATCAAT
+leuC_TU_1                   103  3.24e-08 ATTAATTTAT ATATTTAATGCATTAATTCTTAACATTA ATTGATCAAT
+leuD_TU_1                   103  3.24e-08 ATTAATTTAT ATATTTAATGCATTAATTCTTAACATTA ATTGATCAAT
+ilvA_TU_0                    31  7.92e-07 TGGTGACCTG ATCGCTATCGACATCCCGAACCGTGGCA TTCAGTTACA
+ilvC_TU_0                   151  3.75e-06 ATATAGTGAA TTCAATCTCGCAAACGCGAACCGAACAA TA        
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ATWWATATYGMAWTHATTAWHCRCAKCA MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+ilvA_TU_2                         9.6e-14  62_[+1]_90
+ilvA_TU_1                         9.6e-14  134_[+1]_18
+ilvD_TU_1                         9.6e-14  62_[+1]_90
+ilvD_TU_0                         9.6e-14  134_[+1]_18
+ilvE_TU_1                         9.6e-14  62_[+1]_90
+ilvE_TU_0                         9.6e-14  134_[+1]_18
+ilvM_TU_1                         9.6e-14  62_[+1]_90
+ilvM_TU_0                         9.6e-14  134_[+1]_18
+leuA_TU_0                         3.1e-10  22_[+1]_130
+leuB_TU_0                         3.1e-10  22_[+1]_130
+leuC_TU_0                         3.1e-10  22_[+1]_130
+leuD_TU_0                         3.1e-10  22_[+1]_130
+ilvA_TU_3                         1.1e-08  94_[+1]_58
+ilvD_TU_2                         1.1e-08  94_[+1]_58
+ilvE_TU_2                         1.1e-08  94_[+1]_58
+leuA_TU_1                         3.2e-08  102_[+1]_50
+leuB_TU_1                         3.2e-08  102_[+1]_50
+leuC_TU_1                         3.2e-08  102_[+1]_50
+leuD_TU_1                         3.2e-08  102_[+1]_50
+ilvA_TU_0                         7.9e-07  30_[+1]_122
+ilvC_TU_0                         3.7e-06  150_[+1]_2
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ATWWATATYGMAWTHATTAWHCRCAKCA MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF ATWWATATYGMAWTHATTAWHCRCAKCA width=28 seqs=21
+ilvA_TU_2                (   63) ATTTATATTGAAATTATTAAACGCATCA  1 
+ilvA_TU_1                (  135) ATTTATATTGAAATTATTAAACGCATCA  1 
+ilvD_TU_1                (   63) ATTTATATTGAAATTATTAAACGCATCA  1 
+ilvD_TU_0                (  135) ATTTATATTGAAATTATTAAACGCATCA  1 
+ilvE_TU_1                (   63) ATTTATATTGAAATTATTAAACGCATCA  1 
+ilvE_TU_0                (  135) ATTTATATTGAAATTATTAAACGCATCA  1 
+ilvM_TU_1                (   63) ATTTATATTGAAATTATTAAACGCATCA  1 
+ilvM_TU_0                (  135) ATTTATATTGAAATTATTAAACGCATCA  1 
+leuA_TU_0                (   23) ATTAATATCGCTTACTTTAACCACCGCA  1 
+leuB_TU_0                (   23) ATTAATATCGCTTACTTTAACCACCGCA  1 
+leuC_TU_0                (   23) ATTAATATCGCTTACTTTAACCACCGCA  1 
+leuD_TU_0                (   23) ATTAATATCGCTTACTTTAACCACCGCA  1 
+ilvA_TU_3                (   95) ATAAATATCGAATTGACCGTTGCCAGCC  1 
+ilvD_TU_2                (   95) ATAAATATCGAATTGACCGTTGCCAGCC  1 
+ilvE_TU_2                (   95) ATAAATATCGAATTGACCGTTGCCAGCC  1 
+leuA_TU_1                (  103) ATATTTAATGCATTAATTCTTAACATTA  1 
+leuB_TU_1                (  103) ATATTTAATGCATTAATTCTTAACATTA  1 
+leuC_TU_1                (  103) ATATTTAATGCATTAATTCTTAACATTA  1 
+leuD_TU_1                (  103) ATATTTAATGCATTAATTCTTAACATTA  1 
+ilvA_TU_0                (   31) ATCGCTATCGACATCCCGAACCGTGGCA  1 
+ilvC_TU_0                (  151) TTCAATCTCGCAAACGCGAACCGAACAA  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ATWWATATYGMAWTHATTAWHCRCAKCA MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 28 n= 3213 bayes= 7.24793 E= 6.9e-068 
+   144  -1104  -1104   -264 
+ -1104  -1104  -1104    174 
+    -7    -97  -1104     94 
+    12  -1104   -179     94 
+   112   -197  -1104    -65 
+ -1104  -1104  -1104    174 
+   144   -197  -1104  -1104 
+   -88  -1104  -1104    144 
+ -1104    120  -1104     94 
+ -1104  -1104    260  -1104 
+    71    120  -1104  -1104 
+   112   -197  -1104    -65 
+    44  -1104  -1104     81 
+   -56  -1104  -1104    135 
+   -88     61    -20     35 
+   103   -197   -179    -65 
+ -1104     35  -1104    135 
+ -1104    -39    -79    135 
+    93      3    -20  -1104 
+    93  -1104  -1104     16 
+    12     61  -1104     16 
+   -88    184    -20  -1104 
+    12    -39    153  -1104 
+  -287    228  -1104   -264 
+   112      3   -179  -1104 
+ -1104   -197    121     94 
+  -287    203  -1104    -65 
+   129    -39  -1104  -1104 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ATWWATATYGMAWTHATTAWHCRCAKCA MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 28 nsites= 21 E= 6.9e-068 
+ 0.952381  0.000000  0.000000  0.047619 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.333333  0.095238  0.000000  0.571429 
+ 0.380952  0.000000  0.047619  0.571429 
+ 0.761905  0.047619  0.000000  0.190476 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.952381  0.047619  0.000000  0.000000 
+ 0.190476  0.000000  0.000000  0.809524 
+ 0.000000  0.428571  0.000000  0.571429 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.571429  0.428571  0.000000  0.000000 
+ 0.761905  0.047619  0.000000  0.190476 
+ 0.476190  0.000000  0.000000  0.523810 
+ 0.238095  0.000000  0.000000  0.761905 
+ 0.190476  0.285714  0.142857  0.380952 
+ 0.714286  0.047619  0.047619  0.190476 
+ 0.000000  0.238095  0.000000  0.761905 
+ 0.000000  0.142857  0.095238  0.761905 
+ 0.666667  0.190476  0.142857  0.000000 
+ 0.666667  0.000000  0.000000  0.333333 
+ 0.380952  0.285714  0.000000  0.333333 
+ 0.190476  0.666667  0.142857  0.000000 
+ 0.380952  0.142857  0.476190  0.000000 
+ 0.047619  0.904762  0.000000  0.047619 
+ 0.761905  0.190476  0.047619  0.000000 
+ 0.000000  0.047619  0.380952  0.571429 
+ 0.047619  0.761905  0.000000  0.190476 
+ 0.857143  0.142857  0.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ATWWATATYGMAWTHATTAWHCRCAKCA MEME-1 regular expression
+--------------------------------------------------------------------------------
+AT[TA][TA]ATAT[TC]G[AC]A[TA][TA][TC]A[TC]TA[AT][ATC]C[GA]CA[TG]CA
+--------------------------------------------------------------------------------
+
+
+
+
+Time  0.72 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+leuD_TU_0                        4.78e-08  22_[+1(3.12e-10)]_130
+leuD_TU_1                        4.95e-06  102_[+1(3.24e-08)]_50
+leuC_TU_0                        4.78e-08  22_[+1(3.12e-10)]_130
+leuC_TU_1                        4.95e-06  102_[+1(3.24e-08)]_50
+leuB_TU_0                        4.78e-08  22_[+1(3.12e-10)]_130
+leuB_TU_1                        4.95e-06  102_[+1(3.24e-08)]_50
+leuA_TU_0                        4.78e-08  22_[+1(3.12e-10)]_130
+leuA_TU_1                        4.95e-06  102_[+1(3.24e-08)]_50
+ilvM_TU_0                        1.46e-11  134_[+1(9.56e-14)]_18
+ilvM_TU_1                        1.46e-11  62_[+1(9.56e-14)]_90
+ilvE_TU_0                        1.46e-11  134_[+1(9.56e-14)]_18
+ilvE_TU_1                        1.46e-11  62_[+1(9.56e-14)]_90
+ilvE_TU_2                        1.72e-06  94_[+1(1.13e-08)]_58
+ilvD_TU_0                        1.46e-11  134_[+1(9.56e-14)]_18
+ilvD_TU_1                        1.46e-11  62_[+1(9.56e-14)]_90
+ilvD_TU_2                        1.72e-06  94_[+1(1.13e-08)]_58
+ilvA_TU_0                        1.21e-04  30_[+1(7.92e-07)]_122
+ilvA_TU_1                        1.46e-11  134_[+1(9.56e-14)]_18
+ilvA_TU_2                        1.46e-11  62_[+1(9.56e-14)]_90
+ilvA_TU_3                        1.72e-06  94_[+1(1.13e-08)]_58
+ilvC_TU_0                        5.74e-04  150_[+1(3.75e-06)]_2
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (1) found.
+********************************************************************************
+
+CPU: ip-172-31-4-78
+
+********************************************************************************

@@ -1,0 +1,10 @@
+,locus_tag,attenuator_type,strand,terminator_type,left,right
+0,ECK125143526,Transcriptional,1,terminator,276,311
+1,ECK125143526,Transcriptional,1,anti-terminator,244,288
+2,ECK125143526,Transcriptional,1,anti-anti-terminator,200,255
+3,ECK125143530,Transcriptional,1,terminator,5042,5078
+4,ECK125143530,Transcriptional,1,anti-terminator,4979,5051
+5,ECK125143530,Transcriptional,1,anti-anti-terminator,4999,5018
+6,ECK125143534,Translational,1,terminator,14134,14155
+7,ECK125143536,Transcriptional,-1,terminator,21166,21192
+8,ECK125143536,Transcriptional,-1,anti-terminator,21185,21226

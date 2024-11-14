@@ -1,0 +1,570 @@
+# Table: REGULON_FUNCTION_TMP
+# Columns:
+# 1) REGULON_FUNCTION_ID
+# 2) REGULON_ID
+# 3) REGULON_FUNCTION_NAME
+# 4) KEY_ID_ORG
+ECK12R000074	EC12R0000073	  GalR repressor   GalS repressor 	ECK12
+ECK12R000076	EC12R0000075	  MraZ repressor   PdhR repressor 	ECK12
+ECK12R000078	EC12R0000077	  CRP repressor 	ECK12
+ECK12R000080	EC12R0000079	  CRP activator   Cra repressor 	ECK12
+ECK12R000082	EC12R0000081	  ArgR activator   NtrC activator 	ECK12
+ECK12R000084	EC12R0000083	  Fur repressor   IscR activator   NrdR repressor 	ECK12
+ECK12R000086	EC12R0000085	  CpxR activator 	ECK12
+ECK12R000088	EC12R0000087	  IHF repressor   ModE repressor 	ECK12
+ECK12R000090	EC12R0000089	  CueR repressor   FNR activator 	ECK12
+ECK12R000092	EC12R0000091	  ModE activator 	ECK12
+ECK12R000094	EC12R0000093	  ArcA repressor   CRP activator  Fis dual   Mlc repressor   SoxS activator 	ECK12
+ECK12R000096	EC12R0000095	  Fis repressor   Mlc repressor 	ECK12
+ECK12R000098	EC12R0000097	  ArcA activator   CRP activator  FNR dual   Fis activator   Fur repressor   PdhR repressor 	ECK12
+ECK12R000100	EC12R0000099	  Fis activator   Lrp repressor 	ECK12
+ECK12R000102	EC12R0000101	  Fis activator   H-NS repressor   Lrp repressor 	ECK12
+ECK12R000104	EC12R0000103	  IHF repressor 	ECK12
+ECK12R000106	EC12R0000105	  OxyR activator   SoxS activator 	ECK12
+ECK12R000108	EC12R0000107	  SoxS activator 	ECK12
+ECK12R000110	EC12R0000109	  ArgP repressor   PhoB activator 	ECK12
+ECK12R000112	EC12R0000111	  ArcA repressor 	ECK12
+ECK12R000114	EC12R0000113	  RcsB activator 	ECK12
+ECK12R000116	EC12R0000115	  ArcA repressor   CRP activator   DcuR activator 	ECK12
+ECK12R000118	EC12R0000117	  Fis activator 	ECK12
+ECK12R000120	EC12R0000119	  GadE activator   H-NS activator   MatA repressor 	ECK12
+ECK12R000121	EC12R0000085	  CpxR repressor 	ECK12
+ECK12R000123	EC12R0000122	  CsgD repressor 	ECK12
+ECK12R000125	EC12R0000124	  FlhDC activator 	ECK12
+ECK12R000127	EC12R0000126	  CRP activator   FNR activator 	ECK12
+ECK12R000129	EC12R0000128	  FNR activator 	ECK12
+ECK12R000131	EC12R0000130	  CRP activator   Fis repressor   NanR repressor 	ECK12
+ECK12R000133	EC12R0000132	  ArcA activator   FNR activator 	ECK12
+ECK12R000135	EC12R0000134	  H-NS repressor   PhoB activator   RcdA activator   RstA activator 	ECK12
+ECK12R000137	EC12R0000136	  OxyR repressor 	ECK12
+ECK12R000139	EC12R0000138	  CRP repressor   MetJ repressor 	ECK12
+ECK12R000141	EC12R0000140	  IHF activator   PspF activator 	ECK12
+ECK12R000143	EC12R0000142	  PspF repressor 	ECK12
+ECK12R000145	EC12R0000144	  CusR activator   HprR activator   PhoB activator 	ECK12
+ECK12R000147	EC12R0000146	  MarA activator   Rob activator   SoxS activator 	ECK12
+ECK12R000149	EC12R0000148	  IscR repressor 	ECK12
+ECK12R000151	EC12R0000150	  PhoP repressor 	ECK12
+ECK12R000153	EC12R0000152	  Nac activator 	ECK12
+ECK12R000155	EC12R0000154	  CRP repressor   PhoB activator 	ECK12
+ECK12R000157	EC12R0000156	  CRP activator   IHF repressor 	ECK12
+ECK12R000158	EC12R0000156	  CRP repressor   IHF activator 	ECK12
+ECK12R000160	EC12R0000159	  MarA activator   OxyR repressor   Rob activator   SoxS activator 	ECK12
+ECK12R000162	EC12R0000161	  FNR repressor   GadE activator   GadW repressor   GadX activator   H-NS repressor   PhoB activator   RutR repressor 	ECK12
+ECK12R000164	EC12R0000163	  HypT activator   MetJ repressor 	ECK12
+ECK12R000166	EC12R0000165	  CRP activator   Lrp repressor 	ECK12
+ECK12R000168	EC12R0000167	  CRP activator   MhpR activator 	ECK12
+ECK12R000170	EC12R0000169	  CRP activator   Fur repressor 	ECK12
+ECK12R000172	EC12R0000171	  Fur repressor 	ECK12
+ECK12R000174	EC12R0000173	  Fur repressor   IHF activator   IscR activator   NsrR repressor   OxyR activator 	ECK12
+ECK12R000176	EC12R0000175	  EvgA activator   FNR activator 	ECK12
+ECK12R000177	EC12R0000136	  OxyR activator 	ECK12
+ECK12R000179	EC12R0000178	  GadX activator 	ECK12
+ECK12R000181	EC12R0000180	  CueR activator 	ECK12
+ECK12R000183	EC12R0000182	  H-NS repressor 	ECK12
+ECK12R000185	EC12R0000184	  ArcA activator   FNR repressor   H-NS repressor 	ECK12
+ECK12R000187	EC12R0000186	  Cra activator 	ECK12
+ECK12R000189	EC12R0000188	  Fis unknown   IHF unknown   NtrC activator 	ECK12
+ECK12R000191	EC12R0000190	  NtrC activator 	ECK12
+ECK12R000193	EC12R0000192	  CpxR repressor   NsrR repressor 	ECK12
+ECK12R000195	EC12R0000194	  YdeO activator 	ECK12
+ECK12R000197	EC12R0000196	  CRP activator   Cra repressor   PrpR activator 	ECK12
+ECK12R000199	EC12R0000198	  ArcA activator   NtrC activator   PhoP activator   RutR repressor 	ECK12
+ECK12R000201	EC12R0000200	  Fis repressor   IHF repressor 	ECK12
+ECK12R000203	EC12R0000202	  CRP activator   Fis repressor   IHF repressor 	ECK12
+ECK12R000205	EC12R0000204	  Fis activator   IHF activator   OmpR repressor 	ECK12
+ECK12R000206	EC12R0000171	 Fur dual 	ECK12
+ECK12R000208	EC12R0000207	  CRP activator   CsiR repressor   H-NS activator   Lrp activator 	ECK12
+ECK12R000210	EC12R0000209	  FliZ repressor   RutR repressor 	ECK12
+ECK12R000213	EC12R0000212	  CpxR activator   GadE activator 	ECK12
+ECK12R000215	EC12R0000214	  ArcA activator   FNR repressor   NarL activator 	ECK12
+ECK12R000217	EC12R0000216	  ArcA repressor   CRP activator   FadR repressor 	ECK12
+ECK12R000219	EC12R0000218	  FadR activator   IclR repressor 	ECK12
+ECK12R000221	EC12R0000220	 CRP dual   NagC repressor 	ECK12
+ECK12R000223	EC12R0000222	  FNR repressor  IHF dual   NarL repressor   NarP repressor   NorR activator 	ECK12
+ECK12R000225	EC12R0000224	  HU repressor 	ECK12
+ECK12R000227	EC12R0000226	  CdaR activator 	ECK12
+ECK12R000229	EC12R0000228	  MngR repressor 	ECK12
+ECK12R000231	EC12R0000230	  AlsR repressor 	ECK12
+ECK12R000233	EC12R0000232	  DcuR activator 	ECK12
+ECK12R000235	EC12R0000234	  Zur repressor 	ECK12
+ECK12R000237	EC12R0000236	  ZntR activator 	ECK12
+ECK12R000239	EC12R0000238	  CRP activator   GntR repressor   IdnR activator 	ECK12
+ECK12R000241	EC12R0000240	  IHF activator   UvrY activator 	ECK12
+ECK12R000243	EC12R0000242	  FNR activator   H-NS repressor   NrdR repressor 	ECK12
+ECK12R000245	EC12R0000244	  CRP activator   Fis repressor   H-NS repressor   LeuO activator   RcsB-BglJ activator   StpA repressor 	ECK12
+ECK12R000247	EC12R0000246	  CRP repressor   UvrY activator 	ECK12
+ECK12R000249	EC12R0000248	  ArcA activator   GadE activator   PhoP activator 	ECK12
+ECK12R000251	EC12R0000250	  GadE activator   GadX activator   H-NS repressor   PhoP activator   RcsB activator 	ECK12
+ECK12R000253	EC12R0000252	  CRP activator   GntR repressor 	ECK12
+ECK12R000255	EC12R0000254	  CRP activator   OxyR repressor   UxuR repressor 	ECK12
+ECK12R000256	EC12R0000103	  IHF activator 	ECK12
+ECK12R000258	EC12R0000257	  CRP activator   ExuR repressor   FNR activator 	ECK12
+ECK12R000260	EC12R0000259	  CRP activator   ExuR repressor   UxuR repressor 	ECK12
+ECK12R000262	EC12R0000261	  CRP activator   UidR repressor   UxuR repressor 	ECK12
+ECK12R000264	EC12R0000263	  UidR repressor 	ECK12
+ECK12R000266	EC12R0000265	  CRP activator   IHF repressor   UlaR repressor 	ECK12
+ECK12R000268	EC12R0000267	  IHF repressor   UlaR repressor 	ECK12
+ECK12R000270	EC12R0000269	  ArcA repressor   FadR repressor 	ECK12
+ECK12R000272	EC12R0000271	  MalT activator 	ECK12
+ECK12R000274	EC12R0000273	  ArgR repressor   CRP activator 	ECK12
+ECK12R000276	EC12R0000275	  ArcA repressor   FNR repressor   IHF repressor   NarL repressor 	ECK12
+ECK12R000278	EC12R0000277	  CRP repressor   EvgA activator   FliZ repressor   GadE activator   GadW activator   GadX activator   H-NS repressor   YdeO activator 	ECK12
+ECK12R000280	EC12R0000279	  GadW repressor   GadX activator   RcsB activator 	ECK12
+ECK12R000282	EC12R0000281	  GcvA activator 	ECK12
+ECK12R000284	EC12R0000283	  LexA repressor 	ECK12
+ECK12R000286	EC12R0000285	  AgaR repressor   CRP activator 	ECK12
+ECK12R000288	EC12R0000287	  AgaR repressor 	ECK12
+ECK12R000289	EC12R0000077	  CRP activator 	ECK12
+ECK12R000291	EC12R0000290	  CRP activator   NagC repressor   NanR repressor 	ECK12
+ECK12R000293	EC12R0000292	  BasR activator   Fis repressor 	ECK12
+ECK12R000295	EC12R0000294	  FNR activator   NarL activator   NarP activator   NsrR repressor   OxyR activator 	ECK12
+ECK12R000297	EC12R0000296	  Ada activator 	ECK12
+ECK12R000299	EC12R0000298	 AraC dual   CRP activator 	ECK12
+ECK12R000301	EC12R0000300	  ArgR repressor 	ECK12
+ECK12R000303	EC12R0000302	  DeoR repressor 	ECK12
+ECK12R000306	EC12R0000304	 CRP dual   CytR repressor   DeoR repressor   Fis activator   ModE repressor 	ECK12
+ECK12R000308	EC12R0000307	  FNR activator   Fis repressor   NarL repressor 	ECK12
+ECK12R000309	EC12R0000202	 CRP dual   Fis repressor   IHF activator 	ECK12
+ECK12R000311	EC12R0000310	  ArcA repressor   FNR repressor   Fur repressor   IHF activator 	ECK12
+ECK12R000313	EC12R0000312	  DcuR activator   FNR activator   NarL repressor 	ECK12
+ECK12R000315	EC12R0000314	  CRP activator   GalR repressor   GalS repressor 	ECK12
+ECK12R000317	EC12R0000316	  CRP activator   GalR repressor   GalS repressor   H-NS repressor   HU repressor 	ECK12
+ECK12R000319	EC12R0000318	  CRP repressor  GalR dual  GalS dual   HU repressor 	ECK12
+ECK12R000321	EC12R0000320	  CRP activator   NtrC repressor 	ECK12
+ECK12R000323	EC12R0000322	  ArcA repressor   CRP activator   FNR activator   Fis activator   FlhDC activator   GlpR repressor 	ECK12
+ECK12R000325	EC12R0000324	  ArcA repressor   CRP activator   GlpR repressor 	ECK12
+ECK12R000327	EC12R0000326	  IlvY repressor 	ECK12
+ECK12R000329	EC12R0000328	  KdpE activator 	ECK12
+ECK12R000331	EC12R0000330	  CRP activator   H-NS repressor   LacI repressor 	ECK12
+ECK12R000333	EC12R0000332	  CRP activator   CreB repressor   Fis activator   MalT activator 	ECK12
+ECK12R000335	EC12R0000334	  CRP activator   MalT activator 	ECK12
+ECK12R000337	EC12R0000336	  FNR activator   MalT activator 	ECK12
+ECK12R000339	EC12R0000338	  CRP activator  MelR dual 	ECK12
+ECK12R000341	EC12R0000340	  MetJ repressor 	ECK12
+ECK12R000343	EC12R0000342	  ArgP activator   CRP activator  DnaA dual   Fis activator   H-NS repressor   NrdR repressor 	ECK12
+ECK12R000345	EC12R0000344	  CpxR activator   EnvY activator   IHF repressor   Lrp repressor   OmpR activator   YjjQ repressor 	ECK12
+ECK12R000347	EC12R0000346	  CRP activator   RhaR activator   RhaS unknown RhaS activator 	ECK12
+ECK12R000349	EC12R0000348	 CRP dual   CytR repressor 	ECK12
+ECK12R000351	EC12R0000350	  LexA repressor   RcdA repressor 	ECK12
+ECK12R000353	EC12R0000352	  TrpR repressor 	ECK12
+ECK12R000355	EC12R0000354	  PgrR repressor   TyrR repressor 	ECK12
+ECK12R000357	EC12R0000356	  MetJ repressor   OxyR activator 	ECK12
+ECK12R000358	EC12R0000298	  AraC activator   CRP activator 	ECK12
+ECK12R000360	EC12R0000359	  CysB repressor   PhoP activator 	ECK12
+ECK12R000362	EC12R0000361	  CysB activator   IHF activator 	ECK12
+ECK12R000364	EC12R0000363	  CysB activator 	ECK12
+ECK12R000366	EC12R0000365	  ArcA repressor   CRP activator   FadR repressor   OmpR repressor   PhoP activator 	ECK12
+ECK12R000368	EC12R0000367	  H-NS repressor   Lrp activator 	ECK12
+ECK12R000370	EC12R0000369	  PurR repressor 	ECK12
+ECK12R000372	EC12R0000371	  CRP repressor   CytR repressor   DnaA repressor 	ECK12
+ECK12R000374	EC12R0000373	  Lrp activator 	ECK12
+ECK12R000376	EC12R0000375	  CRP activator   TorR activator 	ECK12
+ECK12R000378	EC12R0000377	  HU repressor   IHF repressor  TyrR dual 	ECK12
+ECK12R000379	EC12R0000326	  IlvY activator 	ECK12
+ECK12R000381	EC12R0000380	  GadE activator   MarA repressor   PurR repressor 	ECK12
+ECK12R000383	EC12R0000382	  Ada activator   AidB repressor   Lrp repressor 	ECK12
+ECK12R000385	EC12R0000384	  GadE-RcsB activator   GadW repressor   GadX activator   H-NS repressor   MarA repressor   YdeO activator 	ECK12
+ECK12R000387	EC12R0000386	  AppY activator   ArcA activator   YdeO activator 	ECK12
+ECK12R000388	EC12R0000298	  AraC activator  CRP dual 	ECK12
+ECK12R000390	EC12R0000389	  ArcA activator   FNR repressor   H-NS repressor   HypT activator 	ECK12
+ECK12R000392	EC12R0000391	  ArcA repressor   CRP activator   Cra repressor   CusR activator   FNR repressor   Fis activator   Fur repressor   GadE activator   HprR repressor   PdhR repressor 	ECK12
+ECK12R000394	EC12R0000393	 ArcA dual   CRP activator   FNR repressor   Fur activator 	ECK12
+ECK12R000396	EC12R0000395	  ArcA repressor   FNR repressor   IHF repressor 	ECK12
+ECK12R000398	EC12R0000397	  ArcA repressor   CRP unknown CRP activator   FNR repressor   Fur repressor   MarA activator   SoxR activator   SoxS activator 	ECK12
+ECK12R000400	EC12R0000399	  ArcA repressor   CRP activator   IHF activator 	ECK12
+ECK12R000402	EC12R0000401	  ArcA repressor   CRP activator   DpiA activator   FlhDC repressor 	ECK12
+ECK12R000404	EC12R0000403	  Fis activator  IHF dual   PepA repressor   PurR repressor   RutR activator 	ECK12
+ECK12R000406	EC12R0000405	  ArgR repressor   PhoP repressor 	ECK12
+ECK12R000408	EC12R0000407	  AsnC activator 	ECK12
+ECK12R000410	EC12R0000409	  AsnC repressor   Nac repressor 	ECK12
+ECK12R000412	EC12R0000411	  AtoC activator   IHF activator 	ECK12
+ECK12R000414	EC12R0000413	  ArcA repressor   BetI repressor   Cra activator 	ECK12
+ECK12R000416	EC12R0000415	  CadC activator   FNR activator   H-NS repressor   LeuO repressor   MlrA activator 	ECK12
+ECK12R000418	EC12R0000417	 CRP dual   Cra activator   Fis repressor 	ECK12
+ECK12R000420	EC12R0000419	  CRP activator   FNR activator   IHF activator   TdcA activator   TdcR activator 	ECK12
+ECK12R000422	EC12R0000421	  CRP activator   FucR activator 	ECK12
+ECK12R000424	EC12R0000423	 CRP dual   CytR repressor   DeoR repressor 	ECK12
+ECK12R000426	EC12R0000425	  CRP activator   UhpA activator   UvrY activator 	ECK12
+ECK12R000428	EC12R0000427	  CRP activator   MalI repressor 	ECK12
+ECK12R000430	EC12R0000429	  CRP activator   GutM activator   H-NS activator   SrlR repressor 	ECK12
+ECK12R000432	EC12R0000431	  AcrR repressor   CRP activator   FliZ repressor   Fur repressor   H-NS activator   HdfR repressor   IHF repressor   LrhA repressor   MatA repressor   OmpR repressor   QseB activator   RcsAB repressor   YjjQ repressor 	ECK12
+ECK12R000434	EC12R0000433	  CRP activator   MalT activator   PhoP activator 	ECK12
+ECK12R000436	EC12R0000435	  CRP activator   Fis repressor 	ECK12
+ECK12R000438	EC12R0000437	  CspA activator   Fis activator   GadX activator   H-NS repressor 	ECK12
+ECK12R000439	EC12R0000079	 CRP dual   Cra activator 	ECK12
+ECK12R000441	EC12R0000440	  CynR activator 	ECK12
+ECK12R000442	EC12R0000440	  CynR repressor 	ECK12
+ECK12R000444	EC12R0000443	  CysB activator   H-NS repressor 	ECK12
+ECK12R000446	EC12R0000445	  CRP activator   CytR repressor   Nac activator 	ECK12
+ECK12R000448	EC12R0000447	  CRP activator   DsdC activator 	ECK12
+ECK12R000450	EC12R0000449	  CRP activator   DpiA activator   ExuR repressor 	ECK12
+ECK12R000452	EC12R0000451	  Fur repressor   SlyA repressor 	ECK12
+ECK12R000454	EC12R0000453	  FhlA activator   IHF activator   ModE activator   NsrR repressor 	ECK12
+ECK12R000456	EC12R0000455	  FhlA activator   IHF activator   NsrR repressor 	ECK12
+ECK12R000458	EC12R0000457	  FNR repressor   ModE activator 	ECK12
+ECK12R000460	EC12R0000459	 FNR dual   NarL activator   NarP repressor 	ECK12
+ECK12R000462	EC12R0000461	  ArcA repressor   FNR repressor  Fis dual   Fur repressor   IHF repressor   NsrR repressor   PdhR repressor 	ECK12
+ECK12R000464	EC12R0000463	  ArcA activator   FNR activator   Fis repressor   Fur activator 	ECK12
+ECK12R000466	EC12R0000465	  CRP activator   FNR activator   NarL repressor 	ECK12
+ECK12R000467	EC12R0000186	  Cra repressor 	ECK12
+ECK12R000469	EC12R0000468	  Fur repressor   RutR repressor 	ECK12
+ECK12R000471	EC12R0000470	  CRP activator   FlhDC repressor   GalR repressor   GalS repressor 	ECK12
+ECK12R000473	EC12R0000472	  ArcA repressor   CRP activator   GatR repressor 	ECK12
+ECK12R000475	EC12R0000474	  CRP activator   FNR activator  GcvA dual   Lrp activator   PurR repressor 	ECK12
+ECK12R000476	EC12R0000281	  GcvA repressor 	ECK12
+ECK12R000478	EC12R0000477	  IHF activator  NtrC dual 	ECK12
+ECK12R000480	EC12R0000479	  CRP activator   GlpR repressor 	ECK12
+ECK12R000482	EC12R0000481	  Fis repressor   H-NS repressor   IHF activator   MntR repressor   OxyR activator 	ECK12
+ECK12R000484	EC12R0000483	  LeuO activator 	ECK12
+ECK12R000486	EC12R0000485	  GadE activator   H-NS repressor   Lrp repressor   NsrR repressor 	ECK12
+ECK12R000488	EC12R0000487	  AdiY activator   ArgR repressor   CRP repressor   FNR repressor   Fur repressor   GadE activator   HdfR activator   IHF activator   Lrp activator   Nac repressor 	ECK12
+ECK12R000489	EC12R0000373	  Lrp repressor 	ECK12
+ECK12R000491	EC12R0000490	  MarA activator   SoxS activator 	ECK12
+ECK12R000493	EC12R0000492	  AcrR repressor   CRP activator   CpxR activator   Cra repressor   Fis activator   MarA activator   MarR repressor   Rob activator   SoxS activator 	ECK12
+ECK12R000494	EC12R0000417	  CRP activator   Cra repressor   Fis repressor 	ECK12
+ECK12R000496	EC12R0000495	  CRP activator   Cra repressor   Mlc repressor   NagC repressor 	ECK12
+ECK12R000498	EC12R0000497	  Nac activator   PurR repressor 	ECK12
+ECK12R000500	EC12R0000499	  Cra repressor   Fis activator   Lrp repressor   NarL repressor 	ECK12
+ECK12R000502	EC12R0000501	  FNR activator   Fis repressor   FlhDC activator  IHF dual  NarL dual   NarP activator   NsrR repressor 	ECK12
+ECK12R000504	EC12R0000503	  H-NS repressor   NhaR unknown NhaR activator 	ECK12
+ECK12R000506	EC12R0000505	  PhoB activator 	ECK12
+ECK12R000508	EC12R0000507	  FNR activator   IHF activator   PhoB activator 	ECK12
+ECK12R000510	EC12R0000509	  CRP activator   DnaA repressor   Fis repressor   PurR repressor 	ECK12
+ECK12R000512	EC12R0000511	  CRP activator   RbsR repressor 	ECK12
+ECK12R000514	EC12R0000513	  RcsAB activator 	ECK12
+ECK12R000516	EC12R0000515	  ArcA repressor   CRP activator   RhaS unknown RhaS activator 	ECK12
+ECK12R000518	EC12R0000517	  Cra repressor   FNR repressor   Fur repressor   MarA activator   Rob activator   SoxS activator 	ECK12
+ECK12R000520	EC12R0000519	  SdiA repressor 	ECK12
+ECK12R000522	EC12R0000521	  AcrR repressor   FNR repressor   Fur repressor   SoxR activator   SoxS repressor 	ECK12
+ECK12R000524	EC12R0000523	  NarL repressor   TorR activator 	ECK12
+ECK12R000526	EC12R0000525	  ArcA activator   CRP repressor CRP unknown   TreR repressor 	ECK12
+ECK12R000528	EC12R0000527	  CRP activator   RhaS activator 	ECK12
+ECK12R000530	EC12R0000529	  ArcA repressor   Fur repressor   Lrp repressor   ModE repressor 	ECK12
+ECK12R000532	EC12R0000531	  Lrp activator   Nac repressor 	ECK12
+ECK12R000534	EC12R0000533	  CRP repressor   Fis activator   NtrC activator 	ECK12
+ECK12R000536	EC12R0000535	  Cra repressor   GntR repressor   KdgR repressor 	ECK12
+ECK12R000537	EC12R0000238	  CRP activator   GntR repressor   IdnR repressor 	ECK12
+ECK12R000539	EC12R0000538	  ArgP activator 	ECK12
+ECK12R000541	EC12R0000540	  IHF activator   TyrR activator 	ECK12
+ECK12R000543	EC12R0000542	  CRP activator   Cra repressor  FNR dual   PdhR repressor 	ECK12
+ECK12R000545	EC12R0000544	  ArcA repressor   FNR repressor   NsrR repressor 	ECK12
+ECK12R000547	EC12R0000546	  ArcA repressor   CRP repressor  FNR dual   Fis activator  Fur dual 	ECK12
+ECK12R000549	EC12R0000548	  CpxR activator   H-NS repressor 	ECK12
+ECK12R000551	EC12R0000550	  AscG repressor 	ECK12
+ECK12R000553	EC12R0000552	  FNR activator   Fur repressor   H-NS activator 	ECK12
+ECK12R000555	EC12R0000554	  ArcA activator   CRP activator   FNR activator   IHF activator   NarL repressor 	ECK12
+ECK12R000557	EC12R0000556	  FNR activator   NarL repressor 	ECK12
+ECK12R000559	EC12R0000558	 FNR dual   Fur repressor 	ECK12
+ECK12R000560	EC12R0000395	  ArcA activator   FNR repressor   IHF activator 	ECK12
+ECK12R000561	EC12R0000077	 CRP dual 	ECK12
+ECK12R000563	EC12R0000562	  CRP repressor   IHF repressor   NsrR repressor 	ECK12
+ECK12R000564	EC12R0000128	  FNR repressor 	ECK12
+ECK12R000566	EC12R0000565	  Fis repressor   Fur activator 	ECK12
+ECK12R000568	EC12R0000567	  ArgP activator   CRP repressor   FNR activator  Fur dual   Nac repressor 	ECK12
+ECK12R000569	EC12R0000505	  PhoB repressor 	ECK12
+ECK12R000571	EC12R0000570	  KdgR repressor 	ECK12
+ECK12R000573	EC12R0000572	  FNR repressor   Fur repressor   GadE activator 	ECK12
+ECK12R000575	EC12R0000574	  AcrR repressor   H-NS repressor   HU activator   IHF repressor   Lrp repressor   MarA activator   OmpR activator   Rob activator   SoxS activator 	ECK12
+ECK12R000577	EC12R0000576	  FabR repressor   FadR activator 	ECK12
+ECK12R000579	EC12R0000578	  CRP activator   Mlc repressor   NagC repressor 	ECK12
+ECK12R000580	EC12R0000079	  CRP repressor   Cra activator 	ECK12
+ECK12R000582	EC12R0000581	  FNR repressor   Fur repressor   MetR activator   NsrR repressor 	ECK12
+ECK12R000584	EC12R0000583	  H-NS repressor   IHF activator 	ECK12
+ECK12R000586	EC12R0000585	  AlaS repressor 	ECK12
+ECK12R000588	EC12R0000587	  HipAB repressor   HipB repressor 	ECK12
+ECK12R000589	EC12R0000117	  Fis repressor 	ECK12
+ECK12R000590	EC12R0000132	  ArcA repressor   FNR activator 	ECK12
+ECK12R000591	EC12R0000154	  CRP activator   PhoB repressor 	ECK12
+ECK12R000593	EC12R0000592	  FadR repressor   IHF activator 	ECK12
+ECK12R000595	EC12R0000594	  Fis activator   H-NS repressor 	ECK12
+ECK12R000597	EC12R0000596	  SutR repressor 	ECK12
+ECK12R000599	EC12R0000598	 DnaA dual 	ECK12
+ECK12R000601	EC12R0000600	  ArgP activator   DnaA repressor 	ECK12
+ECK12R000603	EC12R0000602	  IHF activator   Lrp repressor 	ECK12
+ECK12R000605	EC12R0000604	  HypT activator   MetJ repressor   PhoP activator 	ECK12
+ECK12R000606	EC12R0000178	  GadX repressor 	ECK12
+ECK12R000608	EC12R0000607	 BolA dual 	ECK12
+ECK12R000609	EC12R0000111	  ArcA activator 	ECK12
+ECK12R000611	EC12R0000610	  BCCP repressor 	ECK12
+ECK12R000613	EC12R0000612	  FadR activator 	ECK12
+ECK12R000615	EC12R0000614	  H-NS repressor   OmpR repressor 	ECK12
+ECK12R000617	EC12R0000616	  ArcA activator   CRP activator   CaiF activator   FNR activator   H-NS repressor 	ECK12
+ECK12R000619	EC12R0000618	  CRP repressor   Fis repressor   FliZ repressor   IHF repressor   Lrp repressor 	ECK12
+ECK12R000621	EC12R0000620	  CpxR repressor   CsgD activator   FliZ repressor 	ECK12
+ECK12R000623	EC12R0000622	  BasR activator   CRP activator   CpxR repressor   Cra activator   CsgD activator   FliZ repressor   H-NS repressor   IHF activator   MlrA activator   MqsA repressor   OmpR activator   RcdA activator   RcsAB repressor   RstA repressor 	ECK12
+ECK12R000625	EC12R0000624	  H-NS repressor   Lrp activator   StpA repressor 	ECK12
+ECK12R000627	EC12R0000626	  H-NS repressor   Lrp repressor   NhaR activator   RcsB activator 	ECK12
+ECK12R000629	EC12R0000628	  FNR repressor   IHF activator 	ECK12
+ECK12R000630	EC12R0000117	 Fis dual 	ECK12
+ECK12R000632	EC12R0000631	  BasR activator   H-NS repressor   IHF activator   NagC activator   NanR activator 	ECK12
+ECK12R000634	EC12R0000633	  CsgD repressor   FlhDC activator   H-NS activator   IHF repressor   MatA repressor   NsrR repressor   SutR repressor 	ECK12
+ECK12R000636	EC12R0000635	  LrhA activator 	ECK12
+ECK12R000638	EC12R0000637	  ArcA repressor   CRP activator   Fur repressor   GadX activator   MqsA repressor 	ECK12
+ECK12R000639	EC12R0000275	  ArcA repressor   FNR repressor   IHF repressor   NarL activator 	ECK12
+ECK12R000641	EC12R0000640	  CRP activator   H-NS activator   MqsA repressor 	ECK12
+ECK12R000643	EC12R0000642	  AppY activator   ArcA activator   Fis repressor   IscR repressor   NarL repressor   NarP repressor   YdeO activator 	ECK12
+ECK12R000645	EC12R0000644	  NagC repressor 	ECK12
+ECK12R000647	EC12R0000646	  CRP activator   Fur repressor   HypT repressor   PdhR activator 	ECK12
+ECK12R000649	EC12R0000648	  AcrR repressor   FNR repressor   Fur repressor   SoxR repressor 	ECK12
+ECK12R000650	EC12R0000519	  SdiA activator 	ECK12
+ECK12R000651	EC12R0000435	  CRP activator   Fis activator 	ECK12
+ECK12R000653	EC12R0000652	  MprA repressor 	ECK12
+ECK12R000654	EC12R0000348	  CRP repressor   CytR repressor 	ECK12
+ECK12R000656	EC12R0000655	  ArcA repressor   CadC activator   GadE-RcsB activator   GadX activator   H-NS repressor   Lrp activator 	ECK12
+ECK12R000658	EC12R0000657	  NsrR repressor 	ECK12
+ECK12R000659	EC12R0000602	  IHF repressor   Lrp repressor 	ECK12
+ECK12R000660	EC12R0000220	  CRP activator   NagC repressor 	ECK12
+ECK12R000662	EC12R0000661	  GadE activator   H-NS repressor   RcsAB activator 	ECK12
+ECK12R000663	EC12R0000644	  NagC activator 	ECK12
+ECK12R000664	EC12R0000273	  ArgR repressor   CRP repressor 	ECK12
+ECK12R000666	EC12R0000665	 CRP dual   CytR repressor   NsrR repressor 	ECK12
+ECK12R000668	EC12R0000667	  CRP activator   ExuR repressor   OxyR repressor   UxuR repressor 	ECK12
+ECK12R000670	EC12R0000669	  FNR repressor   IHF activator   Lrp activator   YeiL activator 	ECK12
+ECK12R000672	EC12R0000671	  PutA repressor 	ECK12
+ECK12R000674	EC12R0000673	  FNR activator   FlhDC activator   ModE activator   NarL repressor   NarP activator 	ECK12
+ECK12R000676	EC12R0000675	  ArcA repressor   GlcC activator   IHF activator   PdhR repressor 	ECK12
+ECK12R000678	EC12R0000677	  CRP activator   Cra repressor   Fis repressor   GlcC repressor 	ECK12
+ECK12R000680	EC12R0000679	  TorR repressor 	ECK12
+ECK12R000682	EC12R0000681	  Cbl activator   CysB repressor   FNR activator  IHF dual 	ECK12
+ECK12R000683	EC12R0000150	  PhoP activator 	ECK12
+ECK12R000685	EC12R0000684	  CRP activator  ChbR dual   NagC repressor 	ECK12
+ECK12R000687	EC12R0000686	  ArcA repressor   NarL repressor 	ECK12
+ECK12R000689	EC12R0000688	  BasR repressor   MarA activator   PutA repressor 	ECK12
+ECK12R000690	EC12R0000156	  CRP repressor   IHF repressor 	ECK12
+ECK12R000692	EC12R0000691	  ArcA repressor  LldR dual 	ECK12
+ECK12R000694	EC12R0000693	  H-NS activator   IHF activator   Lrp activator 	ECK12
+ECK12R000696	EC12R0000695	  H-NS repressor   LrhA activator   Lrp activator 	ECK12
+ECK12R000698	EC12R0000697	  ArcA repressor   CRP activator   Cra activator   FNR repressor   MarA activator   Rob activator   SoxS activator 	ECK12
+ECK12R000700	EC12R0000699	  ArcA repressor   CRP activator   Cra repressor   Fis repressor 	ECK12
+ECK12R000702	EC12R0000701	  ArcA repressor   CRP activator   DnaA repressor   FNR repressor   MarA activator   Rob activator   SoxS activator 	ECK12
+ECK12R000704	EC12R0000703	  CysB activator   NtrC activator 	ECK12
+ECK12R000706	EC12R0000705	  CRP activator   H-NS activator 	ECK12
+ECK12R000708	EC12R0000707	  IHF activator   RtcR activator 	ECK12
+ECK12R000709	EC12R0000132	  ArcA repressor   FNR repressor 	ECK12
+ECK12R000711	EC12R0000710	  ArsR repressor 	ECK12
+ECK12R000713	EC12R0000712	  CRP activator   FNR activator   H-NS repressor   NarL repressor 	ECK12
+ECK12R000715	EC12R0000714	  CRP activator   CaiF activator   FNR activator 	ECK12
+ECK12R000717	EC12R0000716	  ArgP activator   Lrp activator 	ECK12
+ECK12R000718	EC12R0000182	  H-NS activator 	ECK12
+ECK12R000720	EC12R0000719	  CRP activator   IHF activator   PaaX repressor 	ECK12
+ECK12R000722	EC12R0000721	  CRP activator   IHF repressor   MprA repressor   OmpR repressor 	ECK12
+ECK12R000723	EC12R0000184	  ArcA activator  FNR dual   H-NS repressor 	ECK12
+ECK12R000725	EC12R0000724	  FlhDC activator   ModE activator   NarL repressor   NarP repressor 	ECK12
+ECK12R000727	EC12R0000726	  CRP repressor   IHF repressor   YiaJ repressor 	ECK12
+ECK12R000729	EC12R0000728	  AdiY activator   CRP repressor   Fis repressor   FliZ repressor   GadE activator  GadW dual   GadX activator   RcsB activator 	ECK12
+ECK12R000731	EC12R0000730	  AdiY activator   ArcA activator   CRP repressor   FNR repressor   Fis repressor   GadE-RcsB activator  GadW dual   GadX activator   H-NS repressor   RcsB repressor   TorR repressor 	ECK12
+ECK12R000733	EC12R0000732	  CRP activator   IHF activator   PaaX repressor   SlyA activator 	ECK12
+ECK12R000735	EC12R0000734	  XapR activator 	ECK12
+ECK12R000737	EC12R0000736	  Cbl activator   CysB activator 	ECK12
+ECK12R000739	EC12R0000738	  CRP activator   ModE repressor 	ECK12
+ECK12R000741	EC12R0000740	  FhlA activator   FlhDC activator 	ECK12
+ECK12R000742	EC12R0000165	 CRP dual   Lrp repressor 	ECK12
+ECK12R000744	EC12R0000743	  CdaR activator   FNR activator   Fur repressor   H-NS repressor 	ECK12
+ECK12R000746	EC12R0000745	  CRP repressor   MarA activator 	ECK12
+ECK12R000748	EC12R0000747	  Fis activator   MazE repressor   MazE-MazF repressor 	ECK12
+ECK12R000750	EC12R0000749	  AcrR repressor   EnvR repressor   MarA activator   MprA repressor   PhoP repressor   Rob activator   SoxS activator 	ECK12
+ECK12R000752	EC12R0000751	  Cra activator   MarA activator   SoxS activator 	ECK12
+ECK12R000754	EC12R0000753	  FNR repressor   Fur repressor   Nac repressor   NtrC activator 	ECK12
+ECK12R000756	EC12R0000755	  AraC repressor   CRP activator   XylR activator 	ECK12
+ECK12R000758	EC12R0000757	  CRP activator   FNR activator   Fis repressor  H-NS dual   SlyA activator 	ECK12
+ECK12R000761	EC12R0000759	 FNR dual  Fur dual   GadX activator   NtrC activator 	ECK12
+ECK12R000762	EC12R0000726	  CRP unknown CRP activator   IHF activator   YiaJ repressor 	ECK12
+ECK12R000764	EC12R0000763	  PaaX repressor 	ECK12
+ECK12R000766	EC12R0000765	  CRP activator   Fis repressor   XylR activator 	ECK12
+ECK12R000768	EC12R0000767	  Cra activator   TyrR repressor 	ECK12
+ECK12R000769	EC12R0000598	  DnaA activator 	ECK12
+ECK12R000771	EC12R0000770	  CRP activator   FNR repressor   FhlA activator   HyfR activator 	ECK12
+ECK12R000773	EC12R0000772	  FNR activator   NarL repressor   NikR repressor 	ECK12
+ECK12R000774	EC12R0000165	  CRP repressor   Lrp activator 	ECK12
+ECK12R000776	EC12R0000775	  ZraR activator 	ECK12
+ECK12R000778	EC12R0000777	  CRP activator   ZraR activator 	ECK12
+ECK12R000780	EC12R0000779	  FliZ repressor   GadE activator  GadW dual  GadX dual   H-NS repressor   Lrp repressor   MarA repressor   PhoP activator   RcsB activator   TorR activator 	ECK12
+ECK12R000782	EC12R0000781	  CRP repressor   Mlc repressor 	ECK12
+ECK12R000783	EC12R0000781	  CRP activator   Mlc repressor 	ECK12
+ECK12R000784	EC12R0000214	  ArcA activator   FNR activator   NarL activator 	ECK12
+ECK12R000786	EC12R0000785	  AdiY activator   H-NS repressor   IHF activator 	ECK12
+ECK12R000788	EC12R0000787	  ArcA repressor   CRP repressor   Cra activator   IHF activator   IclR repressor 	ECK12
+ECK12R000789	EC12R0000755	 AraC dual   CRP activator   XylR repressor 	ECK12
+ECK12R000791	EC12R0000790	  TyrR repressor 	ECK12
+ECK12R000793	EC12R0000792	  CpxR activator   TyrR repressor 	ECK12
+ECK12R000795	EC12R0000794	  TrpR repressor   TyrR repressor 	ECK12
+ECK12R000797	EC12R0000796	  BirA repressor 	ECK12
+ECK12R000798	EC12R0000190	  NtrC repressor 	ECK12
+ECK12R000800	EC12R0000799	  CRP activator   FNR activator   Fis activator   GlpR repressor   IHF repressor 	ECK12
+ECK12R000802	EC12R0000801	  FNR activator   Fur activator   OxyR activator 	ECK12
+ECK12R000804	EC12R0000803	  Fur repressor   MetR activator 	ECK12
+ECK12R000806	EC12R0000805	  FNR activator   Fis repressor   IHF activator   NarL activator   RstA activator 	ECK12
+ECK12R000808	EC12R0000807	  FNR activator   Fis repressor   IHF activator   NarL activator 	ECK12
+ECK12R000810	EC12R0000809	  CRP repressor   Cra repressor   FNR activator   Fis repressor   H-NS repressor  IHF dual   NarL activator   NarP activator 	ECK12
+ECK12R000812	EC12R0000811	  CRP activator   CpxR repressor   EnvY activator   Fur activator  IHF dual  OmpR dual   PhoB activator   RstA repressor 	ECK12
+ECK12R000814	EC12R0000813	  CRP activator   OxyR repressor 	ECK12
+ECK12R000816	EC12R0000815	  PhoP activator   PurR repressor   RbsR repressor 	ECK12
+ECK12R000818	EC12R0000817	  FNR repressor   PurR repressor 	ECK12
+ECK12R000820	EC12R0000819	  Fur repressor   PurR repressor 	ECK12
+ECK12R000822	EC12R0000821	  Fis repressor   PurR repressor 	ECK12
+ECK12R000824	EC12R0000823	  ArcA repressor   CRP activator   FNR repressor   Fur repressor   IHF repressor   MarA activator   Rob activator   SoxS activator 	ECK12
+ECK12R000826	EC12R0000825	  ArcA repressor   LexA repressor 	ECK12
+ECK12R000827	EC12R0000296	 Ada dual 	ECK12
+ECK12R000829	EC12R0000828	  ArcA repressor   FadR repressor   Fis activator 	ECK12
+ECK12R000831	EC12R0000830	  CRP activator   Lrp activator   Mlc repressor 	ECK12
+ECK12R000833	EC12R0000832	  HU repressor   IHF repressor   TrpR repressor   TyrR activator 	ECK12
+ECK12R000835	EC12R0000834	  ArcA repressor   CRP activator   FNR repressor 	ECK12
+ECK12R000837	EC12R0000836	  CRP activator   EbgR repressor 	ECK12
+ECK12R000839	EC12R0000838	  CRP activator   CspA activator   Fis repressor 	ECK12
+ECK12R000841	EC12R0000840	  DsdC repressor   NsrR repressor 	ECK12
+ECK12R000843	EC12R0000842	  FNR activator   FhlA activator   NarL repressor   NarP activator 	ECK12
+ECK12R000845	EC12R0000844	  ArgP activator   LysR activator 	ECK12
+ECK12R000847	EC12R0000846	  LysR repressor 	ECK12
+ECK12R000848	EC12R0000427	 CRP dual   MalI repressor 	ECK12
+ECK12R000850	EC12R0000849	 MetR dual   PurR repressor 	ECK12
+ECK12R000852	EC12R0000851	  NadR repressor 	ECK12
+ECK12R000854	EC12R0000853	  CRP repressor   NadR repressor 	ECK12
+ECK12R000856	EC12R0000855	  CRP repressor   FNR repressor   Fis repressor 	ECK12
+ECK12R000858	EC12R0000857	  CRP activator   GalR repressor   GalS repressor   NagC repressor 	ECK12
+ECK12R000860	EC12R0000859	  HcaR repressor 	ECK12
+ECK12R000861	EC12R0000859	  HcaR activator 	ECK12
+ECK12R000863	EC12R0000862	  AscG repressor   CRP activator   PhoB repressor   PrpR repressor 	ECK12
+ECK12R000865	EC12R0000864	  EvgA activator   H-NS repressor 	ECK12
+ECK12R000867	EC12R0000866	  AllR repressor 	ECK12
+ECK12R000869	EC12R0000868	  Fur repressor   OxyR repressor 	ECK12
+ECK12R000871	EC12R0000870	  BasR repressor   PhoP activator 	ECK12
+ECK12R000873	EC12R0000872	  PdhR repressor   PhoP activator 	ECK12
+ECK12R000875	EC12R0000874	  CRP activator   LsrR repressor 	ECK12
+ECK12R000877	EC12R0000876	  MetJ repressor   MetR activator 	ECK12
+ECK12R000878	EC12R0000876	  MetJ repressor   MetR repressor 	ECK12
+ECK12R000880	EC12R0000879	  LexA repressor   RcsB-BglJ activator 	ECK12
+ECK12R000882	EC12R0000881	  Fur repressor   MntR repressor   OxyR activator 	ECK12
+ECK12R000884	EC12R0000883	  AllS activator 	ECK12
+ECK12R000885	EC12R0000146	  MarA repressor   Rob repressor   SoxS repressor 	ECK12
+ECK12R000887	EC12R0000886	  BaeR activator   CpxR activator 	ECK12
+ECK12R000889	EC12R0000888	  DhaR repressor 	ECK12
+ECK12R000890	EC12R0000888	  DhaR activator 	ECK12
+ECK12R000892	EC12R0000891	  EvgA activator 	ECK12
+ECK12R000894	EC12R0000893	  Fur activator   SoxS activator   Zur repressor 	ECK12
+ECK12R000896	EC12R0000895	  AcrR repressor 	ECK12
+ECK12R000898	EC12R0000897	 CRP dual   Rob activator 	ECK12
+ECK12R000900	EC12R0000899	  Rob activator 	ECK12
+ECK12R000902	EC12R0000901	  FNR activator   H-NS repressor 	ECK12
+ECK12R000904	EC12R0000903	  YhaJ activator 	ECK12
+ECK12R000906	EC12R0000905	  BasR activator   QseB activator 	ECK12
+ECK12R000908	EC12R0000907	  FNR activator   FlhDC activator 	ECK12
+ECK12R000910	EC12R0000909	  CsgD repressor   FlhDC activator 	ECK12
+ECK12R000912	EC12R0000911	  FNR repressor   NarL activator   NarP activator   NsrR repressor 	ECK12
+ECK12R000914	EC12R0000913	  FNR repressor   NsrR repressor 	ECK12
+ECK12R000916	EC12R0000915	  AscG repressor   CRP activator 	ECK12
+ECK12R000918	EC12R0000917	  FNR activator   Fur repressor   NagC unknown 	ECK12
+ECK12R000920	EC12R0000919	  HipAB repressor   HipB repressor   IHF activator 	ECK12
+ECK12R000922	EC12R0000921	  NhaR activator   OmpR repressor 	ECK12
+ECK12R000924	EC12R0000923	  OmpR activator 	ECK12
+ECK12R000925	EC12R0000148	  IscR activator 	ECK12
+ECK12R000927	EC12R0000926	  DpiA repressor   H-NS repressor 	ECK12
+ECK12R000929	EC12R0000928	  FNR activator   YqjI repressor 	ECK12
+ECK12R000931	EC12R0000930	  ArcA repressor   CRP repressor  FNR dual   NarL repressor 	ECK12
+ECK12R000932	EC12R0000122	  CsgD activator 	ECK12
+ECK12R000934	EC12R0000933	  GadE-RcsB activator   Rob activator 	ECK12
+ECK12R000936	EC12R0000935	  H-NS repressor   McbR activator 	ECK12
+ECK12R000938	EC12R0000937	  DicA repressor 	ECK12
+ECK12R000940	EC12R0000939	  NorR repressor   NsrR repressor 	ECK12
+ECK12R000942	EC12R0000941	  BasR activator   CpxR activator   PdhR repressor 	ECK12
+ECK12R000944	EC12R0000943	  CpxR activator   CysB activator 	ECK12
+ECK12R000945	EC12R0000363	  CysB repressor 	ECK12
+ECK12R000947	EC12R0000946	  IHF activator   RcsAB activator 	ECK12
+ECK12R000949	EC12R0000948	  Fur repressor   H-NS repressor 	ECK12
+ECK12R000951	EC12R0000950	  H-NS repressor   SlyA activator 	ECK12
+ECK12R000953	EC12R0000952	  RelB repressor   RelB-RelE repressor 	ECK12
+ECK12R000955	EC12R0000954	  PdeL activator 	ECK12
+ECK12R000957	EC12R0000956	  FNR activator   OxyR activator 	ECK12
+ECK12R000959	EC12R0000958	  Cra repressor   SgrR activator 	ECK12
+ECK12R000961	EC12R0000960	  SgrR repressor 	ECK12
+ECK12R000962	EC12R0000960	  SgrR activator 	ECK12
+ECK12R000964	EC12R0000963	  CpxR activator   RcsB activator 	ECK12
+ECK12R000966	EC12R0000965	  ArgR repressor   H-NS activator 	ECK12
+ECK12R000968	EC12R0000967	  GlrR activator   IHF activator 	ECK12
+ECK12R000970	EC12R0000969	  Fur repressor   RcnR repressor 	ECK12
+ECK12R000972	EC12R0000971	  RcnR repressor 	ECK12
+ECK12R000974	EC12R0000973	  NsrR repressor   PhoB activator 	ECK12
+ECK12R000976	EC12R0000975	  FliZ repressor   RstA repressor 	ECK12
+ECK12R000978	EC12R0000977	  Fis repressor   NarL activator   NarP activator   NsrR repressor 	ECK12
+ECK12R000980	EC12R0000979	  PgrR repressor 	ECK12
+ECK12R000982	EC12R0000981	  HypT activator 	ECK12
+ECK12R000984	EC12R0000983	  RutR repressor 	ECK12
+ECK12R000986	EC12R0000985	  EvgA activator   PhoP repressor   RcsB activator   YdeO repressor 	ECK12
+ECK12R000988	EC12R0000987	  EvgA activator   H-NS repressor   NagC repressor   NarL activator   NarP repressor   PhoP repressor   RcsB activator   UvrY activator 	ECK12
+ECK12R000990	EC12R0000989	  ArcA activator   FNR activator   PhoP activator 	ECK12
+ECK12R000992	EC12R0000991	  ArcA repressor   CRP repressor   PuuR repressor 	ECK12
+ECK12R000994	EC12R0000993	  MarA activator 	ECK12
+ECK12R000996	EC12R0000995	  CRP activator   LexA repressor 	ECK12
+ECK12R000998	EC12R0000997	  CreB activator 	ECK12
+ECK12R001000	EC12R0000999	  MraZ repressor 	ECK12
+ECK12R001002	EC12R0001001	  H-NS repressor   LeuO activator 	ECK12
+ECK12R001004	EC12R0001003	  H-NS repressor   LeuO activator   LrhA activator   SlyA activator 	ECK12
+ECK12R001006	EC12R0001005	  DinJ-YafQ repressor 	ECK12
+ECK12R001008	EC12R0001007	  ArcA repressor   DpiA activator 	ECK12
+ECK12R001009	EC12R0000459	  FNR activator   NarL repressor   NarP repressor 	ECK12
+ECK12R001010	EC12R0000923	  OmpR repressor 	ECK12
+ECK12R001012	EC12R0001011	  NemR repressor   RutR repressor 	ECK12
+ECK12R001014	EC12R0001013	  CRP activator   CpxR repressor 	ECK12
+ECK12R001016	EC12R0001015	  Fis activator   H-NS repressor   Lrp repressor   StpA repressor 	ECK12
+ECK12R001017	EC12R0001015	  Fis repressor   H-NS repressor   Lrp repressor   StpA repressor 	ECK12
+ECK12R001019	EC12R0001018	  LexA repressor   NagC repressor 	ECK12
+ECK12R001021	EC12R0001020	 MurR dual 	ECK12
+ECK12R001023	EC12R0001022	  CRP activator   MurR repressor 	ECK12
+ECK12R001025	EC12R0001024	  GadW repressor   GadX repressor   H-NS repressor   PhoP activator   SdiA activator 	ECK12
+ECK12R001027	EC12R0001026	  UvrY activator 	ECK12
+ECK12R001029	EC12R0001028	  YefM repressor   YefM-YoeB repressor 	ECK12
+ECK12R001031	EC12R0001030	  ArcA activator   GadX activator   YdeO activator 	ECK12
+ECK12R001033	EC12R0001032	  DinJ-YafQ repressor   LexA repressor 	ECK12
+ECK12R001035	EC12R0001034	  ArcA repressor   FNR repressor   PuuR repressor 	ECK12
+ECK12R001036	EC12R0000598	  DnaA repressor 	ECK12
+ECK12R001038	EC12R0001037	  Fis repressor   NarL activator 	ECK12
+ECK12R001040	EC12R0001039	  PepA repressor 	ECK12
+ECK12R001042	EC12R0001041	  MqsA repressor 	ECK12
+ECK12R001044	EC12R0001043	  ArcA activator   CysB activator   FNR activator 	ECK12
+ECK12R001046	EC12R0001045	  DpiA activator 	ECK12
+ECK12R001048	EC12R0001047	  CRP repressor   DpiA activator   FNR repressor   NarL repressor 	ECK12
+ECK12R001050	EC12R0001049	  ArcA activator   CRP repressor   DpiA activator   FNR repressor   NarL repressor 	ECK12
+ECK12R001052	EC12R0001051	  DcuR activator   NarL repressor 	ECK12
+ECK12R001054	EC12R0001053	  MatA repressor 	ECK12
+ECK12R001055	EC12R0000948	  Fur activator   H-NS repressor 	ECK12
+ECK12R001056	EC12R0000483	  LeuO repressor 	ECK12
+ECK12R001058	EC12R0001057	  TtdR activator 	ECK12
+ECK12R001060	EC12R0001059	  BluR repressor 	ECK12
+ECK12R001062	EC12R0001061	  CRP repressor   H-NS repressor   LeuO activator   SlyA activator 	ECK12
+ECK12R001064	EC12R0001063	  YqhC activator 	ECK12
+ECK12R001066	EC12R0001065	  ArcA repressor   CRP activator   FadR repressor   HipB repressor 	ECK12
+ECK12R001068	EC12R0001067	  MlrA activator 	ECK12
+ECK12R001070	EC12R0001069	  FliZ repressor 	ECK12
+ECK12R001072	EC12R0001071	  Fur repressor   YqjI repressor 	ECK12
+ECK12R001074	EC12R0001073	  CRP activator   ExuR repressor 	ECK12
+ECK12R001076	EC12R0001075	  GadE-RcsB activator   H-NS repressor 	ECK12
+ECK12R001077	EC12R0000915	  AscG repressor  CRP dual 	ECK12
+ECK12R001079	EC12R0001078	  CRP repressor   ComR repressor 	ECK12
+ECK12R001081	EC12R0001080	  BasR activator 	ECK12
+ECK12R001083	EC12R0001082	  RcdA repressor 	ECK12
+ECK12R001084	EC12R0001053	  MatA activator 	ECK12
+ECK12R001086	EC12R0001085	  RclR activator 	ECK12
+ECK12R001087	EC12R0000612	  FadR repressor 	ECK12
+ECK12R001089	EC12R0001088	  McbR repressor 	ECK12
+ECK12R001091	EC12R0001090	  AraC repressor   NagC repressor 	ECK12
+ECK12R001092	EC12R0001082	  RcdA activator 	ECK12
+ECK12R001094	EC12R0001093	  RbsR activator 	ECK12
+ECK12R001096	EC12R0001095	  GadE-RcsB activator   PhoB activator 	ECK12
+ECK12R001098	EC12R0001097	  NanR repressor 	ECK12
+ECK12R001100	EC12R0001099	  Fur activator   MntR activator 	ECK12
+ECK12R001102	EC12R0001101	  MntR repressor 	ECK12
+ECK12R001104	EC12R0001103	  HigA repressor   HigB-HigA repressor 	ECK12
+ECK12R001106	EC12R0001105	  H-NS repressor  LeuO dual   RcsB-BglJ activator   StpA repressor 	ECK12
+ECK12R001108	EC12R0001107	  BtsR activator   CRP activator 	ECK12
+ECK12R001110	EC12R0001109	  YpdB activator 	ECK12
+ECK12R001112	EC12R0001111	  QseB activator 	ECK12
+ECK12R001114	EC12R0001113	  CRP activator   Nac activator   NsrR repressor   PhoB repressor   QseB repressor 	ECK12
+ECK12R001116	EC12R0001115	  CRP activator   FeaR activator   NsrR repressor 	ECK12
+ECK12R001118	EC12R0001117	  FeaR activator 	ECK12
+ECK12R001120	EC12R0001119	  RcsB-BglJ activator 	ECK12
+ECK12R001122	EC12R0001121	  CRP activator   RcsB-BglJ activator 	ECK12
+ECK12R001123	EC12R0000596	 SutR dual 	ECK12
+ECK12R001125	EC12R0001124	  NimR repressor 	ECK12
+ECK12R001127	EC12R0001126	  YjjQ repressor 	ECK12
+ECK12R001128	EC12R0000259	  CRP repressor   ExuR repressor   UxuR repressor 	ECK12
+ECK12R001130	EC12R0001129	  CecR repressor 	ECK12
+ECK12R001132	EC12R0001131	  CRP activator   GlrR activator   NtrC activator   RcsB activator 	ECK12

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="452" width="452">
+<script type="text/ecmascript">
+      <![CDATA[
+        var shown = 1;
+        function click() {
+             var seq = document.getElementById("seq");
+             if (shown==1) {
+               seq.setAttribute("style", "visibility: hidden");
+               shown = 0;
+             } else {
+               seq.setAttribute("style", "visibility: visible");
+               shown = 1;
+             }
+         }
+        ]]>
+</script>
+  <rect style="stroke: white; fill: white" height="452" x="0" y="0" width="452" onclick="click(evt)" />
+  <g transform="scale(3.800990,3.800990) translate(-66.378090,-20.298450)">
+    <polyline style="stroke: black; fill: none; stroke-width: 1.5" id="outline" points="
+      106.323,34.025
+      91.560,34.646
+      79.469,43.140
+      73.878,56.818
+      76.558,71.350
+      86.661,82.134
+      100.986,85.755
+      115.000,81.068
+      126.727,90.421
+      138.455,99.773
+      139.975,115.504
+      152.227,125.488
+      167.941,123.801
+      177.794,111.445
+      175.942,95.750
+      163.482,86.027
+      147.807,88.045
+      136.080,78.693
+      124.352,69.341
+      125.804,54.636
+    " />
+    <g style="stroke: black; stroke-width: 1; fill: none;" id="pairs">
+      <line id="8,19" x1="115.00002" y1="81.06826" x2="124.35236" y2="69.34079" />
+      <line id="9,18" x1="126.72749" y1="90.42061" x2="136.07983" y2="78.69314" />
+      <line id="10,17" x1="138.45496" y1="99.77296" x2="147.80731" y2="88.04549" />
+    </g>
+    <g style="font-family: SansSerif" transform="translate(-4.6, 4)" id="seq">
+      <text x="106.323" y="34.025">G</text>
+      <text x="91.560" y="34.646">G</text>
+      <text x="79.469" y="43.140">A</text>
+      <text x="73.878" y="56.818">T</text>
+      <text x="76.558" y="71.350">C</text>
+      <text x="86.661" y="82.134">T</text>
+      <text x="100.986" y="85.755">G</text>
+      <text x="115.000" y="81.068">G</text>
+      <text x="126.727" y="90.421">C</text>
+      <text x="138.455" y="99.773">G</text>
+      <text x="139.975" y="115.504">A</text>
+      <text x="152.227" y="125.488">A</text>
+      <text x="167.941" y="123.801">A</text>
+      <text x="177.794" y="111.445">G</text>
+      <text x="175.942" y="95.750">A</text>
+      <text x="163.482" y="86.027">G</text>
+      <text x="147.807" y="88.045">T</text>
+      <text x="136.080" y="78.693">G</text>
+      <text x="124.352" y="69.341">C</text>
+      <text x="125.804" y="54.636">G</text>
+    </g>
+  </g>
+</svg>

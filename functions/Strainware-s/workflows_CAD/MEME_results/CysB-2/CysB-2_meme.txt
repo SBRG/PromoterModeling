@@ -1,0 +1,327 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.1.1 (Release date: Wed Jan 29 15:00:42 2020 -0800)
+
+For further information on how to interpret please access http://meme-suite.org/.
+To get a copy of the MEME software please access http://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to discover
+motifs in biopolymers", Proceedings of the Second International
+Conference on Intelligent Systems for Molecular Biology, pp. 28-36,
+AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= CysB-2.fasta
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+iraD_TU_0                1.0000    180  iraD_TU_1                1.0000    180  
+dcyD_TU_0                1.0000    180  gsiB_TU_0                1.0000    180  
+nlpA_TU_0                1.0000    180  gsiA_TU_0                1.0000    180  
+iaaA_TU_0                1.0000    180  cysM_TU_0                1.0000    180  
+cbl_TU_0                 1.0000    180  cysK_TU_0                1.0000    180  
+cysK_TU_1                1.0000    180  yciW_TU_0                1.0000    180  
+yeeD_TU_0                1.0000    180  yeeE_TU_0                1.0000    180  
+cysH_TU_0                1.0000    180  cysC_TU_0                1.0000    180  
+cysA_TU_0                1.0000    180  cysN_TU_0                1.0000    180  
+cysI_TU_0                1.0000    180  cysW_TU_0                1.0000    180  
+cysJ_TU_0                1.0000    180  cysU_TU_0                1.0000    180  
+cysP_TU_0                1.0000    180  cysD_TU_0                1.0000    180  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme CysB-2.fasta -dna -oc . -nostatus -time 18000 -mod oops -nmotifs 1 -minw 6 -maxw 30 -objfun classic -markov_order 0 
+
+model:  mod=          oops    nmotifs=         1    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+strands: +
+width:  minw=            6    maxw=           30
+nsites: minsites=       24    maxsites=       24    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=            4320    N=              24
+sample: seed=            0    hsfrac=          0
+        searchsize=   4320    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.276 C 0.209 G 0.174 T 0.341 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.276 C 0.209 G 0.174 T 0.34 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF TTATTCCNTTWTSDAATTASWHATYVHYA MEME-1	width =  29  sites =  24  llr = 340  E-value = 8.4e-037
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif TTATTCCNTTWTSDAATTASWHATYVHYA MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  218:::233242:3861:6:439::432a
+pos.-specific     C  :::11863::2:3:122:35:3::4443:
+probability       G  :::2:1121::254::11:5::1:12:::
+matrix            T  8937811368462321691:53:a5:35:
+
+         bits    2.5                              
+                 2.3                              
+                 2.0                              
+                 1.8                              
+Relative         1.5                        *    *
+Entropy          1.3  *                 *  **    *
+(20.4 bits)      1.0  **  *           * *  **    *
+                 0.8 *** **   *  * *  ***  **    *
+                 0.5 ******* ** ** ** **** ***** *
+                 0.3 ******* *********************
+                 0.0 -----------------------------
+
+Multilevel           TTATTCCCTTATGGAATTAGTAATTACTA
+consensus            A TG   AAATGCT CC CCAC  CCAC 
+sequence                    T    TA       T   GTA 
+                                                  
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTATTCCNTTWTSDAATTASWHATYVHYA MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                        Site           
+-------------             ----- ---------            -----------------------------
+cysP_TU_0                    66  6.64e-11 AACCAAGTTC TTATTCCCTTTTCAACTTCCAAATCACCA AACGGTATAT
+cysU_TU_0                    66  6.64e-11 AACCAAGTTC TTATTCCCTTTTCAACTTCCAAATCACCA AACGGTATAT
+cysW_TU_0                    66  6.64e-11 AACCAAGTTC TTATTCCCTTTTCAACTTCCAAATCACCA AACGGTATAT
+cysA_TU_0                    66  6.64e-11 AACCAAGTTC TTATTCCCTTTTCAACTTCCAAATCACCA AACGGTATAT
+cysM_TU_0                    66  6.64e-11 AACCAAGTTC TTATTCCCTTTTCAACTTCCAAATCACCA AACGGTATAT
+cysD_TU_0                    77  1.29e-10 TGCCAAATCG TTATTCCGTTAAGGAACTACTCATTCTAA TTGGTAATTT
+cysN_TU_0                    77  1.29e-10 TGCCAAATCG TTATTCCGTTAAGGAACTACTCATTCTAA TTGGTAATTT
+cysC_TU_0                    77  1.29e-10 TGCCAAATCG TTATTCCGTTAAGGAACTACTCATTCTAA TTGGTAATTT
+cysJ_TU_0                    80  4.84e-09 CTAAAACAGG TTAGTCGATTTGGTTATTAGTTATCGCTA TCCCGTCTTT
+cysI_TU_0                    80  4.84e-09 CTAAAACAGG TTAGTCGATTTGGTTATTAGTTATCGCTA TCCCGTCTTT
+cysH_TU_0                    80  4.84e-09 CTAAAACAGG TTAGTCGATTTGGTTATTAGTTATCGCTA TCCCGTCTTT
+iaaA_TU_0                    98  5.80e-08 CCATCTTTCT ATATTCAAAAATTGAATGAGTAATTCATA AAAATTCTGA
+gsiA_TU_0                    98  5.80e-08 CCATCTTTCT ATATTCAAAAATTGAATGAGTAATTCATA AAAATTCTGA
+gsiB_TU_0                    98  5.80e-08 CCATCTTTCT ATATTCAAAAATTGAATGAGTAATTCATA AAAATTCTGA
+iraD_TU_1                    99  5.94e-07 AAAGCATATC TTATTACTAATTGGAATTTGATGTTGCTA TATTGAGGTC
+cysK_TU_1                   111  1.42e-06 TGCATGTCAT TATTTCCCTTCTGTATATAGATATGCTAA ATCCTTACTT
+cysK_TU_0                    78  1.42e-06 TGCATGTCAT TATTTCCCTTCTGTATATAGATATGCTAA ATCCTTACTT
+yeeE_TU_0                    55  1.86e-06 CGGTTTTTTT ATTCTTTTGTATCGAACTCCTCATTAATA ACCATTTGTT
+yeeD_TU_0                    55  1.86e-06 CGGTTTTTTT ATTCTTTTGTATCGAACTCCTCATTAATA ACCATTTGTT
+yciW_TU_0                    81  1.86e-06 GTTATCTCTG TTATACCTTTCTGATATTTGTTATCGCCG ATCCGTCTTT
+iraD_TU_0                    95  4.23e-06 ATCATGACTT TTTTCCTGAAAAGTCAGTAGATATTCATA GGCAAGTAAG
+cbl_TU_0                    116  2.45e-05 GTTTTTATTA TTTGTTATGCCGGGCATTAGACTTTAACA ATAACGGGAA
+nlpA_TU_0                   133  4.61e-05 CGCAGCGACC TTACCGCTATAGTCAGGTAATCATTAATA AAAGGATAAA
+dcyD_TU_0                   105  5.59e-05 GGCGCTTTCA CTAGCGCCTTTTTTATTTACGCGTTTTCA GCGTGCATAA
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTATTCCNTTWTSDAATTASWHATYVHYA MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+cysP_TU_0                         6.6e-11  65_[+1]_86
+cysU_TU_0                         6.6e-11  65_[+1]_86
+cysW_TU_0                         6.6e-11  65_[+1]_86
+cysA_TU_0                         6.6e-11  65_[+1]_86
+cysM_TU_0                         6.6e-11  65_[+1]_86
+cysD_TU_0                         1.3e-10  76_[+1]_75
+cysN_TU_0                         1.3e-10  76_[+1]_75
+cysC_TU_0                         1.3e-10  76_[+1]_75
+cysJ_TU_0                         4.8e-09  79_[+1]_72
+cysI_TU_0                         4.8e-09  79_[+1]_72
+cysH_TU_0                         4.8e-09  79_[+1]_72
+iaaA_TU_0                         5.8e-08  97_[+1]_54
+gsiA_TU_0                         5.8e-08  97_[+1]_54
+gsiB_TU_0                         5.8e-08  97_[+1]_54
+iraD_TU_1                         5.9e-07  98_[+1]_53
+cysK_TU_1                         1.4e-06  110_[+1]_41
+cysK_TU_0                         1.4e-06  77_[+1]_74
+yeeE_TU_0                         1.9e-06  54_[+1]_97
+yeeD_TU_0                         1.9e-06  54_[+1]_97
+yciW_TU_0                         1.9e-06  80_[+1]_71
+iraD_TU_0                         4.2e-06  94_[+1]_57
+cbl_TU_0                          2.5e-05  115_[+1]_36
+nlpA_TU_0                         4.6e-05  132_[+1]_19
+dcyD_TU_0                         5.6e-05  104_[+1]_47
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTATTCCNTTWTSDAATTASWHATYVHYA MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF TTATTCCNTTWTSDAATTASWHATYVHYA width=29 seqs=24
+cysP_TU_0                (   66) TTATTCCCTTTTCAACTTCCAAATCACCA  1 
+cysU_TU_0                (   66) TTATTCCCTTTTCAACTTCCAAATCACCA  1 
+cysW_TU_0                (   66) TTATTCCCTTTTCAACTTCCAAATCACCA  1 
+cysA_TU_0                (   66) TTATTCCCTTTTCAACTTCCAAATCACCA  1 
+cysM_TU_0                (   66) TTATTCCCTTTTCAACTTCCAAATCACCA  1 
+cysD_TU_0                (   77) TTATTCCGTTAAGGAACTACTCATTCTAA  1 
+cysN_TU_0                (   77) TTATTCCGTTAAGGAACTACTCATTCTAA  1 
+cysC_TU_0                (   77) TTATTCCGTTAAGGAACTACTCATTCTAA  1 
+cysJ_TU_0                (   80) TTAGTCGATTTGGTTATTAGTTATCGCTA  1 
+cysI_TU_0                (   80) TTAGTCGATTTGGTTATTAGTTATCGCTA  1 
+cysH_TU_0                (   80) TTAGTCGATTTGGTTATTAGTTATCGCTA  1 
+iaaA_TU_0                (   98) ATATTCAAAAATTGAATGAGTAATTCATA  1 
+gsiA_TU_0                (   98) ATATTCAAAAATTGAATGAGTAATTCATA  1 
+gsiB_TU_0                (   98) ATATTCAAAAATTGAATGAGTAATTCATA  1 
+iraD_TU_1                (   99) TTATTACTAATTGGAATTTGATGTTGCTA  1 
+cysK_TU_1                (  111) TATTTCCCTTCTGTATATAGATATGCTAA  1 
+cysK_TU_0                (   78) TATTTCCCTTCTGTATATAGATATGCTAA  1 
+yeeE_TU_0                (   55) ATTCTTTTGTATCGAACTCCTCATTAATA  1 
+yeeD_TU_0                (   55) ATTCTTTTGTATCGAACTCCTCATTAATA  1 
+yciW_TU_0                (   81) TTATACCTTTCTGATATTTGTTATCGCCG  1 
+iraD_TU_0                (   95) TTTTCCTGAAAAGTCAGTAGATATTCATA  1 
+cbl_TU_0                 (  116) TTTGTTATGCCGGGCATTAGACTTTAACA  1 
+nlpA_TU_0                (  133) TTACCGCTATAGTCAGGTAATCATTAATA  1 
+dcyD_TU_0                (  105) CTAGCGCCTTTTTTATTTACGCGTTTTCA  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTATTCCNTTWTSDAATTASWHATYVHYA MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 29 n= 3648 bayes= 7.2384 E= 8.4e-037 
+   -41   -233  -1123    114 
+  -173  -1123  -1123    143 
+   144  -1123  -1123    -45 
+ -1123    -74     26     97 
+  -273    -74  -1123    129 
+  -273    184   -106   -144 
+   -73    148    -48   -144 
+   -14     67     -6    -45 
+   -14  -1123    -48     88 
+   -41   -233  -1123    114 
+    59    -33  -1123     29 
+   -73  -1123     26     88 
+ -1123     48    152    -71 
+   -14   -233    126    -22 
+   144   -133  -1123   -103 
+   118     -1   -206   -144 
+  -173     -1   -106     88 
+ -1123  -1123    -48    136 
+   118     48  -1123   -203 
+  -273    113    152  -1123 
+    59  -1123   -206     67 
+    27     67  -1123     -3 
+   166  -1123   -106   -303 
+ -1123  -1123  -1123    155 
+ -1123     84   -106     67 
+    44     84     26   -303 
+    27     99  -1123    -45 
+   -41     67  -1123     43 
+   179  -1123   -206  -1123 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTATTCCNTTWTSDAATTASWHATYVHYA MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 29 nsites= 24 E= 8.4e-037 
+ 0.208333  0.041667  0.000000  0.750000 
+ 0.083333  0.000000  0.000000  0.916667 
+ 0.750000  0.000000  0.000000  0.250000 
+ 0.000000  0.125000  0.208333  0.666667 
+ 0.041667  0.125000  0.000000  0.833333 
+ 0.041667  0.750000  0.083333  0.125000 
+ 0.166667  0.583333  0.125000  0.125000 
+ 0.250000  0.333333  0.166667  0.250000 
+ 0.250000  0.000000  0.125000  0.625000 
+ 0.208333  0.041667  0.000000  0.750000 
+ 0.416667  0.166667  0.000000  0.416667 
+ 0.166667  0.000000  0.208333  0.625000 
+ 0.000000  0.291667  0.500000  0.208333 
+ 0.250000  0.041667  0.416667  0.291667 
+ 0.750000  0.083333  0.000000  0.166667 
+ 0.625000  0.208333  0.041667  0.125000 
+ 0.083333  0.208333  0.083333  0.625000 
+ 0.000000  0.000000  0.125000  0.875000 
+ 0.625000  0.291667  0.000000  0.083333 
+ 0.041667  0.458333  0.500000  0.000000 
+ 0.416667  0.000000  0.041667  0.541667 
+ 0.333333  0.333333  0.000000  0.333333 
+ 0.875000  0.000000  0.083333  0.041667 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.375000  0.083333  0.541667 
+ 0.375000  0.375000  0.208333  0.041667 
+ 0.333333  0.416667  0.000000  0.250000 
+ 0.208333  0.333333  0.000000  0.458333 
+ 0.958333  0.000000  0.041667  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTATTCCNTTWTSDAATTASWHATYVHYA MEME-1 regular expression
+--------------------------------------------------------------------------------
+[TA]T[AT][TG]TCC[CAT][TA][TA][AT][TG][GCT][GTA]A[AC][TC]T[AC][GC][TA][ACT]AT[TC][ACG][CAT][TCA]A
+--------------------------------------------------------------------------------
+
+
+
+
+Time  0.92 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+iraD_TU_0                        6.42e-04  94_[+1(4.23e-06)]_57
+iraD_TU_1                        9.02e-05  98_[+1(5.94e-07)]_53
+dcyD_TU_0                        8.47e-03  104_[+1(5.59e-05)]_47
+gsiB_TU_0                        8.82e-06  97_[+1(5.80e-08)]_54
+nlpA_TU_0                        6.98e-03  132_[+1(4.61e-05)]_19
+gsiA_TU_0                        8.82e-06  97_[+1(5.80e-08)]_54
+iaaA_TU_0                        8.82e-06  97_[+1(5.80e-08)]_54
+cysM_TU_0                        1.01e-08  65_[+1(6.64e-11)]_86
+cbl_TU_0                         3.72e-03  115_[+1(2.45e-05)]_36
+cysK_TU_0                        2.16e-04  77_[+1(1.42e-06)]_74
+cysK_TU_1                        2.16e-04  110_[+1(1.42e-06)]_41
+yciW_TU_0                        2.83e-04  80_[+1(1.86e-06)]_71
+yeeD_TU_0                        2.83e-04  54_[+1(1.86e-06)]_97
+yeeE_TU_0                        2.83e-04  54_[+1(1.86e-06)]_97
+cysH_TU_0                        7.35e-07  79_[+1(4.84e-09)]_72
+cysC_TU_0                        1.96e-08  76_[+1(1.29e-10)]_75
+cysA_TU_0                        1.01e-08  65_[+1(6.64e-11)]_86
+cysN_TU_0                        1.96e-08  76_[+1(1.29e-10)]_75
+cysI_TU_0                        7.35e-07  79_[+1(4.84e-09)]_72
+cysW_TU_0                        1.01e-08  65_[+1(6.64e-11)]_86
+cysJ_TU_0                        7.35e-07  79_[+1(4.84e-09)]_72
+cysU_TU_0                        1.01e-08  65_[+1(6.64e-11)]_86
+cysP_TU_0                        1.01e-08  65_[+1(6.64e-11)]_86
+cysD_TU_0                        1.96e-08  76_[+1(1.29e-10)]_75
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (1) found.
+********************************************************************************
+
+CPU: ip-172-31-13-16
+
+********************************************************************************

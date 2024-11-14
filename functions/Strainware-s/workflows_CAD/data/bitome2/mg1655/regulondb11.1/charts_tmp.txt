@@ -1,0 +1,75 @@
+# # Copies and Copyright-Notice
+#
+#      RegulonDB is free for academic/noncommercial use
+#
+#      User is not entitled to change or erase data sets of the RegulonDB
+#      database or to eliminate copyright notices from RegulonDB. Furthermore,
+#      User is not entitled to expand RegulonDB or to integrate RegulonDB partly
+#      or as a whole into other databank systems, without prior written consent
+#      from CCG-UNAM.
+#
+#      Please check the license at http://regulondb.ccg.unam.mx/menu/download/full_version/terms_and_conditions.jsp
+#
+# Citation
+#
+#      Tierrafría, V. H. et al. (2022). RegulonDB 11.0: Comprehensive high-throughput datasets on transcriptional regulation in Escherichia coli K-12,
+#      Microb Genom. 2022 May;8(5). doi: 10.1099/mgen.0.000833. PMID: 35584008. https://doi.org/10.1099/mgen.0.000833
+#
+#
+# Contact
+#
+#      Person: RegulonDB Team
+#      Web Page: http://regulondb.ccg.unam.mx/menu/about_regulondb/contact_us/index.jsp
+#          (regulondb@ccg.unam.mx)
+#
+#
+ # RegulonDB: 11.1 Date: 12/12/2022
+# Created: 12/12/2022 11:48:35
+# Table: CHARTS_TMP
+# Columns:
+# 1) CHART_NAME
+# 2) CHART_TYPE
+# 3) CHART_TITLE
+# 4) TITLE_X
+# 5) TITLE_Y
+# 6) OBJECT_NAME
+# 7) NUMBER_OPTION
+# 8) QUERY_NUMBER
+# 9) CHART_ID
+activator_site_distribution_X.jpg	bar_chart	Activation DNA Binding Sites Distribution	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	0	0	1
+activator_site_distribution_sigma19_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma19 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	2	2	50
+activator_site_distribution_sigma2470_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma24,Sigma70 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	9	9	57
+activator_site_distribution_sigma24_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma24 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	3	3	51
+activator_site_distribution_sigma28_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma28 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	4	4	52
+activator_site_distribution_sigma32_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma32 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	5	5	53
+activator_site_distribution_sigma38_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma38 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	6	6	54
+activator_site_distribution_sigma54_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma54 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	7	7	55
+activator_site_distribution_sigma7032_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma32,Sigma70 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	10	10	58
+activator_site_distribution_sigma7038_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma38,Sigma70 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	11	11	59
+activator_site_distribution_sigma70_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma70 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	8	8	56
+activator_site_distribution_sigma70__tf_unique_X.jpg	bar_chart	Activation DNA Binding Sites Distribution In Sigma70 Promoters With TF's Unique	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	22	22	70
+gene_number_by_sigma_factor_X.jpg	bar_chart	Number of Genes Regulated by Sigma Factor(s) (Sigmulons)	Sigma Factor Name	Number of Genes 	sigma_factor	0	0	3
+gene_number_related_operon_X.jpg	bar_chart	Number of Genes per Operon	Number of Genes	Number of Operons	operon	1	1	11
+number_of_complex_regulon_X.jpg	bar_chart	Number of Transcription Factors per Regulons (simple and complex)	Number of Transcription Factors	Number of Regulons	regulon	0	0	9
+promoter_number_by_sigma_factor_X.jpg	bar_chart	Number of Promoters Associated to Sigma Factor(s)	Sigma Factor Name	Number of Promoters	sigma_factor	2	2	17
+promoter_number_related_operon_X.jpg	bar_chart	Number of Promoters per Operon	Number of Promoters 	Number of Operons	operon	4	4	14
+protein_number_by_sigma_factor_X.jpg	bar_chart	Number of Transcription Factors Associated to Sigma Factor(s)	Sigma Factor Name	Number of Transcription Factors	sigma_factor	1	1	4
+repressor_site_distribution_X.jpg	bar_chart	Repression DNA Binding Sites Distribution	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	1	1	2
+repressor_site_distribution_sigma19_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma19 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	12	12	60
+repressor_site_distribution_sigma24_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma24 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	13	13	67
+repressor_site_distribution_sigma28_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma28 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	14	14	62
+repressor_site_distribution_sigma32_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma32 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	15	15	63
+repressor_site_distribution_sigma38_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma38 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	16	16	64
+repressor_site_distribution_sigma54_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma54 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	17	17	65
+repressor_site_distribution_sigma7024_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma24,Sigma70 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	19	19	72
+repressor_site_distribution_sigma7032_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma32,Sigma70 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	20	20	68
+repressor_site_distribution_sigma7038_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma38,Sigma70 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	21	21	69
+repressor_site_distribution_sigma70_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma70 Promoters	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	18	18	66
+repressor_site_distribution_sigma70__tf_unique_X.jpg	bar_chart	Repression DNA Binding Sites Distribution In Sigma70 Promoters With TF's Unique	Relative Position of DNA Binding Sites (with respect to TSS)	Number of DNA Binding Sites	site_distribution	23	23	71
+sigma_factor_number_related_operon_X.jpg	bar_chart	Number of Sigma Factor Transcribing Operon	Number of Sigma Factors	Number of Operons	operon	2	2	12
+site_number_by_tf_X.jpg	bar_chart	Number of DNA Binding Sites per Transcription Factor	Number of DNA Binding Sites	Number of Transcription Factor (s)	tf	0	0	5
+site_number_related_operon_X.jpg	bar_chart	Number of DNA Binding Sites of Transcription Factors per Operon	Number of DNA Binding Sites	Number of Operons	operon	3	3	13
+site_size_by_tf_X.jpg	bar_chart	Length of DNA Binding Sites per Transcription Factor	Length of DNA Binding Sites	Number of Transcription Factor (s)	tf	1	1	6
+terminator_number_related_operon_X.jpg	bar_chart	Number of Terminator per Operon	Number of Terminators	Number of Operons	operon	6	6	16
+tf_number_related_operon_X.jpg	bar_chart	Number of Transcription Factor Regulating Operons	Number of Transcription Factors	Number of Operons	operon	5	5	15
+tu_number_related_operon_X.jpg	bar_chart	Number of Transcription Units  per Operon	Number of Transcription Units	Number of Operons	operon	0	0	10

@@ -1,0 +1,116 @@
+,name,start_site,reverse or forward,offset,all features listed in regulonDB,Features expected to appear in the mutagenized region.,notes,Reason for choosing TSS
+0,fdoH,4085867.0,rev,0.0,small_RNA_SdhX,,,TSS cluster as identified from RACE experiments. See Salgado H et al Nucleic Acids Research (2012).
+1,sdaB,2928035.0,fwd,0.0,,,,Computationally predicted start site. See Huerta AM et al. J. Mol. Biol. (2003).
+2,thiM,2185451.0,rev,0.0,thiamine_diphosphate,,not in region.,Experimentally determined start site as found in the EcoCyc database. See Mendoza-Vargas et al. PLoS One (2009).
+3,yedJ,2033449.0,rev,0.0,,,,RACE start site from RegulonDB. This is the strongest evidence site for this gene. See Salgado H et al Nucleic Acids Research (2012).
+4,ykgE,321511.0,fwd,0.0,,,,Computationally predicted start site for sigma-70. See Huerta AM et al. J. Mol. Biol. (2003).
+5,sdiA,1996867.0,rev,-10.0,Nac CsrA CsrA,,need to check,"Experimentally determined start site, p3, is in the middle of regulatory region, as determined by the EcoCyc database. See Yakhnin H et al. J. Bacteriol. (2011)."
+6,yqhC,3155262.0,rev,1.0,GlaR,,no location.,"The start site for this gene was set as 44 base pairs upstream of the gene start, since the intergenic region is small."
+7,yicI,3836664.0,rev,0.0,,,,Experimentally determined TSS for sigma-24. See Rhodius VA et al. PLoS Biol. (2005).
+8,ybjT,909320.0,rev,0.0,,,part of operon with poxB.,Experimentally determined start site. See Mendoza-Vargas et al. PLoS One (2009).
+9,mtgA,3350504.0,rev,-7.0,ArcA,No known start site.,,Offset of 7 bp from RACE TSS on RegulonDB. The offset will move it further upstream from gene start. See Salgado H et al Nucleic Acids Research (2012).
+10,aphA,4269355.0,fwd,0.0,,,no known start site.,RACE TSS from RegulonDB. See Salgado H et al Nucleic Acids Research (2012).
+11,bdcR,4474096.0,fwd,0.0,GlaR NsrR,,GlaR outside region NsrR not known to regulate but is in region.,Computationally predicted start site from RegulonDB. See Huerta AM et al. J. Mol. Biol. (2003).
+12,yncD,1523276.0,rev,0.0,,,,Computationally predicted start site based on the EcoCyc database. See Huerta AM et al. J. Mol. Biol. (2003).
+13,rumB,897947.0,fwd,0.0,,,,Computationally predicted start site based on the EcoCyc database. See Huerta AM et al. J. Mol. Biol. (2003).
+14,yagH,285350.0,fwd,0.0,,,,Nearest computationally predicted sigma-70 start site to gene. See Huerta AM et al. J. Mol. Biol. (2003).
+15,eco,2303797.0,fwd,0.0,,,,Only compuationally predicted sigma-70 start site for this gene. See Huerta AM et al. J. Mol. Biol. (2003).
+16,yfhG,2690181.0,rev,0.0,,,,RACE site TSS. See Salgado H et al Nucleic Acids Research (2012).
+17,htrB,1116709.0,rev,0.0,,,,"Experimentally determined TSS. See Karow M & Georgopoulos C, Mol. Microbiol. (1991)."
+18,iap,2876547.0,fwd,3.0,,,cysB normally in region,RACE site TSS from RegulonDB. See Salgado H et al Nucleic Acids Research (2012).
+19,ygjP,3235915.0,fwd,0.0,,,,45 base pairs upstream of start of gene in small intergenic region.
+20,yedK,2009776.0,fwd,0.0,,,,45 base pairs upstream of start of gene in small intergenic region.
+21,holC,4484273.0,rev,0.0,,,,"Sigma-32 promoter with experimental evidence, as shown in EcoCyc database. This is the only promoter in the genomic area. See Nonaka G et al. Genes Dev. (2006)."
+22,aegA,2585570.0,rev,0.0,CRP,,unknown location weak evidence,45 base pairs upstream of start of gene in small intergenic region.
+23,rapA,63358.0,rev,0.0,,,,"Sigma-70 TSS with experimental evidence, as shown in the EcoCyc database. This is the closest start site to the gene. See Cabrera JE & Jin DJ, J. Bacteriol. (2001)."
+24,dusC,2230395.0,rev,0.0,,,,TSS with experimental evidence. It is the only site in the genomic area. See Raghavan R et al. J. Bacteriol. (2011).
+25,fdhE,4081359.0,rev,2.0,,,same regulon as fdoH,"Race TSS site near the computationally predicted start site, fdhEp1. See Salgado H et al Nucleic Acids Research (2012)."
+26,dnaE_start1,197026.0,fwd,0.0,,,,One of two experimentally determined start sites upstream of whole operon. See Dartigalongue C et al. J. Biol. Chem. (2001). 
+27,dnaE_start2,197821.0,fwd,,,,,One of two experimentally determined start sites upstream of whole operon. See Dartigalongue C et al. J. Biol. Chem. (2001). 
+28,ycgB,1237285.0,rev,0.0,,,Lrp in area,Experimentally determined TSS and it is the only start site in region. See Mendoza-Vargas et al. PLoS One (2009).
+29,yehS,2212241.0,rev,-15.0,,,,RACE TSS upstream of whole operon. Offset by 15 bp to be further upstream from gene start. See Salgado H et al Nucleic Acids Research (2012).
+30,yeiQ,2266214.0,fwd,0.0,,,,Experimentally determined start site next to gene start. See Salgado H et al Nucleic Acids Research (2012).
+31,ydhO,1734357.0,fwd,0.0,NsrR,,low evidence,Computationally predicted start site. It is the only site in the genomic area. See Huerta AM et al. J. Mol. Biol. (2003).
+32,hslU,4122354.0,rev,0.0,,,,"Sigma-32 site with experimental evidence, as shown in the EcoCyc database. This is the only reported start site in the genomic area. See Nonaka G et al. Genes Dev. (2006)."
+33,ymgG,1223097.0,rev,0.0,,,,RACE site from RegulonDB. Only start site in the genomic area. See Salgado H et al Nucleic Acids Research (2012).
+34,rlmA,1907086.0,rev,0.0,,,,Computationally predicted site. Only site in genomic area. See Huerta AM et al. J. Mol. Biol. (2003).
+35,modE,794644.0,rev,0.0,,,Rob_MarA_SoxS in area.,TSS set at gene start in small intergenic region. This will catch the whole intergenic region.
+36,ycbZ,1018330.0,rev,0.0,,,,RACE site (cluster) that will also catch the other RACE TSS in the mutated region. See Salgado H et al Nucleic Acids Research (2012).
+37,yajL,443748.0,rev,0.0,,,,Computationally predicted TSS that was designed to also include the RACE TSS in the mutated area. See Huerta AM et al. J. Mol. Biol. (2003).
+38,yecE,1950760.0,fwd,0.0,,,,Computationally predicted TSS that was designed to also catch the other computationally predicted site near the gene in the intergenic region. See Huerta AM et al. J. Mol. Biol. (2003).
+39,ybiP,852626.0,rev,0.0,,,,Only computationally predicted site in the genomic area. See Huerta AM et al. J. Mol. Biol. (2003).
+40,ybjL,889945.0,rev,-7.0,,,,Only RACE TSS in the genomic area. See Salgado H et al Nucleic Acids Research (2012).
+41,ygdH,2926272.0,fwd,-158.0,Nac,,location unknown,Only RACE TSS upstream of this gene. See Salgado H et al Nucleic Acids Research (2012).
+42,pcm,2870686.0,rev,0.0,,,,"Experimentally validated site, and the only site for the operon as seen in the EcoCyc database."
+43,rcsF,220022.0,rev,0.0,,,,Only RACE TSS upstream of the gene. See Salgado H et al Nucleic Acids Research (2012).
+44,sbcB,2082728.0,fwd,0.0,,,,Only experimentally determined site in the genomic area. See Phillips GJ et al. J. Biol. Chem. (1987).
+45,ygeR,2999918.0,rev,0.0,,,,Only RACE TSS upstream of the gene in this genomic area. See Salgado H et al Nucleic Acids Research (2012).
+46,mscK,486492.0,fwd,0.0,,,,Only experimentally validated TSS for this gene. See Mendoza-Vargas et al. PLoS One (2009).
+47,mscS,3069871.0,rev,0.0,,,,See Mendoza-Vargas et al. PLoS One (2009).
+48,ynaI,1395973.0,rev,0.0,,,,Only experimentally validated TSS for the gene in this genomic area. See Mendoza-Vargas et al. PLoS One (2009).
+49,ybdG,604684.0,rev,0.0,,,,Only RACE TSS upstream of gene. See Salgado H et al Nucleic Acids Research (2012).
+50,hicB,1509221.0,fwd,0.0,CRP HicB,,CRP low evidence HicB out of range,One of two experimentally validated start sites. This was designed to include known TF sites in the mutated region. See Jorgensen MG et al. J. Bacteriol. (2009).
+51,arcB,3353049.0,rev,0.0,,,,Only experimentally validated site in the genomic area.  See Aiso T & Ohki R. Genes Cells (2003).
+52,minC,1226139.0,rev,0.0,,,,Nearest RACE TSS to gene. It was designed to also include the other RACE site in the mutated region. See Salgado H et al Nucleic Acids Research (2012).
+53,ybeZ,693469.0,rev,0.0,,,,Only experimentally validated TSS for this gene (sigma-32). See Nonaka G et al. Genes Dev. (2006).
+54,ydjA,1848700.0,rev,0.0,,,,Only experimentally validated TSS for this gene. See Sawers G et al. J. Bacteriol. (1991).
+55,yggW,3096620.0,fwd,0.0,,,,Only experimentally validated TSS for this gene (Sigma 32). See Nonaka G et al. Genes Dev. (2006).
+56,acuI,3403446.0,fwd,0.0,,,,Only computationally predicted sigma-70 site for this gene. See Huerta AM et al. J. Mol. Biol. (2003).
+57,yehU,2214673.0,rev,0.0,,,,Only RACE TSS site for this gene. See Salgado H et al Nucleic Acids Research (2012).
+58,yehT,2212969.0,rev,0.0,,,part of operon with yehU,Only RACE TSS for this gene. See Salgado H et al Nucleic Acids Research (2012).
+59,ybiO,845736.0,rev,0.0,,,,Only RACE TSS for this gene. See Salgado H et al Nucleic Acids Research (2012).
+60,mscL,3438001.0,fwd,0.0,,,,"Only experimentally validated TSS for this gene. See Merino E & Yanofsky C, Trends Genet. (2005)."
+61,zapB,4118427.0,fwd,0.0,,,,This gene has many RACE TSS upstream of gene. We chose the one that is furthest upstream. See Salgado H et al Nucleic Acids Research (2012).
+62,WaaA-coaD,3808516.0,fwd,0.0,,,,One of two experimentally validated sites for this gene. This start site is nearest site to the gene. See Salgado H et al Nucleic Acids Research (2012).
+63,coaA,4175107.0,rev,0.0,,,,"Only experimentally validated TSS for this gene. Song WJ & Jackowski S, J. Bacteriol. (1992)."
+64,yjjJ,4621716.0,fwd,0.0,,,,One of two computationally predicted start sites. This one is closer to the start of gene. See Huerta AM et al. J. Mol. Biol. (2003).
+65,groSL,4370616.0,fwd,0.0,,,,Only experimentally validated site upstream of the whole operon. See Wang Y & deHaseth PL. J. Bacteriol. (2003).
+66,pyrLBI,4472553.0,rev,0.0,,,,One of two experimentally validated TSS. This start site is closer to the gene. See Donahue JP & Turnbough CL Jr. J. Biol. Chem. (1994).
+67,rplKAJL-rpoBC,4178354.0,fwd,0.0,RplA,,outside range,Only experimentally validated TSS for this gene. See Post LE et al. PNAS (1979).
+68,yodB,2042294.0,fwd,-14.0,GlaR,,unknown location probably outside region,"Computationally predicted start site. It is one of several, but we selected this one because it is in the center of three sites. Our aim is to catch all three predicted start sites in the mutated region. See Huerta AM et al. J. Mol. Biol. (2003)."
+69,atpIBEFHAGDC,3922525.0,rev,0.0,,,,Only experimentally validated TSS for this gene. See Jones HM. et al. J. Bacteriol. (1983).
+70,msyB,1114213.0,rev,0.0,,,,"Only experimentally validated TSS for this gene. See Lacour S & Landini P, J. Bacteriol. (2004)."
+71,ndk,2644913.0,rev,0.0,,,,Only RACE TSS for this gene. See Salgado H et al Nucleic Acids Research (2012).
+72,thrLABC,148.0,fwd,0.0,,,,"Only experimentally determined start site for this gene. Gardner JF, J. Biol. Chem. (1982)."
+73,tig,454993.0,fwd,-129.0,,,,One of two experimentally validated TSS for this gene. This site is also close to several other RACE TSS. See Mendoza-Vargas et al. PLoS One (2009).
+74,tff-rpsB-tsf,189712.0,fwd,0.0,rpsB,,outside region MarA_Rob_Sox shows no evidence but in region,Only experimentally validated site for the gene. Aseev LV et al. RNA (2008).
+75,maoP,3948058.0,fwd,-28.0,HdfR,,unknown location,"One of two RACE TSS' for this gene. Both TSS are included within the mutated region, but this one is the closer to the gene of the two. See Salgado H et al Nucleic Acids Research (2012)."
+76,poxB,911076.0,rev,0.0,MarA SoxS Cra,,all low evidence unknown location Cra,Only experimentally validated TSS for this gene. See Salgado H et al Nucleic Acids Research (2012).
+77,rspA,1655186.0,rev,-45.0,YdfH CRP,YdfH CRP,45 Base pairs upstream of gene start. ,
+78,mscM,4390638.0,rev,0.0,CpxR,,low evidence outside of region,Only experimentally validated start site for this operon with mscM on it. See Rezuchova B. et al. FEMS Microbiol. Letters (2003).
+79,arcA,4640508.0,rev,0.0,FNR,,low evidence,"The TSS is one of many,  but this one is expected to be activated by FNR. See Compan I & Touati D, Mol. Microbiol. (1994)."
+80,tar,1972716.0,rev,0.0,FNR,,low evidence no known location,Only experimentally validated TSS for this gene (sigma-28). See Ide N et al. Genes Genet. Syst. (1999).
+81,dpiBA,652172.0,fwd,0.0,DcuRx2 NarL,DcuRx2,NarL low evidence DcuR need fumarte or succinate to see. Second start site has many more binding sites including DpiA x 3 ArcA NarL FNR CRP ,"One of two experimentally validated start sites. This one is nearer to the gene start. See Mandin P and Gottesman S, Mol. Microbiol. (2009)."
+82,araAB,70075.0,rev,0.0,AraCx5 CRP ,AraCx2 CRP,3 AraC outside region.,"Only experimentally validated TSS for this gene. See Lisser S & Margalit H, Nucleic Acids Res. (1993)."
+83,araC,70241.0,fwd,0.0,AraCx5 CRP XylRx2,AraCx5 CRP XylRx2,,Only experimentally validated TSS for this gene. See Wallace RG et al. Gene (1980).
+84,xylF,3731069.0,fwd,0.0,CRP Fisx3 XylRx2,XylRx2,low evidence CRP Fisx3,"Only experimentally validated TSS for this gene. See Song S & Park C, J. Bacteriol. (1997)."
+85,xylA,3730807.0,rev,0.0,XylRx2 AraCx2 CRP,XylRx2,CRP low evidence AraC induced away,"See Song S & Park C, J. Bacteriol. (1997)."
+86,dicA,1647934.0,fwd,0.0,DicA,DicA,,The start of the gene is used. The mutated region will cover entire intergenic region.
+87,dicC,1647876.0,rev,0.0,DicA,DicA,,Only experimentally validated start site for this gene. See Yun SH et al. PLoS One (2012).
+88,dicB,1649597.0,fwd,0.0,DicA,,unknown location,Only computationally predicted start site for this gene. See Huerta AM et al. J. Mol. Biol. (2003).
+89,ompR,3536707.0,rev,0.0,IHFx3 CRP omrR_A_B small RNA,IHFx3 CRP,small rnas out of range,One of four experimentally predicted sites. This one is known to be regulated by the target TFs. See Matsuyama S et al. J. Bacteriol. (1986).
+90,xapAB,2524910.0,rev,0.0,xapRx2,xapR,one xapR out of range and both low evidence,Only experimentally validated TSS for this gene. See Seeger C et al. J. Bacteriol. (1995).
+91,ilvC,3957912.0,fwd,0.0,IlvYx2,IlvYx2,outside of proper growth condition,Only experimentally validated TSS for this gene. See Opel ML et al. Mol. Microbiol. (2001). 
+92,asnA,3927129.0,fwd,0.0,AsnCx4,,all low evidence 2 Nac in area but no evidence of regulation,"Only experimentally validated TSS for this gene. See Kolling R & Lother H, J. Bacteriol. (1985)."
+93,idnK,4494597.0,fwd,0.0,GntRx3 idnR CRP,, all low evidence,Only experimentally validated TSS for this gene. See Bausch C et al. J. Bacteriol. (2004).
+94,dinJ,246533.0,rev,0.0,DinJ-YafQ LexA,,both outside of region,Only RACE TSS for this gene. See Salgado H et al Nucleic Acids Research (2012).
+95,yjiY,4591367.0,rev,0.0,BtsR CRP,BtsR,CRP outside of area btsR activated at stationary and with pyruvate,Only experimentally validated TSS for this gene. See Kraxenberger T et al. J. Bacteriol. (2012).
+96,motAB-cheAW,1977302.0,rev,0.0,CpxR,cpxR,sigma 28,Only computationally predicted TSS for this gene (sigma-28). See Mirel DB et al. J. Bacteriol. (1992).
+97,ftsK,933138.0,fwd,0.0,LexA,LexA,,One of two experimentally validated TSS for this gene. This start site is known to be regulated by LexA. See Lewis LK et al. J. Bacteriol. (1992).
+98,cra,87969.0,fwd,22.0,PhoB,,low evidence no known location,Only RACE TSS for this gene. See Salgado H et al Nucleic Acids Research (2012).
+99,uvrD,3997907.0,fwd,0.0,LexA,,low evidence,One of two experimentally validated TSS this gene. This one is known to be regulated by LexA. Arthur HM et al. J. Bacteriol. (1987).
+100,adiY,4338042.0,rev,0.0,H-NS SgrS small RNA,,unknown location SgrS outside region,Only experimentally validated start site for this gene. Stim-Herndon KP et al. Microbiology (1996).
+101,znuCB,1942634.0,fwd,0.0,Zur OxyR,Zur,OxyR needs hydrogen peroxide or other oxidators to regulate,"Only experimentally validated TSS for the gene. See Outten CE & O'Halloran TV, Science (2001)."
+102,znuA,1942661.0,rev,0.0,Zur OxyR,Zur,OxyR outside of region,Only computationally predicted site. See Huerta AM et al. J. Mol. Biol. (2003).
+103,zupT,3182433.0,fwd,0.0,,,,Only experimentally validated TSS for this gene. See Raghavan R et al. J. Bacteriol. (2011).
+104,pitA,3637612.0,fwd,0.0,FNR,,low evidence no known location,Only experimentally valiated TSS for this gene. See Mendoza-Vargas et al. PLoS One (2009).
+105,ecnB,4376509.0,fwd,0.0,OmpR,,low evidence,Only experimentally determined TSS for this gene. See Bishop RE et al. J. Mol. Biol. (1998).
+106,leuABCD,83735.0,rev,0.0,leuO,,No known location low evidence,One of two experimentally determined start sites. This site is closer to the gene. See Stratmann T et al. Mol. Microbiol. (2012).
+107,rel,1645903.0,rev,,,,,
+108,marR,1619093.0,fwd,-10.0,,,,
+109,phnA,4326836.0,rev,0.0,,,,
+110,dcm,2032352.0,rev,0.0,,,,
+111,amiC,2949066.0,rev,0.0,,,,
+112,mutM,3811175.0,rev,0.0,,,,
+113,ybjX,919103.0,rev,0.0,,,,
+114,rhle,830783.0,fwd,0.0,,,,
