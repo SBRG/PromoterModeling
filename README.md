@@ -76,7 +76,7 @@ conda create --name PromoterModeling --file ./requirements.txt --channel biocond
 12. Visualize results.
     - Run various notebooks in **3_visualize_results** to look at the GAMS results.
 
-13. Further ptimize parameters if necessary by running **2_GAMS/1_optimize_GAMS_parameters.ipynb** to select better constraints on the parameters for GAMS to create more accurate models.
+13. Further ptimize parameters if necessary by running **2_GAMS/2_parameter_optimization.ipynb** to select better constraints on the parameters for GAMS to create more accurate models.
     - Default initial constraints are set in the stable_flags dictionary in the first cell of **2_GAMS/2_parameter_optimization.ipynb**, but if the case has been run before it will begin from the previous best result.
     - This process is very slow and is best run either over a weekend or on an independent server. It involves running GAMS on a wide variety of parameter constraints, taking the best result, creating a new set of parameter results closer to the best result, and repeating this process a set number of times.
 
