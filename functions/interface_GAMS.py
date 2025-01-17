@@ -378,10 +378,9 @@ def run_multi_GAMS(flags_df, TF_flags_df, stable_flags, cell_constants, GAMS_run
     # call GAMS
     shutil.copyfile('../GAMS/conopt.opt', GAMS_run_dir+'/conopt.opt')
     if platform.system() == 'Windows':
-        gams_loc =  r'"C:\GAMS\win64\28.2\gams.exe"' # zzz shouldn't be hard set like this, but for now this is fine
-
+        #gams_loc =  r'"C:\GAMS\win64\28.2\gams.exe"'
         shutil.copyfile('../GAMS/merged_iMs_model.gms', GAMS_run_dir+'/combined_model.gms')
-        _ = subprocess.call(gams_loc+' combined_model.gms', cwd = GAMS_run_dir, shell=True)
+        _ = subprocess.call(GAMS_exec+' combined_model.gms', cwd = GAMS_run_dir, shell=True)
     else:
         shutil.copyfile('../GAMS/merged_iMs_model.gms', GAMS_run_dir+'/combined_model.gms')
         if stable_flags['supress_output']:
